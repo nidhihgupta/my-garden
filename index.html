@@ -700,7 +700,7 @@ function resetToDefaults(){
   try{Object.keys(localStorage).filter(k=>k.startsWith('garden_')).forEach(k=>localStorage.removeItem(k));}catch(e){}
   location.reload();
 }
-const DATA_VERSION='v8';
+const DATA_VERSION='v9';
 async function init(){
   // Version check — if data version doesn't match, reload defaults
   const storedVersion=await DB.get('dataVersion');
@@ -1071,7 +1071,7 @@ function renderSchedule(month){
   console.log('Schedule filters: type='+typeF+' bed='+bedF+' totalTasks='+allTasks.length);
   var filtered=allTasks.filter(function(t){
     if(typeF!=='all'&&t.type!==typeF)return false;
-    if(bedF!=='all'&&t.bedId!==bedF&&t.bedId!=='all')return false;
+    if(bedF!=='all'&&t.bedId!==bedF)return false;
     return true;
   });
   console.log('Filtered tasks:', filtered.length);
