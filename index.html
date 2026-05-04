@@ -11,7 +11,7 @@
 :root{--sage:#7a9e7e;--sage-light:#a8c5a0;--sage-dark:#4a6b4e;--cream:#f7f3ee;--warm-white:#faf8f5;--terracotta:#c17a5a;--text-dark:#2c2c2c;--text-mid:#5a5a5a;--text-light:#9a9a9a;--border:#e8e2da;--shadow:0 2px 20px rgba(0,0,0,0.08);--radius:16px;--radius-sm:10px;--nav-height:72px;}
 *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
 body{font-family:'DM Sans',sans-serif;background:var(--warm-white);color:var(--text-dark);min-height:100vh;max-width:430px;margin:0 auto;overflow-x:hidden;}
-.screen{display:none;min-height:100vh;padding-bottom:calc(var(--nav-height)+20px);animation:fadeIn 0.25s ease;}
+.screen{display:none;min-height:100vh;padding-bottom:calc(var(--nav-height) + 40px + env(safe-area-inset-bottom));animation:fadeIn 0.25s ease;}
 .screen.active{display:block;}
 @keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
 .header{background:var(--warm-white);padding:56px 20px 16px;position:sticky;top:0;z-index:100;border-bottom:1px solid var(--border);}
@@ -40,7 +40,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--warm-white);color:var(--t
 .quick-btn:active{background:var(--cream);transform:scale(0.95);}
 .quick-btn span:first-child{font-size:22px;display:block;margin-bottom:6px;}
 .quick-btn span:last-child{font-size:10px;color:var(--text-mid);font-weight:500;}
-.bottom-nav{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:430px;height:var(--nav-height);background:white;border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-around;padding:0 8px;z-index:200;box-shadow:0 -4px 20px rgba(0,0,0,0.06);}
+.bottom-nav{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:430px;height:calc(var(--nav-height) + env(safe-area-inset-bottom));background:white;border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-around;padding:0 8px;padding-bottom:env(safe-area-inset-bottom);z-index:200;box-shadow:0 -4px 20px rgba(0,0,0,0.06);}
 .nav-item{display:flex;flex-direction:column;align-items:center;gap:4px;padding:8px 12px;cursor:pointer;border-radius:var(--radius-sm);transition:all 0.2s;min-width:56px;}
 .nav-item:active{background:var(--cream);}
 .nav-item span:first-child{font-size:22px;}
@@ -117,7 +117,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--warm-white);color:var(--t
 .btn-primary{width:100%;padding:14px;background:var(--sage-dark);color:white;border:none;border-radius:var(--radius-sm);font-family:'DM Sans',sans-serif;font-size:15px;font-weight:500;cursor:pointer;margin-top:8px;}
 .btn-secondary{width:100%;padding:13px;background:transparent;color:var(--sage-dark);border:1.5px solid var(--sage-dark);border-radius:var(--radius-sm);font-family:'DM Sans',sans-serif;font-size:15px;font-weight:500;cursor:pointer;margin-top:8px;}
 .btn-danger{width:100%;padding:13px;background:transparent;color:#e05555;border:1.5px solid #e05555;border-radius:var(--radius-sm);font-family:'DM Sans',sans-serif;font-size:15px;font-weight:500;cursor:pointer;margin-top:8px;}
-.fab{position:fixed;bottom:calc(var(--nav-height)+16px);right:20px;width:52px;height:52px;background:var(--sage-dark);color:white;border:none;border-radius:50%;font-size:24px;cursor:pointer;box-shadow:0 4px 20px rgba(74,107,78,0.4);display:flex;align-items:center;justify-content:center;z-index:150;}
+.fab{position:fixed;bottom:calc(var(--nav-height) + 16px + env(safe-area-inset-bottom));right:20px;width:52px;height:52px;background:var(--sage-dark);color:white;border:none;border-radius:50%;font-size:24px;cursor:pointer;box-shadow:0 4px 20px rgba(74,107,78,0.4);display:flex;align-items:center;justify-content:center;z-index:150;}
 .todo-item{background:white;border-radius:var(--radius-sm);padding:14px 16px;margin-bottom:8px;display:flex;align-items:flex-start;gap:12px;border:1px solid var(--border);box-shadow:var(--shadow);}
 .todo-check{width:22px;height:22px;border-radius:50%;border:2px solid var(--border);flex-shrink:0;cursor:pointer;display:flex;align-items:center;justify-content:center;margin-top:1px;}
 .todo-check.checked{background:var(--sage);border-color:var(--sage);color:white;font-size:12px;}
@@ -166,6 +166,10 @@ body{font-family:'DM Sans',sans-serif;background:var(--warm-white);color:var(--t
 .modal h3{font-family:'Playfair Display',serif;font-size:22px;margin-bottom:20px;color:var(--text-dark);}
 .move-btn{display:inline-flex;align-items:center;gap:6px;padding:8px 16px;background:var(--cream);border:1.5px solid var(--border);border-radius:20px;font-size:13px;font-weight:500;color:var(--text-mid);cursor:pointer;margin-bottom:16px;}
 .export-btn{width:100%;padding:14px;background:var(--terracotta);color:white;border:none;border-radius:var(--radius-sm);font-family:'DM Sans',sans-serif;font-size:15px;font-weight:500;cursor:pointer;margin-top:8px;}
+.sched-check{width:22px;height:22px;border-radius:50%;border:2px solid var(--border);flex-shrink:0;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:11px;margin-right:10px;margin-top:2px;}
+.sched-check.checked{background:var(--sage);border-color:var(--sage);color:white;}
+.schedule-task.task-done{opacity:0.5;}
+.schedule-task.task-done h4{text-decoration:line-through;}
 .schedule-legend{display:flex;gap:12px;padding:0 20px 12px;flex-wrap:wrap;}
 .legend-item{display:flex;align-items:center;gap:6px;font-size:11px;color:var(--text-mid);}
 .legend-dot{width:10px;height:10px;border-radius:2px;flex-shrink:0;}
@@ -184,6 +188,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--warm-white);color:var(--t
   </div>
   <div class="quick-actions"><div class="section-title">Quick Access</div><div class="quick-row"><div class="quick-btn" onclick="showScreen('todo')"><span>✅</span><span>To-Do</span></div><div class="quick-btn" onclick="showScreen('shopping')"><span>🛒</span><span>Shopping</span></div><div class="quick-btn" onclick="showScreen('schedule')"><span>📅</span><span>Schedule</span></div><div class="quick-btn" onclick="showScreen('notes')"><span>📝</span><span>Notes</span></div></div></div>
   <div class="quick-actions"><div class="section-title">Garden Tools</div><div class="quick-row"><div class="quick-btn" onclick="showScreen('propagation')"><span>🌱</span><span>Cuttings</span></div><div class="quick-btn" onclick="showScreen('irrigation')"><span>💧</span><span>Irrigation</span></div><div class="quick-btn" onclick="addToTodo()"><span>➕</span><span>Add Task</span></div><div class="quick-btn" onclick="showScreen('allplants')"><span>🔍</span><span>All Plants</span></div></div></div>
+  <div style="padding:4px 20px 8px;text-align:right"><span style="font-size:10px;color:var(--text-light);cursor:pointer" onclick="resetToDefaults()">↺ Reset data</span></div>
 </div>
 <div id="screen-outdoor" class="screen">
   <div class="header"><div class="header-back" onclick="showScreen('home')">← Home</div><h1>🌳 Outdoor</h1><p>Select a yard area</p></div>
@@ -240,7 +245,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--warm-white);color:var(--t
   <div class="header"><div class="header-back" onclick="showScreen('home')">← Home</div><h1>✅ To-Do</h1><p id="todo-count">One-time tasks only</p></div>
   <div class="segment"><div class="segment-btn active" onclick="filterTodos('pending',this)">Pending</div><div class="segment-btn" onclick="filterTodos('done',this)">Done</div></div>
   <div class="list-container" id="todo-list"></div>
-  <button class="fab" onclick="addToTodo()">+</button>
+  <button class="fab" id="todo-fab" onclick="addToTodo()">+</button>
 </div>
 <div id="screen-shopping" class="screen">
   <div class="header"><div class="header-back" onclick="showScreen('home')">← Home</div><h1>🛒 Shopping</h1><p id="shop-count">0 items</p></div>
@@ -252,7 +257,20 @@ body{font-family:'DM Sans',sans-serif;background:var(--warm-white);color:var(--t
 <div id="screen-schedule" class="screen">
   <div class="header"><div class="header-back" onclick="showScreen('home')">← Home</div><h1>📅 Schedule</h1><p>Care tasks by month</p></div>
   <div class="month-selector" id="month-selector"></div>
-  <div class="schedule-legend"><div class="legend-item"><div class="legend-dot" style="background:var(--sage)"></div>Outdoor</div><div class="legend-item"><div class="legend-dot" style="background:var(--terracotta)"></div>Indoor</div><div class="legend-item"><div class="legend-dot" style="background:#7a6b9e"></div>Your plants</div></div>
+  <div style="padding:0 20px 8px;display:flex;gap:8px">
+    <select class="form-select" id="sched-filter-type" onchange="renderCurrentSchedule()" style="flex:1;padding:8px 12px;font-size:13px">
+      <option value="all">All Categories</option>
+      <option value="Pruning">✂️ Pruning</option>
+      <option value="Feeding">🌱 Feeding</option>
+      <option value="Watering">💧 Watering</option>
+      <option value="Pest">🐛 Pest</option>
+      <option value="Maintenance">🔧 Maintenance</option>
+      <option value="Indoor">🪴 Indoor</option>
+    </select>
+    <select class="form-select" id="sched-filter-bed" onchange="renderCurrentSchedule()" style="flex:1;padding:8px 12px;font-size:13px">
+      <option value="all">All Beds</option>
+    </select>
+  </div>
   <div class="list-container" id="schedule-list"></div>
 </div>
 <div id="screen-notes" class="screen">
@@ -359,169 +377,169 @@ const torMaint=m('Deadhead spent flowers to extend bloom',[6,7,8,9]);
 
 const defaultOutdoorPlants=[
   // FRONT BED LEFT
-  p('fl-viburnum','b-fl','Viburnum davidii','Viburnum davidii','🌿','planned','Moderate','Part shade','Center anchor. 3-gallon. Turquoise berries in fall.',[vibFeed,vibTrim],[{issue:'No berries',url:'https://www.thespruce.com/viburnum-davidii-care-5270799'}]),
-  p('fl-sarcococca','b-fl','Sarcococca confusa','Sarcococca confusa','🌿','planned','Moderate','Part to full shade','Far left corner. 3-gallon. Fragrant winter bloomer.',[sarcocEnj],[{issue:'Leaf yellowing',url:'https://www.thespruce.com/sarcococca-care-5270799'}]),
-  p('fl-breath','b-fl','Breath of Heaven','Coleonema pulchrum','🌸','planned','Low-moderate','Part sun','Middle zone. 2-gallon. Standard green confirmed.',[breathTrim],[{issue:'Dieback from hard pruning — never cut to old wood',url:'https://www.thespruce.com/breath-of-heaven-care-5270799'}]),
-  p('fl-loro','b-fl','Loropetalum Purple Daydream','Loropetalum chinense Purple Daydream','💜','planned','Moderate','Part shade','x3. 2-gallon. Deep purple foliage + hot pink fringe flowers.',[loropFeed,loropTrim],[{issue:'Loss of purple color',url:'https://www.thespruce.com/loropetalum-care-5270799'}]),
-  p('fl-abelia','b-fl','Abelia Kaleidoscope','Abelia grandiflora Kaleidoscope','🌿','planned','Moderate','Part shade','x3. 3-gallon.',[abeliaFeed,abeliaTrim],[{issue:'Loss of variegation',url:'https://www.thespruce.com/abelia-care-5270799'}]),
-  p('fl-bergenia','b-fl','Bergenia Bressingham Ruby','Bergenia cordifolia Bressingham Ruby','🌸','planned','Moderate','Part shade','x3. 1-gallon. Left of Viburnum. Bold round leaves, magenta spring flowers, ruby winter foliage.',[bergenMaint],[{issue:'Floppy leaves (overwatering)',url:'https://www.thespruce.com/bergenia-care-5270799'}]),
-  p('fl-alabama','b-fl','Heucherella Alabama Sunrise','Heucherella Alabama Sunrise','🍂','planned','Moderate','Part shade','x3. Between Loropetalum and Begonias. Gold with red veins, orange fall color.',[heuchDiv],[{issue:'Crown rot (overwatering)',url:'https://www.thespruce.com/heucherella-care-5270799'}]),
-  p('fl-buttered','b-fl','Heucherella Buttered Rum','Heucherella Buttered Rum','🍯','planned','Moderate','Part shade','x3. Between Day Lilies and Mondo. Caramel/mahogany, dark winter color.',[heuchDiv],[{issue:'Crown rot',url:'https://www.thespruce.com/heucherella-care-5270799'}]),
-  p('fl-tiarella','b-fl','Tiarella Spring Symphony','Tiarella cordifolia Spring Symphony','🌿','planned','Moderate','Part to full shade','x3. Left of Viburnum. Green with dark markings, white-pink flower spikes.',[tiarellaDiv],[{issue:'Crown rot',url:'https://www.thespruce.com/tiarella-care-5270799'}]),
-  p('fl-mondo','b-fl','Black Mondo','Ophiopogon planiscapus Nigrescens','🖤','planned','Moderate','Part shade','x11. 1-gallon.',[mondoDivide],[{issue:'Loss of black color',url:'https://www.thespruce.com/black-mondo-grass-care-5270799'}]),
-  p('fl-carex','b-fl','Carex Ice Dance','Carex morrowii Ice Dance','🌾','planned','Moderate','Part shade','x5. 4".',[carexDivide],[{issue:'Brown tips',url:'https://www.thespruce.com/carex-care-5270799'}]),
-  p('fl-hellebores','b-fl','Hellebores','Helleborus spp.','🌸','planned','Moderate','Part to full shade','x3 mixed burgundy/plum + blush pink.',[hellMaint],[{issue:'Black death virus',url:'https://www.thespruce.com/hellebore-care-1902886'}]),
-  p('fl-lamium','b-fl','Lamium White Nancy','Lamium maculatum White Nancy','🤍','planned','Moderate','Part shade','Ground cover throughout bed.',[lamTrim],[{issue:'Leggy growth',url:'https://www.thespruce.com/lamium-care-5270799'}]),
-  p('fl-begonia','b-fl','Tuberous Begonia Yellow','Begonia tuberhybrida','🌼','planned','Regular','Part shade','Yellow Non Stop. x6.',[begDeadhead,begFeed],[{issue:'Powdery mildew',url:'https://www.thespruce.com/how-to-grow-begonias-1402821'}]),
-  p('fl-clivia','b-fl','Clivia','Clivia miniata','🟠','alive','Low-moderate','Part shade','x2 existing.',[m('Keep evenly moist spring',[3,4,5]),m('Feed diluted fertilizer after flowering',[4,5])],[{issue:'Not flowering',url:'https://www.thespruce.com/clivia-care-1902856'}]),
+  p('fl-viburnum','b-fl','Viburnum davidii','Viburnum davidii','🌿','planned','Moderate','Part shade','Center anchor. 3-gallon. Turquoise berries in fall.',[vibFeed,vibTrim],[{issue:'No berries',url:'https://www.google.com/search?q=No%20berries%20plant%20care%20fix'}]),
+  p('fl-sarcococca','b-fl','Sarcococca confusa','Sarcococca confusa','🌿','planned','Moderate','Part to full shade','Far left corner. 3-gallon. Fragrant winter bloomer.',[sarcocEnj],[{issue:'Leaf yellowing',url:'https://www.google.com/search?q=Leaf%20yellowing%20plant%20care%20fix'}]),
+  p('fl-breath','b-fl','Breath of Heaven','Coleonema pulchrum','🌸','planned','Low-moderate','Part sun','Middle zone. 2-gallon. Standard green confirmed.',[breathTrim],[{issue:'Dieback from hard pruning — never cut to old wood',url:'https://www.google.com/search?q=Dieback%20from%20hard%20pruning%20%E2%80%94%20never%20cut%20to%20old%20wood%20plant%20care%20fix'}]),
+  p('fl-loro','b-fl','Loropetalum Purple Daydream','Loropetalum chinense Purple Daydream','💜','planned','Moderate','Part shade','x3. 2-gallon. Deep purple foliage + hot pink fringe flowers.',[loropFeed,loropTrim],[{issue:'Loss of purple color',url:'https://www.google.com/search?q=Loss%20of%20purple%20color%20plant%20care%20fix'}]),
+  p('fl-abelia','b-fl','Abelia Kaleidoscope','Abelia grandiflora Kaleidoscope','🌿','planned','Moderate','Part shade','x3. 3-gallon.',[abeliaFeed,abeliaTrim],[{issue:'Loss of variegation',url:'https://www.google.com/search?q=Loss%20of%20variegation%20plant%20care%20fix'}]),
+  p('fl-bergenia','b-fl','Bergenia Bressingham Ruby','Bergenia cordifolia Bressingham Ruby','🌸','planned','Moderate','Part shade','x3. 1-gallon. Left of Viburnum. Bold round leaves, magenta spring flowers, ruby winter foliage.',[bergenMaint],[{issue:'Floppy leaves (overwatering)',url:'https://www.google.com/search?q=Floppy%20leaves%20(overwatering)%20plant%20care%20fix'}]),
+  p('fl-alabama','b-fl','Heucherella Alabama Sunrise','Heucherella Alabama Sunrise','🍂','planned','Moderate','Part shade','x3. Between Loropetalum and Begonias. Gold with red veins, orange fall color.',[heuchDiv],[{issue:'Crown rot (overwatering)',url:'https://www.google.com/search?q=Crown%20rot%20(overwatering)%20plant%20care%20fix'}]),
+  p('fl-buttered','b-fl','Heucherella Buttered Rum','Heucherella Buttered Rum','🍯','planned','Moderate','Part shade','x3. Between Day Lilies and Mondo. Caramel/mahogany, dark winter color.',[heuchDiv],[{issue:'Crown rot',url:'https://www.google.com/search?q=Crown%20rot%20plant%20care%20fix'}]),
+  p('fl-tiarella','b-fl','Tiarella Spring Symphony','Tiarella cordifolia Spring Symphony','🌿','planned','Moderate','Part to full shade','x3. Left of Viburnum. Green with dark markings, white-pink flower spikes.',[tiarellaDiv],[{issue:'Crown rot',url:'https://www.google.com/search?q=Crown%20rot%20plant%20care%20fix'}]),
+  p('fl-mondo','b-fl','Black Mondo','Ophiopogon planiscapus Nigrescens','🖤','planned','Moderate','Part shade','x11. 1-gallon.',[mondoDivide],[{issue:'Loss of black color',url:'https://www.google.com/search?q=Loss%20of%20black%20color%20plant%20care%20fix'}]),
+  p('fl-carex','b-fl','Carex Ice Dance','Carex morrowii Ice Dance','🌾','planned','Moderate','Part shade','x5. 4".',[carexDivide],[{issue:'Brown tips',url:'https://www.google.com/search?q=Brown%20tips%20plant%20care%20fix'}]),
+  p('fl-hellebores','b-fl','Hellebores','Helleborus spp.','🌸','planned','Moderate','Part to full shade','x3 mixed burgundy/plum + blush pink.',[hellMaint],[{issue:'Black death virus',url:'https://www.google.com/search?q=Black%20death%20virus%20plant%20care%20fix'}]),
+  p('fl-lamium','b-fl','Lamium White Nancy','Lamium maculatum White Nancy','🤍','planned','Moderate','Part shade','Ground cover throughout bed.',[lamTrim],[{issue:'Leggy growth',url:'https://www.google.com/search?q=Leggy%20growth%20plant%20care%20fix'}]),
+  p('fl-begonia','b-fl','Tuberous Begonia Yellow','Begonia tuberhybrida','🌼','planned','Regular','Part shade','Yellow Non Stop. x6.',[begDeadhead,begFeed],[{issue:'Powdery mildew',url:'https://www.google.com/search?q=Powdery%20mildew%20plant%20care%20fix'}]),
+  p('fl-clivia','b-fl','Clivia','Clivia miniata','🟠','alive','Low-moderate','Part shade','x2 existing.',[m('Keep evenly moist spring',[3,4,5]),m('Feed diluted fertilizer after flowering',[4,5])],[{issue:'Not flowering',url:'https://www.google.com/search?q=Not%20flowering%20plant%20care%20fix'}]),
   // REDWOOD BED
-  p('rw-camellia','b-rw','Camellia','Camellia japonica','🌸','alive','Regular','Part to full shade','Existing.',[m('Prune lightly after flowering only',[4,5]),m('Feed azalea fertilizer after bloom',[5])],[{issue:'Bud drop',url:'https://www.thespruce.com/camellia-care-1902748'}]),
-  p('rw-pittosporum','b-rw','Pittosporum','Pittosporum tobira','🌿','alive','Low once established','Part shade','Existing structural shrub.',[m('Light trim to maintain shape',[3,4])],[{issue:'Scale insects',url:'https://www.thespruce.com/pittosporum-care-5270799'}]),
-  p('rw-clivia','b-rw','Clivia','Clivia miniata','🟠','alive','Low once established','Full shade','Existing. Under redwoods.',[m('Feed diluted fertilizer after flowering',[4,5])],[{issue:'Not flowering',url:'https://www.thespruce.com/clivia-care-1902856'}]),
-  p('rw-fern-ex','b-rw','Existing Ferns','Polystichum spp.','🌿','alive','Keep moist','Full shade','Existing ferns under redwoods.',[fernMaint],[{issue:'Brown fronds',url:'https://www.thespruce.com/western-sword-fern-care-5270799'}]),
-  p('rw-sword','b-rw','Western Sword Fern','Polystichum munitum','🌿','planned','Moderate','Full shade','x10. 1-gallon. In bottomless pots with crescent berms.',[fernMaint],[{issue:'Brown fronds',url:'https://www.thespruce.com/western-sword-fern-care-5270799'}]),
-  p('rw-hellebores','b-rw','Hellebores','Helleborus spp.','🌸','planned','Moderate','Part to full shade','x3 mixed.',[hellMaint],[{issue:'Black death virus',url:'https://www.thespruce.com/hellebore-care-1902886'}]),
-  p('rw-oxalis','b-rw','Oxalis Purple','Oxalis triangularis','💜','planned','Moderate','Part shade','x5. Purple. Dramatic against green ferns.',[oxalisMaint],[{issue:'Not emerging from dormancy',url:'https://www.thespruce.com/oxalis-care-5270799'}]),
+  p('rw-camellia','b-rw','Camellia','Camellia japonica','🌸','alive','Regular','Part to full shade','Existing.',[m('Prune lightly after flowering only',[4,5]),m('Feed azalea fertilizer after bloom',[5])],[{issue:'Bud drop',url:'https://www.google.com/search?q=Bud%20drop%20plant%20care%20fix'}]),
+  p('rw-pittosporum','b-rw','Pittosporum','Pittosporum tobira','🌿','alive','Low once established','Part shade','Existing structural shrub.',[m('Light trim to maintain shape',[3,4])],[{issue:'Scale insects',url:'https://www.google.com/search?q=Scale%20insects%20plant%20care%20fix'}]),
+  p('rw-clivia','b-rw','Clivia','Clivia miniata','🟠','alive','Low once established','Full shade','Existing. Under redwoods.',[m('Feed diluted fertilizer after flowering',[4,5])],[{issue:'Not flowering',url:'https://www.google.com/search?q=Not%20flowering%20plant%20care%20fix'}]),
+  p('rw-fern-ex','b-rw','Existing Ferns','Polystichum spp.','🌿','alive','Keep moist','Full shade','Existing ferns under redwoods.',[fernMaint],[{issue:'Brown fronds',url:'https://www.google.com/search?q=Brown%20fronds%20plant%20care%20fix'}]),
+  p('rw-sword','b-rw','Western Sword Fern','Polystichum munitum','🌿','planned','Moderate','Full shade','x10. 1-gallon. In bottomless pots with crescent berms.',[fernMaint],[{issue:'Brown fronds',url:'https://www.google.com/search?q=Brown%20fronds%20plant%20care%20fix'}]),
+  p('rw-hellebores','b-rw','Hellebores','Helleborus spp.','🌸','planned','Moderate','Part to full shade','x3 mixed.',[hellMaint],[{issue:'Black death virus',url:'https://www.google.com/search?q=Black%20death%20virus%20plant%20care%20fix'}]),
+  p('rw-oxalis','b-rw','Oxalis Purple','Oxalis triangularis','💜','planned','Moderate','Part shade','x5. Purple. Dramatic against green ferns.',[oxalisMaint],[{issue:'Not emerging from dormancy',url:'https://www.google.com/search?q=Not%20emerging%20from%20dormancy%20plant%20care%20fix'}]),
   // MAPLE BED
-  p('mp-maple','b-mp','Japanese Maple','Acer palmatum','🍁','alive','Regular when young','Part shade','Existing anchor.',[m('Feed slow release in spring',[3])],[{issue:'Leaf scorch',url:'https://www.thespruce.com/japanese-maple-care-1902748'}]),
-  p('mp-camellia','b-mp','Camellia','Camellia japonica','🌸','alive','Regular','Part shade','Existing.',[m('Prune lightly after flowering',[4,5]),m('Feed azalea fertilizer after bloom',[5])],[{issue:'Bud drop',url:'https://www.thespruce.com/camellia-care-1902748'}]),
-  p('mp-fern','b-mp','Fern','Polystichum spp.','🌿','alive','Keep moist','Part shade','Existing.',[fernMaint],[{issue:'Brown fronds',url:'https://www.thespruce.com/fern-care-5270799'}]),
-  p('mp-japgrass','b-mp','Japanese Forest Grass','Hakonechloa macra','🌾','alive','Moderate','Part shade','Existing. Variegated green/white.',[m('Cut back in late winter before new growth',[2])],[{issue:'Loss of variegation',url:'https://www.thespruce.com/japanese-forest-grass-care-5270799'}]),
-  p('mp-daylily','b-mp','Day Lilies','Hemerocallis spp.','🌼','alive','Low-moderate','Part shade','Existing.',[m('Deadhead spent blooms daily during peak bloom',[5,6,7]),m('Divide every 3-4 years',[3])],[{issue:'Rust disease',url:'https://www.thespruce.com/daylily-care-1902748'}]),
-  p('mp-hosta','b-mp','Hosta','Hosta spp.','🍃','alive','Regular','Part shade','Existing.',[hosSlug,m('Cut back dead foliage in fall',[11])],[{issue:'Slug damage',url:'https://www.thespruce.com/hostas-growing-guide-1402882'}]),
-  p('mp-abelia','b-mp','Abelia Kaleidoscope','Abelia grandiflora Kaleidoscope','🌿','planned','Moderate','Part shade','x3. 3-gallon.',[abeliaFeed,abeliaTrim],[{issue:'Loss of variegation',url:'https://www.thespruce.com/abelia-care-5270799'}]),
-  p('mp-mondo','b-mp','Black Mondo','Ophiopogon planiscapus Nigrescens','🖤','planned','Moderate','Part shade','x6. 1-gallon.',[mondoDivide],[{issue:'Loss of black color',url:'https://www.thespruce.com/black-mondo-grass-care-5270799'}]),
-  p('mp-carex','b-mp','Carex Ice Dance','Carex morrowii Ice Dance','🌾','planned','Moderate','Part shade','x3. 4".',[carexDivide],[{issue:'Brown tips',url:'https://www.thespruce.com/carex-care-5270799'}]),
-  p('mp-alabama','b-mp','Heucherella Alabama Sunrise','Heucherella Alabama Sunrise','🍂','planned','Moderate','Part shade','x3. Gold tones echo Japanese Maple fall color.',[heuchDiv],[{issue:'Crown rot',url:'https://www.thespruce.com/heucherella-care-5270799'}]),
-  p('mp-sword','b-mp','Western Sword Fern','Polystichum munitum','🌿','planned','Moderate','Part shade','x3. 1-gallon.',[fernMaint],[{issue:'Brown fronds',url:'https://www.thespruce.com/western-sword-fern-care-5270799'}]),
-  p('mp-lamium','b-mp','Lamium White Nancy','Lamium maculatum White Nancy','🤍','planned','Moderate','Part shade','Ground cover.',[lamTrim],[{issue:'Leggy growth',url:'https://www.thespruce.com/lamium-care-5270799'}]),
+  p('mp-maple','b-mp','Japanese Maple','Acer palmatum','🍁','alive','Regular when young','Part shade','Existing anchor.',[m('Feed slow release in spring',[3])],[{issue:'Leaf scorch',url:'https://www.google.com/search?q=Leaf%20scorch%20plant%20care%20fix'}]),
+  p('mp-camellia','b-mp','Camellia','Camellia japonica','🌸','alive','Regular','Part shade','Existing.',[m('Prune lightly after flowering',[4,5]),m('Feed azalea fertilizer after bloom',[5])],[{issue:'Bud drop',url:'https://www.google.com/search?q=Bud%20drop%20plant%20care%20fix'}]),
+  p('mp-fern','b-mp','Fern','Polystichum spp.','🌿','alive','Keep moist','Part shade','Existing.',[fernMaint],[{issue:'Brown fronds',url:'https://www.google.com/search?q=Brown%20fronds%20plant%20care%20fix'}]),
+  p('mp-japgrass','b-mp','Japanese Forest Grass','Hakonechloa macra','🌾','alive','Moderate','Part shade','Existing. Variegated green/white.',[m('Cut back in late winter before new growth',[2])],[{issue:'Loss of variegation',url:'https://www.google.com/search?q=Loss%20of%20variegation%20plant%20care%20fix'}]),
+  p('mp-daylily','b-mp','Day Lilies','Hemerocallis spp.','🌼','alive','Low-moderate','Part shade','Existing.',[m('Deadhead spent blooms daily during peak bloom',[5,6,7]),m('Divide every 3-4 years',[3])],[{issue:'Rust disease',url:'https://www.google.com/search?q=Rust%20disease%20plant%20care%20fix'}]),
+  p('mp-hosta','b-mp','Hosta','Hosta spp.','🍃','alive','Regular','Part shade','Existing.',[hosSlug,m('Cut back dead foliage in fall',[11])],[{issue:'Slug damage',url:'https://www.google.com/search?q=Slug%20damage%20plant%20care%20fix'}]),
+  p('mp-abelia','b-mp','Abelia Kaleidoscope','Abelia grandiflora Kaleidoscope','🌿','planned','Moderate','Part shade','x3. 3-gallon.',[abeliaFeed,abeliaTrim],[{issue:'Loss of variegation',url:'https://www.google.com/search?q=Loss%20of%20variegation%20plant%20care%20fix'}]),
+  p('mp-mondo','b-mp','Black Mondo','Ophiopogon planiscapus Nigrescens','🖤','planned','Moderate','Part shade','x6. 1-gallon.',[mondoDivide],[{issue:'Loss of black color',url:'https://www.google.com/search?q=Loss%20of%20black%20color%20plant%20care%20fix'}]),
+  p('mp-carex','b-mp','Carex Ice Dance','Carex morrowii Ice Dance','🌾','planned','Moderate','Part shade','x3. 4".',[carexDivide],[{issue:'Brown tips',url:'https://www.google.com/search?q=Brown%20tips%20plant%20care%20fix'}]),
+  p('mp-alabama','b-mp','Heucherella Alabama Sunrise','Heucherella Alabama Sunrise','🍂','planned','Moderate','Part shade','x3. Gold tones echo Japanese Maple fall color.',[heuchDiv],[{issue:'Crown rot',url:'https://www.google.com/search?q=Crown%20rot%20plant%20care%20fix'}]),
+  p('mp-sword','b-mp','Western Sword Fern','Polystichum munitum','🌿','planned','Moderate','Part shade','x3. 1-gallon.',[fernMaint],[{issue:'Brown fronds',url:'https://www.google.com/search?q=Brown%20fronds%20plant%20care%20fix'}]),
+  p('mp-lamium','b-mp','Lamium White Nancy','Lamium maculatum White Nancy','🤍','planned','Moderate','Part shade','Ground cover.',[lamTrim],[{issue:'Leggy growth',url:'https://www.google.com/search?q=Leggy%20growth%20plant%20care%20fix'}]),
   // CHERRY BED
-  p('ch-cherry','b-ch','Cherry Tree','Prunus spp.','🌸','alive','Regular when young','Part shade','Existing anchor.',[m('Feed balanced fertilizer in spring',[3]),m('Water deeply in summer heat',[7,8])],[{issue:'Brown rot',url:'https://www.thespruce.com/cherry-tree-care-5270799'}]),
-  p('ch-nandina','b-ch','Nandina','Nandina domestica','🔴','alive','Low once established','Part shade','Existing. Red berries fall/winter.',[m('Light trim in spring if leggy',[3]),m('Remove oldest canes at ground level',[2])],[{issue:'Not fruiting',url:'https://www.thespruce.com/nandina-care-1902748'}]),
-  p('ch-daylily','b-ch','Day Lilies','Hemerocallis spp.','🌼','alive','Low-moderate','Part shade','Existing.',[m('Deadhead spent blooms daily',[5,6,7]),m('Divide every 3-4 years',[3])],[{issue:'Rust disease',url:'https://www.thespruce.com/daylily-care-1902748'}]),
-  p('ch-abelia','b-ch','Abelia Kaleidoscope','Abelia grandiflora Kaleidoscope','🌿','planned','Moderate','Part shade','x3. 3-gallon.',[abeliaFeed,abeliaTrim],[{issue:'Loss of variegation',url:'https://www.thespruce.com/abelia-care-5270799'}]),
-  p('ch-mondo','b-ch','Black Mondo','Ophiopogon planiscapus Nigrescens','🖤','planned','Moderate','Part shade','x3. 1-gallon.',[mondoDivide],[{issue:'Loss of black color',url:'https://www.thespruce.com/black-mondo-grass-care-5270799'}]),
-  p('ch-lamium','b-ch','Lamium White Nancy','Lamium maculatum White Nancy','🤍','planned','Moderate','Part shade','Ground cover.',[lamTrim],[{issue:'Leggy growth',url:'https://www.thespruce.com/lamium-care-5270799'}]),
+  p('ch-cherry','b-ch','Cherry Tree','Prunus spp.','🌸','alive','Regular when young','Part shade','Existing anchor.',[m('Feed balanced fertilizer in spring',[3]),m('Water deeply in summer heat',[7,8])],[{issue:'Brown rot',url:'https://www.google.com/search?q=Brown%20rot%20plant%20care%20fix'}]),
+  p('ch-nandina','b-ch','Nandina','Nandina domestica','🔴','alive','Low once established','Part shade','Existing. Red berries fall/winter.',[m('Light trim in spring if leggy',[3]),m('Remove oldest canes at ground level',[2])],[{issue:'Not fruiting',url:'https://www.google.com/search?q=Not%20fruiting%20plant%20care%20fix'}]),
+  p('ch-daylily','b-ch','Day Lilies','Hemerocallis spp.','🌼','alive','Low-moderate','Part shade','Existing.',[m('Deadhead spent blooms daily',[5,6,7]),m('Divide every 3-4 years',[3])],[{issue:'Rust disease',url:'https://www.google.com/search?q=Rust%20disease%20plant%20care%20fix'}]),
+  p('ch-abelia','b-ch','Abelia Kaleidoscope','Abelia grandiflora Kaleidoscope','🌿','planned','Moderate','Part shade','x3. 3-gallon.',[abeliaFeed,abeliaTrim],[{issue:'Loss of variegation',url:'https://www.google.com/search?q=Loss%20of%20variegation%20plant%20care%20fix'}]),
+  p('ch-mondo','b-ch','Black Mondo','Ophiopogon planiscapus Nigrescens','🖤','planned','Moderate','Part shade','x3. 1-gallon.',[mondoDivide],[{issue:'Loss of black color',url:'https://www.google.com/search?q=Loss%20of%20black%20color%20plant%20care%20fix'}]),
+  p('ch-lamium','b-ch','Lamium White Nancy','Lamium maculatum White Nancy','🤍','planned','Moderate','Part shade','Ground cover.',[lamTrim],[{issue:'Leggy growth',url:'https://www.google.com/search?q=Leggy%20growth%20plant%20care%20fix'}]),
   // FRONT BED RIGHT
-  p('fr-camphor','b-fr','Camphor Tree','Cinnamomum camphora','🌳','alive','Low once established','Part shade','Existing large tree.',[m('No pruning needed',[1])],[{issue:'Root invasion',url:'https://www.thespruce.com/camphor-tree-care-5270799'}]),
-  p('fr-lavender','b-fr','Lavender','Lavandula spp.','💜','alive','Low — drought tolerant','Part shade','x2 existing.',[m('Light trim after flowering — never cut into old wood',[6,7]),m('Feed slow release in spring',[3])],[{issue:'Root rot (overwatering)',url:'https://www.thespruce.com/lavender-care-1902748'}]),
-  p('fr-daylily','b-fr','Day Lilies','Hemerocallis spp.','🌼','alive','Low-moderate','Part shade','Existing.',[m('Deadhead spent blooms daily',[5,6,7]),m('Divide every 3-4 years',[3])],[{issue:'Rust disease',url:'https://www.thespruce.com/daylily-care-1902748'}]),
-  p('fr-catmint','b-fr','Catmint','Nepeta spp.','💜','alive','Low — drought tolerant','Part shade','Existing.',[m('Cut back by half after first bloom flush',[5,6]),m('Repeat deadhead for rebloom',[7,8,9])],[{issue:'Root rot',url:'https://www.thespruce.com/catmint-care-5270799'}]),
-  p('fr-abelia','b-fr','Abelia Kaleidoscope','Abelia grandiflora Kaleidoscope','🌿','planned','Moderate','Part shade','x3. 3-gallon.',[abeliaFeed,abeliaTrim],[{issue:'Loss of variegation',url:'https://www.thespruce.com/abelia-care-5270799'}]),
-  p('fr-loro','b-fr','Loropetalum Purple Daydream','Loropetalum chinense Purple Daydream','💜','planned','Moderate','Part shade','x2. 2-gallon.',[loropFeed,loropTrim],[{issue:'Loss of purple color',url:'https://www.thespruce.com/loropetalum-care-5270799'}]),
-  p('fr-buttered','b-fr','Heucherella Buttered Rum','Heucherella Buttered Rum','🍯','planned','Moderate','Part shade','x6. 2 clusters of 3.',[heuchDiv],[{issue:'Crown rot',url:'https://www.thespruce.com/heucherella-care-5270799'}]),
-  p('fr-mondo','b-fr','Black Mondo','Ophiopogon planiscapus Nigrescens','🖤','planned','Moderate','Part shade','x5. 1-gallon.',[mondoDivide],[{issue:'Loss of black color',url:'https://www.thespruce.com/black-mondo-grass-care-5270799'}]),
-  p('fr-lamium','b-fr','Lamium White Nancy','Lamium maculatum White Nancy','🤍','planned','Moderate','Part shade','x6.',[lamTrim],[{issue:'Leggy growth',url:'https://www.thespruce.com/lamium-care-5270799'}]),
-  p('fr-begonia','b-fr','Tuberous Begonia Yellow','Begonia tuberhybrida','🌼','planned','Regular','Part shade','x5. Yellow Non Stop.',[begDeadhead,begFeed],[{issue:'Powdery mildew',url:'https://www.thespruce.com/how-to-grow-begonias-1402821'}]),
+  p('fr-camphor','b-fr','Camphor Tree','Cinnamomum camphora','🌳','alive','Low once established','Part shade','Existing large tree.',[m('No pruning needed',[1])],[{issue:'Root invasion',url:'https://www.google.com/search?q=Root%20invasion%20plant%20care%20fix'}]),
+  p('fr-lavender','b-fr','Lavender','Lavandula spp.','💜','alive','Low — drought tolerant','Part shade','x2 existing.',[m('Light trim after flowering — never cut into old wood',[6,7]),m('Feed slow release in spring',[3])],[{issue:'Root rot (overwatering)',url:'https://www.google.com/search?q=Root%20rot%20(overwatering)%20plant%20care%20fix'}]),
+  p('fr-daylily','b-fr','Day Lilies','Hemerocallis spp.','🌼','alive','Low-moderate','Part shade','Existing.',[m('Deadhead spent blooms daily',[5,6,7]),m('Divide every 3-4 years',[3])],[{issue:'Rust disease',url:'https://www.google.com/search?q=Rust%20disease%20plant%20care%20fix'}]),
+  p('fr-catmint','b-fr','Catmint','Nepeta spp.','💜','alive','Low — drought tolerant','Part shade','Existing.',[m('Cut back by half after first bloom flush',[5,6]),m('Repeat deadhead for rebloom',[7,8,9])],[{issue:'Root rot',url:'https://www.google.com/search?q=Root%20rot%20plant%20care%20fix'}]),
+  p('fr-abelia','b-fr','Abelia Kaleidoscope','Abelia grandiflora Kaleidoscope','🌿','planned','Moderate','Part shade','x3. 3-gallon.',[abeliaFeed,abeliaTrim],[{issue:'Loss of variegation',url:'https://www.google.com/search?q=Loss%20of%20variegation%20plant%20care%20fix'}]),
+  p('fr-loro','b-fr','Loropetalum Purple Daydream','Loropetalum chinense Purple Daydream','💜','planned','Moderate','Part shade','x2. 2-gallon.',[loropFeed,loropTrim],[{issue:'Loss of purple color',url:'https://www.google.com/search?q=Loss%20of%20purple%20color%20plant%20care%20fix'}]),
+  p('fr-buttered','b-fr','Heucherella Buttered Rum','Heucherella Buttered Rum','🍯','planned','Moderate','Part shade','x6. 2 clusters of 3.',[heuchDiv],[{issue:'Crown rot',url:'https://www.google.com/search?q=Crown%20rot%20plant%20care%20fix'}]),
+  p('fr-mondo','b-fr','Black Mondo','Ophiopogon planiscapus Nigrescens','🖤','planned','Moderate','Part shade','x5. 1-gallon.',[mondoDivide],[{issue:'Loss of black color',url:'https://www.google.com/search?q=Loss%20of%20black%20color%20plant%20care%20fix'}]),
+  p('fr-lamium','b-fr','Lamium White Nancy','Lamium maculatum White Nancy','🤍','planned','Moderate','Part shade','x6.',[lamTrim],[{issue:'Leggy growth',url:'https://www.google.com/search?q=Leggy%20growth%20plant%20care%20fix'}]),
+  p('fr-begonia','b-fr','Tuberous Begonia Yellow','Begonia tuberhybrida','🌼','planned','Regular','Part shade','x5. Yellow Non Stop.',[begDeadhead,begFeed],[{issue:'Powdery mildew',url:'https://www.google.com/search?q=Powdery%20mildew%20plant%20care%20fix'}]),
   // ROSE BED
-  p('ros-apricot','b-ros','Apricot Tree','Prunus armeniaca','🍑','alive','Every 2 weeks spring/summer','Full sun to part sun','Existing.',[fruitWaterSp,fruitWaterSu,fruitWaterFW],[{issue:'Brown rot on fruit',url:'https://www.thespruce.com/apricot-tree-care-5270799'}]),
-  p('ros-lemon','b-ros','Dwarf Lemon Tree','Citrus limon dwarf','🍋','alive','Every 2 weeks','Full sun to part sun','Existing.',[m('Feed citrus fertilizer',[2,5,8]),fruitWaterSp,fruitWaterSu],[{issue:'Yellowing leaves',url:'https://www.thespruce.com/citrus-tree-care-1902749'}]),
-  p('ros-peruvian','b-ros','Peruvian Lily','Alstroemeria spp.','🌸','alive','Moderate','Part sun','Existing. Long-lasting cut flowers.',[m('Deadhead at base — pull stem out, do not cut',[4,5,6,7,8,9])],[{issue:'Not flowering',url:'https://www.thespruce.com/alstroemeria-care-1902748'}]),
-  p('ros-flowercarpet','b-ros','Flower Carpet Rose','Rosa Flower Carpet','🌹','alive','Moderate','Part sun','Existing ground cover rose.',[roseDeadhead,m('Light trim to tidy in February',[2])],[{issue:'Black spot',url:'https://www.thespruce.com/rose-black-spot-1402994'}]),
-  p('ros-treerose','b-ros','Tree Rose','Rosa standard','🌹','alive','Deep water weekly','Part sun','Existing standard form rose.',[roseDeadhead,rosePrune,roseFeed],[{issue:'Black spot',url:'https://www.thespruce.com/rose-black-spot-1402994'}]),
+  p('ros-apricot','b-ros','Apricot Tree','Prunus armeniaca','🍑','alive','Every 2 weeks spring/summer','Full sun to part sun','Existing.',[fruitWaterSp,fruitWaterSu,fruitWaterFW],[{issue:'Brown rot on fruit',url:'https://www.google.com/search?q=Brown%20rot%20on%20fruit%20plant%20care%20fix'}]),
+  p('ros-lemon','b-ros','Dwarf Lemon Tree','Citrus limon dwarf','🍋','alive','Every 2 weeks','Full sun to part sun','Existing.',[m('Feed citrus fertilizer',[2,5,8]),fruitWaterSp,fruitWaterSu],[{issue:'Yellowing leaves',url:'https://www.google.com/search?q=Yellowing%20leaves%20plant%20care%20fix'}]),
+  p('ros-peruvian','b-ros','Peruvian Lily','Alstroemeria spp.','🌸','alive','Moderate','Part sun','Existing. Long-lasting cut flowers.',[m('Deadhead at base — pull stem out, do not cut',[4,5,6,7,8,9])],[{issue:'Not flowering',url:'https://www.google.com/search?q=Not%20flowering%20plant%20care%20fix'}]),
+  p('ros-flowercarpet','b-ros','Flower Carpet Rose','Rosa Flower Carpet','🌹','alive','Moderate','Part sun','Existing ground cover rose.',[roseDeadhead,m('Light trim to tidy in February',[2])],[{issue:'Black spot',url:'https://www.google.com/search?q=Black%20spot%20plant%20care%20fix'}]),
+  p('ros-treerose','b-ros','Tree Rose','Rosa standard','🌹','alive','Deep water weekly','Part sun','Existing standard form rose.',[roseDeadhead,rosePrune,roseFeed],[{issue:'Black spot',url:'https://www.google.com/search?q=Black%20spot%20plant%20care%20fix'}]),
   // BACK BED RIGHT
-  p('br-fatsia','b-br','Fatsia japonica','Fatsia japonica','🌿','planned','Moderate','Part shade','2-gallon. Behind planter area.',[m('Cut back in spring before growth pushes',[2,3]),m('Take cuttings for propagation',[3])],[{issue:'Leaf drop',url:'https://www.thespruce.com/fatsia-japonica-care-5270799'}]),
-  p('br-azalea','b-br','Encore Azalea White','Rhododendron Encore','🌸','planned','Regular','Part shade','x2. 3-gallon. White. Diagonal back layout.',[azFeed,azTrim],[{issue:'Not reblooming',url:'https://www.thespruce.com/encore-azalea-care-5270799'}]),
-  p('br-hosta','b-br','Empress Wu Hosta','Hosta Empress Wu','🍃','planned','Regular','Full shade','x1. 3-gallon. 4ft x 6ft at maturity.',[hosSlug,m('Emerges late Feb/March — do not disturb soil',[1,2]),m('Cut back dead foliage in fall',[11])],[{issue:'Slug damage',url:'https://www.thespruce.com/hostas-growing-guide-1402882'}]),
-  p('br-anemone','b-br','Japanese Anemone Honorine Jobert','Anemone hybrida Honorine Jobert','🌸','planned','Moderate','Part shade','x1. 3-gallon. White. Fall drama.',[anClean],[{issue:'Not blooming',url:'https://www.thespruce.com/japanese-anemone-plant-profile-4843654'}]),
-  p('br-tiarella','b-br','Tiarella Spring Symphony','Tiarella cordifolia Spring Symphony','🌿','planned','Moderate','Part to full shade','x5. Long cluster in front of Hosta.',[tiarellaDiv],[{issue:'Crown rot',url:'https://www.thespruce.com/tiarella-care-5270799'}]),
-  p('br-liriope','b-br','Liriope Big Blue','Liriope muscari Big Blue','🌿','planned','Low-moderate','Part shade','x6. 4". 2 clusters of 3. Front border.',[liriopeMaint],[{issue:'Crown rot',url:'https://www.thespruce.com/liriope-care-5270799'}]),
-  p('br-impatiens','b-br','Impatiens White','Impatiens walleriana','🤍','planned','Regular','Part shade','x16. Interior filler between big plants.',[impFeed],[{issue:'Downy mildew',url:'https://www.thespruce.com/impatiens-care-1902748'}]),
-  p('br-coleus','b-br','Coleus Dark Purple','Plectranthus scutellarioides','💜','planned','Moderate','Part shade','x8. Filler.',[colRefresh],[{issue:'Leggy growth',url:'https://www.thespruce.com/coleus-care-5270799'}]),
-  p('br-torenia','b-br','Torenia White/Purple','Torenia fournieri','🌸','planned','Regular','Part to full shade','x8. Filler. White with purple markings.',[torMaint],[{issue:'Root rot',url:'https://www.thespruce.com/torenia-care-5270799'}]),
-  p('br-begonia','b-br','Tuberous Begonia Hot Pink','Begonia tuberhybrida','🌸','planned','Regular','Part shade','x12. Hot pink. In front of planter.',[begDeadhead,begFeed],[{issue:'Powdery mildew',url:'https://www.thespruce.com/how-to-grow-begonias-1402821'}]),
-  p('br-impatiens-curve','b-br','Impatiens White (Curve)','Impatiens walleriana','🤍','planned','Regular','Part shade','x18. White. At curve ends Back Bed Right.',[impFeed],[{issue:'Downy mildew',url:'https://www.thespruce.com/impatiens-care-1902748'}]),
+  p('br-fatsia','b-br','Fatsia japonica','Fatsia japonica','🌿','planned','Moderate','Part shade','2-gallon. Behind planter area.',[m('Cut back in spring before growth pushes',[2,3]),m('Take cuttings for propagation',[3])],[{issue:'Leaf drop',url:'https://www.google.com/search?q=Leaf%20drop%20plant%20care%20fix'}]),
+  p('br-azalea','b-br','Encore Azalea White','Rhododendron Encore','🌸','planned','Regular','Part shade','x2. 3-gallon. White. Diagonal back layout.',[azFeed,azTrim],[{issue:'Not reblooming',url:'https://www.google.com/search?q=Not%20reblooming%20plant%20care%20fix'}]),
+  p('br-hosta','b-br','Empress Wu Hosta','Hosta Empress Wu','🍃','planned','Regular','Full shade','x1. 3-gallon. 4ft x 6ft at maturity.',[hosSlug,m('Emerges late Feb/March — do not disturb soil',[1,2]),m('Cut back dead foliage in fall',[11])],[{issue:'Slug damage',url:'https://www.google.com/search?q=Slug%20damage%20plant%20care%20fix'}]),
+  p('br-anemone','b-br','Japanese Anemone Honorine Jobert','Anemone hybrida Honorine Jobert','🌸','planned','Moderate','Part shade','x1. 3-gallon. White. Fall drama.',[anClean],[{issue:'Not blooming',url:'https://www.google.com/search?q=Not%20blooming%20plant%20care%20fix'}]),
+  p('br-tiarella','b-br','Tiarella Spring Symphony','Tiarella cordifolia Spring Symphony','🌿','planned','Moderate','Part to full shade','x5. Long cluster in front of Hosta.',[tiarellaDiv],[{issue:'Crown rot',url:'https://www.google.com/search?q=Crown%20rot%20plant%20care%20fix'}]),
+  p('br-liriope','b-br','Liriope Big Blue','Liriope muscari Big Blue','🌿','planned','Low-moderate','Part shade','x6. 4". 2 clusters of 3. Front border.',[liriopeMaint],[{issue:'Crown rot',url:'https://www.google.com/search?q=Crown%20rot%20plant%20care%20fix'}]),
+  p('br-impatiens','b-br','Impatiens White','Impatiens walleriana','🤍','planned','Regular','Part shade','x16. Interior filler between big plants.',[impFeed],[{issue:'Downy mildew',url:'https://www.google.com/search?q=Downy%20mildew%20plant%20care%20fix'}]),
+  p('br-coleus','b-br','Coleus Dark Purple','Plectranthus scutellarioides','💜','planned','Moderate','Part shade','x8. Filler.',[colRefresh],[{issue:'Leggy growth',url:'https://www.google.com/search?q=Leggy%20growth%20plant%20care%20fix'}]),
+  p('br-torenia','b-br','Torenia White/Purple','Torenia fournieri','🌸','planned','Regular','Part to full shade','x8. Filler. White with purple markings.',[torMaint],[{issue:'Root rot',url:'https://www.google.com/search?q=Root%20rot%20plant%20care%20fix'}]),
+  p('br-begonia','b-br','Tuberous Begonia Hot Pink','Begonia tuberhybrida','🌸','planned','Regular','Part shade','x12. Hot pink. In front of planter.',[begDeadhead,begFeed],[{issue:'Powdery mildew',url:'https://www.google.com/search?q=Powdery%20mildew%20plant%20care%20fix'}]),
+  p('br-impatiens-curve','b-br','Impatiens White (Curve)','Impatiens walleriana','🤍','planned','Regular','Part shade','x18. White. At curve ends Back Bed Right.',[impFeed],[{issue:'Downy mildew',url:'https://www.google.com/search?q=Downy%20mildew%20plant%20care%20fix'}]),
   // BACK BED LEFT
-  p('bl-fatsia','b-bl','Fatsia japonica','Fatsia japonica','🌿','planned','Moderate','Part shade','x1. 2-gallon.',[m('Cut back in spring before growth pushes',[2,3])],[{issue:'Leaf drop',url:'https://www.thespruce.com/fatsia-japonica-care-5270799'}]),
-  p('bl-ivy','b-bl','Boston Ivy','Parthenocissus tricuspidata','🍂','planned','Moderate','Part shade to full sun','x1. 1-gallon. Climbing fence.',[ivyTrain,ivyPrune],[{issue:'Japanese beetles',url:'https://www.thespruce.com/boston-ivy-care-5270799'}]),
-  p('bl-azalea','b-bl','Encore Azalea White','Rhododendron Encore','🌸','planned','Regular','Part shade','x1. 3-gallon. White.',[azFeed,azTrim],[{issue:'Not reblooming',url:'https://www.thespruce.com/encore-azalea-care-5270799'}]),
-  p('bl-liriope','b-bl','Liriope Big Blue','Liriope muscari Big Blue','🌿','planned','Low-moderate','Part shade','x6. 4". 2 clusters of 3.',[liriopeMaint],[{issue:'Crown rot',url:'https://www.thespruce.com/liriope-care-5270799'}]),
-  p('bl-begonia','b-bl','Tuberous Begonia Hot Pink','Begonia tuberhybrida','🌸','planned','Regular','Part shade','x12. Hot pink. At curve end.',[begDeadhead,begFeed],[{issue:'Powdery mildew',url:'https://www.thespruce.com/how-to-grow-begonias-1402821'}]),
-  p('bl-impatiens','b-bl','Impatiens White','Impatiens walleriana','🤍','planned','Regular','Part shade','x18. White. Along curve.',[impFeed],[{issue:'Downy mildew',url:'https://www.thespruce.com/impatiens-care-1902748'}]),
+  p('bl-fatsia','b-bl','Fatsia japonica','Fatsia japonica','🌿','planned','Moderate','Part shade','x1. 2-gallon.',[m('Cut back in spring before growth pushes',[2,3])],[{issue:'Leaf drop',url:'https://www.google.com/search?q=Leaf%20drop%20plant%20care%20fix'}]),
+  p('bl-ivy','b-bl','Boston Ivy','Parthenocissus tricuspidata','🍂','planned','Moderate','Part shade to full sun','x1. 1-gallon. Climbing fence.',[ivyTrain,ivyPrune],[{issue:'Japanese beetles',url:'https://www.google.com/search?q=Japanese%20beetles%20plant%20care%20fix'}]),
+  p('bl-azalea','b-bl','Encore Azalea White','Rhododendron Encore','🌸','planned','Regular','Part shade','x1. 3-gallon. White.',[azFeed,azTrim],[{issue:'Not reblooming',url:'https://www.google.com/search?q=Not%20reblooming%20plant%20care%20fix'}]),
+  p('bl-liriope','b-bl','Liriope Big Blue','Liriope muscari Big Blue','🌿','planned','Low-moderate','Part shade','x6. 4". 2 clusters of 3.',[liriopeMaint],[{issue:'Crown rot',url:'https://www.google.com/search?q=Crown%20rot%20plant%20care%20fix'}]),
+  p('bl-begonia','b-bl','Tuberous Begonia Hot Pink','Begonia tuberhybrida','🌸','planned','Regular','Part shade','x12. Hot pink. At curve end.',[begDeadhead,begFeed],[{issue:'Powdery mildew',url:'https://www.google.com/search?q=Powdery%20mildew%20plant%20care%20fix'}]),
+  p('bl-impatiens','b-bl','Impatiens White','Impatiens walleriana','🤍','planned','Regular','Part shade','x18. White. Along curve.',[impFeed],[{issue:'Downy mildew',url:'https://www.google.com/search?q=Downy%20mildew%20plant%20care%20fix'}]),
   // FOUNTAIN WALL BED
-  p('fw-distictis','b-fw','Distictis buccinatoria','Distictis buccinatoria','🌺','alive','Moderate once established','Part sun','Existing on stone wall. Blood Red Trumpet Vine. Currently unruly — cutback planned now.',[distPrune,distTrail,distFeed],[{issue:'Rampant unruly growth',url:'https://www.thespruce.com/distictis-care-5270799'}]),
-  p('fw-rose','b-fw','Double Knock Out Rose White Out','Rosa White Out','🌹','planned','Deep water weekly','Part shade','x2. 2-gallon. White double blooms.',[roseDeadhead,rosePrune,roseFeed],[{issue:'Black spot',url:'https://www.thespruce.com/rose-black-spot-1402994'}]),
-  p('fw-geranium','b-fw','Creeping Geranium','Pelargonium spp.','🌺','alive','Moderate','Part shade','Red + pink. Propagating from stem cuttings.',[geranDeadhead,geranCutback],[{issue:'Leggy growth',url:'https://www.thespruce.com/geranium-plant-care-1402049'}]),
-  p('fw-fuchsia','b-fw','Fuchsia Gartenmeister Bonstedt','Fuchsia Gartenmeister Bonstedt','🪻','planned','Keep consistently moist','Part shade','x8. 4". Red/orange tubular flowers. 12-15 inch spacing.',[fuchsiaWater,fuchsiaTrim],[{issue:'Wilting',url:'https://www.thespruce.com/fuchsia-plant-care-1315508'}]),
-  p('fw-begonia','b-fw','Tuberous Begonia Orange','Begonia tuberhybrida','🟠','planned','Regular','Part shade','x15. Orange Non Stop.',[begDeadhead,begFeed],[{issue:'Powdery mildew',url:'https://www.thespruce.com/how-to-grow-begonias-1402821'}]),
+  p('fw-distictis','b-fw','Distictis buccinatoria','Distictis buccinatoria','🌺','alive','Moderate once established','Part sun','Existing on stone wall. Blood Red Trumpet Vine. Currently unruly — cutback planned now.',[distPrune,distTrail,distFeed],[{issue:'Rampant unruly growth',url:'https://www.google.com/search?q=Rampant%20unruly%20growth%20plant%20care%20fix'}]),
+  p('fw-rose','b-fw','Double Knock Out Rose White Out','Rosa White Out','🌹','planned','Deep water weekly','Part shade','x2. 2-gallon. White double blooms.',[roseDeadhead,rosePrune,roseFeed],[{issue:'Black spot',url:'https://www.google.com/search?q=Black%20spot%20plant%20care%20fix'}]),
+  p('fw-geranium','b-fw','Creeping Geranium','Pelargonium spp.','🌺','alive','Moderate','Part shade','Red + pink. Propagating from stem cuttings.',[geranDeadhead,geranCutback],[{issue:'Leggy growth',url:'https://www.google.com/search?q=Leggy%20growth%20plant%20care%20fix'}]),
+  p('fw-fuchsia','b-fw','Fuchsia Gartenmeister Bonstedt','Fuchsia Gartenmeister Bonstedt','🪻','planned','Keep consistently moist','Part shade','x8. 4". Red/orange tubular flowers. 12-15 inch spacing.',[fuchsiaWater,fuchsiaTrim],[{issue:'Wilting',url:'https://www.google.com/search?q=Wilting%20plant%20care%20fix'}]),
+  p('fw-begonia','b-fw','Tuberous Begonia Orange','Begonia tuberhybrida','🟠','planned','Regular','Part shade','x15. Orange Non Stop.',[begDeadhead,begFeed],[{issue:'Powdery mildew',url:'https://www.google.com/search?q=Powdery%20mildew%20plant%20care%20fix'}]),
   // MAIN ARBOR
-  p('ma-jasmine','b-ma','Star Jasmine','Trachelospermum jasminoides','🌸','alive','Moderate','Part sun','Existing on arbor. Intensely fragrant spring flowers.',[m('Train new growth on arbor structure',[4,5,6]),m('Light trim after flowering',[6,7])],[{issue:'Scale insects',url:'https://www.thespruce.com/star-jasmine-care-5270799'}]),
-  p('ma-palm','b-ma','Palms in Planters','Arecaceae spp.','🌴','alive','Regular — keep moist','Part sun','4 existing palms in ceramic planters.',[m('Feed palm fertilizer spring and summer',[4,7]),m('Remove dead fronds as needed',[4,5,6,7,8])],[{issue:'Yellowing fronds',url:'https://www.thespruce.com/palm-care-1902749'}]),
-  p('ma-salvia','b-ma','Salvia Amistad','Salvia Amistad','💜','planned','Low-moderate','Part sun','x1. 1-gallon. In front of jasmine.',[salviaDeadhead,salviaTrim,salviaHardPrune],[{issue:'Leggy growth',url:'https://www.thespruce.com/salvia-plant-profile-4767854'}]),
-  p('ma-calibrachoa','b-ma','Calibrachoa','Calibrachoa spp.','🌸','planned','Regular','Part sun','x8 (2 per planter). Color TBD.',[calMaint],[{issue:'Iron deficiency (yellowing)',url:'https://www.thespruce.com/calibrachoa-care-5270799'}]),
+  p('ma-jasmine','b-ma','Star Jasmine','Trachelospermum jasminoides','🌸','alive','Moderate','Part sun','Existing on arbor. Intensely fragrant spring flowers.',[m('Train new growth on arbor structure',[4,5,6]),m('Light trim after flowering',[6,7])],[{issue:'Scale insects',url:'https://www.google.com/search?q=Scale%20insects%20plant%20care%20fix'}]),
+  p('ma-palm','b-ma','Palms in Planters','Arecaceae spp.','🌴','alive','Regular — keep moist','Part sun','4 existing palms in ceramic planters.',[m('Feed palm fertilizer spring and summer',[4,7]),m('Remove dead fronds as needed',[4,5,6,7,8])],[{issue:'Yellowing fronds',url:'https://www.google.com/search?q=Yellowing%20fronds%20plant%20care%20fix'}]),
+  p('ma-salvia','b-ma','Salvia Amistad','Salvia Amistad','💜','planned','Low-moderate','Part sun','x1. 1-gallon. In front of jasmine.',[salviaDeadhead,salviaTrim,salviaHardPrune],[{issue:'Leggy growth',url:'https://www.google.com/search?q=Leggy%20growth%20plant%20care%20fix'}]),
+  p('ma-calibrachoa','b-ma','Calibrachoa','Calibrachoa spp.','🌸','planned','Regular','Part sun','x8 (2 per planter). Color TBD.',[calMaint],[{issue:'Iron deficiency (yellowing)',url:'https://www.google.com/search?q=Iron%20deficiency%20(yellowing)%20plant%20care%20fix'}]),
   // SIDE ARBOR
-  p('sa-bougainvillea','b-sa','Bougainvillea','Bougainvillea spp.','🌺','alive','Deep water weekly','Part sun','Existing on arbor.',[bougFeed,bougPrune,bougTrain],[{issue:'Not blooming',url:'https://www.thespruce.com/bougainvillea-care-1902911'}]),
-  p('sa-iceberg','b-sa','Iceberg Rose Climbing','Rosa Iceberg','🌹','alive','Deep water weekly','Part sun','Existing. Train horizontally now while flexible.',[roseDeadhead,m('Train canes horizontally NOW while flexible',[4,5]),rosePrune],[{issue:'Black spot',url:'https://www.thespruce.com/rose-black-spot-1402994'}]),
-  p('sa-angelface','b-sa','Angel Face Rose Climbing','Rosa Angel Face','💜','alive','Deep water weekly','Part sun','Existing lavender/mauve climbing rose.',[roseDeadhead,rosePrune,roseFeed],[{issue:'Black spot',url:'https://www.thespruce.com/rose-black-spot-1402994'}]),
-  p('sa-burstjoy','b-sa','Burst of Joy Rose Bush','Rosa Burst of Joy','🟠','alive','Deep water weekly','Part sun','Existing bush rose. Orange/coral.',[roseDeadhead,rosePrune,roseFeed],[{issue:'Black spot',url:'https://www.thespruce.com/rose-black-spot-1402994'}]),
-  p('sa-mophead','b-sa','Mophead Hydrangea','Hydrangea macrophylla','💙','alive','Regular','Part shade','Existing. Multiple plants.',[hydPrune,hydFeed,m('Deadwood removal only in early spring — never fall',[3])],[{issue:'Not blooming (pruned at wrong time)',url:'https://www.thespruce.com/hydrangea-care-1902642'}]),
-  p('sa-oakleaf','b-sa','Oakleaf Hydrangea','Hydrangea quercifolia','🤍','alive','Regular','Part shade','Existing. Stunning fall foliage.',[hydPrune,hydFeed],[{issue:'Not blooming',url:'https://www.thespruce.com/oakleaf-hydrangea-care-5270799'}]),
-  p('sa-passiflora','b-sa','Passiflora caerulea','Passiflora caerulea','🌸','planned','Moderate','Part sun','x4. 3-gallon. Evenly spaced 35ft fence.',[passTrail,passPrune],[{issue:'Not flowering',url:'https://www.thespruce.com/passiflora-care-5270799'}]),
-  p('sa-knockoutrose','b-sa','Double Knock Out Rose Pink','Rosa Double Knock Out','🌹','planned','Deep water every 2 weeks','Part sun','x3. 3-gallon. Behind Side Arbor.',[roseDeadhead,rosePrune],[{issue:'Black spot',url:'https://www.thespruce.com/rose-black-spot-1402994'}]),
-  p('sa-salvia','b-sa','Salvia Amistad','Salvia Amistad','💜','planned','Low-moderate','Part sun','x3. 1-gallon. Behind Side Arbor.',[salviaDeadhead,salviaTrim,salviaHardPrune],[{issue:'Leggy growth',url:'https://www.thespruce.com/salvia-plant-profile-4767854'}]),
+  p('sa-bougainvillea','b-sa','Bougainvillea','Bougainvillea spp.','🌺','alive','Deep water weekly','Part sun','Existing on arbor.',[bougFeed,bougPrune,bougTrain],[{issue:'Not blooming',url:'https://www.google.com/search?q=Not%20blooming%20plant%20care%20fix'}]),
+  p('sa-iceberg','b-sa','Iceberg Rose Climbing','Rosa Iceberg','🌹','alive','Deep water weekly','Part sun','Existing. Train horizontally now while flexible.',[roseDeadhead,m('Train canes horizontally NOW while flexible',[4,5]),rosePrune],[{issue:'Black spot',url:'https://www.google.com/search?q=Black%20spot%20plant%20care%20fix'}]),
+  p('sa-angelface','b-sa','Angel Face Rose Climbing','Rosa Angel Face','💜','alive','Deep water weekly','Part sun','Existing lavender/mauve climbing rose.',[roseDeadhead,rosePrune,roseFeed],[{issue:'Black spot',url:'https://www.google.com/search?q=Black%20spot%20plant%20care%20fix'}]),
+  p('sa-burstjoy','b-sa','Burst of Joy Rose Bush','Rosa Burst of Joy','🟠','alive','Deep water weekly','Part sun','Existing bush rose. Orange/coral.',[roseDeadhead,rosePrune,roseFeed],[{issue:'Black spot',url:'https://www.google.com/search?q=Black%20spot%20plant%20care%20fix'}]),
+  p('sa-mophead','b-sa','Mophead Hydrangea','Hydrangea macrophylla','💙','alive','Regular','Part shade','Existing. Multiple plants.',[hydPrune,hydFeed,m('Deadwood removal only in early spring — never fall',[3])],[{issue:'Not blooming (pruned at wrong time)',url:'https://www.google.com/search?q=Not%20blooming%20(pruned%20at%20wrong%20time)%20plant%20care%20fix'}]),
+  p('sa-oakleaf','b-sa','Oakleaf Hydrangea','Hydrangea quercifolia','🤍','alive','Regular','Part shade','Existing. Stunning fall foliage.',[hydPrune,hydFeed],[{issue:'Not blooming',url:'https://www.google.com/search?q=Not%20blooming%20plant%20care%20fix'}]),
+  p('sa-passiflora','b-sa','Passiflora caerulea','Passiflora caerulea','🌸','planned','Moderate','Part sun','x4. 3-gallon. Evenly spaced 35ft fence.',[passTrail,passPrune],[{issue:'Not flowering',url:'https://www.google.com/search?q=Not%20flowering%20plant%20care%20fix'}]),
+  p('sa-knockoutrose','b-sa','Double Knock Out Rose Pink','Rosa Double Knock Out','🌹','planned','Deep water every 2 weeks','Part sun','x3. 3-gallon. Behind Side Arbor.',[roseDeadhead,rosePrune],[{issue:'Black spot',url:'https://www.google.com/search?q=Black%20spot%20plant%20care%20fix'}]),
+  p('sa-salvia','b-sa','Salvia Amistad','Salvia Amistad','💜','planned','Low-moderate','Part sun','x3. 1-gallon. Behind Side Arbor.',[salviaDeadhead,salviaTrim,salviaHardPrune],[{issue:'Leggy growth',url:'https://www.google.com/search?q=Leggy%20growth%20plant%20care%20fix'}]),
   // BBQ BED
-  p('bbq-daisy','b-bbq','Daisy','Leucanthemum spp.','🌼','alive','Moderate','Full sun','Existing.',[m('Deadhead spent blooms',[5,6,7,8,9]),m('Cut back hard after flowering',[8,9])],[{issue:'Powdery mildew',url:'https://www.thespruce.com/daisy-care-5270799'}]),
-  p('bbq-chrysanthemum','b-bbq','Chrysanthemum','Chrysanthemum spp.','🌸','alive','Regular','Full sun','Existing. Move to front edge of bed.',[m('Pinch tips in spring for bushier plant',[4,5]),m('Feed high phosphorus for bloom',[7,8])],[{issue:'Aphids',url:'https://www.thespruce.com/chrysanthemum-care-5270799'}]),
-  p('bbq-existsalvia','b-bbq','Existing Salvia','Salvia spp.','💜','alive','Low-moderate','Full sun','Existing.',[salviaDeadhead,salviaTrim],[{issue:'Leggy growth',url:'https://www.thespruce.com/salvia-plant-profile-4767854'}]),
-  p('bbq-existrose','b-bbq','Existing Rose','Rosa spp.','🌹','alive','Deep water weekly','Full sun','Existing rose.',[roseDeadhead,rosePrune,roseFeed],[{issue:'Black spot',url:'https://www.thespruce.com/rose-black-spot-1402994'}]),
-  p('bbq-whiteboug','b-bbq','White Bougainvillea','Bougainvillea White Stripe','🤍','alive','Deep water weekly — Super Bloom half strength monthly','Full sun','Moving to BACK of BBQ bed.',[bougFeed,bougPrune,bougTrain],[{issue:'Not blooming',url:'https://www.thespruce.com/bougainvillea-care-1902911'}]),
-  p('bbq-salvia','b-bbq','Salvia Amistad','Salvia Amistad','💜','planned','Low-moderate','Full sun','x3. 1-gallon. Back layer.',[salviaDeadhead,salviaTrim,salviaHardPrune],[{issue:'Leggy growth',url:'https://www.thespruce.com/salvia-plant-profile-4767854'}]),
-  p('bbq-dahlia','b-bbq','Dahlia Magenta','Dahlia spp.','🌼','planned','Regular','Full sun','x4. Magenta/hot pink — select at nursery.',[dahliaDeadhead,dahliaFeed],[{issue:'Powdery mildew',url:'https://www.thespruce.com/how-to-grow-dahlias-1402528'}]),
-  p('bbq-verbena','b-bbq','Verbena Lollipop','Verbena bonariensis Lollipop','💜','planned','Low once established','Full sun','x4. 4". Compact purple. Interweave with dahlias.',[m('Deadhead to extend bloom season',[5,6,7,8,9,10])],[{issue:'Powdery mildew',url:'https://www.thespruce.com/verbena-plant-profile-4767854'}]),
+  p('bbq-daisy','b-bbq','Daisy','Leucanthemum spp.','🌼','alive','Moderate','Full sun','Existing.',[m('Deadhead spent blooms',[5,6,7,8,9]),m('Cut back hard after flowering',[8,9])],[{issue:'Powdery mildew',url:'https://www.google.com/search?q=Powdery%20mildew%20plant%20care%20fix'}]),
+  p('bbq-chrysanthemum','b-bbq','Chrysanthemum','Chrysanthemum spp.','🌸','alive','Regular','Full sun','Existing. Move to front edge of bed.',[m('Pinch tips in spring for bushier plant',[4,5]),m('Feed high phosphorus for bloom',[7,8])],[{issue:'Aphids',url:'https://www.google.com/search?q=Aphids%20plant%20care%20fix'}]),
+  p('bbq-existsalvia','b-bbq','Existing Salvia','Salvia spp.','💜','alive','Low-moderate','Full sun','Existing.',[salviaDeadhead,salviaTrim],[{issue:'Leggy growth',url:'https://www.google.com/search?q=Leggy%20growth%20plant%20care%20fix'}]),
+  p('bbq-existrose','b-bbq','Existing Rose','Rosa spp.','🌹','alive','Deep water weekly','Full sun','Existing rose.',[roseDeadhead,rosePrune,roseFeed],[{issue:'Black spot',url:'https://www.google.com/search?q=Black%20spot%20plant%20care%20fix'}]),
+  p('bbq-whiteboug','b-bbq','White Bougainvillea','Bougainvillea White Stripe','🤍','alive','Deep water weekly — Super Bloom half strength monthly','Full sun','Moving to BACK of BBQ bed.',[bougFeed,bougPrune,bougTrain],[{issue:'Not blooming',url:'https://www.google.com/search?q=Not%20blooming%20plant%20care%20fix'}]),
+  p('bbq-salvia','b-bbq','Salvia Amistad','Salvia Amistad','💜','planned','Low-moderate','Full sun','x3. 1-gallon. Back layer.',[salviaDeadhead,salviaTrim,salviaHardPrune],[{issue:'Leggy growth',url:'https://www.google.com/search?q=Leggy%20growth%20plant%20care%20fix'}]),
+  p('bbq-dahlia','b-bbq','Dahlia Magenta','Dahlia spp.','🌼','planned','Regular','Full sun','x4. Magenta/hot pink — select at nursery.',[dahliaDeadhead,dahliaFeed],[{issue:'Powdery mildew',url:'https://www.google.com/search?q=Powdery%20mildew%20plant%20care%20fix'}]),
+  p('bbq-verbena','b-bbq','Verbena Lollipop','Verbena bonariensis Lollipop','💜','planned','Low once established','Full sun','x4. 4". Compact purple. Interweave with dahlias.',[m('Deadhead to extend bloom season',[5,6,7,8,9,10])],[{issue:'Powdery mildew',url:'https://www.google.com/search?q=Powdery%20mildew%20plant%20care%20fix'}]),
   // STUMP
-  p('st-aeonium','b-stump','Aeonium Zwartkop','Aeonium arboreum Zwartkop','🖤','alive','Low — drought tolerant','Full sun','Dark rosettes against pool blue.',[m('Water deeply monthly in summer',[6,7,8,9]),m('Remove dead rosettes',[3,4,5])],[{issue:'Etiolation',url:'https://www.thespruce.com/aeonium-plant-care-5323459'}]),
+  p('st-aeonium','b-stump','Aeonium Zwartkop','Aeonium arboreum Zwartkop','🖤','alive','Low — drought tolerant','Full sun','Dark rosettes against pool blue.',[m('Water deeply monthly in summer',[6,7,8,9]),m('Remove dead rosettes',[3,4,5])],[{issue:'Etiolation',url:'https://www.google.com/search?q=Etiolation%20plant%20care%20fix'}]),
   // PEPPER SIDE
-  p('ps-orange','b-berry','Orange Tree','Citrus sinensis','🍊','alive','Every 2 weeks spring/summer','Full sun','Existing.',[m('Feed citrus fertilizer',[2,5,8]),fruitWaterSp,fruitWaterSu,fruitWaterFW],[{issue:'Yellowing leaves (nutrient deficiency)',url:'https://www.thespruce.com/citrus-tree-care-1902749'}]),
-  p('ps-persimmon','b-berry','Persimmon','Diospyros kaki','🍊','alive','Monthly spring / every 2 weeks July-August','Full sun','Existing. Most drought tolerant.',[m('Monthly watering spring — slow hose 10 min',[3,4,5,6]),m('Every 2 weeks in peak summer',[7,8]),m('Monthly fall/winter',[9,10,11,12,1,2])],[{issue:'Fruit drop',url:'https://www.thespruce.com/persimmon-tree-care-5270799'}]),
-  p('ps-pomegranate','b-berry','Pomegranate','Punica granatum','🍎','alive','Monthly spring / every 2 weeks July-August','Full sun','Existing. Consistent water improves fruit quality.',[m('Monthly watering spring',[3,4,5,6]),m('Every 2 weeks summer',[7,8]),m('Monthly fall/winter',[9,10,11,12,1,2])],[{issue:'Fruit splitting (inconsistent watering)',url:'https://www.thespruce.com/pomegranate-tree-care-5270799'}]),
-  p('ps-raspberry','b-berry','Raspberry Bababerry','Rubus idaeus Bababerry','🍓','alive','Weekly on drip','Full sun','Existing x1 + new x1. On drip system.',[raspDrip,raspCanes],[{issue:'Poor fruiting',url:'https://www.thespruce.com/raspberry-care-5270799'}]),
-  p('ps-blackberry','b-berry','Blackberry Triple Crown','Rubus spp. Triple Crown','🫐','planned','Regular during fruiting','Full sun','x2. 1-gallon. Thornless. Espalier on wall.',[bbTrain,bbTip,bbCanes],[{issue:'Poor fruiting',url:'https://www.thespruce.com/blackberry-care-5270799'}]),
-  p('ps-salvia','b-berry','Salvia Amistad','Salvia Amistad','💜','planned','Low-moderate','Full sun','x3. 1-gallon. Full sun — thrives here.',[salviaDeadhead,salviaTrim,salviaHardPrune],[{issue:'Leggy growth',url:'https://www.thespruce.com/salvia-plant-profile-4767854'}]),
-  p('ps-beets','b-berry','Beet Seeds','Beta vulgaris','🌱','planned','Regular — keep moist','Full sun','1 packet seeds.',[m('Sow seeds directly into prepared soil',[3,4]),m('Thin seedlings to 3-4 inches apart',[4,5]),m('Water consistently — beets bolt if stressed',[4,5,6,7])],[{issue:'Bolting (heat/water stress)',url:'https://www.thespruce.com/beet-care-5270799'}]),
+  p('ps-orange','b-berry','Orange Tree','Citrus sinensis','🍊','alive','Every 2 weeks spring/summer','Full sun','Existing.',[m('Feed citrus fertilizer',[2,5,8]),fruitWaterSp,fruitWaterSu,fruitWaterFW],[{issue:'Yellowing leaves (nutrient deficiency)',url:'https://www.google.com/search?q=Yellowing%20leaves%20(nutrient%20deficiency)%20plant%20care%20fix'}]),
+  p('ps-persimmon','b-berry','Persimmon','Diospyros kaki','🍊','alive','Monthly spring / every 2 weeks July-August','Full sun','Existing. Most drought tolerant.',[m('Monthly watering spring — slow hose 10 min',[3,4,5,6]),m('Every 2 weeks in peak summer',[7,8]),m('Monthly fall/winter',[9,10,11,12,1,2])],[{issue:'Fruit drop',url:'https://www.google.com/search?q=Fruit%20drop%20plant%20care%20fix'}]),
+  p('ps-pomegranate','b-berry','Pomegranate','Punica granatum','🍎','alive','Monthly spring / every 2 weeks July-August','Full sun','Existing. Consistent water improves fruit quality.',[m('Monthly watering spring',[3,4,5,6]),m('Every 2 weeks summer',[7,8]),m('Monthly fall/winter',[9,10,11,12,1,2])],[{issue:'Fruit splitting (inconsistent watering)',url:'https://www.google.com/search?q=Fruit%20splitting%20(inconsistent%20watering)%20plant%20care%20fix'}]),
+  p('ps-raspberry','b-berry','Raspberry Bababerry','Rubus idaeus Bababerry','🍓','alive','Weekly on drip','Full sun','Existing x1 + new x1. On drip system.',[raspDrip,raspCanes],[{issue:'Poor fruiting',url:'https://www.google.com/search?q=Poor%20fruiting%20plant%20care%20fix'}]),
+  p('ps-blackberry','b-berry','Blackberry Triple Crown','Rubus spp. Triple Crown','🫐','planned','Regular during fruiting','Full sun','x2. 1-gallon. Thornless. Espalier on wall.',[bbTrain,bbTip,bbCanes],[{issue:'Poor fruiting',url:'https://www.google.com/search?q=Poor%20fruiting%20plant%20care%20fix'}]),
+  p('ps-salvia','b-berry','Salvia Amistad','Salvia Amistad','💜','planned','Low-moderate','Full sun','x3. 1-gallon. Full sun — thrives here.',[salviaDeadhead,salviaTrim,salviaHardPrune],[{issue:'Leggy growth',url:'https://www.google.com/search?q=Leggy%20growth%20plant%20care%20fix'}]),
+  p('ps-beets','b-berry','Beet Seeds','Beta vulgaris','🌱','planned','Regular — keep moist','Full sun','1 packet seeds.',[m('Sow seeds directly into prepared soil',[3,4]),m('Thin seedlings to 3-4 inches apart',[4,5]),m('Water consistently — beets bolt if stressed',[4,5,6,7])],[{issue:'Bolting (heat/water stress)',url:'https://www.google.com/search?q=Bolting%20(heat%2Fwater%20stress)%20plant%20care%20fix'}]),
   // TOMATO SIDE
-  p('ts-plum','b-tom','Plum Espalier','Prunus domestica','🍑','alive','Every 2 weeks spring / weekly July-August','Full sun','Existing espalier on wall.',[fruitWaterSp,m('Weekly deep water July-August',[7,8]),espTrain,espPrune],[{issue:'Brown rot',url:'https://www.thespruce.com/plum-tree-care-5270799'}]),
-  p('ts-rainier','b-tom','Rainier Cherry Espalier','Prunus avium Rainier','🍒','alive','Every 2 weeks spring / weekly July-August','Full sun','Existing espalier. NEVER skip summer watering.',[fruitWaterSp,m('Weekly deep water July-August — drought stress causes fruit cracking',[7,8]),m('Extra water during any heat wave 3+ days over 90°F',[6,7,8,9]),espTrain,espPrune],[{issue:'Fruit cracking (water stress)',url:'https://www.thespruce.com/cherry-tree-care-5270799'}]),
+  p('ts-plum','b-tom','Plum Espalier','Prunus domestica','🍑','alive','Every 2 weeks spring / weekly July-August','Full sun','Existing espalier on wall.',[fruitWaterSp,m('Weekly deep water July-August',[7,8]),espTrain,espPrune],[{issue:'Brown rot',url:'https://www.google.com/search?q=Brown%20rot%20plant%20care%20fix'}]),
+  p('ts-rainier','b-tom','Rainier Cherry Espalier','Prunus avium Rainier','🍒','alive','Every 2 weeks spring / weekly July-August','Full sun','Existing espalier. NEVER skip summer watering.',[fruitWaterSp,m('Weekly deep water July-August — drought stress causes fruit cracking',[7,8]),m('Extra water during any heat wave 3+ days over 90°F',[6,7,8,9]),espTrain,espPrune],[{issue:'Fruit cracking (water stress)',url:'https://www.google.com/search?q=Fruit%20cracking%20(water%20stress)%20plant%20care%20fix'}]),
   // BACK ROSE BED
-  p('brs-sunburst','b-back-rose','Sunburst Rose Bush','Rosa Sunburst','🌹','alive','Deep water weekly','Part sun','Existing. Orange/coral bush.',[roseDeadhead,rosePrune,roseFeed],[{issue:'Black spot',url:'https://www.thespruce.com/rose-black-spot-1402994'}]),
-  p('brs-daustinrose','b-back-rose','English Rose David Austin','Rosa David Austin','🌹','alive','Deep water weekly','Part sun','Existing. Yellow fragrant. Check tag for exact variety.',[roseDeadhead,rosePrune,roseFeed],[{issue:'Black spot',url:'https://www.thespruce.com/rose-black-spot-1402994'}]),
-  p('brs-dahlia','b-back-rose','Dahlia Large Purple','Dahlia spp.','💜','alive','Regular','Part sun','Existing large purple dahlia.',[dahliaDeadhead,m('Tubers stay in ground Z9',[11,12,1,2])],[{issue:'Powdery mildew',url:'https://www.thespruce.com/how-to-grow-dahlias-1402528'}]),
-  p('brs-phormium','b-back-rose','Phormium','Phormium tenax','🌿','alive','Low-moderate','Part sun','Existing. Sword-like leaves.',[phorClean],[{issue:'Crown rot (overwatering)',url:'https://www.thespruce.com/phormium-care-5270799'}]),
+  p('brs-sunburst','b-back-rose','Sunburst Rose Bush','Rosa Sunburst','🌹','alive','Deep water weekly','Part sun','Existing. Orange/coral bush.',[roseDeadhead,rosePrune,roseFeed],[{issue:'Black spot',url:'https://www.google.com/search?q=Black%20spot%20plant%20care%20fix'}]),
+  p('brs-daustinrose','b-back-rose','English Rose David Austin','Rosa David Austin','🌹','alive','Deep water weekly','Part sun','Existing. Yellow fragrant. Check tag for exact variety.',[roseDeadhead,rosePrune,roseFeed],[{issue:'Black spot',url:'https://www.google.com/search?q=Black%20spot%20plant%20care%20fix'}]),
+  p('brs-dahlia','b-back-rose','Dahlia Large Purple','Dahlia spp.','💜','alive','Regular','Part sun','Existing large purple dahlia.',[dahliaDeadhead,m('Tubers stay in ground Z9',[11,12,1,2])],[{issue:'Powdery mildew',url:'https://www.google.com/search?q=Powdery%20mildew%20plant%20care%20fix'}]),
+  p('brs-phormium','b-back-rose','Phormium','Phormium tenax','🌿','alive','Low-moderate','Part sun','Existing. Sword-like leaves.',[phorClean],[{issue:'Crown rot (overwatering)',url:'https://www.google.com/search?q=Crown%20rot%20(overwatering)%20plant%20care%20fix'}]),
 ];
 const defaultIndoorPlants=[
-  {id:'ip1',roomId:'r-office',section:'Floor',name:'ZZ Plant',scientific:'Zamioculcas zamiifolia',emoji:'🌿',status:'alive',water:'Every 2-3 weeks — let soil dry completely',sun:'Low to bright indirect',datePlanted:'',nursery:'',fromCutting:false,notes:'Gray speckled pot.',maintenance:[{task:'Water every 2-3 weeks only — let soil fully dry',months:[1,2,3,4,5,6,7,8,9,10,11,12]},{task:'Wipe leaves monthly to remove dust',months:[1,2,3,4,5,6,7,8,9,10,11,12]},{task:'Feed diluted liquid fertilizer monthly',months:[3,4,5,6,7,8,9]}],trouble:[{issue:'Yellow leaves (overwatering)',url:'https://www.thespruce.com/zz-plant-care-5196514'}]},
-  {id:'ip2',roomId:'r-office',section:'Floor',name:'China Doll',scientific:'Radermachera sinica',emoji:'🌳',status:'alive',water:'Moderate — keep evenly moist',sun:'Bright indirect',datePlanted:'',nursery:'',fromCutting:false,notes:'Large white textured pot on roller. Do not move.',maintenance:[{task:'Water when top inch dry',months:[1,2,3,4,5,6,7,8,9,10,11,12]},{task:'Pinch tips to encourage bushy growth',months:[3,4,5,6,7,8]},{task:'Feed monthly',months:[3,4,5,6,7,8,9]}],trouble:[{issue:'Leaf drop',url:'https://www.thespruce.com/china-doll-plant-care-5270799'}]},
-  {id:'ip3',roomId:'r-office',section:'Floor',name:'Variegated Monstera',scientific:"Monstera deliciosa 'Variegata'",emoji:'🤍',status:'alive',water:'When top 2 inches dry',sun:'Bright indirect — no direct sun',datePlanted:'',nursery:'',fromCutting:false,notes:'Small blue pot.',maintenance:[{task:'Water when top 2 inches dry',months:[1,2,3,4,5,6,7,8,9,10,11,12]},{task:'Feed monthly spring-summer',months:[3,4,5,6,7,8,9]}],trouble:[{issue:'Browning white sections (direct sun)',url:'https://www.thespruce.com/monstera-variegata-care-5270799'}]},
-  {id:'ip4',roomId:'r-office',section:'Plant Stand',name:'Pothos',scientific:'Epipremnum aureum',emoji:'💚',status:'alive',water:'Every 1-2 weeks when top inch dry',sun:'Low to bright indirect',datePlanted:'',nursery:'',fromCutting:false,notes:'Glass globe pot top of stand. Cascading dramatically.',maintenance:[{task:'Trim long vines to encourage fullness',months:[3,6,9]},{task:'Wipe leaves monthly',months:[1,2,3,4,5,6,7,8,9,10,11,12]}],trouble:[{issue:'Yellow leaves (overwatering)',url:'https://www.thespruce.com/pothos-plant-care-1902773'}]},
-  {id:'ip5',roomId:'r-office',section:'Plant Stand',name:"Bird's Nest Fern",scientific:'Asplenium nidus',emoji:'🌿',status:'alive',water:'Keep consistently moist — never dry out',sun:'Low to medium indirect',datePlanted:'',nursery:'',fromCutting:false,notes:'Yellow-green pot. Needs more humidity — crispy edges visible.',maintenance:[{task:'Keep consistently moist — never let dry out',months:[1,2,3,4,5,6,7,8,9,10,11,12]},{task:'Mist fronds or use pebble tray for humidity',months:[1,2,3,4,5,6,7,8,9,10,11,12]},{task:'Feed diluted fertilizer monthly',months:[3,4,5,6,7,8,9]}],trouble:[{issue:'Crispy frond edges (low humidity)',url:'https://www.thespruce.com/birds-nest-fern-asplenium-nidus-1902977'}]},
-  {id:'ip6',roomId:'r-office',section:'Plant Stand',name:'Polka Dot Plant',scientific:'Hypoestes phyllostachya',emoji:'🔵',status:'alive',water:'Keep evenly moist',sun:'Bright indirect',datePlanted:'',nursery:'',fromCutting:false,notes:'Lavender pot. White variety.',maintenance:[{task:'Pinch tips regularly to prevent legginess',months:[3,4,5,6,7,8,9,10]},{task:'Feed every 2 weeks spring-summer',months:[3,4,5,6,7,8,9]},{task:'Cut flower spikes when they appear',months:[4,5,6,7,8,9]}],trouble:[{issue:'Leggy growth',url:'https://www.thespruce.com/polka-dot-plant-care-1902994'}]},
-  {id:'ip7',roomId:'r-office',section:'Plant Stand',name:'Swiss Cheese Plant',scientific:'Monstera adansonii',emoji:'🧀',status:'alive',water:'When top 2 inches dry',sun:'Bright indirect',datePlanted:'',nursery:'',fromCutting:false,notes:'Blue-wave pot cascading down plant stand.',maintenance:[{task:'Feed monthly spring-summer',months:[3,4,5,6,7,8,9]},{task:'Wipe leaves monthly',months:[1,2,3,4,5,6,7,8,9,10,11,12]}],trouble:[{issue:'Yellow leaves (overwatering)',url:'https://www.thespruce.com/monstera-adansonii-care-5094695'}]},
-  {id:'ip8',roomId:'r-office',section:'Plant Stand',name:'Dracaena',scientific:'Dracaena spp.',emoji:'🌵',status:'struggling',water:'Every 1-2 weeks when top inch dry',sun:'Bright indirect — currently sunburnt',datePlanted:'',nursery:'',fromCutting:false,notes:'White ribbed pot. Sunburnt — needs to move away from direct light.',maintenance:[{task:'Use filtered or rainwater — fluoride sensitive',months:[1,2,3,4,5,6,7,8,9,10,11,12]},{task:'Remove damaged/sunburnt leaves',months:[1,2,3,4,5,6,7,8,9,10,11,12]},{task:'Keep away from direct sun',months:[1,2,3,4,5,6,7,8,9,10,11,12]}],trouble:[{issue:'Brown tips (fluoride/overwatering)',url:'https://www.thespruce.com/dracaena-plants-care-and-growing-guide-1902991'}]},
-  {id:'ip9',roomId:'r-office',section:'Plant Stand',name:'Philodendron Sun Red',scientific:"Philodendron 'Sun Red'",emoji:'🔴',status:'alive',water:'When top inch dry',sun:'Bright indirect',datePlanted:'',nursery:'',fromCutting:false,notes:'Pink pot. New growth flushes vibrant red.',maintenance:[{task:'Feed monthly spring-summer for best color',months:[3,4,5,6,7,8,9]}],trouble:[{issue:'Loss of red color (low light)',url:'https://www.thespruce.com/philodendron-plant-care-1315840'}]},
-  {id:'ip10',roomId:'r-office',section:'Plant Stand',name:'Jade',scientific:'Crassula ovata',emoji:'💚',status:'alive',water:'Every 2-3 weeks — soil fully dry between',sun:'Bright indirect to some direct',datePlanted:'',nursery:'',fromCutting:false,notes:'White patterned pot.',maintenance:[{task:'Water only when soil completely dry',months:[1,2,3,4,5,6,7,8,9,10,11,12]},{task:'Feed diluted cactus fertilizer',months:[4,5,6,7,8]},{task:'Prune to maintain shape',months:[2,3]}],trouble:[{issue:'Dropping leaves (overwatering)',url:'https://www.thespruce.com/jade-plant-care-1902876'}]},
-  {id:'ip11',roomId:'r-office',section:'Plant Stand',name:'Maidenhair Fern (Large)',scientific:'Adiantum raddianum',emoji:'🌿',status:'alive',water:'Keep consistently moist — never let dry',sun:'Low to medium indirect',datePlanted:'',nursery:'',fromCutting:false,notes:'Large white banded pot. Larger trailing specimen.',maintenance:[{task:'Never let soil dry — check daily in summer',months:[1,2,3,4,5,6,7,8,9,10,11,12]},{task:'Mist daily or keep on pebble tray',months:[1,2,3,4,5,6,7,8,9,10,11,12]},{task:'If fronds die back — cut to soil, keep moist, will regrow',months:[1,2,3]}],trouble:[{issue:'Sudden frond drop',url:'https://www.thespruce.com/maidenhair-fern-care-1902753'}]},
-  {id:'ip12',roomId:'r-office',section:'Plant Stand',name:'Ponytail Palm',scientific:'Beaucarnea recurvata',emoji:'🌴',status:'alive',water:'Every 2-3 weeks — fully dry between',sun:'Bright indirect to full sun',datePlanted:'',nursery:'',fromCutting:false,notes:'White smiley face pot.',maintenance:[{task:'Water sparingly — stores water in bulbous trunk',months:[1,2,3,4,5,6,7,8,9,10,11,12]},{task:'Feed diluted fertilizer once in spring only',months:[3]},{task:'Rotate quarterly for even growth',months:[1,4,7,10]}],trouble:[{issue:'Brown leaf tips',url:'https://www.thespruce.com/ponytail-palm-care-1902748'}]},
-  {id:'ip13',roomId:'r-office',section:'Wall Shelves',name:'Lipstick Plant',scientific:'Aeschynanthus radicans',emoji:'💄',status:'alive',water:'When top inch dry',sun:'Bright indirect',datePlanted:'',nursery:'',fromCutting:false,notes:'Top left wall shelf.',maintenance:[{task:'Feed every 2 weeks spring-summer for blooms',months:[3,4,5,6,7,8,9]},{task:'Cool nights in fall trigger blooming — move to cooler spot',months:[9,10]},{task:'Trim after blooming to encourage new growth',months:[11,12,1]}],trouble:[{issue:'Not blooming',url:'https://www.thespruce.com/lipstick-plant-care-1902908'}]},
-  {id:'ip14',roomId:'r-office',section:'Wall Shelves',name:'Creeping Fig',scientific:'Ficus pumila',emoji:'🍃',status:'alive',water:'Keep evenly moist',sun:'Bright indirect',datePlanted:'',nursery:'',fromCutting:false,notes:'Top left wall shelf alongside Lipstick Plant.',maintenance:[{task:'Keep evenly moist — sensitive to drying out',months:[1,2,3,4,5,6,7,8,9,10,11,12]},{task:'Trim regularly to control spread',months:[3,6,9]},{task:'Feed monthly spring-summer',months:[3,4,5,6,7,8,9]}],trouble:[{issue:'Leaf drop',url:'https://www.thespruce.com/creeping-fig-ficus-pumila-1902889'}]},
-  {id:'ip15',roomId:'r-office',section:'Wall Shelves',name:'Oxalis + String of Pearls',scientific:'Oxalis triangularis + Senecio rowleyanus',emoji:'💜',status:'alive',water:'Moderate Oxalis / Low String of Pearls',sun:'Bright indirect',datePlanted:'',nursery:'',fromCutting:false,notes:'Top right shelf. Two plants in same pot.',maintenance:[{task:'String of Pearls: water every 2 weeks, let dry completely',months:[1,2,3,4,5,6,7,8,9,10,11,12]},{task:'Oxalis may go dormant in summer heat — reduce water if leaves yellow',months:[6,7,8]}],trouble:[{issue:'String of Pearls shriveling (underwatering)',url:'https://www.thespruce.com/string-of-pearls-plant-care-1902767'}]},
-  {id:'ip16',roomId:'r-office',section:'Wall Shelves',name:'Christmas Cactus',scientific:'Schlumbergera bridgesii',emoji:'🌸',status:'alive',water:'When top inch dry — reduce in fall',sun:'Bright indirect',datePlanted:'',nursery:'',fromCutting:false,notes:'Top right wall shelf.',maintenance:[{task:'Feed monthly spring-summer',months:[3,4,5,6,7,8]},{task:'Begin drought stress — reduce watering to trigger bloom',months:[8,9]},{task:'12+ hours darkness nightly for 4 weeks to set buds',months:[10]},{task:'Move back to bright spot once buds appear — do not move again',months:[11]},{task:'Enjoy blooms — keep away from drafts',months:[12,1]}],trouble:[{issue:'Bud drop (moved while budding)',url:'https://www.thespruce.com/christmas-cactus-plant-care-1902821'}]},
-  {id:'ip17',roomId:'r-office',section:'Wall Shelves',name:'Maidenhair Fern (Small)',scientific:'Adiantum raddianum',emoji:'🌿',status:'alive',water:'Keep consistently moist — never dry',sun:'Low to medium indirect',datePlanted:'',nursery:'',fromCutting:false,notes:'Hanging smiley pot on wall shelf. Smaller specimen.',maintenance:[{task:'Never let soil dry — check daily',months:[1,2,3,4,5,6,7,8,9,10,11,12]},{task:'Mist daily or keep on pebble tray',months:[1,2,3,4,5,6,7,8,9,10,11,12]}],trouble:[{issue:'Sudden frond drop',url:'https://www.thespruce.com/maidenhair-fern-care-1902753'}]},
-  {id:'ip18',roomId:'r-office',section:'Wall Shelves',name:'Coin Plant',scientific:'Pilea peperomioides',emoji:'🪙',status:'alive',water:'When top inch dry',sun:'Bright indirect',datePlanted:'',nursery:'',fromCutting:false,notes:'Middle left wall shelf.',maintenance:[{task:'Rotate weekly for even growth — leans toward light',months:[1,2,3,4,5,6,7,8,9,10,11,12]},{task:'Remove offsets (pups) when they appear',months:[3,4,5,6,7,8,9]},{task:'Feed monthly spring-summer',months:[3,4,5,6,7,8,9]}],trouble:[{issue:'Curling leaves (underwatering)',url:'https://www.thespruce.com/pilea-peperomioides-care-4797271'}]},
-  {id:'ip19',roomId:'r-office',section:'Wall Shelves',name:'Frosty Fern',scientific:'Selaginella kraussiana',emoji:'❄️',status:'alive',water:'Keep consistently moist',sun:'Low to medium indirect',datePlanted:'',nursery:'',fromCutting:false,notes:'Middle right wall shelf.',maintenance:[{task:'Keep consistently moist — dries out fast',months:[1,2,3,4,5,6,7,8,9,10,11,12]},{task:'Mist regularly or use pebble tray',months:[1,2,3,4,5,6,7,8,9,10,11,12]},{task:'Trim brown sections',months:[3,6,9]}],trouble:[{issue:'Browning (low humidity)',url:'https://www.thespruce.com/selaginella-care-5270799'}]},
-  {id:'ip20',roomId:'r-office',section:'Wall Shelves',name:"Alocasia 'Regal Shields'",scientific:"Alocasia 'Regal Shields'",emoji:'🖤',status:'alive',water:'When top 2 inches dry',sun:'Bright indirect',datePlanted:'',nursery:'',fromCutting:false,notes:'Middle right wall shelf. White cross-pattern pot.',maintenance:[{task:'Water when top 2 inches dry',months:[1,2,3,4,5,6,7,8,9,10,11,12]},{task:'Reduce watering in winter — semi-dormant',months:[11,12,1,2]},{task:'Wipe large leaves monthly',months:[1,2,3,4,5,6,7,8,9,10,11,12]},{task:'Feed monthly spring-summer',months:[3,4,5,6,7,8,9]}],trouble:[{issue:'Yellow leaves (overwatering)',url:'https://www.thespruce.com/alocasia-care-5094742'}]},
-  {id:'ip21',roomId:'r-office',section:'Wall Shelves',name:"Philodendron 'Pink Princess'",scientific:"Philodendron erubescens 'Pink Princess'",emoji:'🩷',status:'alive',water:'When top inch dry',sun:'Bright indirect — more light = more pink',datePlanted:'',nursery:'',fromCutting:false,notes:'Middle right wall shelf. White dotted pot.',maintenance:[{task:'Ensure bright indirect light to maintain pink variegation',months:[1,2,3,4,5,6,7,8,9,10,11,12]},{task:'Feed monthly spring-summer',months:[3,4,5,6,7,8,9]}],trouble:[{issue:'Losing pink variegation (low light)',url:'https://www.thespruce.com/pink-princess-philodendron-care-5094742'}]},
-  {id:'ip22',roomId:'r-office',section:'Hanging',name:'Caladium',scientific:'Caladium bicolor',emoji:'🌺',status:'alive',water:'Keep evenly moist during growing season',sun:'Bright indirect — no direct sun',datePlanted:'',nursery:'',fromCutting:false,notes:'Top hanging pot.',maintenance:[{task:'Feed every 2 weeks spring-summer',months:[4,5,6,7,8]},{task:'Reduce water as leaves die back in fall',months:[9,10]},{task:'Store tubers cool and dry over winter',months:[11,12,1]},{task:'Resume watering as new growth appears in spring',months:[2,3,4]}],trouble:[{issue:'Drooping leaves (underwatering)',url:'https://www.thespruce.com/caladium-plant-care-1902902'}]},
-  {id:'ip23',roomId:'r-office',section:'Hanging',name:'Spider Plant',scientific:'Chlorophytum comosum',emoji:'🕷️',status:'alive',water:'When top inch dry',sun:'Bright indirect',datePlanted:'',nursery:'',fromCutting:false,notes:'Lower hanging pot. Variegated white-striped.',maintenance:[{task:'Remove brown tips with scissors at an angle',months:[1,2,3,4,5,6,7,8,9,10,11,12]},{task:'Propagate spiderettes — pin to soil or place in water',months:[4,5,6,7,8,9]},{task:'Feed monthly spring-summer',months:[3,4,5,6,7,8,9]}],trouble:[{issue:'Brown tips (fluoride/dry air)',url:'https://www.thespruce.com/spider-plant-care-1902773'}]},
-  {id:'ip24',roomId:'r-office',section:'Table',name:'Prayer Plant',scientific:'Maranta leuconeura',emoji:'🙏',status:'struggling',water:'Keep evenly moist',sun:'Low to medium indirect',datePlanted:'',nursery:'',fromCutting:false,notes:'Black table. Struggling — crispy edges. Needs humidity and filtered water.',maintenance:[{task:'Keep evenly moist — very sensitive to drying out',months:[1,2,3,4,5,6,7,8,9,10,11,12]},{task:'Mist daily for humidity',months:[1,2,3,4,5,6,7,8,9,10,11,12]},{task:'Use filtered water — sensitive to fluoride',months:[1,2,3,4,5,6,7,8,9,10,11,12]}],trouble:[{issue:'Crispy edges (low humidity/fluoride)',url:'https://www.thespruce.com/prayer-plant-maranta-care-1902882'}]},
-  {id:'ip25',roomId:'r-office',section:'Table',name:'Orchid',scientific:'Phalaenopsis spp.',emoji:'🌸',status:'alive',water:'Every 7-10 days — soak then drain fully',sun:'Bright indirect',datePlanted:'',nursery:'',fromCutting:false,notes:'Office table. One of two orchids.',maintenance:[{task:'Soak then drain fully — never sit in water',months:[1,2,3,4,5,6,7,8,9,10,11,12]},{task:'Feed orchid fertilizer every 2 weeks when growing',months:[3,4,5,6,7,8,9]},{task:'After bloom: cut spike to node for rebloom or to base',months:[2,3]},{task:'Cool nights in fall trigger new bloom spike',months:[9,10,11]}],trouble:[{issue:'No rebloom',url:'https://www.thespruce.com/how-to-get-orchids-to-rebloom-1315611'}]},
-  {id:'ip26',roomId:'r-house',section:'Other',name:'Peace Lily',scientific:'Spathiphyllum spp.',emoji:'☮️',status:'alive',water:'When leaves slightly droop',sun:'Low to medium indirect',datePlanted:'',nursery:'',fromCutting:false,notes:'',maintenance:[{task:'Water when leaves just start to droop — reliable indicator',months:[1,2,3,4,5,6,7,8,9,10,11,12]},{task:'Wipe large leaves monthly',months:[1,2,3,4,5,6,7,8,9,10,11,12]},{task:'Feed monthly spring-summer',months:[3,4,5,6,7,8,9]},{task:'Mist in winter — dry air causes droop',months:[11,12,1,2]}],trouble:[{issue:'Yellow leaves (overwatering)',url:'https://www.thespruce.com/peace-lily-care-1902767'}]},
-  {id:'ip27',roomId:'r-house',section:'Other',name:'Pothos',scientific:'Epipremnum aureum',emoji:'💚',status:'alive',water:'Every 1-2 weeks',sun:'Low to bright indirect',datePlanted:'',nursery:'',fromCutting:false,notes:'Rest of house.',maintenance:[{task:'Trim long vines to encourage fullness',months:[3,6,9]}],trouble:[{issue:'Yellow leaves',url:'https://www.thespruce.com/pothos-plant-care-1902773'}]},
-  {id:'ip28',roomId:'r-house',section:'Other',name:'Monstera',scientific:'Monstera deliciosa',emoji:'🌿',status:'alive',water:'When top 2 inches dry',sun:'Bright indirect',datePlanted:'',nursery:'',fromCutting:false,notes:'',maintenance:[{task:'Wipe leaves monthly',months:[1,2,3,4,5,6,7,8,9,10,11,12]},{task:'Feed monthly spring-summer',months:[3,4,5,6,7,8,9]}],trouble:[{issue:'Yellow leaves',url:'https://www.thespruce.com/swiss-cheese-plant-care-1902756'}]},
-  {id:'ip29',roomId:'r-house',section:'Other',name:'Dracaena',scientific:'Dracaena spp.',emoji:'🌵',status:'alive',water:'Every 1-2 weeks',sun:'Bright indirect',datePlanted:'',nursery:'',fromCutting:false,notes:'Rest of house — separate from sunburnt office one.',maintenance:[{task:'Use filtered water — fluoride sensitive',months:[1,2,3,4,5,6,7,8,9,10,11,12]}],trouble:[{issue:'Brown tips',url:'https://www.thespruce.com/dracaena-plants-care-and-growing-guide-1902991'}]},
-  {id:'ip30',roomId:'r-house',section:'Other',name:'Ponytail Palm',scientific:'Beaucarnea recurvata',emoji:'🌴',status:'alive',water:'Every 2-3 weeks — fully dry between',sun:'Bright indirect to full sun',datePlanted:'',nursery:'',fromCutting:false,notes:'Rest of house.',maintenance:[{task:'Water sparingly — stores water in trunk',months:[1,2,3,4,5,6,7,8,9,10,11,12]},{task:'Feed once in spring only',months:[3]}],trouble:[{issue:'Brown tips',url:'https://www.thespruce.com/ponytail-palm-care-1902748'}]},
-  {id:'ip31',roomId:'r-house',section:'Other',name:'Orchid',scientific:'Phalaenopsis spp.',emoji:'🌸',status:'alive',water:'Every 7-10 days — soak then drain',sun:'Bright indirect',datePlanted:'',nursery:'',fromCutting:false,notes:'Rest of house orchid.',maintenance:[{task:'Soak then drain — never sit in water',months:[1,2,3,4,5,6,7,8,9,10,11,12]},{task:'Feed orchid fertilizer every 2 weeks when growing',months:[3,4,5,6,7,8,9]},{task:'Cool nights in fall trigger new bloom spike',months:[9,10,11]}],trouble:[{issue:'No rebloom',url:'https://www.thespruce.com/how-to-get-orchids-to-rebloom-1315611'}]},
-  {id:'ip32',roomId:'r-house',section:'Kitchen',name:'Peperomia',scientific:'Peperomia spp.',emoji:'🌿',status:'alive',water:'Every 1-2 weeks',sun:'Bright indirect',datePlanted:'',nursery:'',fromCutting:false,notes:'Pink pig pot. Moving to office once Rieger Begonias arrive.',maintenance:[{task:'Water when soil half dry — do not overwater',months:[1,2,3,4,5,6,7,8,9,10,11,12]},{task:'Feed monthly spring-summer diluted',months:[3,4,5,6,7,8,9]}],trouble:[{issue:'Dropping leaves (overwatering)',url:'https://www.thespruce.com/peperomia-plant-care-1902986'}]},
-  {id:'ip33',roomId:'r-house',section:'Kitchen',name:'Succulent',scientific:'Echeveria spp.',emoji:'🌵',status:'alive',water:'Every 2-3 weeks — fully dry between',sun:'Bright direct to bright indirect',datePlanted:'',nursery:'',fromCutting:false,notes:'Yellow chick pot. Moving to office once Rieger Begonias arrive.',maintenance:[{task:'Water only when soil completely dry',months:[1,2,3,4,5,6,7,8,9,10,11,12]},{task:'Feed diluted cactus fertilizer spring-summer only',months:[4,5,6,7,8]}],trouble:[{issue:'Etiolation (stretching toward light)',url:'https://www.thespruce.com/echeveria-care-1902972'}]},
-  {id:'ip34',roomId:'r-house',section:'Kitchen',name:'Mini Jade',scientific:"Crassula ovata 'Minima'",emoji:'💚',status:'alive',water:'Every 2-3 weeks — fully dry between',sun:'Bright indirect to some direct',datePlanted:'',nursery:'',fromCutting:false,notes:'White sheep pot. Moving to office once Rieger Begonias arrive.',maintenance:[{task:'Water only when soil completely dry',months:[1,2,3,4,5,6,7,8,9,10,11,12]},{task:'Feed diluted cactus fertilizer spring-summer only',months:[4,5,6,7,8]}],trouble:[{issue:'Dropping leaves (overwatering)',url:'https://www.thespruce.com/jade-plant-care-1902876'}]},
+  {id:'ip1',roomId:'r-office',section:'Floor',name:'ZZ Plant',scientific:'Zamioculcas zamiifolia',emoji:'🌿',status:'alive',water:'Every 2-3 weeks — let soil dry completely',sun:'Low to bright indirect',datePlanted:'',nursery:'',fromCutting:false,notes:'Gray speckled pot.',maintenance:[{task:'Water every 2-3 weeks only — let soil fully dry',months:[1,2,3,4,5,6,7,8,9,10,11,12]},{task:'Wipe leaves monthly to remove dust',months:[1,2,3,4,5,6,7,8,9,10,11,12]},{task:'Feed diluted liquid fertilizer monthly',months:[3,4,5,6,7,8,9]}],trouble:[{issue:'Yellow leaves (overwatering)',url:'https://www.google.com/search?q=Yellow%20leaves%20(overwatering)%20plant%20care%20fix'}]},
+  {id:'ip2',roomId:'r-office',section:'Floor',name:'China Doll',scientific:'Radermachera sinica',emoji:'🌳',status:'alive',water:'Moderate — keep evenly moist',sun:'Bright indirect',datePlanted:'',nursery:'',fromCutting:false,notes:'Large white textured pot on roller. Do not move.',maintenance:[{task:'Water when top inch dry',months:[1,2,3,4,5,6,7,8,9,10,11,12]},{task:'Pinch tips to encourage bushy growth',months:[3,4,5,6,7,8]},{task:'Feed monthly',months:[3,4,5,6,7,8,9]}],trouble:[{issue:'Leaf drop',url:'https://www.google.com/search?q=Leaf%20drop%20plant%20care%20fix'}]},
+  {id:'ip3',roomId:'r-office',section:'Floor',name:'Variegated Monstera',scientific:"Monstera deliciosa 'Variegata'",emoji:'🤍',status:'alive',water:'When top 2 inches dry',sun:'Bright indirect — no direct sun',datePlanted:'',nursery:'',fromCutting:false,notes:'Small blue pot.',maintenance:[{task:'Water when top 2 inches dry',months:[1,2,3,4,5,6,7,8,9,10,11,12]},{task:'Feed monthly spring-summer',months:[3,4,5,6,7,8,9]}],trouble:[{issue:'Browning white sections (direct sun)',url:'https://www.google.com/search?q=Browning%20white%20sections%20(direct%20sun)%20plant%20care%20fix'}]},
+  {id:'ip4',roomId:'r-office',section:'Plant Stand',name:'Pothos',scientific:'Epipremnum aureum',emoji:'💚',status:'alive',water:'Every 1-2 weeks when top inch dry',sun:'Low to bright indirect',datePlanted:'',nursery:'',fromCutting:false,notes:'Glass globe pot top of stand. Cascading dramatically.',maintenance:[{task:'Trim long vines to encourage fullness',months:[3,6,9]},{task:'Wipe leaves monthly',months:[1,2,3,4,5,6,7,8,9,10,11,12]}],trouble:[{issue:'Yellow leaves (overwatering)',url:'https://www.google.com/search?q=Yellow%20leaves%20(overwatering)%20plant%20care%20fix'}]},
+  {id:'ip5',roomId:'r-office',section:'Plant Stand',name:"Bird's Nest Fern",scientific:'Asplenium nidus',emoji:'🌿',status:'alive',water:'Keep consistently moist — never dry out',sun:'Low to medium indirect',datePlanted:'',nursery:'',fromCutting:false,notes:'Yellow-green pot. Needs more humidity — crispy edges visible.',maintenance:[{task:'Keep consistently moist — never let dry out',months:[1,2,3,4,5,6,7,8,9,10,11,12]},{task:'Mist fronds or use pebble tray for humidity',months:[1,2,3,4,5,6,7,8,9,10,11,12]},{task:'Feed diluted fertilizer monthly',months:[3,4,5,6,7,8,9]}],trouble:[{issue:'Crispy frond edges (low humidity)',url:'https://www.google.com/search?q=Crispy%20frond%20edges%20(low%20humidity)%20plant%20care%20fix'}]},
+  {id:'ip6',roomId:'r-office',section:'Plant Stand',name:'Polka Dot Plant',scientific:'Hypoestes phyllostachya',emoji:'🔵',status:'alive',water:'Keep evenly moist',sun:'Bright indirect',datePlanted:'',nursery:'',fromCutting:false,notes:'Lavender pot. White variety.',maintenance:[{task:'Pinch tips regularly to prevent legginess',months:[3,4,5,6,7,8,9,10]},{task:'Feed every 2 weeks spring-summer',months:[3,4,5,6,7,8,9]},{task:'Cut flower spikes when they appear',months:[4,5,6,7,8,9]}],trouble:[{issue:'Leggy growth',url:'https://www.google.com/search?q=Leggy%20growth%20plant%20care%20fix'}]},
+  {id:'ip7',roomId:'r-office',section:'Plant Stand',name:'Swiss Cheese Plant',scientific:'Monstera adansonii',emoji:'🧀',status:'alive',water:'When top 2 inches dry',sun:'Bright indirect',datePlanted:'',nursery:'',fromCutting:false,notes:'Blue-wave pot cascading down plant stand.',maintenance:[{task:'Feed monthly spring-summer',months:[3,4,5,6,7,8,9]},{task:'Wipe leaves monthly',months:[1,2,3,4,5,6,7,8,9,10,11,12]}],trouble:[{issue:'Yellow leaves (overwatering)',url:'https://www.google.com/search?q=Yellow%20leaves%20(overwatering)%20plant%20care%20fix'}]},
+  {id:'ip8',roomId:'r-office',section:'Plant Stand',name:'Dracaena',scientific:'Dracaena spp.',emoji:'🌵',status:'struggling',water:'Every 1-2 weeks when top inch dry',sun:'Bright indirect — currently sunburnt',datePlanted:'',nursery:'',fromCutting:false,notes:'White ribbed pot. Sunburnt — needs to move away from direct light.',maintenance:[{task:'Use filtered or rainwater — fluoride sensitive',months:[1,2,3,4,5,6,7,8,9,10,11,12]},{task:'Remove damaged/sunburnt leaves',months:[1,2,3,4,5,6,7,8,9,10,11,12]},{task:'Keep away from direct sun',months:[1,2,3,4,5,6,7,8,9,10,11,12]}],trouble:[{issue:'Brown tips (fluoride/overwatering)',url:'https://www.google.com/search?q=Brown%20tips%20(fluoride%2Foverwatering)%20plant%20care%20fix'}]},
+  {id:'ip9',roomId:'r-office',section:'Plant Stand',name:'Philodendron Sun Red',scientific:"Philodendron 'Sun Red'",emoji:'🔴',status:'alive',water:'When top inch dry',sun:'Bright indirect',datePlanted:'',nursery:'',fromCutting:false,notes:'Pink pot. New growth flushes vibrant red.',maintenance:[{task:'Feed monthly spring-summer for best color',months:[3,4,5,6,7,8,9]}],trouble:[{issue:'Loss of red color (low light)',url:'https://www.google.com/search?q=Loss%20of%20red%20color%20(low%20light)%20plant%20care%20fix'}]},
+  {id:'ip10',roomId:'r-office',section:'Plant Stand',name:'Jade',scientific:'Crassula ovata',emoji:'💚',status:'alive',water:'Every 2-3 weeks — soil fully dry between',sun:'Bright indirect to some direct',datePlanted:'',nursery:'',fromCutting:false,notes:'White patterned pot.',maintenance:[{task:'Water only when soil completely dry',months:[1,2,3,4,5,6,7,8,9,10,11,12]},{task:'Feed diluted cactus fertilizer',months:[4,5,6,7,8]},{task:'Prune to maintain shape',months:[2,3]}],trouble:[{issue:'Dropping leaves (overwatering)',url:'https://www.google.com/search?q=Dropping%20leaves%20(overwatering)%20plant%20care%20fix'}]},
+  {id:'ip11',roomId:'r-office',section:'Plant Stand',name:'Maidenhair Fern (Large)',scientific:'Adiantum raddianum',emoji:'🌿',status:'alive',water:'Keep consistently moist — never let dry',sun:'Low to medium indirect',datePlanted:'',nursery:'',fromCutting:false,notes:'Large white banded pot. Larger trailing specimen.',maintenance:[{task:'Never let soil dry — check daily in summer',months:[1,2,3,4,5,6,7,8,9,10,11,12]},{task:'Mist daily or keep on pebble tray',months:[1,2,3,4,5,6,7,8,9,10,11,12]},{task:'If fronds die back — cut to soil, keep moist, will regrow',months:[1,2,3]}],trouble:[{issue:'Sudden frond drop',url:'https://www.google.com/search?q=Sudden%20frond%20drop%20plant%20care%20fix'}]},
+  {id:'ip12',roomId:'r-office',section:'Plant Stand',name:'Ponytail Palm',scientific:'Beaucarnea recurvata',emoji:'🌴',status:'alive',water:'Every 2-3 weeks — fully dry between',sun:'Bright indirect to full sun',datePlanted:'',nursery:'',fromCutting:false,notes:'White smiley face pot.',maintenance:[{task:'Water sparingly — stores water in bulbous trunk',months:[1,2,3,4,5,6,7,8,9,10,11,12]},{task:'Feed diluted fertilizer once in spring only',months:[3]},{task:'Rotate quarterly for even growth',months:[1,4,7,10]}],trouble:[{issue:'Brown leaf tips',url:'https://www.google.com/search?q=Brown%20leaf%20tips%20plant%20care%20fix'}]},
+  {id:'ip13',roomId:'r-office',section:'Wall Shelves',name:'Lipstick Plant',scientific:'Aeschynanthus radicans',emoji:'💄',status:'alive',water:'When top inch dry',sun:'Bright indirect',datePlanted:'',nursery:'',fromCutting:false,notes:'Top left wall shelf.',maintenance:[{task:'Feed every 2 weeks spring-summer for blooms',months:[3,4,5,6,7,8,9]},{task:'Cool nights in fall trigger blooming — move to cooler spot',months:[9,10]},{task:'Trim after blooming to encourage new growth',months:[11,12,1]}],trouble:[{issue:'Not blooming',url:'https://www.google.com/search?q=Not%20blooming%20plant%20care%20fix'}]},
+  {id:'ip14',roomId:'r-office',section:'Wall Shelves',name:'Creeping Fig',scientific:'Ficus pumila',emoji:'🍃',status:'alive',water:'Keep evenly moist',sun:'Bright indirect',datePlanted:'',nursery:'',fromCutting:false,notes:'Top left wall shelf alongside Lipstick Plant.',maintenance:[{task:'Keep evenly moist — sensitive to drying out',months:[1,2,3,4,5,6,7,8,9,10,11,12]},{task:'Trim regularly to control spread',months:[3,6,9]},{task:'Feed monthly spring-summer',months:[3,4,5,6,7,8,9]}],trouble:[{issue:'Leaf drop',url:'https://www.google.com/search?q=Leaf%20drop%20plant%20care%20fix'}]},
+  {id:'ip15',roomId:'r-office',section:'Wall Shelves',name:'Oxalis + String of Pearls',scientific:'Oxalis triangularis + Senecio rowleyanus',emoji:'💜',status:'alive',water:'Moderate Oxalis / Low String of Pearls',sun:'Bright indirect',datePlanted:'',nursery:'',fromCutting:false,notes:'Top right shelf. Two plants in same pot.',maintenance:[{task:'String of Pearls: water every 2 weeks, let dry completely',months:[1,2,3,4,5,6,7,8,9,10,11,12]},{task:'Oxalis may go dormant in summer heat — reduce water if leaves yellow',months:[6,7,8]}],trouble:[{issue:'String of Pearls shriveling (underwatering)',url:'https://www.google.com/search?q=String%20of%20Pearls%20shriveling%20(underwatering)%20plant%20care%20fix'}]},
+  {id:'ip16',roomId:'r-office',section:'Wall Shelves',name:'Christmas Cactus',scientific:'Schlumbergera bridgesii',emoji:'🌸',status:'alive',water:'When top inch dry — reduce in fall',sun:'Bright indirect',datePlanted:'',nursery:'',fromCutting:false,notes:'Top right wall shelf.',maintenance:[{task:'Feed monthly spring-summer',months:[3,4,5,6,7,8]},{task:'Begin drought stress — reduce watering to trigger bloom',months:[8,9]},{task:'12+ hours darkness nightly for 4 weeks to set buds',months:[10]},{task:'Move back to bright spot once buds appear — do not move again',months:[11]},{task:'Enjoy blooms — keep away from drafts',months:[12,1]}],trouble:[{issue:'Bud drop (moved while budding)',url:'https://www.google.com/search?q=Bud%20drop%20(moved%20while%20budding)%20plant%20care%20fix'}]},
+  {id:'ip17',roomId:'r-office',section:'Wall Shelves',name:'Maidenhair Fern (Small)',scientific:'Adiantum raddianum',emoji:'🌿',status:'alive',water:'Keep consistently moist — never dry',sun:'Low to medium indirect',datePlanted:'',nursery:'',fromCutting:false,notes:'Hanging smiley pot on wall shelf. Smaller specimen.',maintenance:[{task:'Never let soil dry — check daily',months:[1,2,3,4,5,6,7,8,9,10,11,12]},{task:'Mist daily or keep on pebble tray',months:[1,2,3,4,5,6,7,8,9,10,11,12]}],trouble:[{issue:'Sudden frond drop',url:'https://www.google.com/search?q=Sudden%20frond%20drop%20plant%20care%20fix'}]},
+  {id:'ip18',roomId:'r-office',section:'Wall Shelves',name:'Coin Plant',scientific:'Pilea peperomioides',emoji:'🪙',status:'alive',water:'When top inch dry',sun:'Bright indirect',datePlanted:'',nursery:'',fromCutting:false,notes:'Middle left wall shelf.',maintenance:[{task:'Rotate weekly for even growth — leans toward light',months:[1,2,3,4,5,6,7,8,9,10,11,12]},{task:'Remove offsets (pups) when they appear',months:[3,4,5,6,7,8,9]},{task:'Feed monthly spring-summer',months:[3,4,5,6,7,8,9]}],trouble:[{issue:'Curling leaves (underwatering)',url:'https://www.google.com/search?q=Curling%20leaves%20(underwatering)%20plant%20care%20fix'}]},
+  {id:'ip19',roomId:'r-office',section:'Wall Shelves',name:'Frosty Fern',scientific:'Selaginella kraussiana',emoji:'❄️',status:'alive',water:'Keep consistently moist',sun:'Low to medium indirect',datePlanted:'',nursery:'',fromCutting:false,notes:'Middle right wall shelf.',maintenance:[{task:'Keep consistently moist — dries out fast',months:[1,2,3,4,5,6,7,8,9,10,11,12]},{task:'Mist regularly or use pebble tray',months:[1,2,3,4,5,6,7,8,9,10,11,12]},{task:'Trim brown sections',months:[3,6,9]}],trouble:[{issue:'Browning (low humidity)',url:'https://www.google.com/search?q=Browning%20(low%20humidity)%20plant%20care%20fix'}]},
+  {id:'ip20',roomId:'r-office',section:'Wall Shelves',name:"Alocasia 'Regal Shields'",scientific:"Alocasia 'Regal Shields'",emoji:'🖤',status:'alive',water:'When top 2 inches dry',sun:'Bright indirect',datePlanted:'',nursery:'',fromCutting:false,notes:'Middle right wall shelf. White cross-pattern pot.',maintenance:[{task:'Water when top 2 inches dry',months:[1,2,3,4,5,6,7,8,9,10,11,12]},{task:'Reduce watering in winter — semi-dormant',months:[11,12,1,2]},{task:'Wipe large leaves monthly',months:[1,2,3,4,5,6,7,8,9,10,11,12]},{task:'Feed monthly spring-summer',months:[3,4,5,6,7,8,9]}],trouble:[{issue:'Yellow leaves (overwatering)',url:'https://www.google.com/search?q=Yellow%20leaves%20(overwatering)%20plant%20care%20fix'}]},
+  {id:'ip21',roomId:'r-office',section:'Wall Shelves',name:"Philodendron 'Pink Princess'",scientific:"Philodendron erubescens 'Pink Princess'",emoji:'🩷',status:'alive',water:'When top inch dry',sun:'Bright indirect — more light = more pink',datePlanted:'',nursery:'',fromCutting:false,notes:'Middle right wall shelf. White dotted pot.',maintenance:[{task:'Ensure bright indirect light to maintain pink variegation',months:[1,2,3,4,5,6,7,8,9,10,11,12]},{task:'Feed monthly spring-summer',months:[3,4,5,6,7,8,9]}],trouble:[{issue:'Losing pink variegation (low light)',url:'https://www.google.com/search?q=Losing%20pink%20variegation%20(low%20light)%20plant%20care%20fix'}]},
+  {id:'ip22',roomId:'r-office',section:'Hanging',name:'Caladium',scientific:'Caladium bicolor',emoji:'🌺',status:'alive',water:'Keep evenly moist during growing season',sun:'Bright indirect — no direct sun',datePlanted:'',nursery:'',fromCutting:false,notes:'Top hanging pot.',maintenance:[{task:'Feed every 2 weeks spring-summer',months:[4,5,6,7,8]},{task:'Reduce water as leaves die back in fall',months:[9,10]},{task:'Store tubers cool and dry over winter',months:[11,12,1]},{task:'Resume watering as new growth appears in spring',months:[2,3,4]}],trouble:[{issue:'Drooping leaves (underwatering)',url:'https://www.google.com/search?q=Drooping%20leaves%20(underwatering)%20plant%20care%20fix'}]},
+  {id:'ip23',roomId:'r-office',section:'Hanging',name:'Spider Plant',scientific:'Chlorophytum comosum',emoji:'🕷️',status:'alive',water:'When top inch dry',sun:'Bright indirect',datePlanted:'',nursery:'',fromCutting:false,notes:'Lower hanging pot. Variegated white-striped.',maintenance:[{task:'Remove brown tips with scissors at an angle',months:[1,2,3,4,5,6,7,8,9,10,11,12]},{task:'Propagate spiderettes — pin to soil or place in water',months:[4,5,6,7,8,9]},{task:'Feed monthly spring-summer',months:[3,4,5,6,7,8,9]}],trouble:[{issue:'Brown tips (fluoride/dry air)',url:'https://www.google.com/search?q=Brown%20tips%20(fluoride%2Fdry%20air)%20plant%20care%20fix'}]},
+  {id:'ip24',roomId:'r-office',section:'Table',name:'Prayer Plant',scientific:'Maranta leuconeura',emoji:'🙏',status:'struggling',water:'Keep evenly moist',sun:'Low to medium indirect',datePlanted:'',nursery:'',fromCutting:false,notes:'Black table. Struggling — crispy edges. Needs humidity and filtered water.',maintenance:[{task:'Keep evenly moist — very sensitive to drying out',months:[1,2,3,4,5,6,7,8,9,10,11,12]},{task:'Mist daily for humidity',months:[1,2,3,4,5,6,7,8,9,10,11,12]},{task:'Use filtered water — sensitive to fluoride',months:[1,2,3,4,5,6,7,8,9,10,11,12]}],trouble:[{issue:'Crispy edges (low humidity/fluoride)',url:'https://www.google.com/search?q=Crispy%20edges%20(low%20humidity%2Ffluoride)%20plant%20care%20fix'}]},
+  {id:'ip25',roomId:'r-office',section:'Table',name:'Orchid',scientific:'Phalaenopsis spp.',emoji:'🌸',status:'alive',water:'Every 7-10 days — soak then drain fully',sun:'Bright indirect',datePlanted:'',nursery:'',fromCutting:false,notes:'Office table. One of two orchids.',maintenance:[{task:'Soak then drain fully — never sit in water',months:[1,2,3,4,5,6,7,8,9,10,11,12]},{task:'Feed orchid fertilizer every 2 weeks when growing',months:[3,4,5,6,7,8,9]},{task:'After bloom: cut spike to node for rebloom or to base',months:[2,3]},{task:'Cool nights in fall trigger new bloom spike',months:[9,10,11]}],trouble:[{issue:'No rebloom',url:'https://www.google.com/search?q=No%20rebloom%20plant%20care%20fix'}]},
+  {id:'ip26',roomId:'r-house',section:'Other',name:'Peace Lily',scientific:'Spathiphyllum spp.',emoji:'☮️',status:'alive',water:'When leaves slightly droop',sun:'Low to medium indirect',datePlanted:'',nursery:'',fromCutting:false,notes:'',maintenance:[{task:'Water when leaves just start to droop — reliable indicator',months:[1,2,3,4,5,6,7,8,9,10,11,12]},{task:'Wipe large leaves monthly',months:[1,2,3,4,5,6,7,8,9,10,11,12]},{task:'Feed monthly spring-summer',months:[3,4,5,6,7,8,9]},{task:'Mist in winter — dry air causes droop',months:[11,12,1,2]}],trouble:[{issue:'Yellow leaves (overwatering)',url:'https://www.google.com/search?q=Yellow%20leaves%20(overwatering)%20plant%20care%20fix'}]},
+  {id:'ip27',roomId:'r-house',section:'Other',name:'Pothos',scientific:'Epipremnum aureum',emoji:'💚',status:'alive',water:'Every 1-2 weeks',sun:'Low to bright indirect',datePlanted:'',nursery:'',fromCutting:false,notes:'Rest of house.',maintenance:[{task:'Trim long vines to encourage fullness',months:[3,6,9]}],trouble:[{issue:'Yellow leaves',url:'https://www.google.com/search?q=Yellow%20leaves%20plant%20care%20fix'}]},
+  {id:'ip28',roomId:'r-house',section:'Other',name:'Monstera',scientific:'Monstera deliciosa',emoji:'🌿',status:'alive',water:'When top 2 inches dry',sun:'Bright indirect',datePlanted:'',nursery:'',fromCutting:false,notes:'',maintenance:[{task:'Wipe leaves monthly',months:[1,2,3,4,5,6,7,8,9,10,11,12]},{task:'Feed monthly spring-summer',months:[3,4,5,6,7,8,9]}],trouble:[{issue:'Yellow leaves',url:'https://www.google.com/search?q=Yellow%20leaves%20plant%20care%20fix'}]},
+  {id:'ip29',roomId:'r-house',section:'Other',name:'Dracaena',scientific:'Dracaena spp.',emoji:'🌵',status:'alive',water:'Every 1-2 weeks',sun:'Bright indirect',datePlanted:'',nursery:'',fromCutting:false,notes:'Rest of house — separate from sunburnt office one.',maintenance:[{task:'Use filtered water — fluoride sensitive',months:[1,2,3,4,5,6,7,8,9,10,11,12]}],trouble:[{issue:'Brown tips',url:'https://www.google.com/search?q=Brown%20tips%20plant%20care%20fix'}]},
+  {id:'ip30',roomId:'r-house',section:'Other',name:'Ponytail Palm',scientific:'Beaucarnea recurvata',emoji:'🌴',status:'alive',water:'Every 2-3 weeks — fully dry between',sun:'Bright indirect to full sun',datePlanted:'',nursery:'',fromCutting:false,notes:'Rest of house.',maintenance:[{task:'Water sparingly — stores water in trunk',months:[1,2,3,4,5,6,7,8,9,10,11,12]},{task:'Feed once in spring only',months:[3]}],trouble:[{issue:'Brown tips',url:'https://www.google.com/search?q=Brown%20tips%20plant%20care%20fix'}]},
+  {id:'ip31',roomId:'r-house',section:'Other',name:'Orchid',scientific:'Phalaenopsis spp.',emoji:'🌸',status:'alive',water:'Every 7-10 days — soak then drain',sun:'Bright indirect',datePlanted:'',nursery:'',fromCutting:false,notes:'Rest of house orchid.',maintenance:[{task:'Soak then drain — never sit in water',months:[1,2,3,4,5,6,7,8,9,10,11,12]},{task:'Feed orchid fertilizer every 2 weeks when growing',months:[3,4,5,6,7,8,9]},{task:'Cool nights in fall trigger new bloom spike',months:[9,10,11]}],trouble:[{issue:'No rebloom',url:'https://www.google.com/search?q=No%20rebloom%20plant%20care%20fix'}]},
+  {id:'ip32',roomId:'r-house',section:'Kitchen',name:'Peperomia',scientific:'Peperomia spp.',emoji:'🌿',status:'alive',water:'Every 1-2 weeks',sun:'Bright indirect',datePlanted:'',nursery:'',fromCutting:false,notes:'Pink pig pot. Moving to office once Rieger Begonias arrive.',maintenance:[{task:'Water when soil half dry — do not overwater',months:[1,2,3,4,5,6,7,8,9,10,11,12]},{task:'Feed monthly spring-summer diluted',months:[3,4,5,6,7,8,9]}],trouble:[{issue:'Dropping leaves (overwatering)',url:'https://www.google.com/search?q=Dropping%20leaves%20(overwatering)%20plant%20care%20fix'}]},
+  {id:'ip33',roomId:'r-house',section:'Kitchen',name:'Succulent',scientific:'Echeveria spp.',emoji:'🌵',status:'alive',water:'Every 2-3 weeks — fully dry between',sun:'Bright direct to bright indirect',datePlanted:'',nursery:'',fromCutting:false,notes:'Yellow chick pot. Moving to office once Rieger Begonias arrive.',maintenance:[{task:'Water only when soil completely dry',months:[1,2,3,4,5,6,7,8,9,10,11,12]},{task:'Feed diluted cactus fertilizer spring-summer only',months:[4,5,6,7,8]}],trouble:[{issue:'Etiolation (stretching toward light)',url:'https://www.google.com/search?q=Etiolation%20(stretching%20toward%20light)%20plant%20care%20fix'}]},
+  {id:'ip34',roomId:'r-house',section:'Kitchen',name:'Mini Jade',scientific:"Crassula ovata 'Minima'",emoji:'💚',status:'alive',water:'Every 2-3 weeks — fully dry between',sun:'Bright indirect to some direct',datePlanted:'',nursery:'',fromCutting:false,notes:'White sheep pot. Moving to office once Rieger Begonias arrive.',maintenance:[{task:'Water only when soil completely dry',months:[1,2,3,4,5,6,7,8,9,10,11,12]},{task:'Feed diluted cactus fertilizer spring-summer only',months:[4,5,6,7,8]}],trouble:[{issue:'Dropping leaves (overwatering)',url:'https://www.google.com/search?q=Dropping%20leaves%20(overwatering)%20plant%20care%20fix'}]},
 ];
 const defaultShopping=[
   {id:'sf1',name:'Tuberous Begonia Non Stop Orange',bought:false,qty:'15 / 1 flat',size:'Flat',color:'Orange',bed:'Fountain Wall Bed',category:'You Buy — Flat',orderAs:'Tuberous Begonia Non Stop — Orange (Flat)'},
@@ -589,9 +607,27 @@ const defaultPropagation=[
   {id:'pr1',plant:'Sweet Potato Vine (Ipomoea batatas)',dateCut:new Date().toISOString().split('T')[0],datePlanted:'',status:'pending',notes:'Sprouting in water in Coca-Cola glass on kitchen windowsill.'},
   {id:'pr2',plant:'Creeping Geranium (Pelargonium spp.)',dateCut:'',datePlanted:'',status:'pending',notes:'Stem cuttings to be taken from existing plants to fill Fountain Wall Bed. Red + pink varieties.'},
 ];
+// Storage: window.storage (Claude persistent) with localStorage fallback
 const DB={
-  get(k){try{const v=localStorage.getItem('garden_'+k);return v?JSON.parse(v):null;}catch(e){return null;}},
-  set(k,v){try{localStorage.setItem('garden_'+k,JSON.stringify(v));}catch(e){}},
+  async get(k){
+    // Try window.storage first (Claude environment)
+    if(typeof window!=='undefined'&&window.storage){
+      try{
+        const r=await window.storage.get('garden_'+k);
+        if(r&&r.value)return JSON.parse(r.value);
+      }catch(e){}
+    }
+    // Fall back to localStorage
+    try{const v=localStorage.getItem('garden_'+k);return v?JSON.parse(v):null;}catch(e){return null;}
+  },
+  async set(k,v){
+    // Try window.storage first (Claude environment)
+    if(typeof window!=='undefined'&&window.storage){
+      try{await window.storage.set('garden_'+k,JSON.stringify(v));}catch(e){}
+    }
+    // Always also save to localStorage
+    try{localStorage.setItem('garden_'+k,JSON.stringify(v));}catch(e){}
+  },
   getImg(k){try{return localStorage.getItem('garden_img_'+k)||null;}catch(e){return null;}},
   setImg(k,v){try{localStorage.setItem('garden_img_'+k,v);}catch(e){alert('Image too large. Try a smaller image.');}}
 };
@@ -659,27 +695,61 @@ function getPlantTasksForMonth(month){
   return tasks;
 }
 
-function init(){
-  S.rooms=DB.get('rooms')||defaultRooms;
-  S.beds=DB.get('beds')||defaultBeds;
-  S.plants=DB.get('plants')||defaultOutdoorPlants;
-  S.indoorPlants=DB.get('indoorPlants')||defaultIndoorPlants;
-  S.todos=DB.get('todos')||defaultTodos;
-  S.shopping=DB.get('shopping')||defaultShopping;
-  S.notes=DB.get('notes')||[];
-  S.propagation=DB.get('propagation')||defaultPropagation;
-  S.irrigation=DB.get('irrigation')||[];
-  if(!DB.get('rooms'))DB.set('rooms',S.rooms);
-  if(!DB.get('beds'))DB.set('beds',S.beds);
-  if(!DB.get('plants'))DB.set('plants',S.plants);
-  if(!DB.get('indoorPlants'))DB.set('indoorPlants',S.indoorPlants);
-  if(!DB.get('todos'))DB.set('todos',S.todos);
-  if(!DB.get('shopping'))DB.set('shopping',S.shopping);
-  if(!DB.get('propagation'))DB.set('propagation',S.propagation);
+function resetToDefaults(){
+  if(!confirm('Reset all data to defaults? This cannot be undone.'))return;
+  try{Object.keys(localStorage).filter(k=>k.startsWith('garden_')).forEach(k=>localStorage.removeItem(k));}catch(e){}
+  location.reload();
+}
+const DATA_VERSION='v8';
+async function init(){
+  // Version check — if data version doesn't match, reload defaults
+  const storedVersion=await DB.get('dataVersion');
+  if(storedVersion!==DATA_VERSION){
+    console.log('Data version mismatch — loading fresh defaults');
+    // Clear old localStorage data
+    try{Object.keys(localStorage).filter(k=>k.startsWith('garden_')).forEach(k=>localStorage.removeItem(k));}catch(e){}
+    S.rooms=defaultRooms;
+    S.beds=defaultBeds;
+    S.plants=defaultOutdoorPlants;
+    S.indoorPlants=defaultIndoorPlants;
+    S.todos=defaultTodos;
+    S.shopping=defaultShopping;
+    S.notes=[];
+    S.propagation=defaultPropagation;
+    S.irrigation=[];
+    await DB.set('dataVersion',DATA_VERSION);
+    await DB.set('rooms',S.rooms);
+    await DB.set('beds',S.beds);
+    await DB.set('plants',S.plants);
+    await DB.set('indoorPlants',S.indoorPlants);
+    await DB.set('todos',S.todos);
+    await DB.set('shopping',S.shopping);
+    await DB.set('propagation',S.propagation);
+  } else {
+    S.rooms=await DB.get('rooms')||defaultRooms;
+    S.beds=await DB.get('beds')||defaultBeds;
+    S.plants=await DB.get('plants')||defaultOutdoorPlants;
+    S.indoorPlants=await DB.get('indoorPlants')||defaultIndoorPlants;
+    S.todos=await DB.get('todos')||defaultTodos;
+    S.shopping=await DB.get('shopping')||defaultShopping;
+    S.notes=await DB.get('notes')||[];
+    S.propagation=await DB.get('propagation')||defaultPropagation;
+    S.irrigation=await DB.get('irrigation')||[];
+  }
   updateHomeCounts();
   renderScheduleMonths();
 }
-function save(){DB.set('rooms',S.rooms);DB.set('beds',S.beds);DB.set('plants',S.plants);DB.set('indoorPlants',S.indoorPlants);DB.set('todos',S.todos);DB.set('shopping',S.shopping);DB.set('notes',S.notes);DB.set('propagation',S.propagation);DB.set('irrigation',S.irrigation);}
+async function save(){
+  try{localStorage.setItem('garden_rooms',JSON.stringify(S.rooms));}catch(e){}
+  try{localStorage.setItem('garden_beds',JSON.stringify(S.beds));}catch(e){}
+  try{localStorage.setItem('garden_plants',JSON.stringify(S.plants));}catch(e){}
+  try{localStorage.setItem('garden_indoorPlants',JSON.stringify(S.indoorPlants));}catch(e){}
+  try{localStorage.setItem('garden_todos',JSON.stringify(S.todos));}catch(e){}
+  try{localStorage.setItem('garden_shopping',JSON.stringify(S.shopping));}catch(e){}
+  try{localStorage.setItem('garden_notes',JSON.stringify(S.notes));}catch(e){}
+  try{localStorage.setItem('garden_propagation',JSON.stringify(S.propagation));}catch(e){}
+  try{localStorage.setItem('garden_irrigation',JSON.stringify(S.irrigation));}catch(e){}
+}
 function showScreen(name){
   document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
   document.getElementById('screen-'+name).classList.add('active');
@@ -694,7 +764,7 @@ function showScreen(name){
   if(name==='propagation')renderPropagation();
   if(name==='irrigation')renderIrrigation();
   if(name==='allplants')renderAllPlants('');
-  if(name==='schedule'){const m=new Date().getMonth()+1;renderSchedule(m);setTimeout(()=>document.querySelector('.month-chip.active')?.scrollIntoView({behavior:'smooth',inline:'center'}),100);}
+  if(name==='schedule'){renderScheduleMonths();setTimeout(()=>document.querySelector('.month-chip.active')?.scrollIntoView({behavior:'smooth',inline:'center'}),100);}
 }
 function updateHomeCounts(){
   document.getElementById('outdoor-count').textContent=`${S.beds.length} beds · ${S.plants.length} plants`;
@@ -748,7 +818,7 @@ function showEditRoomModal(){
 }
 function saveEditRoom(){const r=S.rooms.find(x=>x.id===S.currentRoom.id);if(!r)return;r.name=document.getElementById('er-name').value;r.icon=document.getElementById('er-icon').value;S.currentRoom=r;save();closeModal();showRoom(r.id);}
 function showBed(bedId){
-  const bed=S.beds.find(b=>b.id===bedId);if(!bed)return;
+  const bed=S.beds.find(b=>b.id===bedId);if(!bed){console.warn('Bed not found:',bedId);return;}
   S.currentBed=bed;S.bedFilter='all';
   document.getElementById('bed-back-link').onclick=()=>showYard(bed.yard);
   const heroArea=document.getElementById('bed-hero-area');
@@ -763,6 +833,7 @@ function showBed(bedId){
 function renderBedPlants(filter){
   const bedId=S.currentBed.id;
   const allPlants=S.plants.filter(p=>p.bedId===bedId);
+  console.log('renderBedPlants: bed='+bedId+' filter='+filter+' total plants='+S.plants.length+' matching='+allPlants.length);
   const filtered=filter==='all'?allPlants:allPlants.filter(p=>(p.status||'alive')===filter);
   const alive=allPlants.filter(p=>(p.status||'alive')==='alive'||p.status==='struggling').length;
   const planned=allPlants.filter(p=>p.status==='planned').length;
@@ -773,7 +844,7 @@ function renderBedPlants(filter){
     filtered.map(p=>`<div class="plant-card ${p.status==='planned'?'planned':''}" onclick="showOutdoorPlant('${p.id}')"><div class="plant-thumb">${p.emoji||'🌿'}</div><div class="plant-card-info"><div class="plant-card-name">${p.name}</div><div class="plant-card-detail">${p.scientific||p.water||'—'}</div></div><div class="status-dot ${p.status||'alive'}"></div></div>`).join('');
   document.querySelectorAll('.filter-chip').forEach(c=>c.classList.remove('active'));
   const chips=document.querySelectorAll('.filter-chip');
-  chips.forEach(c=>{if((filter==='all'&&c.textContent==='All')||(filter==='alive'&&c.textContent==='Existing')||(filter==='planned'&&c.textContent==='Planned'))c.classList.add('active');});
+  chips.forEach(c=>{const t=c.textContent.trim();if((filter==='all'&&t==='All')||(filter==='alive'&&t==='Existing')||(filter==='planned'&&t==='Planned'))c.classList.add('active');});
 }
 function filterBedPlants(filter,el){S.bedFilter=filter;renderBedPlants(filter);}
 function triggerBedImageUpload(){document.getElementById('bed-image-input').click();}
@@ -821,10 +892,44 @@ function saveMovePlant(id){const p=S.indoorPlants.find(x=>x.id===id);if(!p)retur
 function goBackFromPlant(){if(S.currentPlant?.isIndoor&&S.currentRoom)showRoom(S.currentRoom.id);else if(S.currentBed)showBed(S.currentBed.id);else showScreen('home');}
 function editPlant(){
   const p=S.currentPlant;
-  document.getElementById('modal-body').innerHTML=`<h3>Edit Plant</h3><div class="form-group"><label class="form-label">Name</label><input class="form-input" id="ep-name" value="${p.name}"></div><div class="form-group"><label class="form-label">Status</label><select class="form-select" id="ep-status"><option value="alive" ${p.status==='alive'?'selected':''}>Alive & Well</option><option value="planned" ${p.status==='planned'?'selected':''}>Planned</option><option value="struggling" ${p.status==='struggling'?'selected':''}>Struggling</option><option value="dead" ${p.status==='dead'?'selected':''}>Removed/Dead</option></select></div><div class="form-group"><label class="form-label">Water</label><input class="form-input" id="ep-water" value="${p.water||''}"></div><div class="form-group"><label class="form-label">Sun</label><input class="form-input" id="ep-sun" value="${p.sun||''}"></div><div class="form-group"><label class="form-label">Notes</label><textarea class="form-textarea" id="ep-notes">${p.notes||''}</textarea></div><div class="form-group"><label class="form-label">Emoji</label><input class="form-input" id="ep-emoji" value="${p.emoji||'🌿'}"></div><button class="btn-primary" onclick="saveEditPlant(${p.isIndoor})">Save</button><button class="btn-secondary" onclick="closeModal()">Cancel</button>`;
+  const isIndoor=p.isIndoor;
+  let moveTo='';
+  if(!isIndoor){
+    const bedOpts=S.beds.map(b=>`<option value="${b.id}" ${b.id===p.bedId?'selected':''}>${b.name}</option>`).join('');
+    moveTo=`<div class="form-group"><label class="form-label">Move to Bed</label><select class="form-select" id="ep-bed">${bedOpts}</select></div>`;
+  }
+  document.getElementById('modal-body').innerHTML=`<h3>Edit Plant</h3><div class="form-group"><label class="form-label">Name</label><input class="form-input" id="ep-name" value="${p.name}"></div><div class="form-group"><label class="form-label">Status</label><select class="form-select" id="ep-status"><option value="alive" ${p.status==='alive'?'selected':''}>Alive & Well</option><option value="planned" ${p.status==='planned'?'selected':''}>Planned</option><option value="struggling" ${p.status==='struggling'?'selected':''}>Struggling</option><option value="dead" ${p.status==='dead'?'selected':''}>Removed/Dead</option></select></div>${moveTo}<div class="form-group"><label class="form-label">Water</label><input class="form-input" id="ep-water" value="${p.water||''}"></div><div class="form-group"><label class="form-label">Sun</label><input class="form-input" id="ep-sun" value="${p.sun||''}"></div><div class="form-group"><label class="form-label">Notes</label><textarea class="form-textarea" id="ep-notes">${p.notes||''}</textarea></div><div class="form-group"><label class="form-label">Emoji</label><input class="form-input" id="ep-emoji" value="${p.emoji||'🌿'}"></div><button class="btn-primary" onclick="saveEditPlant(${isIndoor})">Save</button><button class="btn-secondary" onclick="closeModal()">Cancel</button>`;
   document.getElementById('modal-overlay').classList.add('active');
 }
-function saveEditPlant(isIndoor){const p=S.currentPlant;const arr=isIndoor?S.indoorPlants:S.plants;const plant=arr.find(x=>x.id===p.id);if(!plant)return;plant.name=document.getElementById('ep-name').value;plant.status=document.getElementById('ep-status').value;plant.water=document.getElementById('ep-water').value;plant.sun=document.getElementById('ep-sun').value;plant.notes=document.getElementById('ep-notes').value;plant.emoji=document.getElementById('ep-emoji').value;save();closeModal();if(isIndoor)showIndoorPlant(plant.id);else showOutdoorPlant(plant.id);}
+function saveEditPlant(isIndoor){
+  const p=S.currentPlant;
+  const arr=isIndoor?S.indoorPlants:S.plants;
+  const plant=arr.find(x=>x.id===p.id);
+  if(!plant)return;
+  plant.name=document.getElementById('ep-name').value;
+  plant.status=document.getElementById('ep-status').value;
+  plant.water=document.getElementById('ep-water').value;
+  plant.sun=document.getElementById('ep-sun').value;
+  plant.notes=document.getElementById('ep-notes').value;
+  plant.emoji=document.getElementById('ep-emoji').value;
+  if(!isIndoor){
+    const bedEl=document.getElementById('ep-bed');
+    const newBedId=bedEl?bedEl.value:null;
+    if(newBedId&&newBedId!==plant.bedId){
+      plant.bedId=newBedId;
+      S.currentBed=S.beds.find(b=>b.id===newBedId)||S.currentBed;
+      save();
+      closeModal();
+      // Show the bed the plant moved to
+      showBed(newBedId);
+      return;
+    }
+  }
+  save();
+  closeModal();
+  if(isIndoor)showIndoorPlant(plant.id);
+  else showOutdoorPlant(plant.id);
+}
 function deletePlant(){if(!confirm('Remove this plant?'))return;const p=S.currentPlant;if(p.isIndoor){S.indoorPlants=S.indoorPlants.filter(x=>x.id!==p.id);save();if(S.currentRoom)showRoom(S.currentRoom.id);else showScreen('indoor');}else{S.plants=S.plants.filter(x=>x.id!==p.id);save();if(S.currentBed)showBed(S.currentBed.id);else showScreen('home');}}
 function showAddPlantModal(){
   document.getElementById('modal-body').innerHTML=`<h3>Add Plant</h3><div class="form-group"><label class="form-label">Name *</label><input class="form-input" id="ap-name"></div><div class="form-group"><label class="form-label">Scientific Name</label><input class="form-input" id="ap-sci"></div><div class="form-group"><label class="form-label">Emoji</label><input class="form-input" id="ap-emoji" value="🌿"></div><div class="form-group"><label class="form-label">Status</label><select class="form-select" id="ap-status"><option value="alive">Alive & Well</option><option value="planned">Planned</option></select></div><div class="form-group"><label class="form-label">Water</label><input class="form-input" id="ap-water"></div><div class="form-group"><label class="form-label">Sun</label><input class="form-input" id="ap-sun"></div><div class="form-group"><label class="form-label">Notes</label><textarea class="form-textarea" id="ap-notes"></textarea></div><button class="btn-primary" onclick="saveNewOutdoorPlant()">Add</button><button class="btn-secondary" onclick="closeModal()">Cancel</button>`;
@@ -892,19 +997,105 @@ function exportShoppingList(){
   cats.forEach(cat=>{const catItems=items.filter(s=>(s.category||'Gardener — Individual')===cat);if(!catItems.length)return;text+=catLabels[cat]+':\n'+'-'.repeat(30)+'\n';catItems.forEach(s=>{text+=`• ${s.orderAs||s.name}\n  Qty: ${s.qty||'—'} | Size: ${s.size||'—'}\n  Color: ${s.color&&s.color!=='—'?s.color:'—'}\n  For: ${s.bed||'—'}\n\n`;});});
   const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([text],{type:'text/plain'}));a.download='garden-shopping-list.txt';document.body.appendChild(a);a.click();document.body.removeChild(a);
 }
+let currentScheduleMonth=new Date().getMonth()+1;
 function renderScheduleMonths(){
   const months=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-  const current=new Date().getMonth()+1;
-  document.getElementById('month-selector').innerHTML=months.map((m,i)=>`<div class="month-chip ${i+1===current?'active':''}" onclick="selectMonth(${i+1},this)">${m}</div>`).join('');
-  renderSchedule(current);
+  currentScheduleMonth=new Date().getMonth()+1;
+  document.getElementById('month-selector').innerHTML=months.map((m,i)=>'<div class="month-chip '+(i+1===currentScheduleMonth?'active':'')+'" onclick="selectMonth('+(i+1)+',this)">'+m+'</div>').join('');
+  const bedSel=document.getElementById('sched-filter-bed');
+  if(bedSel)bedSel.innerHTML='<option value="all">All Beds</option>'+S.beds.map(b=>'<option value="'+b.id+'">'+b.name+'</option>').join('');
+  renderSchedule(currentScheduleMonth);
 }
-function selectMonth(m,el){document.querySelectorAll('.month-chip').forEach(c=>c.classList.remove('active'));el.classList.add('active');renderSchedule(m);}
+function selectMonth(m,el){document.querySelectorAll('.month-chip').forEach(c=>c.classList.remove('active'));el.classList.add('active');currentScheduleMonth=m;renderSchedule(m);}
+function renderCurrentSchedule(){renderSchedule(currentScheduleMonth);}
+function getSchedChecked(month){try{const v=localStorage.getItem('sc'+month);return v?JSON.parse(v):{};}catch(e){return {};}}
+function toggleSchedTask(month,key){const d=getSchedChecked(month);d[key]=!d[key];try{localStorage.setItem('sc'+month,JSON.stringify(d));}catch(e){}renderSchedule(month);}
 function renderSchedule(month){
-  const staticTasks=staticSchedule[month]||[];
-  const plantTasks=getPlantTasksForMonth(month);
-  const allTasks=[...staticTasks,...plantTasks];
-  document.getElementById('schedule-list').innerHTML=allTasks.length===0?'<div class="empty-state"><span>📅</span><p>No care tasks this month.</p></div>':
-    allTasks.map(t=>`<div class="schedule-task ${t.isPlantTask?'plant-task':t.indoor?'indoor':''}"><div class="schedule-category">${t.isPlantTask?'🌱 Your Plants':t.indoor?'🪴 Indoor':'🌿 Outdoor'} · ${t.cat}</div><h4>${t.title}</h4><p>${t.desc}</p></div>`).join('');
+  // Always repopulate bed filter preserving selection
+  const bedSel=document.getElementById('sched-filter-bed');
+  if(bedSel&&S.beds.length>0){
+    const savedVal=bedSel.value||'all';
+    bedSel.innerHTML='<option value="all">All Beds</option>'+S.beds.map(b=>'<option value="'+b.id+'">'+b.name+'</option>').join('');
+    // Restore selection
+    for(let i=0;i<bedSel.options.length;i++){if(bedSel.options[i].value===savedVal){bedSel.value=savedVal;break;}}
+  }
+  const seen=new Set();
+  const allTasks=[];
+  // Static tasks
+  (staticSchedule[month]||[]).forEach(function(t){
+    var tp='Maintenance';
+    var tl=(t.title+' '+t.cat).toLowerCase();
+    if(tl.includes('prune')||tl.includes('cutback')||tl.includes('deadhead')||tl.includes('trim'))tp='Pruning';
+    else if(tl.includes('feed')||tl.includes('fertiliz')||tl.includes('citrus'))tp='Feeding';
+    else if(tl.includes('water')||tl.includes('irrig'))tp='Watering';
+    else if(tl.includes('pest')||tl.includes('mite')||tl.includes('spray')||tl.includes('neem')||tl.includes('slug')||tl.includes('monitor'))tp='Pest';
+    else if(t.indoor)tp='Indoor';
+    allTasks.push({cat:t.cat,title:t.title,desc:t.desc||'',indoor:t.indoor,type:tp,bedId:'all',key:'s_'+t.cat+'_'+t.title});
+  });
+  // Outdoor plant tasks
+  S.plants.forEach(function(plant){
+    if(!plant.maintenance)return;
+    var bed=S.beds.find(function(b){return b.id===plant.bedId;});
+    plant.maintenance.forEach(function(mItem){
+      if(!mItem.months||mItem.months.indexOf(month)<0)return;
+      var sk=plant.name.split(' ').slice(0,3).join(' ');
+      var key=sk+'|'+mItem.task;
+      if(seen.has(key))return;
+      seen.add(key);
+      var tl=mItem.task.toLowerCase();
+      var tp='Maintenance';
+      if(tl.includes('prune')||tl.includes('cutback')||tl.includes('deadhead')||tl.includes('trim'))tp='Pruning';
+      else if(tl.includes('feed')||tl.includes('fertiliz'))tp='Feeding';
+      else if(tl.includes('water'))tp='Watering';
+      else if(tl.includes('pest')||tl.includes('mite')||tl.includes('spray')||tl.includes('neem')||tl.includes('slug'))tp='Pest';
+      allTasks.push({cat:plant.name,title:mItem.task,desc:bed?bed.name:'',indoor:false,type:tp,bedId:plant.bedId||'all',key:'p_'+key});
+    });
+  });
+  // Indoor plant tasks
+  S.indoorPlants.forEach(function(plant){
+    if(!plant.maintenance)return;
+    plant.maintenance.forEach(function(mItem){
+      if(!mItem.months||mItem.months.indexOf(month)<0)return;
+      var sk='i_'+plant.name.split(' ').slice(0,3).join(' ');
+      var key=sk+'|'+mItem.task;
+      if(seen.has(key))return;
+      seen.add(key);
+      allTasks.push({cat:plant.name,title:mItem.task,desc:plant.section||'',indoor:true,type:'Indoor',bedId:'indoor',key:'ip_'+key});
+    });
+  });
+  // Apply filters
+  var typeEl=document.getElementById('sched-filter-type');
+  var bedEl=document.getElementById('sched-filter-bed');
+  var typeF=typeEl?typeEl.value:'all';
+  var bedF=bedEl?bedEl.value:'all';
+  console.log('Schedule filters: type='+typeF+' bed='+bedF+' totalTasks='+allTasks.length);
+  var filtered=allTasks.filter(function(t){
+    if(typeF!=='all'&&t.type!==typeF)return false;
+    if(bedF!=='all'&&t.bedId!==bedF&&t.bedId!=='all')return false;
+    return true;
+  });
+  console.log('Filtered tasks:', filtered.length);
+  if(filtered.length===0){document.getElementById('schedule-list').innerHTML='<div class="empty-state"><span>📅</span><p>No tasks match your filters.</p></div>';return;}
+  var checked=getSchedChecked(month);
+  var doneCount=filtered.filter(function(t){return checked[t.key];}).length;
+  // Group by type
+  var groups={};
+  filtered.forEach(function(t){
+    var g=t.indoor?'🪴 Indoor':t.type==='Pruning'?'✂️ Pruning':t.type==='Feeding'?'🌱 Feeding':t.type==='Watering'?'💧 Watering':t.type==='Pest'?'🐛 Pest':'🔧 Maintenance';
+    if(!groups[g])groups[g]=[];
+    groups[g].push(t);
+  });
+  var out='<div style="font-size:12px;color:var(--text-light);padding:4px 0 12px">'+doneCount+'/'+filtered.length+' tasks done this month</div>';
+  Object.keys(groups).forEach(function(group){
+    out+='<div style="font-size:11px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-light);padding:8px 0 4px">'+group+'</div>';
+    groups[group].forEach(function(t){
+      var isDone=!!checked[t.key];
+      var safeKey=t.key.replace(/\\/g,'\\\\').replace(/'/g,"\\'");
+      var border=t.indoor?'var(--terracotta)':'var(--sage)';
+      out+='<div class="schedule-task '+(isDone?'task-done':'')+'" style="border-left-color:'+border+'"><div style="display:flex;align-items:flex-start"><div class="sched-check '+(isDone?'checked':'')+'" onclick="toggleSchedTask('+month+',\''+safeKey+'\')">'+( isDone?'✓':'')+'</div><div style="flex:1"><div style="font-size:10px;text-transform:uppercase;letter-spacing:1px;color:'+(t.indoor?'var(--terracotta)':'var(--sage-dark)')+';font-weight:500;margin-bottom:3px">'+t.cat+'</div><h4>'+t.title+'</h4>'+(t.desc?'<p>'+t.desc+'</p>':'')+'</div></div></div>';
+    });
+  });
+  document.getElementById('schedule-list').innerHTML=out;
 }
 function showNoteTab(tab,btn){
   document.querySelectorAll('#screen-notes .segment-btn').forEach(b=>b.classList.remove('active'));
