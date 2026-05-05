@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="Nidhi's Garden">
@@ -1001,6 +1002,20 @@ async function init(){
       plant.maintenance.forEach(function(mItem){
         if(taskMigrations[mItem.task])mItem.task=taskMigrations[mItem.task];
       });
+    });
+    // Fix corrupted room/bed icons
+    const defaultIconMap={'Office':'🪴','Rest of House':'🌿'};
+    S.rooms.forEach(function(r){
+      if(!r.icon||r.icon.length>8)r.icon=defaultIconMap[r.name]||'🪴';
+    });
+    S.beds.forEach(function(b){
+      if(!b.icon||b.icon.length>8)b.icon='🌿';
+    });
+    S.plants.forEach(function(p){
+      if(!p.emoji||p.emoji.length>8)p.emoji='🌿';
+    });
+    S.indoorPlants.forEach(function(p){
+      if(!p.emoji||p.emoji.length>8)p.emoji='🪴';
     });
     await save();
   }
