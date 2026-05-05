@@ -31,8 +31,8 @@ body{font-family:'DM Sans',sans-serif;background:var(--warm-white);color:var(--t
 .home-card-icon{font-size:32px;margin-bottom:12px;display:block;}
 .home-card h3{font-family:'Playfair Display',serif;font-size:18px;color:var(--text-dark);margin-bottom:4px;}
 .home-card p{font-size:12px;color:var(--text-light);}
-.home-card.outdoor{border-top:3px solid var(--sage);}
-.home-card.indoor{border-top:3px solid var(--terracotta);}
+.home-card.outdoor{}
+.home-card.indoor{}
 .quick-actions{padding:0 20px 24px;}
 .section-title{font-size:11px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-light);margin-bottom:12px;}
 .quick-row{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;}
@@ -183,26 +183,32 @@ body{font-family:'DM Sans',sans-serif;background:var(--warm-white);color:var(--t
 <div id="screen-home" class="screen active">
   <div class="home-hero"><div class="home-greeting">Welcome to</div><div class="home-title">Nidhi's Garden 🌿</div><div class="home-subtitle">Zone 9 · Bay Area · Clay Soil</div></div>
   <div class="home-cards">
-    <div class="home-card outdoor" onclick="showScreen('outdoor')"><span class="home-card-icon">🌳</span><h3>Outdoor</h3><p id="outdoor-count">Loading...</p></div>
-    <div class="home-card indoor" onclick="showScreen('indoor')"><span class="home-card-icon">🪴</span><h3>Indoor</h3><p id="indoor-count">Loading...</p></div>
+    <div class="home-card outdoor" id="home-card-outdoor" style="position:relative;overflow:hidden" onclick="showScreen('outdoor')"><div id="home-card-outdoor-img" style="display:none;position:absolute;inset:0;border-radius:inherit;overflow:hidden;z-index:0"><img id="home-card-outdoor-imgel" style="width:100%;height:100%;object-fit:cover"></div><span class="home-card-icon" id="home-card-outdoor-icon" style="position:relative;z-index:1">🌳</span><div style="position:relative;z-index:1;background:rgba(255,255,255,0.72);border-radius:10px;padding:4px 10px;margin-top:4px;backdrop-filter:blur(4px)"><h3 style="margin:0;color:var(--text-dark)">Outdoor</h3><p id="outdoor-count" style="margin:0;color:var(--text-mid)">Loading...</p></div></div>
+    <div class="home-card indoor" id="home-card-indoor" style="position:relative;overflow:hidden" onclick="showScreen('indoor')"><div id="home-card-indoor-img" style="display:none;position:absolute;inset:0;border-radius:inherit;overflow:hidden;z-index:0"><img id="home-card-indoor-imgel" style="width:100%;height:100%;object-fit:cover"></div><span class="home-card-icon" id="home-card-indoor-icon" style="position:relative;z-index:1">🪴</span><div style="position:relative;z-index:1;background:rgba(255,255,255,0.72);border-radius:10px;padding:4px 10px;margin-top:4px;backdrop-filter:blur(4px)"><h3 style="margin:0;color:var(--text-dark)">Indoor</h3><p id="indoor-count" style="margin:0;color:var(--text-mid)">Loading...</p></div></div>
   </div>
+  <input type="file" id="card-photo-input" accept="image/*" style="display:none" onchange="handleCardPhotoUpload(event)">
   <div class="quick-actions"><div class="section-title">Quick Access</div><div class="quick-row"><div class="quick-btn" onclick="showScreen('todo')"><span>✅</span><span>To-Do</span></div><div class="quick-btn" onclick="showScreen('shopping')"><span>🛒</span><span>Shopping</span></div><div class="quick-btn" onclick="showScreen('schedule')"><span>📅</span><span>Schedule</span></div><div class="quick-btn" onclick="showScreen('notes')"><span>📝</span><span>Notes</span></div></div></div>
   <div class="quick-actions"><div class="section-title">Garden Tools</div><div class="quick-row"><div class="quick-btn" onclick="showScreen('propagation')"><span>🌱</span><span>Cuttings</span></div><div class="quick-btn" onclick="showScreen('irrigation')"><span>💧</span><span>Irrigation</span></div><div class="quick-btn" onclick="addToTodo()"><span>➕</span><span>Add Task</span></div><div class="quick-btn" onclick="showScreen('allplants')"><span>🔍</span><span>All Plants</span></div></div></div>
   <div style="padding:4px 20px 8px;text-align:right"><span style="font-size:10px;color:var(--text-light);cursor:pointer" onclick="resetToDefaults()">↺ Reset data</span></div>
 </div>
 <div id="screen-outdoor" class="screen">
-  <div class="header"><div class="header-back" onclick="showScreen('home')">← Home</div><h1>🌳 Outdoor</h1><p>Select a yard area</p></div>
-  <div class="yard-cards"><div class="yard-card" onclick="showYard('front')"><div class="yard-card-icon front">🏡</div><div class="yard-card-info"><h3>Front Yard</h3><p id="front-yard-count">Loading...</p></div><div class="yard-card-arrow">›</div></div><div class="yard-card" onclick="showYard('back')"><div class="yard-card-icon back">🌿</div><div class="yard-card-info"><h3>Back Yard</h3><p id="back-yard-count">Loading...</p></div><div class="yard-card-arrow">›</div></div></div>
+  <div style="position:relative"><div class="room-hero" id="outdoor-hero-area"><span class="room-hero-placeholder">🌳</span></div><div style="position:absolute;top:56px;left:20px;cursor:pointer;background:rgba(255,255,255,0.9);border-radius:20px;padding:6px 14px;font-size:13px;font-weight:500" onclick="showScreen('home')">← Home</div><button class="room-hero-edit" onclick="triggerSectionImageUpload('outdoor')">📷 Edit Photo</button></div>
+  <div class="header" style="padding-top:16px"><h1>🌳 Outdoor</h1><p>Select a yard area</p></div>
+  <div class="yard-cards"><div class="yard-card" id="yard-card-front" onclick="showYard('front')"><div class="yard-card-icon front" id="yard-icon-front">🏡</div><div class="yard-card-info"><h3>Front Yard</h3><p id="front-yard-count">Loading...</p></div><div class="yard-card-arrow">›</div></div><div class="yard-card" id="yard-card-back" onclick="showYard('back')"><div class="yard-card-icon back" id="yard-icon-back">🌿</div><div class="yard-card-info"><h3>Back Yard</h3><p id="back-yard-count">Loading...</p></div><div class="yard-card-arrow">›</div></div></div>
+  <input type="file" id="section-image-input" accept="image/*" style="display:none" onchange="handleSectionImageUpload(event)">
   <button class="fab" onclick="showAddBedModal()">+</button>
 </div>
 <div id="screen-indoor" class="screen">
-  <div class="header"><div class="header-back" onclick="showScreen('home')">← Home</div><h1>🪴 Indoor</h1><p>Select a room</p></div>
+  <div style="position:relative"><div class="room-hero" id="indoor-hero-area"><span class="room-hero-placeholder">🪴</span></div><div style="position:absolute;top:56px;left:20px;cursor:pointer;background:rgba(255,255,255,0.9);border-radius:20px;padding:6px 14px;font-size:13px;font-weight:500" onclick="showScreen('home')">← Home</div><button class="room-hero-edit" onclick="triggerSectionImageUpload('indoor')">📷 Edit Photo</button></div>
+  <div class="header" style="padding-top:16px"><h1>🪴 Indoor</h1><p>Select a room</p></div>
   <div class="yard-cards" id="indoor-rooms-list"></div>
   <button class="fab" onclick="showAddRoomModal()">+</button>
 </div>
 <div id="screen-yard" class="screen">
-  <div class="header"><div class="header-back" onclick="showScreen('outdoor')">← Outdoor</div><h1 id="yard-title">Front Yard</h1><p id="yard-subtitle"></p></div>
+  <div style="position:relative"><div class="room-hero" id="yard-hero-area"><span class="room-hero-placeholder">🌿</span></div><div style="position:absolute;top:56px;left:20px;cursor:pointer;background:rgba(255,255,255,0.9);border-radius:20px;padding:6px 14px;font-size:13px;font-weight:500" onclick="showScreen('outdoor')">← Outdoor</div><button class="room-hero-edit" onclick="triggerYardImageUpload()">📷 Edit Photo</button></div>
+  <div class="header" style="padding-top:16px"><div class="header-actions"><h1 id="yard-title">Front Yard</h1></div><p id="yard-subtitle"></p></div>
   <div class="list-container" id="yard-beds-list"></div>
+  <input type="file" id="yard-image-input" accept="image/*" style="display:none" onchange="handleYardImageUpload(event)">
   <button class="fab" onclick="showAddBedModal()">+</button>
 </div>
 <div id="screen-room" class="screen">
@@ -265,10 +271,10 @@ body{font-family:'DM Sans',sans-serif;background:var(--warm-white);color:var(--t
       <option value="Watering">💧 Watering</option>
       <option value="Pest">🐛 Pest</option>
       <option value="Maintenance">🔧 Maintenance</option>
-      <option value="Indoor">🪴 Indoor</option>
     </select>
     <select class="form-select" id="sched-filter-bed" onchange="renderCurrentSchedule()" style="flex:1;padding:8px 12px;font-size:13px">
-      <option value="all">All Beds</option>
+      <option value="all">All Locations</option>
+      <option value="indoor">🪴 Indoor</option>
     </select>
   </div>
   <div class="list-container" id="schedule-list"></div>
@@ -295,12 +301,35 @@ body{font-family:'DM Sans',sans-serif;background:var(--warm-white);color:var(--t
   <div class="search-bar"><input type="text" placeholder="Search plants..." oninput="searchPlants(this.value)"></div>
   <div class="list-container" id="allplants-list"></div>
 </div>
+<div id="screen-settings" class="screen">
+  <div class="header"><div class="header-back" onclick="showScreen('home')">← Home</div><h1>⚙️ Settings</h1></div>
+  <div class="list-container">
+    <div style="background:white;border-radius:var(--radius);padding:20px;margin-bottom:16px;box-shadow:var(--shadow)">
+      <h3 style="font-family:'Playfair Display',serif;font-size:18px;margin-bottom:8px;color:var(--text-dark)">☁️ GitHub Sync</h3>
+      <p style="font-size:13px;color:var(--text-light);margin-bottom:16px">Your data will be saved to <strong>garden-data.json</strong> in your GitHub repo after every change. Survives phone upgrades, Safari clears, and any device.</p>
+      <div class="form-group"><label class="form-label">GitHub Username</label><input class="form-input" id="gh-username" placeholder="e.g. nidhihgupta"></div>
+      <div class="form-group"><label class="form-label">Repository Name</label><input class="form-input" id="gh-repo" placeholder="e.g. my-garden"></div>
+      <div class="form-group"><label class="form-label">Personal Access Token</label><input class="form-input" id="gh-token" type="password" placeholder="ghp_xxxxxxxxxxxx"><p style="font-size:11px;color:var(--text-light);margin-top:4px">github.com → Settings → Developer settings → Personal access tokens → Tokens (classic) → repo scope</p></div>
+      <div id="gh-status" style="font-size:13px;padding:8px 0;color:var(--text-light)"></div>
+      <button class="btn-primary" onclick="saveGitHubSettings()">Save & Test Connection</button>
+      <button class="btn-secondary" onclick="forceSyncToGitHub()">⬆️ Force Sync Now</button>
+      <button class="btn-secondary" onclick="restoreFromGitHub()">⬇️ Restore from GitHub</button>
+    </div>
+    <div style="background:white;border-radius:var(--radius);padding:20px;box-shadow:var(--shadow)">
+      <h3 style="font-family:'Playfair Display',serif;font-size:18px;margin-bottom:8px;color:var(--text-dark)">💾 Local Backup</h3>
+      <p style="font-size:13px;color:var(--text-light);margin-bottom:16px">Download all your data as a JSON file. Keep it somewhere safe as a manual backup.</p>
+      <button class="btn-primary" onclick="exportDataJSON()">⬇️ Download Backup</button>
+      <button class="btn-secondary" onclick="document.getElementById('import-json-input').click()">⬆️ Restore from File</button>
+      <input type="file" id="import-json-input" accept=".json" style="display:none" onchange="importDataJSON(event)">
+    </div>
+  </div>
+</div>
 <nav class="bottom-nav">
   <div class="nav-item active" onclick="showScreen('home')" id="nav-home"><span>🏠</span><span>Home</span></div>
   <div class="nav-item" onclick="showScreen('todo')" id="nav-todo"><span>✅</span><span>To-Do</span></div>
   <div class="nav-item" onclick="showScreen('shopping')" id="nav-shopping"><span>🛒</span><span>Shop</span></div>
   <div class="nav-item" onclick="showScreen('schedule')" id="nav-schedule"><span>📅</span><span>Schedule</span></div>
-  <div class="nav-item" onclick="showScreen('notes')" id="nav-notes"><span>📝</span><span>Notes</span></div>
+  <div class="nav-item" onclick="showScreen('settings')" id="nav-settings"><span>⚙️</span><span>Settings</span></div>
 </nav>
 <div class="modal-overlay" id="modal-overlay" onclick="closeModal(event)"><div class="modal"><div class="modal-handle"></div><div id="modal-body"></div></div></div>
 <script>
@@ -314,34 +343,39 @@ function m(task,months){return{task,months};}
 const roseDeadhead=m('Deadhead every 2 weeks — outward facing bud, 45° cut',[4,5,6,7,8,9,10]);
 const rosePrune=m('Hard cutback annually in January/February',[1,2]);
 const roseFeed=m('Feed rose fertilizer after first bloom flush',[5,6]);
+const daylilyDeadhead=m('Deadhead spent blooms daily during peak bloom',[5,6,7]);
 const salviaDeadhead=m('Deadhead spent spikes continuously',[5,6,7,8,9,10]);
 const salviaTrim=m('Cut back by 1/3 if getting leggy — reblooms in 3 weeks',[7]);
 const salviaHardPrune=m('Hard cutback annually',[2]);
 const mondoDivide=m('Divide clumps every 3-4 years',[3]);
-const carexDivide=m('Divide clumps every 3 years',[3]);
+const carexDivide=m('Divide clumps every 3-4 years',[3]);
 const heuchDiv=m('Divide every 3-4 years — remove dead foliage in spring',[3]);
 const tiarellaDiv=m('Divide every 3-4 years',[3]);
 const liriopeMaint=m('Divide every 3-4 years · trim back in late winter',[2,3]);
-const abeliaFeed=m('Feed slow release fertilizer in spring',[3]);
+const slowReleaseFeed=m('Feed slow release fertilizer in spring',[3]);
+const abeliaFeed=slowReleaseFeed;
+const loropFeed=slowReleaseFeed;
+const vibFeed=slowReleaseFeed;
 const abeliaTrim=m('Light trim after spring flowering',[5,6]);
-const loropFeed=m('Feed slow release in spring',[3]);
-const loropTrim=m('Light trim after spring flowering',[5,6]);
+const loropTrim=abeliaTrim;
+const liquidFeed=m('Feed liquid fertilizer every 2 weeks',[5,6,7,8,9]);
+const begFeed=liquidFeed;
+const impFeed=liquidFeed;
 const fruitWaterSp=m('Deep water every 2 weeks spring — slow hose 10 min at drip line',[3,4,5,6]);
 const fruitWaterSu=m('Deep water every 2 weeks July-August — check soil 6 inches first',[7,8]);
 const fruitWaterFW=m('Monthly watering sufficient fall/winter',[9,10,11,12,1,2]);
+const citrusFeed=m('Feed citrus fertilizer',[2,5,8]);
+const espWaterSu=m('Deep water weekly July-August',[7,8]);
 const hydPrune=m('Prune ONLY after flowering in August — never fall/winter',[8]);
 const hydFeed=m('Feed azalea fertilizer in spring',[3,4]);
 const dahliaDeadhead=m('Deadhead continuously — every spent bloom = more blooms',[6,7,8,9,10]);
 const dahliaFeed=m('Feed high phosphorus fertilizer',[6,7,8]);
 const begDeadhead=m('Deadhead spent blooms continuously',[5,6,7,8,9,10]);
-const begFeed=m('Feed liquid fertilizer every 2 weeks in bloom',[5,6,7,8,9]);
-const impFeed=m('Feed liquid fertilizer every 2 weeks',[5,6,7,8,9]);
 const fuchsiaWater=m('Keep consistently moist — does not like to dry out',[1,2,3,4,5,6,7,8,9,10,11,12]);
 const fuchsiaTrim=m('Light pruning after bloom flushes',[4,7,10]);
 const passTrail=m('Train on fence wires — tie new growth regularly',[4,5,6,7,8]);
 const passPrune=m('Cut back hard in late winter — flowers on new wood',[1,2]);
 const bergenMaint=m('Remove dead leaves in spring',[3]);
-const vibFeed=m('Feed slow release fertilizer in spring',[3]);
 const vibTrim=m('Light prune after flowering to maintain shape',[6,7]);
 const hellMaint=m('Remove old leaves in late fall to showcase winter flowers',[11]);
 const oxalisMaint=m('May go dormant in summer heat — reduce water if leaves yellow',[6,7,8]);
@@ -361,7 +395,7 @@ const raspDrip=m('On drip system weekly — check system functioning monthly',[4
 const raspCanes=m('Remove old fruited canes after harvest',[8,9]);
 const bbTrain=m('Train on espalier wires — tie new growth',[4,5,6]);
 const bbTip=m('Tip prune in summer to encourage lateral growth',[7]);
-const bbCanes=m('Remove old fruited canes after harvest',[8,9]);
+const bbCanes=raspCanes;
 const espTrain=m('Train espalier wires — tie new canes in desired direction',[4,5,6]);
 const espPrune=m('Prune espalier shape in late winter',[1,2]);
 const distTrail=m('Train new growth onto wall immediately as it pushes',[3,4,5,6,7,8]);
@@ -393,7 +427,7 @@ const defaultOutdoorPlants=[
   p('fl-begonia','b-fl','Tuberous Begonia Yellow','Begonia tuberhybrida','🌼','planned','Regular','Part shade','Yellow Non Stop. x6.',[begDeadhead,begFeed],[{issue:'Powdery mildew',url:'https://www.google.com/search?q=Powdery%20mildew%20plant%20care%20fix'}]),
   p('fl-clivia','b-fl','Clivia','Clivia miniata','🟠','alive','Low-moderate','Part shade','x2 existing.',[m('Keep evenly moist spring',[3,4,5]),m('Feed diluted fertilizer after flowering',[4,5])],[{issue:'Not flowering',url:'https://www.google.com/search?q=Not%20flowering%20plant%20care%20fix'}]),
   // REDWOOD BED
-  p('rw-camellia','b-rw','Camellia','Camellia japonica','🌸','alive','Regular','Part to full shade','Existing.',[m('Prune lightly after flowering only',[4,5]),m('Feed azalea fertilizer after bloom',[5])],[{issue:'Bud drop',url:'https://www.google.com/search?q=Bud%20drop%20plant%20care%20fix'}]),
+  p('rw-camellia','b-rw','Camellia','Camellia japonica','🌸','alive','Regular','Part to full shade','Existing.',[m('Prune lightly after flowering',[4,5]),m('Feed azalea fertilizer after bloom',[5])],[{issue:'Bud drop',url:'https://www.google.com/search?q=Bud%20drop%20plant%20care%20fix'}]),
   p('rw-pittosporum','b-rw','Pittosporum','Pittosporum tobira','🌿','alive','Low once established','Part shade','Existing structural shrub.',[m('Light trim to maintain shape',[3,4])],[{issue:'Scale insects',url:'https://www.google.com/search?q=Scale%20insects%20plant%20care%20fix'}]),
   p('rw-clivia','b-rw','Clivia','Clivia miniata','🟠','alive','Low once established','Full shade','Existing. Under redwoods.',[m('Feed diluted fertilizer after flowering',[4,5])],[{issue:'Not flowering',url:'https://www.google.com/search?q=Not%20flowering%20plant%20care%20fix'}]),
   p('rw-fern-ex','b-rw','Existing Ferns','Polystichum spp.','🌿','alive','Keep moist','Full shade','Existing ferns under redwoods.',[fernMaint],[{issue:'Brown fronds',url:'https://www.google.com/search?q=Brown%20fronds%20plant%20care%20fix'}]),
@@ -401,11 +435,11 @@ const defaultOutdoorPlants=[
   p('rw-hellebores','b-rw','Hellebores','Helleborus spp.','🌸','planned','Moderate','Part to full shade','x3 mixed.',[hellMaint],[{issue:'Black death virus',url:'https://www.google.com/search?q=Black%20death%20virus%20plant%20care%20fix'}]),
   p('rw-oxalis','b-rw','Oxalis Purple','Oxalis triangularis','💜','planned','Moderate','Part shade','x5. Purple. Dramatic against green ferns.',[oxalisMaint],[{issue:'Not emerging from dormancy',url:'https://www.google.com/search?q=Not%20emerging%20from%20dormancy%20plant%20care%20fix'}]),
   // MAPLE BED
-  p('mp-maple','b-mp','Japanese Maple','Acer palmatum','🍁','alive','Regular when young','Part shade','Existing anchor.',[m('Feed slow release in spring',[3])],[{issue:'Leaf scorch',url:'https://www.google.com/search?q=Leaf%20scorch%20plant%20care%20fix'}]),
+  p('mp-maple','b-mp','Japanese Maple','Acer palmatum','🍁','alive','Regular when young','Part shade','Existing anchor.',[slowReleaseFeed],[{issue:'Leaf scorch',url:'https://www.google.com/search?q=Leaf%20scorch%20plant%20care%20fix'}]),
   p('mp-camellia','b-mp','Camellia','Camellia japonica','🌸','alive','Regular','Part shade','Existing.',[m('Prune lightly after flowering',[4,5]),m('Feed azalea fertilizer after bloom',[5])],[{issue:'Bud drop',url:'https://www.google.com/search?q=Bud%20drop%20plant%20care%20fix'}]),
   p('mp-fern','b-mp','Fern','Polystichum spp.','🌿','alive','Keep moist','Part shade','Existing.',[fernMaint],[{issue:'Brown fronds',url:'https://www.google.com/search?q=Brown%20fronds%20plant%20care%20fix'}]),
   p('mp-japgrass','b-mp','Japanese Forest Grass','Hakonechloa macra','🌾','alive','Moderate','Part shade','Existing. Variegated green/white.',[m('Cut back in late winter before new growth',[2])],[{issue:'Loss of variegation',url:'https://www.google.com/search?q=Loss%20of%20variegation%20plant%20care%20fix'}]),
-  p('mp-daylily','b-mp','Day Lilies','Hemerocallis spp.','🌼','alive','Low-moderate','Part shade','Existing.',[m('Deadhead spent blooms daily during peak bloom',[5,6,7]),m('Divide every 3-4 years',[3])],[{issue:'Rust disease',url:'https://www.google.com/search?q=Rust%20disease%20plant%20care%20fix'}]),
+  p('mp-daylily','b-mp','Day Lilies','Hemerocallis spp.','🌼','alive','Low-moderate','Part shade','Existing.',[daylilyDeadhead,m('Divide every 3-4 years',[3])],[{issue:'Rust disease',url:'https://www.google.com/search?q=Rust%20disease%20plant%20care%20fix'}]),
   p('mp-hosta','b-mp','Hosta','Hosta spp.','🍃','alive','Regular','Part shade','Existing.',[hosSlug,m('Cut back dead foliage in fall',[11])],[{issue:'Slug damage',url:'https://www.google.com/search?q=Slug%20damage%20plant%20care%20fix'}]),
   p('mp-abelia','b-mp','Abelia Kaleidoscope','Abelia grandiflora Kaleidoscope','🌿','planned','Moderate','Part shade','x3. 3-gallon.',[abeliaFeed,abeliaTrim],[{issue:'Loss of variegation',url:'https://www.google.com/search?q=Loss%20of%20variegation%20plant%20care%20fix'}]),
   p('mp-mondo','b-mp','Black Mondo','Ophiopogon planiscapus Nigrescens','🖤','planned','Moderate','Part shade','x6. 1-gallon.',[mondoDivide],[{issue:'Loss of black color',url:'https://www.google.com/search?q=Loss%20of%20black%20color%20plant%20care%20fix'}]),
@@ -416,14 +450,14 @@ const defaultOutdoorPlants=[
   // CHERRY BED
   p('ch-cherry','b-ch','Cherry Tree','Prunus spp.','🌸','alive','Regular when young','Part shade','Existing anchor.',[m('Feed balanced fertilizer in spring',[3]),m('Water deeply in summer heat',[7,8])],[{issue:'Brown rot',url:'https://www.google.com/search?q=Brown%20rot%20plant%20care%20fix'}]),
   p('ch-nandina','b-ch','Nandina','Nandina domestica','🔴','alive','Low once established','Part shade','Existing. Red berries fall/winter.',[m('Light trim in spring if leggy',[3]),m('Remove oldest canes at ground level',[2])],[{issue:'Not fruiting',url:'https://www.google.com/search?q=Not%20fruiting%20plant%20care%20fix'}]),
-  p('ch-daylily','b-ch','Day Lilies','Hemerocallis spp.','🌼','alive','Low-moderate','Part shade','Existing.',[m('Deadhead spent blooms daily',[5,6,7]),m('Divide every 3-4 years',[3])],[{issue:'Rust disease',url:'https://www.google.com/search?q=Rust%20disease%20plant%20care%20fix'}]),
+  p('ch-daylily','b-ch','Day Lilies','Hemerocallis spp.','🌼','alive','Low-moderate','Part shade','Existing.',[daylilyDeadhead,m('Divide every 3-4 years',[3])],[{issue:'Rust disease',url:'https://www.google.com/search?q=Rust%20disease%20plant%20care%20fix'}]),
   p('ch-abelia','b-ch','Abelia Kaleidoscope','Abelia grandiflora Kaleidoscope','🌿','planned','Moderate','Part shade','x3. 3-gallon.',[abeliaFeed,abeliaTrim],[{issue:'Loss of variegation',url:'https://www.google.com/search?q=Loss%20of%20variegation%20plant%20care%20fix'}]),
   p('ch-mondo','b-ch','Black Mondo','Ophiopogon planiscapus Nigrescens','🖤','planned','Moderate','Part shade','x3. 1-gallon.',[mondoDivide],[{issue:'Loss of black color',url:'https://www.google.com/search?q=Loss%20of%20black%20color%20plant%20care%20fix'}]),
   p('ch-lamium','b-ch','Lamium White Nancy','Lamium maculatum White Nancy','🤍','planned','Moderate','Part shade','Ground cover.',[lamTrim],[{issue:'Leggy growth',url:'https://www.google.com/search?q=Leggy%20growth%20plant%20care%20fix'}]),
   // FRONT BED RIGHT
   p('fr-camphor','b-fr','Camphor Tree','Cinnamomum camphora','🌳','alive','Low once established','Part shade','Existing large tree.',[m('No pruning needed',[1])],[{issue:'Root invasion',url:'https://www.google.com/search?q=Root%20invasion%20plant%20care%20fix'}]),
-  p('fr-lavender','b-fr','Lavender','Lavandula spp.','💜','alive','Low — drought tolerant','Part shade','x2 existing.',[m('Light trim after flowering — never cut into old wood',[6,7]),m('Feed slow release in spring',[3])],[{issue:'Root rot (overwatering)',url:'https://www.google.com/search?q=Root%20rot%20(overwatering)%20plant%20care%20fix'}]),
-  p('fr-daylily','b-fr','Day Lilies','Hemerocallis spp.','🌼','alive','Low-moderate','Part shade','Existing.',[m('Deadhead spent blooms daily',[5,6,7]),m('Divide every 3-4 years',[3])],[{issue:'Rust disease',url:'https://www.google.com/search?q=Rust%20disease%20plant%20care%20fix'}]),
+  p('fr-lavender','b-fr','Lavender','Lavandula spp.','💜','alive','Low — drought tolerant','Part shade','x2 existing.',[m('Light trim after flowering — never cut into old wood',[6,7]),slowReleaseFeed],[{issue:'Root rot (overwatering)',url:'https://www.google.com/search?q=Root%20rot%20(overwatering)%20plant%20care%20fix'}]),
+  p('fr-daylily','b-fr','Day Lilies','Hemerocallis spp.','🌼','alive','Low-moderate','Part shade','Existing.',[daylilyDeadhead,m('Divide every 3-4 years',[3])],[{issue:'Rust disease',url:'https://www.google.com/search?q=Rust%20disease%20plant%20care%20fix'}]),
   p('fr-catmint','b-fr','Catmint','Nepeta spp.','💜','alive','Low — drought tolerant','Part shade','Existing.',[m('Cut back by half after first bloom flush',[5,6]),m('Repeat deadhead for rebloom',[7,8,9])],[{issue:'Root rot',url:'https://www.google.com/search?q=Root%20rot%20plant%20care%20fix'}]),
   p('fr-abelia','b-fr','Abelia Kaleidoscope','Abelia grandiflora Kaleidoscope','🌿','planned','Moderate','Part shade','x3. 3-gallon.',[abeliaFeed,abeliaTrim],[{issue:'Loss of variegation',url:'https://www.google.com/search?q=Loss%20of%20variegation%20plant%20care%20fix'}]),
   p('fr-loro','b-fr','Loropetalum Purple Daydream','Loropetalum chinense Purple Daydream','💜','planned','Moderate','Part shade','x2. 2-gallon.',[loropFeed,loropTrim],[{issue:'Loss of purple color',url:'https://www.google.com/search?q=Loss%20of%20purple%20color%20plant%20care%20fix'}]),
@@ -433,10 +467,10 @@ const defaultOutdoorPlants=[
   p('fr-begonia','b-fr','Tuberous Begonia Yellow','Begonia tuberhybrida','🌼','planned','Regular','Part shade','x5. Yellow Non Stop.',[begDeadhead,begFeed],[{issue:'Powdery mildew',url:'https://www.google.com/search?q=Powdery%20mildew%20plant%20care%20fix'}]),
   // ROSE BED
   p('ros-apricot','b-ros','Apricot Tree','Prunus armeniaca','🍑','alive','Every 2 weeks spring/summer','Full sun to part sun','Existing.',[fruitWaterSp,fruitWaterSu,fruitWaterFW],[{issue:'Brown rot on fruit',url:'https://www.google.com/search?q=Brown%20rot%20on%20fruit%20plant%20care%20fix'}]),
-  p('ros-lemon','b-ros','Dwarf Lemon Tree','Citrus limon dwarf','🍋','alive','Every 2 weeks','Full sun to part sun','Existing.',[m('Feed citrus fertilizer',[2,5,8]),fruitWaterSp,fruitWaterSu],[{issue:'Yellowing leaves',url:'https://www.google.com/search?q=Yellowing%20leaves%20plant%20care%20fix'}]),
+  p('ros-lemon','b-ros','Citrus Tree','Citrus limon dwarf','🍋','alive','Every 2 weeks','Full sun to part sun','Existing dwarf lemon.',[citrusFeed,fruitWaterSp,fruitWaterSu],[{issue:'Yellowing leaves',url:'https://www.google.com/search?q=Yellowing%20leaves%20plant%20care%20fix'}]),
   p('ros-peruvian','b-ros','Peruvian Lily','Alstroemeria spp.','🌸','alive','Moderate','Part sun','Existing. Long-lasting cut flowers.',[m('Deadhead at base — pull stem out, do not cut',[4,5,6,7,8,9])],[{issue:'Not flowering',url:'https://www.google.com/search?q=Not%20flowering%20plant%20care%20fix'}]),
-  p('ros-flowercarpet','b-ros','Flower Carpet Rose','Rosa Flower Carpet','🌹','alive','Moderate','Part sun','Existing ground cover rose.',[roseDeadhead,m('Light trim to tidy in February',[2])],[{issue:'Black spot',url:'https://www.google.com/search?q=Black%20spot%20plant%20care%20fix'}]),
-  p('ros-treerose','b-ros','Tree Rose','Rosa standard','🌹','alive','Deep water weekly','Part sun','Existing standard form rose.',[roseDeadhead,rosePrune,roseFeed],[{issue:'Black spot',url:'https://www.google.com/search?q=Black%20spot%20plant%20care%20fix'}]),
+  p('ros-flowercarpet','b-ros','Rose','Rosa Flower Carpet','🌹','alive','Moderate','Part sun','Existing ground cover rose (Flower Carpet).',[roseDeadhead,rosePrune,roseFeed],[{issue:'Black spot',url:'https://www.google.com/search?q=Black%20spot%20plant%20care%20fix'}]),
+  p('ros-treerose','b-ros','Rose','Rosa standard','🌹','alive','Deep water weekly','Part sun','Existing standard form rose.',[roseDeadhead,rosePrune,roseFeed],[{issue:'Black spot',url:'https://www.google.com/search?q=Black%20spot%20plant%20care%20fix'}]),
   // BACK BED RIGHT
   p('br-fatsia','b-br','Fatsia japonica','Fatsia japonica','🌿','planned','Moderate','Part shade','2-gallon. Behind planter area.',[m('Cut back in spring before growth pushes',[2,3]),m('Take cuttings for propagation',[3])],[{issue:'Leaf drop',url:'https://www.google.com/search?q=Leaf%20drop%20plant%20care%20fix'}]),
   p('br-azalea','b-br','Encore Azalea White','Rhododendron Encore','🌸','planned','Regular','Part shade','x2. 3-gallon. White. Diagonal back layout.',[azFeed,azTrim],[{issue:'Not reblooming',url:'https://www.google.com/search?q=Not%20reblooming%20plant%20care%20fix'}]),
@@ -458,7 +492,7 @@ const defaultOutdoorPlants=[
   p('bl-impatiens','b-bl','Impatiens White','Impatiens walleriana','🤍','planned','Regular','Part shade','x18. White. Along curve.',[impFeed],[{issue:'Downy mildew',url:'https://www.google.com/search?q=Downy%20mildew%20plant%20care%20fix'}]),
   // FOUNTAIN WALL BED
   p('fw-distictis','b-fw','Distictis buccinatoria','Distictis buccinatoria','🌺','alive','Moderate once established','Part sun','Existing on stone wall. Blood Red Trumpet Vine. Currently unruly — cutback planned now.',[distPrune,distTrail,distFeed],[{issue:'Rampant unruly growth',url:'https://www.google.com/search?q=Rampant%20unruly%20growth%20plant%20care%20fix'}]),
-  p('fw-rose','b-fw','Double Knock Out Rose White Out','Rosa White Out','🌹','planned','Deep water weekly','Part shade','x2. 2-gallon. White double blooms.',[roseDeadhead,rosePrune,roseFeed],[{issue:'Black spot',url:'https://www.google.com/search?q=Black%20spot%20plant%20care%20fix'}]),
+  p('fw-rose','b-fw','Rose','Rosa White Out','🌹','planned','Deep water weekly','Part shade','x2. 2-gallon. White double blooms.',[roseDeadhead,rosePrune,roseFeed],[{issue:'Black spot',url:'https://www.google.com/search?q=Black%20spot%20plant%20care%20fix'}]),
   p('fw-geranium','b-fw','Creeping Geranium','Pelargonium spp.','🌺','alive','Moderate','Part shade','Red + pink. Propagating from stem cuttings.',[geranDeadhead,geranCutback],[{issue:'Leggy growth',url:'https://www.google.com/search?q=Leggy%20growth%20plant%20care%20fix'}]),
   p('fw-fuchsia','b-fw','Fuchsia Gartenmeister Bonstedt','Fuchsia Gartenmeister Bonstedt','🪻','planned','Keep consistently moist','Part shade','x8. 4". Red/orange tubular flowers. 12-15 inch spacing.',[fuchsiaWater,fuchsiaTrim],[{issue:'Wilting',url:'https://www.google.com/search?q=Wilting%20plant%20care%20fix'}]),
   p('fw-begonia','b-fw','Tuberous Begonia Orange','Begonia tuberhybrida','🟠','planned','Regular','Part shade','x15. Orange Non Stop.',[begDeadhead,begFeed],[{issue:'Powdery mildew',url:'https://www.google.com/search?q=Powdery%20mildew%20plant%20care%20fix'}]),
@@ -469,19 +503,19 @@ const defaultOutdoorPlants=[
   p('ma-calibrachoa','b-ma','Calibrachoa','Calibrachoa spp.','🌸','planned','Regular','Part sun','x8 (2 per planter). Color TBD.',[calMaint],[{issue:'Iron deficiency (yellowing)',url:'https://www.google.com/search?q=Iron%20deficiency%20(yellowing)%20plant%20care%20fix'}]),
   // SIDE ARBOR
   p('sa-bougainvillea','b-sa','Bougainvillea','Bougainvillea spp.','🌺','alive','Deep water weekly','Part sun','Existing on arbor.',[bougFeed,bougPrune,bougTrain],[{issue:'Not blooming',url:'https://www.google.com/search?q=Not%20blooming%20plant%20care%20fix'}]),
-  p('sa-iceberg','b-sa','Iceberg Rose Climbing','Rosa Iceberg','🌹','alive','Deep water weekly','Part sun','Existing. Train horizontally now while flexible.',[roseDeadhead,m('Train canes horizontally NOW while flexible',[4,5]),rosePrune],[{issue:'Black spot',url:'https://www.google.com/search?q=Black%20spot%20plant%20care%20fix'}]),
-  p('sa-angelface','b-sa','Angel Face Rose Climbing','Rosa Angel Face','💜','alive','Deep water weekly','Part sun','Existing lavender/mauve climbing rose.',[roseDeadhead,rosePrune,roseFeed],[{issue:'Black spot',url:'https://www.google.com/search?q=Black%20spot%20plant%20care%20fix'}]),
-  p('sa-burstjoy','b-sa','Burst of Joy Rose Bush','Rosa Burst of Joy','🟠','alive','Deep water weekly','Part sun','Existing bush rose. Orange/coral.',[roseDeadhead,rosePrune,roseFeed],[{issue:'Black spot',url:'https://www.google.com/search?q=Black%20spot%20plant%20care%20fix'}]),
+  p('sa-iceberg','b-sa','Rose','Rosa Iceberg','🌹','alive','Deep water weekly','Part sun','Existing. Train horizontally now while flexible.',[roseDeadhead,m('Train canes horizontally NOW while flexible',[4,5]),rosePrune],[{issue:'Black spot',url:'https://www.google.com/search?q=Black%20spot%20plant%20care%20fix'}]),
+  p('sa-angelface','b-sa','Rose','Rosa Angel Face','💜','alive','Deep water weekly','Part sun','Existing lavender/mauve climbing rose.',[roseDeadhead,rosePrune,roseFeed],[{issue:'Black spot',url:'https://www.google.com/search?q=Black%20spot%20plant%20care%20fix'}]),
+  p('sa-burstjoy','b-sa','Rose','Rosa Burst of Joy','🟠','alive','Deep water weekly','Part sun','Existing bush rose. Orange/coral.',[roseDeadhead,rosePrune,roseFeed],[{issue:'Black spot',url:'https://www.google.com/search?q=Black%20spot%20plant%20care%20fix'}]),
   p('sa-mophead','b-sa','Mophead Hydrangea','Hydrangea macrophylla','💙','alive','Regular','Part shade','Existing. Multiple plants.',[hydPrune,hydFeed,m('Deadwood removal only in early spring — never fall',[3])],[{issue:'Not blooming (pruned at wrong time)',url:'https://www.google.com/search?q=Not%20blooming%20(pruned%20at%20wrong%20time)%20plant%20care%20fix'}]),
   p('sa-oakleaf','b-sa','Oakleaf Hydrangea','Hydrangea quercifolia','🤍','alive','Regular','Part shade','Existing. Stunning fall foliage.',[hydPrune,hydFeed],[{issue:'Not blooming',url:'https://www.google.com/search?q=Not%20blooming%20plant%20care%20fix'}]),
   p('sa-passiflora','b-sa','Passiflora caerulea','Passiflora caerulea','🌸','planned','Moderate','Part sun','x4. 3-gallon. Evenly spaced 35ft fence.',[passTrail,passPrune],[{issue:'Not flowering',url:'https://www.google.com/search?q=Not%20flowering%20plant%20care%20fix'}]),
-  p('sa-knockoutrose','b-sa','Double Knock Out Rose Pink','Rosa Double Knock Out','🌹','planned','Deep water every 2 weeks','Part sun','x3. 3-gallon. Behind Side Arbor.',[roseDeadhead,rosePrune],[{issue:'Black spot',url:'https://www.google.com/search?q=Black%20spot%20plant%20care%20fix'}]),
+  p('sa-knockoutrose','b-sa','Rose','Rosa Double Knock Out','🌹','planned','Deep water every 2 weeks','Part sun','x3. 3-gallon. Behind Side Arbor.',[roseDeadhead,rosePrune],[{issue:'Black spot',url:'https://www.google.com/search?q=Black%20spot%20plant%20care%20fix'}]),
   p('sa-salvia','b-sa','Salvia Amistad','Salvia Amistad','💜','planned','Low-moderate','Part sun','x3. 1-gallon. Behind Side Arbor.',[salviaDeadhead,salviaTrim,salviaHardPrune],[{issue:'Leggy growth',url:'https://www.google.com/search?q=Leggy%20growth%20plant%20care%20fix'}]),
   // BBQ BED
   p('bbq-daisy','b-bbq','Daisy','Leucanthemum spp.','🌼','alive','Moderate','Full sun','Existing.',[m('Deadhead spent blooms',[5,6,7,8,9]),m('Cut back hard after flowering',[8,9])],[{issue:'Powdery mildew',url:'https://www.google.com/search?q=Powdery%20mildew%20plant%20care%20fix'}]),
   p('bbq-chrysanthemum','b-bbq','Chrysanthemum','Chrysanthemum spp.','🌸','alive','Regular','Full sun','Existing. Move to front edge of bed.',[m('Pinch tips in spring for bushier plant',[4,5]),m('Feed high phosphorus for bloom',[7,8])],[{issue:'Aphids',url:'https://www.google.com/search?q=Aphids%20plant%20care%20fix'}]),
   p('bbq-existsalvia','b-bbq','Existing Salvia','Salvia spp.','💜','alive','Low-moderate','Full sun','Existing.',[salviaDeadhead,salviaTrim],[{issue:'Leggy growth',url:'https://www.google.com/search?q=Leggy%20growth%20plant%20care%20fix'}]),
-  p('bbq-existrose','b-bbq','Existing Rose','Rosa spp.','🌹','alive','Deep water weekly','Full sun','Existing rose.',[roseDeadhead,rosePrune,roseFeed],[{issue:'Black spot',url:'https://www.google.com/search?q=Black%20spot%20plant%20care%20fix'}]),
+  p('bbq-existrose','b-bbq','Rose','Rosa spp.','🌹','alive','Deep water weekly','Full sun','Existing rose.',[roseDeadhead,rosePrune,roseFeed],[{issue:'Black spot',url:'https://www.google.com/search?q=Black%20spot%20plant%20care%20fix'}]),
   p('bbq-whiteboug','b-bbq','White Bougainvillea','Bougainvillea White Stripe','🤍','alive','Deep water weekly — Super Bloom half strength monthly','Full sun','Moving to BACK of BBQ bed.',[bougFeed,bougPrune,bougTrain],[{issue:'Not blooming',url:'https://www.google.com/search?q=Not%20blooming%20plant%20care%20fix'}]),
   p('bbq-salvia','b-bbq','Salvia Amistad','Salvia Amistad','💜','planned','Low-moderate','Full sun','x3. 1-gallon. Back layer.',[salviaDeadhead,salviaTrim,salviaHardPrune],[{issue:'Leggy growth',url:'https://www.google.com/search?q=Leggy%20growth%20plant%20care%20fix'}]),
   p('bbq-dahlia','b-bbq','Dahlia Magenta','Dahlia spp.','🌼','planned','Regular','Full sun','x4. Magenta/hot pink — select at nursery.',[dahliaDeadhead,dahliaFeed],[{issue:'Powdery mildew',url:'https://www.google.com/search?q=Powdery%20mildew%20plant%20care%20fix'}]),
@@ -489,7 +523,7 @@ const defaultOutdoorPlants=[
   // STUMP
   p('st-aeonium','b-stump','Aeonium Zwartkop','Aeonium arboreum Zwartkop','🖤','alive','Low — drought tolerant','Full sun','Dark rosettes against pool blue.',[m('Water deeply monthly in summer',[6,7,8,9]),m('Remove dead rosettes',[3,4,5])],[{issue:'Etiolation',url:'https://www.google.com/search?q=Etiolation%20plant%20care%20fix'}]),
   // PEPPER SIDE
-  p('ps-orange','b-berry','Orange Tree','Citrus sinensis','🍊','alive','Every 2 weeks spring/summer','Full sun','Existing.',[m('Feed citrus fertilizer',[2,5,8]),fruitWaterSp,fruitWaterSu,fruitWaterFW],[{issue:'Yellowing leaves (nutrient deficiency)',url:'https://www.google.com/search?q=Yellowing%20leaves%20(nutrient%20deficiency)%20plant%20care%20fix'}]),
+  p('ps-orange','b-berry','Citrus Tree','Citrus sinensis','🍊','alive','Every 2 weeks spring/summer','Full sun','Existing orange.',[citrusFeed,fruitWaterSp,fruitWaterSu,fruitWaterFW],[{issue:'Yellowing leaves (nutrient deficiency)',url:'https://www.google.com/search?q=Yellowing%20leaves%20(nutrient%20deficiency)%20plant%20care%20fix'}]),
   p('ps-persimmon','b-berry','Persimmon','Diospyros kaki','🍊','alive','Monthly spring / every 2 weeks July-August','Full sun','Existing. Most drought tolerant.',[m('Monthly watering spring — slow hose 10 min',[3,4,5,6]),m('Every 2 weeks in peak summer',[7,8]),m('Monthly fall/winter',[9,10,11,12,1,2])],[{issue:'Fruit drop',url:'https://www.google.com/search?q=Fruit%20drop%20plant%20care%20fix'}]),
   p('ps-pomegranate','b-berry','Pomegranate','Punica granatum','🍎','alive','Monthly spring / every 2 weeks July-August','Full sun','Existing. Consistent water improves fruit quality.',[m('Monthly watering spring',[3,4,5,6]),m('Every 2 weeks summer',[7,8]),m('Monthly fall/winter',[9,10,11,12,1,2])],[{issue:'Fruit splitting (inconsistent watering)',url:'https://www.google.com/search?q=Fruit%20splitting%20(inconsistent%20watering)%20plant%20care%20fix'}]),
   p('ps-raspberry','b-berry','Raspberry Bababerry','Rubus idaeus Bababerry','🍓','alive','Weekly on drip','Full sun','Existing x1 + new x1. On drip system.',[raspDrip,raspCanes],[{issue:'Poor fruiting',url:'https://www.google.com/search?q=Poor%20fruiting%20plant%20care%20fix'}]),
@@ -497,11 +531,11 @@ const defaultOutdoorPlants=[
   p('ps-salvia','b-berry','Salvia Amistad','Salvia Amistad','💜','planned','Low-moderate','Full sun','x3. 1-gallon. Full sun — thrives here.',[salviaDeadhead,salviaTrim,salviaHardPrune],[{issue:'Leggy growth',url:'https://www.google.com/search?q=Leggy%20growth%20plant%20care%20fix'}]),
   p('ps-beets','b-berry','Beet Seeds','Beta vulgaris','🌱','planned','Regular — keep moist','Full sun','1 packet seeds.',[m('Sow seeds directly into prepared soil',[3,4]),m('Thin seedlings to 3-4 inches apart',[4,5]),m('Water consistently — beets bolt if stressed',[4,5,6,7])],[{issue:'Bolting (heat/water stress)',url:'https://www.google.com/search?q=Bolting%20(heat%2Fwater%20stress)%20plant%20care%20fix'}]),
   // TOMATO SIDE
-  p('ts-plum','b-tom','Plum Espalier','Prunus domestica','🍑','alive','Every 2 weeks spring / weekly July-August','Full sun','Existing espalier on wall.',[fruitWaterSp,m('Weekly deep water July-August',[7,8]),espTrain,espPrune],[{issue:'Brown rot',url:'https://www.google.com/search?q=Brown%20rot%20plant%20care%20fix'}]),
-  p('ts-rainier','b-tom','Rainier Cherry Espalier','Prunus avium Rainier','🍒','alive','Every 2 weeks spring / weekly July-August','Full sun','Existing espalier. NEVER skip summer watering.',[fruitWaterSp,m('Weekly deep water July-August — drought stress causes fruit cracking',[7,8]),m('Extra water during any heat wave 3+ days over 90°F',[6,7,8,9]),espTrain,espPrune],[{issue:'Fruit cracking (water stress)',url:'https://www.google.com/search?q=Fruit%20cracking%20(water%20stress)%20plant%20care%20fix'}]),
+  p('ts-plum','b-tom','Espalier','Prunus domestica','🍑','alive','Every 2 weeks spring / weekly July-August','Full sun','Existing espalier on wall.',[fruitWaterSp,espWaterSu,espTrain,espPrune],[{issue:'Brown rot',url:'https://www.google.com/search?q=Brown%20rot%20plant%20care%20fix'}]),
+  p('ts-rainier','b-tom','Espalier','Prunus avium Rainier','🍒','alive','Every 2 weeks spring / weekly July-August','Full sun','Existing espalier. NEVER skip summer watering.',[fruitWaterSp,espWaterSu,m('Extra water during any heat wave 3+ days over 90°F',[6,7,8,9]),espTrain,espPrune],[{issue:'Fruit cracking (water stress)',url:'https://www.google.com/search?q=Fruit%20cracking%20(water%20stress)%20plant%20care%20fix'}]),
   // BACK ROSE BED
-  p('brs-sunburst','b-back-rose','Sunburst Rose Bush','Rosa Sunburst','🌹','alive','Deep water weekly','Part sun','Existing. Orange/coral bush.',[roseDeadhead,rosePrune,roseFeed],[{issue:'Black spot',url:'https://www.google.com/search?q=Black%20spot%20plant%20care%20fix'}]),
-  p('brs-daustinrose','b-back-rose','English Rose David Austin','Rosa David Austin','🌹','alive','Deep water weekly','Part sun','Existing. Yellow fragrant. Check tag for exact variety.',[roseDeadhead,rosePrune,roseFeed],[{issue:'Black spot',url:'https://www.google.com/search?q=Black%20spot%20plant%20care%20fix'}]),
+  p('brs-sunburst','b-back-rose','Rose','Rosa Sunburst','🌹','alive','Deep water weekly','Part sun','Existing. Orange/coral bush.',[roseDeadhead,rosePrune,roseFeed],[{issue:'Black spot',url:'https://www.google.com/search?q=Black%20spot%20plant%20care%20fix'}]),
+  p('brs-daustinrose','b-back-rose','Rose','Rosa David Austin','🌹','alive','Deep water weekly','Part sun','Existing. Yellow fragrant. Check tag for exact variety.',[roseDeadhead,rosePrune,roseFeed],[{issue:'Black spot',url:'https://www.google.com/search?q=Black%20spot%20plant%20care%20fix'}]),
   p('brs-dahlia','b-back-rose','Dahlia Large Purple','Dahlia spp.','💜','alive','Regular','Part sun','Existing large purple dahlia.',[dahliaDeadhead,m('Tubers stay in ground Z9',[11,12,1,2])],[{issue:'Powdery mildew',url:'https://www.google.com/search?q=Powdery%20mildew%20plant%20care%20fix'}]),
   p('brs-phormium','b-back-rose','Phormium','Phormium tenax','🌿','alive','Low-moderate','Part sun','Existing. Sword-like leaves.',[phorClean],[{issue:'Crown rot (overwatering)',url:'https://www.google.com/search?q=Crown%20rot%20(overwatering)%20plant%20care%20fix'}]),
 ];
@@ -629,8 +663,74 @@ const DB={
     try{localStorage.setItem('garden_'+k,JSON.stringify(v));}catch(e){}
   },
   getImg(k){try{return localStorage.getItem('garden_img_'+k)||null;}catch(e){return null;}},
-  setImg(k,v){try{localStorage.setItem('garden_img_'+k,v);}catch(e){alert('Image too large. Try a smaller image.');}}
+  setImg(k,v){try{localStorage.setItem('garden_img_'+k,v);}catch(e){alert('Image too large even after compression. Try a different photo.');}}
 };
+
+function compressImage(dataUrl,maxWidth,maxHeight,quality,callback){
+  const img=new Image();
+  img.onload=function(){
+    let w=img.width,h=img.height;
+    if(w>maxWidth){h=Math.round(h*maxWidth/w);w=maxWidth;}
+    if(h>maxHeight){w=Math.round(w*maxHeight/h);h=maxHeight;}
+    const canvas=document.createElement('canvas');
+    canvas.width=w;canvas.height=h;
+    canvas.getContext('2d').drawImage(img,0,0,w,h);
+    callback(canvas.toDataURL('image/jpeg',quality));
+  };
+  img.src=dataUrl;
+}
+
+// Section image upload (outdoor / indoor hero areas + home card fill)
+let _currentSectionKey=null;
+function triggerSectionImageUpload(key){_currentSectionKey=key;document.getElementById('section-image-input').click();}
+function handleSectionImageUpload(e){
+  const f=e.target.files[0];if(!f)return;
+  const r=new FileReader();
+  r.onload=ev=>{compressImage(ev.target.result,1200,800,0.80,compressed=>{
+    DB.setImg('section_'+_currentSectionKey,compressed);
+    loadSectionImage(_currentSectionKey);
+  });};
+  r.readAsDataURL(f);e.target.value='';
+}
+function loadSectionImage(key){
+  const img=DB.getImg('section_'+key);
+  // Update hero area
+  const heroArea=document.getElementById(key+'-hero-area');
+  if(heroArea){heroArea.innerHTML=img?`<img src="${img}" style="width:100%;height:100%;object-fit:cover">`:`<span class="room-hero-placeholder">${key==='outdoor'?'🌳':'🪴'}</span>`;}
+  // Update home card
+  const imgDiv=document.getElementById('home-card-'+key+'-img');
+  const imgEl=document.getElementById('home-card-'+key+'-imgel');
+  const icon=document.getElementById('home-card-'+key+'-icon');
+  if(imgDiv&&imgEl){
+    if(img){imgEl.src=img;imgDiv.style.display='block';if(icon)icon.style.opacity='0';}
+    else{imgDiv.style.display='none';if(icon)icon.style.opacity='1';}
+  }
+}
+function loadAllSectionImages(){['outdoor','indoor'].forEach(loadSectionImage);}
+
+// Yard (front/back) hero image upload
+function triggerYardImageUpload(){document.getElementById('yard-image-input').click();}
+function handleYardImageUpload(e){
+  const f=e.target.files[0];if(!f)return;
+  const r=new FileReader();
+  r.onload=ev=>{compressImage(ev.target.result,1200,800,0.80,compressed=>{
+    DB.setImg('yard_'+S.currentYard,compressed);
+    showYard(S.currentYard);
+  });};
+  r.readAsDataURL(f);e.target.value='';
+}
+
+// Schedule task year reset
+function checkYearReset(){
+  const thisYear=new Date().getFullYear();
+  try{
+    const stored=parseInt(localStorage.getItem('sched_year')||'0');
+    if(stored!==thisYear){
+      for(let m=1;m<=12;m++){try{localStorage.removeItem('sc'+m);}catch(e){}}
+      localStorage.setItem('sched_year',thisYear);
+    }
+  }catch(e){}
+}
 
 let S={beds:[],plants:[],todos:[],shopping:[],notes:[],propagation:[],irrigation:[],rooms:[],indoorPlants:[],currentBed:null,currentPlant:null,currentYard:'front',currentRoom:null,todoFilter:'pending',shopFilter:'needed',bedFilter:'all'};
 
@@ -660,18 +760,18 @@ const defaultBeds=[
 
 // Static schedule - care only, no planting tasks
 const staticSchedule={
-  1:[{cat:'Roses',title:'Prune all roses hard',desc:'Best time in Bay Area. Cut to outward facing buds. All roses across all beds.',indoor:false},{cat:'Bougainvillea',title:'Prepare for bougainvillea cutback',desc:'Late Jan/early Feb. White Stripe — wait until after it blooms.',indoor:false},{cat:'Hydrangea',title:'Deadwood removal on hydrangeas only',desc:'Side Arbor mophead and oakleaf. Remove dead/crossing stems only — no hard cutback.',indoor:false},{cat:'Espalier',title:'Prune espalier fruit trees',desc:'Plum + Rainier Cherry — maintain espalier shape before new growth pushes.',indoor:false}],
-  2:[{cat:'Roses',title:'Rose cutback if not done in January',desc:'Last chance before new growth. All roses.',indoor:false},{cat:'Bougainvillea',title:'Bougainvillea cutback',desc:'White Stripe: cut 1/3 after bloom finishes. Feed balanced fertilizer after.',indoor:false},{cat:'Trumpet Vine',title:'Hard prune Distictis buccinatoria',desc:'Cut back to framework on Fountain Wall stone. Flowers on new wood — no bloom lost. Feed after.',indoor:false},{cat:'Espalier',title:'Prune espalier fruit trees',desc:'Plum + Rainier Cherry — shape in late winter.',indoor:false}],
+  1:[{cat:'Bougainvillea',title:'Prepare for bougainvillea cutback',desc:'Late Jan/early Feb. White Stripe — wait until after it blooms.',indoor:false},{cat:'Hydrangea',title:'Deadwood removal on hydrangeas only',desc:'Side Arbor mophead and oakleaf. Remove dead/crossing stems only — no hard cutback.',indoor:false}],
+  2:[{cat:'Bougainvillea',title:'Bougainvillea cutback',desc:'White Stripe: cut 1/3 after bloom finishes. Feed balanced fertilizer after.',indoor:false},{cat:'Trumpet Vine',title:'Hard prune Distictis buccinatoria',desc:'Cut back to framework on Fountain Wall stone. Flowers on new wood — no bloom lost. Feed after.',indoor:false}],
   3:[{cat:'Feeding',title:'First fertilizer of season',desc:'Apply slow release balanced fertilizer to all established beds.',indoor:false},{cat:'Fatsia',title:'Cut back Fatsia + take cuttings',desc:'Cut to desired height. Take 6-8 stem cuttings with rooting hormone.',indoor:false},{cat:'Hydrangea',title:'Feed hydrangeas',desc:'Azalea fertilizer to all hydrangeas in Side Arbor. Deadwood only — no hard prune.',indoor:false},{cat:'Citrus',title:'Feed citrus',desc:'Orange Tree + Lemon: citrus fertilizer. Feb, May, August schedule.',indoor:false},{cat:'Indoor',title:'Resume feeding all indoor plants',desc:'Monthly liquid fertilizer as days lengthen.',indoor:true},{cat:'Indoor',title:'Repot root-bound houseplants',desc:'Check Monstera, Pothos, ZZ Plant for roots escaping drainage.',indoor:true}],
-  4:[{cat:'Roses',title:'Deadhead all roses every 2 weeks',desc:'Outward facing bud, 45° cut. All roses across all beds.',indoor:false},{cat:'Geranium',title:'Deadhead geraniums aggressively',desc:'Fountain Wall Bed — remove every spent bloom for continuous flowering.',indoor:false},{cat:'Trumpet Vine',title:'Train Distictis new growth onto wall',desc:'New shoots pushing — tie to wall immediately to build structure.',indoor:false},{cat:'Fruit Trees',title:'Start fruit tree watering schedule',desc:'Orange + Apricot every 2 weeks. Persimmon + Pomegranate monthly. Cherry + Plum every 2 weeks.',indoor:false}],
-  5:[{cat:'Geranium',title:'Cut back geraniums hard after spring flush',desc:'Fountain Wall Bed. Cut by half to two thirds. Feed high phosphorus after.',indoor:false},{cat:'Roses',title:'Feed roses after first bloom flush',desc:'Rose fertilizer to all roses after first deadheading.',indoor:false},{cat:'Azalea',title:'Light prune Encore Azaleas after spring bloom',desc:'Back Bed Right and Left — light tidy only after spring flowering.',indoor:false},{cat:'Iceberg',title:'Train Iceberg rose on Side Arbor',desc:'Tie canes horizontally to arbor structure while still flexible.',indoor:false}],
-  6:[{cat:'Roses',title:'Deadhead roses every 2 weeks',desc:'All roses across all beds. Outward facing bud, 45° cut.',indoor:false},{cat:'Pest',title:'Monitor for powdery mildew on roses',desc:'Cool nights + warm days = prime conditions. Neem oil spray if spotted.',indoor:false},{cat:'Feeding',title:'Feed dahlias high phosphorus',desc:'BBQ Bed + Back Rose Bed dahlias. Every 3-4 weeks through August.',indoor:false},{cat:'Fruit Trees',title:'Increase fruit tree watering',desc:'All trees every 2 weeks. Rainier Cherry weekly. Check soil first.',indoor:false},{cat:'Indoor',title:'Check all indoor plants for spider mites',desc:'Hot dry conditions = spider mite season. Check leaf undersides. Neem oil if found.',indoor:true}],
+  4:[{cat:'Geranium',title:'Deadhead geraniums aggressively',desc:'Fountain Wall Bed — remove every spent bloom for continuous flowering.',indoor:false},{cat:'Trumpet Vine',title:'Train Distictis new growth onto wall',desc:'New shoots pushing — tie to wall immediately to build structure.',indoor:false},{cat:'Fruit Trees',title:'Start fruit tree watering schedule',desc:'Orange + Apricot every 2 weeks. Persimmon + Pomegranate monthly. Cherry + Plum every 2 weeks.',indoor:false}],
+  5:[{cat:'Geranium',title:'Cut back geraniums hard after spring flush',desc:'Fountain Wall Bed. Cut by half to two thirds. Feed high phosphorus after.',indoor:false},{cat:'Azalea',title:'Light prune Encore Azaleas after spring bloom',desc:'Back Bed Right and Left — light tidy only after spring flowering.',indoor:false},{cat:'Iceberg',title:'Train Iceberg rose on Side Arbor',desc:'Tie canes horizontally to arbor structure while still flexible.',indoor:false}],
+  6:[{cat:'Pest',title:'Monitor for powdery mildew on roses',desc:'Cool nights + warm days = prime conditions. Neem oil spray if spotted.',indoor:false},{cat:'Feeding',title:'Feed dahlias high phosphorus',desc:'BBQ Bed + Back Rose Bed dahlias. Every 3-4 weeks through August.',indoor:false},{cat:'Fruit Trees',title:'Increase fruit tree watering',desc:'All trees every 2 weeks. Rainier Cherry weekly. Check soil first.',indoor:false},{cat:'Indoor',title:'Check all indoor plants for spider mites',desc:'Hot dry conditions = spider mite season. Check leaf undersides. Neem oil if found.',indoor:true}],
   7:[{cat:'Salvia',title:'Cut back Salvia Amistad if leggy',desc:'All beds (BBQ, Main Arbor, Side Arbor, Pepper Side) — cut by 1/3. Reblooms in 3 weeks.',indoor:false},{cat:'Dahlias',title:'Deadhead dahlias continuously',desc:'BBQ Bed + Back Rose Bed. Check every 3-4 days.',indoor:false},{cat:'Fruit Trees',title:'Peak summer fruit tree watering',desc:'ALL trees every 2 weeks. Rainier Cherry + Plum weekly. Heat wave = extra water for Cherry.',indoor:false},{cat:'Bougainvillea',title:'Feed White Stripe bougainvillea',desc:'Super Bloom half strength to MOIST soil only. Monthly.',indoor:false},{cat:'Indoor',title:'Prayer Plant: mist daily',desc:'Hot dry summer air. Daily misting critical.',indoor:true}],
   8:[{cat:'Hydrangea',title:'Prune hydrangeas AFTER flowering',desc:'Side Arbor mophead + oakleaf — ONLY after flowering complete. Never hard cutback.',indoor:false},{cat:'Bougainvillea',title:'Cut back White Stripe bougainvillea',desc:'After flowering. Cut by 1/3.',indoor:false},{cat:'Fruit Trees',title:'Continue weekly Rainier Cherry + Plum watering',desc:'Most critical month. Water stress = cracking and drop.',indoor:false},{cat:'Berries',title:'Remove old fruited raspberry + blackberry canes',desc:'After harvest — cut old canes to ground.',indoor:false},{cat:'Indoor',title:'Christmas Cactus: begin drought stress',desc:'Reduce watering now. Cool nights + drought triggers Nov/Dec bloom.',indoor:true}],
   9:[{cat:'Feeding',title:'Last fertilizer of season',desc:'Low nitrogen slow release to all outdoor beds.',indoor:false},{cat:'Fruit Trees',title:'Reduce fruit tree watering',desc:'Temps dropping. Persimmon + Pomegranate back to monthly.',indoor:false},{cat:'Indoor',title:'Reduce fertilizer — all indoor plants',desc:'Growth slowing — stop feeding until March.',indoor:true}],
   10:[{cat:'Hydrangea',title:'Move mophead hydrangeas if needed',desc:'October/November ideal. Water in with seaweed solution.',indoor:false},{cat:'Indoor',title:'Christmas Cactus: 12+ hours darkness nightly',desc:'4 weeks triggers buds. Keep in unused room 12hrs per night.',indoor:true},{cat:'Indoor',title:'Orchids: watch for bloom spike',desc:'Cool fall nights trigger new spike. Do not move once spike appears.',indoor:true}],
   11:[{cat:'Geranium',title:'Final geranium cutback',desc:'After last flush. Hard cutback. Last cutback of season.',indoor:false},{cat:'Hosta',title:'Cut back Empress Wu Hosta dead foliage',desc:'As it dies back for winter. Mark location.',indoor:false},{cat:'Indoor',title:'Christmas Cactus buds should be visible',desc:'Move back to bright spot — do not move again once buds set.',indoor:true},{cat:'Irrigation',title:'Reduce all irrigation',desc:'Bay Area rains beginning. Reduce all zone run times.',indoor:false}],
-  12:[{cat:'Roses',title:'Prepare for January rose pruning',desc:'Sharpen secateurs. Gather tools.',indoor:false},{cat:'Indoor',title:'Christmas Cactus in bloom',desc:'Keep away from drafts. Do not move. Water when top inch dry.',indoor:true},{cat:'Sarcococca',title:'Enjoy Sarcococca fragrant winter flowers',desc:'Front Bed Left far left corner. Intensely fragrant white flowers. No action needed.',indoor:false}],
+  12:[{cat:'Indoor',title:'Christmas Cactus in bloom',desc:'Keep away from drafts. Do not move. Water when top inch dry.',indoor:true},{cat:'Sarcococca',title:'Enjoy Sarcococca fragrant winter flowers',desc:'Front Bed Left far left corner. Intensely fragrant white flowers. No action needed.',indoor:false}],
 };
 
 // Deduplication: build schedule from plants
@@ -701,6 +801,144 @@ function resetToDefaults(){
   location.reload();
 }
 const DATA_VERSION='v9';
+// GitHub Sync
+const GH_KEYS={user:'gh_username',repo:'gh_repo',token:'gh_token'};
+function ghGet(k){try{return localStorage.getItem(k)||'';}catch(e){return '';}}
+function ghSet(k,v){try{localStorage.setItem(k,v);}catch(e){}}
+function ghCredentials(){return{user:ghGet(GH_KEYS.user),repo:ghGet(GH_KEYS.repo),token:ghGet(GH_KEYS.token)};}
+function ghConfigured(){const c=ghCredentials();return c.user&&c.repo&&c.token;}
+
+async function ghReadFile(){
+  const c=ghCredentials();
+  if(!c.user||!c.repo||!c.token)return null;
+  try{
+    const r=await fetch(`https://api.github.com/repos/${c.user}/${c.repo}/contents/garden-data.json`,{headers:{'Authorization':'token '+c.token,'Accept':'application/vnd.github.v3+json'}});
+    if(!r.ok)return null;
+    const d=await r.json();
+    return{content:JSON.parse(atob(d.content.replace(/\n/g,''))),sha:d.sha};
+  }catch(e){return null;}
+}
+
+async function ghWriteFile(data,sha){
+  const c=ghCredentials();
+  if(!c.user||!c.repo||!c.token)return false;
+  try{
+    const content=btoa(unescape(encodeURIComponent(JSON.stringify(data,null,2))));
+    const body={message:'Garden data update '+new Date().toISOString(),content};
+    if(sha)body.sha=sha;
+    const r=await fetch(`https://api.github.com/repos/${c.user}/${c.repo}/contents/garden-data.json`,{method:'PUT',headers:{'Authorization':'token '+c.token,'Accept':'application/vnd.github.v3+json','Content-Type':'application/json'},body:JSON.stringify(body)});
+    return r.ok;
+  }catch(e){return false;}
+}
+
+let _ghSha=null;
+async function syncToGitHub(){
+  if(!ghConfigured())return;
+  const data={rooms:S.rooms,beds:S.beds,plants:S.plants,indoorPlants:S.indoorPlants,todos:S.todos,shopping:S.shopping,notes:S.notes,propagation:S.propagation,irrigation:S.irrigation,syncedAt:new Date().toISOString()};
+  const ok=await ghWriteFile(data,_ghSha);
+  if(ok){
+    // Refresh SHA after write
+    const f=await ghReadFile();
+    if(f)_ghSha=f.sha;
+    setGHStatus('✅ Synced to GitHub '+new Date().toLocaleTimeString(),'var(--sage-dark)');
+  } else {
+    setGHStatus('⚠️ GitHub sync failed — data saved locally','var(--terracotta)');
+  }
+}
+
+async function loadFromGitHub(){
+  if(!ghConfigured())return false;
+  const f=await ghReadFile();
+  if(!f)return false;
+  _ghSha=f.sha;
+  const d=f.content;
+  if(d.plants)S.plants=d.plants;
+  if(d.indoorPlants)S.indoorPlants=d.indoorPlants;
+  if(d.rooms)S.rooms=d.rooms;
+  if(d.beds)S.beds=d.beds;
+  if(d.todos)S.todos=d.todos;
+  if(d.shopping)S.shopping=d.shopping;
+  if(d.notes)S.notes=d.notes;
+  if(d.propagation)S.propagation=d.propagation;
+  if(d.irrigation)S.irrigation=d.irrigation;
+  return true;
+}
+
+function setGHStatus(msg,color){
+  const el=document.getElementById('gh-status');
+  if(el){el.textContent=msg;el.style.color=color||'var(--text-light)';}
+}
+
+function saveGitHubSettings(){
+  const user=document.getElementById('gh-username').value.trim();
+  const repo=document.getElementById('gh-repo').value.trim();
+  const token=document.getElementById('gh-token').value.trim();
+  if(!user||!repo||!token){setGHStatus('Please fill in all fields','var(--terracotta)');return;}
+  ghSet(GH_KEYS.user,user);ghSet(GH_KEYS.repo,repo);ghSet(GH_KEYS.token,token);
+  setGHStatus('Testing connection...','var(--text-light)');
+  syncToGitHub().then(()=>{});
+}
+
+function loadGitHubSettingsUI(){
+  const c=ghCredentials();
+  const u=document.getElementById('gh-username');
+  const r=document.getElementById('gh-repo');
+  const t=document.getElementById('gh-token');
+  if(u)u.value=c.user;
+  if(r)r.value=c.repo;
+  if(t&&c.token)t.value=c.token;
+  if(c.user&&c.repo&&c.token)setGHStatus('GitHub sync configured — syncing on every save','var(--sage-dark)');
+}
+
+async function forceSyncToGitHub(){
+  setGHStatus('Syncing...','var(--text-light)');
+  await syncToGitHub();
+}
+
+async function restoreFromGitHub(){
+  setGHStatus('Restoring from GitHub...','var(--text-light)');
+  const ok=await loadFromGitHub();
+  if(ok){
+    await save();
+    updateHomeCounts();
+    setGHStatus('✅ Restored from GitHub successfully','var(--sage-dark)');
+    alert('Data restored from GitHub!');
+  } else {
+    setGHStatus('❌ Could not read from GitHub — check settings','var(--terracotta)');
+  }
+}
+
+function exportDataJSON(){
+  const data={rooms:S.rooms,beds:S.beds,plants:S.plants,indoorPlants:S.indoorPlants,todos:S.todos,shopping:S.shopping,notes:S.notes,propagation:S.propagation,irrigation:S.irrigation,exportedAt:new Date().toISOString()};
+  const a=document.createElement('a');
+  a.href=URL.createObjectURL(new Blob([JSON.stringify(data,null,2)],{type:'application/json'}));
+  a.download='garden-backup-'+new Date().toISOString().split('T')[0]+'.json';
+  document.body.appendChild(a);a.click();document.body.removeChild(a);
+}
+
+function importDataJSON(e){
+  const f=e.target.files[0];if(!f)return;
+  const r=new FileReader();
+  r.onload=async ev=>{
+    try{
+      const d=JSON.parse(ev.target.result);
+      if(d.plants)S.plants=d.plants;
+      if(d.indoorPlants)S.indoorPlants=d.indoorPlants;
+      if(d.rooms)S.rooms=d.rooms;
+      if(d.beds)S.beds=d.beds;
+      if(d.todos)S.todos=d.todos;
+      if(d.shopping)S.shopping=d.shopping;
+      if(d.notes)S.notes=d.notes;
+      if(d.propagation)S.propagation=d.propagation;
+      if(d.irrigation)S.irrigation=d.irrigation;
+      await save();
+      updateHomeCounts();
+      alert('✅ Data restored from backup file!');
+    }catch(err){alert('❌ Invalid backup file');}
+  };
+  r.readAsText(f);e.target.value='';
+}
+
 async function init(){
   // Version check — if data version doesn't match, reload defaults
   const storedVersion=await DB.get('dataVersion');
@@ -726,29 +964,62 @@ async function init(){
     await DB.set('shopping',S.shopping);
     await DB.set('propagation',S.propagation);
   } else {
-    S.rooms=await DB.get('rooms')||defaultRooms;
-    S.beds=await DB.get('beds')||defaultBeds;
-    S.plants=await DB.get('plants')||defaultOutdoorPlants;
-    S.indoorPlants=await DB.get('indoorPlants')||defaultIndoorPlants;
-    S.todos=await DB.get('todos')||defaultTodos;
-    S.shopping=await DB.get('shopping')||defaultShopping;
-    S.notes=await DB.get('notes')||[];
-    S.propagation=await DB.get('propagation')||defaultPropagation;
-    S.irrigation=await DB.get('irrigation')||[];
+    // Try GitHub first, fall back to local
+    const ghLoaded=await loadFromGitHub();
+    if(!ghLoaded){
+      S.rooms=await DB.get('rooms')||defaultRooms;
+      S.beds=await DB.get('beds')||defaultBeds;
+      S.plants=await DB.get('plants')||defaultOutdoorPlants;
+      S.indoorPlants=await DB.get('indoorPlants')||defaultIndoorPlants;
+      S.todos=await DB.get('todos')||defaultTodos;
+      S.shopping=await DB.get('shopping')||defaultShopping;
+      S.notes=await DB.get('notes')||[];
+      S.propagation=await DB.get('propagation')||defaultPropagation;
+      S.irrigation=await DB.get('irrigation')||[];
+    }
+    const taskMigrations={
+      'Prune lightly after flowering only':'Prune lightly after flowering',
+      'Deadhead spent blooms daily':'Deadhead spent blooms daily during peak bloom',
+      'Feed slow release in spring':'Feed slow release fertilizer in spring',
+      'Feed liquid fertilizer every 2 weeks in bloom':'Feed liquid fertilizer every 2 weeks',
+      'Weekly deep water July-August':'Deep water weekly July-August',
+      'Weekly deep water July-August — drought stress causes fruit cracking':'Deep water weekly July-August',
+      'Divide clumps every 3 years':'Divide clumps every 3-4 years',
+    };
+    const plantNameMigrations={
+      'Tree Rose':'Rose','Flower Carpet Rose':'Rose','Iceberg Rose Climbing':'Rose',
+      'Angel Face Rose Climbing':'Rose','Burst of Joy Rose Bush':'Rose',
+      'Double Knock Out Rose Pink':'Rose','Existing Rose':'Rose',
+      'Sunburst Rose Bush':'Rose','English Rose David Austin':'Rose',
+      'Double Knock Out Rose White Out':'Rose',
+      'Dwarf Lemon Tree':'Citrus Tree','Orange Tree':'Citrus Tree',
+      'Plum Espalier':'Espalier','Rainier Cherry Espalier':'Espalier',
+    };
+    [...S.plants,...S.indoorPlants].forEach(function(plant){
+      if(plantNameMigrations[plant.name])plant.name=plantNameMigrations[plant.name];
+      if(!plant.maintenance)return;
+      plant.maintenance.forEach(function(mItem){
+        if(taskMigrations[mItem.task])mItem.task=taskMigrations[mItem.task];
+      });
+    });
+    await save();
   }
   updateHomeCounts();
   renderScheduleMonths();
+  loadAllSectionImages();
+  checkYearReset();
 }
 async function save(){
-  try{localStorage.setItem('garden_rooms',JSON.stringify(S.rooms));}catch(e){}
-  try{localStorage.setItem('garden_beds',JSON.stringify(S.beds));}catch(e){}
-  try{localStorage.setItem('garden_plants',JSON.stringify(S.plants));}catch(e){}
-  try{localStorage.setItem('garden_indoorPlants',JSON.stringify(S.indoorPlants));}catch(e){}
-  try{localStorage.setItem('garden_todos',JSON.stringify(S.todos));}catch(e){}
-  try{localStorage.setItem('garden_shopping',JSON.stringify(S.shopping));}catch(e){}
-  try{localStorage.setItem('garden_notes',JSON.stringify(S.notes));}catch(e){}
-  try{localStorage.setItem('garden_propagation',JSON.stringify(S.propagation));}catch(e){}
-  try{localStorage.setItem('garden_irrigation',JSON.stringify(S.irrigation));}catch(e){}
+  await DB.set('rooms',S.rooms);
+  await DB.set('beds',S.beds);
+  await DB.set('plants',S.plants);
+  await DB.set('indoorPlants',S.indoorPlants);
+  await DB.set('todos',S.todos);
+  await DB.set('shopping',S.shopping);
+  await DB.set('notes',S.notes);
+  await DB.set('propagation',S.propagation);
+  await DB.set('irrigation',S.irrigation);
+  syncToGitHub();
 }
 function showScreen(name){
   document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
@@ -765,6 +1036,7 @@ function showScreen(name){
   if(name==='irrigation')renderIrrigation();
   if(name==='allplants')renderAllPlants('');
   if(name==='schedule'){renderScheduleMonths();setTimeout(()=>document.querySelector('.month-chip.active')?.scrollIntoView({behavior:'smooth',inline:'center'}),100);}
+  if(name==='settings')loadGitHubSettingsUI();
 }
 function updateHomeCounts(){
   document.getElementById('outdoor-count').textContent=`${S.beds.length} beds · ${S.plants.length} plants`;
@@ -773,6 +1045,11 @@ function updateHomeCounts(){
 function updateYardCounts(){
   document.getElementById('front-yard-count').textContent=`${S.beds.filter(b=>b.yard==='front').length} beds`;
   document.getElementById('back-yard-count').textContent=`${S.beds.filter(b=>b.yard==='back').length} beds`;
+  ['front','back'].forEach(function(yard){
+    const img=DB.getImg('yard_'+yard);
+    const el=document.getElementById('yard-icon-'+yard);
+    if(el){el.innerHTML=img?`<img src="${img}" style="width:100%;height:100%;object-fit:cover;border-radius:14px">`:(yard==='front'?'🏡':'🌿');}
+  });
 }
 function showYard(yard){
   S.currentYard=yard;
@@ -785,6 +1062,10 @@ function showYard(yard){
       const img=DB.getImg('bed_'+bed.id);
       return`<div class="list-item" onclick="showBed('${bed.id}')"><div class="list-item-icon">${img?`<img src="${img}">`:(bed.icon||'🌿')}</div><div class="list-item-info"><h3>${bed.name}</h3><p>${c} plant${c!==1?'s':''} · ${bed.sun||'—'}</p></div><div class="list-item-arrow">›</div></div>`;
     }).join('');
+  // Load yard hero
+  const heroArea=document.getElementById('yard-hero-area');
+  const yardImg=DB.getImg('yard_'+yard);
+  if(heroArea){heroArea.innerHTML=yardImg?`<img src="${yardImg}" style="width:100%;height:100%;object-fit:cover">`:`<span class="room-hero-placeholder">${yard==='front'?'🏡':'🌿'}</span>`;}
   showScreen('yard');
 }
 function renderIndoorRooms(){
@@ -810,7 +1091,7 @@ function showRoom(roomId){
   showScreen('room');
 }
 function triggerRoomImageUpload(){document.getElementById('room-image-input').click();}
-function handleRoomImageUpload(e){const f=e.target.files[0];if(!f)return;const r=new FileReader();r.onload=ev=>{DB.setImg('room_'+S.currentRoom.id,ev.target.result);showRoom(S.currentRoom.id);};r.readAsDataURL(f);e.target.value='';}
+function handleRoomImageUpload(e){const f=e.target.files[0];if(!f)return;const r=new FileReader();r.onload=ev=>{compressImage(ev.target.result,1200,800,0.75,compressed=>{DB.setImg('room_'+S.currentRoom.id,compressed);showRoom(S.currentRoom.id);});};r.readAsDataURL(f);e.target.value='';}
 function showEditRoomModal(){
   const r=S.currentRoom;
   document.getElementById('modal-body').innerHTML=`<h3>Edit Room</h3><div class="form-group"><label class="form-label">Name</label><input class="form-input" id="er-name" value="${r.name}"></div><div class="form-group"><label class="form-label">Icon</label><input class="form-input" id="er-icon" value="${r.icon||'🪴'}"></div><button class="btn-primary" onclick="saveEditRoom()">Save</button><button class="btn-secondary" onclick="closeModal()">Cancel</button>`;
@@ -848,7 +1129,7 @@ function renderBedPlants(filter){
 }
 function filterBedPlants(filter,el){S.bedFilter=filter;renderBedPlants(filter);}
 function triggerBedImageUpload(){document.getElementById('bed-image-input').click();}
-function handleBedImageUpload(e){const f=e.target.files[0];if(!f)return;const r=new FileReader();r.onload=ev=>{DB.setImg('bed_'+S.currentBed.id,ev.target.result);showBed(S.currentBed.id);};r.readAsDataURL(f);e.target.value='';}
+function handleBedImageUpload(e){const f=e.target.files[0];if(!f)return;const r=new FileReader();r.onload=ev=>{compressImage(ev.target.result,1200,800,0.75,compressed=>{DB.setImg('bed_'+S.currentBed.id,compressed);showBed(S.currentBed.id);});};r.readAsDataURL(f);e.target.value='';}
 function showEditBedModal(){
   const b=S.currentBed;
   document.getElementById('modal-body').innerHTML=`<h3>Edit Bed</h3><div class="form-group"><label class="form-label">Name</label><input class="form-input" id="eb-name" value="${b.name}"></div><div class="form-group"><label class="form-label">Icon</label><input class="form-input" id="eb-icon" value="${b.icon||'🌿'}"></div><div class="form-group"><label class="form-label">Zone</label><input class="form-input" id="eb-zone" value="${b.zone||''}"></div><div class="form-group"><label class="form-label">Sun</label><select class="form-select" id="eb-sun"><option ${b.sun==='Full sun'?'selected':''}>Full sun</option><option ${b.sun==='Part sun'?'selected':''}>Part sun</option><option ${b.sun==='Part shade'?'selected':''}>Part shade</option><option ${b.sun==='Full shade'?'selected':''}>Full shade</option><option ${b.sun==='Shade'?'selected':''}>Shade</option></select></div><div class="form-group"><label class="form-label">Notes</label><textarea class="form-textarea" id="eb-notes">${b.notes||''}</textarea></div><button class="btn-primary" onclick="saveEditBed()">Save</button><button class="btn-secondary" onclick="closeModal()">Cancel</button><button class="btn-danger" onclick="removeBedImage()">Remove Photo</button>`;
@@ -898,8 +1179,9 @@ function editPlant(){
     const bedOpts=S.beds.map(b=>`<option value="${b.id}" ${b.id===p.bedId?'selected':''}>${b.name}</option>`).join('');
     moveTo=`<div class="form-group"><label class="form-label">Move to Bed</label><select class="form-select" id="ep-bed">${bedOpts}</select></div>`;
   }
-  document.getElementById('modal-body').innerHTML=`<h3>Edit Plant</h3><div class="form-group"><label class="form-label">Name</label><input class="form-input" id="ep-name" value="${p.name}"></div><div class="form-group"><label class="form-label">Status</label><select class="form-select" id="ep-status"><option value="alive" ${p.status==='alive'?'selected':''}>Alive & Well</option><option value="planned" ${p.status==='planned'?'selected':''}>Planned</option><option value="struggling" ${p.status==='struggling'?'selected':''}>Struggling</option><option value="dead" ${p.status==='dead'?'selected':''}>Removed/Dead</option></select></div>${moveTo}<div class="form-group"><label class="form-label">Water</label><input class="form-input" id="ep-water" value="${p.water||''}"></div><div class="form-group"><label class="form-label">Sun</label><input class="form-input" id="ep-sun" value="${p.sun||''}"></div><div class="form-group"><label class="form-label">Notes</label><textarea class="form-textarea" id="ep-notes">${p.notes||''}</textarea></div><div class="form-group"><label class="form-label">Emoji</label><input class="form-input" id="ep-emoji" value="${p.emoji||'🌿'}"></div><button class="btn-primary" onclick="saveEditPlant(${isIndoor})">Save</button><button class="btn-secondary" onclick="closeModal()">Cancel</button>`;
+  document.getElementById('modal-body').innerHTML=`<h3>Edit Plant</h3><div class="form-group"><label class="form-label">Name</label><input class="form-input" id="ep-name" value="${p.name}"></div><div class="form-group"><label class="form-label">Status</label><select class="form-select" id="ep-status"><option value="alive" ${p.status==='alive'?'selected':''}>Alive & Well</option><option value="planned" ${p.status==='planned'?'selected':''}>Planned</option><option value="struggling" ${p.status==='struggling'?'selected':''}>Struggling</option><option value="dead" ${p.status==='dead'?'selected':''}>Removed/Dead</option></select></div>${moveTo}<div class="form-group"><label class="form-label">Water</label><input class="form-input" id="ep-water" value="${p.water||''}"></div><div class="form-group"><label class="form-label">Sun</label><input class="form-input" id="ep-sun" value="${p.sun||''}"></div><div class="form-group"><label class="form-label">Notes</label><textarea class="form-textarea" id="ep-notes">${p.notes||''}</textarea></div><div class="form-group"><label class="form-label">Emoji</label><input class="form-input" id="ep-emoji" value="${p.emoji||'🌿'}"></div><div class="form-group"><label class="form-label">Maintenance Tasks</label><div id="ep-maint-list"></div><div style="display:flex;gap:8px;margin-top:8px"><input class="form-input" id="ep-maint-task" placeholder="New task" style="flex:1"><button class="btn-secondary" style="margin:0;width:auto;padding:12px 14px;font-size:13px" onclick="addMaintTaskToForm('ep')">+ Add</button></div></div><button class="btn-primary" onclick="saveEditPlant(${isIndoor})">Save</button><button class="btn-secondary" onclick="closeModal()">Cancel</button>`;
   document.getElementById('modal-overlay').classList.add('active');
+  initFormMaintTasks(p.maintenance,'ep');
 }
 function saveEditPlant(isIndoor){
   const p=S.currentPlant;
@@ -912,6 +1194,7 @@ function saveEditPlant(isIndoor){
   plant.sun=document.getElementById('ep-sun').value;
   plant.notes=document.getElementById('ep-notes').value;
   plant.emoji=document.getElementById('ep-emoji').value;
+  plant.maintenance=collectMaintTasks('ep');
   if(!isIndoor){
     const bedEl=document.getElementById('ep-bed');
     const newBedId=bedEl?bedEl.value:null;
@@ -932,16 +1215,77 @@ function saveEditPlant(isIndoor){
 }
 function deletePlant(){if(!confirm('Remove this plant?'))return;const p=S.currentPlant;if(p.isIndoor){S.indoorPlants=S.indoorPlants.filter(x=>x.id!==p.id);save();if(S.currentRoom)showRoom(S.currentRoom.id);else showScreen('indoor');}else{S.plants=S.plants.filter(x=>x.id!==p.id);save();if(S.currentBed)showBed(S.currentBed.id);else showScreen('home');}}
 function showAddPlantModal(){
-  document.getElementById('modal-body').innerHTML=`<h3>Add Plant</h3><div class="form-group"><label class="form-label">Name *</label><input class="form-input" id="ap-name"></div><div class="form-group"><label class="form-label">Scientific Name</label><input class="form-input" id="ap-sci"></div><div class="form-group"><label class="form-label">Emoji</label><input class="form-input" id="ap-emoji" value="🌿"></div><div class="form-group"><label class="form-label">Status</label><select class="form-select" id="ap-status"><option value="alive">Alive & Well</option><option value="planned">Planned</option></select></div><div class="form-group"><label class="form-label">Water</label><input class="form-input" id="ap-water"></div><div class="form-group"><label class="form-label">Sun</label><input class="form-input" id="ap-sun"></div><div class="form-group"><label class="form-label">Notes</label><textarea class="form-textarea" id="ap-notes"></textarea></div><button class="btn-primary" onclick="saveNewOutdoorPlant()">Add</button><button class="btn-secondary" onclick="closeModal()">Cancel</button>`;
+  _formMaintTasks=[];
+  document.getElementById('modal-body').innerHTML=`<h3>Add Plant</h3><div class="form-group"><label class="form-label">Name *</label><input class="form-input" id="ap-name"></div><div class="form-group"><label class="form-label">Scientific Name</label><input class="form-input" id="ap-sci"></div><div class="form-group"><label class="form-label">Emoji</label><input class="form-input" id="ap-emoji" value="🌿"></div><div class="form-group"><label class="form-label">Category</label><select class="form-select" id="ap-category" onchange="inheritCategoryTasks(this.value,'ap')"><option value="None">— Select category —</option>${getCategoryOpts()}</select></div><div class="form-group"><label class="form-label">Status</label><select class="form-select" id="ap-status"><option value="alive">Alive & Well</option><option value="planned">Planned</option></select></div><div class="form-group"><label class="form-label">Water</label><input class="form-input" id="ap-water"></div><div class="form-group"><label class="form-label">Sun</label><input class="form-input" id="ap-sun"></div><div class="form-group"><label class="form-label">Notes</label><textarea class="form-textarea" id="ap-notes"></textarea></div><div class="form-group"><label class="form-label">Maintenance Tasks</label><div id="ap-maint-list"></div><div style="display:flex;gap:8px;margin-top:8px"><input class="form-input" id="ap-maint-task" placeholder="Add custom task" style="flex:1"><button class="btn-secondary" style="margin:0;width:auto;padding:12px 14px;font-size:13px" onclick="addMaintTaskToForm('ap')">+ Add</button></div><div style="font-size:11px;color:var(--text-light);margin-top:4px">Category tasks auto-load above. Add overrides here.</div></div><button class="btn-primary" onclick="saveNewOutdoorPlant()">Add</button><button class="btn-secondary" onclick="closeModal()">Cancel</button>`;
   document.getElementById('modal-overlay').classList.add('active');
 }
-function saveNewOutdoorPlant(){const name=document.getElementById('ap-name').value.trim();if(!name)return;S.plants.push({id:'p'+Date.now(),bedId:S.currentBed.id,name,scientific:document.getElementById('ap-sci').value,emoji:document.getElementById('ap-emoji').value||'🌿',status:document.getElementById('ap-status').value,water:document.getElementById('ap-water').value,sun:document.getElementById('ap-sun').value,notes:document.getElementById('ap-notes').value,fromCutting:false,maintenance:[],trouble:[]});save();closeModal();showBed(S.currentBed.id);}
+function saveNewOutdoorPlant(){const name=document.getElementById('ap-name').value.trim();if(!name)return;S.plants.push({id:'p'+Date.now(),bedId:S.currentBed.id,name,scientific:document.getElementById('ap-sci').value,emoji:document.getElementById('ap-emoji').value||'🌿',status:document.getElementById('ap-status').value,water:document.getElementById('ap-water').value,sun:document.getElementById('ap-sun').value,notes:document.getElementById('ap-notes').value,fromCutting:false,maintenance:collectMaintTasks('ap'),trouble:[]});save();closeModal();showBed(S.currentBed.id);}
 function showAddPlantToRoomModal(){
   const room=S.currentRoom;if(!room)return;
-  document.getElementById('modal-body').innerHTML=`<h3>Add Indoor Plant</h3><div class="form-group"><label class="form-label">Name *</label><input class="form-input" id="ap-name"></div><div class="form-group"><label class="form-label">Scientific Name</label><input class="form-input" id="ap-sci"></div><div class="form-group"><label class="form-label">Emoji</label><input class="form-input" id="ap-emoji" value="🌿"></div><div class="form-group"><label class="form-label">Section</label><select class="form-select" id="ap-section">${(room.sections||['Other']).map(s=>`<option value="${s}">${s}</option>`).join('')}</select></div><div class="form-group"><label class="form-label">Water</label><input class="form-input" id="ap-water"></div><div class="form-group"><label class="form-label">Sun</label><input class="form-input" id="ap-sun"></div><div class="form-group"><label class="form-label">Notes</label><textarea class="form-textarea" id="ap-notes"></textarea></div><button class="btn-primary" onclick="saveNewIndoorPlant()">Add</button><button class="btn-secondary" onclick="closeModal()">Cancel</button>`;
+  _formMaintTasks=[];
+  document.getElementById('modal-body').innerHTML=`<h3>Add Indoor Plant</h3><div class="form-group"><label class="form-label">Name *</label><input class="form-input" id="ap-name"></div><div class="form-group"><label class="form-label">Scientific Name</label><input class="form-input" id="ap-sci"></div><div class="form-group"><label class="form-label">Emoji</label><input class="form-input" id="ap-emoji" value="🌿"></div><div class="form-group"><label class="form-label">Category</label><select class="form-select" id="ap-category" onchange="inheritCategoryTasks(this.value,'ap')"><option value="None">— Select category —</option>${getCategoryOpts()}</select></div><div class="form-group"><label class="form-label">Section</label><select class="form-select" id="ap-section">${(room.sections||['Other']).map(s=>`<option value="${s}">${s}</option>`).join('')}</select></div><div class="form-group"><label class="form-label">Water</label><input class="form-input" id="ap-water"></div><div class="form-group"><label class="form-label">Sun</label><input class="form-input" id="ap-sun"></div><div class="form-group"><label class="form-label">Notes</label><textarea class="form-textarea" id="ap-notes"></textarea></div><div class="form-group"><label class="form-label">Maintenance Tasks</label><div id="ap-maint-list"></div><div style="display:flex;gap:8px;margin-top:8px"><input class="form-input" id="ap-maint-task" placeholder="Add custom task" style="flex:1"><button class="btn-secondary" style="margin:0;width:auto;padding:12px 14px;font-size:13px" onclick="addMaintTaskToForm('ap')">+ Add</button></div><div style="font-size:11px;color:var(--text-light);margin-top:4px">Category tasks auto-load. Add overrides here.</div></div><button class="btn-primary" onclick="saveNewIndoorPlant()">Add</button><button class="btn-secondary" onclick="closeModal()">Cancel</button>`;
   document.getElementById('modal-overlay').classList.add('active');
 }
-function saveNewIndoorPlant(){const name=document.getElementById('ap-name').value.trim();if(!name)return;S.indoorPlants.push({id:'ip'+Date.now(),roomId:S.currentRoom.id,section:document.getElementById('ap-section').value,name,scientific:document.getElementById('ap-sci').value,emoji:document.getElementById('ap-emoji').value||'🌿',status:'alive',water:document.getElementById('ap-water').value,sun:document.getElementById('ap-sun').value,notes:document.getElementById('ap-notes').value,maintenance:[],trouble:[]});save();closeModal();showRoom(S.currentRoom.id);}
+function saveNewIndoorPlant(){const name=document.getElementById('ap-name').value.trim();if(!name)return;S.indoorPlants.push({id:'ip'+Date.now(),roomId:S.currentRoom.id,section:document.getElementById('ap-section').value,name,scientific:document.getElementById('ap-sci').value,emoji:document.getElementById('ap-emoji').value||'🌿',status:'alive',water:document.getElementById('ap-water').value,sun:document.getElementById('ap-sun').value,notes:document.getElementById('ap-notes').value,maintenance:collectMaintTasks('ap'),trouble:[]});save();closeModal();showRoom(S.currentRoom.id);}
+// Maintenance task form helpers
+const _MONTHS=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+let _formMaintTasks=[];
+function addMaintTaskToForm(prefix){
+  const inp=document.getElementById(prefix+'-maint-task');
+  const task=inp.value.trim();if(!task)return;
+  const idx=_formMaintTasks.length;
+  _formMaintTasks.push({task,months:[1,2,3,4,5,6,7,8,9,10,11,12]});
+  inp.value='';
+  renderFormMaintTasks(prefix);
+}
+function renderFormMaintTasks(prefix){
+  const el=document.getElementById(prefix+'-maint-list');
+  if(!el)return;
+  el.innerHTML=_formMaintTasks.map((t,i)=>`
+    <div style="background:var(--cream);border-radius:8px;padding:10px 12px;margin-bottom:8px">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">
+        <div style="font-size:13px;font-weight:500;color:var(--text-dark)">${t.task}</div>
+        <span style="color:#e05555;cursor:pointer;font-size:18px;padding:0 4px" onclick="removeMaintTask(${i},'${prefix}')">×</span>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:4px">${_MONTHS.map((m,mi)=>`<span style="font-size:11px;padding:3px 7px;border-radius:12px;cursor:pointer;font-weight:500;background:${t.months.includes(mi+1)?'var(--sage-dark)':'var(--border)'};color:${t.months.includes(mi+1)?'white':'var(--text-mid)'}" onclick="toggleMaintMonth(${i},${mi+1},'${prefix}')">${m}</span>`).join('')}</div>
+    </div>`).join('');
+}
+function toggleMaintMonth(taskIdx,month,prefix){
+  const t=_formMaintTasks[taskIdx];
+  const mi=t.months.indexOf(month);
+  if(mi>=0)t.months.splice(mi,1);else t.months.push(month);
+  t.months.sort((a,b)=>a-b);
+  renderFormMaintTasks(prefix);
+}
+function removeMaintTask(idx,prefix){_formMaintTasks.splice(idx,1);renderFormMaintTasks(prefix);}
+function collectMaintTasks(prefix){const t=[..._formMaintTasks];_formMaintTasks=[];return t;}
+function initFormMaintTasks(existing,prefix){_formMaintTasks=(existing||[]).map(t=>({task:t.task,months:[...(t.months||[])]}));renderFormMaintTasks(prefix);}
+
+// Plant categories with default maintenance task inheritance
+const PLANT_CATEGORIES={
+  'Bush Roses':[{task:'Hard prune to outward facing buds',months:[1,2]},{task:'Deadhead every 2 weeks — outward facing bud, 45° cut',months:[4,5,6,7,8,9,10]},{task:'Feed rose fertilizer after first bloom flush',months:[5]},{task:'Monitor for powdery mildew — neem oil if spotted',months:[6,7,8]}],
+  'Climbing Roses':[{task:'Light tip prune only — do not hard cut',months:[1,2]},{task:'Deadhead spent blooms',months:[4,5,6,7,8,9,10]},{task:'Train and tie new canes to structure',months:[3,4,5]},{task:'Feed after first flush',months:[5]}],
+  'Hydrangeas':[{task:'Deadwood removal only — no hard cutback',months:[1]},{task:'Feed with azalea fertilizer',months:[3]},{task:'Prune ONLY after flowering complete',months:[8,9]}],
+  'Ferns':[{task:'Keep consistently moist — never let dry out',months:[1,2,3,4,5,6,7,8,9,10,11,12]},{task:'Mist fronds or use pebble tray for humidity',months:[1,2,3,4,5,6,7,8,9,10,11,12]},{task:'Feed diluted fertilizer monthly',months:[3,4,5,6,7,8,9]}],
+  'Succulents & Cacti':[{task:'Water only when soil completely dry',months:[1,2,3,4,5,6,7,8,9,10,11,12]},{task:'Feed diluted cactus fertilizer',months:[4,5,6,7,8]},{task:'Reduce watering in winter',months:[11,12,1,2]}],
+  'Tropical Foliage':[{task:'Feed monthly spring-summer',months:[3,4,5,6,7,8,9]},{task:'Wipe leaves monthly to remove dust',months:[1,2,3,4,5,6,7,8,9,10,11,12]},{task:'Reduce watering in winter',months:[11,12,1,2]}],
+  'Fruit Trees':[{task:'Prune to maintain shape',months:[1,2]},{task:'Water every 2 weeks',months:[4,5,6,7,8]},{task:'Feed citrus fertilizer',months:[2,5,8]},{task:'Reduce watering as temperatures drop',months:[9,10]}],
+  'Vegetables':[{task:'Water consistently — check soil moisture daily in summer',months:[5,6,7,8,9]},{task:'Feed with balanced fertilizer every 2-3 weeks',months:[4,5,6,7,8]},{task:'Check for pests — inspect undersides of leaves',months:[5,6,7,8,9]}],
+  'Herbs':[{task:'Harvest regularly to encourage bushy growth',months:[4,5,6,7,8,9,10]},{task:'Water when top inch is dry',months:[1,2,3,4,5,6,7,8,9,10,11,12]},{task:'Cut back after flowering to prevent legginess',months:[7,8]}],
+  'Bulbs':[{task:'Feed with bulb fertilizer after flowering',months:[4,5]},{task:'Allow foliage to die back naturally — do not cut early',months:[5,6]},{task:'Lift and store tender bulbs before frost',months:[10,11]}],
+  'Ornamental Grasses':[{task:'Cut back hard in late winter before new growth',months:[2,3]},{task:'Divide clumps every 3-4 years',months:[3]},{task:'Feed balanced fertilizer in spring',months:[3,4]}],
+  'Salvias':[{task:'Cut back by 1/3 if leggy — reblooms in 3 weeks',months:[7,8]},{task:'Hard cutback after last frost risk',months:[3]},{task:'Feed balanced fertilizer in spring',months:[3,4]}],
+  'Bougainvillea':[{task:'Hard prune — cut by 1/3',months:[2]},{task:'Feed Super Bloom half strength to moist soil',months:[7,8,9]},{task:'Cut by 1/3 after bloom finishes',months:[8]}],
+  'Orchids':[{task:'Soak then drain fully — never sit in water',months:[1,2,3,4,5,6,7,8,9,10,11,12]},{task:'Feed orchid fertilizer every 2 weeks when growing',months:[3,4,5,6,7,8,9]},{task:'Cool nights in fall trigger new bloom spike',months:[9,10,11]}],
+  'None':[]
+};
+function getCategoryOpts(){return Object.keys(PLANT_CATEGORIES).map(c=>`<option value="${c}">${c}</option>`).join('');}
+function inheritCategoryTasks(category,prefix){
+  const tasks=PLANT_CATEGORIES[category]||[];
+  _formMaintTasks=tasks.map(t=>({task:t.task,months:[...t.months]}));
+  renderFormMaintTasks(prefix);
+}
+
 function showAddBedModal(){
   const yard=S.currentYard||'front';
   document.getElementById('modal-body').innerHTML=`<h3>Add Bed</h3><div class="form-group"><label class="form-label">Name *</label><input class="form-input" id="ab-name"></div><div class="form-group"><label class="form-label">Icon</label><input class="form-input" id="ab-icon" value="🌿"></div><div class="form-group"><label class="form-label">Zone</label><input class="form-input" id="ab-zone"></div><div class="form-group"><label class="form-label">Sun</label><select class="form-select" id="ab-sun"><option>Full sun</option><option>Part sun</option><option>Part shade</option><option>Full shade</option></select></div><div class="form-group"><label class="form-label">Notes</label><textarea class="form-textarea" id="ab-notes"></textarea></div><button class="btn-primary" onclick="saveNewBed('${yard}')">Add</button><button class="btn-secondary" onclick="closeModal()">Cancel</button>`;
@@ -1015,8 +1359,7 @@ function renderSchedule(month){
   const bedSel=document.getElementById('sched-filter-bed');
   if(bedSel&&S.beds.length>0){
     const savedVal=bedSel.value||'all';
-    bedSel.innerHTML='<option value="all">All Beds</option>'+S.beds.map(b=>'<option value="'+b.id+'">'+b.name+'</option>').join('');
-    // Restore selection
+    bedSel.innerHTML='<option value="all">All Locations</option><option value="indoor">🪴 Indoor</option>'+S.beds.map(b=>'<option value="'+b.id+'">'+b.name+'</option>').join('');
     for(let i=0;i<bedSel.options.length;i++){if(bedSel.options[i].value===savedVal){bedSel.value=savedVal;break;}}
   }
   const seen=new Set();
@@ -1029,59 +1372,81 @@ function renderSchedule(month){
     else if(tl.includes('feed')||tl.includes('fertiliz')||tl.includes('citrus'))tp='Feeding';
     else if(tl.includes('water')||tl.includes('irrig'))tp='Watering';
     else if(tl.includes('pest')||tl.includes('mite')||tl.includes('spray')||tl.includes('neem')||tl.includes('slug')||tl.includes('monitor'))tp='Pest';
-    else if(t.indoor)tp='Indoor';
-    allTasks.push({cat:t.cat,title:t.title,desc:t.desc||'',indoor:t.indoor,type:tp,bedId:'all',key:'s_'+t.cat+'_'+t.title});
+    allTasks.push({cat:t.cat,title:t.title,desc:t.desc||'',indoor:t.indoor,type:tp,bedId:t.indoor?'indoor':'all',key:'s_'+t.cat+'_'+t.title,isStatic:true,count:0});
   });
-  // Outdoor plant tasks
+  // Outdoor plant tasks — group by task text, collect plant names and bedIds
+  var outdoorTaskMap={};
   S.plants.forEach(function(plant){
     if(!plant.maintenance)return;
-    var bed=S.beds.find(function(b){return b.id===plant.bedId;});
     plant.maintenance.forEach(function(mItem){
       if(!mItem.months||mItem.months.indexOf(month)<0)return;
-      var sk=plant.name.split(' ').slice(0,3).join(' ');
-      var key=sk+'|'+mItem.task;
-      if(seen.has(key))return;
-      seen.add(key);
-      var tl=mItem.task.toLowerCase();
-      var tp='Maintenance';
-      if(tl.includes('prune')||tl.includes('cutback')||tl.includes('deadhead')||tl.includes('trim'))tp='Pruning';
-      else if(tl.includes('feed')||tl.includes('fertiliz'))tp='Feeding';
-      else if(tl.includes('water'))tp='Watering';
-      else if(tl.includes('pest')||tl.includes('mite')||tl.includes('spray')||tl.includes('neem')||tl.includes('slug'))tp='Pest';
-      allTasks.push({cat:plant.name,title:mItem.task,desc:bed?bed.name:'',indoor:false,type:tp,bedId:plant.bedId||'all',key:'p_'+key});
+      var key=mItem.task;
+      if(!outdoorTaskMap[key]){
+        var tl=mItem.task.toLowerCase();
+        var tp='Maintenance';
+        if(tl.includes('prune')||tl.includes('cutback')||tl.includes('deadhead')||tl.includes('trim'))tp='Pruning';
+        else if(tl.includes('feed')||tl.includes('fertiliz'))tp='Feeding';
+        else if(tl.includes('water'))tp='Watering';
+        else if(tl.includes('pest')||tl.includes('mite')||tl.includes('spray')||tl.includes('neem')||tl.includes('slug'))tp='Pest';
+        outdoorTaskMap[key]={task:mItem.task,type:tp,plants:[],bedIds:[]};
+      }
+      outdoorTaskMap[key].plants.push(plant.name);
+      if(plant.bedId&&outdoorTaskMap[key].bedIds.indexOf(plant.bedId)<0)outdoorTaskMap[key].bedIds.push(plant.bedId);
     });
   });
-  // Indoor plant tasks
+  Object.keys(outdoorTaskMap).forEach(function(key){
+    var g=outdoorTaskMap[key];
+    var count=g.plants.length;
+    // Use the plant name directly — if multiple, show name + count
+    var baseName=g.plants[0];
+    var displayCat=count===1?baseName:baseName+' <span style="background:var(--sage-light);color:var(--sage-dark);font-size:10px;font-weight:600;padding:1px 6px;border-radius:10px">'+count+'</span>';
+    allTasks.push({cat:displayCat,title:g.task,desc:'',indoor:false,type:g.type,bedIds:g.bedIds,bedId:'outdoor-grouped',key:'pg_'+key,isGrouped:true,count:count,plants:g.plants,rawCat:baseName});
+  });
+  // Indoor plant tasks — group by task text
+  var indoorTaskMap={};
   S.indoorPlants.forEach(function(plant){
     if(!plant.maintenance)return;
     plant.maintenance.forEach(function(mItem){
       if(!mItem.months||mItem.months.indexOf(month)<0)return;
-      var sk='i_'+plant.name.split(' ').slice(0,3).join(' ');
-      var key=sk+'|'+mItem.task;
-      if(seen.has(key))return;
-      seen.add(key);
-      allTasks.push({cat:plant.name,title:mItem.task,desc:plant.section||'',indoor:true,type:'Indoor',bedId:'indoor',key:'ip_'+key});
+      var key=mItem.task;
+      if(!indoorTaskMap[key])indoorTaskMap[key]={task:mItem.task,plants:[],sections:[]};
+      indoorTaskMap[key].plants.push(plant.name);
+      if(plant.section&&indoorTaskMap[key].sections.indexOf(plant.section)<0)indoorTaskMap[key].sections.push(plant.section);
     });
+  });
+  Object.keys(indoorTaskMap).forEach(function(key){
+    var g=indoorTaskMap[key];
+    var count=g.plants.length;
+    var baseName=g.plants[0];
+    var displayCat=count===1?baseName:baseName+' <span style="background:rgba(193,100,74,0.15);color:var(--terracotta);font-size:10px;font-weight:600;padding:1px 6px;border-radius:10px">'+count+'</span>';
+    var tl=g.task.toLowerCase();
+    var tp='Maintenance';
+    if(tl.includes('prune')||tl.includes('cutback')||tl.includes('deadhead')||tl.includes('trim'))tp='Pruning';
+    else if(tl.includes('feed')||tl.includes('fertiliz'))tp='Feeding';
+    else if(tl.includes('water')||tl.includes('moist'))tp='Watering';
+    else if(tl.includes('pest')||tl.includes('mite')||tl.includes('spray')||tl.includes('neem'))tp='Pest';
+    allTasks.push({cat:displayCat,title:g.task,desc:'',indoor:true,type:tp,bedId:'indoor',key:'ig_'+key,isGrouped:true,count:count,plants:g.plants});
   });
   // Apply filters
   var typeEl=document.getElementById('sched-filter-type');
   var bedEl=document.getElementById('sched-filter-bed');
   var typeF=typeEl?typeEl.value:'all';
   var bedF=bedEl?bedEl.value:'all';
-  console.log('Schedule filters: type='+typeF+' bed='+bedF+' totalTasks='+allTasks.length);
   var filtered=allTasks.filter(function(t){
     if(typeF!=='all'&&t.type!==typeF)return false;
-    if(bedF!=='all'&&t.bedId!==bedF)return false;
-    return true;
+    if(bedF==='all')return true;
+    if(bedF==='indoor')return t.indoor||t.bedId==='indoor';
+    // For grouped outdoor tasks, check if any bedId matches
+    if(t.isGrouped&&t.bedIds)return t.bedIds.indexOf(bedF)>=0;
+    return t.bedId===bedF||t.bedId==='all';
   });
-  console.log('Filtered tasks:', filtered.length);
   if(filtered.length===0){document.getElementById('schedule-list').innerHTML='<div class="empty-state"><span>📅</span><p>No tasks match your filters.</p></div>';return;}
   var checked=getSchedChecked(month);
   var doneCount=filtered.filter(function(t){return checked[t.key];}).length;
   // Group by type
   var groups={};
   filtered.forEach(function(t){
-    var g=t.indoor?'🪴 Indoor':t.type==='Pruning'?'✂️ Pruning':t.type==='Feeding'?'🌱 Feeding':t.type==='Watering'?'💧 Watering':t.type==='Pest'?'🐛 Pest':'🔧 Maintenance';
+    var g=t.type==='Pruning'?'✂️ Pruning':t.type==='Feeding'?'🌱 Feeding':t.type==='Watering'?'💧 Watering':t.type==='Pest'?'🐛 Pest':'🔧 Maintenance';
     if(!groups[g])groups[g]=[];
     groups[g].push(t);
   });
@@ -1092,7 +1457,11 @@ function renderSchedule(month){
       var isDone=!!checked[t.key];
       var safeKey=t.key.replace(/\\/g,'\\\\').replace(/'/g,"\\'");
       var border=t.indoor?'var(--terracotta)':'var(--sage)';
-      out+='<div class="schedule-task '+(isDone?'task-done':'')+'" style="border-left-color:'+border+'"><div style="display:flex;align-items:flex-start"><div class="sched-check '+(isDone?'checked':'')+'" onclick="toggleSchedTask('+month+',\''+safeKey+'\')">'+( isDone?'✓':'')+'</div><div style="flex:1"><div style="font-size:10px;text-transform:uppercase;letter-spacing:1px;color:'+(t.indoor?'var(--terracotta)':'var(--sage-dark)')+';font-weight:500;margin-bottom:3px">'+t.cat+'</div><h4>'+t.title+'</h4>'+(t.desc?'<p>'+t.desc+'</p>':'')+'</div></div></div>';
+      var catLabel=t.cat;
+      if(t.isGrouped&&t.count>1){
+        catLabel=t.cat; // already has badge HTML built in
+      }
+      out+='<div class="schedule-task '+(isDone?'task-done':'')+'" style="border-left-color:'+border+'"><div style="display:flex;align-items:flex-start"><div class="sched-check '+(isDone?'checked':'')+'" onclick="toggleSchedTask('+month+',\''+safeKey+'\')">'+( isDone?'✓':'')+'</div><div style="flex:1"><div style="font-size:10px;text-transform:uppercase;letter-spacing:1px;color:'+(t.indoor?'var(--terracotta)':'var(--sage-dark)')+';font-weight:500;margin-bottom:3px">'+catLabel+'</div><h4>'+t.title+'</h4>'+(t.desc?'<p>'+t.desc+'</p>':'')+'</div></div></div>';
     });
   });
   document.getElementById('schedule-list').innerHTML=out;
