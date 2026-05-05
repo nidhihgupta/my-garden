@@ -898,7 +898,10 @@ async function saveGitHubSettings(){
     const r2=await fetch(`https://api.github.com/repos/${user}/${repo}`,{headers:{'Authorization':'token '+token,'Accept':'application/vnd.github.v3+json'}});
     if(!r2.ok){setGHStatus('❌ Repo not found ('+r2.status+') — check username/repo name','var(--terracotta)');return;}
     setGHStatus('Step 3/3: Writing data to GitHub...','var(--text-light)');
-    // Step 3: do the sync
+    // Step 3: first check if file exists to get SHA
+    const existing=await ghReadFile();
+    if(existing)_ghSha=existing.sha;
+    else _ghSha=null;
     await syncToGitHub();
   }catch(e){setGHStatus('❌ Network error: '+e.message,'var(--terracotta)');}
 }
