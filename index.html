@@ -823,7 +823,7 @@ async function ghReadFile(){
 
 async function ghWriteFile(data,sha){
   const c=ghCredentials();
-  if(!c.user||!c.repo||!c.token)return false;
+  if(!c.user||!c.repo||!c.token)return null;
   try{
     const json=JSON.stringify(data,null,2);
     // Safe base64 encoding for unicode content
@@ -837,21 +837,21 @@ async function ghWriteFile(data,sha){
     if(!r.ok){
       const err=await r.json().catch(()=>({message:r.statusText}));
       setGHStatus('❌ GitHub write error '+r.status+': '+(err.message||r.statusText),'var(--terracotta)');
-      return false;
+      return null;
     }
-    return true;
-  }catch(e){setGHStatus('❌ Network error: '+e.message,'var(--terracotta)');return false;}
+    // Read the new blob SHA directly from the PUT response — no extra GET needed
+    const resp=await r.json();
+    return resp.content.sha;
+  }catch(e){setGHStatus('❌ Network error: '+e.message,'var(--terracotta)');return null;}
 }
 
 let _ghSha=null;
 async function syncToGitHub(){
   if(!ghConfigured())return;
   const data={rooms:S.rooms,beds:S.beds,plants:S.plants,indoorPlants:S.indoorPlants,todos:S.todos,shopping:S.shopping,notes:S.notes,propagation:S.propagation,irrigation:S.irrigation,syncedAt:new Date().toISOString()};
-  const ok=await ghWriteFile(data,_ghSha);
-  if(ok){
-    // Refresh SHA after write
-    const f=await ghReadFile();
-    if(f)_ghSha=f.sha;
+  const newSha=await ghWriteFile(data,_ghSha);
+  if(newSha){
+    _ghSha=newSha;
     setGHStatus('✅ Synced to GitHub '+new Date().toLocaleTimeString(),'var(--sage-dark)');
   } else {
     setGHStatus('⚠️ GitHub sync failed — data saved locally','var(--terracotta)');
