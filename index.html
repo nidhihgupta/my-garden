@@ -814,22 +814,33 @@ async function ghReadFile(){
   if(!c.user||!c.repo||!c.token)return null;
   try{
     const r=await fetch(`https://api.github.com/repos/${c.user}/${c.repo}/contents/garden-data.json`,{headers:{'Authorization':'token '+c.token,'Accept':'application/vnd.github.v3+json'}});
-    if(!r.ok)return null;
+    if(r.status===404)return null; // file doesn't exist yet — ok
+    if(!r.ok){setGHStatus('❌ GitHub read error: '+r.status+' '+r.statusText,'var(--terracotta)');return null;}
     const d=await r.json();
     return{content:JSON.parse(atob(d.content.replace(/\n/g,''))),sha:d.sha};
-  }catch(e){return null;}
+  }catch(e){setGHStatus('❌ Network error: '+e.message,'var(--terracotta)');return null;}
 }
 
 async function ghWriteFile(data,sha){
   const c=ghCredentials();
   if(!c.user||!c.repo||!c.token)return false;
   try{
-    const content=btoa(unescape(encodeURIComponent(JSON.stringify(data,null,2))));
+    const json=JSON.stringify(data,null,2);
+    // Safe base64 encoding for unicode content
+    const bytes=new TextEncoder().encode(json);
+    let binary='';
+    bytes.forEach(b=>binary+=String.fromCharCode(b));
+    const content=btoa(binary);
     const body={message:'Garden data update '+new Date().toISOString(),content};
     if(sha)body.sha=sha;
     const r=await fetch(`https://api.github.com/repos/${c.user}/${c.repo}/contents/garden-data.json`,{method:'PUT',headers:{'Authorization':'token '+c.token,'Accept':'application/vnd.github.v3+json','Content-Type':'application/json'},body:JSON.stringify(body)});
-    return r.ok;
-  }catch(e){return false;}
+    if(!r.ok){
+      const err=await r.json().catch(()=>({message:r.statusText}));
+      setGHStatus('❌ GitHub write error '+r.status+': '+(err.message||r.statusText),'var(--terracotta)');
+      return false;
+    }
+    return true;
+  }catch(e){setGHStatus('❌ Network error: '+e.message,'var(--terracotta)');return false;}
 }
 
 let _ghSha=null;
@@ -870,14 +881,26 @@ function setGHStatus(msg,color){
   if(el){el.textContent=msg;el.style.color=color||'var(--text-light)';}
 }
 
-function saveGitHubSettings(){
+async function saveGitHubSettings(){
   const user=document.getElementById('gh-username').value.trim();
   const repo=document.getElementById('gh-repo').value.trim();
   const token=document.getElementById('gh-token').value.trim();
   if(!user||!repo||!token){setGHStatus('Please fill in all fields','var(--terracotta)');return;}
   ghSet(GH_KEYS.user,user);ghSet(GH_KEYS.repo,repo);ghSet(GH_KEYS.token,token);
-  setGHStatus('Testing connection...','var(--text-light)');
-  syncToGitHub().then(()=>{});
+  setGHStatus('Step 1/3: Validating token...','var(--text-light)');
+  // Step 1: validate token
+  try{
+    const r1=await fetch('https://api.github.com/user',{headers:{'Authorization':'token '+token,'Accept':'application/vnd.github.v3+json'}});
+    if(!r1.ok){setGHStatus('❌ Token invalid ('+r1.status+') — check token and try again','var(--terracotta)');return;}
+    const u=await r1.json();
+    setGHStatus('Step 2/3: Checking repo access...','var(--text-light)');
+    // Step 2: check repo exists and is accessible
+    const r2=await fetch(`https://api.github.com/repos/${user}/${repo}`,{headers:{'Authorization':'token '+token,'Accept':'application/vnd.github.v3+json'}});
+    if(!r2.ok){setGHStatus('❌ Repo not found ('+r2.status+') — check username/repo name','var(--terracotta)');return;}
+    setGHStatus('Step 3/3: Writing data to GitHub...','var(--text-light)');
+    // Step 3: do the sync
+    await syncToGitHub();
+  }catch(e){setGHStatus('❌ Network error: '+e.message,'var(--terracotta)');}
 }
 
 function loadGitHubSettingsUI(){
