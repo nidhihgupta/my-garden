@@ -5123,7 +5123,7 @@
       "id": "ip15",
       "roomId": "r-office",
       "section": "Wall Shelves",
-      "name": "Oxalis + String of Pearls",
+      "name": "Purple Shamrock + String of Pearls",
       "scientific": "Oxalis triangularis + Senecio rowleyanus",
       "emoji": "ð",
       "status": "alive",
@@ -6835,5 +6835,5 @@
     }
   ],
   "irrigation": [],
-  "syncedAt": "2026-05-06T16:57:16.329Z"
+  "syncedAt": "2026-05-06T17:03:53.082Z"
 }
