@@ -5915,7 +5915,7 @@
     {
       "id": "ip28",
       "roomId": "r-house",
-      "section": "Other",
+      "section": "Living Room",
       "name": "Monstera",
       "scientific": "Monstera deliciosa",
       "emoji": "ð¿",
@@ -6835,5 +6835,5 @@
     }
   ],
   "irrigation": [],
-  "syncedAt": "2026-05-06T17:05:24.677Z"
+  "syncedAt": "2026-05-06T17:05:36.579Z"
 }
