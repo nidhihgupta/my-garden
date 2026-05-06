@@ -6265,7 +6265,7 @@
     {
       "id": "ip1778088094425",
       "roomId": "r-house",
-      "section": "Kitchen",
+      "section": "Bedroom",
       "name": "Fern",
       "scientific": "",
       "emoji": "🌿",
@@ -6896,5 +6896,5 @@
     }
   ],
   "irrigation": [],
-  "syncedAt": "2026-05-06T17:21:34.429Z"
+  "syncedAt": "2026-05-06T17:21:45.933Z"
 }
