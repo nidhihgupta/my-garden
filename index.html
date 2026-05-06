@@ -820,8 +820,9 @@ async function ghReadFile(){
     const sha=d.sha;
     let content;
     if(d.content){
-      // Small file: content is inline base64
-      content=JSON.parse(atob(d.content.replace(/\n/g,'')));
+      // Small file: content is inline base64 — decode via TextDecoder to handle UTF-8 emoji correctly
+      const bytes=Uint8Array.from(atob(d.content.replace(/\n/g,'')),c=>c.charCodeAt(0));
+      content=JSON.parse(new TextDecoder().decode(bytes));
     } else if(d.download_url){
       // Large file (>1 MB): GitHub omits content field, must fetch via download_url
       const dr=await fetch(d.download_url);
@@ -1043,19 +1044,19 @@ async function init(){
         if(taskMigrations[mItem.task])mItem.task=taskMigrations[mItem.task];
       });
     });
-    // Fix corrupted room/bed icons
+    // Fix corrupted room/bed icons — corrupted emoji (one char per UTF-8 byte) have length > 2
     const defaultIconMap={'Office':'🪴','Rest of House':'🌿'};
     S.rooms.forEach(function(r){
-      if(!r.icon||r.icon.length>8)r.icon=defaultIconMap[r.name]||'🪴';
+      if(!r.icon||r.icon.length>2)r.icon=defaultIconMap[r.name]||'🪴';
     });
     S.beds.forEach(function(b){
-      if(!b.icon||b.icon.length>8)b.icon='🌿';
+      if(!b.icon||b.icon.length>2)b.icon='🌿';
     });
     S.plants.forEach(function(p){
-      if(!p.emoji||p.emoji.length>8)p.emoji='🌿';
+      if(!p.emoji||p.emoji.length>2)p.emoji='🌿';
     });
     S.indoorPlants.forEach(function(p){
-      if(!p.emoji||p.emoji.length>8)p.emoji='🪴';
+      if(!p.emoji||p.emoji.length>2)p.emoji='🪴';
     });
     await save();
   }
