@@ -221,7 +221,8 @@
           "issue": "No berries",
           "url": "https://www.google.com/search?q=No%20berries%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "None"
     },
     {
       "id": "fl-sarcococca",
@@ -251,7 +252,8 @@
           "issue": "Leaf yellowing",
           "url": "https://www.google.com/search?q=Leaf%20yellowing%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "None"
     },
     {
       "id": "fl-breath",
@@ -280,7 +282,8 @@
           "issue": "Dieback from hard pruning — never cut to old wood",
           "url": "https://www.google.com/search?q=Dieback%20from%20hard%20pruning%20%E2%80%94%20never%20cut%20to%20old%20wood%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "None"
     },
     {
       "id": "fl-loro",
@@ -315,7 +318,8 @@
           "issue": "Loss of purple color",
           "url": "https://www.google.com/search?q=Loss%20of%20purple%20color%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "None"
     },
     {
       "id": "fl-abelia",
@@ -350,7 +354,8 @@
           "issue": "Loss of variegation",
           "url": "https://www.google.com/search?q=Loss%20of%20variegation%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "None"
     },
     {
       "id": "fl-bergenia",
@@ -378,7 +383,8 @@
           "issue": "Floppy leaves (overwatering)",
           "url": "https://www.google.com/search?q=Floppy%20leaves%20(overwatering)%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "None"
     },
     {
       "id": "fl-alabama",
@@ -406,7 +412,8 @@
           "issue": "Crown rot (overwatering)",
           "url": "https://www.google.com/search?q=Crown%20rot%20(overwatering)%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "None"
     },
     {
       "id": "fl-buttered",
@@ -434,7 +441,8 @@
           "issue": "Crown rot",
           "url": "https://www.google.com/search?q=Crown%20rot%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "None"
     },
     {
       "id": "fl-tiarella",
@@ -462,7 +470,8 @@
           "issue": "Crown rot",
           "url": "https://www.google.com/search?q=Crown%20rot%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "None"
     },
     {
       "id": "fl-mondo",
@@ -490,7 +499,8 @@
           "issue": "Loss of black color",
           "url": "https://www.google.com/search?q=Loss%20of%20black%20color%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Ornamental Grasses"
     },
     {
       "id": "fl-carex",
@@ -518,7 +528,8 @@
           "issue": "Brown tips",
           "url": "https://www.google.com/search?q=Brown%20tips%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Ornamental Grasses"
     },
     {
       "id": "fl-hellebores",
@@ -546,7 +557,8 @@
           "issue": "Black death virus",
           "url": "https://www.google.com/search?q=Black%20death%20virus%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "None"
     },
     {
       "id": "fl-lamium",
@@ -575,7 +587,8 @@
           "issue": "Leggy growth",
           "url": "https://www.google.com/search?q=Leggy%20growth%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "None"
     },
     {
       "id": "fl-begonia",
@@ -618,7 +631,8 @@
           "issue": "Powdery mildew",
           "url": "https://www.google.com/search?q=Powdery%20mildew%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "None"
     },
     {
       "id": "fl-clivia",
@@ -655,7 +669,8 @@
           "issue": "Not flowering",
           "url": "https://www.google.com/search?q=Not%20flowering%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Bulbs"
     },
     {
       "id": "rw-camellia",
@@ -690,7 +705,8 @@
           "issue": "Bud drop",
           "url": "https://www.google.com/search?q=Bud%20drop%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "None"
     },
     {
       "id": "rw-pittosporum",
@@ -719,7 +735,8 @@
           "issue": "Scale insects",
           "url": "https://www.google.com/search?q=Scale%20insects%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Trees"
     },
     {
       "id": "rw-clivia",
@@ -748,7 +765,8 @@
           "issue": "Not flowering",
           "url": "https://www.google.com/search?q=Not%20flowering%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Bulbs"
     },
     {
       "id": "rw-fern-ex",
@@ -776,7 +794,8 @@
           "issue": "Brown fronds",
           "url": "https://www.google.com/search?q=Brown%20fronds%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Ferns"
     },
     {
       "id": "rw-sword",
@@ -804,7 +823,8 @@
           "issue": "Brown fronds",
           "url": "https://www.google.com/search?q=Brown%20fronds%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Ferns"
     },
     {
       "id": "rw-hellebores",
@@ -832,7 +852,8 @@
           "issue": "Black death virus",
           "url": "https://www.google.com/search?q=Black%20death%20virus%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "None"
     },
     {
       "id": "rw-oxalis",
@@ -862,7 +883,8 @@
           "issue": "Not emerging from dormancy",
           "url": "https://www.google.com/search?q=Not%20emerging%20from%20dormancy%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Bulbs"
     },
     {
       "id": "mp-maple",
@@ -890,7 +912,8 @@
           "issue": "Leaf scorch",
           "url": "https://www.google.com/search?q=Leaf%20scorch%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Trees"
     },
     {
       "id": "mp-camellia",
@@ -925,7 +948,8 @@
           "issue": "Bud drop",
           "url": "https://www.google.com/search?q=Bud%20drop%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "None"
     },
     {
       "id": "mp-fern",
@@ -953,7 +977,8 @@
           "issue": "Brown fronds",
           "url": "https://www.google.com/search?q=Brown%20fronds%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Ferns"
     },
     {
       "id": "mp-japgrass",
@@ -981,7 +1006,8 @@
           "issue": "Loss of variegation",
           "url": "https://www.google.com/search?q=Loss%20of%20variegation%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Ornamental Grasses"
     },
     {
       "id": "mp-daylily",
@@ -1017,7 +1043,8 @@
           "issue": "Rust disease",
           "url": "https://www.google.com/search?q=Rust%20disease%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Bulbs"
     },
     {
       "id": "mp-hosta",
@@ -1056,7 +1083,8 @@
           "issue": "Slug damage",
           "url": "https://www.google.com/search?q=Slug%20damage%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "None"
     },
     {
       "id": "mp-abelia",
@@ -1091,7 +1119,8 @@
           "issue": "Loss of variegation",
           "url": "https://www.google.com/search?q=Loss%20of%20variegation%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "None"
     },
     {
       "id": "mp-mondo",
@@ -1119,7 +1148,8 @@
           "issue": "Loss of black color",
           "url": "https://www.google.com/search?q=Loss%20of%20black%20color%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Ornamental Grasses"
     },
     {
       "id": "mp-carex",
@@ -1147,7 +1177,8 @@
           "issue": "Brown tips",
           "url": "https://www.google.com/search?q=Brown%20tips%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Ornamental Grasses"
     },
     {
       "id": "mp-alabama",
@@ -1175,7 +1206,8 @@
           "issue": "Crown rot",
           "url": "https://www.google.com/search?q=Crown%20rot%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "None"
     },
     {
       "id": "mp-sword",
@@ -1203,7 +1235,8 @@
           "issue": "Brown fronds",
           "url": "https://www.google.com/search?q=Brown%20fronds%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Ferns"
     },
     {
       "id": "mp-lamium",
@@ -1232,7 +1265,8 @@
           "issue": "Leggy growth",
           "url": "https://www.google.com/search?q=Leggy%20growth%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "None"
     },
     {
       "id": "ch-cherry",
@@ -1267,7 +1301,8 @@
           "issue": "Brown rot",
           "url": "https://www.google.com/search?q=Brown%20rot%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Trees"
     },
     {
       "id": "ch-nandina",
@@ -1301,7 +1336,8 @@
           "issue": "Not fruiting",
           "url": "https://www.google.com/search?q=Not%20fruiting%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "None"
     },
     {
       "id": "ch-daylily",
@@ -1337,7 +1373,8 @@
           "issue": "Rust disease",
           "url": "https://www.google.com/search?q=Rust%20disease%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Bulbs"
     },
     {
       "id": "ch-abelia",
@@ -1372,7 +1409,8 @@
           "issue": "Loss of variegation",
           "url": "https://www.google.com/search?q=Loss%20of%20variegation%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "None"
     },
     {
       "id": "ch-mondo",
@@ -1400,7 +1438,8 @@
           "issue": "Loss of black color",
           "url": "https://www.google.com/search?q=Loss%20of%20black%20color%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Ornamental Grasses"
     },
     {
       "id": "ch-lamium",
@@ -1429,7 +1468,8 @@
           "issue": "Leggy growth",
           "url": "https://www.google.com/search?q=Leggy%20growth%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "None"
     },
     {
       "id": "fr-camphor",
@@ -1457,7 +1497,8 @@
           "issue": "Root invasion",
           "url": "https://www.google.com/search?q=Root%20invasion%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Trees"
     },
     {
       "id": "fr-lavender",
@@ -1492,7 +1533,8 @@
           "issue": "Root rot (overwatering)",
           "url": "https://www.google.com/search?q=Root%20rot%20(overwatering)%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Herbs"
     },
     {
       "id": "fr-daylily",
@@ -1528,7 +1570,8 @@
           "issue": "Rust disease",
           "url": "https://www.google.com/search?q=Rust%20disease%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Bulbs"
     },
     {
       "id": "fr-catmint",
@@ -1565,7 +1608,8 @@
           "issue": "Root rot",
           "url": "https://www.google.com/search?q=Root%20rot%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Herbs"
     },
     {
       "id": "fr-abelia",
@@ -1600,7 +1644,8 @@
           "issue": "Loss of variegation",
           "url": "https://www.google.com/search?q=Loss%20of%20variegation%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "None"
     },
     {
       "id": "fr-loro",
@@ -1635,7 +1680,8 @@
           "issue": "Loss of purple color",
           "url": "https://www.google.com/search?q=Loss%20of%20purple%20color%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "None"
     },
     {
       "id": "fr-buttered",
@@ -1663,7 +1709,8 @@
           "issue": "Crown rot",
           "url": "https://www.google.com/search?q=Crown%20rot%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "None"
     },
     {
       "id": "fr-mondo",
@@ -1691,7 +1738,8 @@
           "issue": "Loss of black color",
           "url": "https://www.google.com/search?q=Loss%20of%20black%20color%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Ornamental Grasses"
     },
     {
       "id": "fr-lamium",
@@ -1720,7 +1768,8 @@
           "issue": "Leggy growth",
           "url": "https://www.google.com/search?q=Leggy%20growth%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "None"
     },
     {
       "id": "fr-begonia",
@@ -1763,7 +1812,8 @@
           "issue": "Powdery mildew",
           "url": "https://www.google.com/search?q=Powdery%20mildew%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "None"
     },
     {
       "id": "ros-apricot",
@@ -1812,7 +1862,8 @@
           "issue": "Brown rot on fruit",
           "url": "https://www.google.com/search?q=Brown%20rot%20on%20fruit%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Fruit Trees"
     },
     {
       "id": "ros-lemon",
@@ -1858,7 +1909,8 @@
           "issue": "Yellowing leaves",
           "url": "https://www.google.com/search?q=Yellowing%20leaves%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Fruit Trees"
     },
     {
       "id": "ros-peruvian",
@@ -1891,7 +1943,8 @@
           "issue": "Not flowering",
           "url": "https://www.google.com/search?q=Not%20flowering%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Bulbs"
     },
     {
       "id": "ros-flowercarpet",
@@ -1931,7 +1984,8 @@
           "issue": "Black spot",
           "url": "https://www.google.com/search?q=Black%20spot%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Bush Roses"
     },
     {
       "id": "ros-treerose",
@@ -1979,7 +2033,8 @@
           "issue": "Black spot",
           "url": "https://www.google.com/search?q=Black%20spot%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Bush Roses"
     },
     {
       "id": "br-fatsia",
@@ -2014,7 +2069,8 @@
           "issue": "Leaf drop",
           "url": "https://www.google.com/search?q=Leaf%20drop%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Tropical Foliage"
     },
     {
       "id": "br-azalea",
@@ -2050,7 +2106,8 @@
           "issue": "Not reblooming",
           "url": "https://www.google.com/search?q=Not%20reblooming%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "None"
     },
     {
       "id": "br-hosta",
@@ -2096,7 +2153,8 @@
           "issue": "Slug damage",
           "url": "https://www.google.com/search?q=Slug%20damage%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "None"
     },
     {
       "id": "br-anemone",
@@ -2124,7 +2182,8 @@
           "issue": "Not blooming",
           "url": "https://www.google.com/search?q=Not%20blooming%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Bulbs"
     },
     {
       "id": "br-tiarella",
@@ -2152,7 +2211,8 @@
           "issue": "Crown rot",
           "url": "https://www.google.com/search?q=Crown%20rot%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "None"
     },
     {
       "id": "br-liriope",
@@ -2181,7 +2241,8 @@
           "issue": "Crown rot",
           "url": "https://www.google.com/search?q=Crown%20rot%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Ornamental Grasses"
     },
     {
       "id": "br-impatiens",
@@ -2213,7 +2274,8 @@
           "issue": "Downy mildew",
           "url": "https://www.google.com/search?q=Downy%20mildew%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "None"
     },
     {
       "id": "br-coleus",
@@ -2242,7 +2304,8 @@
           "issue": "Leggy growth",
           "url": "https://www.google.com/search?q=Leggy%20growth%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "None"
     },
     {
       "id": "br-torenia",
@@ -2273,7 +2336,8 @@
           "issue": "Root rot",
           "url": "https://www.google.com/search?q=Root%20rot%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "None"
     },
     {
       "id": "br-begonia",
@@ -2316,7 +2380,8 @@
           "issue": "Powdery mildew",
           "url": "https://www.google.com/search?q=Powdery%20mildew%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "None"
     },
     {
       "id": "br-impatiens-curve",
@@ -2348,7 +2413,8 @@
           "issue": "Downy mildew",
           "url": "https://www.google.com/search?q=Downy%20mildew%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "None"
     },
     {
       "id": "bl-fatsia",
@@ -2377,7 +2443,8 @@
           "issue": "Leaf drop",
           "url": "https://www.google.com/search?q=Leaf%20drop%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Tropical Foliage"
     },
     {
       "id": "bl-ivy",
@@ -2416,7 +2483,8 @@
           "issue": "Japanese beetles",
           "url": "https://www.google.com/search?q=Japanese%20beetles%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "None"
     },
     {
       "id": "bl-azalea",
@@ -2452,7 +2520,8 @@
           "issue": "Not reblooming",
           "url": "https://www.google.com/search?q=Not%20reblooming%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "None"
     },
     {
       "id": "bl-liriope",
@@ -2481,7 +2550,8 @@
           "issue": "Crown rot",
           "url": "https://www.google.com/search?q=Crown%20rot%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Ornamental Grasses"
     },
     {
       "id": "bl-begonia",
@@ -2524,7 +2594,8 @@
           "issue": "Powdery mildew",
           "url": "https://www.google.com/search?q=Powdery%20mildew%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "None"
     },
     {
       "id": "bl-impatiens",
@@ -2556,7 +2627,8 @@
           "issue": "Downy mildew",
           "url": "https://www.google.com/search?q=Downy%20mildew%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "None"
     },
     {
       "id": "fw-distictis",
@@ -2602,7 +2674,8 @@
           "issue": "Rampant unruly growth",
           "url": "https://www.google.com/search?q=Rampant%20unruly%20growth%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "None"
     },
     {
       "id": "fw-rose",
@@ -2650,7 +2723,8 @@
           "issue": "Black spot",
           "url": "https://www.google.com/search?q=Black%20spot%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Bush Roses"
     },
     {
       "id": "fw-geranium",
@@ -2691,7 +2765,8 @@
           "issue": "Leggy growth",
           "url": "https://www.google.com/search?q=Leggy%20growth%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "None"
     },
     {
       "id": "fw-fuchsia",
@@ -2738,7 +2813,8 @@
           "issue": "Wilting",
           "url": "https://www.google.com/search?q=Wilting%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "None"
     },
     {
       "id": "fw-begonia",
@@ -2781,7 +2857,8 @@
           "issue": "Powdery mildew",
           "url": "https://www.google.com/search?q=Powdery%20mildew%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "None"
     },
     {
       "id": "ma-jasmine",
@@ -2818,7 +2895,8 @@
           "issue": "Scale insects",
           "url": "https://www.google.com/search?q=Scale%20insects%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "None"
     },
     {
       "id": "ma-palm",
@@ -2857,7 +2935,8 @@
           "issue": "Yellowing fronds",
           "url": "https://www.google.com/search?q=Yellowing%20fronds%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Trees"
     },
     {
       "id": "ma-salvia",
@@ -2902,7 +2981,8 @@
           "issue": "Leggy growth",
           "url": "https://www.google.com/search?q=Leggy%20growth%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Salvias"
     },
     {
       "id": "ma-calibrachoa",
@@ -2934,7 +3014,8 @@
           "issue": "Iron deficiency (yellowing)",
           "url": "https://www.google.com/search?q=Iron%20deficiency%20(yellowing)%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "None"
     },
     {
       "id": "sa-bougainvillea",
@@ -2984,7 +3065,8 @@
           "issue": "Not blooming",
           "url": "https://www.google.com/search?q=Not%20blooming%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Bougainvillea"
     },
     {
       "id": "sa-iceberg",
@@ -3032,7 +3114,8 @@
           "issue": "Black spot",
           "url": "https://www.google.com/search?q=Black%20spot%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Climbing Roses"
     },
     {
       "id": "sa-angelface",
@@ -3080,7 +3163,8 @@
           "issue": "Black spot",
           "url": "https://www.google.com/search?q=Black%20spot%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Climbing Roses"
     },
     {
       "id": "sa-burstjoy",
@@ -3128,7 +3212,8 @@
           "issue": "Black spot",
           "url": "https://www.google.com/search?q=Black%20spot%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Bush Roses"
     },
     {
       "id": "sa-mophead",
@@ -3169,7 +3254,8 @@
           "issue": "Not blooming (pruned at wrong time)",
           "url": "https://www.google.com/search?q=Not%20blooming%20(pruned%20at%20wrong%20time)%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Hydrangeas"
     },
     {
       "id": "sa-oakleaf",
@@ -3204,7 +3290,8 @@
           "issue": "Not blooming",
           "url": "https://www.google.com/search?q=Not%20blooming%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Hydrangeas"
     },
     {
       "id": "sa-passiflora",
@@ -3243,7 +3330,8 @@
           "issue": "Not flowering",
           "url": "https://www.google.com/search?q=Not%20flowering%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "None"
     },
     {
       "id": "sa-knockoutrose",
@@ -3284,7 +3372,8 @@
           "issue": "Black spot",
           "url": "https://www.google.com/search?q=Black%20spot%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Bush Roses"
     },
     {
       "id": "sa-salvia",
@@ -3329,7 +3418,8 @@
           "issue": "Leggy growth",
           "url": "https://www.google.com/search?q=Leggy%20growth%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Salvias"
     },
     {
       "id": "bbq-daisy",
@@ -3368,7 +3458,8 @@
           "issue": "Powdery mildew",
           "url": "https://www.google.com/search?q=Powdery%20mildew%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "None"
     },
     {
       "id": "bbq-chrysanthemum",
@@ -3404,7 +3495,8 @@
           "issue": "Aphids",
           "url": "https://www.google.com/search?q=Aphids%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "None"
     },
     {
       "id": "bbq-existsalvia",
@@ -3443,7 +3535,8 @@
           "issue": "Leggy growth",
           "url": "https://www.google.com/search?q=Leggy%20growth%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Salvias"
     },
     {
       "id": "bbq-existrose",
@@ -3491,7 +3584,8 @@
           "issue": "Black spot",
           "url": "https://www.google.com/search?q=Black%20spot%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Bush Roses"
     },
     {
       "id": "bbq-whiteboug",
@@ -3541,7 +3635,8 @@
           "issue": "Not blooming",
           "url": "https://www.google.com/search?q=Not%20blooming%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Bougainvillea"
     },
     {
       "id": "bbq-salvia",
@@ -3586,7 +3681,8 @@
           "issue": "Leggy growth",
           "url": "https://www.google.com/search?q=Leggy%20growth%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Salvias"
     },
     {
       "id": "bbq-dahlia",
@@ -3626,7 +3722,8 @@
           "issue": "Powdery mildew",
           "url": "https://www.google.com/search?q=Powdery%20mildew%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Bulbs"
     },
     {
       "id": "bbq-verbena",
@@ -3659,7 +3756,8 @@
           "issue": "Powdery mildew",
           "url": "https://www.google.com/search?q=Powdery%20mildew%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "None"
     },
     {
       "id": "st-aeonium",
@@ -3698,7 +3796,8 @@
           "issue": "Etiolation",
           "url": "https://www.google.com/search?q=Etiolation%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Succulents & Cacti"
     },
     {
       "id": "ps-orange",
@@ -3755,7 +3854,8 @@
           "issue": "Yellowing leaves (nutrient deficiency)",
           "url": "https://www.google.com/search?q=Yellowing%20leaves%20(nutrient%20deficiency)%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Fruit Trees"
     },
     {
       "id": "ps-persimmon",
@@ -3804,7 +3904,8 @@
           "issue": "Fruit drop",
           "url": "https://www.google.com/search?q=Fruit%20drop%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Fruit Trees"
     },
     {
       "id": "ps-pomegranate",
@@ -3853,7 +3954,8 @@
           "issue": "Fruit splitting (inconsistent watering)",
           "url": "https://www.google.com/search?q=Fruit%20splitting%20(inconsistent%20watering)%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Fruit Trees"
     },
     {
       "id": "ps-raspberry",
@@ -3892,7 +3994,8 @@
           "issue": "Poor fruiting",
           "url": "https://www.google.com/search?q=Poor%20fruiting%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Fruit Trees"
     },
     {
       "id": "ps-blackberry",
@@ -3935,7 +4038,8 @@
           "issue": "Poor fruiting",
           "url": "https://www.google.com/search?q=Poor%20fruiting%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Fruit Trees"
     },
     {
       "id": "ps-salvia",
@@ -3980,7 +4084,8 @@
           "issue": "Leggy growth",
           "url": "https://www.google.com/search?q=Leggy%20growth%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Salvias"
     },
     {
       "id": "ps-beets",
@@ -4025,7 +4130,8 @@
           "issue": "Bolting (heat/water stress)",
           "url": "https://www.google.com/search?q=Bolting%20(heat%2Fwater%20stress)%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Vegetables"
     },
     {
       "id": "ts-plum",
@@ -4078,7 +4184,8 @@
           "issue": "Brown rot",
           "url": "https://www.google.com/search?q=Brown%20rot%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Fruit Trees"
     },
     {
       "id": "ts-rainier",
@@ -4140,7 +4247,8 @@
           "issue": "Fruit cracking (water stress)",
           "url": "https://www.google.com/search?q=Fruit%20cracking%20(water%20stress)%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Fruit Trees"
     },
     {
       "id": "brs-sunburst",
@@ -4188,7 +4296,8 @@
           "issue": "Black spot",
           "url": "https://www.google.com/search?q=Black%20spot%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Bush Roses"
     },
     {
       "id": "brs-daustinrose",
@@ -4236,7 +4345,8 @@
           "issue": "Black spot",
           "url": "https://www.google.com/search?q=Black%20spot%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Bush Roses"
     },
     {
       "id": "brs-dahlia",
@@ -4277,7 +4387,8 @@
           "issue": "Powdery mildew",
           "url": "https://www.google.com/search?q=Powdery%20mildew%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Bulbs"
     },
     {
       "id": "brs-phormium",
@@ -4307,7 +4418,8 @@
           "issue": "Crown rot (overwatering)",
           "url": "https://www.google.com/search?q=Crown%20rot%20(overwatering)%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Ornamental Grasses"
     },
     {
       "id": "p1778089554019",
@@ -4321,7 +4433,8 @@
       "notes": "",
       "fromCutting": false,
       "maintenance": [],
-      "trouble": []
+      "trouble": [],
+      "category": "None"
     }
   ],
   "indoorPlants": [
@@ -4392,7 +4505,8 @@
           "issue": "Yellow leaves (overwatering)",
           "url": "https://www.google.com/search?q=Yellow%20leaves%20(overwatering)%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Tropical Foliage"
     },
     {
       "id": "ip2",
@@ -4455,7 +4569,8 @@
           "issue": "Leaf drop",
           "url": "https://www.google.com/search?q=Leaf%20drop%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Tropical Foliage"
     },
     {
       "id": "ip3",
@@ -4507,7 +4622,8 @@
           "issue": "Browning white sections (direct sun)",
           "url": "https://www.google.com/search?q=Browning%20white%20sections%20(direct%20sun)%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Tropical Foliage"
     },
     {
       "id": "ip4",
@@ -4555,7 +4671,8 @@
           "issue": "Yellow leaves (overwatering)",
           "url": "https://www.google.com/search?q=Yellow%20leaves%20(overwatering)%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Tropical Foliage"
     },
     {
       "id": "ip5",
@@ -4624,7 +4741,8 @@
           "issue": "Crispy frond edges (low humidity)",
           "url": "https://www.google.com/search?q=Crispy%20frond%20edges%20(low%20humidity)%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Ferns"
     },
     {
       "id": "ip6",
@@ -4683,7 +4801,8 @@
           "issue": "Leggy growth",
           "url": "https://www.google.com/search?q=Leggy%20growth%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Tropical Foliage"
     },
     {
       "id": "ip7",
@@ -4735,7 +4854,8 @@
           "issue": "Yellow leaves (overwatering)",
           "url": "https://www.google.com/search?q=Yellow%20leaves%20(overwatering)%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Tropical Foliage"
     },
     {
       "id": "ip8",
@@ -4809,7 +4929,8 @@
           "issue": "Brown tips (fluoride/overwatering)",
           "url": "https://www.google.com/search?q=Brown%20tips%20(fluoride%2Foverwatering)%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Tropical Foliage"
     },
     {
       "id": "ip9",
@@ -4844,7 +4965,8 @@
           "issue": "Loss of red color (low light)",
           "url": "https://www.google.com/search?q=Loss%20of%20red%20color%20(low%20light)%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Tropical Foliage"
     },
     {
       "id": "ip10",
@@ -4901,7 +5023,8 @@
           "issue": "Dropping leaves (overwatering)",
           "url": "https://www.google.com/search?q=Dropping%20leaves%20(overwatering)%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Succulents & Cacti"
     },
     {
       "id": "ip11",
@@ -4966,7 +5089,8 @@
           "issue": "Sudden frond drop",
           "url": "https://www.google.com/search?q=Sudden%20frond%20drop%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Ferns"
     },
     {
       "id": "ip12",
@@ -5021,7 +5145,8 @@
           "issue": "Brown leaf tips",
           "url": "https://www.google.com/search?q=Brown%20leaf%20tips%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Tropical Foliage"
     },
     {
       "id": "ip13",
@@ -5071,7 +5196,8 @@
           "issue": "Not blooming",
           "url": "https://www.google.com/search?q=Not%20blooming%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Tropical Foliage"
     },
     {
       "id": "ip14",
@@ -5131,7 +5257,8 @@
           "issue": "Leaf drop",
           "url": "https://www.google.com/search?q=Leaf%20drop%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Tropical Foliage"
     },
     {
       "id": "ip15",
@@ -5179,7 +5306,8 @@
           "issue": "String of Pearls shriveling (underwatering)",
           "url": "https://www.google.com/search?q=String%20of%20Pearls%20shriveling%20(underwatering)%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Succulents & Cacti"
     },
     {
       "id": "ip16",
@@ -5239,7 +5367,8 @@
           "issue": "Bud drop (moved while budding)",
           "url": "https://www.google.com/search?q=Bud%20drop%20(moved%20while%20budding)%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Succulents & Cacti"
     },
     {
       "id": "ip17",
@@ -5296,7 +5425,8 @@
           "issue": "Sudden frond drop",
           "url": "https://www.google.com/search?q=Sudden%20frond%20drop%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Ferns"
     },
     {
       "id": "ip18",
@@ -5360,7 +5490,8 @@
           "issue": "Curling leaves (underwatering)",
           "url": "https://www.google.com/search?q=Curling%20leaves%20(underwatering)%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Tropical Foliage"
     },
     {
       "id": "ip19",
@@ -5425,7 +5556,8 @@
           "issue": "Browning (low humidity)",
           "url": "https://www.google.com/search?q=Browning%20(low%20humidity)%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Ferns"
     },
     {
       "id": "ip20",
@@ -5503,7 +5635,8 @@
           "issue": "Yellow leaves (overwatering)",
           "url": "https://www.google.com/search?q=Yellow%20leaves%20(overwatering)%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Tropical Foliage"
     },
     {
       "id": "ip21",
@@ -5555,7 +5688,8 @@
           "issue": "Losing pink variegation (low light)",
           "url": "https://www.google.com/search?q=Losing%20pink%20variegation%20(low%20light)%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Tropical Foliage"
     },
     {
       "id": "ip22",
@@ -5611,7 +5745,8 @@
           "issue": "Drooping leaves (underwatering)",
           "url": "https://www.google.com/search?q=Drooping%20leaves%20(underwatering)%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Tropical Foliage"
     },
     {
       "id": "ip23",
@@ -5674,7 +5809,8 @@
           "issue": "Brown tips (fluoride/dry air)",
           "url": "https://www.google.com/search?q=Brown%20tips%20(fluoride%2Fdry%20air)%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Tropical Foliage"
     },
     {
       "id": "ip24",
@@ -5748,7 +5884,8 @@
           "issue": "Crispy edges (low humidity/fluoride)",
           "url": "https://www.google.com/search?q=Crispy%20edges%20(low%20humidity%2Ffluoride)%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Tropical Foliage"
     },
     {
       "id": "ip25",
@@ -5815,7 +5952,8 @@
           "issue": "No rebloom",
           "url": "https://www.google.com/search?q=No%20rebloom%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Orchids"
     },
     {
       "id": "ip26",
@@ -5893,7 +6031,8 @@
           "issue": "Yellow leaves (overwatering)",
           "url": "https://www.google.com/search?q=Yellow%20leaves%20(overwatering)%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Tropical Foliage"
     },
     {
       "id": "ip27",
@@ -5924,7 +6063,8 @@
           "issue": "Yellow leaves",
           "url": "https://www.google.com/search?q=Yellow%20leaves%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Tropical Foliage"
     },
     {
       "id": "ip28",
@@ -5976,7 +6116,8 @@
           "issue": "Yellow leaves",
           "url": "https://www.google.com/search?q=Yellow%20leaves%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Tropical Foliage"
     },
     {
       "id": "ip29",
@@ -6016,7 +6157,8 @@
           "issue": "Brown tips",
           "url": "https://www.google.com/search?q=Brown%20tips%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Tropical Foliage"
     },
     {
       "id": "ip30",
@@ -6062,7 +6204,8 @@
           "issue": "Brown tips",
           "url": "https://www.google.com/search?q=Brown%20tips%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Tropical Foliage"
     },
     {
       "id": "ip31",
@@ -6122,7 +6265,8 @@
           "issue": "No rebloom",
           "url": "https://www.google.com/search?q=No%20rebloom%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Orchids"
     },
     {
       "id": "ip32",
@@ -6174,7 +6318,8 @@
           "issue": "Dropping leaves (overwatering)",
           "url": "https://www.google.com/search?q=Dropping%20leaves%20(overwatering)%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Tropical Foliage"
     },
     {
       "id": "ip33",
@@ -6224,7 +6369,8 @@
           "issue": "Etiolation (stretching toward light)",
           "url": "https://www.google.com/search?q=Etiolation%20(stretching%20toward%20light)%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Succulents & Cacti"
     },
     {
       "id": "ip34",
@@ -6274,7 +6420,8 @@
           "issue": "Dropping leaves (overwatering)",
           "url": "https://www.google.com/search?q=Dropping%20leaves%20(overwatering)%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Succulents & Cacti"
     },
     {
       "id": "ip1778088094425",
@@ -6335,7 +6482,8 @@
           ]
         }
       ],
-      "trouble": []
+      "trouble": [],
+      "category": "Ferns"
     }
   ],
   "todos": [
@@ -6910,5 +7058,5 @@
     }
   ],
   "irrigation": [],
-  "syncedAt": "2026-05-06T18:23:11.258Z"
+  "syncedAt": "2026-05-06T18:23:37.608Z"
 }
