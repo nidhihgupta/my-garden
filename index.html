@@ -235,6 +235,8 @@ body{font-family:'DM Sans',sans-serif;background:var(--warm-white);color:var(--t
     <div class="plant-detail-location" id="plant-detail-location">📍 Location</div>
     <div id="plant-move-area"></div>
     <div class="detail-section"><h4>Plant Info</h4>
+      <div class="detail-row"><span class="detail-row-label">Scientific Name</span><span class="detail-row-value" id="plant-scientific" style="font-style:italic">—</span></div>
+      <div class="detail-row"><span class="detail-row-label">Category</span><span class="detail-row-value" id="plant-category">—</span></div>
       <div class="detail-row"><span class="detail-row-label">Water</span><span class="detail-row-value" id="plant-water">—</span></div>
       <div class="detail-row"><span class="detail-row-label">Sun</span><span class="detail-row-value" id="plant-sun">—</span></div>
       <div class="detail-row"><span class="detail-row-label">Date planted</span><span class="detail-row-value" id="plant-date">—</span></div>
@@ -335,8 +337,10 @@ body{font-family:'DM Sans',sans-serif;background:var(--warm-white);color:var(--t
 <div class="modal-overlay" id="modal-overlay" onclick="closeModal(event)"><div class="modal"><div class="modal-handle"></div><div id="modal-body"></div></div></div>
 <script>
 // Helper
-function p(id,bedId,name,sci,emoji,status,water,sun,notes,maintenance,trouble){
-  return{id,bedId,name,scientific:sci,emoji,status,water,sun,datePlanted:'',nursery:'',fromCutting:false,notes,maintenance,trouble};
+function p(id,bedId,name,sci,emoji,status,water,sun,notes,maintenance,trouble,category){
+  const obj={id,bedId,name,scientific:sci,emoji,status,water,sun,datePlanted:'',nursery:'',fromCutting:false,notes,maintenance,trouble};
+  if(category)obj.category=category;
+  return obj;
 }
 function m(task,months){return{task,months};}
 
@@ -1062,6 +1066,7 @@ async function init(){
     S.indoorPlants.forEach(function(p){p.emoji=fixEmoji(p.emoji,'🪴');});
     await save();
   }
+  migratePlantCategories();
   updateHomeCounts();
   renderScheduleMonths();
   loadAllSectionImages();
@@ -1206,6 +1211,8 @@ function renderPlantDetail(plant,isIndoor){
   const statusLabels={alive:'● Alive',planned:'◐ Planned',struggling:'⚠ Struggling',dead:'✕ Removed'};
   badge.textContent=statusLabels[plant.status]||'● Alive';
   badge.className=`plant-status-badge ${plant.status||'alive'}`;
+  document.getElementById('plant-scientific').textContent=plant.scientific||'—';
+  document.getElementById('plant-category').textContent=plant.category||'—';
   document.getElementById('plant-water').textContent=plant.water||'—';
   document.getElementById('plant-sun').textContent=plant.sun||'—';
   document.getElementById('plant-date').textContent=plant.datePlanted||'—';
@@ -1244,6 +1251,7 @@ function editPlant(){
   document.getElementById('modal-body').innerHTML=`<h3>Edit Plant</h3><div class="form-group"><label class="form-label">Name</label><input class="form-input" id="ep-name" value="${p.name}"></div><div class="form-group"><label class="form-label">Scientific Name</label><input class="form-input" id="ep-sci" value="${p.scientific||''}"></div><div class="form-group"><label class="form-label">Emoji</label><input class="form-input" id="ep-emoji" value="${p.emoji||'🌿'}"></div><div class="form-group"><label class="form-label">Category</label><select class="form-select" id="ep-category" onchange="inheritCategoryTasks(this.value,'ep')"><option value="None">— Select category —</option>${getCategoryOpts()}</select></div><div class="form-group"><label class="form-label">Status</label><select class="form-select" id="ep-status"><option value="alive" ${p.status==='alive'?'selected':''}>Alive & Well</option><option value="planned" ${p.status==='planned'?'selected':''}>Planned</option><option value="struggling" ${p.status==='struggling'?'selected':''}>Struggling</option><option value="dead" ${p.status==='dead'?'selected':''}>Removed/Dead</option></select></div>${locationField}<div class="form-group"><label class="form-label">Water</label><input class="form-input" id="ep-water" value="${p.water||''}"></div><div class="form-group"><label class="form-label">Sun</label><input class="form-input" id="ep-sun" value="${p.sun||''}"></div><div class="form-group"><label class="form-label">Notes</label><textarea class="form-textarea" id="ep-notes">${p.notes||''}</textarea></div><div class="form-group"><label class="form-label">Maintenance Tasks</label><div id="ep-maint-list"></div><div style="display:flex;gap:8px;margin-top:8px"><input class="form-input" id="ep-maint-task" placeholder="New task" style="flex:1"><button class="btn-secondary" style="margin:0;width:auto;padding:12px 14px;font-size:13px" onclick="addMaintTaskToForm('ep')">+ Add</button></div></div><button class="btn-primary" onclick="saveEditPlant(${isIndoor})">Save</button><button class="btn-secondary" onclick="closeModal()">Cancel</button>`;
   document.getElementById('modal-overlay').classList.add('active');
   initFormMaintTasks(p.maintenance,'ep');
+  if(p.category){const catEl=document.getElementById('ep-category');if(catEl)catEl.value=p.category;}
 }
 function saveEditPlant(isIndoor){
   const p=S.currentPlant;
@@ -1253,6 +1261,7 @@ function saveEditPlant(isIndoor){
   plant.name=document.getElementById('ep-name').value;
   plant.scientific=document.getElementById('ep-sci').value;
   plant.emoji=document.getElementById('ep-emoji').value;
+  plant.category=document.getElementById('ep-category').value;
   plant.status=document.getElementById('ep-status').value;
   plant.water=document.getElementById('ep-water').value;
   plant.sun=document.getElementById('ep-sun').value;
@@ -1284,14 +1293,14 @@ function showAddPlantModal(){
   document.getElementById('modal-body').innerHTML=`<h3>Add Plant</h3><div class="form-group"><label class="form-label">Name *</label><input class="form-input" id="ap-name"></div><div class="form-group"><label class="form-label">Scientific Name</label><input class="form-input" id="ap-sci"></div><div class="form-group"><label class="form-label">Emoji</label><input class="form-input" id="ap-emoji" value="🌿"></div><div class="form-group"><label class="form-label">Category</label><select class="form-select" id="ap-category" onchange="inheritCategoryTasks(this.value,'ap')"><option value="None">— Select category —</option>${getCategoryOpts()}</select></div><div class="form-group"><label class="form-label">Status</label><select class="form-select" id="ap-status"><option value="alive">Alive & Well</option><option value="planned">Planned</option><option value="struggling">Struggling</option><option value="dead">Removed/Dead</option></select></div><div class="form-group"><label class="form-label">Water</label><input class="form-input" id="ap-water"></div><div class="form-group"><label class="form-label">Sun</label><input class="form-input" id="ap-sun"></div><div class="form-group"><label class="form-label">Notes</label><textarea class="form-textarea" id="ap-notes"></textarea></div><div class="form-group"><label class="form-label">Maintenance Tasks</label><div id="ap-maint-list"></div><div style="display:flex;gap:8px;margin-top:8px"><input class="form-input" id="ap-maint-task" placeholder="Add custom task" style="flex:1"><button class="btn-secondary" style="margin:0;width:auto;padding:12px 14px;font-size:13px" onclick="addMaintTaskToForm('ap')">+ Add</button></div><div style="font-size:11px;color:var(--text-light);margin-top:4px">Category tasks auto-load above. Add overrides here.</div></div><button class="btn-primary" onclick="saveNewOutdoorPlant()">Add</button><button class="btn-secondary" onclick="closeModal()">Cancel</button>`;
   document.getElementById('modal-overlay').classList.add('active');
 }
-function saveNewOutdoorPlant(){const name=document.getElementById('ap-name').value.trim();if(!name)return;S.plants.push({id:'p'+Date.now(),bedId:S.currentBed.id,name,scientific:document.getElementById('ap-sci').value,emoji:document.getElementById('ap-emoji').value||'🌿',status:document.getElementById('ap-status').value,water:document.getElementById('ap-water').value,sun:document.getElementById('ap-sun').value,notes:document.getElementById('ap-notes').value,fromCutting:false,maintenance:collectMaintTasks('ap'),trouble:[]});save();closeModal();showBed(S.currentBed.id);}
+function saveNewOutdoorPlant(){const name=document.getElementById('ap-name').value.trim();if(!name)return;S.plants.push({id:'p'+Date.now(),bedId:S.currentBed.id,name,scientific:document.getElementById('ap-sci').value,emoji:document.getElementById('ap-emoji').value||'🌿',category:document.getElementById('ap-category').value||'None',status:document.getElementById('ap-status').value,water:document.getElementById('ap-water').value,sun:document.getElementById('ap-sun').value,notes:document.getElementById('ap-notes').value,fromCutting:false,maintenance:collectMaintTasks('ap'),trouble:[]});save();closeModal();showBed(S.currentBed.id);}
 function showAddPlantToRoomModal(){
   const room=S.currentRoom;if(!room)return;
   _formMaintTasks=[];
   document.getElementById('modal-body').innerHTML=`<h3>Add Indoor Plant</h3><div class="form-group"><label class="form-label">Name *</label><input class="form-input" id="ap-name"></div><div class="form-group"><label class="form-label">Scientific Name</label><input class="form-input" id="ap-sci"></div><div class="form-group"><label class="form-label">Emoji</label><input class="form-input" id="ap-emoji" value="🌿"></div><div class="form-group"><label class="form-label">Category</label><select class="form-select" id="ap-category" onchange="inheritCategoryTasks(this.value,'ap')"><option value="None">— Select category —</option>${getCategoryOpts()}</select></div><div class="form-group"><label class="form-label">Status</label><select class="form-select" id="ap-status"><option value="alive">Alive & Well</option><option value="planned">Planned</option><option value="struggling">Struggling</option><option value="dead">Removed/Dead</option></select></div><div class="form-group"><label class="form-label">Section</label><select class="form-select" id="ap-section">${(room.sections||['Other']).map(s=>`<option value="${s}">${s}</option>`).join('')}</select></div><div class="form-group"><label class="form-label">Water</label><input class="form-input" id="ap-water"></div><div class="form-group"><label class="form-label">Sun</label><input class="form-input" id="ap-sun"></div><div class="form-group"><label class="form-label">Notes</label><textarea class="form-textarea" id="ap-notes"></textarea></div><div class="form-group"><label class="form-label">Maintenance Tasks</label><div id="ap-maint-list"></div><div style="display:flex;gap:8px;margin-top:8px"><input class="form-input" id="ap-maint-task" placeholder="Add custom task" style="flex:1"><button class="btn-secondary" style="margin:0;width:auto;padding:12px 14px;font-size:13px" onclick="addMaintTaskToForm('ap')">+ Add</button></div><div style="font-size:11px;color:var(--text-light);margin-top:4px">Category tasks auto-load. Add overrides here.</div></div><button class="btn-primary" onclick="saveNewIndoorPlant()">Add</button><button class="btn-secondary" onclick="closeModal()">Cancel</button>`;
   document.getElementById('modal-overlay').classList.add('active');
 }
-function saveNewIndoorPlant(){const name=document.getElementById('ap-name').value.trim();if(!name)return;S.indoorPlants.push({id:'ip'+Date.now(),roomId:S.currentRoom.id,section:document.getElementById('ap-section').value,name,scientific:document.getElementById('ap-sci').value,emoji:document.getElementById('ap-emoji').value||'🌿',status:document.getElementById('ap-status').value,water:document.getElementById('ap-water').value,sun:document.getElementById('ap-sun').value,notes:document.getElementById('ap-notes').value,maintenance:collectMaintTasks('ap'),trouble:[]});save();closeModal();showRoom(S.currentRoom.id);}
+function saveNewIndoorPlant(){const name=document.getElementById('ap-name').value.trim();if(!name)return;S.indoorPlants.push({id:'ip'+Date.now(),roomId:S.currentRoom.id,section:document.getElementById('ap-section').value,name,scientific:document.getElementById('ap-sci').value,emoji:document.getElementById('ap-emoji').value||'🌿',category:document.getElementById('ap-category').value||'None',status:document.getElementById('ap-status').value,water:document.getElementById('ap-water').value,sun:document.getElementById('ap-sun').value,notes:document.getElementById('ap-notes').value,maintenance:collectMaintTasks('ap'),trouble:[]});save();closeModal();showRoom(S.currentRoom.id);}
 // Maintenance task form helpers
 const _MONTHS=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
 let _formMaintTasks=[];
@@ -1344,6 +1353,38 @@ const PLANT_CATEGORIES={
   'Orchids':[{task:'Soak then drain fully — never sit in water',months:[1,2,3,4,5,6,7,8,9,10,11,12]},{task:'Feed orchid fertilizer every 2 weeks when growing',months:[3,4,5,6,7,8,9]},{task:'Cool nights in fall trigger new bloom spike',months:[9,10,11]}],
   'None':[]
 };
+const PLANT_CATEGORY_MAP={
+  'fl-clivia':'Bulbs','fl-mondo':'Ornamental Grasses','fl-carex':'Ornamental Grasses',
+  'rw-clivia':'Bulbs','rw-fern-ex':'Ferns','rw-sword':'Ferns','rw-oxalis':'Bulbs',
+  'mp-fern':'Ferns','mp-japgrass':'Ornamental Grasses','mp-daylily':'Bulbs','mp-mondo':'Ornamental Grasses','mp-carex':'Ornamental Grasses','mp-sword':'Ferns',
+  'ch-cherry':'Fruit Trees','ch-daylily':'Bulbs','ch-mondo':'Ornamental Grasses',
+  'fr-lavender':'Herbs','fr-daylily':'Bulbs','fr-catmint':'Herbs','fr-mondo':'Ornamental Grasses',
+  'ros-apricot':'Fruit Trees','ros-lemon':'Fruit Trees','ros-peruvian':'Bulbs','ros-flowercarpet':'Bush Roses','ros-treerose':'Bush Roses',
+  'br-fatsia':'Tropical Foliage','br-liriope':'Ornamental Grasses','br-anemone':'Bulbs',
+  'bl-fatsia':'Tropical Foliage','bl-liriope':'Ornamental Grasses',
+  'fw-rose':'Bush Roses',
+  'ma-palm':'Tropical Foliage','ma-salvia':'Salvias',
+  'sa-bougainvillea':'Bougainvillea','sa-iceberg':'Climbing Roses','sa-angelface':'Climbing Roses','sa-burstjoy':'Bush Roses','sa-mophead':'Hydrangeas','sa-oakleaf':'Hydrangeas','sa-knockoutrose':'Bush Roses','sa-salvia':'Salvias',
+  'bbq-existsalvia':'Salvias','bbq-existrose':'Bush Roses','bbq-whiteboug':'Bougainvillea','bbq-salvia':'Salvias','bbq-dahlia':'Bulbs',
+  'st-aeonium':'Succulents & Cacti',
+  'ps-orange':'Fruit Trees','ps-persimmon':'Fruit Trees','ps-pomegranate':'Fruit Trees','ps-raspberry':'Fruit Trees','ps-blackberry':'Fruit Trees','ps-salvia':'Salvias','ps-beets':'Vegetables',
+  'ts-plum':'Fruit Trees','ts-rainier':'Fruit Trees',
+  'brs-sunburst':'Bush Roses','brs-daustinrose':'Bush Roses','brs-dahlia':'Bulbs','brs-phormium':'Ornamental Grasses',
+  'ip1':'Tropical Foliage','ip2':'Tropical Foliage','ip3':'Tropical Foliage','ip4':'Tropical Foliage',
+  'ip5':'Ferns','ip6':'Tropical Foliage','ip7':'Tropical Foliage','ip8':'Tropical Foliage',
+  'ip9':'Tropical Foliage','ip10':'Succulents & Cacti','ip11':'Ferns','ip12':'Tropical Foliage',
+  'ip13':'Tropical Foliage','ip14':'Tropical Foliage','ip15':'Succulents & Cacti','ip16':'Succulents & Cacti',
+  'ip17':'Ferns','ip18':'Tropical Foliage','ip19':'Ferns','ip20':'Tropical Foliage',
+  'ip21':'Tropical Foliage','ip22':'Tropical Foliage','ip23':'Tropical Foliage','ip24':'Tropical Foliage',
+  'ip25':'Orchids','ip26':'Tropical Foliage','ip27':'Tropical Foliage','ip28':'Tropical Foliage',
+  'ip29':'Tropical Foliage','ip30':'Tropical Foliage','ip31':'Orchids','ip32':'Tropical Foliage',
+  'ip33':'Succulents & Cacti','ip34':'Succulents & Cacti'
+};
+function migratePlantCategories(){
+  [...S.plants,...S.indoorPlants].forEach(function(p){
+    if(!p.category)p.category=PLANT_CATEGORY_MAP[p.id]||'None';
+  });
+}
 function getCategoryOpts(){return Object.keys(PLANT_CATEGORIES).map(c=>`<option value="${c}">${c}</option>`).join('');}
 function inheritCategoryTasks(category,prefix){
   const tasks=PLANT_CATEGORIES[category]||[];
