@@ -2340,50 +2340,6 @@
       "category": "None"
     },
     {
-      "id": "br-begonia",
-      "bedId": "b-br",
-      "name": "Tuberous Begonia Hot Pink",
-      "scientific": "Begonia tuberhybrida",
-      "emoji": "🌸",
-      "status": "planned",
-      "water": "Regular",
-      "sun": "Part shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "x12. Hot pink. In front of planter.",
-      "maintenance": [
-        {
-          "task": "Deadhead spent blooms continuously",
-          "months": [
-            5,
-            6,
-            7,
-            8,
-            9,
-            10
-          ]
-        },
-        {
-          "task": "Feed liquid fertilizer every 2 weeks",
-          "months": [
-            5,
-            6,
-            7,
-            8,
-            9
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Powdery mildew",
-          "url": "https://www.google.com/search?q=Powdery%20mildew%20plant%20care%20fix"
-        }
-      ],
-      "category": "None"
-    },
-    {
       "id": "br-impatiens-curve",
       "bedId": "b-br",
       "name": "Impatiens White (Curve)",
@@ -7081,5 +7037,5 @@
     }
   ],
   "irrigation": [],
-  "syncedAt": "2026-05-06T23:17:43.444Z"
+  "syncedAt": "2026-05-06T23:18:58.702Z"
 }
