@@ -1817,7 +1817,7 @@
     },
     {
       "id": "ros-apricot",
-      "bedId": "b-ros",
+      "bedId": "b-back-rose",
       "name": "Apricot Tree",
       "scientific": "Prunus armeniaca",
       "emoji": "🍑",
@@ -7081,5 +7081,5 @@
     }
   ],
   "irrigation": [],
-  "syncedAt": "2026-05-06T18:26:20.453Z"
+  "syncedAt": "2026-05-06T18:29:04.719Z"
 }
