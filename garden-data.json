@@ -5967,7 +5967,7 @@
     {
       "id": "ip29",
       "roomId": "r-house",
-      "section": "Other",
+      "section": "Bedroom",
       "name": "Dracaena",
       "scientific": "Dracaena spp.",
       "emoji": "ðµ",
@@ -6835,5 +6835,5 @@
     }
   ],
   "irrigation": [],
-  "syncedAt": "2026-05-06T17:05:36.579Z"
+  "syncedAt": "2026-05-06T17:05:50.209Z"
 }
