@@ -6053,7 +6053,7 @@
     {
       "id": "ip31",
       "roomId": "r-house",
-      "section": "Other",
+      "section": "Living Room",
       "name": "Orchid",
       "scientific": "Phalaenopsis spp.",
       "emoji": "ð¸",
@@ -6835,5 +6835,5 @@
     }
   ],
   "irrigation": [],
-  "syncedAt": "2026-05-06T17:05:50.209Z"
+  "syncedAt": "2026-05-06T17:06:03.856Z"
 }
