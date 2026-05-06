@@ -817,7 +817,21 @@ async function ghReadFile(){
     if(r.status===404)return null; // file doesn't exist yet — ok
     if(!r.ok){setGHStatus('❌ GitHub read error: '+r.status+' '+r.statusText,'var(--terracotta)');return null;}
     const d=await r.json();
-    return{content:JSON.parse(atob(d.content.replace(/\n/g,''))),sha:d.sha};
+    const sha=d.sha;
+    let content;
+    if(d.content){
+      // Small file: content is inline base64
+      content=JSON.parse(atob(d.content.replace(/\n/g,'')));
+    } else if(d.download_url){
+      // Large file (>1 MB): GitHub omits content field, must fetch via download_url
+      const dr=await fetch(d.download_url);
+      if(!dr.ok){setGHStatus('❌ GitHub read error (download): '+dr.status,'var(--terracotta)');return null;}
+      content=await dr.json();
+    } else {
+      setGHStatus('❌ GitHub read error: no content or download_url','var(--terracotta)');
+      return null;
+    }
+    return{content,sha};
   }catch(e){setGHStatus('❌ Network error: '+e.message,'var(--terracotta)');return null;}
 }
 
