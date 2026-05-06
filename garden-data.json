@@ -6261,6 +6261,67 @@
           "url": "https://www.google.com/search?q=Dropping%20leaves%20(overwatering)%20plant%20care%20fix"
         }
       ]
+    },
+    {
+      "id": "ip1778088094425",
+      "roomId": "r-house",
+      "section": "Bedroom",
+      "name": "Fern",
+      "scientific": "",
+      "emoji": "🌿",
+      "status": "alive",
+      "water": "",
+      "sun": "",
+      "notes": "",
+      "maintenance": [
+        {
+          "task": "Keep consistently moist — never let dry out",
+          "months": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ]
+        },
+        {
+          "task": "Mist fronds or use pebble tray for humidity",
+          "months": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ]
+        },
+        {
+          "task": "Feed diluted fertilizer monthly",
+          "months": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ]
+        }
+      ],
+      "trouble": []
     }
   ],
   "todos": [
@@ -6835,5 +6896,5 @@
     }
   ],
   "irrigation": [],
-  "syncedAt": "2026-05-06T17:07:05.555Z"
+  "syncedAt": "2026-05-06T17:21:45.933Z"
 }
