@@ -1048,8 +1048,10 @@ async function init(){
     // (UTF-8 bytes stored as individual Unicode code points). Re-encode via latin-1.
     function fixEmoji(s,fallback){
       if(!s)return fallback;
-      if([...s].some(c=>c.charCodeAt(0)>=0x80&&c.charCodeAt(0)<=0xFF)){
-        try{return decodeURIComponent(escape(s));}catch(e){return fallback;}
+      // Loop handles double/triple corruption (each sync cycle re-encodes the bytes)
+      for(let i=0;i<5;i++){
+        if(![...s].some(c=>c.charCodeAt(0)>=0x80&&c.charCodeAt(0)<=0xFF))break;
+        try{s=decodeURIComponent(escape(s));}catch(e){return fallback;}
       }
       return s;
     }
