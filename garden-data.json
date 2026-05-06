@@ -5806,7 +5806,7 @@
     {
       "id": "ip26",
       "roomId": "r-house",
-      "section": "Other",
+      "section": "Living Room",
       "name": "Peace Lily",
       "scientific": "Spathiphyllum spp.",
       "emoji": "â®ï¸",
@@ -6835,5 +6835,5 @@
     }
   ],
   "irrigation": [],
-  "syncedAt": "2026-05-06T17:03:53.082Z"
+  "syncedAt": "2026-05-06T17:04:59.348Z"
 }
