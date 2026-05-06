@@ -4308,6 +4308,20 @@
           "url": "https://www.google.com/search?q=Crown%20rot%20(overwatering)%20plant%20care%20fix"
         }
       ]
+    },
+    {
+      "id": "p1778089554019",
+      "bedId": "b-rw",
+      "name": "Redwood Trees",
+      "scientific": "",
+      "emoji": "🌲",
+      "status": "alive",
+      "water": "",
+      "sun": "",
+      "notes": "",
+      "fromCutting": false,
+      "maintenance": [],
+      "trouble": []
     }
   ],
   "indoorPlants": [
@@ -6896,5 +6910,5 @@
     }
   ],
   "irrigation": [],
-  "syncedAt": "2026-05-06T17:40:31.735Z"
+  "syncedAt": "2026-05-06T17:45:54.025Z"
 }
