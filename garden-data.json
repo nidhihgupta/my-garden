@@ -4425,7 +4425,7 @@
       "id": "p1778089554019",
       "bedId": "b-rw",
       "name": "Redwood Trees",
-      "scientific": "",
+      "scientific": "Sequoia sempervirens",
       "emoji": "🌲",
       "status": "alive",
       "water": "",
@@ -7081,5 +7081,5 @@
     }
   ],
   "irrigation": [],
-  "syncedAt": "2026-05-06T18:25:36.992Z"
+  "syncedAt": "2026-05-06T18:26:20.453Z"
 }
