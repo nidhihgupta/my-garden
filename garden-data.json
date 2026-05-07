@@ -4880,7 +4880,31 @@
       "sun": "",
       "notes": "",
       "fromCutting": false,
-      "maintenance": [],
+      "maintenance": [
+        {
+          "task": "Cut back by 1/3 if leggy — reblooms in 3 weeks",
+          "months": [
+            7,
+            8
+          ]
+        },
+        {
+          "task": "Hard cutback after last frost risk",
+          "months": [
+            3
+          ]
+        },
+        {
+          "task": "High phosphorus fertilizer monthly",
+          "months": [
+            5,
+            6,
+            7,
+            8,
+            9
+          ]
+        }
+      ],
       "trouble": []
     }
   ],
@@ -7505,5 +7529,5 @@
     }
   ],
   "irrigation": [],
-  "syncedAt": "2026-05-07T05:12:22.781Z"
+  "syncedAt": "2026-05-07T05:16:22.098Z"
 }
