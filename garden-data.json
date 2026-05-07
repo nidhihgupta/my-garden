@@ -4429,6 +4429,44 @@
         }
       ],
       "trouble": []
+    },
+    {
+      "id": "p1778117705415",
+      "bedId": "b-br",
+      "name": "Podocarpus",
+      "scientific": "",
+      "emoji": "🌲",
+      "category": "Trees",
+      "status": "alive",
+      "water": "",
+      "sun": "",
+      "notes": "",
+      "fromCutting": false,
+      "maintenance": [
+        {
+          "task": "Deep water monthly — slow hose at drip line",
+          "months": [
+            6,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "task": "Feed slow release balanced fertilizer in spring",
+          "months": [
+            3
+          ]
+        },
+        {
+          "task": "Check for dead/crossing branches — remove cleanly",
+          "months": [
+            1,
+            2
+          ]
+        }
+      ],
+      "trouble": []
     }
   ],
   "indoorPlants": [
@@ -7052,5 +7090,5 @@
     }
   ],
   "irrigation": [],
-  "syncedAt": "2026-05-07T00:39:57.880Z"
+  "syncedAt": "2026-05-07T01:35:05.423Z"
 }
