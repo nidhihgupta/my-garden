@@ -5441,7 +5441,7 @@
     },
     {
       "id": "p1778179148729",
-      "bedId": "b-berry",
+      "bedId": "b-mp",
       "name": "Bridal Wreath",
       "scientific": "Stephanotis floribunda",
       "emoji": "🌿",
@@ -8186,5 +8186,5 @@
     }
   ],
   "irrigation": [],
-  "syncedAt": "2026-05-07T20:02:05.071Z"
+  "syncedAt": "2026-05-07T20:02:38.699Z"
 }
