@@ -4867,6 +4867,21 @@
         }
       ],
       "trouble": []
+    },
+    {
+      "id": "p1778130742776",
+      "bedId": "b-bbq",
+      "name": "Hibiscus",
+      "scientific": "",
+      "emoji": "🌺",
+      "category": "Salvias",
+      "status": "alive",
+      "water": "",
+      "sun": "",
+      "notes": "",
+      "fromCutting": false,
+      "maintenance": [],
+      "trouble": []
     }
   ],
   "indoorPlants": [
@@ -7490,5 +7505,5 @@
     }
   ],
   "irrigation": [],
-  "syncedAt": "2026-05-07T05:11:05.410Z"
+  "syncedAt": "2026-05-07T05:12:22.781Z"
 }
