@@ -3383,7 +3383,7 @@
       "name": "Existing Salvia",
       "scientific": "Salvia spp.",
       "emoji": "💜",
-      "status": "alive",
+      "status": "planned",
       "water": "Low-moderate",
       "sun": "Full sun",
       "datePlanted": "",
@@ -7530,5 +7530,5 @@
     }
   ],
   "irrigation": [],
-  "syncedAt": "2026-05-07T05:08:32.638Z"
+  "syncedAt": "2026-05-07T05:09:54.851Z"
 }
