@@ -5529,7 +5529,7 @@
     },
     {
       "id": "p1778183645573",
-      "bedId": "b-tom",
+      "bedId": "b-ros",
       "name": "Potato Vine",
       "scientific": "Solanum laxum",
       "emoji": "🌿",
@@ -8186,5 +8186,5 @@
     }
   ],
   "irrigation": [],
-  "syncedAt": "2026-05-07T19:56:50.897Z"
+  "syncedAt": "2026-05-07T20:02:05.071Z"
 }
