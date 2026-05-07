@@ -1449,21 +1449,27 @@ const PLANT_CATEGORIES={
   'Bougainvillea':[{task:'Hard prune — cut by 1/3',months:[2]},{task:'Feed Super Bloom half strength to moist soil',months:[7,8,9]},{task:'Cut by 1/3 after bloom finishes',months:[8]}],
   'Orchids':[{task:'Soak then drain fully — never sit in water',months:[1,2,3,4,5,6,7,8,9,10,11,12]},{task:'Feed orchid fertilizer every 2 weeks when growing',months:[3,4,5,6,7,8,9]},{task:'Cool nights in fall trigger new bloom spike',months:[9,10,11]}],
   'Trees':[{task:'Deep water monthly — slow hose at drip line',months:[6,7,8,9]},{task:'Feed slow release balanced fertilizer in spring',months:[3]},{task:'Check for dead/crossing branches — remove cleanly',months:[1,2]}],
+  'Shrubs':[{task:'Feed balanced slow-release fertilizer in spring',months:[3]},{task:'Prune to shape after flowering or late winter',months:[2,3,4]},{task:'Check for scale and aphids — treat with neem oil if found',months:[4,5]},{task:'Mulch around base to protect roots before winter',months:[11]}],
+  'Perennials':[{task:'Cut back dead foliage in late fall',months:[11,12]},{task:'Divide crowded clumps every 3-5 years in early spring',months:[3]},{task:'Feed balanced fertilizer as growth begins',months:[3]},{task:'Deadhead spent blooms to extend flowering season',months:[5,6,7,8,9]}],
+  'Annuals':[{task:'Feed liquid fertilizer every 2 weeks during growing season',months:[4,5,6,7,8,9]},{task:'Deadhead spent blooms to encourage continuous flowering',months:[5,6,7,8,9,10]},{task:'Replace at end of season',months:[10,11]}],
+  'Vines & Climbers':[{task:'Train and tie new growth to support structure',months:[4,5,6]},{task:'Prune to shape and control after flowering',months:[6,7]},{task:'Feed balanced fertilizer to promote growth',months:[3]},{task:'Cut back hard if overgrown — late winter only',months:[2]}],
   'None':[]
 };
 const PLANT_CATEGORY_MAP={
+  'fl-viburnum':'Shrubs','fl-sarcococca':'Shrubs','fl-breath':'Shrubs','fl-loro':'Shrubs','fl-abelia':'Shrubs',
+  'fl-bergenia':'Perennials','fl-alabama':'Perennials','fl-buttered':'Perennials','fl-tiarella':'Perennials','fl-hellebores':'Perennials','fl-lamium':'Perennials','fl-begonia':'Annuals',
   'fl-clivia':'Bulbs','fl-mondo':'Ornamental Grasses','fl-carex':'Ornamental Grasses',
-  'rw-pittosporum':'Trees','rw-clivia':'Bulbs','rw-fern-ex':'Ferns','rw-sword':'Ferns','rw-oxalis':'Bulbs',
-  'mp-maple':'Trees','mp-fern':'Ferns','mp-japgrass':'Ornamental Grasses','mp-daylily':'Bulbs','mp-mondo':'Ornamental Grasses','mp-carex':'Ornamental Grasses','mp-sword':'Ferns',
-  'ch-cherry':'Trees','ch-daylily':'Bulbs','ch-mondo':'Ornamental Grasses',
-  'fr-camphor':'Trees','fr-lavender':'Herbs','fr-daylily':'Bulbs','fr-catmint':'Herbs','fr-mondo':'Ornamental Grasses',
+  'rw-camellia':'Hydrangeas','rw-pittosporum':'Trees','rw-clivia':'Bulbs','rw-fern-ex':'Ferns','rw-sword':'Ferns','rw-hellebores':'Perennials','rw-oxalis':'Bulbs',
+  'mp-maple':'Trees','mp-camellia':'Hydrangeas','mp-fern':'Ferns','mp-japgrass':'Ornamental Grasses','mp-daylily':'Bulbs','mp-hosta':'Perennials','mp-abelia':'Shrubs','mp-mondo':'Ornamental Grasses','mp-carex':'Ornamental Grasses','mp-alabama':'Perennials','mp-sword':'Ferns','mp-lamium':'Perennials',
+  'ch-cherry':'Trees','ch-nandina':'Shrubs','ch-daylily':'Bulbs','ch-abelia':'Shrubs','ch-mondo':'Ornamental Grasses','ch-lamium':'Perennials',
+  'fr-camphor':'Trees','fr-lavender':'Herbs','fr-daylily':'Bulbs','fr-catmint':'Herbs','fr-abelia':'Shrubs','fr-loro':'Shrubs','fr-buttered':'Perennials','fr-mondo':'Ornamental Grasses','fr-lamium':'Perennials','fr-begonia':'Annuals',
   'ros-apricot':'Fruit Trees','ros-lemon':'Fruit Trees','ros-peruvian':'Bulbs','ros-flowercarpet':'Bush Roses','ros-treerose':'Bush Roses',
-  'br-fatsia':'Tropical Foliage','br-liriope':'Ornamental Grasses','br-anemone':'Bulbs',
-  'bl-fatsia':'Tropical Foliage','bl-liriope':'Ornamental Grasses',
-  'fw-rose':'Bush Roses',
-  'ma-palm':'Trees','ma-salvia':'Salvias',
-  'sa-bougainvillea':'Bougainvillea','sa-iceberg':'Climbing Roses','sa-angelface':'Climbing Roses','sa-burstjoy':'Bush Roses','sa-mophead':'Hydrangeas','sa-oakleaf':'Hydrangeas','sa-knockoutrose':'Bush Roses','sa-salvia':'Salvias',
-  'bbq-existsalvia':'Salvias','bbq-existrose':'Bush Roses','bbq-whiteboug':'Bougainvillea','bbq-salvia':'Salvias','bbq-dahlia':'Bulbs',
+  'br-fatsia':'Tropical Foliage','br-azalea':'Shrubs','br-hosta':'Perennials','br-anemone':'Bulbs','br-tiarella':'Perennials','br-liriope':'Ornamental Grasses','br-coleus':'Annuals','br-torenia':'Annuals','br-begonia':'Annuals','br-impatiens':'Annuals','br-impatiens-curve':'Annuals',
+  'bl-fatsia':'Tropical Foliage','bl-ivy':'Vines & Climbers','bl-azalea':'Shrubs','bl-liriope':'Ornamental Grasses','bl-begonia':'Annuals','bl-impatiens':'Annuals',
+  'fw-distictis':'Vines & Climbers','fw-rose':'Bush Roses','fw-geranium':'Perennials','fw-fuchsia':'Perennials','fw-begonia':'Annuals',
+  'ma-palm':'Trees','ma-jasmine':'Vines & Climbers','ma-salvia':'Salvias','ma-calibrachoa':'Annuals',
+  'sa-bougainvillea':'Bougainvillea','sa-iceberg':'Climbing Roses','sa-angelface':'Climbing Roses','sa-burstjoy':'Bush Roses','sa-mophead':'Hydrangeas','sa-oakleaf':'Hydrangeas','sa-passiflora':'Vines & Climbers','sa-knockoutrose':'Bush Roses','sa-salvia':'Salvias',
+  'bbq-daisy':'Perennials','bbq-chrysanthemum':'Perennials','bbq-existsalvia':'Salvias','bbq-existrose':'Bush Roses','bbq-whiteboug':'Bougainvillea','bbq-salvia':'Salvias','bbq-dahlia':'Bulbs','bbq-verbena':'Perennials',
   'st-aeonium':'Succulents & Cacti',
   'ps-orange':'Fruit Trees','ps-persimmon':'Fruit Trees','ps-pomegranate':'Fruit Trees','ps-raspberry':'Fruit Trees','ps-blackberry':'Fruit Trees','ps-salvia':'Salvias','ps-beets':'Vegetables',
   'ts-plum':'Fruit Trees','ts-rainier':'Fruit Trees',
@@ -1480,7 +1486,11 @@ const PLANT_CATEGORY_MAP={
 };
 function migratePlantCategories(){
   [...S.plants,...S.indoorPlants].forEach(function(p){
-    if(!p.category)p.category=PLANT_CATEGORY_MAP[p.id]||'None';
+    if(!p.category||p.category==='None'){
+      const mapped=PLANT_CATEGORY_MAP[p.id];
+      if(mapped)p.category=mapped;
+      else if(!p.category)p.category='None';
+    }
   });
 }
 function getCategoryOpts(){return Object.keys(PLANT_CATEGORIES).map(c=>`<option value="${c}">${c}</option>`).join('');}
