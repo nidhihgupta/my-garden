@@ -5231,6 +5231,55 @@
         }
       ],
       "trouble": []
+    },
+    {
+      "id": "p1778178167609",
+      "bedId": "b-back-rose",
+      "name": "Rose bush",
+      "scientific": "",
+      "emoji": "🌿",
+      "category": "Bush Roses",
+      "status": "alive",
+      "water": "",
+      "sun": "",
+      "notes": "",
+      "fromCutting": false,
+      "maintenance": [
+        {
+          "task": "Hard prune to outward facing buds",
+          "months": [
+            1,
+            2
+          ]
+        },
+        {
+          "task": "Deadhead every 2 weeks — outward facing bud, 45° cut",
+          "months": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "task": "Feed rose fertilizer after first bloom flush",
+          "months": [
+            5
+          ]
+        },
+        {
+          "task": "Monitor for powdery mildew — neem oil if spotted",
+          "months": [
+            6,
+            7,
+            8
+          ]
+        }
+      ],
+      "trouble": []
     }
   ],
   "indoorPlants": [
@@ -7854,5 +7903,5 @@
     }
   ],
   "irrigation": [],
-  "syncedAt": "2026-05-07T18:22:35.457Z"
+  "syncedAt": "2026-05-07T18:22:47.617Z"
 }
