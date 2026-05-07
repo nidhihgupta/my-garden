@@ -5601,6 +5601,21 @@
         }
       ],
       "trouble": []
+    },
+    {
+      "id": "p1778192989476",
+      "bedId": "b-tom",
+      "name": "Night jasmine",
+      "scientific": "Cestrum nocturnum ",
+      "emoji": "🌿",
+      "category": "None",
+      "status": "alive",
+      "water": "",
+      "sun": "",
+      "notes": "",
+      "fromCutting": false,
+      "maintenance": [],
+      "trouble": []
     }
   ],
   "indoorPlants": [
@@ -8224,5 +8239,5 @@
     }
   ],
   "irrigation": [],
-  "syncedAt": "2026-05-07T22:28:44.846Z"
+  "syncedAt": "2026-05-07T22:29:49.483Z"
 }
