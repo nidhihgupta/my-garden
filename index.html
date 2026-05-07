@@ -251,6 +251,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--warm-white);color:var(--t
     <div class="detail-section"><h4>Troubleshooting</h4><div id="plant-trouble-list"></div></div>
     <div class="detail-section"><h4>Notes</h4><div id="plant-notes-display" style="font-size:14px;color:var(--text-mid);line-height:1.6">No notes yet.</div></div>
     <button class="btn-secondary" onclick="editPlant()">Edit Plant</button>
+    <button class="btn-secondary" onclick="duplicatePlant()">Duplicate Plant</button>
     <button class="btn-danger" onclick="deletePlant()">Remove Plant</button>
   </div>
 </div>
@@ -1691,15 +1692,48 @@ function renderIrrigation(){document.getElementById('irrigation-list').innerHTML
 function addIrrigationLog(){document.getElementById('modal-body').innerHTML=`<h3>Log Irrigation</h3><div class="form-group"><label class="form-label">Zone *</label><input class="form-input" id="irr-zone"></div><div class="form-group"><label class="form-label">Run Time (min)</label><input class="form-input" type="number" id="irr-runtime"></div><div class="form-group"><label class="form-label">Frequency</label><select class="form-select" id="irr-freq"><option>Daily</option><option>Every other day</option><option>3x per week</option><option>2x per week</option><option>Weekly</option><option>Every 2 weeks</option><option>Off</option></select></div><div class="form-group"><label class="form-label">Date</label><input class="form-input" type="date" id="irr-date" value="${new Date().toISOString().split('T')[0]}"></div><div class="form-group"><label class="form-label">Notes</label><input class="form-input" id="irr-notes"></div><button class="btn-primary" onclick="saveIrrigation()">Save</button><button class="btn-secondary" onclick="closeModal()">Cancel</button>`;document.getElementById('modal-overlay').classList.add('active');}
 function saveIrrigation(){const zone=document.getElementById('irr-zone').value.trim();if(!zone)return;S.irrigation.unshift({id:'i'+Date.now(),zone,runtime:document.getElementById('irr-runtime').value,frequency:document.getElementById('irr-freq').value,date:document.getElementById('irr-date').value,notes:document.getElementById('irr-notes').value});save();closeModal();renderIrrigation();}
 function renderAllPlants(query){
-  const q=query.toLowerCase();
-  const outdoor=S.plants.filter(p=>p.name.toLowerCase().includes(q)||(p.scientific||'').toLowerCase().includes(q));
-  const indoor=S.indoorPlants.filter(p=>p.name.toLowerCase().includes(q)||(p.scientific||'').toLowerCase().includes(q));
+  const q=(query||'').toLowerCase();
+  const all=[
+    ...S.indoorPlants.map(p=>({...p,_indoor:true})),
+    ...S.plants.map(p=>({...p,_indoor:false}))
+  ].filter(p=>p.name.toLowerCase().includes(q)||(p.scientific||'').toLowerCase().includes(q));
   const list=document.getElementById('allplants-list');
-  if(!outdoor.length&&!indoor.length){list.innerHTML='<div class="empty-state"><span>🔍</span><p>No plants found.</p></div>';return;}
+  if(!all.length){list.innerHTML='<div class="empty-state"><span>🔍</span><p>No plants found.</p></div>';return;}
+  all.sort((a,b)=>a.name.localeCompare(b.name));
+  const groups={};
+  all.forEach(p=>{const letter=p.name[0].toUpperCase();if(!groups[letter])groups[letter]=[];groups[letter].push(p);});
   let html='';
-  if(indoor.length)html+=`<div class="section-header">🪴 Indoor (${indoor.length})</div><div style="padding:0 20px">${indoor.map(p=>{const room=S.rooms.find(r=>r.id===p.roomId);return`<div class="plant-card" onclick="showIndoorPlantFromAll('${p.id}')"><div class="plant-thumb">${emojiHtml(p.emoji,28)}</div><div class="plant-card-info"><div class="plant-card-name">${p.name}</div><div class="plant-card-detail">${room?room.name:''} · ${p.section||''}</div></div><div class="status-dot ${p.status||'alive'}"></div></div>`;}).join('')}</div>`;
-  if(outdoor.length)html+=`<div class="section-header">🌳 Outdoor (${outdoor.length})</div><div style="padding:0 20px">${outdoor.map(p=>{const bed=S.beds.find(b=>b.id===p.bedId);return`<div class="plant-card ${p.status==='planned'?'planned':''}" onclick="showOutdoorPlantFromAll('${p.id}')"><div class="plant-thumb">${emojiHtml(p.emoji,28)}</div><div class="plant-card-info"><div class="plant-card-name">${p.name}</div><div class="plant-card-detail">${bed?bed.name:'Unknown'}</div></div><div class="status-dot ${p.status||'alive'}"></div></div>`;}).join('')}</div>`;
+  Object.keys(groups).sort().forEach(letter=>{
+    html+=`<div class="section-header">${letter}</div><div style="padding:0 20px">`;
+    groups[letter].forEach(p=>{
+      const loc=p._indoor?(()=>{const room=S.rooms.find(r=>r.id===p.roomId);return(room?room.name:'')+(p.section?' · '+p.section:'');})():(()=>{const bed=S.beds.find(b=>b.id===p.bedId);return bed?bed.name:'Unknown';})();
+      const icon=p._indoor?'🪴':'🌳';
+      const onclick=p._indoor?`showIndoorPlantFromAll('${p.id}')`:`showOutdoorPlantFromAll('${p.id}')`;
+      html+=`<div class="plant-card ${p.status==='planned'?'planned':''}" onclick="${onclick}"><div class="plant-thumb">${emojiHtml(p.emoji,28)}</div><div class="plant-card-info"><div class="plant-card-name">${p.name}</div><div class="plant-card-detail">${icon} ${loc}</div></div><div class="status-dot ${p.status||'alive'}"></div></div>`;
+    });
+    html+='</div>';
+  });
   list.innerHTML=html;
+}
+function duplicatePlant(){
+  const p=S.currentPlant;if(!p)return;
+  if(p.isIndoor){
+    const roomOpts=S.rooms.map(r=>`<option value="${r.id}"${r.id===p.roomId?' selected':''}>${r.name}</option>`).join('');
+    document.getElementById('modal-body').innerHTML=`<h3>Duplicate Plant</h3><p style="font-size:13px;color:var(--text-mid);margin-bottom:16px">Add a copy of <strong>${p.name}</strong> to another room.</p><div class="form-group"><label class="form-label">Room</label><select class="form-select" id="dup-dest">${roomOpts}</select></div><div class="form-group"><label class="form-label">Section (optional)</label><input class="form-input" id="dup-section" placeholder="e.g. Window sill" value="${p.section||''}"></div><button class="btn-primary" onclick="saveDuplicatePlant(true)">Add Copy</button><button class="btn-secondary" onclick="closeModal()">Cancel</button>`;
+  }else{
+    const bedOpts=S.beds.map(b=>`<option value="${b.id}"${b.id===p.bedId?' selected':''}>${b.name}</option>`).join('');
+    document.getElementById('modal-body').innerHTML=`<h3>Duplicate Plant</h3><p style="font-size:13px;color:var(--text-mid);margin-bottom:16px">Add a copy of <strong>${p.name}</strong> to another bed.</p><div class="form-group"><label class="form-label">Bed</label><select class="form-select" id="dup-dest">${bedOpts}</select></div><button class="btn-primary" onclick="saveDuplicatePlant(false)">Add Copy</button><button class="btn-secondary" onclick="closeModal()">Cancel</button>`;
+  }
+  document.getElementById('modal-overlay').classList.add('active');
+}
+function saveDuplicatePlant(isIndoor){
+  const p=S.currentPlant;if(!p)return;
+  const copy={...p,id:'p'+Date.now()+(Math.random()*1000|0)};
+  if(isIndoor){copy.roomId=document.getElementById('dup-dest').value;copy.section=document.getElementById('dup-section').value;S.indoorPlants.push(copy);}
+  else{copy.bedId=document.getElementById('dup-dest').value;S.plants.push(copy);}
+  save();closeModal();
+  const dest=isIndoor?(S.rooms.find(r=>r.id===copy.roomId)||{name:'room'}).name:(S.beds.find(b=>b.id===copy.bedId)||{name:'bed'}).name;
+  alert(`${p.name} duplicated to ${dest}.`);
 }
 function showIndoorPlantFromAll(id){const p=S.indoorPlants.find(x=>x.id===id);if(!p)return;S.currentRoom=S.rooms.find(r=>r.id===p.roomId)||null;showIndoorPlant(id);}
 function showOutdoorPlantFromAll(id){const p=S.plants.find(x=>x.id===id);if(!p)return;S.currentBed=S.beds.find(b=>b.id===p.bedId)||null;showOutdoorPlant(id);}
