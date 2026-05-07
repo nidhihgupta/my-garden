@@ -2999,7 +2999,7 @@
     {
       "id": "sa-angelface",
       "bedId": "b-sa",
-      "name": "Rose",
+      "name": "Rose bush",
       "scientific": "Rosa Angel Face",
       "emoji": "💜",
       "status": "alive",
@@ -7530,5 +7530,5 @@
     }
   ],
   "irrigation": [],
-  "syncedAt": "2026-05-07T05:08:01.346Z"
+  "syncedAt": "2026-05-07T05:08:16.838Z"
 }
