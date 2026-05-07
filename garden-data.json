@@ -5309,41 +5309,6 @@
       "trouble": []
     },
     {
-      "id": "p1778178471868",
-      "bedId": "b-berry",
-      "name": "Camellia",
-      "scientific": "",
-      "emoji": "🌿",
-      "category": "Hydrangeas",
-      "status": "alive",
-      "water": "",
-      "sun": "",
-      "notes": "",
-      "fromCutting": false,
-      "maintenance": [
-        {
-          "task": "Deadwood removal only — no hard cutback",
-          "months": [
-            1
-          ]
-        },
-        {
-          "task": "Feed with azalea fertilizer",
-          "months": [
-            3
-          ]
-        },
-        {
-          "task": "Prune ONLY after flowering complete",
-          "months": [
-            8,
-            9
-          ]
-        }
-      ],
-      "trouble": []
-    },
-    {
       "id": "p1778178506166",
       "bedId": "b-berry",
       "name": "Pittosporum Tree",
@@ -8380,5 +8345,5 @@
     }
   ],
   "irrigation": [],
-  "syncedAt": "2026-05-07T23:01:45.871Z"
+  "syncedAt": "2026-05-07T23:02:15.740Z"
 }
