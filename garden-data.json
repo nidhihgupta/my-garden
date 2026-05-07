@@ -2950,7 +2950,7 @@
     {
       "id": "sa-iceberg",
       "bedId": "b-sa",
-      "name": "Rose",
+      "name": "Rose bush",
       "scientific": "Rosa Iceberg",
       "emoji": "🌹",
       "status": "alive",
@@ -7530,5 +7530,5 @@
     }
   ],
   "irrigation": [],
-  "syncedAt": "2026-05-07T05:07:39.277Z"
+  "syncedAt": "2026-05-07T05:08:01.346Z"
 }
