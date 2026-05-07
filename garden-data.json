@@ -4629,6 +4629,41 @@
         }
       ],
       "trouble": []
+    },
+    {
+      "id": "p1778118393809",
+      "bedId": "b-bl",
+      "name": "Mop head hydrangea",
+      "scientific": "",
+      "emoji": "🌸",
+      "category": "Hydrangeas",
+      "status": "alive",
+      "water": "",
+      "sun": "",
+      "notes": "",
+      "fromCutting": false,
+      "maintenance": [
+        {
+          "task": "Deadwood removal only — no hard cutback",
+          "months": [
+            1
+          ]
+        },
+        {
+          "task": "Feed with azalea fertilizer",
+          "months": [
+            3
+          ]
+        },
+        {
+          "task": "Prune ONLY after flowering complete",
+          "months": [
+            8,
+            9
+          ]
+        }
+      ],
+      "trouble": []
     }
   ],
   "indoorPlants": [
@@ -7252,5 +7287,5 @@
     }
   ],
   "irrigation": [],
-  "syncedAt": "2026-05-07T01:45:50.656Z"
+  "syncedAt": "2026-05-07T01:46:33.814Z"
 }
