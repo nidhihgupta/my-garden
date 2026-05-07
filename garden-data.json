@@ -4822,6 +4822,42 @@
         }
       ],
       "trouble": []
+    },
+    {
+      "id": "p1778124307829",
+      "bedId": "b-ma",
+      "name": "White Stripe Bougainvillea",
+      "scientific": "",
+      "emoji": "🌸",
+      "category": "Bougainvillea",
+      "status": "alive",
+      "water": "",
+      "sun": "",
+      "notes": "",
+      "fromCutting": false,
+      "maintenance": [
+        {
+          "task": "Hard prune — cut by 1/3",
+          "months": [
+            2
+          ]
+        },
+        {
+          "task": "Feed Super Bloom half strength to moist soil",
+          "months": [
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "task": "Cut by 1/3 after bloom finishes",
+          "months": [
+            8
+          ]
+        }
+      ],
+      "trouble": []
     }
   ],
   "indoorPlants": [
@@ -7445,5 +7481,5 @@
     }
   ],
   "irrigation": [],
-  "syncedAt": "2026-05-07T03:24:20.614Z"
+  "syncedAt": "2026-05-07T03:25:07.833Z"
 }
