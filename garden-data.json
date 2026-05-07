@@ -2865,7 +2865,7 @@
     },
     {
       "id": "ma-calibrachoa",
-      "bedId": "b-ma",
+      "bedId": "b-sa",
       "name": "Calibrachoa",
       "scientific": "Calibrachoa spp.",
       "emoji": "🌸",
@@ -7621,5 +7621,5 @@
     }
   ],
   "irrigation": [],
-  "syncedAt": "2026-05-07T14:59:58.428Z"
+  "syncedAt": "2026-05-07T16:11:36.136Z"
 }
