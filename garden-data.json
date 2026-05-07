@@ -2779,7 +2779,7 @@
     },
     {
       "id": "ma-palm",
-      "bedId": "b-ma",
+      "bedId": "b-sa",
       "name": "Palms in Planters",
       "scientific": "Arecaceae spp.",
       "emoji": "🌴",
@@ -7014,5 +7014,5 @@
     }
   ],
   "irrigation": [],
-  "syncedAt": "2026-05-07T00:37:53.517Z"
+  "syncedAt": "2026-05-07T00:38:41.161Z"
 }
