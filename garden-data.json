@@ -4241,7 +4241,7 @@
       "bedId": "b-back-rose",
       "name": "Phormium",
       "scientific": "Phormium tenax",
-      "emoji": "🌿🌾",
+      "emoji": "🌾",
       "status": "alive",
       "water": "Low-moderate",
       "sun": "Part sun",
@@ -7918,5 +7918,5 @@
     }
   ],
   "irrigation": [],
-  "syncedAt": "2026-05-07T18:24:42.349Z"
+  "syncedAt": "2026-05-07T18:25:25.772Z"
 }
