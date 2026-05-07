@@ -4858,6 +4858,55 @@
         }
       ],
       "trouble": []
+    },
+    {
+      "id": "p1778130459270",
+      "bedId": "b-sa",
+      "name": "Climbing rose",
+      "scientific": "",
+      "emoji": "🌹",
+      "category": "Climbing Roses",
+      "status": "alive",
+      "water": "",
+      "sun": "",
+      "notes": "",
+      "fromCutting": false,
+      "maintenance": [
+        {
+          "task": "Light tip prune only — do not hard cut",
+          "months": [
+            1,
+            2
+          ]
+        },
+        {
+          "task": "Deadhead spent blooms",
+          "months": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "task": "Train and tie new canes to structure",
+          "months": [
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "task": "Feed after first flush",
+          "months": [
+            5
+          ]
+        }
+      ],
+      "trouble": []
     }
   ],
   "indoorPlants": [
@@ -7481,5 +7530,5 @@
     }
   ],
   "irrigation": [],
-  "syncedAt": "2026-05-07T05:01:24.827Z"
+  "syncedAt": "2026-05-07T05:07:39.277Z"
 }
