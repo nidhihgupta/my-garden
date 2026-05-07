@@ -5511,6 +5511,21 @@
       "fromCutting": false,
       "maintenance": [],
       "trouble": []
+    },
+    {
+      "id": "p1778183527031",
+      "bedId": "b-tom",
+      "name": "Gazania",
+      "scientific": "",
+      "emoji": "🌿",
+      "category": "None",
+      "status": "alive",
+      "water": "",
+      "sun": "",
+      "notes": "",
+      "fromCutting": false,
+      "maintenance": [],
+      "trouble": []
     }
   ],
   "indoorPlants": [
@@ -8134,5 +8149,5 @@
     }
   ],
   "irrigation": [],
-  "syncedAt": "2026-05-07T19:51:52.267Z"
+  "syncedAt": "2026-05-07T19:52:07.036Z"
 }
