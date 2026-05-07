@@ -5765,6 +5765,43 @@
       ],
       "category": "None",
       "isIndoor": false
+    },
+    {
+      "id": "p1778195377685437",
+      "bedId": "b-berry",
+      "name": "Fatsia japonica",
+      "scientific": "Fatsia japonica",
+      "emoji": "🌿",
+      "status": "planned",
+      "water": "Moderate",
+      "sun": "Part shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "2-gallon. Behind planter area.",
+      "maintenance": [
+        {
+          "task": "Cut back in spring before growth pushes",
+          "months": [
+            2,
+            3
+          ]
+        },
+        {
+          "task": "Take cuttings for propagation",
+          "months": [
+            3
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Leaf drop",
+          "url": "https://www.google.com/search?q=Leaf%20drop%20plant%20care%20fix"
+        }
+      ],
+      "category": "Tropical Foliage",
+      "isIndoor": false
     }
   ],
   "indoorPlants": [
@@ -8388,5 +8425,5 @@
     }
   ],
   "irrigation": [],
-  "syncedAt": "2026-05-07T23:09:08.793Z"
+  "syncedAt": "2026-05-07T23:09:38.876Z"
 }
