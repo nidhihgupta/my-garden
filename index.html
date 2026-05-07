@@ -115,6 +115,10 @@ body{font-family:'DM Sans',sans-serif;background:var(--warm-white);color:var(--t
 .form-input,.form-select,.form-textarea{width:100%;padding:12px 14px;border:1.5px solid var(--border);border-radius:var(--radius-sm);font-family:'DM Sans',sans-serif;font-size:15px;color:var(--text-dark);background:white;outline:none;transition:border-color 0.2s;-webkit-appearance:none;}
 .form-input:focus,.form-select:focus,.form-textarea:focus{border-color:var(--sage);}
 .form-textarea{min-height:80px;resize:vertical;}
+.emoji-field{display:flex;align-items:center;gap:10px;border:1.5px solid var(--border);border-radius:12px;padding:10px 14px;background:#fff;}
+.emoji-field-preview{font-size:28px;line-height:1;flex-shrink:0;min-width:36px;text-align:center;}
+.emoji-field-preview img{width:36px;height:36px;object-fit:contain;border-radius:4px;display:block;}
+.emoji-field .emoji-field-input{border:none!important;padding:0!important;outline:none!important;font-size:16px;flex:1;background:transparent;min-width:0;}
 .btn-primary{width:100%;padding:14px;background:var(--sage-dark);color:white;border:none;border-radius:var(--radius-sm);font-family:'DM Sans',sans-serif;font-size:15px;font-weight:500;cursor:pointer;margin-top:8px;}
 .btn-secondary{width:100%;padding:13px;background:transparent;color:var(--sage-dark);border:1.5px solid var(--sage-dark);border-radius:var(--radius-sm);font-family:'DM Sans',sans-serif;font-size:15px;font-weight:500;cursor:pointer;margin-top:8px;}
 .btn-danger{width:100%;padding:13px;background:transparent;color:#e05555;border:1.5px solid #e05555;border-radius:var(--radius-sm);font-family:'DM Sans',sans-serif;font-size:15px;font-weight:500;cursor:pointer;margin-top:8px;}
@@ -343,6 +347,74 @@ function p(id,bedId,name,sci,emoji,status,water,sun,notes,maintenance,trouble,ca
   return obj;
 }
 function m(task,months){return{task,months};}
+
+// Returns HTML to render an emoji value — handles both Unicode emoji and Genmoji data URLs
+function emojiHtml(val,px){
+  const e=val||'🌿';
+  if(e.startsWith('data:')){return`<img src="${e}" style="width:${px}px;height:${px}px;object-fit:contain;border-radius:4px;display:inline-block;vertical-align:middle">`;}
+  return`<span style="font-size:${px}px;line-height:1">${e}</span>`;
+}
+// Compresses pasted Genmoji image to 64x64 WebP ~3-6KB
+function compressEmojiImage(src,callback){
+  const img=new Image();
+  img.onload=function(){
+    const SIZE=64,canvas=document.createElement('canvas');
+    canvas.width=SIZE;canvas.height=SIZE;
+    const ctx=canvas.getContext('2d');
+    const s=Math.min(img.width,img.height);
+    ctx.drawImage(img,(img.width-s)/2,(img.height-s)/2,s,s,0,0,SIZE,SIZE);
+    callback(canvas.toDataURL('image/webp',0.8));
+  };
+  img.src=src;
+}
+// Builds composite emoji field widget (text input + Genmoji paste support)
+function buildEmojiField(id,val){
+  val=val||'🌿';
+  const isImg=val.startsWith('data:');
+  const previewHtml=isImg?`<img src="${val}" style="width:36px;height:36px;object-fit:contain;border-radius:4px;display:block">`:`<span style="font-size:28px;line-height:1">${val}</span>`;
+  const clearBtn=isImg?`<button type="button" class="btn-secondary emoji-clear-btn" style="margin:0;padding:6px 10px;font-size:11px;width:auto" onclick="clearEmojiField('${id}')">✕ Clear</button>`:'';
+  return`<div class="emoji-field" id="${id}-wrap"><div class="emoji-field-preview" id="${id}-preview">${previewHtml}</div><input class="emoji-field-input" id="${id}" value="${isImg?'':val}" placeholder="Type emoji or paste Genmoji" oninput="syncEmojiPreview('${id}')" style="${isImg?'display:none':''}"><input type="hidden" id="${id}-data" value="${val}">${clearBtn}</div>`;
+}
+function getEmojiFieldValue(id){
+  const d=document.getElementById(id+'-data');
+  return d?d.value:(document.getElementById(id)?.value||'🌿');
+}
+function syncEmojiPreview(id){
+  const input=document.getElementById(id);if(!input)return;
+  const val=input.value||'🌿';
+  const d=document.getElementById(id+'-data');if(d)d.value=val;
+  const prev=document.getElementById(id+'-preview');
+  if(prev)prev.innerHTML=`<span style="font-size:28px;line-height:1">${val}</span>`;
+}
+function clearEmojiField(id){
+  const input=document.getElementById(id),d=document.getElementById(id+'-data'),prev=document.getElementById(id+'-preview'),wrap=document.getElementById(id+'-wrap');
+  if(input){input.style.display='';input.value='🌿';}
+  if(d)d.value='🌿';
+  if(prev)prev.innerHTML=`<span style="font-size:28px;line-height:1">🌿</span>`;
+  if(wrap){const cb=wrap.querySelector('.emoji-clear-btn');if(cb)cb.remove();}
+}
+function attachEmojiPasteListener(id){
+  const wrap=document.getElementById(id+'-wrap');if(!wrap)return;
+  wrap.addEventListener('paste',function(e){
+    const items=e.clipboardData?.items;if(!items)return;
+    for(const item of items){
+      if(item.type.startsWith('image/')){
+        e.preventDefault();
+        const reader=new FileReader();
+        reader.onload=function(ev){
+          compressEmojiImage(ev.target.result,function(dataUrl){
+            const input=document.getElementById(id),d=document.getElementById(id+'-data'),prev=document.getElementById(id+'-preview'),w=document.getElementById(id+'-wrap');
+            if(input)input.style.display='none';
+            if(d)d.value=dataUrl;
+            if(prev)prev.innerHTML=`<img src="${dataUrl}" style="width:36px;height:36px;object-fit:contain;border-radius:4px;display:block">`;
+            if(w&&!w.querySelector('.emoji-clear-btn')){const btn=document.createElement('button');btn.type='button';btn.className='btn-secondary emoji-clear-btn';btn.style.cssText='margin:0;padding:6px 10px;font-size:11px;width:auto';btn.textContent='✕ Clear';btn.onclick=function(){clearEmojiField(id);};w.appendChild(btn);}
+          });
+        };
+        reader.readAsDataURL(item.getAsFile());return;
+      }
+    }
+  });
+}
 
 // Common maintenance
 const roseDeadhead=m('Deadhead every 2 weeks — outward facing bud, 45° cut',[4,5,6,7,8,9,10]);
@@ -1149,7 +1221,7 @@ function showRoom(roomId){
   document.getElementById('room-subtitle').textContent=`${plants.length} plant${plants.length!==1?'s':''}`;
   document.getElementById('room-sections-list').innerHTML=(room.sections||['Other']).map(section=>{
     const sp=plants.filter(p=>p.section===section);
-    return`<div class="section-header">${section} (${sp.length})</div><div style="padding:0 20px">${sp.map(p=>`<div class="plant-card" onclick="showIndoorPlant('${p.id}')"><div class="plant-thumb">${p.emoji||'🌿'}</div><div class="plant-card-info"><div class="plant-card-name">${p.name}</div><div class="plant-card-detail">${p.scientific||''}</div></div><div class="status-dot ${p.status||'alive'}"></div></div>`).join('')}</div>`;
+    return`<div class="section-header">${section} (${sp.length})</div><div style="padding:0 20px">${sp.map(p=>`<div class="plant-card" onclick="showIndoorPlant('${p.id}')"><div class="plant-thumb">${emojiHtml(p.emoji,28)}</div><div class="plant-card-info"><div class="plant-card-name">${p.name}</div><div class="plant-card-detail">${p.scientific||''}</div></div><div class="status-dot ${p.status||'alive'}"></div></div>`).join('')}</div>`;
   }).join('');
   showScreen('room');
 }
@@ -1185,7 +1257,7 @@ function renderBedPlants(filter){
   document.getElementById('bed-plant-count').textContent=alive;
   document.getElementById('bed-planned-count').textContent=planned;
   document.getElementById('bed-plants-list').innerHTML=filtered.length===0?'<div class="empty-state"><span>🌱</span><p>No plants here yet.</p></div>':
-    filtered.map(p=>`<div class="plant-card ${p.status==='planned'?'planned':''}" onclick="showOutdoorPlant('${p.id}')"><div class="plant-thumb">${p.emoji||'🌿'}</div><div class="plant-card-info"><div class="plant-card-name">${p.name}</div><div class="plant-card-detail">${p.scientific||p.water||'—'}</div></div><div class="status-dot ${p.status||'alive'}"></div></div>`).join('');
+    filtered.map(p=>`<div class="plant-card ${p.status==='planned'?'planned':''}" onclick="showOutdoorPlant('${p.id}')"><div class="plant-thumb">${emojiHtml(p.emoji,28)}</div><div class="plant-card-info"><div class="plant-card-name">${p.name}</div><div class="plant-card-detail">${p.scientific||p.water||'—'}</div></div><div class="status-dot ${p.status||'alive'}"></div></div>`).join('');
   document.querySelectorAll('.filter-chip').forEach(c=>c.classList.remove('active'));
   const chips=document.querySelectorAll('.filter-chip');
   chips.forEach(c=>{const t=c.textContent.trim();if((filter==='all'&&t==='All')||(filter==='alive'&&t==='Existing')||(filter==='planned'&&t==='Planned'))c.classList.add('active');});
@@ -1203,7 +1275,7 @@ function removeBedImage(){try{localStorage.removeItem('garden_img_bed_'+S.curren
 function showIndoorPlant(id){const p=S.indoorPlants.find(x=>x.id===id);if(!p)return;S.currentPlant={...p,isIndoor:true};renderPlantDetail(p,true);showScreen('plant');}
 function showOutdoorPlant(id){const p=S.plants.find(x=>x.id===id);if(!p)return;S.currentPlant={...p,isIndoor:false};renderPlantDetail(p,false);showScreen('plant');}
 function renderPlantDetail(plant,isIndoor){
-  document.getElementById('plant-hero').innerHTML=`<span style="font-size:80px">${plant.emoji||'🌿'}</span>`;
+  document.getElementById('plant-hero').innerHTML=emojiHtml(plant.emoji,80);
   document.getElementById('plant-detail-name').textContent=plant.name;
   if(isIndoor){const room=S.rooms.find(r=>r.id===plant.roomId);document.getElementById('plant-detail-location').textContent=`📍 ${room?room.name:''} · ${plant.section||''}`;document.getElementById('plant-move-area').innerHTML=`<button class="move-btn" onclick="showMovePlantModal('${plant.id}')">📦 Move to different room / section</button>`;}
   else{const bed=S.beds.find(b=>b.id===plant.bedId);document.getElementById('plant-detail-location').textContent=`📍 ${bed?bed.name:'Unknown bed'}`;document.getElementById('plant-move-area').innerHTML='';}
@@ -1248,10 +1320,11 @@ function editPlant(){
     const sectionOpts=(room?.sections||['Other']).map(s=>`<option value="${s}" ${s===p.section?'selected':''}>${s}</option>`).join('');
     locationField=`<div class="form-group"><label class="form-label">Section</label><select class="form-select" id="ep-section">${sectionOpts}</select></div>`;
   }
-  document.getElementById('modal-body').innerHTML=`<h3>Edit Plant</h3><div class="form-group"><label class="form-label">Name</label><input class="form-input" id="ep-name" value="${p.name}"></div><div class="form-group"><label class="form-label">Scientific Name</label><input class="form-input" id="ep-sci" value="${p.scientific||''}"></div><div class="form-group"><label class="form-label">Emoji</label><input class="form-input" id="ep-emoji" value="${p.emoji||'🌿'}"></div><div class="form-group"><label class="form-label">Category</label><select class="form-select" id="ep-category" onchange="inheritCategoryTasks(this.value,'ep')"><option value="None">— Select category —</option>${getCategoryOpts()}</select></div><div class="form-group"><label class="form-label">Status</label><select class="form-select" id="ep-status"><option value="alive" ${p.status==='alive'?'selected':''}>Alive & Well</option><option value="planned" ${p.status==='planned'?'selected':''}>Planned</option><option value="struggling" ${p.status==='struggling'?'selected':''}>Struggling</option><option value="dead" ${p.status==='dead'?'selected':''}>Removed/Dead</option></select></div>${locationField}<div class="form-group"><label class="form-label">Water</label><input class="form-input" id="ep-water" value="${p.water||''}"></div><div class="form-group"><label class="form-label">Sun</label><input class="form-input" id="ep-sun" value="${p.sun||''}"></div><div class="form-group"><label class="form-label">Notes</label><textarea class="form-textarea" id="ep-notes">${p.notes||''}</textarea></div><div class="form-group"><label class="form-label">Maintenance Tasks</label><div id="ep-maint-list"></div><div style="display:flex;gap:8px;margin-top:8px"><input class="form-input" id="ep-maint-task" placeholder="New task" style="flex:1"><button class="btn-secondary" style="margin:0;width:auto;padding:12px 14px;font-size:13px" onclick="addMaintTaskToForm('ep')">+ Add</button></div></div><button class="btn-primary" onclick="saveEditPlant(${isIndoor})">Save</button><button class="btn-secondary" onclick="closeModal()">Cancel</button>`;
+  document.getElementById('modal-body').innerHTML=`<h3>Edit Plant</h3><div class="form-group"><label class="form-label">Name</label><input class="form-input" id="ep-name" value="${p.name}"></div><div class="form-group"><label class="form-label">Scientific Name</label><input class="form-input" id="ep-sci" value="${p.scientific||''}"></div><div class="form-group"><label class="form-label">Emoji / Genmoji</label>${buildEmojiField('ep-emoji',p.emoji||'🌿')}</div><div class="form-group"><label class="form-label">Category</label><select class="form-select" id="ep-category" onchange="inheritCategoryTasks(this.value,'ep')"><option value="None">— Select category —</option>${getCategoryOpts()}</select></div><div class="form-group"><label class="form-label">Status</label><select class="form-select" id="ep-status"><option value="alive" ${p.status==='alive'?'selected':''}>Alive & Well</option><option value="planned" ${p.status==='planned'?'selected':''}>Planned</option><option value="struggling" ${p.status==='struggling'?'selected':''}>Struggling</option><option value="dead" ${p.status==='dead'?'selected':''}>Removed/Dead</option></select></div>${locationField}<div class="form-group"><label class="form-label">Water</label><input class="form-input" id="ep-water" value="${p.water||''}"></div><div class="form-group"><label class="form-label">Sun</label><input class="form-input" id="ep-sun" value="${p.sun||''}"></div><div class="form-group"><label class="form-label">Notes</label><textarea class="form-textarea" id="ep-notes">${p.notes||''}</textarea></div><div class="form-group"><label class="form-label">Maintenance Tasks</label><div id="ep-maint-list"></div><div style="display:flex;gap:8px;margin-top:8px"><input class="form-input" id="ep-maint-task" placeholder="New task" style="flex:1"><button class="btn-secondary" style="margin:0;width:auto;padding:12px 14px;font-size:13px" onclick="addMaintTaskToForm('ep')">+ Add</button></div></div><button class="btn-primary" onclick="saveEditPlant(${isIndoor})">Save</button><button class="btn-secondary" onclick="closeModal()">Cancel</button>`;
   document.getElementById('modal-overlay').classList.add('active');
   initFormMaintTasks(p.maintenance,'ep');
   if(p.category){const catEl=document.getElementById('ep-category');if(catEl)catEl.value=p.category;}
+  attachEmojiPasteListener('ep-emoji');
 }
 function saveEditPlant(isIndoor){
   const p=S.currentPlant;
@@ -1260,7 +1333,7 @@ function saveEditPlant(isIndoor){
   if(!plant)return;
   plant.name=document.getElementById('ep-name').value;
   plant.scientific=document.getElementById('ep-sci').value;
-  plant.emoji=document.getElementById('ep-emoji').value;
+  plant.emoji=getEmojiFieldValue('ep-emoji');
   plant.category=document.getElementById('ep-category').value;
   plant.status=document.getElementById('ep-status').value;
   plant.water=document.getElementById('ep-water').value;
@@ -1290,17 +1363,19 @@ function saveEditPlant(isIndoor){
 function deletePlant(){if(!confirm('Remove this plant?'))return;const p=S.currentPlant;if(p.isIndoor){S.indoorPlants=S.indoorPlants.filter(x=>x.id!==p.id);save();if(S.currentRoom)showRoom(S.currentRoom.id);else showScreen('indoor');}else{S.plants=S.plants.filter(x=>x.id!==p.id);save();if(S.currentBed)showBed(S.currentBed.id);else showScreen('home');}}
 function showAddPlantModal(){
   _formMaintTasks=[];
-  document.getElementById('modal-body').innerHTML=`<h3>Add Plant</h3><div class="form-group"><label class="form-label">Name *</label><input class="form-input" id="ap-name"></div><div class="form-group"><label class="form-label">Scientific Name</label><input class="form-input" id="ap-sci"></div><div class="form-group"><label class="form-label">Emoji</label><input class="form-input" id="ap-emoji" value="🌿"></div><div class="form-group"><label class="form-label">Category</label><select class="form-select" id="ap-category" onchange="inheritCategoryTasks(this.value,'ap')"><option value="None">— Select category —</option>${getCategoryOpts()}</select></div><div class="form-group"><label class="form-label">Status</label><select class="form-select" id="ap-status"><option value="alive">Alive & Well</option><option value="planned">Planned</option><option value="struggling">Struggling</option><option value="dead">Removed/Dead</option></select></div><div class="form-group"><label class="form-label">Water</label><input class="form-input" id="ap-water"></div><div class="form-group"><label class="form-label">Sun</label><input class="form-input" id="ap-sun"></div><div class="form-group"><label class="form-label">Notes</label><textarea class="form-textarea" id="ap-notes"></textarea></div><div class="form-group"><label class="form-label">Maintenance Tasks</label><div id="ap-maint-list"></div><div style="display:flex;gap:8px;margin-top:8px"><input class="form-input" id="ap-maint-task" placeholder="Add custom task" style="flex:1"><button class="btn-secondary" style="margin:0;width:auto;padding:12px 14px;font-size:13px" onclick="addMaintTaskToForm('ap')">+ Add</button></div><div style="font-size:11px;color:var(--text-light);margin-top:4px">Category tasks auto-load above. Add overrides here.</div></div><button class="btn-primary" onclick="saveNewOutdoorPlant()">Add</button><button class="btn-secondary" onclick="closeModal()">Cancel</button>`;
+  document.getElementById('modal-body').innerHTML=`<h3>Add Plant</h3><div class="form-group"><label class="form-label">Name *</label><input class="form-input" id="ap-name"></div><div class="form-group"><label class="form-label">Scientific Name</label><input class="form-input" id="ap-sci"></div><div class="form-group"><label class="form-label">Emoji / Genmoji</label>${buildEmojiField('ap-emoji','🌿')}</div><div class="form-group"><label class="form-label">Category</label><select class="form-select" id="ap-category" onchange="inheritCategoryTasks(this.value,'ap')"><option value="None">— Select category —</option>${getCategoryOpts()}</select></div><div class="form-group"><label class="form-label">Status</label><select class="form-select" id="ap-status"><option value="alive">Alive & Well</option><option value="planned">Planned</option><option value="struggling">Struggling</option><option value="dead">Removed/Dead</option></select></div><div class="form-group"><label class="form-label">Water</label><input class="form-input" id="ap-water"></div><div class="form-group"><label class="form-label">Sun</label><input class="form-input" id="ap-sun"></div><div class="form-group"><label class="form-label">Notes</label><textarea class="form-textarea" id="ap-notes"></textarea></div><div class="form-group"><label class="form-label">Maintenance Tasks</label><div id="ap-maint-list"></div><div style="display:flex;gap:8px;margin-top:8px"><input class="form-input" id="ap-maint-task" placeholder="Add custom task" style="flex:1"><button class="btn-secondary" style="margin:0;width:auto;padding:12px 14px;font-size:13px" onclick="addMaintTaskToForm('ap')">+ Add</button></div><div style="font-size:11px;color:var(--text-light);margin-top:4px">Category tasks auto-load above. Add overrides here.</div></div><button class="btn-primary" onclick="saveNewOutdoorPlant()">Add</button><button class="btn-secondary" onclick="closeModal()">Cancel</button>`;
   document.getElementById('modal-overlay').classList.add('active');
+  attachEmojiPasteListener('ap-emoji');
 }
-function saveNewOutdoorPlant(){const name=document.getElementById('ap-name').value.trim();if(!name)return;S.plants.push({id:'p'+Date.now(),bedId:S.currentBed.id,name,scientific:document.getElementById('ap-sci').value,emoji:document.getElementById('ap-emoji').value||'🌿',category:document.getElementById('ap-category').value||'None',status:document.getElementById('ap-status').value,water:document.getElementById('ap-water').value,sun:document.getElementById('ap-sun').value,notes:document.getElementById('ap-notes').value,fromCutting:false,maintenance:collectMaintTasks('ap'),trouble:[]});save();closeModal();showBed(S.currentBed.id);}
+function saveNewOutdoorPlant(){const name=document.getElementById('ap-name').value.trim();if(!name)return;S.plants.push({id:'p'+Date.now(),bedId:S.currentBed.id,name,scientific:document.getElementById('ap-sci').value,emoji:getEmojiFieldValue('ap-emoji')||'🌿',category:document.getElementById('ap-category').value||'None',status:document.getElementById('ap-status').value,water:document.getElementById('ap-water').value,sun:document.getElementById('ap-sun').value,notes:document.getElementById('ap-notes').value,fromCutting:false,maintenance:collectMaintTasks('ap'),trouble:[]});save();closeModal();showBed(S.currentBed.id);}
 function showAddPlantToRoomModal(){
   const room=S.currentRoom;if(!room)return;
   _formMaintTasks=[];
-  document.getElementById('modal-body').innerHTML=`<h3>Add Indoor Plant</h3><div class="form-group"><label class="form-label">Name *</label><input class="form-input" id="ap-name"></div><div class="form-group"><label class="form-label">Scientific Name</label><input class="form-input" id="ap-sci"></div><div class="form-group"><label class="form-label">Emoji</label><input class="form-input" id="ap-emoji" value="🌿"></div><div class="form-group"><label class="form-label">Category</label><select class="form-select" id="ap-category" onchange="inheritCategoryTasks(this.value,'ap')"><option value="None">— Select category —</option>${getCategoryOpts()}</select></div><div class="form-group"><label class="form-label">Status</label><select class="form-select" id="ap-status"><option value="alive">Alive & Well</option><option value="planned">Planned</option><option value="struggling">Struggling</option><option value="dead">Removed/Dead</option></select></div><div class="form-group"><label class="form-label">Section</label><select class="form-select" id="ap-section">${(room.sections||['Other']).map(s=>`<option value="${s}">${s}</option>`).join('')}</select></div><div class="form-group"><label class="form-label">Water</label><input class="form-input" id="ap-water"></div><div class="form-group"><label class="form-label">Sun</label><input class="form-input" id="ap-sun"></div><div class="form-group"><label class="form-label">Notes</label><textarea class="form-textarea" id="ap-notes"></textarea></div><div class="form-group"><label class="form-label">Maintenance Tasks</label><div id="ap-maint-list"></div><div style="display:flex;gap:8px;margin-top:8px"><input class="form-input" id="ap-maint-task" placeholder="Add custom task" style="flex:1"><button class="btn-secondary" style="margin:0;width:auto;padding:12px 14px;font-size:13px" onclick="addMaintTaskToForm('ap')">+ Add</button></div><div style="font-size:11px;color:var(--text-light);margin-top:4px">Category tasks auto-load. Add overrides here.</div></div><button class="btn-primary" onclick="saveNewIndoorPlant()">Add</button><button class="btn-secondary" onclick="closeModal()">Cancel</button>`;
+  document.getElementById('modal-body').innerHTML=`<h3>Add Indoor Plant</h3><div class="form-group"><label class="form-label">Name *</label><input class="form-input" id="ap-name"></div><div class="form-group"><label class="form-label">Scientific Name</label><input class="form-input" id="ap-sci"></div><div class="form-group"><label class="form-label">Emoji / Genmoji</label>${buildEmojiField('ap-emoji','🌿')}</div><div class="form-group"><label class="form-label">Category</label><select class="form-select" id="ap-category" onchange="inheritCategoryTasks(this.value,'ap')"><option value="None">— Select category —</option>${getCategoryOpts()}</select></div><div class="form-group"><label class="form-label">Status</label><select class="form-select" id="ap-status"><option value="alive">Alive & Well</option><option value="planned">Planned</option><option value="struggling">Struggling</option><option value="dead">Removed/Dead</option></select></div><div class="form-group"><label class="form-label">Section</label><select class="form-select" id="ap-section">${(room.sections||['Other']).map(s=>`<option value="${s}">${s}</option>`).join('')}</select></div><div class="form-group"><label class="form-label">Water</label><input class="form-input" id="ap-water"></div><div class="form-group"><label class="form-label">Sun</label><input class="form-input" id="ap-sun"></div><div class="form-group"><label class="form-label">Notes</label><textarea class="form-textarea" id="ap-notes"></textarea></div><div class="form-group"><label class="form-label">Maintenance Tasks</label><div id="ap-maint-list"></div><div style="display:flex;gap:8px;margin-top:8px"><input class="form-input" id="ap-maint-task" placeholder="Add custom task" style="flex:1"><button class="btn-secondary" style="margin:0;width:auto;padding:12px 14px;font-size:13px" onclick="addMaintTaskToForm('ap')">+ Add</button></div><div style="font-size:11px;color:var(--text-light);margin-top:4px">Category tasks auto-load. Add overrides here.</div></div><button class="btn-primary" onclick="saveNewIndoorPlant()">Add</button><button class="btn-secondary" onclick="closeModal()">Cancel</button>`;
   document.getElementById('modal-overlay').classList.add('active');
+  attachEmojiPasteListener('ap-emoji');
 }
-function saveNewIndoorPlant(){const name=document.getElementById('ap-name').value.trim();if(!name)return;S.indoorPlants.push({id:'ip'+Date.now(),roomId:S.currentRoom.id,section:document.getElementById('ap-section').value,name,scientific:document.getElementById('ap-sci').value,emoji:document.getElementById('ap-emoji').value||'🌿',category:document.getElementById('ap-category').value||'None',status:document.getElementById('ap-status').value,water:document.getElementById('ap-water').value,sun:document.getElementById('ap-sun').value,notes:document.getElementById('ap-notes').value,maintenance:collectMaintTasks('ap'),trouble:[]});save();closeModal();showRoom(S.currentRoom.id);}
+function saveNewIndoorPlant(){const name=document.getElementById('ap-name').value.trim();if(!name)return;S.indoorPlants.push({id:'ip'+Date.now(),roomId:S.currentRoom.id,section:document.getElementById('ap-section').value,name,scientific:document.getElementById('ap-sci').value,emoji:getEmojiFieldValue('ap-emoji')||'🌿',category:document.getElementById('ap-category').value||'None',status:document.getElementById('ap-status').value,water:document.getElementById('ap-water').value,sun:document.getElementById('ap-sun').value,notes:document.getElementById('ap-notes').value,maintenance:collectMaintTasks('ap'),trouble:[]});save();closeModal();showRoom(S.currentRoom.id);}
 // Maintenance task form helpers
 const _MONTHS=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
 let _formMaintTasks=[];
@@ -1601,8 +1676,8 @@ function renderAllPlants(query){
   const list=document.getElementById('allplants-list');
   if(!outdoor.length&&!indoor.length){list.innerHTML='<div class="empty-state"><span>🔍</span><p>No plants found.</p></div>';return;}
   let html='';
-  if(indoor.length)html+=`<div class="section-header">🪴 Indoor (${indoor.length})</div><div style="padding:0 20px">${indoor.map(p=>{const room=S.rooms.find(r=>r.id===p.roomId);return`<div class="plant-card" onclick="showIndoorPlantFromAll('${p.id}')"><div class="plant-thumb">${p.emoji||'🌿'}</div><div class="plant-card-info"><div class="plant-card-name">${p.name}</div><div class="plant-card-detail">${room?room.name:''} · ${p.section||''}</div></div><div class="status-dot ${p.status||'alive'}"></div></div>`;}).join('')}</div>`;
-  if(outdoor.length)html+=`<div class="section-header">🌳 Outdoor (${outdoor.length})</div><div style="padding:0 20px">${outdoor.map(p=>{const bed=S.beds.find(b=>b.id===p.bedId);return`<div class="plant-card ${p.status==='planned'?'planned':''}" onclick="showOutdoorPlantFromAll('${p.id}')"><div class="plant-thumb">${p.emoji||'🌿'}</div><div class="plant-card-info"><div class="plant-card-name">${p.name}</div><div class="plant-card-detail">${bed?bed.name:'Unknown'}</div></div><div class="status-dot ${p.status||'alive'}"></div></div>`;}).join('')}</div>`;
+  if(indoor.length)html+=`<div class="section-header">🪴 Indoor (${indoor.length})</div><div style="padding:0 20px">${indoor.map(p=>{const room=S.rooms.find(r=>r.id===p.roomId);return`<div class="plant-card" onclick="showIndoorPlantFromAll('${p.id}')"><div class="plant-thumb">${emojiHtml(p.emoji,28)}</div><div class="plant-card-info"><div class="plant-card-name">${p.name}</div><div class="plant-card-detail">${room?room.name:''} · ${p.section||''}</div></div><div class="status-dot ${p.status||'alive'}"></div></div>`;}).join('')}</div>`;
+  if(outdoor.length)html+=`<div class="section-header">🌳 Outdoor (${outdoor.length})</div><div style="padding:0 20px">${outdoor.map(p=>{const bed=S.beds.find(b=>b.id===p.bedId);return`<div class="plant-card ${p.status==='planned'?'planned':''}" onclick="showOutdoorPlantFromAll('${p.id}')"><div class="plant-thumb">${emojiHtml(p.emoji,28)}</div><div class="plant-card-info"><div class="plant-card-name">${p.name}</div><div class="plant-card-detail">${bed?bed.name:'Unknown'}</div></div><div class="status-dot ${p.status||'alive'}"></div></div>`;}).join('')}</div>`;
   list.innerHTML=html;
 }
 function showIndoorPlantFromAll(id){const p=S.indoorPlants.find(x=>x.id===id);if(!p)return;S.currentRoom=S.rooms.find(r=>r.id===p.roomId)||null;showIndoorPlant(id);}
