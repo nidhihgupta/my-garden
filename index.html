@@ -831,7 +831,7 @@ function checkYearReset(){
   }catch(e){}
 }
 
-let S={beds:[],plants:[],todos:[],shopping:[],notes:[],propagation:[],irrigation:[],rooms:[],indoorPlants:[],currentBed:null,currentPlant:null,currentYard:'front',currentRoom:null,todoFilter:'pending',shopFilter:'needed',bedFilter:'all'};
+let S={beds:[],plants:[],todos:[],shopping:[],notes:[],propagation:[],irrigation:[],rooms:[],indoorPlants:[],currentBed:null,currentPlant:null,currentYard:'front',currentRoom:null,todoFilter:'pending',shopFilter:'needed',bedFilter:'all',plantSource:null};
 
 const defaultRooms=[
   {id:'r-office',name:'Office',icon:'💻',sections:['Floor','Plant Stand','Wall Shelves','Hanging','Table','Window Sill']},
@@ -1294,8 +1294,8 @@ function showEditBedModal(){
 }
 function saveEditBed(){const b=S.beds.find(x=>x.id===S.currentBed.id);if(!b)return;b.name=document.getElementById('eb-name').value;b.icon=document.getElementById('eb-icon').value;b.zone=document.getElementById('eb-zone').value;b.sun=document.getElementById('eb-sun').value;b.notes=document.getElementById('eb-notes').value;S.currentBed=b;save();closeModal();showBed(b.id);}
 function removeBedImage(){try{localStorage.removeItem('garden_img_bed_'+S.currentBed.id);}catch(e){}closeModal();showBed(S.currentBed.id);}
-function showIndoorPlant(id){const p=S.indoorPlants.find(x=>x.id===id);if(!p)return;S.currentPlant={...p,isIndoor:true};renderPlantDetail(p,true);showScreen('plant');}
-function showOutdoorPlant(id){const p=S.plants.find(x=>x.id===id);if(!p)return;S.currentPlant={...p,isIndoor:false};renderPlantDetail(p,false);showScreen('plant');}
+function showIndoorPlant(id){const p=S.indoorPlants.find(x=>x.id===id);if(!p)return;if(S.plantSource!=='allplants')S.plantSource=null;S.currentPlant={...p,isIndoor:true};renderPlantDetail(p,true);showScreen('plant');}
+function showOutdoorPlant(id){const p=S.plants.find(x=>x.id===id);if(!p)return;if(S.plantSource!=='allplants')S.plantSource=null;S.currentPlant={...p,isIndoor:false};renderPlantDetail(p,false);showScreen('plant');}
 function renderPlantDetail(plant,isIndoor){
   document.getElementById('plant-hero').innerHTML=emojiHtml(plant.emoji,80);
   document.getElementById('plant-detail-name').textContent=plant.name;
@@ -1329,7 +1329,7 @@ function showMovePlantModal(id){
 }
 function updateMoveSections(roomId){const room=S.rooms.find(r=>r.id===roomId);document.getElementById('move-section').innerHTML=(room?.sections||['Other']).map(s=>`<option value="${s}">${s}</option>`).join('');}
 function saveMovePlant(id){const p=S.indoorPlants.find(x=>x.id===id);if(!p)return;p.roomId=document.getElementById('move-room').value;p.section=document.getElementById('move-section').value;save();closeModal();showIndoorPlant(id);}
-function goBackFromPlant(){if(S.currentPlant?._fromAllPlants)showScreen('allplants');else if(S.currentPlant?.isIndoor&&S.currentRoom)showRoom(S.currentRoom.id);else if(S.currentBed)showBed(S.currentBed.id);else showScreen('home');}
+function goBackFromPlant(){if(S.plantSource==='allplants'){S.plantSource=null;showScreen('allplants');}else if(S.currentPlant?.isIndoor&&S.currentRoom)showRoom(S.currentRoom.id);else if(S.currentBed)showBed(S.currentBed.id);else showScreen('home');}
 function editPlant(){
   const p=S.currentPlant;
   const isIndoor=p.isIndoor;
@@ -1735,8 +1735,8 @@ function saveDuplicatePlant(isIndoor){
   const dest=isIndoor?(S.rooms.find(r=>r.id===copy.roomId)||{name:'room'}).name:(S.beds.find(b=>b.id===copy.bedId)||{name:'bed'}).name;
   alert(`${p.name} duplicated to ${dest}.`);
 }
-function showIndoorPlantFromAll(id){const p=S.indoorPlants.find(x=>x.id===id);if(!p)return;S.currentRoom=S.rooms.find(r=>r.id===p.roomId)||null;showIndoorPlant(id);S.currentPlant._fromAllPlants=true;}
-function showOutdoorPlantFromAll(id){const p=S.plants.find(x=>x.id===id);if(!p)return;S.currentBed=S.beds.find(b=>b.id===p.bedId)||null;showOutdoorPlant(id);S.currentPlant._fromAllPlants=true;}
+function showIndoorPlantFromAll(id){const p=S.indoorPlants.find(x=>x.id===id);if(!p)return;S.currentRoom=S.rooms.find(r=>r.id===p.roomId)||null;S.plantSource='allplants';showIndoorPlant(id);}
+function showOutdoorPlantFromAll(id){const p=S.plants.find(x=>x.id===id);if(!p)return;S.currentBed=S.beds.find(b=>b.id===p.bedId)||null;S.plantSource='allplants';showOutdoorPlant(id);}
 function searchPlants(q){renderAllPlants(q);}
 function closeModal(event){if(event&&event.target!==document.getElementById('modal-overlay'))return;document.getElementById('modal-overlay').classList.remove('active');}
 init();
