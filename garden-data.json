@@ -4337,6 +4337,60 @@
       ],
       "trouble": [],
       "category": "Trees"
+    },
+    {
+      "id": "p1778114273511",
+      "bedId": "b-fw",
+      "name": "Phormium",
+      "scientific": "",
+      "emoji": "🌿",
+      "category": "Tropical Foliage",
+      "status": "alive",
+      "water": "",
+      "sun": "",
+      "notes": "",
+      "fromCutting": false,
+      "maintenance": [
+        {
+          "task": "Feed monthly spring-summer",
+          "months": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "task": "Wipe leaves monthly to remove dust",
+          "months": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ]
+        },
+        {
+          "task": "Reduce watering in winter",
+          "months": [
+            11,
+            12,
+            1,
+            2
+          ]
+        }
+      ],
+      "trouble": []
     }
   ],
   "indoorPlants": [
@@ -6960,5 +7014,5 @@
     }
   ],
   "irrigation": [],
-  "syncedAt": "2026-05-07T00:29:16.970Z"
+  "syncedAt": "2026-05-07T00:37:53.517Z"
 }
