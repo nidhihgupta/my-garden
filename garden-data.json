@@ -2245,39 +2245,6 @@
       "category": "Ornamental Grasses"
     },
     {
-      "id": "br-impatiens",
-      "bedId": "b-br",
-      "name": "Impatiens White",
-      "scientific": "Impatiens walleriana",
-      "emoji": "🤍",
-      "status": "planned",
-      "water": "Regular",
-      "sun": "Part shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "x16. Interior filler between big plants.",
-      "maintenance": [
-        {
-          "task": "Feed liquid fertilizer every 2 weeks",
-          "months": [
-            5,
-            6,
-            7,
-            8,
-            9
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Downy mildew",
-          "url": "https://www.google.com/search?q=Downy%20mildew%20plant%20care%20fix"
-        }
-      ],
-      "category": "None"
-    },
-    {
       "id": "br-coleus",
       "bedId": "b-br",
       "name": "Coleus Dark Purple",
@@ -7037,5 +7004,5 @@
     }
   ],
   "irrigation": [],
-  "syncedAt": "2026-05-06T23:18:58.702Z"
+  "syncedAt": "2026-05-07T00:28:44.797Z"
 }
