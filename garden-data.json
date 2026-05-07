@@ -5438,6 +5438,64 @@
         }
       ],
       "trouble": []
+    },
+    {
+      "id": "p1778179148729",
+      "bedId": "b-berry",
+      "name": "Bridal Wreath",
+      "scientific": "Stephanotis floribunda",
+      "emoji": "🌿",
+      "category": "Climbing Roses",
+      "status": "alive",
+      "water": "",
+      "sun": "",
+      "notes": "",
+      "fromCutting": false,
+      "maintenance": [
+        {
+          "task": "Light tip prune only — do not hard cut",
+          "months": [
+            1,
+            2
+          ]
+        },
+        {
+          "task": "Deadhead spent blooms",
+          "months": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "task": "Train and tie new canes to structure",
+          "months": [
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "task": "Feed after first flush",
+          "months": [
+            5
+          ]
+        },
+        {
+          "task": "Feed high potassium fertilizer monthly June-September",
+          "months": [
+            6,
+            7,
+            8,
+            9
+          ]
+        }
+      ],
+      "trouble": []
     }
   ],
   "indoorPlants": [
@@ -8061,5 +8119,5 @@
     }
   ],
   "irrigation": [],
-  "syncedAt": "2026-05-07T18:33:31.296Z"
+  "syncedAt": "2026-05-07T18:39:08.738Z"
 }
