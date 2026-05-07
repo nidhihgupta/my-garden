@@ -1329,7 +1329,7 @@ function showMovePlantModal(id){
 }
 function updateMoveSections(roomId){const room=S.rooms.find(r=>r.id===roomId);document.getElementById('move-section').innerHTML=(room?.sections||['Other']).map(s=>`<option value="${s}">${s}</option>`).join('');}
 function saveMovePlant(id){const p=S.indoorPlants.find(x=>x.id===id);if(!p)return;p.roomId=document.getElementById('move-room').value;p.section=document.getElementById('move-section').value;save();closeModal();showIndoorPlant(id);}
-function goBackFromPlant(){if(S.currentPlant?.isIndoor&&S.currentRoom)showRoom(S.currentRoom.id);else if(S.currentBed)showBed(S.currentBed.id);else showScreen('home');}
+function goBackFromPlant(){if(S.currentPlant?._fromAllPlants)showScreen('allplants');else if(S.currentPlant?.isIndoor&&S.currentRoom)showRoom(S.currentRoom.id);else if(S.currentBed)showBed(S.currentBed.id);else showScreen('home');}
 function editPlant(){
   const p=S.currentPlant;
   const isIndoor=p.isIndoor;
@@ -1735,8 +1735,8 @@ function saveDuplicatePlant(isIndoor){
   const dest=isIndoor?(S.rooms.find(r=>r.id===copy.roomId)||{name:'room'}).name:(S.beds.find(b=>b.id===copy.bedId)||{name:'bed'}).name;
   alert(`${p.name} duplicated to ${dest}.`);
 }
-function showIndoorPlantFromAll(id){const p=S.indoorPlants.find(x=>x.id===id);if(!p)return;S.currentRoom=S.rooms.find(r=>r.id===p.roomId)||null;showIndoorPlant(id);}
-function showOutdoorPlantFromAll(id){const p=S.plants.find(x=>x.id===id);if(!p)return;S.currentBed=S.beds.find(b=>b.id===p.bedId)||null;showOutdoorPlant(id);}
+function showIndoorPlantFromAll(id){const p=S.indoorPlants.find(x=>x.id===id);if(!p)return;S.currentRoom=S.rooms.find(r=>r.id===p.roomId)||null;showIndoorPlant(id);S.currentPlant._fromAllPlants=true;}
+function showOutdoorPlantFromAll(id){const p=S.plants.find(x=>x.id===id);if(!p)return;S.currentBed=S.beds.find(b=>b.id===p.bedId)||null;showOutdoorPlant(id);S.currentPlant._fromAllPlants=true;}
 function searchPlants(q){renderAllPlants(q);}
 function closeModal(event){if(event&&event.target!==document.getElementById('modal-overlay'))return;document.getElementById('modal-overlay').classList.remove('active');}
 init();
