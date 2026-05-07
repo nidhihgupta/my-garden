@@ -4773,6 +4773,55 @@
         }
       ],
       "trouble": []
+    },
+    {
+      "id": "p1778124260608",
+      "bedId": "b-ma",
+      "name": "Sally Holmes",
+      "scientific": "",
+      "emoji": "🌹",
+      "category": "Climbing Roses",
+      "status": "alive",
+      "water": "",
+      "sun": "",
+      "notes": "",
+      "fromCutting": false,
+      "maintenance": [
+        {
+          "task": "Light tip prune only — do not hard cut",
+          "months": [
+            1,
+            2
+          ]
+        },
+        {
+          "task": "Deadhead spent blooms",
+          "months": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "task": "Train and tie new canes to structure",
+          "months": [
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "task": "Feed after first flush",
+          "months": [
+            5
+          ]
+        }
+      ],
+      "trouble": []
     }
   ],
   "indoorPlants": [
@@ -7396,5 +7445,5 @@
     }
   ],
   "irrigation": [],
-  "syncedAt": "2026-05-07T03:23:47.618Z"
+  "syncedAt": "2026-05-07T03:24:20.614Z"
 }
