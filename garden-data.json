@@ -5431,7 +5431,7 @@
           ]
         },
         {
-          "task": "Cut back all new shoots to 5 leaves after flowering",
+          "task": "Cut back new side shoots to 5 leaves — do NOT cut main structural canes",
           "months": [
             5
           ]
@@ -8061,5 +8061,5 @@
     }
   ],
   "irrigation": [],
-  "syncedAt": "2026-05-07T18:32:00.504Z"
+  "syncedAt": "2026-05-07T18:33:31.296Z"
 }
