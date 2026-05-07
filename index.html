@@ -365,15 +365,44 @@ function compressEmojiImage(src,callback){
     ctx.drawImage(img,(img.width-s)/2,(img.height-s)/2,s,s,0,0,SIZE,SIZE);
     callback(canvas.toDataURL('image/webp',0.8));
   };
+  img.onerror=function(){callback(null);};
   img.src=src;
 }
-// Builds composite emoji field widget (text input + Genmoji paste support)
+function applyGenmoji(id,dataUrl){
+  if(!dataUrl)return;
+  const input=document.getElementById(id),d=document.getElementById(id+'-data'),prev=document.getElementById(id+'-preview'),w=document.getElementById(id+'-wrap');
+  if(input)input.style.display='none';
+  if(d)d.value=dataUrl;
+  if(prev)prev.innerHTML=`<img src="${dataUrl}" style="width:36px;height:36px;object-fit:contain;border-radius:4px;display:block">`;
+  if(w&&!w.querySelector('.emoji-clear-btn')){const btn=document.createElement('button');btn.type='button';btn.className='btn-secondary emoji-clear-btn';btn.style.cssText='margin:0;padding:6px 10px;font-size:11px;width:auto';btn.textContent='✕ Clear';btn.onclick=function(){clearEmojiField(id);};w.appendChild(btn);}
+}
+// Uses navigator.clipboard.read() — the only reliable iOS path for Genmoji
+async function pasteGenmoji(id){
+  try{
+    if(!navigator.clipboard?.read){alert('Clipboard read not supported on this browser.');return;}
+    const clipItems=await navigator.clipboard.read();
+    for(const clipItem of clipItems){
+      const imgType=clipItem.types.find(t=>t.startsWith('image/'));
+      if(imgType){
+        const blob=await clipItem.getType(imgType);
+        const url=URL.createObjectURL(blob);
+        compressEmojiImage(url,function(dataUrl){URL.revokeObjectURL(url);applyGenmoji(id,dataUrl);});
+        return;
+      }
+    }
+    alert('No image found in clipboard. Copy a Genmoji first, then tap 📋.');
+  }catch(err){
+    if(err.name==='NotAllowedError')alert('Tap "Allow Paste" when prompted to grant clipboard access.');
+    else alert('Could not read clipboard: '+err.message);
+  }
+}
+// Builds composite emoji field widget
 function buildEmojiField(id,val){
   val=val||'🌿';
   const isImg=val.startsWith('data:');
   const previewHtml=isImg?`<img src="${val}" style="width:36px;height:36px;object-fit:contain;border-radius:4px;display:block">`:`<span style="font-size:28px;line-height:1">${val}</span>`;
   const clearBtn=isImg?`<button type="button" class="btn-secondary emoji-clear-btn" style="margin:0;padding:6px 10px;font-size:11px;width:auto" onclick="clearEmojiField('${id}')">✕ Clear</button>`:'';
-  return`<div class="emoji-field" id="${id}-wrap"><div class="emoji-field-preview" id="${id}-preview">${previewHtml}</div><input class="emoji-field-input" id="${id}" value="${isImg?'':val}" placeholder="Type emoji or paste Genmoji" oninput="syncEmojiPreview('${id}')" style="${isImg?'display:none':''}"><input type="hidden" id="${id}-data" value="${val}">${clearBtn}</div>`;
+  return`<div class="emoji-field" id="${id}-wrap"><div class="emoji-field-preview" id="${id}-preview">${previewHtml}</div><input class="emoji-field-input" id="${id}" value="${isImg?'':val}" placeholder="Type emoji" oninput="syncEmojiPreview('${id}')" style="${isImg?'display:none':''}"><input type="hidden" id="${id}-data" value="${val}"><button type="button" class="btn-secondary" style="margin:0;padding:8px 10px;font-size:15px;width:auto;flex-shrink:0;line-height:1" onclick="pasteGenmoji('${id}')" title="Paste Genmoji">📋</button>${clearBtn}</div>`;
 }
 function getEmojiFieldValue(id){
   const d=document.getElementById(id+'-data');
@@ -394,22 +423,14 @@ function clearEmojiField(id){
   if(wrap){const cb=wrap.querySelector('.emoji-clear-btn');if(cb)cb.remove();}
 }
 function attachEmojiPasteListener(id){
-  const wrap=document.getElementById(id+'-wrap');if(!wrap)return;
-  wrap.addEventListener('paste',function(e){
+  const input=document.getElementById(id);if(!input)return;
+  input.addEventListener('paste',function(e){
     const items=e.clipboardData?.items;if(!items)return;
     for(const item of items){
       if(item.type.startsWith('image/')){
         e.preventDefault();
         const reader=new FileReader();
-        reader.onload=function(ev){
-          compressEmojiImage(ev.target.result,function(dataUrl){
-            const input=document.getElementById(id),d=document.getElementById(id+'-data'),prev=document.getElementById(id+'-preview'),w=document.getElementById(id+'-wrap');
-            if(input)input.style.display='none';
-            if(d)d.value=dataUrl;
-            if(prev)prev.innerHTML=`<img src="${dataUrl}" style="width:36px;height:36px;object-fit:contain;border-radius:4px;display:block">`;
-            if(w&&!w.querySelector('.emoji-clear-btn')){const btn=document.createElement('button');btn.type='button';btn.className='btn-secondary emoji-clear-btn';btn.style.cssText='margin:0;padding:6px 10px;font-size:11px;width:auto';btn.textContent='✕ Clear';btn.onclick=function(){clearEmojiField(id);};w.appendChild(btn);}
-          });
-        };
+        reader.onload=function(ev){compressEmojiImage(ev.target.result,function(dataUrl){applyGenmoji(id,dataUrl);});};
         reader.readAsDataURL(item.getAsFile());return;
       }
     }
