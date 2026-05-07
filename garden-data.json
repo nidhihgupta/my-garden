@@ -3222,7 +3222,7 @@
     {
       "id": "sa-knockoutrose",
       "bedId": "b-sa",
-      "name": "Rose",
+      "name": "Rose bush",
       "scientific": "Rosa Double Knock Out",
       "emoji": "🌹",
       "status": "planned",
@@ -7621,5 +7621,5 @@
     }
   ],
   "irrigation": [],
-  "syncedAt": "2026-05-07T05:30:25.634Z"
+  "syncedAt": "2026-05-07T05:30:51.793Z"
 }
