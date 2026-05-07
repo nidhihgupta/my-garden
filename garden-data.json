@@ -3982,7 +3982,7 @@
     {
       "id": "ts-plum",
       "bedId": "b-tom",
-      "name": "Espalier",
+      "name": "Espalier Prune ",
       "scientific": "Prunus domestica",
       "emoji": "🍑",
       "status": "alive",
@@ -8134,5 +8134,5 @@
     }
   ],
   "irrigation": [],
-  "syncedAt": "2026-05-07T19:51:12.341Z"
+  "syncedAt": "2026-05-07T19:51:34.148Z"
 }
