@@ -5457,12 +5457,6 @@
           ]
         },
         {
-          "task": "Apply chelated iron in spring — clay soil causes chlorosis",
-          "months": [
-            4
-          ]
-        },
-        {
           "task": "Feed acid fertilizer (azalea/camellia) monthly June-September — prevents iron chlorosis in clay soil",
           "months": [
             6,
@@ -8425,5 +8419,5 @@
     }
   ],
   "irrigation": [],
-  "syncedAt": "2026-05-09T04:51:04.202Z"
+  "syncedAt": "2026-05-09T04:51:30.723Z"
 }
