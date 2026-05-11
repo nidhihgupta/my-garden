@@ -3660,7 +3660,7 @@
     {
       "id": "ps-orange",
       "bedId": "b-berry",
-      "name": "Citrus Tree",
+      "name": "Orange Tree",
       "scientific": "Citrus sinensis",
       "emoji": "🍊",
       "status": "alive",
@@ -8419,5 +8419,5 @@
     }
   ],
   "irrigation": [],
-  "syncedAt": "2026-05-11T15:27:31.594Z"
+  "syncedAt": "2026-05-11T15:27:53.752Z"
 }
