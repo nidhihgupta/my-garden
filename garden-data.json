@@ -1880,7 +1880,7 @@
     {
       "id": "ros-lemon",
       "bedId": "b-ros",
-      "name": "Citrus Tree",
+      "name": "Dwarf Meyer’s Lemon Tree",
       "scientific": "Citrus limon dwarf",
       "emoji": "🍋",
       "status": "alive",
@@ -8419,5 +8419,5 @@
     }
   ],
   "irrigation": [],
-  "syncedAt": "2026-05-11T15:26:50.416Z"
+  "syncedAt": "2026-05-11T15:27:31.594Z"
 }
