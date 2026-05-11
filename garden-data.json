@@ -5796,6 +5796,44 @@
       ],
       "category": "Tropical Foliage",
       "isIndoor": false
+    },
+    {
+      "id": "p1778514288212",
+      "bedId": "b-ros",
+      "name": "Caroline Cherry",
+      "scientific": "Prunus Caroliniana",
+      "emoji": "🌿",
+      "category": "Trees",
+      "status": "alive",
+      "water": "",
+      "sun": "",
+      "notes": "",
+      "fromCutting": false,
+      "maintenance": [
+        {
+          "task": "Deep water monthly — slow hose at drip line",
+          "months": [
+            6,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "task": "Feed slow release balanced fertilizer in spring",
+          "months": [
+            3
+          ]
+        },
+        {
+          "task": "Check for dead/crossing branches — remove cleanly",
+          "months": [
+            1,
+            2
+          ]
+        }
+      ],
+      "trouble": []
     }
   ],
   "indoorPlants": [
@@ -8419,5 +8457,5 @@
     }
   ],
   "irrigation": [],
-  "syncedAt": "2026-05-11T15:43:36.246Z"
+  "syncedAt": "2026-05-11T15:44:48.220Z"
 }
