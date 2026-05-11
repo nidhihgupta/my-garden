@@ -5371,7 +5371,7 @@
       "status": "alive",
       "water": "Moderate — deep water during establishment",
       "sun": "Full sun",
-      "notes": "",
+      "notes": "Two trim cycles to maximize bloom. \nMay - cut back to 6 nodes. Get rid of all seed pods \nJan/feb - cut back to 2 or 3. This is where the flowers will come from ",
       "fromCutting": false,
       "maintenance": [
         {
@@ -8457,5 +8457,5 @@
     }
   ],
   "irrigation": [],
-  "syncedAt": "2026-05-11T15:44:48.220Z"
+  "syncedAt": "2026-05-11T15:56:41.914Z"
 }
