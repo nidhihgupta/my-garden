@@ -7987,7 +7987,7 @@
     {
       "id": "t15",
       "text": "Get remaining rose names from Side Arbor — varieties beyond Iceberg, Angel Face, Burst of Joy",
-      "done": false,
+      "done": true,
       "date": "",
       "category": "Maintenance"
     },
@@ -8457,5 +8457,5 @@
     }
   ],
   "irrigation": [],
-  "syncedAt": "2026-05-12T18:00:48.236Z"
+  "syncedAt": "2026-05-12T18:00:51.091Z"
 }
