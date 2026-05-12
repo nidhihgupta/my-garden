@@ -7994,7 +7994,7 @@
     {
       "id": "t16",
       "text": "ID David Austin rose variety in Back Rose Bed — check tag for exact name",
-      "done": false,
+      "done": true,
       "date": "",
       "category": "Maintenance"
     },
@@ -8457,5 +8457,5 @@
     }
   ],
   "irrigation": [],
-  "syncedAt": "2026-05-12T18:00:54.306Z"
+  "syncedAt": "2026-05-12T18:00:56.664Z"
 }
