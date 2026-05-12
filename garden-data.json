@@ -5834,6 +5834,52 @@
         }
       ],
       "trouble": []
+    },
+    {
+      "id": "p1778614808924",
+      "bedId": "b-berry",
+      "name": "Peas",
+      "scientific": "",
+      "emoji": "🫛",
+      "category": "Vegetables",
+      "status": "alive",
+      "water": "",
+      "sun": "",
+      "notes": "Planted seeds May 12 ",
+      "fromCutting": false,
+      "maintenance": [
+        {
+          "task": "Water consistently — check soil moisture daily in summer",
+          "months": [
+            5,
+            6,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "task": "Feed with balanced fertilizer every 2-3 weeks",
+          "months": [
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "task": "Check for pests — inspect undersides of leaves",
+          "months": [
+            5,
+            6,
+            7,
+            8,
+            9
+          ]
+        }
+      ],
+      "trouble": []
     }
   ],
   "indoorPlants": [
@@ -8457,5 +8503,5 @@
     }
   ],
   "irrigation": [],
-  "syncedAt": "2026-05-12T19:39:05.568Z"
+  "syncedAt": "2026-05-12T19:40:08.934Z"
 }
