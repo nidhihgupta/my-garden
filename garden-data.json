@@ -7973,7 +7973,7 @@
     {
       "id": "t13",
       "text": "Confirm Breath of Heaven variety matches existing — check foliage color at nursery",
-      "done": false,
+      "done": true,
       "date": "",
       "category": "Maintenance"
     },
@@ -8457,5 +8457,5 @@
     }
   ],
   "irrigation": [],
-  "syncedAt": "2026-05-12T18:00:44.800Z"
+  "syncedAt": "2026-05-12T18:00:48.236Z"
 }
