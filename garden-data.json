@@ -7980,7 +7980,7 @@
     {
       "id": "t14",
       "text": "Check nursery tag on fern in white smiley cat pot (plant stand) — ID species",
-      "done": false,
+      "done": true,
       "date": "",
       "category": "Indoor"
     },
@@ -8457,5 +8457,5 @@
     }
   ],
   "irrigation": [],
-  "syncedAt": "2026-05-12T18:00:51.091Z"
+  "syncedAt": "2026-05-12T18:00:54.306Z"
 }
