@@ -7952,7 +7952,7 @@
     {
       "id": "t10",
       "text": "Move kitchen windowsill plants (Peperomia, Succulent, Mini Jade) to office once Rieger Begonias arrive",
-      "done": false,
+      "done": true,
       "date": "",
       "category": "Indoor"
     },
@@ -8457,5 +8457,5 @@
     }
   ],
   "irrigation": [],
-  "syncedAt": "2026-05-12T18:00:56.664Z"
+  "syncedAt": "2026-05-12T18:01:04.150Z"
 }
