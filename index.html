@@ -251,6 +251,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--warm-white);color:var(--t
     <div class="detail-section"><h4>Troubleshooting</h4><div id="plant-trouble-list"></div></div>
     <div class="detail-section"><h4>Notes</h4><div id="plant-notes-display" style="font-size:14px;color:var(--text-mid);line-height:1.6">No notes yet.</div></div>
     <button class="btn-secondary" onclick="editPlant()">Edit Plant</button>
+    <button class="btn-secondary" onclick="duplicatePlant()">Duplicate Plant</button>
     <button class="btn-danger" onclick="deletePlant()">Remove Plant</button>
   </div>
 </div>
@@ -365,15 +366,44 @@ function compressEmojiImage(src,callback){
     ctx.drawImage(img,(img.width-s)/2,(img.height-s)/2,s,s,0,0,SIZE,SIZE);
     callback(canvas.toDataURL('image/webp',0.8));
   };
+  img.onerror=function(){callback(null);};
   img.src=src;
 }
-// Builds composite emoji field widget (text input + Genmoji paste support)
+function applyGenmoji(id,dataUrl){
+  if(!dataUrl)return;
+  const input=document.getElementById(id),d=document.getElementById(id+'-data'),prev=document.getElementById(id+'-preview'),w=document.getElementById(id+'-wrap');
+  if(input)input.style.display='none';
+  if(d)d.value=dataUrl;
+  if(prev)prev.innerHTML=`<img src="${dataUrl}" style="width:36px;height:36px;object-fit:contain;border-radius:4px;display:block">`;
+  if(w&&!w.querySelector('.emoji-clear-btn')){const btn=document.createElement('button');btn.type='button';btn.className='btn-secondary emoji-clear-btn';btn.style.cssText='margin:0;padding:6px 10px;font-size:11px;width:auto';btn.textContent='✕ Clear';btn.onclick=function(){clearEmojiField(id);};w.appendChild(btn);}
+}
+// Uses navigator.clipboard.read() — the only reliable iOS path for Genmoji
+async function pasteGenmoji(id){
+  try{
+    if(!navigator.clipboard?.read){alert('Clipboard read not supported on this browser.');return;}
+    const clipItems=await navigator.clipboard.read();
+    for(const clipItem of clipItems){
+      const imgType=clipItem.types.find(t=>t.startsWith('image/'));
+      if(imgType){
+        const blob=await clipItem.getType(imgType);
+        const url=URL.createObjectURL(blob);
+        compressEmojiImage(url,function(dataUrl){URL.revokeObjectURL(url);applyGenmoji(id,dataUrl);});
+        return;
+      }
+    }
+    alert('No image found in clipboard. Copy a Genmoji first, then tap 📋.');
+  }catch(err){
+    if(err.name==='NotAllowedError')alert('Tap "Allow Paste" when prompted to grant clipboard access.');
+    else alert('Could not read clipboard: '+err.message);
+  }
+}
+// Builds composite emoji field widget
 function buildEmojiField(id,val){
   val=val||'🌿';
   const isImg=val.startsWith('data:');
   const previewHtml=isImg?`<img src="${val}" style="width:36px;height:36px;object-fit:contain;border-radius:4px;display:block">`:`<span style="font-size:28px;line-height:1">${val}</span>`;
   const clearBtn=isImg?`<button type="button" class="btn-secondary emoji-clear-btn" style="margin:0;padding:6px 10px;font-size:11px;width:auto" onclick="clearEmojiField('${id}')">✕ Clear</button>`:'';
-  return`<div class="emoji-field" id="${id}-wrap"><div class="emoji-field-preview" id="${id}-preview">${previewHtml}</div><input class="emoji-field-input" id="${id}" value="${isImg?'':val}" placeholder="Type emoji or paste Genmoji" oninput="syncEmojiPreview('${id}')" style="${isImg?'display:none':''}"><input type="hidden" id="${id}-data" value="${val}">${clearBtn}</div>`;
+  return`<div class="emoji-field" id="${id}-wrap"><div class="emoji-field-preview" id="${id}-preview">${previewHtml}</div><input class="emoji-field-input" id="${id}" value="${isImg?'':val}" placeholder="Type emoji" oninput="syncEmojiPreview('${id}')" style="${isImg?'display:none':''}"><input type="hidden" id="${id}-data" value="${val}"><button type="button" class="btn-secondary" style="margin:0;padding:8px 10px;font-size:15px;width:auto;flex-shrink:0;line-height:1" onclick="pasteGenmoji('${id}')" title="Paste Genmoji">📋</button>${clearBtn}</div>`;
 }
 function getEmojiFieldValue(id){
   const d=document.getElementById(id+'-data');
@@ -394,22 +424,14 @@ function clearEmojiField(id){
   if(wrap){const cb=wrap.querySelector('.emoji-clear-btn');if(cb)cb.remove();}
 }
 function attachEmojiPasteListener(id){
-  const wrap=document.getElementById(id+'-wrap');if(!wrap)return;
-  wrap.addEventListener('paste',function(e){
+  const input=document.getElementById(id);if(!input)return;
+  input.addEventListener('paste',function(e){
     const items=e.clipboardData?.items;if(!items)return;
     for(const item of items){
       if(item.type.startsWith('image/')){
         e.preventDefault();
         const reader=new FileReader();
-        reader.onload=function(ev){
-          compressEmojiImage(ev.target.result,function(dataUrl){
-            const input=document.getElementById(id),d=document.getElementById(id+'-data'),prev=document.getElementById(id+'-preview'),w=document.getElementById(id+'-wrap');
-            if(input)input.style.display='none';
-            if(d)d.value=dataUrl;
-            if(prev)prev.innerHTML=`<img src="${dataUrl}" style="width:36px;height:36px;object-fit:contain;border-radius:4px;display:block">`;
-            if(w&&!w.querySelector('.emoji-clear-btn')){const btn=document.createElement('button');btn.type='button';btn.className='btn-secondary emoji-clear-btn';btn.style.cssText='margin:0;padding:6px 10px;font-size:11px;width:auto';btn.textContent='✕ Clear';btn.onclick=function(){clearEmojiField(id);};w.appendChild(btn);}
-          });
-        };
+        reader.onload=function(ev){compressEmojiImage(ev.target.result,function(dataUrl){applyGenmoji(id,dataUrl);});};
         reader.readAsDataURL(item.getAsFile());return;
       }
     }
@@ -809,7 +831,7 @@ function checkYearReset(){
   }catch(e){}
 }
 
-let S={beds:[],plants:[],todos:[],shopping:[],notes:[],propagation:[],irrigation:[],rooms:[],indoorPlants:[],currentBed:null,currentPlant:null,currentYard:'front',currentRoom:null,todoFilter:'pending',shopFilter:'needed',bedFilter:'all'};
+let S={beds:[],plants:[],todos:[],shopping:[],notes:[],propagation:[],irrigation:[],rooms:[],indoorPlants:[],currentBed:null,currentPlant:null,currentYard:'front',currentRoom:null,todoFilter:'pending',shopFilter:'needed',bedFilter:'all',plantSource:null};
 
 const defaultRooms=[
   {id:'r-office',name:'Office',icon:'💻',sections:['Floor','Plant Stand','Wall Shelves','Hanging','Table','Window Sill']},
@@ -857,7 +879,8 @@ function getPlantTasksForMonth(month){
   const tasks=[];
   const allPlants=[...S.plants,...S.indoorPlants];
   allPlants.forEach(plant=>{
-    if(!plant.maintenance)return;
+    const st=plant.status||'alive';
+    if(st!=='alive'&&st!=='struggling')return;
     plant.maintenance.forEach(mItem=>{
       if(!mItem.months||!mItem.months.includes(month))return;
       // Deduplicate by species key (name without quantity prefix) + task text
@@ -1272,8 +1295,8 @@ function showEditBedModal(){
 }
 function saveEditBed(){const b=S.beds.find(x=>x.id===S.currentBed.id);if(!b)return;b.name=document.getElementById('eb-name').value;b.icon=document.getElementById('eb-icon').value;b.zone=document.getElementById('eb-zone').value;b.sun=document.getElementById('eb-sun').value;b.notes=document.getElementById('eb-notes').value;S.currentBed=b;save();closeModal();showBed(b.id);}
 function removeBedImage(){try{localStorage.removeItem('garden_img_bed_'+S.currentBed.id);}catch(e){}closeModal();showBed(S.currentBed.id);}
-function showIndoorPlant(id){const p=S.indoorPlants.find(x=>x.id===id);if(!p)return;S.currentPlant={...p,isIndoor:true};renderPlantDetail(p,true);showScreen('plant');}
-function showOutdoorPlant(id){const p=S.plants.find(x=>x.id===id);if(!p)return;S.currentPlant={...p,isIndoor:false};renderPlantDetail(p,false);showScreen('plant');}
+function showIndoorPlant(id){const p=S.indoorPlants.find(x=>x.id===id);if(!p)return;if(S.plantSource!=='allplants')S.plantSource=null;S.currentPlant={...p,isIndoor:true};renderPlantDetail(p,true);showScreen('plant');}
+function showOutdoorPlant(id){const p=S.plants.find(x=>x.id===id);if(!p)return;if(S.plantSource!=='allplants')S.plantSource=null;S.currentPlant={...p,isIndoor:false};renderPlantDetail(p,false);showScreen('plant');}
 function renderPlantDetail(plant,isIndoor){
   document.getElementById('plant-hero').innerHTML=emojiHtml(plant.emoji,80);
   document.getElementById('plant-detail-name').textContent=plant.name;
@@ -1291,9 +1314,13 @@ function renderPlantDetail(plant,isIndoor){
   document.getElementById('plant-nursery').textContent=plant.nursery||'—';
   document.getElementById('plant-cutting').textContent=plant.fromCutting?'Yes':'No';
   const mths=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-  document.getElementById('plant-maintenance-list').innerHTML=plant.maintenance?.length?
-    plant.maintenance.map(m=>`<div class="detail-row"><div style="flex:1"><div style="font-size:13px;color:var(--text-dark);font-weight:500">${m.task}</div><div style="font-size:11px;color:var(--text-light);margin-top:2px">📅 ${m.months?m.months.map(mn=>mths[mn-1]).join(', '):'All year'}</div></div></div>`).join(''):
-    '<div style="font-size:13px;color:var(--text-light)">No maintenance schedule yet.</div>';
+  const plantStatus=plant.status||'alive';
+  const maintActive=plantStatus==='alive'||plantStatus==='struggling';
+  document.getElementById('plant-maintenance-list').innerHTML=!maintActive?
+    `<div style="font-size:13px;color:var(--text-light)">Maintenance schedule activates when plant status is Alive or Struggling.</div>`:
+    plant.maintenance?.length?
+      plant.maintenance.map(m=>`<div class="detail-row"><div style="flex:1"><div style="font-size:13px;color:var(--text-dark);font-weight:500">${m.task}</div><div style="font-size:11px;color:var(--text-light);margin-top:2px">📅 ${m.months?m.months.map(mn=>mths[mn-1]).join(', '):'All year'}</div></div></div>`).join(''):
+      '<div style="font-size:13px;color:var(--text-light)">No maintenance schedule yet.</div>';
   document.getElementById('plant-trouble-list').innerHTML=plant.trouble?.length?plant.trouble.map(t=>`<a class="troubleshoot-link" href="${t.url}" target="_blank">🔗 ${t.issue} →</a>`).join(''):'<div style="font-size:13px;color:var(--text-light)">No troubleshooting links yet.</div>';
   document.getElementById('plant-notes-display').textContent=plant.notes||'No notes yet.';
 }
@@ -1307,7 +1334,7 @@ function showMovePlantModal(id){
 }
 function updateMoveSections(roomId){const room=S.rooms.find(r=>r.id===roomId);document.getElementById('move-section').innerHTML=(room?.sections||['Other']).map(s=>`<option value="${s}">${s}</option>`).join('');}
 function saveMovePlant(id){const p=S.indoorPlants.find(x=>x.id===id);if(!p)return;p.roomId=document.getElementById('move-room').value;p.section=document.getElementById('move-section').value;save();closeModal();showIndoorPlant(id);}
-function goBackFromPlant(){if(S.currentPlant?.isIndoor&&S.currentRoom)showRoom(S.currentRoom.id);else if(S.currentBed)showBed(S.currentBed.id);else showScreen('home');}
+function goBackFromPlant(){if(S.plantSource==='allplants'){S.plantSource=null;showScreen('allplants');}else if(S.currentPlant?.isIndoor&&S.currentRoom)showRoom(S.currentRoom.id);else if(S.currentBed)showBed(S.currentBed.id);else showScreen('home');}
 function editPlant(){
   const p=S.currentPlant;
   const isIndoor=p.isIndoor;
@@ -1427,21 +1454,27 @@ const PLANT_CATEGORIES={
   'Bougainvillea':[{task:'Hard prune — cut by 1/3',months:[2]},{task:'Feed Super Bloom half strength to moist soil',months:[7,8,9]},{task:'Cut by 1/3 after bloom finishes',months:[8]}],
   'Orchids':[{task:'Soak then drain fully — never sit in water',months:[1,2,3,4,5,6,7,8,9,10,11,12]},{task:'Feed orchid fertilizer every 2 weeks when growing',months:[3,4,5,6,7,8,9]},{task:'Cool nights in fall trigger new bloom spike',months:[9,10,11]}],
   'Trees':[{task:'Deep water monthly — slow hose at drip line',months:[6,7,8,9]},{task:'Feed slow release balanced fertilizer in spring',months:[3]},{task:'Check for dead/crossing branches — remove cleanly',months:[1,2]}],
+  'Shrubs':[{task:'Feed balanced slow-release fertilizer in spring',months:[3]},{task:'Prune to shape after flowering or late winter',months:[2,3,4]},{task:'Check for scale and aphids — treat with neem oil if found',months:[4,5]},{task:'Mulch around base to protect roots before winter',months:[11]}],
+  'Perennials':[{task:'Cut back dead foliage in late fall',months:[11,12]},{task:'Divide crowded clumps every 3-5 years in early spring',months:[3]},{task:'Feed balanced fertilizer as growth begins',months:[3]},{task:'Deadhead spent blooms to extend flowering season',months:[5,6,7,8,9]}],
+  'Annuals':[{task:'Feed liquid fertilizer every 2 weeks during growing season',months:[4,5,6,7,8,9]},{task:'Deadhead spent blooms to encourage continuous flowering',months:[5,6,7,8,9,10]},{task:'Replace at end of season',months:[10,11]}],
+  'Vines & Climbers':[{task:'Train and tie new growth to support structure',months:[4,5,6]},{task:'Prune to shape and control after flowering',months:[6,7]},{task:'Feed balanced fertilizer to promote growth',months:[3]},{task:'Cut back hard if overgrown — late winter only',months:[2]}],
   'None':[]
 };
 const PLANT_CATEGORY_MAP={
+  'fl-viburnum':'Shrubs','fl-sarcococca':'Shrubs','fl-breath':'Shrubs','fl-loro':'Shrubs','fl-abelia':'Shrubs',
+  'fl-bergenia':'Perennials','fl-alabama':'Perennials','fl-buttered':'Perennials','fl-tiarella':'Perennials','fl-hellebores':'Perennials','fl-lamium':'Perennials','fl-begonia':'Annuals',
   'fl-clivia':'Bulbs','fl-mondo':'Ornamental Grasses','fl-carex':'Ornamental Grasses',
-  'rw-pittosporum':'Trees','rw-clivia':'Bulbs','rw-fern-ex':'Ferns','rw-sword':'Ferns','rw-oxalis':'Bulbs',
-  'mp-maple':'Trees','mp-fern':'Ferns','mp-japgrass':'Ornamental Grasses','mp-daylily':'Bulbs','mp-mondo':'Ornamental Grasses','mp-carex':'Ornamental Grasses','mp-sword':'Ferns',
-  'ch-cherry':'Trees','ch-daylily':'Bulbs','ch-mondo':'Ornamental Grasses',
-  'fr-camphor':'Trees','fr-lavender':'Herbs','fr-daylily':'Bulbs','fr-catmint':'Herbs','fr-mondo':'Ornamental Grasses',
+  'rw-camellia':'Hydrangeas','rw-pittosporum':'Trees','rw-clivia':'Bulbs','rw-fern-ex':'Ferns','rw-sword':'Ferns','rw-hellebores':'Perennials','rw-oxalis':'Bulbs',
+  'mp-maple':'Trees','mp-camellia':'Hydrangeas','mp-fern':'Ferns','mp-japgrass':'Ornamental Grasses','mp-daylily':'Bulbs','mp-hosta':'Perennials','mp-abelia':'Shrubs','mp-mondo':'Ornamental Grasses','mp-carex':'Ornamental Grasses','mp-alabama':'Perennials','mp-sword':'Ferns','mp-lamium':'Perennials',
+  'ch-cherry':'Trees','ch-nandina':'Shrubs','ch-daylily':'Bulbs','ch-abelia':'Shrubs','ch-mondo':'Ornamental Grasses','ch-lamium':'Perennials',
+  'fr-camphor':'Trees','fr-lavender':'Herbs','fr-daylily':'Bulbs','fr-catmint':'Herbs','fr-abelia':'Shrubs','fr-loro':'Shrubs','fr-buttered':'Perennials','fr-mondo':'Ornamental Grasses','fr-lamium':'Perennials','fr-begonia':'Annuals',
   'ros-apricot':'Fruit Trees','ros-lemon':'Fruit Trees','ros-peruvian':'Bulbs','ros-flowercarpet':'Bush Roses','ros-treerose':'Bush Roses',
-  'br-fatsia':'Tropical Foliage','br-liriope':'Ornamental Grasses','br-anemone':'Bulbs',
-  'bl-fatsia':'Tropical Foliage','bl-liriope':'Ornamental Grasses',
-  'fw-rose':'Bush Roses',
-  'ma-palm':'Trees','ma-salvia':'Salvias',
-  'sa-bougainvillea':'Bougainvillea','sa-iceberg':'Climbing Roses','sa-angelface':'Climbing Roses','sa-burstjoy':'Bush Roses','sa-mophead':'Hydrangeas','sa-oakleaf':'Hydrangeas','sa-knockoutrose':'Bush Roses','sa-salvia':'Salvias',
-  'bbq-existsalvia':'Salvias','bbq-existrose':'Bush Roses','bbq-whiteboug':'Bougainvillea','bbq-salvia':'Salvias','bbq-dahlia':'Bulbs',
+  'br-fatsia':'Tropical Foliage','br-azalea':'Shrubs','br-hosta':'Perennials','br-anemone':'Bulbs','br-tiarella':'Perennials','br-liriope':'Ornamental Grasses','br-coleus':'Annuals','br-torenia':'Annuals','br-begonia':'Annuals','br-impatiens':'Annuals','br-impatiens-curve':'Annuals',
+  'bl-fatsia':'Tropical Foliage','bl-ivy':'Vines & Climbers','bl-azalea':'Shrubs','bl-liriope':'Ornamental Grasses','bl-begonia':'Annuals','bl-impatiens':'Annuals',
+  'fw-distictis':'Vines & Climbers','fw-rose':'Bush Roses','fw-geranium':'Perennials','fw-fuchsia':'Perennials','fw-begonia':'Annuals',
+  'ma-palm':'Trees','ma-jasmine':'Vines & Climbers','ma-salvia':'Salvias','ma-calibrachoa':'Annuals',
+  'sa-bougainvillea':'Bougainvillea','sa-iceberg':'Climbing Roses','sa-angelface':'Climbing Roses','sa-burstjoy':'Bush Roses','sa-mophead':'Hydrangeas','sa-oakleaf':'Hydrangeas','sa-passiflora':'Vines & Climbers','sa-knockoutrose':'Bush Roses','sa-salvia':'Salvias',
+  'bbq-daisy':'Perennials','bbq-chrysanthemum':'Perennials','bbq-existsalvia':'Salvias','bbq-existrose':'Bush Roses','bbq-whiteboug':'Bougainvillea','bbq-salvia':'Salvias','bbq-dahlia':'Bulbs','bbq-verbena':'Perennials',
   'st-aeonium':'Succulents & Cacti',
   'ps-orange':'Fruit Trees','ps-persimmon':'Fruit Trees','ps-pomegranate':'Fruit Trees','ps-raspberry':'Fruit Trees','ps-blackberry':'Fruit Trees','ps-salvia':'Salvias','ps-beets':'Vegetables',
   'ts-plum':'Fruit Trees','ts-rainier':'Fruit Trees',
@@ -1458,7 +1491,11 @@ const PLANT_CATEGORY_MAP={
 };
 function migratePlantCategories(){
   [...S.plants,...S.indoorPlants].forEach(function(p){
-    if(!p.category)p.category=PLANT_CATEGORY_MAP[p.id]||'None';
+    if(!p.category||p.category==='None'){
+      const mapped=PLANT_CATEGORY_MAP[p.id];
+      if(mapped)p.category=mapped;
+      else if(!p.category)p.category='None';
+    }
   });
 }
 function getCategoryOpts(){return Object.keys(PLANT_CATEGORIES).map(c=>`<option value="${c}">${c}</option>`).join('');}
@@ -1670,18 +1707,51 @@ function renderIrrigation(){document.getElementById('irrigation-list').innerHTML
 function addIrrigationLog(){document.getElementById('modal-body').innerHTML=`<h3>Log Irrigation</h3><div class="form-group"><label class="form-label">Zone *</label><input class="form-input" id="irr-zone"></div><div class="form-group"><label class="form-label">Run Time (min)</label><input class="form-input" type="number" id="irr-runtime"></div><div class="form-group"><label class="form-label">Frequency</label><select class="form-select" id="irr-freq"><option>Daily</option><option>Every other day</option><option>3x per week</option><option>2x per week</option><option>Weekly</option><option>Every 2 weeks</option><option>Off</option></select></div><div class="form-group"><label class="form-label">Date</label><input class="form-input" type="date" id="irr-date" value="${new Date().toISOString().split('T')[0]}"></div><div class="form-group"><label class="form-label">Notes</label><input class="form-input" id="irr-notes"></div><button class="btn-primary" onclick="saveIrrigation()">Save</button><button class="btn-secondary" onclick="closeModal()">Cancel</button>`;document.getElementById('modal-overlay').classList.add('active');}
 function saveIrrigation(){const zone=document.getElementById('irr-zone').value.trim();if(!zone)return;S.irrigation.unshift({id:'i'+Date.now(),zone,runtime:document.getElementById('irr-runtime').value,frequency:document.getElementById('irr-freq').value,date:document.getElementById('irr-date').value,notes:document.getElementById('irr-notes').value});save();closeModal();renderIrrigation();}
 function renderAllPlants(query){
-  const q=query.toLowerCase();
-  const outdoor=S.plants.filter(p=>p.name.toLowerCase().includes(q)||(p.scientific||'').toLowerCase().includes(q));
-  const indoor=S.indoorPlants.filter(p=>p.name.toLowerCase().includes(q)||(p.scientific||'').toLowerCase().includes(q));
+  const q=(query||'').toLowerCase();
+  const all=[
+    ...S.indoorPlants.map(p=>({...p,_indoor:true})),
+    ...S.plants.map(p=>({...p,_indoor:false}))
+  ].filter(p=>p.name.toLowerCase().includes(q)||(p.scientific||'').toLowerCase().includes(q));
   const list=document.getElementById('allplants-list');
-  if(!outdoor.length&&!indoor.length){list.innerHTML='<div class="empty-state"><span>🔍</span><p>No plants found.</p></div>';return;}
+  if(!all.length){list.innerHTML='<div class="empty-state"><span>🔍</span><p>No plants found.</p></div>';return;}
+  all.sort((a,b)=>a.name.localeCompare(b.name));
+  const groups={};
+  all.forEach(p=>{const letter=p.name[0].toUpperCase();if(!groups[letter])groups[letter]=[];groups[letter].push(p);});
   let html='';
-  if(indoor.length)html+=`<div class="section-header">🪴 Indoor (${indoor.length})</div><div style="padding:0 20px">${indoor.map(p=>{const room=S.rooms.find(r=>r.id===p.roomId);return`<div class="plant-card" onclick="showIndoorPlantFromAll('${p.id}')"><div class="plant-thumb">${emojiHtml(p.emoji,28)}</div><div class="plant-card-info"><div class="plant-card-name">${p.name}</div><div class="plant-card-detail">${room?room.name:''} · ${p.section||''}</div></div><div class="status-dot ${p.status||'alive'}"></div></div>`;}).join('')}</div>`;
-  if(outdoor.length)html+=`<div class="section-header">🌳 Outdoor (${outdoor.length})</div><div style="padding:0 20px">${outdoor.map(p=>{const bed=S.beds.find(b=>b.id===p.bedId);return`<div class="plant-card ${p.status==='planned'?'planned':''}" onclick="showOutdoorPlantFromAll('${p.id}')"><div class="plant-thumb">${emojiHtml(p.emoji,28)}</div><div class="plant-card-info"><div class="plant-card-name">${p.name}</div><div class="plant-card-detail">${bed?bed.name:'Unknown'}</div></div><div class="status-dot ${p.status||'alive'}"></div></div>`;}).join('')}</div>`;
+  Object.keys(groups).sort().forEach(letter=>{
+    html+=`<div class="section-header">${letter}</div><div style="padding:0 20px">`;
+    groups[letter].forEach(p=>{
+      const loc=p._indoor?(()=>{const room=S.rooms.find(r=>r.id===p.roomId);return(room?room.name:'')+(p.section?' · '+p.section:'');})():(()=>{const bed=S.beds.find(b=>b.id===p.bedId);return bed?bed.name:'Unknown';})();
+      const icon=p._indoor?'🪴':'🌳';
+      const onclick=p._indoor?`showIndoorPlantFromAll('${p.id}')`:`showOutdoorPlantFromAll('${p.id}')`;
+      html+=`<div class="plant-card ${p.status==='planned'?'planned':''}" onclick="${onclick}"><div class="plant-thumb">${emojiHtml(p.emoji,28)}</div><div class="plant-card-info"><div class="plant-card-name">${p.name}</div><div class="plant-card-detail">${icon} ${loc}</div></div><div class="status-dot ${p.status||'alive'}"></div></div>`;
+    });
+    html+='</div>';
+  });
   list.innerHTML=html;
 }
-function showIndoorPlantFromAll(id){const p=S.indoorPlants.find(x=>x.id===id);if(!p)return;S.currentRoom=S.rooms.find(r=>r.id===p.roomId)||null;showIndoorPlant(id);}
-function showOutdoorPlantFromAll(id){const p=S.plants.find(x=>x.id===id);if(!p)return;S.currentBed=S.beds.find(b=>b.id===p.bedId)||null;showOutdoorPlant(id);}
+function duplicatePlant(){
+  const p=S.currentPlant;if(!p)return;
+  if(p.isIndoor){
+    const roomOpts=S.rooms.map(r=>`<option value="${r.id}"${r.id===p.roomId?' selected':''}>${r.name}</option>`).join('');
+    document.getElementById('modal-body').innerHTML=`<h3>Duplicate Plant</h3><p style="font-size:13px;color:var(--text-mid);margin-bottom:16px">Add a copy of <strong>${p.name}</strong> to another room.</p><div class="form-group"><label class="form-label">Room</label><select class="form-select" id="dup-dest">${roomOpts}</select></div><div class="form-group"><label class="form-label">Section (optional)</label><input class="form-input" id="dup-section" placeholder="e.g. Window sill" value="${p.section||''}"></div><button class="btn-primary" onclick="saveDuplicatePlant(true)">Add Copy</button><button class="btn-secondary" onclick="closeModal()">Cancel</button>`;
+  }else{
+    const bedOpts=S.beds.map(b=>`<option value="${b.id}"${b.id===p.bedId?' selected':''}>${b.name}</option>`).join('');
+    document.getElementById('modal-body').innerHTML=`<h3>Duplicate Plant</h3><p style="font-size:13px;color:var(--text-mid);margin-bottom:16px">Add a copy of <strong>${p.name}</strong> to another bed.</p><div class="form-group"><label class="form-label">Bed</label><select class="form-select" id="dup-dest">${bedOpts}</select></div><button class="btn-primary" onclick="saveDuplicatePlant(false)">Add Copy</button><button class="btn-secondary" onclick="closeModal()">Cancel</button>`;
+  }
+  document.getElementById('modal-overlay').classList.add('active');
+}
+function saveDuplicatePlant(isIndoor){
+  const p=S.currentPlant;if(!p)return;
+  const copy={...p,id:'p'+Date.now()+(Math.random()*1000|0)};
+  if(isIndoor){copy.roomId=document.getElementById('dup-dest').value;copy.section=document.getElementById('dup-section').value;S.indoorPlants.push(copy);}
+  else{copy.bedId=document.getElementById('dup-dest').value;S.plants.push(copy);}
+  save();closeModal();
+  const dest=isIndoor?(S.rooms.find(r=>r.id===copy.roomId)||{name:'room'}).name:(S.beds.find(b=>b.id===copy.bedId)||{name:'bed'}).name;
+  alert(`${p.name} duplicated to ${dest}.`);
+}
+function showIndoorPlantFromAll(id){const p=S.indoorPlants.find(x=>x.id===id);if(!p)return;S.currentRoom=S.rooms.find(r=>r.id===p.roomId)||null;S.plantSource='allplants';showIndoorPlant(id);}
+function showOutdoorPlantFromAll(id){const p=S.plants.find(x=>x.id===id);if(!p)return;S.currentBed=S.beds.find(b=>b.id===p.bedId)||null;S.plantSource='allplants';showOutdoorPlant(id);}
 function searchPlants(q){renderAllPlants(q);}
 function closeModal(event){if(event&&event.target!==document.getElementById('modal-overlay'))return;document.getElementById('modal-overlay').classList.remove('active');}
 init();
