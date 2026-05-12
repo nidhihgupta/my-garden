@@ -7966,7 +7966,7 @@
     {
       "id": "t12",
       "text": "Spot plant all new plants with pots on ground first — step back to street, adjust, THEN plant",
-      "done": false,
+      "done": true,
       "date": "",
       "category": "Maintenance"
     },
@@ -8457,5 +8457,5 @@
     }
   ],
   "irrigation": [],
-  "syncedAt": "2026-05-12T18:00:42.335Z"
+  "syncedAt": "2026-05-12T18:00:44.800Z"
 }
