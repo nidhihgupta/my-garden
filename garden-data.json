@@ -7924,7 +7924,7 @@
     {
       "id": "t6",
       "text": "White Stripe bougainvillea — Super Bloom HALF strength to MOIST soil. Monthly.",
-      "done": false,
+      "done": true,
       "date": "",
       "category": "Maintenance"
     },
@@ -8457,5 +8457,5 @@
     }
   ],
   "irrigation": [],
-  "syncedAt": "2026-05-12T18:00:15.501Z"
+  "syncedAt": "2026-05-12T18:00:19.369Z"
 }
