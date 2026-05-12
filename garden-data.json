@@ -1321,7 +1321,7 @@
       "bedId": "b-ch",
       "name": "Nandina",
       "scientific": "Nandina domestica",
-      "emoji": "🔴",
+      "emoji": "🌿",
       "status": "alive",
       "water": "Low once established",
       "sun": "Part shade",
@@ -8457,5 +8457,5 @@
     }
   ],
   "irrigation": [],
-  "syncedAt": "2026-05-12T05:42:27.500Z"
+  "syncedAt": "2026-05-12T05:43:16.269Z"
 }
