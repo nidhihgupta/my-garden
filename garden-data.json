@@ -7931,7 +7931,7 @@
     {
       "id": "t7",
       "text": "Diseased rose — Safer spray every 7-14 days. Do NOT feed until healthy.",
-      "done": false,
+      "done": true,
       "date": "",
       "category": "Maintenance"
     },
@@ -8457,5 +8457,5 @@
     }
   ],
   "irrigation": [],
-  "syncedAt": "2026-05-12T18:00:19.369Z"
+  "syncedAt": "2026-05-12T18:00:26.503Z"
 }
