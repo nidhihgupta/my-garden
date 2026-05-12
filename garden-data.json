@@ -7889,7 +7889,7 @@
     {
       "id": "t1",
       "text": "Train Iceberg climbing rose canes horizontally across Side Arbor — vine eyes + soft ties now while flexible",
-      "done": false,
+      "done": true,
       "date": "",
       "category": "Maintenance"
     },
@@ -8457,5 +8457,5 @@
     }
   ],
   "irrigation": [],
-  "syncedAt": "2026-05-12T17:59:05.424Z"
+  "syncedAt": "2026-05-12T18:00:06.649Z"
 }
