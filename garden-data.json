@@ -7959,7 +7959,7 @@
     {
       "id": "t11",
       "text": "Monitor irrigation — check soil 48hrs after watering. Drop to 2x/week if still moist.",
-      "done": false,
+      "done": true,
       "date": "",
       "category": "Irrigation"
     },
@@ -8457,5 +8457,5 @@
     }
   ],
   "irrigation": [],
-  "syncedAt": "2026-05-12T18:00:26.503Z"
+  "syncedAt": "2026-05-12T18:00:42.335Z"
 }
