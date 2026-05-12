@@ -1596,6 +1596,8 @@ function renderSchedule(month){
   // Outdoor plant tasks — group by task text, collect plant names and bedIds
   var outdoorTaskMap={};
   S.plants.forEach(function(plant){
+    var st=plant.status||'alive';
+    if(st!=='alive'&&st!=='struggling')return;
     if(!plant.maintenance)return;
     plant.maintenance.forEach(function(mItem){
       if(!mItem.months||mItem.months.indexOf(month)<0)return;
@@ -1624,6 +1626,8 @@ function renderSchedule(month){
   // Indoor plant tasks — group by task text
   var indoorTaskMap={};
   S.indoorPlants.forEach(function(plant){
+    var st=plant.status||'alive';
+    if(st!=='alive'&&st!=='struggling')return;
     if(!plant.maintenance)return;
     plant.maintenance.forEach(function(mItem){
       if(!mItem.months||mItem.months.indexOf(month)<0)return;
