@@ -7903,7 +7903,7 @@
     {
       "id": "t3",
       "text": "Move White Bougainvillea to back of BBQ bed",
-      "done": false,
+      "done": true,
       "date": "",
       "category": "Maintenance"
     },
@@ -8457,5 +8457,5 @@
     }
   ],
   "irrigation": [],
-  "syncedAt": "2026-05-12T18:00:06.649Z"
+  "syncedAt": "2026-05-12T18:00:15.501Z"
 }
