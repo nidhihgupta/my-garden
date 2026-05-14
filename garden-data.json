@@ -8536,6 +8536,7 @@
       "date": "May 12, 2026"
     }
   ],
+  "gardenNote": "",
   "propagation": [
     {
       "id": "pr1",
@@ -8555,5 +8556,5 @@
     }
   ],
   "irrigation": [],
-  "syncedAt": "2026-05-13T05:44:05.757Z"
+  "syncedAt": "2026-05-14T16:00:48.315Z"
 }
