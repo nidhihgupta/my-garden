@@ -2002,9 +2002,9 @@
     {
       "id": "ros-treerose",
       "bedId": "b-ros",
-      "name": "Rose",
+      "name": "Tree Rose - Pink",
       "scientific": "Rosa standard",
-      "emoji": "🌹",
+      "emoji": "emoji_ros-treerose",
       "status": "alive",
       "water": "Deep water weekly",
       "sun": "Part sun",
@@ -2046,7 +2046,8 @@
           "url": "https://www.google.com/search?q=Black%20spot%20plant%20care%20fix"
         }
       ],
-      "category": "Bush Roses"
+      "category": "Bush Roses",
+      "howPlanted": ""
     },
     {
       "id": "br-fatsia",
@@ -8550,5 +8551,5 @@
     }
   ],
   "irrigation": [],
-  "syncedAt": "2026-05-14T22:11:36.064Z"
+  "syncedAt": "2026-05-14T23:00:03.632Z"
 }
