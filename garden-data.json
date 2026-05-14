@@ -5931,7 +5931,7 @@
     {
       "id": "p1778799611982893",
       "bedId": "b-ros",
-      "name": "Tree Rose - Pink",
+      "name": "Tree Rose - unknown (second)",
       "scientific": "Rosa standard",
       "emoji": "emoji_ros-treerose",
       "status": "alive",
@@ -8653,5 +8653,5 @@
     }
   ],
   "irrigation": [],
-  "syncedAt": "2026-05-14T23:00:24.704Z"
+  "syncedAt": "2026-05-14T23:00:46.933Z"
 }
