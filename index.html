@@ -350,9 +350,16 @@ function p(id,bedId,name,sci,emoji,status,water,sun,notes,maintenance,trouble,ca
 function m(task,months){return{task,months};}
 
 // Returns HTML to render an emoji value — handles both Unicode emoji and Genmoji data URLs
+function resolveEmoji(val){
+  if(!val)return null;
+  if(val.startsWith('data:'))return val;
+  if(imageCache[val])return imageCache[val];
+  return null;
+}
 function emojiHtml(val,px){
   const e=val||'🌿';
-  if(e.startsWith('data:')){return`<img src="${e}" style="width:${px}px;height:${px}px;object-fit:contain;border-radius:4px;display:inline-block;vertical-align:middle">`;}
+  const resolved=resolveEmoji(e);
+  if(resolved){return`<img src="${resolved}" style="width:${px}px;height:${px}px;object-fit:contain;border-radius:4px;display:inline-block;vertical-align:middle">`;}
   return`<span style="font-size:${px}px;line-height:1">${e}</span>`;
 }
 // Compresses pasted Genmoji image to 64x64 WebP ~3-6KB
@@ -400,10 +407,11 @@ async function pasteGenmoji(id){
 // Builds composite emoji field widget
 function buildEmojiField(id,val){
   val=val||'🌿';
-  const isImg=val.startsWith('data:');
-  const previewHtml=isImg?`<img src="${val}" style="width:36px;height:36px;object-fit:contain;border-radius:4px;display:block">`:`<span style="font-size:28px;line-height:1">${val}</span>`;
+  const resolved=resolveEmoji(val)||val;
+  const isImg=resolved.startsWith('data:');
+  const previewHtml=isImg?`<img src="${resolved}" style="width:36px;height:36px;object-fit:contain;border-radius:4px;display:block">`:`<span style="font-size:28px;line-height:1">${resolved}</span>`;
   const clearBtn=isImg?`<button type="button" class="btn-secondary emoji-clear-btn" style="margin:0;padding:6px 10px;font-size:11px;width:auto" onclick="clearEmojiField('${id}')">✕ Clear</button>`:'';
-  return`<div class="emoji-field" id="${id}-wrap"><div class="emoji-field-preview" id="${id}-preview">${previewHtml}</div><input class="emoji-field-input" id="${id}" value="${isImg?'':val}" placeholder="Type emoji" oninput="syncEmojiPreview('${id}')" style="${isImg?'display:none':''}"><input type="hidden" id="${id}-data" value="${val}"><button type="button" class="btn-secondary" style="margin:0;padding:8px 10px;font-size:15px;width:auto;flex-shrink:0;line-height:1" onclick="pasteGenmoji('${id}')" title="Paste Genmoji">📋</button>${clearBtn}</div>`;
+  return`<div class="emoji-field" id="${id}-wrap"><div class="emoji-field-preview" id="${id}-preview">${previewHtml}</div><input class="emoji-field-input" id="${id}" value="${isImg?'':resolved}" placeholder="Type emoji" oninput="syncEmojiPreview('${id}')" style="${isImg?'display:none':''}"><input type="hidden" id="${id}-data" value="${val}"><button type="button" class="btn-secondary" style="margin:0;padding:8px 10px;font-size:15px;width:auto;flex-shrink:0;line-height:1" onclick="pasteGenmoji('${id}')" title="Paste Genmoji">📋</button>${clearBtn}</div>`;
 }
 function getEmojiFieldValue(id){
   const d=document.getElementById(id+'-data');
@@ -761,8 +769,8 @@ const DB={
     // Always also save to localStorage
     try{localStorage.setItem('garden_'+k,JSON.stringify(v));}catch(e){}
   },
-  getImg(k){try{return localStorage.getItem('garden_img_'+k)||null;}catch(e){return null;}},
-  setImg(k,v){try{localStorage.setItem('garden_img_'+k,v);}catch(e){alert('Image too large even after compression. Try a different photo.');}}
+  getImg(k){return imageCache[k]||null;},
+  setImg(k,v){imageCache[k]=v;scheduleSyncImages();}
 };
 
 function compressImage(dataUrl,maxWidth,maxHeight,quality,callback){
@@ -832,6 +840,9 @@ function checkYearReset(){
 }
 
 let S={beds:[],plants:[],todos:[],shopping:[],notes:[],gardenNote:'',propagation:[],irrigation:[],rooms:[],indoorPlants:[],currentBed:null,currentPlant:null,currentYard:'front',currentRoom:null,todoFilter:'pending',shopFilter:'needed',bedFilter:'all',plantSource:null,_noteTimer:null};
+let imageCache={};
+let _ghImagesSha=null;
+let _imageSyncTimer=null;
 
 const defaultRooms=[
   {id:'r-office',name:'Office',icon:'💻',sections:['Floor','Plant Stand','Wall Shelves','Hanging','Table','Window Sill']},
@@ -972,6 +983,46 @@ async function syncToGitHub(){
   }
 }
 
+function storeEmojiAndGetKey(plantId,emojiVal){
+  if(!emojiVal||!emojiVal.startsWith('data:'))return emojiVal||'🌿';
+  const key='emoji_'+plantId;
+  imageCache[key]=emojiVal;
+  scheduleSyncImages();
+  return key;
+}
+function scheduleSyncImages(){
+  clearTimeout(_imageSyncTimer);
+  _imageSyncTimer=setTimeout(syncImagesToGitHub,2000);
+}
+async function syncImagesToGitHub(){
+  if(!ghConfigured())return;
+  const c=ghCredentials();
+  try{
+    const json=JSON.stringify(imageCache);
+    const bytes=new TextEncoder().encode(json);
+    let binary='';bytes.forEach(b=>binary+=String.fromCharCode(b));
+    const content=btoa(binary);
+    const body={message:'Garden images update '+new Date().toISOString(),content};
+    if(_ghImagesSha)body.sha=_ghImagesSha;
+    const r=await fetch(`https://api.github.com/repos/${c.user}/${c.repo}/contents/garden-images.json`,{method:'PUT',headers:{'Authorization':'token '+c.token,'Accept':'application/vnd.github.v3+json','Content-Type':'application/json'},body:JSON.stringify(body)});
+    if(r.ok){const resp=await r.json();_ghImagesSha=resp.content.sha;}
+  }catch(e){console.log('syncImagesToGitHub error:',e);}
+}
+async function loadImagesFromGitHub(){
+  if(!ghConfigured())return;
+  const c=ghCredentials();
+  try{
+    const r=await fetch(`https://api.github.com/repos/${c.user}/${c.repo}/contents/garden-images.json`,{headers:{'Authorization':'token '+c.token,'Accept':'application/vnd.github.v3+json'}});
+    if(r.status===404)return;
+    if(!r.ok)return;
+    const d=await r.json();
+    _ghImagesSha=d.sha;
+    let content;
+    if(d.content){const bytes=Uint8Array.from(atob(d.content.replace(/\n/g,'')),c=>c.charCodeAt(0));content=JSON.parse(new TextDecoder().decode(bytes));}
+    else if(d.download_url){const dr=await fetch(d.download_url);if(dr.ok)content=await dr.json();}
+    if(content)imageCache=content;
+  }catch(e){console.log('loadImagesFromGitHub error:',e);}
+}
 async function loadFromGitHub(){
   if(!ghConfigured())return false;
   const f=await ghReadFile();
@@ -1107,6 +1158,8 @@ async function init(){
     await DB.set('shopping',S.shopping);
     await DB.set('propagation',S.propagation);
   } else {
+    // Load images file first so emojis resolve during plant rendering
+    await loadImagesFromGitHub();
     // Try GitHub first, fall back to local
     const ghLoaded=await loadFromGitHub();
     if(!ghLoaded){
@@ -1162,6 +1215,23 @@ async function init(){
     S.beds.forEach(function(b){b.icon=fixEmoji(b.icon,'🌿');});
     S.plants.forEach(function(p){p.emoji=fixEmoji(p.emoji,'🌿');});
     S.indoorPlants.forEach(function(p){p.emoji=fixEmoji(p.emoji,'🪴');});
+    // Migrate inline base64 emojis → imageCache keys (reduces garden-data.json size)
+    let _imgMigrated=false;
+    [...S.plants,...S.indoorPlants].forEach(function(p){
+      if(p.emoji&&p.emoji.startsWith('data:')){
+        const key='emoji_'+p.id;
+        if(!imageCache[key])imageCache[key]=p.emoji;
+        p.emoji=key;
+        _imgMigrated=true;
+      }
+    });
+    // Migrate any bed/room/yard images from localStorage → imageCache
+    try{Object.keys(localStorage).filter(k=>k.startsWith('garden_img_')).forEach(function(k){
+      const imgKey=k.replace('garden_img_','');
+      if(!imageCache[imgKey]){imageCache[imgKey]=localStorage.getItem(k);_imgMigrated=true;}
+      localStorage.removeItem(k);
+    });}catch(e){}
+    if(_imgMigrated)syncImagesToGitHub();
     await save();
   }
   migratePlantCategories();
@@ -1298,7 +1368,7 @@ function showEditBedModal(){
   document.getElementById('modal-overlay').classList.add('active');
 }
 function saveEditBed(){const b=S.beds.find(x=>x.id===S.currentBed.id);if(!b)return;b.name=document.getElementById('eb-name').value;b.icon=document.getElementById('eb-icon').value;b.zone=document.getElementById('eb-zone').value;b.sun=document.getElementById('eb-sun').value;b.notes=document.getElementById('eb-notes').value;S.currentBed=b;save();closeModal();showBed(b.id);}
-function removeBedImage(){try{localStorage.removeItem('garden_img_bed_'+S.currentBed.id);}catch(e){}closeModal();showBed(S.currentBed.id);}
+function removeBedImage(){delete imageCache['bed_'+S.currentBed.id];scheduleSyncImages();closeModal();showBed(S.currentBed.id);}
 function showIndoorPlant(id){const p=S.indoorPlants.find(x=>x.id===id);if(!p)return;if(S.plantSource!=='allplants')S.plantSource=null;S.currentPlant={...p,isIndoor:true};renderPlantDetail(p,true);showScreen('plant');}
 function showOutdoorPlant(id){const p=S.plants.find(x=>x.id===id);if(!p)return;if(S.plantSource!=='allplants')S.plantSource=null;S.currentPlant={...p,isIndoor:false};renderPlantDetail(p,false);showScreen('plant');}
 function renderPlantDetail(plant,isIndoor){
@@ -1366,7 +1436,7 @@ function saveEditPlant(isIndoor){
   if(!plant)return;
   plant.name=document.getElementById('ep-name').value;
   plant.scientific=document.getElementById('ep-sci').value;
-  plant.emoji=getEmojiFieldValue('ep-emoji');
+  plant.emoji=storeEmojiAndGetKey(plant.id,getEmojiFieldValue('ep-emoji'));
   plant.category=document.getElementById('ep-category').value;
   plant.status=document.getElementById('ep-status').value;
   plant.water=document.getElementById('ep-water').value;
@@ -1404,7 +1474,7 @@ function showAddPlantModal(){
   document.getElementById('modal-overlay').classList.add('active');
   attachEmojiPasteListener('ap-emoji');
 }
-function saveNewOutdoorPlant(){const name=document.getElementById('ap-name').value.trim();if(!name)return;const _how=document.getElementById('ap-how').value;S.plants.push({id:'p'+Date.now(),bedId:S.currentBed.id,name,scientific:document.getElementById('ap-sci').value,emoji:getEmojiFieldValue('ap-emoji')||'🌿',category:document.getElementById('ap-category').value||'None',status:document.getElementById('ap-status').value,water:document.getElementById('ap-water').value,sun:document.getElementById('ap-sun').value,datePlanted:document.getElementById('ap-date').value,howPlanted:_how,fromCutting:_how==='cutting',nursery:'',notes:document.getElementById('ap-notes').value,maintenance:collectMaintTasks('ap'),trouble:[]});save();closeModal();showBed(S.currentBed.id);}
+function saveNewOutdoorPlant(){const name=document.getElementById('ap-name').value.trim();if(!name)return;const _how=document.getElementById('ap-how').value;const _newId='p'+Date.now();const _rawEmoji=getEmojiFieldValue('ap-emoji')||'🌿';S.plants.push({id:_newId,bedId:S.currentBed.id,name,scientific:document.getElementById('ap-sci').value,emoji:storeEmojiAndGetKey(_newId,_rawEmoji),category:document.getElementById('ap-category').value||'None',status:document.getElementById('ap-status').value,water:document.getElementById('ap-water').value,sun:document.getElementById('ap-sun').value,datePlanted:document.getElementById('ap-date').value,howPlanted:_how,fromCutting:_how==='cutting',nursery:'',notes:document.getElementById('ap-notes').value,maintenance:collectMaintTasks('ap'),trouble:[]});save();closeModal();showBed(S.currentBed.id);}
 function showAddPlantToRoomModal(){
   const room=S.currentRoom;if(!room)return;
   _formMaintTasks=[];
@@ -1413,7 +1483,7 @@ function showAddPlantToRoomModal(){
   document.getElementById('modal-overlay').classList.add('active');
   attachEmojiPasteListener('ap-emoji');
 }
-function saveNewIndoorPlant(){const name=document.getElementById('ap-name').value.trim();if(!name)return;const _how=document.getElementById('ap-how').value;S.indoorPlants.push({id:'ip'+Date.now(),roomId:S.currentRoom.id,section:document.getElementById('ap-section').value,name,scientific:document.getElementById('ap-sci').value,emoji:getEmojiFieldValue('ap-emoji')||'🌿',category:document.getElementById('ap-category').value||'None',status:document.getElementById('ap-status').value,water:document.getElementById('ap-water').value,sun:document.getElementById('ap-sun').value,datePlanted:document.getElementById('ap-date').value,howPlanted:_how,fromCutting:_how==='cutting',nursery:'',notes:document.getElementById('ap-notes').value,maintenance:collectMaintTasks('ap'),trouble:[]});save();closeModal();showRoom(S.currentRoom.id);}
+function saveNewIndoorPlant(){const name=document.getElementById('ap-name').value.trim();if(!name)return;const _how=document.getElementById('ap-how').value;const _newId='ip'+Date.now();const _rawEmoji=getEmojiFieldValue('ap-emoji')||'🌿';S.indoorPlants.push({id:_newId,roomId:S.currentRoom.id,section:document.getElementById('ap-section').value,name,scientific:document.getElementById('ap-sci').value,emoji:storeEmojiAndGetKey(_newId,_rawEmoji),category:document.getElementById('ap-category').value||'None',status:document.getElementById('ap-status').value,water:document.getElementById('ap-water').value,sun:document.getElementById('ap-sun').value,datePlanted:document.getElementById('ap-date').value,howPlanted:_how,fromCutting:_how==='cutting',nursery:'',notes:document.getElementById('ap-notes').value,maintenance:collectMaintTasks('ap'),trouble:[]});save();closeModal();showRoom(S.currentRoom.id);}
 // Maintenance task form helpers
 const _MONTHS=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
 let _formMaintTasks=[];
