@@ -8529,14 +8529,8 @@
       "orderAs": "Gypsum (40lb bag)"
     }
   ],
-  "notes": [
-    {
-      "id": "n1778651045753",
-      "text": "Water: \nApril 30 - deep watered apricot, orange and persimmon\n\nMay 10 - apricot and persimmon got deeeep watering due to water leak. \n\nMay 12 - deep water orange \n\nTreat: \nApril 30 -\n- rose on back bed \n- iceberg in bbq \n\nMay 12\n- all roses in back\n- China doll and jade \n- Snail bait front and back",
-      "date": "May 12, 2026"
-    }
-  ],
-  "gardenNote": "",
+  "notes": [],
+  "gardenNote": "Water: \nApril 30 - deep watered apricot, orange and persimmon\n\nMay 10 - apricot and persimmon got deeeep watering due to water leak. \n\nMay 12 - deep water orange \n\nTreat: \nApril 30 -\n- rose on back bed \n- iceberg in bbq \n\nMay 12\n- all roses in back\n- China doll and jade \n- Snail bait front and back",
   "propagation": [
     {
       "id": "pr1",
@@ -8556,5 +8550,5 @@
     }
   ],
   "irrigation": [],
-  "syncedAt": "2026-05-14T16:00:48.315Z"
+  "syncedAt": "2026-05-14T16:01:15.516Z"
 }
