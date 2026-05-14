@@ -8388,7 +8388,7 @@
     {
       "id": "t8",
       "text": "Deadhead all geraniums aggressively",
-      "done": false,
+      "done": true,
       "date": "",
       "category": "Maintenance"
     },
@@ -8908,5 +8908,5 @@
     }
   ],
   "irrigation": [],
-  "syncedAt": "2026-05-14T23:10:21.847Z"
+  "syncedAt": "2026-05-14T23:11:34.241Z"
 }
