@@ -5978,6 +5978,57 @@
       "category": "Bush Roses",
       "howPlanted": "",
       "isIndoor": false
+    },
+    {
+      "id": "p1778799623602268",
+      "bedId": "b-ros",
+      "name": "Tree Rose - Pink",
+      "scientific": "Rosa standard",
+      "emoji": "emoji_ros-treerose",
+      "status": "alive",
+      "water": "Deep water weekly",
+      "sun": "Part sun",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Existing standard form rose.",
+      "maintenance": [
+        {
+          "task": "Deadhead every 2 weeks — outward facing bud, 45° cut",
+          "months": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "task": "Hard cutback annually in January/February",
+          "months": [
+            1,
+            2
+          ]
+        },
+        {
+          "task": "Feed rose fertilizer after first bloom flush",
+          "months": [
+            5,
+            6
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Black spot",
+          "url": "https://www.google.com/search?q=Black%20spot%20plant%20care%20fix"
+        }
+      ],
+      "category": "Bush Roses",
+      "howPlanted": "",
+      "isIndoor": false
     }
   ],
   "indoorPlants": [
@@ -8602,5 +8653,5 @@
     }
   ],
   "irrigation": [],
-  "syncedAt": "2026-05-14T23:00:13.556Z"
+  "syncedAt": "2026-05-14T23:00:24.704Z"
 }
