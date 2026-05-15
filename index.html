@@ -770,17 +770,7 @@ const DB={
     try{localStorage.setItem('garden_'+k,JSON.stringify(v));}catch(e){}
   },
   getImg(k){
-    if(imageCache[k])return imageCache[k]; // in-memory (emoji or fresh photo upload)
-    if(photoRefs[k]){
-      try{localStorage.removeItem('garden_img_'+k);}catch(e){} // clean up any stale LS copy
-      return photoRefs[k]; // GitHub URL (cross-device)
-    }
-    if(_isPhotoKey(k)){
-      try{
-        const ls=localStorage.getItem('garden_img_'+k);
-        if(ls){_uploadPhotoToGitHub(k,ls);return ls;} // migrate old photo to GitHub in background
-      }catch(e){}
-    }
+    if(imageCache[k])return imageCache[k]; // in-memory (emoji or preloaded photo)
     return null;
   },
   setImg(k,v){
@@ -1009,9 +999,12 @@ function _isPhotoKey(k){return k.startsWith('bed_')||k.startsWith('room_')||k.st
 async function _uploadPhotoToGitHub(key,dataUri){
   if(!ghConfigured()||!dataUri)return;
   const c=ghCredentials();
-  const b64=dataUri.includes(',')?dataUri.split(',')[1]:dataUri;
-  const path='garden-photos/'+key+'.jpg';
-  const body={message:'Upload garden photo',content:b64};
+  const path='garden-photos/'+key+'.txt';
+  // Store data URI as plain text — avoids binary encoding issues
+  const bytes=new TextEncoder().encode(dataUri);
+  let binary='';bytes.forEach(b=>binary+=String.fromCharCode(b));
+  const b64content=btoa(binary);
+  const body={message:'Upload garden photo: '+key,content:b64content};
   try{
     const ex=await fetch(`https://api.github.com/repos/${c.user}/${c.repo}/contents/${path}`,{headers:{'Authorization':'token '+c.token,'Accept':'application/vnd.github.v3+json'}});
     if(ex.ok){const ed=await ex.json();body.sha=ed.sha;}
@@ -1020,7 +1013,7 @@ async function _uploadPhotoToGitHub(key,dataUri){
     const r=await fetch(`https://api.github.com/repos/${c.user}/${c.repo}/contents/${path}`,{method:'PUT',headers:{'Authorization':'token '+c.token,'Accept':'application/vnd.github.v3+json','Content-Type':'application/json'},body:JSON.stringify(body)});
     if(r.ok){
       photoRefs[key]=`https://raw.githubusercontent.com/${c.user}/${c.repo}/main/${path}`;
-      delete imageCache[key]; // no longer need in-memory copy; will load from URL
+      // Keep imageCache[key] so photo stays visible without re-fetching
       clearTimeout(_uploadSaveTimer);_uploadSaveTimer=setTimeout(()=>save(),2000);
     }
   }catch(e){console.log('_uploadPhotoToGitHub error:',e);}
@@ -1028,7 +1021,7 @@ async function _uploadPhotoToGitHub(key,dataUri){
 async function _deletePhotoFromGitHub(key){
   if(!ghConfigured())return;
   const c=ghCredentials();
-  const path='garden-photos/'+key+'.jpg';
+  const path='garden-photos/'+key+'.txt';
   try{
     const ex=await fetch(`https://api.github.com/repos/${c.user}/${c.repo}/contents/${path}`,{headers:{'Authorization':'token '+c.token,'Accept':'application/vnd.github.v3+json'}});
     if(ex.ok){
@@ -1036,6 +1029,16 @@ async function _deletePhotoFromGitHub(key){
       await fetch(`https://api.github.com/repos/${c.user}/${c.repo}/contents/${path}`,{method:'DELETE',headers:{'Authorization':'token '+c.token,'Accept':'application/vnd.github.v3+json','Content-Type':'application/json'},body:JSON.stringify({message:'Remove garden photo',sha:ed.sha})});
     }
   }catch(e){console.log('_deletePhotoFromGitHub error:',e);}
+}
+async function loadAllPhotos(){
+  if(!Object.keys(photoRefs).length)return;
+  await Promise.all(Object.entries(photoRefs).map(async([key,url])=>{
+    if(imageCache[key])return; // already loaded
+    try{
+      const r=await fetch(url+'?v='+Date.now());
+      if(r.ok){const text=await r.text();if(text.startsWith('data:'))imageCache[key]=text;}
+    }catch(e){console.log('loadAllPhotos error for '+key,e);}
+  }));
 }
 function storeEmojiAndGetKey(plantId,emojiVal){
   if(!emojiVal||!emojiVal.startsWith('data:'))return emojiVal||'🌿';
@@ -1052,7 +1055,8 @@ async function syncImagesToGitHub(){
   if(!ghConfigured())return;
   const c=ghCredentials();
   try{
-    const json=JSON.stringify(imageCache);
+    const emojiOnly=Object.fromEntries(Object.entries(imageCache).filter(([k])=>!_isPhotoKey(k)));
+    const json=JSON.stringify(emojiOnly);
     const bytes=new TextEncoder().encode(json);
     let binary='';bytes.forEach(b=>binary+=String.fromCharCode(b));
     const content=btoa(binary);
@@ -1230,6 +1234,8 @@ async function init(){
     await loadImagesFromGitHub();
     // Try GitHub first, fall back to local
     const ghLoaded=await loadFromGitHub();
+    // Load photos into imageCache (photoRefs populated by loadFromGitHub)
+    await loadAllPhotos();
     if(!ghLoaded){
       S.rooms=await DB.get('rooms')||defaultRooms;
       S.beds=await DB.get('beds')||defaultBeds;
@@ -1293,14 +1299,9 @@ async function init(){
         _imgMigrated=true;
       }
     });
-    // Cleanup: if a previous migration swept photos into imageCache/garden-images.json,
-    // move them back to localStorage and strip them from imageCache (keeps it emoji-only).
+    // Strip any stale photo keys from imageCache (keeps garden-images.json emoji-only)
     try{Object.keys(imageCache).forEach(function(k){
-      if(_isPhotoKey(k)){
-        try{localStorage.setItem('garden_img_'+k,imageCache[k]);}catch(e){}
-        delete imageCache[k];
-        _imgMigrated=true; // trigger resync to write a clean, emoji-only images file
-      }
+      if(_isPhotoKey(k)){delete imageCache[k];_imgMigrated=true;}
     });}catch(e){}
     if(_imgMigrated)syncImagesToGitHub();
     await save();
