@@ -6137,7 +6137,7 @@
       "bedId": "b-ros",
       "name": "Tree Rose - pink ",
       "scientific": "Rosa standard",
-      "emoji": "🌹",
+      "emoji": "emoji_p1778799801113570",
       "status": "alive",
       "water": "Deep water weekly",
       "sun": "Part sun",
@@ -8971,5 +8971,5 @@
     "section_indoor": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/section_indoor.txt",
     "room_r-house": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/room_r-house.txt"
   },
-  "syncedAt": "2026-05-15T20:39:01.738Z"
+  "syncedAt": "2026-05-15T20:39:25.354Z"
 }
