@@ -285,6 +285,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--warm-white);color:var(--t
       <option value="indoor">🪴 Indoor</option>
     </select>
   </div>
+  <div class="segment" id="sched-tab-bar"><div class="segment-btn active" onclick="filterSchedTab('tasks',this)">Tasks</div><div class="segment-btn" onclick="filterSchedTab('done',this)">Done</div></div>
   <div class="list-container" id="schedule-list"></div>
 </div>
 <div id="screen-notes" class="screen">
@@ -1724,16 +1725,20 @@ function exportShoppingList(){
   const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([text],{type:'text/plain'}));a.download='garden-shopping-list.txt';document.body.appendChild(a);a.click();document.body.removeChild(a);
 }
 let currentScheduleMonth=new Date().getMonth()+1;
+let currentSchedTab='tasks';
 function renderScheduleMonths(){
   const months=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
   currentScheduleMonth=new Date().getMonth()+1;
   document.getElementById('month-selector').innerHTML=months.map((m,i)=>'<div class="month-chip '+(i+1===currentScheduleMonth?'active':'')+'" onclick="selectMonth('+(i+1)+',this)">'+m+'</div>').join('');
   const bedSel=document.getElementById('sched-filter-bed');
   if(bedSel)bedSel.innerHTML='<option value="all">All Beds</option>'+S.beds.map(b=>'<option value="'+b.id+'">'+b.name+'</option>').join('');
+  currentSchedTab='tasks';
+  document.querySelectorAll('#sched-tab-bar .segment-btn').forEach((b,i)=>{b.classList.toggle('active',i===0);});
   renderSchedule(currentScheduleMonth);
 }
-function selectMonth(m,el){document.querySelectorAll('.month-chip').forEach(c=>c.classList.remove('active'));el.classList.add('active');currentScheduleMonth=m;renderSchedule(m);}
+function selectMonth(m,el){document.querySelectorAll('.month-chip').forEach(c=>c.classList.remove('active'));el.classList.add('active');currentScheduleMonth=m;filterSchedTab('tasks',document.querySelector('#sched-tab-bar .segment-btn'));}
 function renderCurrentSchedule(){renderSchedule(currentScheduleMonth);}
+function filterSchedTab(tab,btn){currentSchedTab=tab;document.querySelectorAll('#sched-tab-bar .segment-btn').forEach(b=>b.classList.remove('active'));if(btn)btn.classList.add('active');renderSchedule(currentScheduleMonth);}
 function getSchedChecked(month){try{const v=localStorage.getItem('sc'+month);return v?JSON.parse(v):{};}catch(e){return {};}}
 function toggleSchedTask(month,key){const d=getSchedChecked(month);d[key]=!d[key];try{localStorage.setItem('sc'+month,JSON.stringify(d));}catch(e){}renderSchedule(month);}
 function renderSchedule(month){
@@ -1829,9 +1834,16 @@ function renderSchedule(month){
   if(filtered.length===0){document.getElementById('schedule-list').innerHTML='<div class="empty-state"><span>📅</span><p>No tasks match your filters.</p></div>';return;}
   var checked=getSchedChecked(month);
   var doneCount=filtered.filter(function(t){return checked[t.key];}).length;
+  // Split by active tab
+  var tabTasks=filtered.filter(function(t){return currentSchedTab==='done'?!!checked[t.key]:!checked[t.key];});
+  if(tabTasks.length===0){
+    var emptyMsg=currentSchedTab==='done'?'No completed tasks this month. Check items off in the Tasks tab.':'All done! Switch to the Done tab to review.';
+    document.getElementById('schedule-list').innerHTML='<div style="font-size:12px;color:var(--text-light);padding:4px 0 12px">'+doneCount+'/'+filtered.length+' tasks done this month</div><div class="empty-state"><span>'+(currentSchedTab==='done'?'✅':'📅')+'</span><p>'+emptyMsg+'</p></div>';
+    return;
+  }
   // Group by type
   var groups={};
-  filtered.forEach(function(t){
+  tabTasks.forEach(function(t){
     var g=t.type==='Pruning'?'✂️ Pruning':t.type==='Feeding'?'🌱 Feeding':t.type==='Watering'?'💧 Watering':t.type==='Pest'?'🐛 Pest':'🔧 Maintenance';
     if(!groups[g])groups[g]=[];
     groups[g].push(t);
@@ -1840,14 +1852,10 @@ function renderSchedule(month){
   Object.keys(groups).forEach(function(group){
     out+='<div style="font-size:11px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-light);padding:8px 0 4px">'+group+'</div>';
     groups[group].forEach(function(t){
-      var isDone=!!checked[t.key];
+      var isDone=currentSchedTab==='done';
       var safeKey=t.key.replace(/\\/g,'\\\\').replace(/'/g,"\\'");
       var border=t.indoor?'var(--terracotta)':'var(--sage)';
-      var catLabel=t.cat;
-      if(t.isGrouped&&t.count>1){
-        catLabel=t.cat; // already has badge HTML built in
-      }
-      out+='<div class="schedule-task '+(isDone?'task-done':'')+'" style="border-left-color:'+border+'"><div style="display:flex;align-items:flex-start"><div class="sched-check '+(isDone?'checked':'')+'" onclick="toggleSchedTask('+month+',\''+safeKey+'\')">'+( isDone?'✓':'')+'</div><div style="flex:1"><div style="font-size:10px;text-transform:uppercase;letter-spacing:1px;color:'+(t.indoor?'var(--terracotta)':'var(--sage-dark)')+';font-weight:500;margin-bottom:3px">'+catLabel+'</div><h4>'+t.title+'</h4>'+(t.desc?'<p>'+t.desc+'</p>':'')+'</div></div></div>';
+      out+='<div class="schedule-task '+(isDone?'task-done':'')+'" style="border-left-color:'+border+'"><div style="display:flex;align-items:flex-start"><div class="sched-check '+(isDone?'checked':'')+'" onclick="toggleSchedTask('+month+',\''+safeKey+'\')">'+( isDone?'✓':'')+'</div><div style="flex:1"><div style="font-size:10px;text-transform:uppercase;letter-spacing:1px;color:'+(t.indoor?'var(--terracotta)':'var(--sage-dark)')+';font-weight:500;margin-bottom:3px">'+t.cat+'</div><h4>'+t.title+'</h4>'+(t.desc?'<p>'+t.desc+'</p>':'')+'</div></div></div>';
     });
   });
   document.getElementById('schedule-list').innerHTML=out;
