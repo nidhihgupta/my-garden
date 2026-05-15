@@ -770,13 +770,23 @@ const DB={
     try{localStorage.setItem('garden_'+k,JSON.stringify(v));}catch(e){}
   },
   getImg(k){
-    if(imageCache[k])return imageCache[k];
-    if(_isPhotoKey(k)){try{return localStorage.getItem('garden_img_'+k)||null;}catch(e){return null;}}
+    if(imageCache[k])return imageCache[k]; // in-memory (emoji or fresh photo upload)
+    if(photoRefs[k]){
+      try{localStorage.removeItem('garden_img_'+k);}catch(e){} // clean up any stale LS copy
+      return photoRefs[k]; // GitHub URL (cross-device)
+    }
+    if(_isPhotoKey(k)){
+      try{
+        const ls=localStorage.getItem('garden_img_'+k);
+        if(ls){_uploadPhotoToGitHub(k,ls);return ls;} // migrate old photo to GitHub in background
+      }catch(e){}
+    }
     return null;
   },
   setImg(k,v){
     if(_isPhotoKey(k)){
-      try{localStorage.setItem('garden_img_'+k,v);}catch(e){alert('Photo storage full — try removing some bed/room photos first.');}
+      imageCache[k]=v; // store in-memory for instant display
+      _uploadPhotoToGitHub(k,v); // upload to GitHub in background; sets photoRef on success
     }else{
       imageCache[k]=v;scheduleSyncImages();
     }
@@ -850,9 +860,11 @@ function checkYearReset(){
 }
 
 let S={beds:[],plants:[],todos:[],shopping:[],notes:[],gardenNote:'',propagation:[],irrigation:[],rooms:[],indoorPlants:[],currentBed:null,currentPlant:null,currentYard:'front',currentRoom:null,todoFilter:'pending',shopFilter:'needed',bedFilter:'all',plantSource:null,_noteTimer:null};
-let imageCache={};
+let imageCache={};   // emoji key → base64 DataUri (synced to garden-images.json)
+let photoRefs={};    // photo key → GitHub raw URL (synced to garden-data.json)
 let _ghImagesSha=null;
 let _imageSyncTimer=null;
+let _uploadSaveTimer=null;
 
 const defaultRooms=[
   {id:'r-office',name:'Office',icon:'💻',sections:['Floor','Plant Stand','Wall Shelves','Hanging','Table','Window Sill']},
@@ -983,7 +995,7 @@ async function ghWriteFile(data,sha){
 let _ghSha=null;
 async function syncToGitHub(){
   if(!ghConfigured())return;
-  const data={rooms:S.rooms,beds:S.beds,plants:S.plants,indoorPlants:S.indoorPlants,todos:S.todos,shopping:S.shopping,notes:S.notes,gardenNote:S.gardenNote,propagation:S.propagation,irrigation:S.irrigation,syncedAt:new Date().toISOString()};
+  const data={rooms:S.rooms,beds:S.beds,plants:S.plants,indoorPlants:S.indoorPlants,todos:S.todos,shopping:S.shopping,notes:S.notes,gardenNote:S.gardenNote,propagation:S.propagation,irrigation:S.irrigation,photoRefs,syncedAt:new Date().toISOString()};
   const newSha=await ghWriteFile(data,_ghSha);
   if(newSha){
     _ghSha=newSha;
@@ -994,6 +1006,37 @@ async function syncToGitHub(){
 }
 
 function _isPhotoKey(k){return k.startsWith('bed_')||k.startsWith('room_')||k.startsWith('yard_')||k.startsWith('section_');}
+async function _uploadPhotoToGitHub(key,dataUri){
+  if(!ghConfigured()||!dataUri)return;
+  const c=ghCredentials();
+  const b64=dataUri.includes(',')?dataUri.split(',')[1]:dataUri;
+  const path='garden-photos/'+key+'.jpg';
+  const body={message:'Upload garden photo',content:b64};
+  try{
+    const ex=await fetch(`https://api.github.com/repos/${c.user}/${c.repo}/contents/${path}`,{headers:{'Authorization':'token '+c.token,'Accept':'application/vnd.github.v3+json'}});
+    if(ex.ok){const ed=await ex.json();body.sha=ed.sha;}
+  }catch(e){}
+  try{
+    const r=await fetch(`https://api.github.com/repos/${c.user}/${c.repo}/contents/${path}`,{method:'PUT',headers:{'Authorization':'token '+c.token,'Accept':'application/vnd.github.v3+json','Content-Type':'application/json'},body:JSON.stringify(body)});
+    if(r.ok){
+      photoRefs[key]=`https://raw.githubusercontent.com/${c.user}/${c.repo}/main/${path}`;
+      delete imageCache[key]; // no longer need in-memory copy; will load from URL
+      clearTimeout(_uploadSaveTimer);_uploadSaveTimer=setTimeout(()=>save(),2000);
+    }
+  }catch(e){console.log('_uploadPhotoToGitHub error:',e);}
+}
+async function _deletePhotoFromGitHub(key){
+  if(!ghConfigured())return;
+  const c=ghCredentials();
+  const path='garden-photos/'+key+'.jpg';
+  try{
+    const ex=await fetch(`https://api.github.com/repos/${c.user}/${c.repo}/contents/${path}`,{headers:{'Authorization':'token '+c.token,'Accept':'application/vnd.github.v3+json'}});
+    if(ex.ok){
+      const ed=await ex.json();
+      await fetch(`https://api.github.com/repos/${c.user}/${c.repo}/contents/${path}`,{method:'DELETE',headers:{'Authorization':'token '+c.token,'Accept':'application/vnd.github.v3+json','Content-Type':'application/json'},body:JSON.stringify({message:'Remove garden photo',sha:ed.sha})});
+    }
+  }catch(e){console.log('_deletePhotoFromGitHub error:',e);}
+}
 function storeEmojiAndGetKey(plantId,emojiVal){
   if(!emojiVal||!emojiVal.startsWith('data:'))return emojiVal||'🌿';
   const key='emoji_'+plantId;
@@ -1063,6 +1106,7 @@ async function loadFromGitHub(){
   if(d.propagation)S.propagation=d.propagation;
   if(d.irrigation)S.irrigation=d.irrigation;
   if(d.gardenNote!==undefined)S.gardenNote=d.gardenNote;
+  if(d.photoRefs)photoRefs=d.photoRefs;
   return true;
 }
 
@@ -1395,7 +1439,7 @@ function showEditBedModal(){
   document.getElementById('modal-overlay').classList.add('active');
 }
 function saveEditBed(){const b=S.beds.find(x=>x.id===S.currentBed.id);if(!b)return;b.name=document.getElementById('eb-name').value;b.icon=document.getElementById('eb-icon').value;b.zone=document.getElementById('eb-zone').value;b.sun=document.getElementById('eb-sun').value;b.notes=document.getElementById('eb-notes').value;S.currentBed=b;save();closeModal();showBed(b.id);}
-function removeBedImage(){const k='bed_'+S.currentBed.id;delete imageCache[k];try{localStorage.removeItem('garden_img_'+k);}catch(e){}closeModal();showBed(S.currentBed.id);}
+function removeBedImage(){const k='bed_'+S.currentBed.id;delete imageCache[k];try{localStorage.removeItem('garden_img_'+k);}catch(e){}if(photoRefs[k]){_deletePhotoFromGitHub(k);delete photoRefs[k];save();}closeModal();showBed(S.currentBed.id);}
 function showIndoorPlant(id){const p=S.indoorPlants.find(x=>x.id===id);if(!p)return;if(S.plantSource!=='allplants')S.plantSource=null;S.currentPlant={...p,isIndoor:true};renderPlantDetail(p,true);showScreen('plant');}
 function showOutdoorPlant(id){const p=S.plants.find(x=>x.id===id);if(!p)return;if(S.plantSource!=='allplants')S.plantSource=null;S.currentPlant={...p,isIndoor:false};renderPlantDetail(p,false);showScreen('plant');}
 function renderPlantDetail(plant,isIndoor){
