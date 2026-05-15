@@ -5928,7 +5928,9 @@
           ]
         }
       ],
-      "trouble": []
+      "trouble": [],
+      "datePlanted": "2026-05-12",
+      "howPlanted": "seed"
     },
     {
       "id": "p1778799611982893",
@@ -8973,5 +8975,5 @@
     "section_indoor": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/section_indoor.txt",
     "room_r-house": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/room_r-house.txt"
   },
-  "syncedAt": "2026-05-15T20:41:10.195Z"
+  "syncedAt": "2026-05-15T20:41:29.404Z"
 }
