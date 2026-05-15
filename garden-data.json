@@ -6284,6 +6284,55 @@
       "category": "Bush Roses",
       "howPlanted": "",
       "isIndoor": false
+    },
+    {
+      "id": "p1778869421207",
+      "bedId": "b-berry",
+      "name": "Okra",
+      "scientific": "",
+      "emoji": "emoji_p1778869421207",
+      "category": "Vegetables",
+      "status": "alive",
+      "water": "",
+      "sun": "",
+      "datePlanted": "2026-05-15",
+      "howPlanted": "seed",
+      "fromCutting": false,
+      "nursery": "",
+      "notes": "",
+      "maintenance": [
+        {
+          "task": "Water consistently — check soil moisture daily in summer",
+          "months": [
+            5,
+            6,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "task": "Feed with balanced fertilizer every 2-3 weeks",
+          "months": [
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "task": "Check for pests — inspect undersides of leaves",
+          "months": [
+            5,
+            6,
+            7,
+            8,
+            9
+          ]
+        }
+      ],
+      "trouble": []
     }
   ],
   "indoorPlants": [
@@ -8908,5 +8957,5 @@
     }
   ],
   "irrigation": [],
-  "syncedAt": "2026-05-15T18:03:25.281Z"
+  "syncedAt": "2026-05-15T18:23:41.218Z"
 }
