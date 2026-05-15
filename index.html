@@ -770,7 +770,10 @@ const DB={
     try{localStorage.setItem('garden_'+k,JSON.stringify(v));}catch(e){}
   },
   getImg(k){
-    if(imageCache[k])return imageCache[k]; // in-memory (emoji or preloaded photo)
+    if(imageCache[k])return imageCache[k];
+    if(_isPhotoKey(k)){
+      try{const ls=localStorage.getItem('garden_img_'+k);if(ls)return ls;}catch(e){}
+    }
     return null;
   },
   setImg(k,v){
@@ -1070,7 +1073,7 @@ async function loadImagesFromGitHub(){
   if(!ghConfigured())return;
   const c=ghCredentials();
   try{
-    const r=await fetch(`https://api.github.com/repos/${c.user}/${c.repo}/contents/garden-images.json`,{headers:{'Authorization':'token '+c.token,'Accept':'application/vnd.github.v3+json'}});
+    const r=await fetch(`https://api.github.com/repos/${c.user}/${c.repo}/contents/garden-images.json`,{cache:'no-store',headers:{'Authorization':'token '+c.token,'Accept':'application/vnd.github.v3+json'}});
     if(r.status===404)return;
     if(!r.ok)return;
     const d=await r.json();
@@ -1234,8 +1237,6 @@ async function init(){
     await loadImagesFromGitHub();
     // Try GitHub first, fall back to local
     const ghLoaded=await loadFromGitHub();
-    // Load photos into imageCache (photoRefs populated by loadFromGitHub)
-    await loadAllPhotos();
     if(!ghLoaded){
       S.rooms=await DB.get('rooms')||defaultRooms;
       S.beds=await DB.get('beds')||defaultBeds;
@@ -1304,6 +1305,8 @@ async function init(){
       if(_isPhotoKey(k)){delete imageCache[k];_imgMigrated=true;}
     });}catch(e){}
     if(_imgMigrated)syncImagesToGitHub();
+    // Load photos AFTER cleanup so they aren't immediately deleted above
+    await loadAllPhotos();
     await save();
   }
   migratePlantCategories();
