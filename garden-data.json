@@ -2004,7 +2004,7 @@
       "bedId": "b-ros",
       "name": "Tree Rose - Pink (Sexy Rexy)",
       "scientific": "Rosa standard",
-      "emoji": "🌹",
+      "emoji": "emoji_ros-treerose",
       "status": "alive",
       "water": "Deep water weekly",
       "sun": "Part sun",
@@ -8971,5 +8971,5 @@
     "section_indoor": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/section_indoor.txt",
     "room_r-house": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/room_r-house.txt"
   },
-  "syncedAt": "2026-05-15T20:38:02.063Z"
+  "syncedAt": "2026-05-15T20:38:25.433Z"
 }
