@@ -8444,7 +8444,7 @@
     {
       "id": "t9",
       "text": "Cut back leggy tall geranium by half to two thirds",
-      "done": false,
+      "done": true,
       "date": "",
       "category": "Maintenance"
     },
@@ -8971,5 +8971,5 @@
     "section_indoor": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/section_indoor.txt",
     "room_r-house": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/room_r-house.txt"
   },
-  "syncedAt": "2026-05-15T20:07:27.165Z"
+  "syncedAt": "2026-05-15T20:07:40.785Z"
 }
