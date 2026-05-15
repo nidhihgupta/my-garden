@@ -8957,6 +8957,8 @@
     }
   ],
   "irrigation": [],
-  "photoRefs": {},
-  "syncedAt": "2026-05-15T18:32:04.688Z"
+  "photoRefs": {
+    "yard_front": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/yard_front.jpg"
+  },
+  "syncedAt": "2026-05-15T18:32:15.547Z"
 }
