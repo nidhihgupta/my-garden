@@ -769,8 +769,18 @@ const DB={
     // Always also save to localStorage
     try{localStorage.setItem('garden_'+k,JSON.stringify(v));}catch(e){}
   },
-  getImg(k){return imageCache[k]||null;},
-  setImg(k,v){imageCache[k]=v;scheduleSyncImages();}
+  getImg(k){
+    if(imageCache[k])return imageCache[k];
+    if(_isPhotoKey(k)){try{return localStorage.getItem('garden_img_'+k)||null;}catch(e){return null;}}
+    return null;
+  },
+  setImg(k,v){
+    if(_isPhotoKey(k)){
+      try{localStorage.setItem('garden_img_'+k,v);}catch(e){alert('Photo storage full — try removing some bed/room photos first.');}
+    }else{
+      imageCache[k]=v;scheduleSyncImages();
+    }
+  }
 };
 
 function compressImage(dataUrl,maxWidth,maxHeight,quality,callback){
@@ -983,6 +993,7 @@ async function syncToGitHub(){
   }
 }
 
+function _isPhotoKey(k){return k.startsWith('bed_')||k.startsWith('room_')||k.startsWith('yard_')||k.startsWith('section_');}
 function storeEmojiAndGetKey(plantId,emojiVal){
   if(!emojiVal||!emojiVal.startsWith('data:'))return emojiVal||'🌿';
   const key='emoji_'+plantId;
@@ -1018,8 +1029,21 @@ async function loadImagesFromGitHub(){
     const d=await r.json();
     _ghImagesSha=d.sha;
     let content;
-    if(d.content){const bytes=Uint8Array.from(atob(d.content.replace(/\n/g,'')),c=>c.charCodeAt(0));content=JSON.parse(new TextDecoder().decode(bytes));}
-    else if(d.download_url){const dr=await fetch(d.download_url);if(dr.ok)content=await dr.json();}
+    if(d.content&&d.content.trim()){
+      // Small file: inline base64
+      const bytes=Uint8Array.from(atob(d.content.replace(/\n/g,'')),c=>c.charCodeAt(0));
+      content=JSON.parse(new TextDecoder().decode(bytes));
+    } else {
+      // Large file: use Git Blobs API with auth (works for both public and private repos)
+      const br=await fetch(`https://api.github.com/repos/${c.user}/${c.repo}/git/blobs/${d.sha}`,{headers:{'Authorization':'token '+c.token,'Accept':'application/vnd.github.v3+json'}});
+      if(br.ok){
+        const bd=await br.json();
+        if(bd.content){
+          const bytes=Uint8Array.from(atob(bd.content.replace(/\n/g,'')),c=>c.charCodeAt(0));
+          content=JSON.parse(new TextDecoder().decode(bytes));
+        }
+      }
+    }
     if(content)imageCache=content;
   }catch(e){console.log('loadImagesFromGitHub error:',e);}
 }
@@ -1225,11 +1249,14 @@ async function init(){
         _imgMigrated=true;
       }
     });
-    // Migrate any bed/room/yard images from localStorage → imageCache
-    try{Object.keys(localStorage).filter(k=>k.startsWith('garden_img_')).forEach(function(k){
-      const imgKey=k.replace('garden_img_','');
-      if(!imageCache[imgKey]){imageCache[imgKey]=localStorage.getItem(k);_imgMigrated=true;}
-      localStorage.removeItem(k);
+    // Cleanup: if a previous migration swept photos into imageCache/garden-images.json,
+    // move them back to localStorage and strip them from imageCache (keeps it emoji-only).
+    try{Object.keys(imageCache).forEach(function(k){
+      if(_isPhotoKey(k)){
+        try{localStorage.setItem('garden_img_'+k,imageCache[k]);}catch(e){}
+        delete imageCache[k];
+        _imgMigrated=true; // trigger resync to write a clean, emoji-only images file
+      }
     });}catch(e){}
     if(_imgMigrated)syncImagesToGitHub();
     await save();
@@ -1368,7 +1395,7 @@ function showEditBedModal(){
   document.getElementById('modal-overlay').classList.add('active');
 }
 function saveEditBed(){const b=S.beds.find(x=>x.id===S.currentBed.id);if(!b)return;b.name=document.getElementById('eb-name').value;b.icon=document.getElementById('eb-icon').value;b.zone=document.getElementById('eb-zone').value;b.sun=document.getElementById('eb-sun').value;b.notes=document.getElementById('eb-notes').value;S.currentBed=b;save();closeModal();showBed(b.id);}
-function removeBedImage(){delete imageCache['bed_'+S.currentBed.id];scheduleSyncImages();closeModal();showBed(S.currentBed.id);}
+function removeBedImage(){const k='bed_'+S.currentBed.id;delete imageCache[k];try{localStorage.removeItem('garden_img_'+k);}catch(e){}closeModal();showBed(S.currentBed.id);}
 function showIndoorPlant(id){const p=S.indoorPlants.find(x=>x.id===id);if(!p)return;if(S.plantSource!=='allplants')S.plantSource=null;S.currentPlant={...p,isIndoor:true};renderPlantDetail(p,true);showScreen('plant');}
 function showOutdoorPlant(id){const p=S.plants.find(x=>x.id===id);if(!p)return;if(S.plantSource!=='allplants')S.plantSource=null;S.currentPlant={...p,isIndoor:false};renderPlantDetail(p,false);showScreen('plant');}
 function renderPlantDetail(plant,isIndoor){
