@@ -1193,30 +1193,16 @@ function importDataJSON(e){
 }
 
 async function init(){
-  // Version check — if data version doesn't match, reload defaults
-  const storedVersion=await DB.get('dataVersion');
-  if(storedVersion!==DATA_VERSION){
-    console.log('Data version mismatch — loading fresh defaults');
-    S.rooms=defaultRooms;
-    S.beds=defaultBeds;
-    S.plants=defaultOutdoorPlants;
-    S.indoorPlants=defaultIndoorPlants;
-    S.todos=defaultTodos;
-    S.shopping=defaultShopping;
-    S.notes=[];
-    S.propagation=defaultPropagation;
-    S.irrigation=[];
-    await DB.set('dataVersion',DATA_VERSION);
-    await DB.set('rooms',S.rooms);
-    await DB.set('beds',S.beds);
-    await DB.set('plants',S.plants);
-    await DB.set('indoorPlants',S.indoorPlants);
-    await DB.set('todos',S.todos);
-    await DB.set('shopping',S.shopping);
-    await DB.set('propagation',S.propagation);
-  } else {
-    const ghLoaded=await loadFromGitHub();
-    if(!ghLoaded){
+  // GitHub is the source of truth — always try it first.
+  // Version check is only a fallback concern when GitHub is unreachable.
+  const ghLoaded=await loadFromGitHub();
+  if(!ghLoaded){
+    const storedVersion=await DB.get('dataVersion');
+    if(storedVersion!==DATA_VERSION){
+      S.rooms=defaultRooms;S.beds=defaultBeds;S.plants=defaultOutdoorPlants;
+      S.indoorPlants=defaultIndoorPlants;S.todos=defaultTodos;S.shopping=defaultShopping;
+      S.notes=[];S.gardenNote='';S.propagation=defaultPropagation;S.irrigation=[];
+    } else {
       S.rooms=await DB.get('rooms')||defaultRooms;
       S.beds=await DB.get('beds')||defaultBeds;
       S.plants=await DB.get('plants')||defaultOutdoorPlants;
@@ -1228,56 +1214,82 @@ async function init(){
       S.propagation=await DB.get('propagation')||defaultPropagation;
       S.irrigation=await DB.get('irrigation')||[];
     }
-    const taskMigrations={
-      'Prune lightly after flowering only':'Prune lightly after flowering',
-      'Deadhead spent blooms daily':'Deadhead spent blooms daily during peak bloom',
-      'Feed slow release in spring':'Feed slow release fertilizer in spring',
-      'Feed liquid fertilizer every 2 weeks in bloom':'Feed liquid fertilizer every 2 weeks',
-      'Weekly deep water July-August':'Deep water weekly July-August',
-      'Weekly deep water July-August — drought stress causes fruit cracking':'Deep water weekly July-August',
-      'Divide clumps every 3 years':'Divide clumps every 3-4 years',
-    };
-    const plantNameMigrations={
-      'Tree Rose':'Rose','Flower Carpet Rose':'Rose','Iceberg Rose Climbing':'Rose',
-      'Angel Face Rose Climbing':'Rose','Burst of Joy Rose Bush':'Rose',
-      'Double Knock Out Rose Pink':'Rose','Existing Rose':'Rose',
-      'Sunburst Rose Bush':'Rose','English Rose David Austin':'Rose',
-      'Double Knock Out Rose White Out':'Rose',
-      'Dwarf Lemon Tree':'Citrus Tree','Orange Tree':'Citrus Tree',
-      'Plum Espalier':'Espalier','Rainier Cherry Espalier':'Espalier',
-    };
-    [...S.plants,...S.indoorPlants].forEach(function(plant){
-      if(plantNameMigrations[plant.name])plant.name=plantNameMigrations[plant.name];
-      if(!plant.maintenance)return;
-      plant.maintenance.forEach(function(mItem){
-        if(taskMigrations[mItem.task])mItem.task=taskMigrations[mItem.task];
-      });
-    });
-    function fixEmoji(s,fallback){
-      if(!s)return fallback;
-      for(let i=0;i<5;i++){
-        if(![...s].some(c=>c.charCodeAt(0)>=0x80&&c.charCodeAt(0)<=0xFF))break;
-        try{s=decodeURIComponent(escape(s));}catch(e){return fallback;}
-      }
-      return s;
-    }
-    const defaultIconMap={'Office':'💻','Rest of House':'🏠'};
-    S.rooms.forEach(function(r){r.icon=fixEmoji(r.icon,defaultIconMap[r.name]||'🪴');});
-    S.beds.forEach(function(b){b.icon=fixEmoji(b.icon,'🌿');});
-    S.plants.forEach(function(p){p.emoji=fixEmoji(p.emoji,'🌿');});
-    S.indoorPlants.forEach(function(p){p.emoji=fixEmoji(p.emoji,'🪴');});
-    // Migrate any inline base64 emojis still in plant data → upload to GitHub
-    let _dataChanged=false;
-    [...S.plants,...S.indoorPlants].forEach(function(p){
-      if(p.emoji&&p.emoji.startsWith('data:')){
-        const key='emoji_'+p.id;
-        if(!imageCache[key]){imageCache[key]=p.emoji;uploadImage(key,p.emoji);}
-        p.emoji=key;_dataChanged=true;
-      }
-    });
-    await loadAllImages();
-    if(_dataChanged)await save();
   }
+  await DB.set('dataVersion',DATA_VERSION);
+  const taskMigrations={
+    'Prune lightly after flowering only':'Prune lightly after flowering',
+    'Deadhead spent blooms daily':'Deadhead spent blooms daily during peak bloom',
+    'Feed slow release in spring':'Feed slow release fertilizer in spring',
+    'Feed liquid fertilizer every 2 weeks in bloom':'Feed liquid fertilizer every 2 weeks',
+    'Weekly deep water July-August':'Deep water weekly July-August',
+    'Weekly deep water July-August — drought stress causes fruit cracking':'Deep water weekly July-August',
+    'Divide clumps every 3 years':'Divide clumps every 3-4 years',
+  };
+  const plantNameMigrations={
+    'Tree Rose':'Rose','Flower Carpet Rose':'Rose','Iceberg Rose Climbing':'Rose',
+    'Angel Face Rose Climbing':'Rose','Burst of Joy Rose Bush':'Rose',
+    'Double Knock Out Rose Pink':'Rose','Existing Rose':'Rose',
+    'Sunburst Rose Bush':'Rose','English Rose David Austin':'Rose',
+    'Double Knock Out Rose White Out':'Rose',
+    'Dwarf Lemon Tree':'Citrus Tree','Orange Tree':'Citrus Tree',
+    'Plum Espalier':'Espalier','Rainier Cherry Espalier':'Espalier',
+  };
+  [...S.plants,...S.indoorPlants].forEach(function(plant){
+    if(plantNameMigrations[plant.name])plant.name=plantNameMigrations[plant.name];
+    if(!plant.maintenance)return;
+    plant.maintenance.forEach(function(mItem){
+      if(taskMigrations[mItem.task])mItem.task=taskMigrations[mItem.task];
+    });
+  });
+  function fixEmoji(s,fallback){
+    if(!s)return fallback;
+    for(let i=0;i<5;i++){
+      if(![...s].some(c=>c.charCodeAt(0)>=0x80&&c.charCodeAt(0)<=0xFF))break;
+      try{s=decodeURIComponent(escape(s));}catch(e){return fallback;}
+    }
+    return s;
+  }
+  const defaultIconMap={'Office':'💻','Rest of House':'🏠'};
+  S.rooms.forEach(function(r){r.icon=fixEmoji(r.icon,defaultIconMap[r.name]||'🪴');});
+  S.beds.forEach(function(b){b.icon=fixEmoji(b.icon,'🌿');});
+  S.plants.forEach(function(p){p.emoji=fixEmoji(p.emoji,'🌿');});
+  S.indoorPlants.forEach(function(p){p.emoji=fixEmoji(p.emoji,'🪴');});
+  // Migrate any inline base64 emojis in plant data → upload to GitHub
+  let _dataChanged=false;
+  [...S.plants,...S.indoorPlants].forEach(function(p){
+    if(p.emoji&&p.emoji.startsWith('data:')){
+      const key='emoji_'+p.id;
+      if(!imageCache[key]){imageCache[key]=p.emoji;uploadImage(key,p.emoji);}
+      p.emoji=key;_dataChanged=true;
+    }
+  });
+  // One-time migration: pull emojis from old garden-images.json into imageRefs
+  const hasEmojis=Object.keys(imageRefs).some(k=>k.startsWith('emoji_'));
+  if(!hasEmojis&&ghConfigured()){
+    try{
+      const c=ghCredentials();
+      const r=await fetch(`https://api.github.com/repos/${c.user}/${c.repo}/contents/garden-images.json`,
+        {cache:'no-store',headers:{'Authorization':'token '+c.token,'Accept':'application/vnd.github.v3+json'}});
+      if(r.ok){
+        const d=await r.json();
+        let oldEmojis=null;
+        if(d.content){
+          const bytes=Uint8Array.from(atob(d.content.replace(/\n/g,'')),c=>c.charCodeAt(0));
+          oldEmojis=JSON.parse(new TextDecoder().decode(bytes));
+        }
+        if(oldEmojis){
+          await Promise.all(Object.entries(oldEmojis).map(async([key,val])=>{
+            if(!val||!val.startsWith('data:'))return;
+            imageCache[key]=val;
+            await uploadImage(key,val);
+          }));
+          _dataChanged=true;
+        }
+      }
+    }catch(e){console.log('emoji migration error:',e);}
+  }
+  await loadAllImages();
+  if(_dataChanged)await save();
   migratePlantCategories();
   updateHomeCounts();
   renderScheduleMonths();
