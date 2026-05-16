@@ -323,7 +323,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--warm-white);color:var(--t
       <button class="btn-primary" onclick="saveGitHubSettings()">Save & Test Connection</button>
       <button class="btn-secondary" onclick="forceSyncToGitHub()">⬆️ Force Sync Now</button>
       <button class="btn-secondary" onclick="restoreFromGitHub()">⬇️ Restore from GitHub</button>
-      <button class="btn-secondary" onclick="reloadAllPhotos()">🖼️ Reload Photos</button>
+      <button class="btn-secondary" onclick="reloadAllImages()">🖼️ Reload Images</button>
     </div>
     <div style="background:white;border-radius:var(--radius);padding:20px;box-shadow:var(--shadow)">
       <h3 style="font-family:'Playfair Display',serif;font-size:18px;margin-bottom:8px;color:var(--text-dark)">💾 Local Backup</h3>
@@ -750,49 +750,41 @@ const defaultPropagation=[
   {id:'pr1',plant:'Sweet Potato Vine (Ipomoea batatas)',dateCut:new Date().toISOString().split('T')[0],datePlanted:'',status:'pending',notes:'Sprouting in water in Coca-Cola glass on kitchen windowsill.'},
   {id:'pr2',plant:'Creeping Geranium (Pelargonium spp.)',dateCut:'',datePlanted:'',status:'pending',notes:'Stem cuttings to be taken from existing plants to fill Fountain Wall Bed. Red + pink varieties.'},
 ];
-// Storage: window.storage (Claude persistent) with localStorage fallback
+// Storage: IndexedDB-native implementation
 const DB={
+  _idb:null,
+  async _open(){
+    if(this._idb)return this._idb;
+    return new Promise((resolve,reject)=>{
+      const req=indexedDB.open('garden-app',1);
+      req.onupgradeneeded=e=>{e.target.result.createObjectStore('kv');};
+      req.onsuccess=e=>{this._idb=e.target.result;resolve(this._idb);};
+      req.onerror=()=>reject(req.error);
+    });
+  },
   async get(k){
-    // Try window.storage first (Claude environment)
-    if(typeof window!=='undefined'&&window.storage){
-      try{
-        const r=await window.storage.get('garden_'+k);
-        if(r&&r.value)return JSON.parse(r.value);
-      }catch(e){}
-    }
-    // Fall back to localStorage
-    try{const v=localStorage.getItem('garden_'+k);return v?JSON.parse(v):null;}catch(e){return null;}
+    try{
+      const db=await this._open();
+      return new Promise(resolve=>{
+        const tx=db.transaction('kv','readonly');
+        const req=tx.objectStore('kv').get('garden_'+k);
+        req.onsuccess=()=>resolve(req.result??null);
+        req.onerror=()=>resolve(null);
+      });
+    }catch(e){return null;}
   },
   async set(k,v){
-    // Try window.storage first (Claude environment)
-    if(typeof window!=='undefined'&&window.storage){
-      try{await window.storage.set('garden_'+k,JSON.stringify(v));}catch(e){}
-    }
-    // Always also save to localStorage
-    try{localStorage.setItem('garden_'+k,JSON.stringify(v));}catch(e){}
-  },
-  getImg(k){
-    if(imageCache[k])return imageCache[k];
-    // localStorage fallback for both photos (migration) and emojis (GitHub sync failure recovery)
     try{
-      const ls=localStorage.getItem('garden_img_'+k);
-      if(ls&&ls.startsWith('data:')){
-        imageCache[k]=ls; // restore into cache
-        if(k.startsWith('emoji_'))scheduleSyncImages(); // re-sync if it was a failed emoji
-        else if(_isPhotoKey&&_isPhotoKey(k)&&!photoRefs[k])_uploadPhotoToGitHub(k,ls); // rescue to GitHub
-        return ls;
-      }
+      const db=await this._open();
+      await new Promise(resolve=>{
+        const tx=db.transaction('kv','readwrite');
+        tx.objectStore('kv').put(v,'garden_'+k);
+        tx.oncomplete=resolve;tx.onerror=resolve;
+      });
     }catch(e){}
-    return null;
   },
-  setImg(k,v){
-    if(_isPhotoKey(k)){
-      imageCache[k]=v; // store in-memory for instant display
-      _uploadPhotoToGitHub(k,v); // upload to GitHub in background; sets photoRef on success
-    }else{
-      imageCache[k]=v;scheduleSyncImages();
-    }
-  }
+  getImg(k){return imageCache[k]||null;},
+  setImg(k,v){imageCache[k]=v;uploadImage(k,v);}
 };
 
 function compressImage(dataUrl,maxWidth,maxHeight,quality,callback){
@@ -850,23 +842,20 @@ function handleYardImageUpload(e){
 }
 
 // Schedule task year reset
-function checkYearReset(){
+async function checkYearReset(){
   const thisYear=new Date().getFullYear();
-  try{
-    const stored=parseInt(localStorage.getItem('sched_year')||'0');
-    if(stored!==thisYear){
-      for(let m=1;m<=12;m++){try{localStorage.removeItem('sc'+m);}catch(e){}}
-      localStorage.setItem('sched_year',thisYear);
-    }
-  }catch(e){}
+  const storedYear=await DB.get('sched_year')||0;
+  if(storedYear!==thisYear){
+    for(let m=1;m<=12;m++)await DB.set('sc'+m,{});
+    await DB.set('sched_year',thisYear);
+    _schedChecked={};
+  }
 }
 
 let S={beds:[],plants:[],todos:[],shopping:[],notes:[],gardenNote:'',propagation:[],irrigation:[],rooms:[],indoorPlants:[],currentBed:null,currentPlant:null,currentYard:'front',currentRoom:null,todoFilter:'pending',shopFilter:'needed',bedFilter:'all',plantSource:null,_noteTimer:null};
-let imageCache={};   // emoji key → base64 DataUri (synced to garden-images.json)
-let photoRefs={};    // photo key → GitHub raw URL (synced to garden-data.json)
-let _ghImagesSha=null;
-let _imageSyncTimer=null;
-let _uploadSaveTimer=null;
+let imageCache={};   // key → data URI (photos + emojis, populated from imageRefs on load)
+let imageRefs={};    // key → GitHub raw URL for ALL images (photos + emojis)
+let _schedChecked={};
 
 const defaultRooms=[
   {id:'r-office',name:'Office',icon:'💻',sections:['Floor','Plant Stand','Wall Shelves','Hanging','Table','Window Sill']},
@@ -932,7 +921,6 @@ function getPlantTasksForMonth(month){
 
 function resetToDefaults(){
   if(!confirm('Reset all data to defaults? This cannot be undone.'))return;
-  try{Object.keys(localStorage).filter(k=>k.startsWith('garden_')).forEach(k=>localStorage.removeItem(k));}catch(e){}
   location.reload();
 }
 const DATA_VERSION='v9';
@@ -973,31 +961,39 @@ async function ghReadFile(){
 async function ghWriteFile(data,sha){
   const c=ghCredentials();
   if(!c.user||!c.repo||!c.token)return null;
-  try{
-    const json=JSON.stringify(data,null,2);
-    // Safe base64 encoding for unicode content
-    const bytes=new TextEncoder().encode(json);
-    let binary='';
-    bytes.forEach(b=>binary+=String.fromCharCode(b));
-    const content=btoa(binary);
-    const body={message:'Garden data update '+new Date().toISOString(),content};
-    if(sha)body.sha=sha;
-    const r=await fetch(`https://api.github.com/repos/${c.user}/${c.repo}/contents/garden-data.json`,{method:'PUT',headers:{'Authorization':'token '+c.token,'Accept':'application/vnd.github.v3+json','Content-Type':'application/json'},body:JSON.stringify(body)});
-    if(!r.ok){
-      const err=await r.json().catch(()=>({message:r.statusText}));
-      setGHStatus('❌ GitHub write error '+r.status+': '+(err.message||r.statusText),'var(--terracotta)');
-      return null;
-    }
-    // Read the new blob SHA directly from the PUT response — no extra GET needed
-    const resp=await r.json();
-    return resp.content.sha;
-  }catch(e){setGHStatus('❌ Network error: '+e.message,'var(--terracotta)');return null;}
+  const _doWrite=async(useSha)=>{
+    try{
+      const json=JSON.stringify(data,null,2);
+      const bytes=new TextEncoder().encode(json);
+      let binary='';bytes.forEach(b=>binary+=String.fromCharCode(b));
+      const content=btoa(binary);
+      const body={message:'Garden data update '+new Date().toISOString(),content};
+      if(useSha)body.sha=useSha;
+      const r=await fetch(`https://api.github.com/repos/${c.user}/${c.repo}/contents/garden-data.json`,
+        {method:'PUT',headers:{'Authorization':'token '+c.token,'Accept':'application/vnd.github.v3+json','Content-Type':'application/json'},body:JSON.stringify(body)});
+      if(!r.ok)return{ok:false,status:r.status,err:await r.json().catch(()=>({message:r.statusText}))};
+      const resp=await r.json();
+      return{ok:true,sha:resp.content.sha};
+    }catch(e){return{ok:false,status:0,err:{message:e.message}};}
+  };
+  let result=await _doWrite(sha);
+  if(!result.ok&&result.status===409){
+    // SHA conflict — re-read current SHA and retry once
+    try{
+      const cur=await fetch(`https://api.github.com/repos/${c.user}/${c.repo}/contents/garden-data.json`,
+        {headers:{'Authorization':'token '+c.token,'Accept':'application/vnd.github.v3+json'}});
+      if(cur.ok){const cd=await cur.json();result=await _doWrite(cd.sha);}
+    }catch(e){}
+  }
+  if(result.ok){return result.sha;}
+  setGHStatus('❌ GitHub write error '+result.status+': '+(result.err?.message||'unknown'),'var(--terracotta)');
+  return null;
 }
 
 let _ghSha=null;
 async function syncToGitHub(){
   if(!ghConfigured())return;
-  const data={rooms:S.rooms,beds:S.beds,plants:S.plants,indoorPlants:S.indoorPlants,todos:S.todos,shopping:S.shopping,notes:S.notes,gardenNote:S.gardenNote,propagation:S.propagation,irrigation:S.irrigation,photoRefs,syncedAt:new Date().toISOString()};
+  const data={rooms:S.rooms,beds:S.beds,plants:S.plants,indoorPlants:S.indoorPlants,todos:S.todos,shopping:S.shopping,notes:S.notes,gardenNote:S.gardenNote,propagation:S.propagation,irrigation:S.irrigation,imageRefs,syncedAt:new Date().toISOString()};
   const newSha=await ghWriteFile(data,_ghSha);
   if(newSha){
     _ghSha=newSha;
@@ -1007,53 +1003,56 @@ async function syncToGitHub(){
   }
 }
 
-function _isPhotoKey(k){return k.startsWith('bed_')||k.startsWith('room_')||k.startsWith('yard_')||k.startsWith('section_');}
-async function _uploadPhotoToGitHub(key,dataUri){
+let _uploadSaveTimer=null;
+async function uploadImage(key,dataUri){
   if(!ghConfigured()||!dataUri)return;
   const c=ghCredentials();
   const path='garden-photos/'+key+'.txt';
-  // Store data URI as plain text — avoids binary encoding issues
   const bytes=new TextEncoder().encode(dataUri);
   let binary='';bytes.forEach(b=>binary+=String.fromCharCode(b));
-  const b64content=btoa(binary);
-  const body={message:'Upload garden photo: '+key,content:b64content};
+  const b64=btoa(binary);
+  const body={message:'Upload garden image: '+key,content:b64};
   try{
-    const ex=await fetch(`https://api.github.com/repos/${c.user}/${c.repo}/contents/${path}`,{headers:{'Authorization':'token '+c.token,'Accept':'application/vnd.github.v3+json'}});
+    const ex=await fetch(`https://api.github.com/repos/${c.user}/${c.repo}/contents/${path}`,
+      {headers:{'Authorization':'token '+c.token,'Accept':'application/vnd.github.v3+json'}});
     if(ex.ok){const ed=await ex.json();body.sha=ed.sha;}
   }catch(e){}
   try{
-    const r=await fetch(`https://api.github.com/repos/${c.user}/${c.repo}/contents/${path}`,{method:'PUT',headers:{'Authorization':'token '+c.token,'Accept':'application/vnd.github.v3+json','Content-Type':'application/json'},body:JSON.stringify(body)});
+    const r=await fetch(`https://api.github.com/repos/${c.user}/${c.repo}/contents/${path}`,
+      {method:'PUT',headers:{'Authorization':'token '+c.token,'Accept':'application/vnd.github.v3+json','Content-Type':'application/json'},body:JSON.stringify(body)});
     if(r.ok){
-      photoRefs[key]=`https://raw.githubusercontent.com/${c.user}/${c.repo}/main/${path}`;
-      // Keep imageCache[key] so photo stays visible without re-fetching
+      imageRefs[key]=`https://raw.githubusercontent.com/${c.user}/${c.repo}/main/${path}`;
       clearTimeout(_uploadSaveTimer);_uploadSaveTimer=setTimeout(()=>save(),2000);
     }
-  }catch(e){console.log('_uploadPhotoToGitHub error:',e);}
+  }catch(e){console.log('uploadImage error:',e);}
 }
-async function _deletePhotoFromGitHub(key){
+async function deleteImage(key){
   if(!ghConfigured())return;
   const c=ghCredentials();
   const path='garden-photos/'+key+'.txt';
   try{
-    const ex=await fetch(`https://api.github.com/repos/${c.user}/${c.repo}/contents/${path}`,{headers:{'Authorization':'token '+c.token,'Accept':'application/vnd.github.v3+json'}});
+    const ex=await fetch(`https://api.github.com/repos/${c.user}/${c.repo}/contents/${path}`,
+      {headers:{'Authorization':'token '+c.token,'Accept':'application/vnd.github.v3+json'}});
     if(ex.ok){
       const ed=await ex.json();
-      await fetch(`https://api.github.com/repos/${c.user}/${c.repo}/contents/${path}`,{method:'DELETE',headers:{'Authorization':'token '+c.token,'Accept':'application/vnd.github.v3+json','Content-Type':'application/json'},body:JSON.stringify({message:'Remove garden photo',sha:ed.sha})});
+      await fetch(`https://api.github.com/repos/${c.user}/${c.repo}/contents/${path}`,
+        {method:'DELETE',headers:{'Authorization':'token '+c.token,'Accept':'application/vnd.github.v3+json','Content-Type':'application/json'},
+        body:JSON.stringify({message:'Remove garden image',sha:ed.sha})});
     }
-  }catch(e){console.log('_deletePhotoFromGitHub error:',e);}
+  }catch(e){console.log('deleteImage error:',e);}
 }
-async function loadAllPhotos(){
-  if(!Object.keys(photoRefs).length)return;
+async function loadAllImages(){
+  const entries=Object.entries(imageRefs);
+  if(!entries.length)return;
   const failed=[];
-  await Promise.all(Object.entries(photoRefs).map(async([key,url])=>{
-    if(imageCache[key])return; // already loaded
+  await Promise.all(entries.map(async([key,url])=>{
+    if(imageCache[key])return;
     try{
       const r=await fetch(url,{cache:'no-store'});
       if(r.ok){const text=await r.text();if(text.startsWith('data:'))imageCache[key]=text;else failed.push([key,url]);}
       else failed.push([key,url]);
-    }catch(e){console.log('loadAllPhotos error for '+key,e);failed.push([key,url]);}
+    }catch(e){failed.push([key,url]);}
   }));
-  // Retry failed photos once after a short delay
   if(failed.length){
     await new Promise(r=>setTimeout(r,2000));
     await Promise.all(failed.map(async([key,url])=>{
@@ -1061,75 +1060,25 @@ async function loadAllPhotos(){
       try{
         const r=await fetch(url,{cache:'no-store'});
         if(r.ok){const text=await r.text();if(text.startsWith('data:'))imageCache[key]=text;}
-      }catch(e){console.log('loadAllPhotos retry error for '+key,e);}
+      }catch(e){}
     }));
   }
 }
-async function reloadAllPhotos(){
-  // Force-clear photo keys from imageCache so loadAllPhotos re-fetches all
-  Object.keys(imageCache).forEach(k=>{if(_isPhotoKey(k))delete imageCache[k];});
-  await loadAllPhotos();
-  // Re-render anything that shows photos
+async function reloadAllImages(){
+  Object.keys(imageCache).forEach(k=>delete imageCache[k]);
+  await loadAllImages();
   loadAllSectionImages();
   updateYardCounts();
   if(S.currentBed)showBed(S.currentBed.id);
   if(S.currentYard)showYard(S.currentYard);
-  setGHStatus('✅ Photos reloaded','var(--sage-dark)');
+  setGHStatus('✅ Images reloaded','var(--sage-dark)');
 }
 function storeEmojiAndGetKey(plantId,emojiVal){
   if(!emojiVal||!emojiVal.startsWith('data:'))return emojiVal||'🌿';
   const key='emoji_'+plantId;
   imageCache[key]=emojiVal;
-  try{localStorage.setItem('garden_img_'+key,emojiVal);}catch(e){} // backup in case GitHub sync fails
-  scheduleSyncImages();
+  uploadImage(key,emojiVal);
   return key;
-}
-function scheduleSyncImages(){
-  clearTimeout(_imageSyncTimer);
-  _imageSyncTimer=setTimeout(syncImagesToGitHub,2000);
-}
-async function syncImagesToGitHub(){
-  if(!ghConfigured())return;
-  const c=ghCredentials();
-  try{
-    const emojiOnly=Object.fromEntries(Object.entries(imageCache).filter(([k])=>!_isPhotoKey(k)));
-    const json=JSON.stringify(emojiOnly);
-    const bytes=new TextEncoder().encode(json);
-    let binary='';bytes.forEach(b=>binary+=String.fromCharCode(b));
-    const content=btoa(binary);
-    const body={message:'Garden images update '+new Date().toISOString(),content};
-    if(_ghImagesSha)body.sha=_ghImagesSha;
-    const r=await fetch(`https://api.github.com/repos/${c.user}/${c.repo}/contents/garden-images.json`,{method:'PUT',headers:{'Authorization':'token '+c.token,'Accept':'application/vnd.github.v3+json','Content-Type':'application/json'},body:JSON.stringify(body)});
-    if(r.ok){const resp=await r.json();_ghImagesSha=resp.content.sha;}
-  }catch(e){console.log('syncImagesToGitHub error:',e);}
-}
-async function loadImagesFromGitHub(){
-  if(!ghConfigured())return;
-  const c=ghCredentials();
-  try{
-    const r=await fetch(`https://api.github.com/repos/${c.user}/${c.repo}/contents/garden-images.json`,{cache:'no-store',headers:{'Authorization':'token '+c.token,'Accept':'application/vnd.github.v3+json'}});
-    if(r.status===404)return;
-    if(!r.ok)return;
-    const d=await r.json();
-    _ghImagesSha=d.sha;
-    let content;
-    if(d.content&&d.content.trim()){
-      // Small file: inline base64
-      const bytes=Uint8Array.from(atob(d.content.replace(/\n/g,'')),c=>c.charCodeAt(0));
-      content=JSON.parse(new TextDecoder().decode(bytes));
-    } else {
-      // Large file: use Git Blobs API with auth (works for both public and private repos)
-      const br=await fetch(`https://api.github.com/repos/${c.user}/${c.repo}/git/blobs/${d.sha}`,{headers:{'Authorization':'token '+c.token,'Accept':'application/vnd.github.v3+json'}});
-      if(br.ok){
-        const bd=await br.json();
-        if(bd.content){
-          const bytes=Uint8Array.from(atob(bd.content.replace(/\n/g,'')),c=>c.charCodeAt(0));
-          content=JSON.parse(new TextDecoder().decode(bytes));
-        }
-      }
-    }
-    if(content)imageCache=content;
-  }catch(e){console.log('loadImagesFromGitHub error:',e);}
 }
 async function loadFromGitHub(){
   if(!ghConfigured())return false;
@@ -1147,7 +1096,8 @@ async function loadFromGitHub(){
   if(d.propagation)S.propagation=d.propagation;
   if(d.irrigation)S.irrigation=d.irrigation;
   if(d.gardenNote!==undefined)S.gardenNote=d.gardenNote;
-  if(d.photoRefs)photoRefs=d.photoRefs;
+  if(d.imageRefs)imageRefs=d.imageRefs;
+  else if(d.photoRefs)imageRefs=d.photoRefs; // backward compat migration
   return true;
 }
 
@@ -1247,8 +1197,6 @@ async function init(){
   const storedVersion=await DB.get('dataVersion');
   if(storedVersion!==DATA_VERSION){
     console.log('Data version mismatch — loading fresh defaults');
-    // Clear old localStorage data
-    try{Object.keys(localStorage).filter(k=>k.startsWith('garden_')).forEach(k=>localStorage.removeItem(k));}catch(e){}
     S.rooms=defaultRooms;
     S.beds=defaultBeds;
     S.plants=defaultOutdoorPlants;
@@ -1267,9 +1215,6 @@ async function init(){
     await DB.set('shopping',S.shopping);
     await DB.set('propagation',S.propagation);
   } else {
-    // Load images file first so emojis resolve during plant rendering
-    await loadImagesFromGitHub();
-    // Try GitHub first, fall back to local
     const ghLoaded=await loadFromGitHub();
     if(!ghLoaded){
       S.rooms=await DB.get('rooms')||defaultRooms;
@@ -1308,11 +1253,8 @@ async function init(){
         if(taskMigrations[mItem.task])mItem.task=taskMigrations[mItem.task];
       });
     });
-    // Fix corrupted emoji — corrupted strings have chars in the 0x80-0xFF range
-    // (UTF-8 bytes stored as individual Unicode code points). Re-encode via latin-1.
     function fixEmoji(s,fallback){
       if(!s)return fallback;
-      // Loop handles double/triple corruption (each sync cycle re-encodes the bytes)
       for(let i=0;i<5;i++){
         if(![...s].some(c=>c.charCodeAt(0)>=0x80&&c.charCodeAt(0)<=0xFF))break;
         try{s=decodeURIComponent(escape(s));}catch(e){return fallback;}
@@ -1324,43 +1266,24 @@ async function init(){
     S.beds.forEach(function(b){b.icon=fixEmoji(b.icon,'🌿');});
     S.plants.forEach(function(p){p.emoji=fixEmoji(p.emoji,'🌿');});
     S.indoorPlants.forEach(function(p){p.emoji=fixEmoji(p.emoji,'🪴');});
-    // Migrate inline base64 emojis → imageCache keys (reduces garden-data.json size)
-    let _imgMigrated=false;
+    // Migrate any inline base64 emojis still in plant data → upload to GitHub
+    let _dataChanged=false;
     [...S.plants,...S.indoorPlants].forEach(function(p){
       if(p.emoji&&p.emoji.startsWith('data:')){
         const key='emoji_'+p.id;
-        if(!imageCache[key])imageCache[key]=p.emoji;
-        p.emoji=key;
-        _imgMigrated=true;
+        if(!imageCache[key]){imageCache[key]=p.emoji;uploadImage(key,p.emoji);}
+        p.emoji=key;_dataChanged=true;
       }
     });
-    // Strip any stale photo keys from imageCache (keeps garden-images.json emoji-only)
-    try{Object.keys(imageCache).forEach(function(k){
-      if(_isPhotoKey(k)){delete imageCache[k];_imgMigrated=true;}
-    });}catch(e){}
-    if(_imgMigrated)syncImagesToGitHub();
-    // Load photos AFTER cleanup so they aren't immediately deleted above
-    await loadAllPhotos();
-    // Rescue any photos still in localStorage that never made it to GitHub
-    try{
-      Object.keys(localStorage).forEach(function(lsKey){
-        if(!lsKey.startsWith('garden_img_'))return;
-        const imgKey=lsKey.slice('garden_img_'.length);
-        if(!_isPhotoKey(imgKey)||photoRefs[imgKey])return; // already on GitHub or not a photo
-        const val=localStorage.getItem(lsKey);
-        if(val&&val.startsWith('data:')){
-          imageCache[imgKey]=val;
-          _uploadPhotoToGitHub(imgKey,val); // upload to GitHub so it's safe cross-device
-        }
-      });
-    }catch(e){}
-    await save();
+    await loadAllImages();
+    if(_dataChanged)await save();
   }
   migratePlantCategories();
   updateHomeCounts();
   renderScheduleMonths();
   loadAllSectionImages();
-  checkYearReset();
+  await checkYearReset();
+  for(let m=1;m<=12;m++){const v=await DB.get('sc'+m);if(v)_schedChecked[m]=v;}
 }
 async function save(){
   await DB.set('rooms',S.rooms);
@@ -1490,7 +1413,7 @@ function showEditBedModal(){
   document.getElementById('modal-overlay').classList.add('active');
 }
 function saveEditBed(){const b=S.beds.find(x=>x.id===S.currentBed.id);if(!b)return;b.name=document.getElementById('eb-name').value;b.icon=document.getElementById('eb-icon').value;b.zone=document.getElementById('eb-zone').value;b.sun=document.getElementById('eb-sun').value;b.notes=document.getElementById('eb-notes').value;S.currentBed=b;save();closeModal();showBed(b.id);}
-function removeBedImage(){const k='bed_'+S.currentBed.id;delete imageCache[k];try{localStorage.removeItem('garden_img_'+k);}catch(e){}if(photoRefs[k]){_deletePhotoFromGitHub(k);delete photoRefs[k];save();}closeModal();showBed(S.currentBed.id);}
+function removeBedImage(){const k='bed_'+S.currentBed.id;delete imageCache[k];if(imageRefs[k]){deleteImage(k);delete imageRefs[k];save();}closeModal();showBed(S.currentBed.id);}
 function showIndoorPlant(id){const p=S.indoorPlants.find(x=>x.id===id);if(!p)return;if(S.plantSource!=='allplants')S.plantSource=null;S.currentPlant={...p,isIndoor:true};renderPlantDetail(p,true);showScreen('plant');}
 function showOutdoorPlant(id){const p=S.plants.find(x=>x.id===id);if(!p)return;if(S.plantSource!=='allplants')S.plantSource=null;S.currentPlant={...p,isIndoor:false};renderPlantDetail(p,false);showScreen('plant');}
 function renderPlantDetail(plant,isIndoor){
@@ -1778,8 +1701,13 @@ function renderScheduleMonths(){
 function selectMonth(m,el){document.querySelectorAll('.month-chip').forEach(c=>c.classList.remove('active'));el.classList.add('active');currentScheduleMonth=m;filterSchedTab('tasks',document.querySelector('#sched-tab-bar .segment-btn'));}
 function renderCurrentSchedule(){renderSchedule(currentScheduleMonth);}
 function filterSchedTab(tab,btn){currentSchedTab=tab;document.querySelectorAll('#sched-tab-bar .segment-btn').forEach(b=>b.classList.remove('active'));if(btn)btn.classList.add('active');renderSchedule(currentScheduleMonth);}
-function getSchedChecked(month){try{const v=localStorage.getItem('sc'+month);return v?JSON.parse(v):{};}catch(e){return {};}}
-function toggleSchedTask(month,key){const d=getSchedChecked(month);d[key]=!d[key];try{localStorage.setItem('sc'+month,JSON.stringify(d));}catch(e){}renderSchedule(month);}
+function getSchedChecked(month){return _schedChecked[month]||{};}
+function toggleSchedTask(month,key){
+  if(!_schedChecked[month])_schedChecked[month]={};
+  _schedChecked[month][key]=!_schedChecked[month][key];
+  DB.set('sc'+month,_schedChecked[month]);
+  renderSchedule(month);
+}
 function renderSchedule(month){
   // Always repopulate bed filter preserving selection
   const bedSel=document.getElementById('sched-filter-bed');
