@@ -8731,7 +8731,7 @@
     {
       "id": "t4",
       "text": "Cut back existing 6ft Fatsia — take 6-8 cuttings with rooting hormone",
-      "done": false,
+      "done": true,
       "date": "",
       "category": "Maintenance"
     },
@@ -9293,5 +9293,5 @@
     "section_indoor": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/section_indoor.txt",
     "room_r-house": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/room_r-house.txt"
   },
-  "syncedAt": "2026-05-16T22:22:38.109Z"
+  "syncedAt": "2026-05-16T22:22:51.263Z"
 }
