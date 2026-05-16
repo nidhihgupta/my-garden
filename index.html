@@ -323,6 +323,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--warm-white);color:var(--t
       <button class="btn-primary" onclick="saveGitHubSettings()">Save & Test Connection</button>
       <button class="btn-secondary" onclick="forceSyncToGitHub()">⬆️ Force Sync Now</button>
       <button class="btn-secondary" onclick="restoreFromGitHub()">⬇️ Restore from GitHub</button>
+      <button class="btn-secondary" onclick="reloadAllPhotos()">🖼️ Reload Photos</button>
     </div>
     <div style="background:white;border-radius:var(--radius);padding:20px;box-shadow:var(--shadow)">
       <h3 style="font-family:'Playfair Display',serif;font-size:18px;margin-bottom:8px;color:var(--text-dark)">💾 Local Backup</h3>
@@ -1042,13 +1043,37 @@ async function _deletePhotoFromGitHub(key){
 }
 async function loadAllPhotos(){
   if(!Object.keys(photoRefs).length)return;
+  const failed=[];
   await Promise.all(Object.entries(photoRefs).map(async([key,url])=>{
     if(imageCache[key])return; // already loaded
     try{
-      const r=await fetch(url+'?v='+Date.now());
-      if(r.ok){const text=await r.text();if(text.startsWith('data:'))imageCache[key]=text;}
-    }catch(e){console.log('loadAllPhotos error for '+key,e);}
+      const r=await fetch(url,{cache:'no-store'});
+      if(r.ok){const text=await r.text();if(text.startsWith('data:'))imageCache[key]=text;else failed.push([key,url]);}
+      else failed.push([key,url]);
+    }catch(e){console.log('loadAllPhotos error for '+key,e);failed.push([key,url]);}
   }));
+  // Retry failed photos once after a short delay
+  if(failed.length){
+    await new Promise(r=>setTimeout(r,2000));
+    await Promise.all(failed.map(async([key,url])=>{
+      if(imageCache[key])return;
+      try{
+        const r=await fetch(url,{cache:'no-store'});
+        if(r.ok){const text=await r.text();if(text.startsWith('data:'))imageCache[key]=text;}
+      }catch(e){console.log('loadAllPhotos retry error for '+key,e);}
+    }));
+  }
+}
+async function reloadAllPhotos(){
+  // Force-clear photo keys from imageCache so loadAllPhotos re-fetches all
+  Object.keys(imageCache).forEach(k=>{if(_isPhotoKey(k))delete imageCache[k];});
+  await loadAllPhotos();
+  // Re-render anything that shows photos
+  loadAllSectionImages();
+  updateYardCounts();
+  if(S.currentBed)showBed(S.currentBed.id);
+  if(S.currentYard)showYard(S.currentYard);
+  setGHStatus('✅ Photos reloaded','var(--sage-dark)');
 }
 function storeEmojiAndGetKey(plantId,emojiVal){
   if(!emojiVal||!emojiVal.startsWith('data:'))return emojiVal||'🌿';
