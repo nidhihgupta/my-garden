@@ -779,6 +779,7 @@ const DB={
       if(ls&&ls.startsWith('data:')){
         imageCache[k]=ls; // restore into cache
         if(k.startsWith('emoji_'))scheduleSyncImages(); // re-sync if it was a failed emoji
+        else if(_isPhotoKey&&_isPhotoKey(k)&&!photoRefs[k])_uploadPhotoToGitHub(k,ls); // rescue to GitHub
         return ls;
       }
     }catch(e){}
@@ -1340,6 +1341,19 @@ async function init(){
     if(_imgMigrated)syncImagesToGitHub();
     // Load photos AFTER cleanup so they aren't immediately deleted above
     await loadAllPhotos();
+    // Rescue any photos still in localStorage that never made it to GitHub
+    try{
+      Object.keys(localStorage).forEach(function(lsKey){
+        if(!lsKey.startsWith('garden_img_'))return;
+        const imgKey=lsKey.slice('garden_img_'.length);
+        if(!_isPhotoKey(imgKey)||photoRefs[imgKey])return; // already on GitHub or not a photo
+        const val=localStorage.getItem(lsKey);
+        if(val&&val.startsWith('data:')){
+          imageCache[imgKey]=val;
+          _uploadPhotoToGitHub(imgKey,val); // upload to GitHub so it's safe cross-device
+        }
+      });
+    }catch(e){}
     await save();
   }
   migratePlantCategories();
