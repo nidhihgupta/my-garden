@@ -931,7 +931,8 @@
           "issue": "Root rot from overwatering",
           "url": "https://www.google.com/search?q=Root%20rot%20from%20overwatering%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "None"
     },
     {
       "id": "mp-daphne",
@@ -977,7 +978,8 @@
           "issue": "Sudden dieback (Phytophthora — improve drainage immediately)",
           "url": "https://www.google.com/search?q=Sudden%20dieback%20(Phytophthora%20—%20improve%20drainage%20immediately)%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "None"
     },
     {
       "id": "mp-jenny",
@@ -1016,7 +1018,8 @@
           "issue": "Root rot in waterlogged soil",
           "url": "https://www.google.com/search?q=Root%20rot%20in%20waterlogged%20soil%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "None"
     },
     {
       "id": "mp-hellebores",
@@ -1060,7 +1063,8 @@
           "issue": "Crown rot from poor drainage",
           "url": "https://www.google.com/search?q=Crown%20rot%20from%20poor%20drainage%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "None"
     },
     {
       "id": "mp-hostamm",
@@ -1110,7 +1114,8 @@
           "issue": "Crown rot in waterlogged soil",
           "url": "https://www.google.com/search?q=Crown%20rot%20in%20waterlogged%20soil%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "None"
     },
     {
       "id": "ch-cherry",
@@ -1352,7 +1357,8 @@
           "issue": "Root rot in waterlogged soil",
           "url": "https://www.google.com/search?q=Root%20rot%20in%20waterlogged%20soil%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "None"
     },
     {
       "id": "ch-hosta",
@@ -1402,7 +1408,8 @@
           "issue": "Crown rot in waterlogged soil",
           "url": "https://www.google.com/search?q=Crown%20rot%20in%20waterlogged%20soil%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "None"
     },
     {
       "id": "fr-camphor",
@@ -8710,7 +8717,7 @@
     {
       "id": "t2",
       "text": "Cut back Distictis buccinatoria (Trumpet Vine on Fountain Wall) hard to framework — create structure as you cut",
-      "done": false,
+      "done": true,
       "date": "",
       "category": "Maintenance"
     },
@@ -9286,5 +9293,5 @@
     "section_indoor": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/section_indoor.txt",
     "room_r-house": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/room_r-house.txt"
   },
-  "syncedAt": "2026-05-16T22:22:33.796Z"
+  "syncedAt": "2026-05-16T22:22:38.109Z"
 }
