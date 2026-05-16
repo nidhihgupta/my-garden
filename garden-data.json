@@ -9272,8 +9272,8 @@
     {
       "id": "pr2",
       "plant": "Creeping Geranium (Pelargonium spp.)",
-      "dateCut": "",
-      "datePlanted": "",
+      "dateCut": "2026-05-16",
+      "datePlanted": "2026-05-16",
       "status": "pending",
       "notes": "Stem cuttings to be taken from existing plants to fill Fountain Wall Bed. Red + pink varieties."
     }
@@ -9293,5 +9293,5 @@
     "section_indoor": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/section_indoor.txt",
     "room_r-house": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/room_r-house.txt"
   },
-  "syncedAt": "2026-05-16T22:22:51.263Z"
+  "syncedAt": "2026-05-16T22:23:21.171Z"
 }
