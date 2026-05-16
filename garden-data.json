@@ -8390,6 +8390,13 @@
   ],
   "todos": [
     {
+      "id": "t1778942607819",
+      "text": "In late June / early July - light sprinkle of fertilizer for hydrangeas (Epsoma Holly tone)",
+      "done": false,
+      "date": "2026-06-27",
+      "category": "Maintenance"
+    },
+    {
       "id": "t1",
       "text": "Train Iceberg climbing rose canes horizontally across Side Arbor — vine eyes + soft ties now while flexible",
       "done": true,
@@ -8975,5 +8982,5 @@
     "section_indoor": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/section_indoor.txt",
     "room_r-house": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/room_r-house.txt"
   },
-  "syncedAt": "2026-05-16T14:38:17.718Z"
+  "syncedAt": "2026-05-16T14:43:27.822Z"
 }
