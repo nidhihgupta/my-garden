@@ -1278,12 +1278,15 @@ async function init(){
           oldEmojis=JSON.parse(new TextDecoder().decode(bytes));
         }
         if(oldEmojis){
-          await Promise.all(Object.entries(oldEmojis).map(async([key,val])=>{
+          // Populate cache immediately so UI renders without waiting for uploads
+          Object.entries(oldEmojis).forEach(([key,val])=>{
+            if(val&&val.startsWith('data:'))imageCache[key]=val;
+          });
+          // Upload to garden-photos/ in background; save after all done
+          Promise.all(Object.entries(oldEmojis).map(async([key,val])=>{
             if(!val||!val.startsWith('data:'))return;
-            imageCache[key]=val;
             await uploadImage(key,val);
-          }));
-          _dataChanged=true;
+          })).then(()=>save()).catch(()=>{});
         }
       }
     }catch(e){console.log('emoji migration error:',e);}
