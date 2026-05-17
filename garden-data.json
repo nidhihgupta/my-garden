@@ -2410,9 +2410,9 @@
       "status": "alive",
       "water": "Moderate",
       "sun": "Part shade",
-      "datePlanted": "",
+      "datePlanted": "2026-05-16",
       "nursery": "",
-      "fromCutting": false,
+      "fromCutting": true,
       "notes": "Red + pink. Propagating from stem cuttings.",
       "maintenance": [
         {
@@ -2441,7 +2441,8 @@
           "url": "https://www.google.com/search?q=Leggy%20growth%20plant%20care%20fix"
         }
       ],
-      "category": "Perennials"
+      "category": "Perennials",
+      "howPlanted": "cutting"
     },
     {
       "id": "fw-fuchsia",
@@ -9404,5 +9405,5 @@
     "bed_b-sa": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/bed_b-sa.txt",
     "bed_b-tom": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/bed_b-tom.txt"
   },
-  "syncedAt": "2026-05-17T17:52:54.717Z"
+  "syncedAt": "2026-05-17T17:53:21.034Z"
 }
