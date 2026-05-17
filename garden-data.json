@@ -8872,7 +8872,7 @@
     {
       "id": "sf1",
       "name": "Tuberous Begonia Non Stop Orange",
-      "bought": true,
+      "bought": false,
       "qty": "15 / 1 flat",
       "size": "Flat",
       "color": "Orange",
@@ -9448,5 +9448,5 @@
     "emoji_mp-jenny": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_mp-jenny.txt",
     "emoji_ch-jenny": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_ch-jenny.txt"
   },
-  "syncedAt": "2026-05-17T21:31:53.184Z"
+  "syncedAt": "2026-05-17T21:31:54.887Z"
 }
