@@ -5720,7 +5720,7 @@
     {
       "id": "p1778799623602268",
       "bedId": "b-ros",
-      "name": "Tree Rose - orange",
+      "name": "Tree Rose - orange (Strike it Rich)",
       "scientific": "Rosa standard",
       "emoji": "emoji_p1778799623602268",
       "status": "alive",
@@ -9403,5 +9403,5 @@
     "bed_b-sa": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/bed_b-sa.txt",
     "bed_b-tom": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/bed_b-tom.txt"
   },
-  "syncedAt": "2026-05-17T07:44:28.528Z"
+  "syncedAt": "2026-05-17T15:02:12.130Z"
 }
