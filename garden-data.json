@@ -2357,7 +2357,7 @@
       "name": "Rose",
       "scientific": "Rosa White Out",
       "emoji": "emoji_fw-rose",
-      "status": "planned",
+      "status": "alive",
       "water": "Deep water weekly",
       "sun": "Part shade",
       "datePlanted": "",
@@ -2398,7 +2398,8 @@
           "url": "https://www.google.com/search?q=Black%20spot%20plant%20care%20fix"
         }
       ],
-      "category": "Bush Roses"
+      "category": "Bush Roses",
+      "howPlanted": ""
     },
     {
       "id": "fw-geranium",
@@ -9403,5 +9404,5 @@
     "bed_b-sa": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/bed_b-sa.txt",
     "bed_b-tom": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/bed_b-tom.txt"
   },
-  "syncedAt": "2026-05-17T15:06:17.273Z"
+  "syncedAt": "2026-05-17T17:52:54.717Z"
 }
