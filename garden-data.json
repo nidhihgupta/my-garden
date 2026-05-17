@@ -290,7 +290,7 @@
       "bedId": "b-fl",
       "name": "Loropetalum Purple Diamond",
       "scientific": "Loropetalum chinense",
-      "emoji": "💜",
+      "emoji": "emoji_fl-loro",
       "status": "planned",
       "water": "Moderate",
       "sun": "Part shade",
@@ -319,7 +319,8 @@
           "url": "https://www.google.com/search?q=Loss%20of%20purple%20color%20plant%20care%20fix"
         }
       ],
-      "category": "Shrubs"
+      "category": "Shrubs",
+      "howPlanted": ""
     },
     {
       "id": "fl-abelia",
@@ -9543,5 +9544,5 @@
       "pg_Check for scale and aphids — treat with neem oil if found": false
     }
   },
-  "syncedAt": "2026-05-17T22:36:10.984Z"
+  "syncedAt": "2026-05-17T22:37:13.861Z"
 }
