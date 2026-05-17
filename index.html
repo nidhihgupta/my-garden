@@ -1149,12 +1149,17 @@ async function saveGitHubSettings(){
     // Step 2: check repo exists and is accessible
     const r2=await fetch(`https://api.github.com/repos/${user}/${repo}`,{headers:{'Authorization':'token '+token,'Accept':'application/vnd.github.v3+json'}});
     if(!r2.ok){setGHStatus('❌ Repo not found ('+r2.status+') — check username/repo name','var(--terracotta)');return;}
-    setGHStatus('Step 3/3: Writing data to GitHub...','var(--text-light)');
-    // Step 3: first check if file exists to get SHA
-    const existing=await ghReadFile();
-    if(existing)_ghSha=existing.sha;
-    else _ghSha=null;
-    await syncToGitHub();
+    setGHStatus('Step 3/3: Loading your garden data...','var(--text-light)');
+    // Step 3: load existing data from GitHub — never overwrite real data with local defaults
+    const ghLoaded=await loadFromGitHub();
+    if(ghLoaded){
+      updateHomeCounts();
+      renderScheduleMonths();
+      setGHStatus('✅ Connected — your garden data loaded','var(--sage-dark)');
+    } else {
+      // No data file yet — create it from current state
+      await syncToGitHub();
+    }
   }catch(e){setGHStatus('❌ Network error: '+e.message,'var(--terracotta)');}
 }
 
@@ -1220,35 +1225,23 @@ function importDataJSON(e){
 }
 
 async function init(){
-  // Version check — if data version doesn't match, reload defaults
-  const storedVersion=await DB.get('dataVersion');
-  if(storedVersion!==DATA_VERSION){
-    console.log('Data version mismatch — loading fresh defaults');
-    // Clear old localStorage data
-    try{Object.keys(localStorage).filter(k=>k.startsWith('garden_')).forEach(k=>localStorage.removeItem(k));}catch(e){}
-    S.rooms=defaultRooms;
-    S.beds=defaultBeds;
-    S.plants=defaultOutdoorPlants;
-    S.indoorPlants=defaultIndoorPlants;
-    S.todos=defaultTodos;
-    S.shopping=defaultShopping;
-    S.notes=[];
-    S.propagation=defaultPropagation;
-    S.irrigation=[];
-    await DB.set('dataVersion',DATA_VERSION);
-    await DB.set('rooms',S.rooms);
-    await DB.set('beds',S.beds);
-    await DB.set('plants',S.plants);
-    await DB.set('indoorPlants',S.indoorPlants);
-    await DB.set('todos',S.todos);
-    await DB.set('shopping',S.shopping);
-    await DB.set('propagation',S.propagation);
-  } else {
-    // Load images file first so emojis resolve during plant rendering
-    await loadImagesFromGitHub();
-    // Try GitHub first, fall back to local
-    const ghLoaded=await loadFromGitHub();
-    if(!ghLoaded){
+  // GitHub is the source of truth — always try it first, regardless of local version
+  await loadImagesFromGitHub();
+  const ghLoaded=await loadFromGitHub();
+  if(!ghLoaded){
+    // GitHub unreachable — fall back to local storage
+    const storedVersion=await DB.get('dataVersion');
+    if(storedVersion!==DATA_VERSION){
+      // Fresh browser or major schema change — load app defaults
+      try{Object.keys(localStorage).filter(k=>k.startsWith('garden_')).forEach(k=>localStorage.removeItem(k));}catch(e){}
+      S.rooms=defaultRooms;S.beds=defaultBeds;S.plants=defaultOutdoorPlants;
+      S.indoorPlants=defaultIndoorPlants;S.todos=defaultTodos;S.shopping=defaultShopping;
+      S.notes=[];S.propagation=defaultPropagation;S.irrigation=[];
+      await DB.set('dataVersion',DATA_VERSION);
+      await DB.set('rooms',S.rooms);await DB.set('beds',S.beds);await DB.set('plants',S.plants);
+      await DB.set('indoorPlants',S.indoorPlants);await DB.set('todos',S.todos);
+      await DB.set('shopping',S.shopping);await DB.set('propagation',S.propagation);
+    } else {
       S.rooms=await DB.get('rooms')||defaultRooms;
       S.beds=await DB.get('beds')||defaultBeds;
       S.plants=await DB.get('plants')||defaultOutdoorPlants;
@@ -1260,66 +1253,61 @@ async function init(){
       S.propagation=await DB.get('propagation')||defaultPropagation;
       S.irrigation=await DB.get('irrigation')||[];
     }
-    const taskMigrations={
-      'Prune lightly after flowering only':'Prune lightly after flowering',
-      'Deadhead spent blooms daily':'Deadhead spent blooms daily during peak bloom',
-      'Feed slow release in spring':'Feed slow release fertilizer in spring',
-      'Feed liquid fertilizer every 2 weeks in bloom':'Feed liquid fertilizer every 2 weeks',
-      'Weekly deep water July-August':'Deep water weekly July-August',
-      'Weekly deep water July-August — drought stress causes fruit cracking':'Deep water weekly July-August',
-      'Divide clumps every 3 years':'Divide clumps every 3-4 years',
-    };
-    const plantNameMigrations={
-      'Tree Rose':'Rose','Flower Carpet Rose':'Rose','Iceberg Rose Climbing':'Rose',
-      'Angel Face Rose Climbing':'Rose','Burst of Joy Rose Bush':'Rose',
-      'Double Knock Out Rose Pink':'Rose','Existing Rose':'Rose',
-      'Sunburst Rose Bush':'Rose','English Rose David Austin':'Rose',
-      'Double Knock Out Rose White Out':'Rose',
-      'Dwarf Lemon Tree':'Citrus Tree','Orange Tree':'Citrus Tree',
-      'Plum Espalier':'Espalier','Rainier Cherry Espalier':'Espalier',
-    };
-    [...S.plants,...S.indoorPlants].forEach(function(plant){
-      if(plantNameMigrations[plant.name])plant.name=plantNameMigrations[plant.name];
-      if(!plant.maintenance)return;
-      plant.maintenance.forEach(function(mItem){
-        if(taskMigrations[mItem.task])mItem.task=taskMigrations[mItem.task];
-      });
-    });
-    // Fix corrupted emoji — corrupted strings have chars in the 0x80-0xFF range
-    // (UTF-8 bytes stored as individual Unicode code points). Re-encode via latin-1.
-    function fixEmoji(s,fallback){
-      if(!s)return fallback;
-      // Loop handles double/triple corruption (each sync cycle re-encodes the bytes)
-      for(let i=0;i<5;i++){
-        if(![...s].some(c=>c.charCodeAt(0)>=0x80&&c.charCodeAt(0)<=0xFF))break;
-        try{s=decodeURIComponent(escape(s));}catch(e){return fallback;}
-      }
-      return s;
-    }
-    const defaultIconMap={'Office':'💻','Rest of House':'🏠'};
-    S.rooms.forEach(function(r){r.icon=fixEmoji(r.icon,defaultIconMap[r.name]||'🪴');});
-    S.beds.forEach(function(b){b.icon=fixEmoji(b.icon,'🌿');});
-    S.plants.forEach(function(p){p.emoji=fixEmoji(p.emoji,'🌿');});
-    S.indoorPlants.forEach(function(p){p.emoji=fixEmoji(p.emoji,'🪴');});
-    // Migrate inline base64 emojis → imageCache keys (reduces garden-data.json size)
-    let _imgMigrated=false;
-    [...S.plants,...S.indoorPlants].forEach(function(p){
-      if(p.emoji&&p.emoji.startsWith('data:')){
-        const key='emoji_'+p.id;
-        if(!imageCache[key])imageCache[key]=p.emoji;
-        p.emoji=key;
-        _imgMigrated=true;
-      }
-    });
-    // Strip any stale photo keys from imageCache (keeps garden-images.json emoji-only)
-    try{Object.keys(imageCache).forEach(function(k){
-      if(_isPhotoKey(k)){delete imageCache[k];_imgMigrated=true;}
-    });}catch(e){}
-    if(_imgMigrated)syncImagesToGitHub();
-    // Load photos AFTER cleanup so they aren't immediately deleted above
-    await loadAllPhotos();
-    await save();
   }
+  await DB.set('dataVersion',DATA_VERSION);
+  const taskMigrations={
+    'Prune lightly after flowering only':'Prune lightly after flowering',
+    'Deadhead spent blooms daily':'Deadhead spent blooms daily during peak bloom',
+    'Feed slow release in spring':'Feed slow release fertilizer in spring',
+    'Feed liquid fertilizer every 2 weeks in bloom':'Feed liquid fertilizer every 2 weeks',
+    'Weekly deep water July-August':'Deep water weekly July-August',
+    'Weekly deep water July-August — drought stress causes fruit cracking':'Deep water weekly July-August',
+    'Divide clumps every 3 years':'Divide clumps every 3-4 years',
+  };
+  const plantNameMigrations={
+    'Tree Rose':'Rose','Flower Carpet Rose':'Rose','Iceberg Rose Climbing':'Rose',
+    'Angel Face Rose Climbing':'Rose','Burst of Joy Rose Bush':'Rose',
+    'Double Knock Out Rose Pink':'Rose','Existing Rose':'Rose',
+    'Sunburst Rose Bush':'Rose','English Rose David Austin':'Rose',
+    'Double Knock Out Rose White Out':'Rose',
+    'Dwarf Lemon Tree':'Citrus Tree','Orange Tree':'Citrus Tree',
+    'Plum Espalier':'Espalier','Rainier Cherry Espalier':'Espalier',
+  };
+  [...S.plants,...S.indoorPlants].forEach(function(plant){
+    if(plantNameMigrations[plant.name])plant.name=plantNameMigrations[plant.name];
+    if(!plant.maintenance)return;
+    plant.maintenance.forEach(function(mItem){
+      if(taskMigrations[mItem.task])mItem.task=taskMigrations[mItem.task];
+    });
+  });
+  function fixEmoji(s,fallback){
+    if(!s)return fallback;
+    for(let i=0;i<5;i++){
+      if(![...s].some(c=>c.charCodeAt(0)>=0x80&&c.charCodeAt(0)<=0xFF))break;
+      try{s=decodeURIComponent(escape(s));}catch(e){return fallback;}
+    }
+    return s;
+  }
+  const defaultIconMap={'Office':'💻','Rest of House':'🏠'};
+  S.rooms.forEach(function(r){r.icon=fixEmoji(r.icon,defaultIconMap[r.name]||'🪴');});
+  S.beds.forEach(function(b){b.icon=fixEmoji(b.icon,'🌿');});
+  S.plants.forEach(function(p){p.emoji=fixEmoji(p.emoji,'🌿');});
+  S.indoorPlants.forEach(function(p){p.emoji=fixEmoji(p.emoji,'🪴');});
+  let _imgMigrated=false;
+  [...S.plants,...S.indoorPlants].forEach(function(p){
+    if(p.emoji&&p.emoji.startsWith('data:')){
+      const key='emoji_'+p.id;
+      if(!imageCache[key])imageCache[key]=p.emoji;
+      p.emoji=key;
+      _imgMigrated=true;
+    }
+  });
+  try{Object.keys(imageCache).forEach(function(k){
+    if(_isPhotoKey(k)){delete imageCache[k];_imgMigrated=true;}
+  });}catch(e){}
+  if(_imgMigrated)syncImagesToGitHub();
+  await loadAllPhotos();
+  await save();
   migratePlantCategories();
   updateHomeCounts();
   renderScheduleMonths();
