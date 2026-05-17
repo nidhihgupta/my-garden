@@ -900,7 +900,7 @@
       "bedId": "b-mp",
       "name": "Aucuba",
       "scientific": "Aucuba japonica",
-      "emoji": "🌿",
+      "emoji": "emoji_mp-aucuba",
       "status": "alive",
       "water": "Low once established",
       "sun": "Part shade to full shade",
@@ -910,14 +910,40 @@
       "notes": "Existing. Shade-tolerant shrub with glossy foliage.",
       "maintenance": [
         {
-          "task": "Feed slow release balanced fertilizer in spring",
+          "task": "Feed monthly spring-summer",
           "months": [
-            3
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
           ]
         },
         {
-          "task": "Light prune to shape or remove damaged growth",
+          "task": "Wipe leaves monthly to remove dust",
           "months": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ]
+        },
+        {
+          "task": "Reduce watering in winter",
+          "months": [
+            11,
+            12,
+            1,
             2
           ]
         }
@@ -932,7 +958,8 @@
           "url": "https://www.google.com/search?q=Root%20rot%20from%20overwatering%20plant%20care%20fix"
         }
       ],
-      "category": "None"
+      "category": "Tropical Foliage",
+      "howPlanted": ""
     },
     {
       "id": "mp-daphne",
@@ -9408,7 +9435,8 @@
     "bed_b-ma": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/bed_b-ma.txt",
     "bed_b-sa": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/bed_b-sa.txt",
     "bed_b-tom": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/bed_b-tom.txt",
-    "emoji_ip20": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_ip20.txt"
+    "emoji_ip20": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_ip20.txt",
+    "emoji_mp-aucuba": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_mp-aucuba.txt"
   },
-  "syncedAt": "2026-05-17T18:04:03.040Z"
+  "syncedAt": "2026-05-17T18:12:47.420Z"
 }
