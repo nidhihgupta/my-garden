@@ -9531,8 +9531,8 @@
       "ig_Rotate weekly for even growth — leans toward light": true,
       "ig_Remove offsets (pups) when they appear": true,
       "pg_Pinch tips in spring for bushier plant": true,
-      "pg_Check for scale and aphids — treat with neem oil if found": true
+      "pg_Check for scale and aphids — treat with neem oil if found": false
     }
   },
-  "syncedAt": "2026-05-17T22:15:42.982Z"
+  "syncedAt": "2026-05-17T22:17:11.171Z"
 }
