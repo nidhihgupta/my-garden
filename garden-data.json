@@ -2994,7 +2994,8 @@
           "url": "https://www.google.com/search?q=Not%20blooming%20plant%20care%20fix"
         }
       ],
-      "category": "Hydrangeas"
+      "category": "Hydrangeas",
+      "howPlanted": ""
     },
     {
       "id": "sa-passiflora",
@@ -9532,5 +9533,5 @@
       "pg_Check for scale and aphids — treat with neem oil if found": true
     }
   },
-  "syncedAt": "2026-05-17T22:14:29.401Z"
+  "syncedAt": "2026-05-17T22:14:45.652Z"
 }
