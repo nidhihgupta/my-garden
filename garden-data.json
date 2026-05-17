@@ -3605,7 +3605,7 @@
       "bedId": "b-berry",
       "name": "Raspberry Bababerry",
       "scientific": "Rubus idaeus Bababerry",
-      "emoji": "🍓",
+      "emoji": "emoji_ps-raspberry",
       "status": "planned",
       "water": "Weekly on drip",
       "sun": "Full sun",
@@ -9408,5 +9408,5 @@
     "bed_b-sa": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/bed_b-sa.txt",
     "bed_b-tom": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/bed_b-tom.txt"
   },
-  "syncedAt": "2026-05-17T17:59:05.569Z"
+  "syncedAt": "2026-05-17T18:00:10.775Z"
 }
