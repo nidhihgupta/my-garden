@@ -6456,7 +6456,7 @@
       "bedId": "b-fl",
       "name": "Day Lilies",
       "scientific": "Hemerocallis",
-      "emoji": "🌼",
+      "emoji": "emoji_fl-daylily",
       "status": "alive",
       "water": "Moderate",
       "sun": "Full sun to part shade",
@@ -6497,7 +6497,8 @@
           "url": "https://www.google.com/search?q=Daylily+aphids+fix"
         }
       ],
-      "category": "Perennials"
+      "category": "Perennials",
+      "howPlanted": ""
     },
     {
       "id": "fl-lomandra",
@@ -9538,5 +9539,5 @@
       "pg_Check for scale and aphids — treat with neem oil if found": false
     }
   },
-  "syncedAt": "2026-05-17T22:24:51.139Z"
+  "syncedAt": "2026-05-17T22:25:07.877Z"
 }
