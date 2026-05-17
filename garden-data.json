@@ -3606,7 +3606,7 @@
       "name": "Raspberry Bababerry",
       "scientific": "Rubus idaeus Bababerry",
       "emoji": "🍓",
-      "status": "alive",
+      "status": "planned",
       "water": "Weekly on drip",
       "sun": "Full sun",
       "datePlanted": "",
@@ -3638,7 +3638,8 @@
           "url": "https://www.google.com/search?q=Poor%20fruiting%20plant%20care%20fix"
         }
       ],
-      "category": "Fruit Trees"
+      "category": "Fruit Trees",
+      "howPlanted": ""
     },
     {
       "id": "ps-blackberry",
@@ -9407,5 +9408,5 @@
     "bed_b-sa": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/bed_b-sa.txt",
     "bed_b-tom": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/bed_b-tom.txt"
   },
-  "syncedAt": "2026-05-17T17:54:22.218Z"
+  "syncedAt": "2026-05-17T17:59:05.569Z"
 }
