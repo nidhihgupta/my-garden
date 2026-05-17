@@ -9392,7 +9392,7 @@
       "pg_Monthly watering spring": true,
       "pg_Water consistently — beets bolt if stressed": true,
       "s_Azalea_Light prune Encore Azaleas after spring bloom": true,
-      "pg_Light trim after flowering — do NOT hard prune": false,
+      "pg_Light trim after flowering — do NOT hard prune": true,
       "pg_Train on fence wires — tie new growth regularly": true,
       "pg_Remove dead rosettes": true,
       "pg_Train on espalier wires — tie new growth": true,
@@ -9419,5 +9419,5 @@
       "pg_Check for scale and aphids — treat with neem oil if found": true
     }
   },
-  "syncedAt": "2026-05-17T21:42:50.308Z"
+  "syncedAt": "2026-05-17T21:42:56.024Z"
 }
