@@ -910,41 +910,30 @@
       "notes": "Existing. Shade-tolerant shrub with glossy foliage.",
       "maintenance": [
         {
-          "task": "Feed monthly spring-summer",
+          "task": "Feed balanced slow-release fertilizer in spring",
           "months": [
-            3,
-            4,
-            5,
-            6,
-            7,
-            8,
-            9
+            3
           ]
         },
         {
-          "task": "Wipe leaves monthly to remove dust",
+          "task": "Prune to shape after flowering or late winter",
           "months": [
-            1,
             2,
             3,
-            4,
-            5,
-            6,
-            7,
-            8,
-            9,
-            10,
-            11,
-            12
+            4
           ]
         },
         {
-          "task": "Reduce watering in winter",
+          "task": "Check for scale and aphids — treat with neem oil if found",
           "months": [
-            11,
-            12,
-            1,
-            2
+            4,
+            5
+          ]
+        },
+        {
+          "task": "Mulch around base to protect roots before winter",
+          "months": [
+            11
           ]
         }
       ],
@@ -958,7 +947,7 @@
           "url": "https://www.google.com/search?q=Root%20rot%20from%20overwatering%20plant%20care%20fix"
         }
       ],
-      "category": "Tropical Foliage",
+      "category": "Shrubs",
       "howPlanted": ""
     },
     {
@@ -9440,5 +9429,5 @@
     "emoji_mp-aucuba": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_mp-aucuba.txt",
     "emoji_rw-aucuba": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_rw-aucuba.txt"
   },
-  "syncedAt": "2026-05-17T18:13:20.615Z"
+  "syncedAt": "2026-05-17T18:13:37.542Z"
 }
