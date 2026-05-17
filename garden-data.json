@@ -6377,7 +6377,7 @@
           "url": "https://www.google.com/search?q=Oxalis+oregana+summer+dormancy"
         }
       ],
-      "category": "",
+      "category": "None",
       "howPlanted": ""
     },
     {
@@ -8328,7 +8328,7 @@
       "section": "Living Room",
       "name": "Monstera",
       "scientific": "Monstera deliciosa",
-      "emoji": "🌿",
+      "emoji": "emoji_ip28",
       "status": "alive",
       "water": "When top 2 inches dry",
       "sun": "Bright indirect",
@@ -8373,7 +8373,8 @@
           "url": "https://www.google.com/search?q=Yellow%20leaves%20plant%20care%20fix"
         }
       ],
-      "category": "Tropical Foliage"
+      "category": "Tropical Foliage",
+      "howPlanted": ""
     },
     {
       "id": "ip29",
@@ -9539,5 +9540,5 @@
       "pg_Check for scale and aphids — treat with neem oil if found": false
     }
   },
-  "syncedAt": "2026-05-17T22:30:56.936Z"
+  "syncedAt": "2026-05-17T22:34:58.631Z"
 }
