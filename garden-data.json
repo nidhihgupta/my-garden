@@ -3462,7 +3462,7 @@
     {
       "id": "ps-orange",
       "bedId": "b-berry",
-      "name": "Citrus Tree",
+      "name": "Orange Tree",
       "scientific": "Citrus sinensis",
       "emoji": "🍊",
       "status": "alive",
@@ -3515,7 +3515,8 @@
           "url": "https://www.google.com/search?q=Yellowing%20leaves%20(nutrient%20deficiency)%20plant%20care%20fix"
         }
       ],
-      "category": "Fruit Trees"
+      "category": "Fruit Trees",
+      "howPlanted": ""
     },
     {
       "id": "ps-persimmon",
@@ -9433,5 +9434,5 @@
     "emoji_fr-mondo": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_fr-mondo.txt",
     "emoji_mp-bridal": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_mp-bridal.txt"
   },
-  "syncedAt": "2026-05-17T18:26:07.682Z"
+  "syncedAt": "2026-05-17T18:27:21.797Z"
 }
