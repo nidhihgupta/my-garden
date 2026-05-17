@@ -1858,7 +1858,7 @@
       "bedId": "b-br",
       "name": "Fatsia japonica",
       "scientific": "Fatsia japonica",
-      "emoji": "🌿",
+      "emoji": "emoji_br-fatsia",
       "status": "planned",
       "water": "Moderate",
       "sun": "Part shade",
@@ -1887,7 +1887,8 @@
           "url": "https://www.google.com/search?q=Leaf%20drop%20plant%20care%20fix"
         }
       ],
-      "category": "Tropical Foliage"
+      "category": "Tropical Foliage",
+      "howPlanted": ""
     },
     {
       "id": "br-azalea",
@@ -9540,5 +9541,5 @@
       "pg_Check for scale and aphids — treat with neem oil if found": false
     }
   },
-  "syncedAt": "2026-05-17T22:34:58.631Z"
+  "syncedAt": "2026-05-17T22:35:32.948Z"
 }
