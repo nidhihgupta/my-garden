@@ -1342,7 +1342,7 @@
       "bedId": "b-ch",
       "name": "Creeping Jenny",
       "scientific": "Lysimachia nummularia",
-      "emoji": "🌿",
+      "emoji": "emoji_ch-jenny",
       "status": "alive",
       "water": "Low to moderate",
       "sun": "Part shade to full shade",
@@ -1375,7 +1375,8 @@
           "url": "https://www.google.com/search?q=Root%20rot%20in%20waterlogged%20soil%20plant%20care%20fix"
         }
       ],
-      "category": "None"
+      "category": "None",
+      "howPlanted": ""
     },
     {
       "id": "ch-hosta",
@@ -9436,7 +9437,8 @@
     "emoji_fr-mondo": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_fr-mondo.txt",
     "emoji_mp-bridal": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_mp-bridal.txt",
     "emoji_ip18": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_ip18.txt",
-    "emoji_mp-jenny": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_mp-jenny.txt"
+    "emoji_mp-jenny": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_mp-jenny.txt",
+    "emoji_ch-jenny": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_ch-jenny.txt"
   },
-  "syncedAt": "2026-05-17T18:31:13.648Z"
+  "syncedAt": "2026-05-17T18:31:53.187Z"
 }
