@@ -7008,7 +7008,7 @@
       "section": "Plant Stand",
       "name": "Polka Dot Plant",
       "scientific": "Hypoestes phyllostachya",
-      "emoji": "🔵",
+      "emoji": "emoji_ip6",
       "status": "alive",
       "water": "Keep evenly moist",
       "sun": "Bright indirect",
@@ -7060,7 +7060,8 @@
           "url": "https://www.google.com/search?q=Leggy%20growth%20plant%20care%20fix"
         }
       ],
-      "category": "Tropical Foliage"
+      "category": "Tropical Foliage",
+      "howPlanted": ""
     },
     {
       "id": "ip7",
@@ -9545,5 +9546,5 @@
       "pg_Check for scale and aphids — treat with neem oil if found": false
     }
   },
-  "syncedAt": "2026-05-17T22:37:38.435Z"
+  "syncedAt": "2026-05-17T22:39:25.585Z"
 }
