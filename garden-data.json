@@ -221,12 +221,13 @@
           "issue": "No berries",
           "url": "https://www.google.com/search?q=No%20berries%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Shrubs"
     },
     {
       "id": "fl-sarcococca",
       "bedId": "b-fl",
-      "name": "Sarcococca confusa",
+      "name": "Sweet Box",
       "scientific": "Sarcococca confusa",
       "emoji": "🌿",
       "status": "planned",
@@ -251,7 +252,8 @@
           "issue": "Leaf yellowing",
           "url": "https://www.google.com/search?q=Leaf%20yellowing%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Shrubs"
     },
     {
       "id": "fl-breath",
@@ -259,7 +261,7 @@
       "name": "Breath of Heaven",
       "scientific": "Coleonema pulchrum",
       "emoji": "🌸",
-      "status": "planned",
+      "status": "alive",
       "water": "Low-moderate",
       "sun": "Part sun",
       "datePlanted": "",
@@ -280,13 +282,14 @@
           "issue": "Dieback from hard pruning — never cut to old wood",
           "url": "https://www.google.com/search?q=Dieback%20from%20hard%20pruning%20%E2%80%94%20never%20cut%20to%20old%20wood%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Shrubs"
     },
     {
       "id": "fl-loro",
       "bedId": "b-fl",
-      "name": "Loropetalum Purple Daydream",
-      "scientific": "Loropetalum chinense Purple Daydream",
+      "name": "Loropetalum Purple Diamond",
+      "scientific": "Loropetalum chinense",
       "emoji": "💜",
       "status": "planned",
       "water": "Moderate",
@@ -315,7 +318,8 @@
           "issue": "Loss of purple color",
           "url": "https://www.google.com/search?q=Loss%20of%20purple%20color%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Shrubs"
     },
     {
       "id": "fl-abelia",
@@ -350,13 +354,14 @@
           "issue": "Loss of variegation",
           "url": "https://www.google.com/search?q=Loss%20of%20variegation%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Shrubs"
     },
     {
       "id": "fl-bergenia",
       "bedId": "b-fl",
-      "name": "Bergenia Bressingham Ruby",
-      "scientific": "Bergenia cordifolia Bressingham Ruby",
+      "name": "Bergenia Crassifolia",
+      "scientific": "Bergenia crassifolia",
       "emoji": "🌸",
       "status": "planned",
       "water": "Moderate",
@@ -378,98 +383,15 @@
           "issue": "Floppy leaves (overwatering)",
           "url": "https://www.google.com/search?q=Floppy%20leaves%20(overwatering)%20plant%20care%20fix"
         }
-      ]
-    },
-    {
-      "id": "fl-alabama",
-      "bedId": "b-fl",
-      "name": "Heucherella Alabama Sunrise",
-      "scientific": "Heucherella Alabama Sunrise",
-      "emoji": "🍂",
-      "status": "planned",
-      "water": "Moderate",
-      "sun": "Part shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "x3. Between Loropetalum and Begonias. Gold with red veins, orange fall color.",
-      "maintenance": [
-        {
-          "task": "Divide every 3-4 years — remove dead foliage in spring",
-          "months": [
-            3
-          ]
-        }
       ],
-      "trouble": [
-        {
-          "issue": "Crown rot (overwatering)",
-          "url": "https://www.google.com/search?q=Crown%20rot%20(overwatering)%20plant%20care%20fix"
-        }
-      ]
-    },
-    {
-      "id": "fl-buttered",
-      "bedId": "b-fl",
-      "name": "Heucherella Buttered Rum",
-      "scientific": "Heucherella Buttered Rum",
-      "emoji": "🍯",
-      "status": "planned",
-      "water": "Moderate",
-      "sun": "Part shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "x3. Between Day Lilies and Mondo. Caramel/mahogany, dark winter color.",
-      "maintenance": [
-        {
-          "task": "Divide every 3-4 years — remove dead foliage in spring",
-          "months": [
-            3
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Crown rot",
-          "url": "https://www.google.com/search?q=Crown%20rot%20plant%20care%20fix"
-        }
-      ]
-    },
-    {
-      "id": "fl-tiarella",
-      "bedId": "b-fl",
-      "name": "Tiarella Spring Symphony",
-      "scientific": "Tiarella cordifolia Spring Symphony",
-      "emoji": "🌿",
-      "status": "planned",
-      "water": "Moderate",
-      "sun": "Part to full shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "x3. Left of Viburnum. Green with dark markings, white-pink flower spikes.",
-      "maintenance": [
-        {
-          "task": "Divide every 3-4 years",
-          "months": [
-            3
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Crown rot",
-          "url": "https://www.google.com/search?q=Crown%20rot%20plant%20care%20fix"
-        }
-      ]
+      "category": "Perennials"
     },
     {
       "id": "fl-mondo",
       "bedId": "b-fl",
       "name": "Black Mondo",
       "scientific": "Ophiopogon planiscapus Nigrescens",
-      "emoji": "🖤",
+      "emoji": "emoji_fl-mondo",
       "status": "planned",
       "water": "Moderate",
       "sun": "Part shade",
@@ -490,7 +412,8 @@
           "issue": "Loss of black color",
           "url": "https://www.google.com/search?q=Loss%20of%20black%20color%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Ornamental Grasses"
     },
     {
       "id": "fl-carex",
@@ -518,13 +441,14 @@
           "issue": "Brown tips",
           "url": "https://www.google.com/search?q=Brown%20tips%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Ornamental Grasses"
     },
     {
       "id": "fl-hellebores",
       "bedId": "b-fl",
-      "name": "Hellebores",
-      "scientific": "Helleborus spp.",
+      "name": "Hellebores Pippa's Purple",
+      "scientific": "Helleborus x hybridus",
       "emoji": "🌸",
       "status": "planned",
       "water": "Moderate",
@@ -546,14 +470,15 @@
           "issue": "Black death virus",
           "url": "https://www.google.com/search?q=Black%20death%20virus%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Perennials"
     },
     {
       "id": "fl-lamium",
       "bedId": "b-fl",
       "name": "Lamium White Nancy",
       "scientific": "Lamium maculatum White Nancy",
-      "emoji": "🤍",
+      "emoji": "emoji_fl-lamium",
       "status": "planned",
       "water": "Moderate",
       "sun": "Part shade",
@@ -575,94 +500,15 @@
           "issue": "Leggy growth",
           "url": "https://www.google.com/search?q=Leggy%20growth%20plant%20care%20fix"
         }
-      ]
-    },
-    {
-      "id": "fl-begonia",
-      "bedId": "b-fl",
-      "name": "Tuberous Begonia Yellow",
-      "scientific": "Begonia tuberhybrida",
-      "emoji": "🌼",
-      "status": "planned",
-      "water": "Regular",
-      "sun": "Part shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Yellow Non Stop. x6.",
-      "maintenance": [
-        {
-          "task": "Deadhead spent blooms continuously",
-          "months": [
-            5,
-            6,
-            7,
-            8,
-            9,
-            10
-          ]
-        },
-        {
-          "task": "Feed liquid fertilizer every 2 weeks",
-          "months": [
-            5,
-            6,
-            7,
-            8,
-            9
-          ]
-        }
       ],
-      "trouble": [
-        {
-          "issue": "Powdery mildew",
-          "url": "https://www.google.com/search?q=Powdery%20mildew%20plant%20care%20fix"
-        }
-      ]
-    },
-    {
-      "id": "fl-clivia",
-      "bedId": "b-fl",
-      "name": "Clivia",
-      "scientific": "Clivia miniata",
-      "emoji": "🟠",
-      "status": "alive",
-      "water": "Low-moderate",
-      "sun": "Part shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "x2 existing.",
-      "maintenance": [
-        {
-          "task": "Keep evenly moist spring",
-          "months": [
-            3,
-            4,
-            5
-          ]
-        },
-        {
-          "task": "Feed diluted fertilizer after flowering",
-          "months": [
-            4,
-            5
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Not flowering",
-          "url": "https://www.google.com/search?q=Not%20flowering%20plant%20care%20fix"
-        }
-      ]
+      "category": "Perennials"
     },
     {
       "id": "rw-camellia",
       "bedId": "b-rw",
       "name": "Camellia",
       "scientific": "Camellia japonica",
-      "emoji": "🌸",
+      "emoji": "emoji_rw-camellia",
       "status": "alive",
       "water": "Regular",
       "sun": "Part to full shade",
@@ -672,16 +518,22 @@
       "notes": "Existing.",
       "maintenance": [
         {
-          "task": "Prune lightly after flowering",
+          "task": "Deadwood removal only — no hard cutback",
           "months": [
-            4,
-            5
+            1
           ]
         },
         {
-          "task": "Feed azalea fertilizer after bloom",
+          "task": "Feed with azalea fertilizer",
           "months": [
-            5
+            3
+          ]
+        },
+        {
+          "task": "Prune ONLY after flowering complete",
+          "months": [
+            8,
+            9
           ]
         }
       ],
@@ -690,12 +542,13 @@
           "issue": "Bud drop",
           "url": "https://www.google.com/search?q=Bud%20drop%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Hydrangeas"
     },
     {
       "id": "rw-pittosporum",
       "bedId": "b-rw",
-      "name": "Pittosporum",
+      "name": "Pittosporum Tobira Shrub",
       "scientific": "Pittosporum tobira",
       "emoji": "🌿",
       "status": "alive",
@@ -719,14 +572,15 @@
           "issue": "Scale insects",
           "url": "https://www.google.com/search?q=Scale%20insects%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Trees"
     },
     {
       "id": "rw-clivia",
       "bedId": "b-rw",
       "name": "Clivia",
       "scientific": "Clivia miniata",
-      "emoji": "🟠",
+      "emoji": "emoji_rw-clivia",
       "status": "alive",
       "water": "Low once established",
       "sun": "Full shade",
@@ -748,121 +602,8 @@
           "issue": "Not flowering",
           "url": "https://www.google.com/search?q=Not%20flowering%20plant%20care%20fix"
         }
-      ]
-    },
-    {
-      "id": "rw-fern-ex",
-      "bedId": "b-rw",
-      "name": "Existing Ferns",
-      "scientific": "Polystichum spp.",
-      "emoji": "🌿",
-      "status": "alive",
-      "water": "Keep moist",
-      "sun": "Full shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Existing ferns under redwoods.",
-      "maintenance": [
-        {
-          "task": "Remove old/brown fronds in spring",
-          "months": [
-            3
-          ]
-        }
       ],
-      "trouble": [
-        {
-          "issue": "Brown fronds",
-          "url": "https://www.google.com/search?q=Brown%20fronds%20plant%20care%20fix"
-        }
-      ]
-    },
-    {
-      "id": "rw-sword",
-      "bedId": "b-rw",
-      "name": "Western Sword Fern",
-      "scientific": "Polystichum munitum",
-      "emoji": "🌿",
-      "status": "planned",
-      "water": "Moderate",
-      "sun": "Full shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "x10. 1-gallon. In bottomless pots with crescent berms.",
-      "maintenance": [
-        {
-          "task": "Remove old/brown fronds in spring",
-          "months": [
-            3
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Brown fronds",
-          "url": "https://www.google.com/search?q=Brown%20fronds%20plant%20care%20fix"
-        }
-      ]
-    },
-    {
-      "id": "rw-hellebores",
-      "bedId": "b-rw",
-      "name": "Hellebores",
-      "scientific": "Helleborus spp.",
-      "emoji": "🌸",
-      "status": "planned",
-      "water": "Moderate",
-      "sun": "Part to full shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "x3 mixed.",
-      "maintenance": [
-        {
-          "task": "Remove old leaves in late fall to showcase winter flowers",
-          "months": [
-            11
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Black death virus",
-          "url": "https://www.google.com/search?q=Black%20death%20virus%20plant%20care%20fix"
-        }
-      ]
-    },
-    {
-      "id": "rw-oxalis",
-      "bedId": "b-rw",
-      "name": "Oxalis Purple",
-      "scientific": "Oxalis triangularis",
-      "emoji": "💜",
-      "status": "planned",
-      "water": "Moderate",
-      "sun": "Part shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "x5. Purple. Dramatic against green ferns.",
-      "maintenance": [
-        {
-          "task": "May go dormant in summer heat — reduce water if leaves yellow",
-          "months": [
-            6,
-            7,
-            8
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Not emerging from dormancy",
-          "url": "https://www.google.com/search?q=Not%20emerging%20from%20dormancy%20plant%20care%20fix"
-        }
-      ]
+      "category": "Bulbs"
     },
     {
       "id": "mp-maple",
@@ -890,14 +631,15 @@
           "issue": "Leaf scorch",
           "url": "https://www.google.com/search?q=Leaf%20scorch%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Trees"
     },
     {
       "id": "mp-camellia",
       "bedId": "b-mp",
       "name": "Camellia",
       "scientific": "Camellia japonica",
-      "emoji": "🌸",
+      "emoji": "emoji_mp-camellia",
       "status": "alive",
       "water": "Regular",
       "sun": "Part shade",
@@ -907,16 +649,22 @@
       "notes": "Existing.",
       "maintenance": [
         {
-          "task": "Prune lightly after flowering",
+          "task": "Deadwood removal only — no hard cutback",
           "months": [
-            4,
-            5
+            1
           ]
         },
         {
-          "task": "Feed azalea fertilizer after bloom",
+          "task": "Feed with azalea fertilizer",
           "months": [
-            5
+            3
+          ]
+        },
+        {
+          "task": "Prune ONLY after flowering complete",
+          "months": [
+            8,
+            9
           ]
         }
       ],
@@ -925,21 +673,22 @@
           "issue": "Bud drop",
           "url": "https://www.google.com/search?q=Bud%20drop%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Hydrangeas"
     },
     {
       "id": "mp-fern",
       "bedId": "b-mp",
-      "name": "Fern",
-      "scientific": "Polystichum spp.",
+      "name": "Western Sword Fern",
+      "scientific": "Polystichum munitum",
       "emoji": "🌿",
       "status": "alive",
-      "water": "Keep moist",
-      "sun": "Part shade",
+      "water": "Low once established",
+      "sun": "Part shade to full shade",
       "datePlanted": "",
       "nursery": "",
       "fromCutting": false,
-      "notes": "Existing.",
+      "notes": "Existing. Native fern, tough and low-maintenance.",
       "maintenance": [
         {
           "task": "Remove old/brown fronds in spring",
@@ -953,7 +702,8 @@
           "issue": "Brown fronds",
           "url": "https://www.google.com/search?q=Brown%20fronds%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Ferns"
     },
     {
       "id": "mp-japgrass",
@@ -981,7 +731,8 @@
           "issue": "Loss of variegation",
           "url": "https://www.google.com/search?q=Loss%20of%20variegation%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Ornamental Grasses"
     },
     {
       "id": "mp-daylily",
@@ -1017,46 +768,8 @@
           "issue": "Rust disease",
           "url": "https://www.google.com/search?q=Rust%20disease%20plant%20care%20fix"
         }
-      ]
-    },
-    {
-      "id": "mp-hosta",
-      "bedId": "b-mp",
-      "name": "Hosta",
-      "scientific": "Hosta spp.",
-      "emoji": "🍃",
-      "status": "alive",
-      "water": "Regular",
-      "sun": "Part shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Existing.",
-      "maintenance": [
-        {
-          "task": "Monitor for slugs and snails — bait if needed",
-          "months": [
-            3,
-            4,
-            5,
-            6,
-            7,
-            8
-          ]
-        },
-        {
-          "task": "Cut back dead foliage in fall",
-          "months": [
-            11
-          ]
-        }
       ],
-      "trouble": [
-        {
-          "issue": "Slug damage",
-          "url": "https://www.google.com/search?q=Slug%20damage%20plant%20care%20fix"
-        }
-      ]
+      "category": "Bulbs"
     },
     {
       "id": "mp-abelia",
@@ -1091,14 +804,15 @@
           "issue": "Loss of variegation",
           "url": "https://www.google.com/search?q=Loss%20of%20variegation%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Shrubs"
     },
     {
       "id": "mp-mondo",
       "bedId": "b-mp",
       "name": "Black Mondo",
       "scientific": "Ophiopogon planiscapus Nigrescens",
-      "emoji": "🖤",
+      "emoji": "emoji_mp-mondo",
       "status": "planned",
       "water": "Moderate",
       "sun": "Part shade",
@@ -1119,7 +833,8 @@
           "issue": "Loss of black color",
           "url": "https://www.google.com/search?q=Loss%20of%20black%20color%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Ornamental Grasses"
     },
     {
       "id": "mp-carex",
@@ -1147,70 +862,15 @@
           "issue": "Brown tips",
           "url": "https://www.google.com/search?q=Brown%20tips%20plant%20care%20fix"
         }
-      ]
-    },
-    {
-      "id": "mp-alabama",
-      "bedId": "b-mp",
-      "name": "Heucherella Alabama Sunrise",
-      "scientific": "Heucherella Alabama Sunrise",
-      "emoji": "🍂",
-      "status": "planned",
-      "water": "Moderate",
-      "sun": "Part shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "x3. Gold tones echo Japanese Maple fall color.",
-      "maintenance": [
-        {
-          "task": "Divide every 3-4 years — remove dead foliage in spring",
-          "months": [
-            3
-          ]
-        }
       ],
-      "trouble": [
-        {
-          "issue": "Crown rot",
-          "url": "https://www.google.com/search?q=Crown%20rot%20plant%20care%20fix"
-        }
-      ]
-    },
-    {
-      "id": "mp-sword",
-      "bedId": "b-mp",
-      "name": "Western Sword Fern",
-      "scientific": "Polystichum munitum",
-      "emoji": "🌿",
-      "status": "planned",
-      "water": "Moderate",
-      "sun": "Part shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "x3. 1-gallon.",
-      "maintenance": [
-        {
-          "task": "Remove old/brown fronds in spring",
-          "months": [
-            3
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Brown fronds",
-          "url": "https://www.google.com/search?q=Brown%20fronds%20plant%20care%20fix"
-        }
-      ]
+      "category": "Ornamental Grasses"
     },
     {
       "id": "mp-lamium",
       "bedId": "b-mp",
       "name": "Lamium White Nancy",
       "scientific": "Lamium maculatum White Nancy",
-      "emoji": "🤍",
+      "emoji": "emoji_mp-lamium",
       "status": "planned",
       "water": "Moderate",
       "sun": "Part shade",
@@ -1232,12 +892,235 @@
           "issue": "Leggy growth",
           "url": "https://www.google.com/search?q=Leggy%20growth%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Perennials"
+    },
+    {
+      "id": "mp-aucuba",
+      "bedId": "b-mp",
+      "name": "Aucuba",
+      "scientific": "Aucuba japonica",
+      "emoji": "🌿",
+      "status": "alive",
+      "water": "Low once established",
+      "sun": "Part shade to full shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Existing. Shade-tolerant shrub with glossy foliage.",
+      "maintenance": [
+        {
+          "task": "Feed slow release balanced fertilizer in spring",
+          "months": [
+            3
+          ]
+        },
+        {
+          "task": "Light prune to shape or remove damaged growth",
+          "months": [
+            2
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Scale insects",
+          "url": "https://www.google.com/search?q=Scale%20insects%20plant%20care%20fix"
+        },
+        {
+          "issue": "Root rot from overwatering",
+          "url": "https://www.google.com/search?q=Root%20rot%20from%20overwatering%20plant%20care%20fix"
+        }
+      ],
+      "category": "None"
+    },
+    {
+      "id": "mp-daphne",
+      "bedId": "b-mp",
+      "name": "Daphne Odora",
+      "scientific": "Daphne odora",
+      "emoji": "🌸",
+      "status": "alive",
+      "water": "Low — drought-tolerant once established",
+      "sun": "Part shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Existing. Winter–spring fragrant blooms. Resents root disturbance.",
+      "maintenance": [
+        {
+          "task": "Feed low-nitrogen fertilizer after flowering",
+          "months": [
+            4
+          ]
+        },
+        {
+          "task": "Light trim after flowering — never cut into old wood",
+          "months": [
+            3,
+            4
+          ]
+        },
+        {
+          "task": "Mulch roots to keep cool — never cultivate around base",
+          "months": [
+            4,
+            5
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Root rot (overwatering — ensure perfect drainage)",
+          "url": "https://www.google.com/search?q=Root%20rot%20(overwatering%20—%20ensure%20perfect%20drainage)%20plant%20care%20fix"
+        },
+        {
+          "issue": "Sudden dieback (Phytophthora — improve drainage immediately)",
+          "url": "https://www.google.com/search?q=Sudden%20dieback%20(Phytophthora%20—%20improve%20drainage%20immediately)%20plant%20care%20fix"
+        }
+      ],
+      "category": "None"
+    },
+    {
+      "id": "mp-jenny",
+      "bedId": "b-mp",
+      "name": "Creeping Jenny",
+      "scientific": "Lysimachia nummularia",
+      "emoji": "🌿",
+      "status": "alive",
+      "water": "Low to moderate",
+      "sun": "Part shade to full shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Existing groundcover. Spreads readily — trim to keep in bounds.",
+      "maintenance": [
+        {
+          "task": "Trim back to control spread",
+          "months": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "task": "Divide if overcrowded",
+          "months": [
+            3
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Root rot in waterlogged soil",
+          "url": "https://www.google.com/search?q=Root%20rot%20in%20waterlogged%20soil%20plant%20care%20fix"
+        }
+      ],
+      "category": "None"
+    },
+    {
+      "id": "mp-hellebores",
+      "bedId": "b-mp",
+      "name": "Hellebores Pippa's Purple",
+      "scientific": "Helleborus Pippa's Purple",
+      "emoji": "🌸",
+      "status": "planned",
+      "water": "Low once established",
+      "sun": "Part to full shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Planned. Winter-blooming, deer resistant. Do not move once established.",
+      "maintenance": [
+        {
+          "task": "Feed slow release fertilizer in early spring before flowering",
+          "months": [
+            2
+          ]
+        },
+        {
+          "task": "Remove old/damaged leaves in late fall to showcase winter blooms",
+          "months": [
+            11
+          ]
+        },
+        {
+          "task": "Divide large clumps after flowering only if necessary",
+          "months": [
+            4
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Black death virus (incurable — remove and destroy affected plant)",
+          "url": "https://www.google.com/search?q=Black%20death%20virus%20(incurable%20—%20remove%20and%20destroy%20affected%20plant)%20plant%20care%20fix"
+        },
+        {
+          "issue": "Crown rot from poor drainage",
+          "url": "https://www.google.com/search?q=Crown%20rot%20from%20poor%20drainage%20plant%20care%20fix"
+        }
+      ],
+      "category": "None"
+    },
+    {
+      "id": "mp-hostamm",
+      "bedId": "b-mp",
+      "name": "Hosta Minute Man",
+      "scientific": "Hosta Minute Man",
+      "emoji": "🍃",
+      "status": "planned",
+      "water": "Moderate",
+      "sun": "Part shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Planned. Bold white-edged foliage. Slug magnet — bait proactively.",
+      "maintenance": [
+        {
+          "task": "Monitor for slugs and snails — apply bait as soon as growth emerges",
+          "months": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "task": "Emerges late Feb/March — mark location and do not disturb soil",
+          "months": [
+            1,
+            2
+          ]
+        },
+        {
+          "task": "Cut back dead foliage in fall",
+          "months": [
+            11
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Slug and snail damage",
+          "url": "https://www.google.com/search?q=Slug%20and%20snail%20damage%20plant%20care%20fix"
+        },
+        {
+          "issue": "Crown rot in waterlogged soil",
+          "url": "https://www.google.com/search?q=Crown%20rot%20in%20waterlogged%20soil%20plant%20care%20fix"
+        }
+      ],
+      "category": "None"
     },
     {
       "id": "ch-cherry",
       "bedId": "b-ch",
-      "name": "Cherry Tree",
+      "name": "Flowering Cherry Tree",
       "scientific": "Prunus spp.",
       "emoji": "🌸",
       "status": "alive",
@@ -1267,14 +1150,15 @@
           "issue": "Brown rot",
           "url": "https://www.google.com/search?q=Brown%20rot%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Trees"
     },
     {
       "id": "ch-nandina",
       "bedId": "b-ch",
       "name": "Nandina",
       "scientific": "Nandina domestica",
-      "emoji": "🔴",
+      "emoji": "🌿",
       "status": "alive",
       "water": "Low once established",
       "sun": "Part shade",
@@ -1301,7 +1185,8 @@
           "issue": "Not fruiting",
           "url": "https://www.google.com/search?q=Not%20fruiting%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Shrubs"
     },
     {
       "id": "ch-daylily",
@@ -1337,7 +1222,8 @@
           "issue": "Rust disease",
           "url": "https://www.google.com/search?q=Rust%20disease%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Bulbs"
     },
     {
       "id": "ch-abelia",
@@ -1372,14 +1258,15 @@
           "issue": "Loss of variegation",
           "url": "https://www.google.com/search?q=Loss%20of%20variegation%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Shrubs"
     },
     {
       "id": "ch-mondo",
       "bedId": "b-ch",
       "name": "Black Mondo",
       "scientific": "Ophiopogon planiscapus Nigrescens",
-      "emoji": "🖤",
+      "emoji": "emoji_ch-mondo",
       "status": "planned",
       "water": "Moderate",
       "sun": "Part shade",
@@ -1400,14 +1287,15 @@
           "issue": "Loss of black color",
           "url": "https://www.google.com/search?q=Loss%20of%20black%20color%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Ornamental Grasses"
     },
     {
       "id": "ch-lamium",
       "bedId": "b-ch",
       "name": "Lamium White Nancy",
       "scientific": "Lamium maculatum White Nancy",
-      "emoji": "🤍",
+      "emoji": "emoji_ch-lamium",
       "status": "planned",
       "water": "Moderate",
       "sun": "Part shade",
@@ -1429,7 +1317,99 @@
           "issue": "Leggy growth",
           "url": "https://www.google.com/search?q=Leggy%20growth%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Perennials"
+    },
+    {
+      "id": "ch-jenny",
+      "bedId": "b-ch",
+      "name": "Creeping Jenny",
+      "scientific": "Lysimachia nummularia",
+      "emoji": "🌿",
+      "status": "alive",
+      "water": "Low to moderate",
+      "sun": "Part shade to full shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Existing groundcover. Trim to keep in bounds under cherry tree.",
+      "maintenance": [
+        {
+          "task": "Trim back to control spread",
+          "months": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "task": "Divide if overcrowded",
+          "months": [
+            3
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Root rot in waterlogged soil",
+          "url": "https://www.google.com/search?q=Root%20rot%20in%20waterlogged%20soil%20plant%20care%20fix"
+        }
+      ],
+      "category": "None"
+    },
+    {
+      "id": "ch-hosta",
+      "bedId": "b-ch",
+      "name": "Hosta Patriot",
+      "scientific": "Hosta Patriot",
+      "emoji": "🍃",
+      "status": "planned",
+      "water": "Moderate",
+      "sun": "Part shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Planned. Classic white-margined hosta. Slug magnet — bait proactively.",
+      "maintenance": [
+        {
+          "task": "Monitor for slugs and snails — apply bait as soon as growth emerges",
+          "months": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "task": "Emerges late Feb/March — mark location and do not disturb soil",
+          "months": [
+            1,
+            2
+          ]
+        },
+        {
+          "task": "Cut back dead foliage in fall",
+          "months": [
+            11
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Slug and snail damage",
+          "url": "https://www.google.com/search?q=Slug%20and%20snail%20damage%20plant%20care%20fix"
+        },
+        {
+          "issue": "Crown rot in waterlogged soil",
+          "url": "https://www.google.com/search?q=Crown%20rot%20in%20waterlogged%20soil%20plant%20care%20fix"
+        }
+      ],
+      "category": "None"
     },
     {
       "id": "fr-camphor",
@@ -1457,78 +1437,8 @@
           "issue": "Root invasion",
           "url": "https://www.google.com/search?q=Root%20invasion%20plant%20care%20fix"
         }
-      ]
-    },
-    {
-      "id": "fr-lavender",
-      "bedId": "b-fr",
-      "name": "Lavender",
-      "scientific": "Lavandula spp.",
-      "emoji": "💜",
-      "status": "alive",
-      "water": "Low — drought tolerant",
-      "sun": "Part shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "x2 existing.",
-      "maintenance": [
-        {
-          "task": "Light trim after flowering — never cut into old wood",
-          "months": [
-            6,
-            7
-          ]
-        },
-        {
-          "task": "Feed slow release fertilizer in spring",
-          "months": [
-            3
-          ]
-        }
       ],
-      "trouble": [
-        {
-          "issue": "Root rot (overwatering)",
-          "url": "https://www.google.com/search?q=Root%20rot%20(overwatering)%20plant%20care%20fix"
-        }
-      ]
-    },
-    {
-      "id": "fr-daylily",
-      "bedId": "b-fr",
-      "name": "Day Lilies",
-      "scientific": "Hemerocallis spp.",
-      "emoji": "🌼",
-      "status": "alive",
-      "water": "Low-moderate",
-      "sun": "Part shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Existing.",
-      "maintenance": [
-        {
-          "task": "Deadhead spent blooms daily during peak bloom",
-          "months": [
-            5,
-            6,
-            7
-          ]
-        },
-        {
-          "task": "Divide every 3-4 years",
-          "months": [
-            3
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Rust disease",
-          "url": "https://www.google.com/search?q=Rust%20disease%20plant%20care%20fix"
-        }
-      ]
+      "category": "Trees"
     },
     {
       "id": "fr-catmint",
@@ -1565,7 +1475,8 @@
           "issue": "Root rot",
           "url": "https://www.google.com/search?q=Root%20rot%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Herbs"
     },
     {
       "id": "fr-abelia",
@@ -1600,13 +1511,14 @@
           "issue": "Loss of variegation",
           "url": "https://www.google.com/search?q=Loss%20of%20variegation%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Shrubs"
     },
     {
       "id": "fr-loro",
       "bedId": "b-fr",
-      "name": "Loropetalum Purple Daydream",
-      "scientific": "Loropetalum chinense Purple Daydream",
+      "name": "Loropetalum Purple Diamond",
+      "scientific": "Loropetalum chinense",
       "emoji": "💜",
       "status": "planned",
       "water": "Moderate",
@@ -1635,35 +1547,8 @@
           "issue": "Loss of purple color",
           "url": "https://www.google.com/search?q=Loss%20of%20purple%20color%20plant%20care%20fix"
         }
-      ]
-    },
-    {
-      "id": "fr-buttered",
-      "bedId": "b-fr",
-      "name": "Heucherella Buttered Rum",
-      "scientific": "Heucherella Buttered Rum",
-      "emoji": "🍯",
-      "status": "planned",
-      "water": "Moderate",
-      "sun": "Part shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "x6. 2 clusters of 3.",
-      "maintenance": [
-        {
-          "task": "Divide every 3-4 years — remove dead foliage in spring",
-          "months": [
-            3
-          ]
-        }
       ],
-      "trouble": [
-        {
-          "issue": "Crown rot",
-          "url": "https://www.google.com/search?q=Crown%20rot%20plant%20care%20fix"
-        }
-      ]
+      "category": "Shrubs"
     },
     {
       "id": "fr-mondo",
@@ -1691,7 +1576,8 @@
           "issue": "Loss of black color",
           "url": "https://www.google.com/search?q=Loss%20of%20black%20color%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Ornamental Grasses"
     },
     {
       "id": "fr-lamium",
@@ -1720,54 +1606,12 @@
           "issue": "Leggy growth",
           "url": "https://www.google.com/search?q=Leggy%20growth%20plant%20care%20fix"
         }
-      ]
-    },
-    {
-      "id": "fr-begonia",
-      "bedId": "b-fr",
-      "name": "Tuberous Begonia Yellow",
-      "scientific": "Begonia tuberhybrida",
-      "emoji": "🌼",
-      "status": "planned",
-      "water": "Regular",
-      "sun": "Part shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "x5. Yellow Non Stop.",
-      "maintenance": [
-        {
-          "task": "Deadhead spent blooms continuously",
-          "months": [
-            5,
-            6,
-            7,
-            8,
-            9,
-            10
-          ]
-        },
-        {
-          "task": "Feed liquid fertilizer every 2 weeks",
-          "months": [
-            5,
-            6,
-            7,
-            8,
-            9
-          ]
-        }
       ],
-      "trouble": [
-        {
-          "issue": "Powdery mildew",
-          "url": "https://www.google.com/search?q=Powdery%20mildew%20plant%20care%20fix"
-        }
-      ]
+      "category": "Perennials"
     },
     {
       "id": "ros-apricot",
-      "bedId": "b-ros",
+      "bedId": "b-back-rose",
       "name": "Apricot Tree",
       "scientific": "Prunus armeniaca",
       "emoji": "🍑",
@@ -1812,12 +1656,13 @@
           "issue": "Brown rot on fruit",
           "url": "https://www.google.com/search?q=Brown%20rot%20on%20fruit%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Fruit Trees"
     },
     {
       "id": "ros-lemon",
       "bedId": "b-ros",
-      "name": "Citrus Tree",
+      "name": "Dwarf Meyer’s Lemon Tree",
       "scientific": "Citrus limon dwarf",
       "emoji": "🍋",
       "status": "alive",
@@ -1858,7 +1703,8 @@
           "issue": "Yellowing leaves",
           "url": "https://www.google.com/search?q=Yellowing%20leaves%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Fruit Trees"
     },
     {
       "id": "ros-peruvian",
@@ -1891,7 +1737,8 @@
           "issue": "Not flowering",
           "url": "https://www.google.com/search?q=Not%20flowering%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Bulbs"
     },
     {
       "id": "ros-flowercarpet",
@@ -1931,14 +1778,15 @@
           "issue": "Black spot",
           "url": "https://www.google.com/search?q=Black%20spot%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Bush Roses"
     },
     {
       "id": "ros-treerose",
       "bedId": "b-ros",
-      "name": "Rose",
+      "name": "Tree Rose - Pink (Sexy Rexy)",
       "scientific": "Rosa standard",
-      "emoji": "🌹",
+      "emoji": "emoji_ros-treerose",
       "status": "alive",
       "water": "Deep water weekly",
       "sun": "Part sun",
@@ -1979,7 +1827,9 @@
           "issue": "Black spot",
           "url": "https://www.google.com/search?q=Black%20spot%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Bush Roses",
+      "howPlanted": ""
     },
     {
       "id": "br-fatsia",
@@ -2014,14 +1864,15 @@
           "issue": "Leaf drop",
           "url": "https://www.google.com/search?q=Leaf%20drop%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Tropical Foliage"
     },
     {
       "id": "br-azalea",
       "bedId": "b-br",
       "name": "Encore Azalea White",
       "scientific": "Rhododendron Encore",
-      "emoji": "🌸",
+      "emoji": "emoji_br-azalea",
       "status": "planned",
       "water": "Regular",
       "sun": "Part shade",
@@ -2050,7 +1901,8 @@
           "issue": "Not reblooming",
           "url": "https://www.google.com/search?q=Not%20reblooming%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Shrubs"
     },
     {
       "id": "br-hosta",
@@ -2096,7 +1948,8 @@
           "issue": "Slug damage",
           "url": "https://www.google.com/search?q=Slug%20damage%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Perennials"
     },
     {
       "id": "br-anemone",
@@ -2124,7 +1977,8 @@
           "issue": "Not blooming",
           "url": "https://www.google.com/search?q=Not%20blooming%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Bulbs"
     },
     {
       "id": "br-tiarella",
@@ -2152,14 +2006,15 @@
           "issue": "Crown rot",
           "url": "https://www.google.com/search?q=Crown%20rot%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Perennials"
     },
     {
       "id": "br-liriope",
       "bedId": "b-br",
       "name": "Liriope Big Blue",
       "scientific": "Liriope muscari Big Blue",
-      "emoji": "🌿",
+      "emoji": "emoji_br-liriope",
       "status": "planned",
       "water": "Low-moderate",
       "sun": "Part shade",
@@ -2181,46 +2036,15 @@
           "issue": "Crown rot",
           "url": "https://www.google.com/search?q=Crown%20rot%20plant%20care%20fix"
         }
-      ]
-    },
-    {
-      "id": "br-impatiens",
-      "bedId": "b-br",
-      "name": "Impatiens White",
-      "scientific": "Impatiens walleriana",
-      "emoji": "🤍",
-      "status": "planned",
-      "water": "Regular",
-      "sun": "Part shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "x16. Interior filler between big plants.",
-      "maintenance": [
-        {
-          "task": "Feed liquid fertilizer every 2 weeks",
-          "months": [
-            5,
-            6,
-            7,
-            8,
-            9
-          ]
-        }
       ],
-      "trouble": [
-        {
-          "issue": "Downy mildew",
-          "url": "https://www.google.com/search?q=Downy%20mildew%20plant%20care%20fix"
-        }
-      ]
+      "category": "Ornamental Grasses"
     },
     {
       "id": "br-coleus",
       "bedId": "b-br",
       "name": "Coleus Dark Purple",
       "scientific": "Plectranthus scutellarioides",
-      "emoji": "💜",
+      "emoji": "emoji_br-coleus",
       "status": "planned",
       "water": "Moderate",
       "sun": "Part shade",
@@ -2242,14 +2066,15 @@
           "issue": "Leggy growth",
           "url": "https://www.google.com/search?q=Leggy%20growth%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Annuals"
     },
     {
       "id": "br-torenia",
       "bedId": "b-br",
       "name": "Torenia White/Purple",
       "scientific": "Torenia fournieri",
-      "emoji": "🌸",
+      "emoji": "emoji_br-torenia",
       "status": "planned",
       "water": "Regular",
       "sun": "Part to full shade",
@@ -2273,57 +2098,15 @@
           "issue": "Root rot",
           "url": "https://www.google.com/search?q=Root%20rot%20plant%20care%20fix"
         }
-      ]
-    },
-    {
-      "id": "br-begonia",
-      "bedId": "b-br",
-      "name": "Tuberous Begonia Hot Pink",
-      "scientific": "Begonia tuberhybrida",
-      "emoji": "🌸",
-      "status": "planned",
-      "water": "Regular",
-      "sun": "Part shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "x12. Hot pink. In front of planter.",
-      "maintenance": [
-        {
-          "task": "Deadhead spent blooms continuously",
-          "months": [
-            5,
-            6,
-            7,
-            8,
-            9,
-            10
-          ]
-        },
-        {
-          "task": "Feed liquid fertilizer every 2 weeks",
-          "months": [
-            5,
-            6,
-            7,
-            8,
-            9
-          ]
-        }
       ],
-      "trouble": [
-        {
-          "issue": "Powdery mildew",
-          "url": "https://www.google.com/search?q=Powdery%20mildew%20plant%20care%20fix"
-        }
-      ]
+      "category": "Annuals"
     },
     {
       "id": "br-impatiens-curve",
       "bedId": "b-br",
       "name": "Impatiens White (Curve)",
       "scientific": "Impatiens walleriana",
-      "emoji": "🤍",
+      "emoji": "emoji_br-impatiens-curve",
       "status": "planned",
       "water": "Regular",
       "sun": "Part shade",
@@ -2348,7 +2131,8 @@
           "issue": "Downy mildew",
           "url": "https://www.google.com/search?q=Downy%20mildew%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Annuals"
     },
     {
       "id": "bl-fatsia",
@@ -2377,14 +2161,15 @@
           "issue": "Leaf drop",
           "url": "https://www.google.com/search?q=Leaf%20drop%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Tropical Foliage"
     },
     {
       "id": "bl-ivy",
       "bedId": "b-bl",
       "name": "Boston Ivy",
       "scientific": "Parthenocissus tricuspidata",
-      "emoji": "🍂",
+      "emoji": "emoji_bl-ivy",
       "status": "planned",
       "water": "Moderate",
       "sun": "Part shade to full sun",
@@ -2416,14 +2201,15 @@
           "issue": "Japanese beetles",
           "url": "https://www.google.com/search?q=Japanese%20beetles%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Vines & Climbers"
     },
     {
       "id": "bl-azalea",
       "bedId": "b-bl",
       "name": "Encore Azalea White",
       "scientific": "Rhododendron Encore",
-      "emoji": "🌸",
+      "emoji": "emoji_bl-azalea",
       "status": "planned",
       "water": "Regular",
       "sun": "Part shade",
@@ -2452,14 +2238,15 @@
           "issue": "Not reblooming",
           "url": "https://www.google.com/search?q=Not%20reblooming%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Shrubs"
     },
     {
       "id": "bl-liriope",
       "bedId": "b-bl",
       "name": "Liriope Big Blue",
       "scientific": "Liriope muscari Big Blue",
-      "emoji": "🌿",
+      "emoji": "emoji_bl-liriope",
       "status": "planned",
       "water": "Low-moderate",
       "sun": "Part shade",
@@ -2481,57 +2268,15 @@
           "issue": "Crown rot",
           "url": "https://www.google.com/search?q=Crown%20rot%20plant%20care%20fix"
         }
-      ]
-    },
-    {
-      "id": "bl-begonia",
-      "bedId": "b-bl",
-      "name": "Tuberous Begonia Hot Pink",
-      "scientific": "Begonia tuberhybrida",
-      "emoji": "🌸",
-      "status": "planned",
-      "water": "Regular",
-      "sun": "Part shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "x12. Hot pink. At curve end.",
-      "maintenance": [
-        {
-          "task": "Deadhead spent blooms continuously",
-          "months": [
-            5,
-            6,
-            7,
-            8,
-            9,
-            10
-          ]
-        },
-        {
-          "task": "Feed liquid fertilizer every 2 weeks",
-          "months": [
-            5,
-            6,
-            7,
-            8,
-            9
-          ]
-        }
       ],
-      "trouble": [
-        {
-          "issue": "Powdery mildew",
-          "url": "https://www.google.com/search?q=Powdery%20mildew%20plant%20care%20fix"
-        }
-      ]
+      "category": "Ornamental Grasses"
     },
     {
       "id": "bl-impatiens",
       "bedId": "b-bl",
       "name": "Impatiens White",
       "scientific": "Impatiens walleriana",
-      "emoji": "🤍",
+      "emoji": "emoji_bl-impatiens",
       "status": "planned",
       "water": "Regular",
       "sun": "Part shade",
@@ -2556,14 +2301,15 @@
           "issue": "Downy mildew",
           "url": "https://www.google.com/search?q=Downy%20mildew%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Annuals"
     },
     {
       "id": "fw-distictis",
       "bedId": "b-fw",
       "name": "Distictis buccinatoria",
       "scientific": "Distictis buccinatoria",
-      "emoji": "🌺",
+      "emoji": "emoji_fw-distictis",
       "status": "alive",
       "water": "Moderate once established",
       "sun": "Part sun",
@@ -2602,14 +2348,15 @@
           "issue": "Rampant unruly growth",
           "url": "https://www.google.com/search?q=Rampant%20unruly%20growth%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Vines & Climbers"
     },
     {
       "id": "fw-rose",
       "bedId": "b-fw",
       "name": "Rose",
       "scientific": "Rosa White Out",
-      "emoji": "🌹",
+      "emoji": "emoji_fw-rose",
       "status": "planned",
       "water": "Deep water weekly",
       "sun": "Part shade",
@@ -2650,14 +2397,15 @@
           "issue": "Black spot",
           "url": "https://www.google.com/search?q=Black%20spot%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Bush Roses"
     },
     {
       "id": "fw-geranium",
       "bedId": "b-fw",
       "name": "Creeping Geranium",
       "scientific": "Pelargonium spp.",
-      "emoji": "🌺",
+      "emoji": "emoji_fw-geranium",
       "status": "alive",
       "water": "Moderate",
       "sun": "Part shade",
@@ -2691,7 +2439,8 @@
           "issue": "Leggy growth",
           "url": "https://www.google.com/search?q=Leggy%20growth%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Perennials"
     },
     {
       "id": "fw-fuchsia",
@@ -2738,14 +2487,15 @@
           "issue": "Wilting",
           "url": "https://www.google.com/search?q=Wilting%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Perennials"
     },
     {
       "id": "fw-begonia",
       "bedId": "b-fw",
       "name": "Tuberous Begonia Orange",
       "scientific": "Begonia tuberhybrida",
-      "emoji": "🟠",
+      "emoji": "emoji_fw-begonia",
       "status": "planned",
       "water": "Regular",
       "sun": "Part shade",
@@ -2781,7 +2531,8 @@
           "issue": "Powdery mildew",
           "url": "https://www.google.com/search?q=Powdery%20mildew%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Annuals"
     },
     {
       "id": "ma-jasmine",
@@ -2818,21 +2569,22 @@
           "issue": "Scale insects",
           "url": "https://www.google.com/search?q=Scale%20insects%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Vines & Climbers"
     },
     {
       "id": "ma-palm",
-      "bedId": "b-ma",
+      "bedId": "b-sa",
       "name": "Palms in Planters",
       "scientific": "Arecaceae spp.",
-      "emoji": "🌴",
+      "emoji": "emoji_ma-palm",
       "status": "alive",
       "water": "Regular — keep moist",
       "sun": "Part sun",
       "datePlanted": "",
       "nursery": "",
       "fromCutting": false,
-      "notes": "4 existing palms in ceramic planters.",
+      "notes": "3 existing palms in ceramic planters.",
       "maintenance": [
         {
           "task": "Feed palm fertilizer spring and summer",
@@ -2857,7 +2609,8 @@
           "issue": "Yellowing fronds",
           "url": "https://www.google.com/search?q=Yellowing%20fronds%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Trees"
     },
     {
       "id": "ma-salvia",
@@ -2902,14 +2655,15 @@
           "issue": "Leggy growth",
           "url": "https://www.google.com/search?q=Leggy%20growth%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Salvias"
     },
     {
       "id": "ma-calibrachoa",
-      "bedId": "b-ma",
+      "bedId": "b-sa",
       "name": "Calibrachoa",
       "scientific": "Calibrachoa spp.",
-      "emoji": "🌸",
+      "emoji": "emoji_ma-calibrachoa",
       "status": "planned",
       "water": "Regular",
       "sun": "Part sun",
@@ -2934,14 +2688,15 @@
           "issue": "Iron deficiency (yellowing)",
           "url": "https://www.google.com/search?q=Iron%20deficiency%20(yellowing)%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Annuals"
     },
     {
       "id": "sa-bougainvillea",
       "bedId": "b-sa",
       "name": "Bougainvillea",
       "scientific": "Bougainvillea spp.",
-      "emoji": "🌺",
+      "emoji": "emoji_sa-bougainvillea",
       "status": "alive",
       "water": "Deep water weekly",
       "sun": "Part sun",
@@ -2984,14 +2739,15 @@
           "issue": "Not blooming",
           "url": "https://www.google.com/search?q=Not%20blooming%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Bougainvillea"
     },
     {
       "id": "sa-iceberg",
       "bedId": "b-sa",
-      "name": "Rose",
+      "name": "Rose bush",
       "scientific": "Rosa Iceberg",
-      "emoji": "🌹",
+      "emoji": "emoji_sa-iceberg",
       "status": "alive",
       "water": "Deep water weekly",
       "sun": "Part sun",
@@ -3032,14 +2788,15 @@
           "issue": "Black spot",
           "url": "https://www.google.com/search?q=Black%20spot%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Climbing Roses"
     },
     {
       "id": "sa-angelface",
       "bedId": "b-sa",
-      "name": "Rose",
+      "name": "Rose bush",
       "scientific": "Rosa Angel Face",
-      "emoji": "💜",
+      "emoji": "emoji_sa-angelface",
       "status": "alive",
       "water": "Deep water weekly",
       "sun": "Part sun",
@@ -3048,6 +2805,13 @@
       "fromCutting": false,
       "notes": "Existing lavender/mauve climbing rose.",
       "maintenance": [
+        {
+          "task": "Hard prune to outward facing buds",
+          "months": [
+            1,
+            2
+          ]
+        },
         {
           "task": "Deadhead every 2 weeks — outward facing bud, 45° cut",
           "months": [
@@ -3061,17 +2825,17 @@
           ]
         },
         {
-          "task": "Hard cutback annually in January/February",
+          "task": "Feed rose fertilizer after first bloom flush",
           "months": [
-            1,
-            2
+            5
           ]
         },
         {
-          "task": "Feed rose fertilizer after first bloom flush",
+          "task": "Monitor for powdery mildew — neem oil if spotted",
           "months": [
-            5,
-            6
+            6,
+            7,
+            8
           ]
         }
       ],
@@ -3080,14 +2844,15 @@
           "issue": "Black spot",
           "url": "https://www.google.com/search?q=Black%20spot%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Bush Roses"
     },
     {
       "id": "sa-burstjoy",
       "bedId": "b-sa",
-      "name": "Rose",
+      "name": "Rose bush",
       "scientific": "Rosa Burst of Joy",
-      "emoji": "🟠",
+      "emoji": "emoji_sa-burstjoy",
       "status": "alive",
       "water": "Deep water weekly",
       "sun": "Part sun",
@@ -3128,14 +2893,15 @@
           "issue": "Black spot",
           "url": "https://www.google.com/search?q=Black%20spot%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Bush Roses"
     },
     {
       "id": "sa-mophead",
       "bedId": "b-sa",
       "name": "Mophead Hydrangea",
       "scientific": "Hydrangea macrophylla",
-      "emoji": "💙",
+      "emoji": "emoji_sa-mophead",
       "status": "alive",
       "water": "Regular",
       "sun": "Part shade",
@@ -3169,14 +2935,15 @@
           "issue": "Not blooming (pruned at wrong time)",
           "url": "https://www.google.com/search?q=Not%20blooming%20(pruned%20at%20wrong%20time)%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Hydrangeas"
     },
     {
       "id": "sa-oakleaf",
       "bedId": "b-sa",
       "name": "Oakleaf Hydrangea",
       "scientific": "Hydrangea quercifolia",
-      "emoji": "🤍",
+      "emoji": "emoji_sa-oakleaf",
       "status": "alive",
       "water": "Regular",
       "sun": "Part shade",
@@ -3204,14 +2971,15 @@
           "issue": "Not blooming",
           "url": "https://www.google.com/search?q=Not%20blooming%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Hydrangeas"
     },
     {
       "id": "sa-passiflora",
       "bedId": "b-sa",
       "name": "Passiflora caerulea",
       "scientific": "Passiflora caerulea",
-      "emoji": "🌸",
+      "emoji": "emoji_sa-passiflora",
       "status": "planned",
       "water": "Moderate",
       "sun": "Part sun",
@@ -3243,12 +3011,13 @@
           "issue": "Not flowering",
           "url": "https://www.google.com/search?q=Not%20flowering%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Vines & Climbers"
     },
     {
       "id": "sa-knockoutrose",
       "bedId": "b-sa",
-      "name": "Rose",
+      "name": "Rose bush",
       "scientific": "Rosa Double Knock Out",
       "emoji": "🌹",
       "status": "planned",
@@ -3284,14 +3053,15 @@
           "issue": "Black spot",
           "url": "https://www.google.com/search?q=Black%20spot%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Bush Roses"
     },
     {
       "id": "sa-salvia",
       "bedId": "b-sa",
       "name": "Salvia Amistad",
       "scientific": "Salvia Amistad",
-      "emoji": "💜",
+      "emoji": "emoji_sa-salvia",
       "status": "planned",
       "water": "Low-moderate",
       "sun": "Part sun",
@@ -3329,7 +3099,8 @@
           "issue": "Leggy growth",
           "url": "https://www.google.com/search?q=Leggy%20growth%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Salvias"
     },
     {
       "id": "bbq-daisy",
@@ -3368,14 +3139,15 @@
           "issue": "Powdery mildew",
           "url": "https://www.google.com/search?q=Powdery%20mildew%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Perennials"
     },
     {
       "id": "bbq-chrysanthemum",
       "bedId": "b-bbq",
       "name": "Chrysanthemum",
       "scientific": "Chrysanthemum spp.",
-      "emoji": "🌸",
+      "emoji": "emoji_bbq-chrysanthemum",
       "status": "alive",
       "water": "Regular",
       "sun": "Full sun",
@@ -3404,53 +3176,15 @@
           "issue": "Aphids",
           "url": "https://www.google.com/search?q=Aphids%20plant%20care%20fix"
         }
-      ]
-    },
-    {
-      "id": "bbq-existsalvia",
-      "bedId": "b-bbq",
-      "name": "Existing Salvia",
-      "scientific": "Salvia spp.",
-      "emoji": "💜",
-      "status": "alive",
-      "water": "Low-moderate",
-      "sun": "Full sun",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Existing.",
-      "maintenance": [
-        {
-          "task": "Deadhead spent spikes continuously",
-          "months": [
-            5,
-            6,
-            7,
-            8,
-            9,
-            10
-          ]
-        },
-        {
-          "task": "Cut back by 1/3 if getting leggy — reblooms in 3 weeks",
-          "months": [
-            7
-          ]
-        }
       ],
-      "trouble": [
-        {
-          "issue": "Leggy growth",
-          "url": "https://www.google.com/search?q=Leggy%20growth%20plant%20care%20fix"
-        }
-      ]
+      "category": "Perennials"
     },
     {
       "id": "bbq-existrose",
       "bedId": "b-bbq",
       "name": "Existing Rose bush",
       "scientific": "Rosa spp.",
-      "emoji": "🌹",
+      "emoji": "emoji_bbq-existrose",
       "status": "alive",
       "water": "Deep water weekly",
       "sun": "Full sun",
@@ -3491,14 +3225,15 @@
           "issue": "Black spot",
           "url": "https://www.google.com/search?q=Black%20spot%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Bush Roses"
     },
     {
       "id": "bbq-whiteboug",
       "bedId": "b-bbq",
       "name": "White Bougainvillea",
       "scientific": "Bougainvillea White Stripe",
-      "emoji": "🤍",
+      "emoji": "emoji_bbq-whiteboug",
       "status": "alive",
       "water": "Deep water weekly — Super Bloom half strength monthly",
       "sun": "Full sun",
@@ -3541,7 +3276,8 @@
           "issue": "Not blooming",
           "url": "https://www.google.com/search?q=Not%20blooming%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Bougainvillea"
     },
     {
       "id": "bbq-salvia",
@@ -3586,14 +3322,15 @@
           "issue": "Leggy growth",
           "url": "https://www.google.com/search?q=Leggy%20growth%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Salvias"
     },
     {
       "id": "bbq-dahlia",
       "bedId": "b-bbq",
       "name": "Dahlia Magenta",
       "scientific": "Dahlia spp.",
-      "emoji": "🌼",
+      "emoji": "emoji_bbq-dahlia",
       "status": "planned",
       "water": "Regular",
       "sun": "Full sun",
@@ -3626,7 +3363,8 @@
           "issue": "Powdery mildew",
           "url": "https://www.google.com/search?q=Powdery%20mildew%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Bulbs"
     },
     {
       "id": "bbq-verbena",
@@ -3659,14 +3397,15 @@
           "issue": "Powdery mildew",
           "url": "https://www.google.com/search?q=Powdery%20mildew%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Perennials"
     },
     {
       "id": "st-aeonium",
       "bedId": "b-stump",
       "name": "Aeonium Zwartkop",
       "scientific": "Aeonium arboreum Zwartkop",
-      "emoji": "🖤",
+      "emoji": "emoji_st-aeonium",
       "status": "alive",
       "water": "Low — drought tolerant",
       "sun": "Full sun",
@@ -3698,7 +3437,8 @@
           "issue": "Etiolation",
           "url": "https://www.google.com/search?q=Etiolation%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Succulents & Cacti"
     },
     {
       "id": "ps-orange",
@@ -3755,14 +3495,15 @@
           "issue": "Yellowing leaves (nutrient deficiency)",
           "url": "https://www.google.com/search?q=Yellowing%20leaves%20(nutrient%20deficiency)%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Fruit Trees"
     },
     {
       "id": "ps-persimmon",
       "bedId": "b-berry",
       "name": "Persimmon",
       "scientific": "Diospyros kaki",
-      "emoji": "🍊",
+      "emoji": "emoji_ps-persimmon",
       "status": "alive",
       "water": "Monthly spring / every 2 weeks July-August",
       "sun": "Full sun",
@@ -3804,14 +3545,15 @@
           "issue": "Fruit drop",
           "url": "https://www.google.com/search?q=Fruit%20drop%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Fruit Trees"
     },
     {
       "id": "ps-pomegranate",
       "bedId": "b-berry",
       "name": "Pomegranate",
       "scientific": "Punica granatum",
-      "emoji": "🍎",
+      "emoji": "emoji_ps-pomegranate",
       "status": "alive",
       "water": "Monthly spring / every 2 weeks July-August",
       "sun": "Full sun",
@@ -3853,7 +3595,8 @@
           "issue": "Fruit splitting (inconsistent watering)",
           "url": "https://www.google.com/search?q=Fruit%20splitting%20(inconsistent%20watering)%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Fruit Trees"
     },
     {
       "id": "ps-raspberry",
@@ -3892,7 +3635,8 @@
           "issue": "Poor fruiting",
           "url": "https://www.google.com/search?q=Poor%20fruiting%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Fruit Trees"
     },
     {
       "id": "ps-blackberry",
@@ -3935,14 +3679,15 @@
           "issue": "Poor fruiting",
           "url": "https://www.google.com/search?q=Poor%20fruiting%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Fruit Trees"
     },
     {
       "id": "ps-salvia",
       "bedId": "b-berry",
       "name": "Salvia Amistad",
       "scientific": "Salvia Amistad",
-      "emoji": "💜",
+      "emoji": "emoji_ps-salvia",
       "status": "planned",
       "water": "Low-moderate",
       "sun": "Full sun",
@@ -3980,7 +3725,8 @@
           "issue": "Leggy growth",
           "url": "https://www.google.com/search?q=Leggy%20growth%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Salvias"
     },
     {
       "id": "ps-beets",
@@ -4025,14 +3771,15 @@
           "issue": "Bolting (heat/water stress)",
           "url": "https://www.google.com/search?q=Bolting%20(heat%2Fwater%20stress)%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Vegetables"
     },
     {
       "id": "ts-plum",
       "bedId": "b-tom",
-      "name": "Espalier",
+      "name": "Espalier Prune",
       "scientific": "Prunus domestica",
-      "emoji": "🍑",
+      "emoji": "emoji_ts-plum",
       "status": "alive",
       "water": "Every 2 weeks spring / weekly July-August",
       "sun": "Full sun",
@@ -4078,12 +3825,13 @@
           "issue": "Brown rot",
           "url": "https://www.google.com/search?q=Brown%20rot%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Fruit Trees"
     },
     {
       "id": "ts-rainier",
       "bedId": "b-tom",
-      "name": "Espalier",
+      "name": "Espalier Rainier Cherry ",
       "scientific": "Prunus avium Rainier",
       "emoji": "🍒",
       "status": "alive",
@@ -4140,14 +3888,15 @@
           "issue": "Fruit cracking (water stress)",
           "url": "https://www.google.com/search?q=Fruit%20cracking%20(water%20stress)%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Fruit Trees"
     },
     {
       "id": "brs-sunburst",
       "bedId": "b-back-rose",
       "name": "Rose",
       "scientific": "Rosa Sunburst",
-      "emoji": "🌹",
+      "emoji": "emoji_brs-sunburst",
       "status": "alive",
       "water": "Deep water weekly",
       "sun": "Part sun",
@@ -4188,14 +3937,15 @@
           "issue": "Black spot",
           "url": "https://www.google.com/search?q=Black%20spot%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Bush Roses"
     },
     {
       "id": "brs-daustinrose",
       "bedId": "b-back-rose",
       "name": "Rose",
       "scientific": "Rosa David Austin",
-      "emoji": "🌹",
+      "emoji": "emoji_brs-daustinrose",
       "status": "alive",
       "water": "Deep water weekly",
       "sun": "Part sun",
@@ -4236,14 +3986,15 @@
           "issue": "Black spot",
           "url": "https://www.google.com/search?q=Black%20spot%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Bush Roses"
     },
     {
       "id": "brs-dahlia",
       "bedId": "b-back-rose",
       "name": "Dahlia Large Purple",
       "scientific": "Dahlia spp.",
-      "emoji": "💜",
+      "emoji": "emoji_brs-dahlia",
       "status": "alive",
       "water": "Regular",
       "sun": "Part sun",
@@ -4277,14 +4028,15 @@
           "issue": "Powdery mildew",
           "url": "https://www.google.com/search?q=Powdery%20mildew%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Bulbs"
     },
     {
       "id": "brs-phormium",
       "bedId": "b-back-rose",
       "name": "Phormium",
       "scientific": "Phormium tenax",
-      "emoji": "🌿",
+      "emoji": "🌾",
       "status": "alive",
       "water": "Low-moderate",
       "sun": "Part sun",
@@ -4307,21 +4059,2597 @@
           "issue": "Crown rot (overwatering)",
           "url": "https://www.google.com/search?q=Crown%20rot%20(overwatering)%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Ornamental Grasses"
     },
     {
       "id": "p1778089554019",
       "bedId": "b-rw",
       "name": "Redwood Trees",
-      "scientific": "",
+      "scientific": "Sequoia sempervirens",
       "emoji": "🌲",
+      "status": "alive",
+      "water": "Deep water monthly during summer dry season",
+      "sun": "Full sun to part shade",
+      "notes": "Trimming:\n2019 - Johnson’s tree care \n2025 - Rodrigo ",
+      "fromCutting": false,
+      "maintenance": [
+        {
+          "task": "Deep water monthly — slow hose at drip line",
+          "months": [
+            6,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "task": "Feed slow release balanced fertilizer in spring",
+          "months": [
+            3
+          ]
+        },
+        {
+          "task": "Check for dead/crossing branches — remove cleanly",
+          "months": [
+            1,
+            2
+          ]
+        }
+      ],
+      "trouble": [],
+      "category": "Trees"
+    },
+    {
+      "id": "p1778114273511",
+      "bedId": "b-fw",
+      "name": "Phormium",
+      "scientific": "Phormium tenax",
+      "emoji": "🌿",
+      "category": "Ornamental Grasses",
+      "status": "alive",
+      "water": "Low-moderate — drought tolerant once established",
+      "sun": "Full sun to part shade",
+      "notes": "",
+      "fromCutting": false,
+      "maintenance": [
+        {
+          "task": "Feed monthly spring-summer",
+          "months": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "task": "Wipe leaves monthly to remove dust",
+          "months": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ]
+        },
+        {
+          "task": "Reduce watering in winter",
+          "months": [
+            11,
+            12,
+            1,
+            2
+          ]
+        }
+      ],
+      "trouble": []
+    },
+    {
+      "id": "p1778114397874",
+      "bedId": "b-br",
+      "name": "Palm in planter",
+      "scientific": "Arecaceae spp.",
+      "emoji": "emoji_p1778114397874",
+      "category": "Trees",
+      "status": "alive",
+      "water": "Regular — keep evenly moist",
+      "sun": "Full sun to part sun",
+      "notes": "",
+      "fromCutting": false,
+      "maintenance": [
+        {
+          "task": "Deep water monthly — slow hose at drip line",
+          "months": [
+            6,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "task": "Feed slow release balanced fertilizer in spring",
+          "months": [
+            3
+          ]
+        },
+        {
+          "task": "Check for dead/crossing branches — remove cleanly",
+          "months": [
+            1,
+            2
+          ]
+        }
+      ],
+      "trouble": []
+    },
+    {
+      "id": "p1778117705415",
+      "bedId": "b-br",
+      "name": "Grecian Laurel",
+      "scientific": "Laurus nobilis",
+      "emoji": "emoji_p1778117705415",
+      "category": "Trees",
+      "status": "alive",
+      "water": "Low once established — drought tolerant",
+      "sun": "Full sun to part shade",
+      "notes": "",
+      "fromCutting": false,
+      "maintenance": [
+        {
+          "task": "Deep water monthly — slow hose at drip line",
+          "months": [
+            6,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "task": "Feed slow release balanced fertilizer in spring",
+          "months": [
+            3
+          ]
+        },
+        {
+          "task": "Check for dead/crossing branches — remove cleanly",
+          "months": [
+            1,
+            2
+          ]
+        }
+      ],
+      "trouble": []
+    },
+    {
+      "id": "p1778117734357",
+      "bedId": "b-br",
+      "name": "Pittosporum in corner ",
+      "scientific": "Pittosporum tobira",
+      "emoji": "emoji_p1778117734357",
+      "category": "Trees",
+      "status": "alive",
+      "water": "Low once established",
+      "sun": "Full sun to part shade",
+      "notes": "",
+      "fromCutting": false,
+      "maintenance": [
+        {
+          "task": "Deep water monthly — slow hose at drip line",
+          "months": [
+            6,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "task": "Feed slow release balanced fertilizer in spring",
+          "months": [
+            3
+          ]
+        },
+        {
+          "task": "Check for dead/crossing branches — remove cleanly",
+          "months": [
+            1,
+            2
+          ]
+        }
+      ],
+      "trouble": []
+    },
+    {
+      "id": "p1778118235543",
+      "bedId": "b-br",
+      "name": "Boston Ivy",
+      "scientific": "Parthenocissus tricuspidata",
+      "emoji": "emoji_p1778118235543",
+      "category": "Vines & Climbers",
+      "status": "alive",
+      "water": "Moderate — more water when young",
+      "sun": "Part shade to full sun",
+      "notes": "",
+      "fromCutting": false,
+      "maintenance": [
+        {
+          "task": "Feed monthly spring-summer",
+          "months": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "task": "Wipe leaves monthly to remove dust",
+          "months": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ]
+        },
+        {
+          "task": "Reduce watering in winter",
+          "months": [
+            11,
+            12,
+            1,
+            2
+          ]
+        }
+      ],
+      "trouble": []
+    },
+    {
+      "id": "p1778118317106",
+      "bedId": "b-br",
+      "name": "Mop head hydrangeas",
+      "scientific": "Hydrangea macrophylla",
+      "emoji": "emoji_p1778118317106",
+      "category": "Hydrangeas",
+      "status": "alive",
+      "water": "Regular — keep consistently moist",
+      "sun": "Part shade — morning sun preferred",
+      "notes": "",
+      "fromCutting": false,
+      "maintenance": [
+        {
+          "task": "Deadwood removal only — no hard cutback",
+          "months": [
+            1
+          ]
+        },
+        {
+          "task": "Feed with azalea fertilizer",
+          "months": [
+            3
+          ]
+        },
+        {
+          "task": "Prune ONLY after flowering complete",
+          "months": [
+            8,
+            9
+          ]
+        }
+      ],
+      "trouble": []
+    },
+    {
+      "id": "p1778118350650",
+      "bedId": "b-br",
+      "name": "Oak Leaf Hydrangea",
+      "scientific": "Hydrangea quercifolia",
+      "emoji": "emoji_p1778118350650",
+      "category": "Hydrangeas",
+      "status": "alive",
+      "water": "Regular — keep consistently moist",
+      "sun": "Part shade",
+      "notes": "",
+      "fromCutting": false,
+      "maintenance": [
+        {
+          "task": "Deadwood removal only — no hard cutback",
+          "months": [
+            1
+          ]
+        },
+        {
+          "task": "Feed with azalea fertilizer",
+          "months": [
+            3
+          ]
+        },
+        {
+          "task": "Prune ONLY after flowering complete",
+          "months": [
+            8,
+            9
+          ]
+        }
+      ],
+      "trouble": []
+    },
+    {
+      "id": "p1778118393809",
+      "bedId": "b-bl",
+      "name": "Mop head hydrangea",
+      "scientific": "Hydrangea macrophylla",
+      "emoji": "emoji_p1778118393809",
+      "category": "Hydrangeas",
+      "status": "alive",
+      "water": "Regular — keep consistently moist",
+      "sun": "Part shade — morning sun preferred",
+      "notes": "",
+      "fromCutting": false,
+      "maintenance": [
+        {
+          "task": "Deadwood removal only — no hard cutback",
+          "months": [
+            1
+          ]
+        },
+        {
+          "task": "Feed with azalea fertilizer",
+          "months": [
+            3
+          ]
+        },
+        {
+          "task": "Prune ONLY after flowering complete",
+          "months": [
+            8,
+            9
+          ]
+        }
+      ],
+      "trouble": []
+    },
+    {
+      "id": "p1778118413483",
+      "bedId": "b-bl",
+      "name": "Oak Leaf Hydrangea",
+      "scientific": "Hydrangea quercifolia",
+      "emoji": "emoji_p1778118413483",
+      "category": "Hydrangeas",
+      "status": "alive",
+      "water": "Regular — keep consistently moist",
+      "sun": "Part shade",
+      "notes": "",
+      "fromCutting": false,
+      "maintenance": [
+        {
+          "task": "Deadwood removal only — no hard cutback",
+          "months": [
+            1
+          ]
+        },
+        {
+          "task": "Feed with azalea fertilizer",
+          "months": [
+            3
+          ]
+        },
+        {
+          "task": "Prune ONLY after flowering complete",
+          "months": [
+            8,
+            9
+          ]
+        }
+      ],
+      "trouble": []
+    },
+    {
+      "id": "p1778118483625",
+      "bedId": "b-bl",
+      "name": "Podocarpus",
+      "scientific": "Podocarpus macrophyllus",
+      "emoji": "emoji_p1778118483625",
+      "category": "Trees",
+      "status": "alive",
+      "water": "Moderate — low once established",
+      "sun": "Full sun to part shade",
+      "notes": "",
+      "fromCutting": false,
+      "maintenance": [
+        {
+          "task": "Deep water monthly — slow hose at drip line",
+          "months": [
+            6,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "task": "Feed slow release balanced fertilizer in spring",
+          "months": [
+            3
+          ]
+        },
+        {
+          "task": "Check for dead/crossing branches — remove cleanly",
+          "months": [
+            1,
+            2
+          ]
+        }
+      ],
+      "trouble": []
+    },
+    {
+      "id": "p1778124227613",
+      "bedId": "b-ma",
+      "name": "Bougainvillea",
+      "scientific": "Bougainvillea spp.",
+      "emoji": "emoji_p1778124227613",
+      "category": "Bougainvillea",
+      "status": "alive",
+      "water": "Deep water weekly — drought tolerant once established",
+      "sun": "Full sun",
+      "notes": "",
+      "fromCutting": false,
+      "maintenance": [
+        {
+          "task": "Hard prune — cut by 1/3",
+          "months": [
+            2
+          ]
+        },
+        {
+          "task": "Feed Super Bloom half strength to moist soil",
+          "months": [
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "task": "Cut by 1/3 after bloom finishes",
+          "months": [
+            8
+          ]
+        }
+      ],
+      "trouble": []
+    },
+    {
+      "id": "p1778124260608",
+      "bedId": "b-ma",
+      "name": "Sally Holmes",
+      "scientific": "Rosa 'Sally Holmes'",
+      "emoji": "🌹",
+      "category": "Climbing Roses",
+      "status": "alive",
+      "water": "Deep water weekly",
+      "sun": "Full sun to part sun",
+      "notes": "",
+      "fromCutting": false,
+      "maintenance": [
+        {
+          "task": "Light tip prune only — do not hard cut",
+          "months": [
+            1,
+            2
+          ]
+        },
+        {
+          "task": "Deadhead spent blooms",
+          "months": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "task": "Train and tie new canes to structure",
+          "months": [
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "task": "Feed after first flush",
+          "months": [
+            5
+          ]
+        }
+      ],
+      "trouble": []
+    },
+    {
+      "id": "p1778124307829",
+      "bedId": "b-ma",
+      "name": "White Stripe Bougainvillea",
+      "scientific": "Bougainvillea 'White Stripe'",
+      "emoji": "emoji_p1778124307829",
+      "category": "Bougainvillea",
+      "status": "alive",
+      "water": "Deep water weekly — Super Bloom half strength monthly",
+      "sun": "Full sun",
+      "notes": "",
+      "fromCutting": false,
+      "maintenance": [
+        {
+          "task": "Hard prune — cut by 1/3",
+          "months": [
+            2
+          ]
+        },
+        {
+          "task": "Feed Super Bloom half strength to moist soil",
+          "months": [
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "task": "Cut by 1/3 after bloom finishes",
+          "months": [
+            8
+          ]
+        }
+      ],
+      "trouble": []
+    },
+    {
+      "id": "p1778130459270",
+      "bedId": "b-sa",
+      "name": "Climbing rose",
+      "scientific": "Rosa spp.",
+      "emoji": "🌹",
+      "category": "Climbing Roses",
+      "status": "alive",
+      "water": "Deep water weekly",
+      "sun": "Full sun to part sun",
+      "notes": "",
+      "fromCutting": false,
+      "maintenance": [
+        {
+          "task": "Light tip prune only — do not hard cut",
+          "months": [
+            1,
+            2
+          ]
+        },
+        {
+          "task": "Deadhead spent blooms",
+          "months": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "task": "Train and tie new canes to structure",
+          "months": [
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "task": "Feed after first flush",
+          "months": [
+            5
+          ]
+        }
+      ],
+      "trouble": []
+    },
+    {
+      "id": "p1778130742776",
+      "bedId": "b-bbq",
+      "name": "Hibiscus",
+      "scientific": "Hibiscus rosa-sinensis",
+      "emoji": "🌺",
+      "category": "Shrubs",
+      "status": "alive",
+      "water": "Regular — keep consistently moist in summer",
+      "sun": "Full sun",
+      "notes": "",
+      "fromCutting": false,
+      "maintenance": [
+        {
+          "task": "Cut back by 1/3 if leggy — reblooms in 3 weeks",
+          "months": [
+            7,
+            8
+          ]
+        },
+        {
+          "task": "Hard cutback after last frost risk",
+          "months": [
+            3
+          ]
+        },
+        {
+          "task": "High phosphorus fertilizer monthly",
+          "months": [
+            5,
+            6,
+            7,
+            8,
+            9
+          ]
+        }
+      ],
+      "trouble": []
+    },
+    {
+      "id": "p1778131182060",
+      "bedId": "b-bbq",
+      "name": "Iceberg rose",
+      "scientific": "Rosa 'Iceberg'",
+      "emoji": "emoji_p1778131182060",
+      "category": "Climbing Roses",
+      "status": "alive",
+      "water": "Deep water weekly",
+      "sun": "Full sun to part sun",
+      "notes": "",
+      "fromCutting": false,
+      "maintenance": [
+        {
+          "task": "Light tip prune only — do not hard cut",
+          "months": [
+            1,
+            2
+          ]
+        },
+        {
+          "task": "Deadhead spent blooms",
+          "months": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "task": "Train and tie new canes to structure",
+          "months": [
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "task": "Feed after first flush",
+          "months": [
+            5
+          ]
+        }
+      ],
+      "trouble": []
+    },
+    {
+      "id": "p1778131211972",
+      "bedId": "b-bbq",
+      "name": "Bougainvillea",
+      "scientific": "Bougainvillea spp.",
+      "emoji": "emoji_p1778131211972",
+      "category": "Bougainvillea",
+      "status": "alive",
+      "water": "Deep water weekly",
+      "sun": "Full sun",
+      "notes": "",
+      "fromCutting": false,
+      "maintenance": [
+        {
+          "task": "Hard prune — cut by 1/3",
+          "months": [
+            2
+          ]
+        },
+        {
+          "task": "Feed Super Bloom half strength to moist soil",
+          "months": [
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "task": "Cut by 1/3 after bloom finishes",
+          "months": [
+            8
+          ]
+        }
+      ],
+      "trouble": []
+    },
+    {
+      "id": "p1778170415313",
+      "bedId": "b-fw",
+      "name": "Calibrachoa",
+      "scientific": "Calibrachoa spp.",
+      "emoji": "emoji_p1778170415313",
+      "category": "Annuals",
+      "status": "planned",
+      "water": "Regular — keep evenly moist",
+      "sun": "Full sun to part sun",
+      "notes": "",
+      "fromCutting": false,
+      "maintenance": [],
+      "trouble": []
+    },
+    {
+      "id": "p1778171162160",
+      "bedId": "b-bbq",
+      "name": "Lantana",
+      "scientific": "Lantana camara",
+      "emoji": "emoji_p1778171162160",
+      "category": "Shrubs",
+      "status": "planned",
+      "water": "Low — drought tolerant once established",
+      "sun": "Full sun",
+      "notes": "",
+      "fromCutting": false,
+      "maintenance": [
+        {
+          "task": "Cut back by 1/3 if leggy — reblooms in 3 weeks",
+          "months": [
+            7,
+            8
+          ]
+        },
+        {
+          "task": "Hard cutback after last frost risk",
+          "months": [
+            3
+          ]
+        },
+        {
+          "task": "Feed balanced fertilizer in spring",
+          "months": [
+            3,
+            4
+          ]
+        }
+      ],
+      "trouble": []
+    },
+    {
+      "id": "p1778174102041",
+      "bedId": "b-sa",
+      "name": "Lacecap Hydrangea",
+      "scientific": "Hydrangea macrophylla (lacecap)",
+      "emoji": "emoji_p1778174102041",
+      "category": "Hydrangeas",
+      "status": "alive",
+      "water": "Regular — keep consistently moist",
+      "sun": "Part shade — morning sun preferred",
+      "notes": "",
+      "fromCutting": false,
+      "maintenance": [
+        {
+          "task": "Deadwood removal only — no hard cutback",
+          "months": [
+            1
+          ]
+        },
+        {
+          "task": "Feed with azalea fertilizer",
+          "months": [
+            3
+          ]
+        },
+        {
+          "task": "Prune ONLY after flowering complete",
+          "months": [
+            8,
+            9
+          ]
+        }
+      ],
+      "trouble": []
+    },
+    {
+      "id": "p1778177850519",
+      "bedId": "b-sa",
+      "name": "Rose bush",
+      "scientific": "Rosa spp.",
+      "emoji": "🌿",
+      "category": "Bush Roses",
+      "status": "alive",
+      "water": "Deep water weekly",
+      "sun": "Full sun to part sun",
+      "notes": "",
+      "fromCutting": false,
+      "maintenance": [
+        {
+          "task": "Hard prune to outward facing buds",
+          "months": [
+            1,
+            2
+          ]
+        },
+        {
+          "task": "Deadhead every 2 weeks — outward facing bud, 45° cut",
+          "months": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "task": "Feed rose fertilizer after first bloom flush",
+          "months": [
+            5
+          ]
+        },
+        {
+          "task": "Monitor for powdery mildew — neem oil if spotted",
+          "months": [
+            6,
+            7,
+            8
+          ]
+        }
+      ],
+      "trouble": []
+    },
+    {
+      "id": "p1778177863527",
+      "bedId": "b-sa",
+      "name": "Rose bush",
+      "scientific": "Rosa spp.",
+      "emoji": "🌿",
+      "category": "Bush Roses",
+      "status": "alive",
+      "water": "Deep water weekly",
+      "sun": "Full sun to part sun",
+      "notes": "",
+      "fromCutting": false,
+      "maintenance": [
+        {
+          "task": "Hard prune to outward facing buds",
+          "months": [
+            1,
+            2
+          ]
+        },
+        {
+          "task": "Deadhead every 2 weeks — outward facing bud, 45° cut",
+          "months": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "task": "Feed rose fertilizer after first bloom flush",
+          "months": [
+            5
+          ]
+        },
+        {
+          "task": "Monitor for powdery mildew — neem oil if spotted",
+          "months": [
+            6,
+            7,
+            8
+          ]
+        }
+      ],
+      "trouble": []
+    },
+    {
+      "id": "p1778178155450",
+      "bedId": "b-back-rose",
+      "name": "Rose bush",
+      "scientific": "Rosa spp.",
+      "emoji": "🌿",
+      "category": "Bush Roses",
+      "status": "alive",
+      "water": "Deep water weekly",
+      "sun": "Full sun to part sun",
+      "notes": "",
+      "fromCutting": false,
+      "maintenance": [
+        {
+          "task": "Hard prune to outward facing buds",
+          "months": [
+            1,
+            2
+          ]
+        },
+        {
+          "task": "Deadhead every 2 weeks — outward facing bud, 45° cut",
+          "months": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "task": "Feed rose fertilizer after first bloom flush",
+          "months": [
+            5
+          ]
+        },
+        {
+          "task": "Monitor for powdery mildew — neem oil if spotted",
+          "months": [
+            6,
+            7,
+            8
+          ]
+        }
+      ],
+      "trouble": []
+    },
+    {
+      "id": "p1778178167609",
+      "bedId": "b-back-rose",
+      "name": "Rose bush",
+      "scientific": "Rosa spp.",
+      "emoji": "🌿",
+      "category": "Bush Roses",
+      "status": "alive",
+      "water": "Deep water weekly",
+      "sun": "Full sun to part sun",
+      "notes": "",
+      "fromCutting": false,
+      "maintenance": [
+        {
+          "task": "Hard prune to outward facing buds",
+          "months": [
+            1,
+            2
+          ]
+        },
+        {
+          "task": "Deadhead every 2 weeks — outward facing bud, 45° cut",
+          "months": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "task": "Feed rose fertilizer after first bloom flush",
+          "months": [
+            5
+          ]
+        },
+        {
+          "task": "Monitor for powdery mildew — neem oil if spotted",
+          "months": [
+            6,
+            7,
+            8
+          ]
+        }
+      ],
+      "trouble": []
+    },
+    {
+      "id": "p1778178188173",
+      "bedId": "b-back-rose",
+      "name": "Rose bush",
+      "scientific": "Rosa spp.",
+      "emoji": "emoji_p1778178188173",
+      "category": "Bush Roses",
+      "status": "alive",
+      "water": "Deep water weekly",
+      "sun": "Full sun to part sun",
+      "notes": "",
+      "fromCutting": false,
+      "maintenance": [],
+      "trouble": [],
+      "datePlanted": "",
+      "howPlanted": ""
+    },
+    {
+      "id": "p1778178506166",
+      "bedId": "b-berry",
+      "name": "Pittosporum Tree",
+      "scientific": "Pittosporum tobira",
+      "emoji": "emoji_p1778178506166",
+      "category": "Trees",
+      "status": "alive",
+      "water": "Low once established",
+      "sun": "Full sun to part shade",
+      "notes": "",
+      "fromCutting": false,
+      "maintenance": [],
+      "trouble": []
+    },
+    {
+      "id": "p1778178590870",
+      "bedId": "b-berry",
+      "name": "Fan Palm",
+      "scientific": "Washingtonia robusta",
+      "emoji": "🌴",
+      "category": "Trees",
+      "status": "alive",
+      "water": "Low once established — drought tolerant",
+      "sun": "Full sun",
+      "notes": "",
+      "fromCutting": false,
+      "maintenance": [
+        {
+          "task": "Deep water monthly — slow hose at drip line",
+          "months": [
+            6,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "task": "Feed slow release balanced fertilizer in spring",
+          "months": [
+            3
+          ]
+        },
+        {
+          "task": "Check for dead/crossing branches — remove cleanly",
+          "months": [
+            1,
+            2
+          ]
+        }
+      ],
+      "trouble": []
+    },
+    {
+      "id": "p1778178720492",
+      "bedId": "b-berry",
+      "name": "Wisteria",
+      "scientific": "Wisteria sinensis",
+      "emoji": "emoji_p1778178720492",
+      "category": "Vines & Climbers",
+      "status": "alive",
+      "water": "Moderate — deep water during establishment",
+      "sun": "Full sun",
+      "notes": "Two trim cycles to maximize bloom. \nMay - cut back to 6 nodes. Get rid of all seed pods \nJan/feb - cut back to 2 or 3. This is where the flowers will come from ",
+      "fromCutting": false,
+      "maintenance": [
+        {
+          "task": "Light tip prune only — do not hard cut",
+          "months": [
+            1,
+            2
+          ]
+        },
+        {
+          "task": "Deadhead spent blooms",
+          "months": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "task": "Train and tie new canes to structure",
+          "months": [
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "task": "Feed after first flush",
+          "months": [
+            5
+          ]
+        },
+        {
+          "task": "Cut back new side shoots to 5 leaves — do NOT cut main structural canes",
+          "months": [
+            5
+          ]
+        }
+      ],
+      "trouble": []
+    },
+    {
+      "id": "p1778183472337",
+      "bedId": "b-tom",
+      "name": "Dichondra ground cover",
+      "scientific": "Dichondra micrantha",
+      "emoji": "🌿",
+      "category": "Perennials",
+      "status": "alive",
+      "water": "Regular — keep consistently moist",
+      "sun": "Part shade to full shade",
+      "notes": "",
+      "fromCutting": false,
+      "maintenance": [],
+      "trouble": []
+    },
+    {
+      "id": "p1778183527031",
+      "bedId": "b-tom",
+      "name": "Gazania",
+      "scientific": "Gazania rigens",
+      "emoji": "🌿",
+      "category": "Annuals",
+      "status": "alive",
+      "water": "Low — drought tolerant",
+      "sun": "Full sun",
+      "notes": "",
+      "fromCutting": false,
+      "maintenance": [],
+      "trouble": []
+    },
+    {
+      "id": "p1778183645573",
+      "bedId": "b-ros",
+      "name": "Potato Vine",
+      "scientific": "Solanum laxum",
+      "emoji": "🌿",
+      "category": "Vines & Climbers",
+      "status": "alive",
+      "water": "Moderate — low once established",
+      "sun": "Full sun to part sun",
+      "notes": "",
+      "fromCutting": false,
+      "maintenance": [
+        {
+          "task": "Train and tie new canes to structure",
+          "months": [
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "task": "Feed after first flush",
+          "months": [
+            5
+          ]
+        },
+        {
+          "task": "Hard cutback by 1/3 to 1/2 in late winter before new growth",
+          "months": [
+            1,
+            2
+          ]
+        }
+      ],
+      "trouble": []
+    },
+    {
+      "id": "p1778192924840",
+      "bedId": "b-tom",
+      "name": "Pittosporum",
+      "scientific": "Pittosporum tobira",
+      "emoji": "emoji_p1778192924840",
+      "category": "Trees",
+      "status": "alive",
+      "water": "Low once established",
+      "sun": "Full sun to part shade",
+      "notes": "",
+      "fromCutting": false,
+      "maintenance": [
+        {
+          "task": "Deep water monthly — slow hose at drip line",
+          "months": [
+            6,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "task": "Feed slow release balanced fertilizer in spring",
+          "months": [
+            3
+          ]
+        },
+        {
+          "task": "Check for dead/crossing branches — remove cleanly",
+          "months": [
+            1,
+            2
+          ]
+        }
+      ],
+      "trouble": []
+    },
+    {
+      "id": "p1778192989476",
+      "bedId": "b-tom",
+      "name": "Night jasmine",
+      "scientific": "Cestrum nocturnum ",
+      "emoji": "🌿",
+      "category": "Shrubs",
+      "status": "alive",
+      "water": "Moderate",
+      "sun": "Full sun to part sun",
+      "notes": "",
+      "fromCutting": false,
+      "maintenance": [],
+      "trouble": []
+    },
+    {
+      "id": "p1778194878756922",
+      "bedId": "b-br",
+      "name": "Camellia",
+      "scientific": "Camellia japonica",
+      "emoji": "emoji_p1778194878756922",
+      "status": "alive",
+      "water": "Regular",
+      "sun": "Part to full shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Existing.",
+      "maintenance": [
+        {
+          "task": "Deadwood removal only — no hard cutback",
+          "months": [
+            1
+          ]
+        },
+        {
+          "task": "Feed with azalea fertilizer",
+          "months": [
+            3
+          ]
+        },
+        {
+          "task": "Prune ONLY after flowering complete",
+          "months": [
+            8,
+            9
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Bud drop",
+          "url": "https://www.google.com/search?q=Bud%20drop%20plant%20care%20fix"
+        }
+      ],
+      "category": "Hydrangeas",
+      "isIndoor": false
+    },
+    {
+      "id": "p1778194888421204",
+      "bedId": "b-bl",
+      "name": "Camellia",
+      "scientific": "Camellia japonica",
+      "emoji": "emoji_p1778194888421204",
+      "status": "alive",
+      "water": "Regular",
+      "sun": "Part to full shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Existing.",
+      "maintenance": [
+        {
+          "task": "Deadwood removal only — no hard cutback",
+          "months": [
+            1
+          ]
+        },
+        {
+          "task": "Feed with azalea fertilizer",
+          "months": [
+            3
+          ]
+        },
+        {
+          "task": "Prune ONLY after flowering complete",
+          "months": [
+            8,
+            9
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Bud drop",
+          "url": "https://www.google.com/search?q=Bud%20drop%20plant%20care%20fix"
+        }
+      ],
+      "category": "Hydrangeas",
+      "isIndoor": false
+    },
+    {
+      "id": "p1778194904648727",
+      "bedId": "b-berry",
+      "name": "Camellia",
+      "scientific": "Camellia japonica",
+      "emoji": "emoji_p1778194904648727",
+      "status": "alive",
+      "water": "Regular",
+      "sun": "Part to full shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Existing.",
+      "maintenance": [
+        {
+          "task": "Deadwood removal only — no hard cutback",
+          "months": [
+            1
+          ]
+        },
+        {
+          "task": "Feed with azalea fertilizer",
+          "months": [
+            3
+          ]
+        },
+        {
+          "task": "Prune ONLY after flowering complete",
+          "months": [
+            8,
+            9
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Bud drop",
+          "url": "https://www.google.com/search?q=Bud%20drop%20plant%20care%20fix"
+        }
+      ],
+      "category": "Hydrangeas",
+      "isIndoor": false
+    },
+    {
+      "id": "p1778195347203525",
+      "bedId": "b-berry",
+      "name": "Geranium",
+      "scientific": "Pelargonium spp.",
+      "emoji": "emoji_p1778195347203525",
+      "status": "alive",
+      "water": "Moderate",
+      "sun": "Part shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Red + pink. Propagating from stem cuttings.",
+      "maintenance": [
+        {
+          "task": "Deadhead spent blooms aggressively",
+          "months": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "task": "Cut back hard after first flush — feed high phosphorus after",
+          "months": [
+            5,
+            6
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Leggy growth",
+          "url": "https://www.google.com/search?q=Leggy%20growth%20plant%20care%20fix"
+        }
+      ],
+      "category": "None",
+      "isIndoor": false
+    },
+    {
+      "id": "p1778195377685437",
+      "bedId": "b-berry",
+      "name": "Fatsia japonica",
+      "scientific": "Fatsia japonica",
+      "emoji": "🌿",
+      "status": "planned",
+      "water": "Moderate",
+      "sun": "Part shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "2-gallon. Behind planter area.",
+      "maintenance": [
+        {
+          "task": "Cut back in spring before growth pushes",
+          "months": [
+            2,
+            3
+          ]
+        },
+        {
+          "task": "Take cuttings for propagation",
+          "months": [
+            3
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Leaf drop",
+          "url": "https://www.google.com/search?q=Leaf%20drop%20plant%20care%20fix"
+        }
+      ],
+      "category": "Tropical Foliage",
+      "isIndoor": false
+    },
+    {
+      "id": "p1778514288212",
+      "bedId": "b-ros",
+      "name": "Caroline Cherry",
+      "scientific": "Prunus Caroliniana",
+      "emoji": "🌿",
+      "category": "Trees",
       "status": "alive",
       "water": "",
       "sun": "",
       "notes": "",
       "fromCutting": false,
-      "maintenance": [],
+      "maintenance": [
+        {
+          "task": "Deep water monthly — slow hose at drip line",
+          "months": [
+            6,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "task": "Feed slow release balanced fertilizer in spring",
+          "months": [
+            3
+          ]
+        },
+        {
+          "task": "Check for dead/crossing branches — remove cleanly",
+          "months": [
+            1,
+            2
+          ]
+        }
+      ],
       "trouble": []
+    },
+    {
+      "id": "p1778614808924",
+      "bedId": "b-berry",
+      "name": "Peas",
+      "scientific": "",
+      "emoji": "🫛",
+      "category": "Vegetables",
+      "status": "alive",
+      "water": "",
+      "sun": "",
+      "notes": "Planted seeds May 12 ",
+      "fromCutting": false,
+      "maintenance": [
+        {
+          "task": "Water consistently — check soil moisture daily in summer",
+          "months": [
+            5,
+            6,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "task": "Feed with balanced fertilizer every 2-3 weeks",
+          "months": [
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "task": "Check for pests — inspect undersides of leaves",
+          "months": [
+            5,
+            6,
+            7,
+            8,
+            9
+          ]
+        }
+      ],
+      "trouble": [],
+      "datePlanted": "2026-05-12",
+      "howPlanted": "seed"
+    },
+    {
+      "id": "p1778614834266",
+      "bedId": "b-berry",
+      "name": "Snap peas",
+      "scientific": "",
+      "emoji": "🫛",
+      "category": "Vegetables",
+      "status": "alive",
+      "water": "",
+      "sun": "",
+      "notes": "Planted seeds May 12 ",
+      "fromCutting": false,
+      "maintenance": [
+        {
+          "task": "Water consistently — check soil moisture daily in summer",
+          "months": [
+            5,
+            6,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "task": "Feed with balanced fertilizer every 2-3 weeks",
+          "months": [
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "task": "Check for pests — inspect undersides of leaves",
+          "months": [
+            5,
+            6,
+            7,
+            8,
+            9
+          ]
+        }
+      ],
+      "trouble": [],
+      "datePlanted": "2026-05-12",
+      "howPlanted": "seed"
+    },
+    {
+      "id": "p1778799611982893",
+      "bedId": "b-ros",
+      "name": "Tree Rose - unknown (second)",
+      "scientific": "Rosa standard",
+      "emoji": "🌹",
+      "status": "alive",
+      "water": "Deep water weekly",
+      "sun": "Part sun",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Existing standard form rose.",
+      "maintenance": [
+        {
+          "task": "Deadhead every 2 weeks — outward facing bud, 45° cut",
+          "months": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "task": "Hard cutback annually in January/February",
+          "months": [
+            1,
+            2
+          ]
+        },
+        {
+          "task": "Feed rose fertilizer after first bloom flush",
+          "months": [
+            5,
+            6
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Black spot",
+          "url": "https://www.google.com/search?q=Black%20spot%20plant%20care%20fix"
+        }
+      ],
+      "category": "Bush Roses",
+      "howPlanted": "",
+      "isIndoor": false
+    },
+    {
+      "id": "p1778799623602268",
+      "bedId": "b-ros",
+      "name": "Tree Rose - orange",
+      "scientific": "Rosa standard",
+      "emoji": "emoji_p1778799623602268",
+      "status": "alive",
+      "water": "Deep water weekly",
+      "sun": "Part sun",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Existing standard form rose.",
+      "maintenance": [
+        {
+          "task": "Deadhead every 2 weeks — outward facing bud, 45° cut",
+          "months": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "task": "Hard cutback annually in January/February",
+          "months": [
+            1,
+            2
+          ]
+        },
+        {
+          "task": "Feed rose fertilizer after first bloom flush",
+          "months": [
+            5,
+            6
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Black spot",
+          "url": "https://www.google.com/search?q=Black%20spot%20plant%20care%20fix"
+        }
+      ],
+      "category": "Bush Roses",
+      "howPlanted": "",
+      "isIndoor": false
+    },
+    {
+      "id": "p17787997919964",
+      "bedId": "b-ros",
+      "name": "Tree Rose - lavender",
+      "scientific": "Rosa standard",
+      "emoji": "emoji_p17787997919964",
+      "status": "alive",
+      "water": "Deep water weekly",
+      "sun": "Part sun",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Existing standard form rose.",
+      "maintenance": [
+        {
+          "task": "Deadhead every 2 weeks — outward facing bud, 45° cut",
+          "months": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "task": "Hard cutback annually in January/February",
+          "months": [
+            1,
+            2
+          ]
+        },
+        {
+          "task": "Feed rose fertilizer after first bloom flush",
+          "months": [
+            5,
+            6
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Black spot",
+          "url": "https://www.google.com/search?q=Black%20spot%20plant%20care%20fix"
+        }
+      ],
+      "category": "Bush Roses",
+      "howPlanted": "",
+      "isIndoor": false
+    },
+    {
+      "id": "p177879979683086",
+      "bedId": "b-ros",
+      "name": "Tree Rose - red",
+      "scientific": "Rosa standard",
+      "emoji": "🌹",
+      "status": "alive",
+      "water": "Deep water weekly",
+      "sun": "Part sun",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Existing standard form rose.",
+      "maintenance": [
+        {
+          "task": "Deadhead every 2 weeks — outward facing bud, 45° cut",
+          "months": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "task": "Hard cutback annually in January/February",
+          "months": [
+            1,
+            2
+          ]
+        },
+        {
+          "task": "Feed rose fertilizer after first bloom flush",
+          "months": [
+            5,
+            6
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Black spot",
+          "url": "https://www.google.com/search?q=Black%20spot%20plant%20care%20fix"
+        }
+      ],
+      "category": "Bush Roses",
+      "howPlanted": "",
+      "isIndoor": false
+    },
+    {
+      "id": "p1778799801113570",
+      "bedId": "b-ros",
+      "name": "Tree Rose - pink ",
+      "scientific": "Rosa standard",
+      "emoji": "emoji_p1778799801113570",
+      "status": "alive",
+      "water": "Deep water weekly",
+      "sun": "Part sun",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Existing standard form rose.",
+      "maintenance": [
+        {
+          "task": "Deadhead every 2 weeks — outward facing bud, 45° cut",
+          "months": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "task": "Hard cutback annually in January/February",
+          "months": [
+            1,
+            2
+          ]
+        },
+        {
+          "task": "Feed rose fertilizer after first bloom flush",
+          "months": [
+            5,
+            6
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Black spot",
+          "url": "https://www.google.com/search?q=Black%20spot%20plant%20care%20fix"
+        }
+      ],
+      "category": "Bush Roses",
+      "howPlanted": "",
+      "isIndoor": false
+    },
+    {
+      "id": "p1778800032324516",
+      "bedId": "b-ros",
+      "name": "Tree Rose - red",
+      "scientific": "Rosa standard",
+      "emoji": "emoji_p1778800032324516",
+      "status": "alive",
+      "water": "Deep water weekly",
+      "sun": "Part sun",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Existing standard form rose.",
+      "maintenance": [
+        {
+          "task": "Deadhead every 2 weeks — outward facing bud, 45° cut",
+          "months": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "task": "Hard cutback annually in January/February",
+          "months": [
+            1,
+            2
+          ]
+        },
+        {
+          "task": "Feed rose fertilizer after first bloom flush",
+          "months": [
+            5,
+            6
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Black spot",
+          "url": "https://www.google.com/search?q=Black%20spot%20plant%20care%20fix"
+        }
+      ],
+      "category": "Bush Roses",
+      "howPlanted": "",
+      "isIndoor": false
+    },
+    {
+      "id": "p1778800074164216",
+      "bedId": "b-ros",
+      "name": "Tree Rose - peach (Just Joey)",
+      "scientific": "Rosa standard",
+      "emoji": "emoji_p1778800074164216",
+      "status": "alive",
+      "water": "Deep water weekly",
+      "sun": "Part sun",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Existing standard form rose.",
+      "maintenance": [
+        {
+          "task": "Deadhead every 2 weeks — outward facing bud, 45° cut",
+          "months": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "task": "Hard cutback annually in January/February",
+          "months": [
+            1,
+            2
+          ]
+        },
+        {
+          "task": "Feed rose fertilizer after first bloom flush",
+          "months": [
+            5,
+            6
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Black spot",
+          "url": "https://www.google.com/search?q=Black%20spot%20plant%20care%20fix"
+        }
+      ],
+      "category": "Bush Roses",
+      "howPlanted": "",
+      "isIndoor": false
+    },
+    {
+      "id": "p1778869421207",
+      "bedId": "b-berry",
+      "name": "Okra",
+      "scientific": "",
+      "emoji": "emoji_p1778869421207",
+      "category": "Vegetables",
+      "status": "alive",
+      "water": "",
+      "sun": "",
+      "datePlanted": "2026-05-15",
+      "howPlanted": "seed",
+      "fromCutting": false,
+      "nursery": "",
+      "notes": "",
+      "maintenance": [
+        {
+          "task": "Water consistently — check soil moisture daily in summer",
+          "months": [
+            5,
+            6,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "task": "Feed with balanced fertilizer every 2-3 weeks",
+          "months": [
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "task": "Check for pests — inspect undersides of leaves",
+          "months": [
+            5,
+            6,
+            7,
+            8,
+            9
+          ]
+        }
+      ],
+      "trouble": []
+    },
+    {
+      "id": "mp-bridal",
+      "bedId": "b-mp",
+      "name": "Bridal Wreath Spirea",
+      "scientific": "Spiraea prunifolia",
+      "emoji": "🌿",
+      "status": "alive",
+      "water": "Moderate",
+      "sun": "Full sun to part shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Large arching shrub with white flowers in spring. Existing in bed.",
+      "maintenance": [
+        {
+          "task": "Prune heavily after flowering in spring to maintain shape",
+          "months": [
+            5,
+            6
+          ]
+        },
+        {
+          "task": "Remove dead wood and crossing branches",
+          "months": [
+            3
+          ]
+        },
+        {
+          "task": "Feed with balanced fertilizer in early spring",
+          "months": [
+            2,
+            3
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "No flowers",
+          "url": "https://www.google.com/search?q=Bridal+Wreath+Spirea+no+flowers+fix"
+        },
+        {
+          "issue": "Aphids on new growth",
+          "url": "https://www.google.com/search?q=Bridal+Wreath+Spirea+aphids+fix"
+        }
+      ],
+      "category": "Shrubs"
+    },
+    {
+      "id": "rw-ferns",
+      "bedId": "b-rw",
+      "name": "Western Sword Ferns",
+      "scientific": "Polystichum munitum",
+      "emoji": "🌿",
+      "status": "alive",
+      "water": "Low to moderate",
+      "sun": "Full shade to part shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Native fern. Established in redwood bed.",
+      "maintenance": [
+        {
+          "task": "Remove old fronds in late winter before new growth emerges",
+          "months": [
+            2,
+            3
+          ]
+        },
+        {
+          "task": "Water during dry spells in first year",
+          "months": [
+            7,
+            8,
+            9
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Brown fronds",
+          "url": "https://www.google.com/search?q=Western+Sword+Fern+brown+fronds+fix"
+        }
+      ],
+      "category": "Ferns"
+    },
+    {
+      "id": "rw-hellebores",
+      "bedId": "b-rw",
+      "name": "Hellebores Pippa's Purple",
+      "scientific": "Helleborus x hybridus",
+      "emoji": "🌸",
+      "status": "planned",
+      "water": "Moderate",
+      "sun": "Part to full shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Pippa's Purple variety. Deep burgundy blooms in late winter.",
+      "maintenance": [
+        {
+          "task": "Remove old foliage in late winter before flowering",
+          "months": [
+            1,
+            2
+          ]
+        },
+        {
+          "task": "Divide clumps every 3-4 years",
+          "months": [
+            9,
+            10
+          ]
+        },
+        {
+          "task": "Top dress with compost in fall",
+          "months": [
+            10,
+            11
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Black spot on leaves",
+          "url": "https://www.google.com/search?q=Hellebore+black+spot+fix"
+        },
+        {
+          "issue": "No flowers",
+          "url": "https://www.google.com/search?q=Hellebore+not+flowering+fix"
+        }
+      ],
+      "category": "Perennials"
+    },
+    {
+      "id": "rw-oxalis",
+      "bedId": "b-rw",
+      "name": "Oxalis Klamath Ruby",
+      "scientific": "Oxalis oregana",
+      "emoji": "emoji_rw-oxalis",
+      "status": "planned",
+      "water": "Low to moderate",
+      "sun": "Full shade to part shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Klamath Ruby variety with deep red foliage. Native groundcover.",
+      "maintenance": [
+        {
+          "task": "Cut back if spreading too aggressively",
+          "months": [
+            4,
+            5,
+            9
+          ]
+        },
+        {
+          "task": "Water during first summer to establish",
+          "months": [
+            6,
+            7,
+            8
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Spreading too aggressively",
+          "url": "https://www.google.com/search?q=Oxalis+oregana+control"
+        }
+      ],
+      "category": "Groundcovers"
+    },
+    {
+      "id": "rw-pittosporum-tree",
+      "bedId": "b-rw",
+      "name": "Pittosporum Tree",
+      "scientific": "Pittosporum undulatum",
+      "emoji": "🌿",
+      "status": "alive",
+      "water": "Low once established",
+      "sun": "Part shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Established tree form pittosporum. Provides canopy in redwood bed.",
+      "maintenance": [
+        {
+          "task": "Light trim to maintain shape",
+          "months": [
+            3,
+            4
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Scale insects",
+          "url": "https://www.google.com/search?q=Scale%20insects%20plant%20care%20fix"
+        }
+      ],
+      "category": "Trees"
+    },
+    {
+      "id": "rw-aucuba",
+      "bedId": "b-rw",
+      "name": "Aucuba",
+      "scientific": "Aucuba japonica",
+      "emoji": "🌿",
+      "status": "alive",
+      "water": "Low to moderate",
+      "sun": "Full to part shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Gold dust plant. Shade-tolerant shrub. Established in bed.",
+      "maintenance": [
+        {
+          "task": "Prune to shape in spring",
+          "months": [
+            3,
+            4
+          ]
+        },
+        {
+          "task": "Feed with slow release fertilizer in spring",
+          "months": [
+            3
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Black sooty mold",
+          "url": "https://www.google.com/search?q=Aucuba+sooty+mold+fix"
+        },
+        {
+          "issue": "Leaf scorch",
+          "url": "https://www.google.com/search?q=Aucuba+leaf+scorch+fix"
+        }
+      ],
+      "category": "Shrubs"
+    },
+    {
+      "id": "rw-oxalis-oregana",
+      "bedId": "b-rw",
+      "name": "Oxalis Oregana",
+      "scientific": "Oxalis oregana",
+      "emoji": "🌿",
+      "status": "planned",
+      "water": "Low to moderate",
+      "sun": "Full shade to part shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Native redwood sorrel. Classic groundcover under redwoods.",
+      "maintenance": [
+        {
+          "task": "Cut back if spreading too aggressively",
+          "months": [
+            4,
+            5,
+            9
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Browning in summer heat",
+          "url": "https://www.google.com/search?q=Oxalis+oregana+summer+dormancy"
+        }
+      ],
+      "category": "Groundcovers"
+    },
+    {
+      "id": "rw-clivia-add",
+      "bedId": "b-rw",
+      "name": "Clivias (additional)",
+      "scientific": "Clivia miniata",
+      "emoji": "emoji_rw-clivia",
+      "status": "planned",
+      "water": "Low once established",
+      "sun": "Full shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Additional clivias to fill gaps. Orange trumpet flowers spring-summer.",
+      "maintenance": [
+        {
+          "task": "Feed diluted fertilizer after flowering",
+          "months": [
+            4,
+            5
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Not flowering",
+          "url": "https://www.google.com/search?q=Not%20flowering%20plant%20care%20fix"
+        }
+      ],
+      "category": "Bulbs"
+    },
+    {
+      "id": "fl-catmint",
+      "bedId": "b-fl",
+      "name": "Catmint",
+      "scientific": "Nepeta x faassenii",
+      "emoji": "💜",
+      "status": "alive",
+      "water": "Low",
+      "sun": "Full sun",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Blue-purple flowers spring through fall. Drought tolerant once established.",
+      "maintenance": [
+        {
+          "task": "Cut back hard after first flush to encourage reblooming",
+          "months": [
+            6,
+            7
+          ]
+        },
+        {
+          "task": "Divide every 2-3 years in spring",
+          "months": [
+            3,
+            4
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Powdery mildew",
+          "url": "https://www.google.com/search?q=Catmint+powdery+mildew+fix"
+        },
+        {
+          "issue": "Root rot from overwatering",
+          "url": "https://www.google.com/search?q=Catmint+root+rot+fix"
+        }
+      ],
+      "category": "Perennials"
+    },
+    {
+      "id": "fl-daylily",
+      "bedId": "b-fl",
+      "name": "Day Lilies",
+      "scientific": "Hemerocallis",
+      "emoji": "🌼",
+      "status": "alive",
+      "water": "Moderate",
+      "sun": "Full sun to part shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Established in bed. Orange/yellow summer blooms.",
+      "maintenance": [
+        {
+          "task": "Deadhead spent blooms to encourage reblooming",
+          "months": [
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "task": "Divide clumps every 3-4 years in fall",
+          "months": [
+            9,
+            10
+          ]
+        },
+        {
+          "task": "Cut back foliage in late fall",
+          "months": [
+            11
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Rust",
+          "url": "https://www.google.com/search?q=Daylily+rust+fix"
+        },
+        {
+          "issue": "Aphids",
+          "url": "https://www.google.com/search?q=Daylily+aphids+fix"
+        }
+      ],
+      "category": "Perennials"
+    },
+    {
+      "id": "fl-lomandra",
+      "bedId": "b-fl",
+      "name": "Lomandra Platinum Beauty",
+      "scientific": "Lomandra longifolia",
+      "emoji": "🌾",
+      "status": "planned",
+      "water": "Low to moderate",
+      "sun": "Full sun to part shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Variegated strappy grass. Low maintenance. Deer resistant.",
+      "maintenance": [
+        {
+          "task": "Trim dead tips in late winter",
+          "months": [
+            2,
+            3
+          ]
+        },
+        {
+          "task": "Divide if clump gets too large",
+          "months": [
+            3,
+            4
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Brown tips",
+          "url": "https://www.google.com/search?q=Lomandra+brown+tips+fix"
+        }
+      ],
+      "category": "Ornamental Grasses"
+    },
+    {
+      "id": "fl-sedum",
+      "bedId": "b-fl",
+      "name": "Sedum Angelina",
+      "scientific": "Sedum rupestre",
+      "emoji": "🌿",
+      "status": "planned",
+      "water": "Low",
+      "sun": "Full sun",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Golden-chartreuse succulent groundcover. Drought tolerant.",
+      "maintenance": [
+        {
+          "task": "Trim to shape in spring",
+          "months": [
+            3,
+            4
+          ]
+        },
+        {
+          "task": "Divide if spreading too wide",
+          "months": [
+            4,
+            9
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Root rot from overwatering",
+          "url": "https://www.google.com/search?q=Sedum+angelina+root+rot+fix"
+        }
+      ],
+      "category": "Succulents"
+    },
+    {
+      "id": "fr-lomandra",
+      "bedId": "b-fr",
+      "name": "Lomandra Platinum Beauty",
+      "scientific": "Lomandra longifolia",
+      "emoji": "🌾",
+      "status": "planned",
+      "water": "Low to moderate",
+      "sun": "Full sun to part shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Variegated strappy grass. Low maintenance. Deer resistant.",
+      "maintenance": [
+        {
+          "task": "Trim dead tips in late winter",
+          "months": [
+            2,
+            3
+          ]
+        },
+        {
+          "task": "Divide if clump gets too large",
+          "months": [
+            3,
+            4
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Brown tips",
+          "url": "https://www.google.com/search?q=Lomandra+brown+tips+fix"
+        }
+      ],
+      "category": "Ornamental Grasses"
+    },
+    {
+      "id": "fr-sedum",
+      "bedId": "b-fr",
+      "name": "Sedum Angelina",
+      "scientific": "Sedum rupestre",
+      "emoji": "🌿",
+      "status": "planned",
+      "water": "Low",
+      "sun": "Full sun",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Golden-chartreuse succulent groundcover. Drought tolerant.",
+      "maintenance": [
+        {
+          "task": "Trim to shape in spring",
+          "months": [
+            3,
+            4
+          ]
+        },
+        {
+          "task": "Divide if spreading too wide",
+          "months": [
+            4,
+            9
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Root rot from overwatering",
+          "url": "https://www.google.com/search?q=Sedum+angelina+root+rot+fix"
+        }
+      ],
+      "category": "Succulents"
+    },
+    {
+      "id": "fr-bergenia",
+      "bedId": "b-fr",
+      "name": "Bergenia Crassifolia",
+      "scientific": "Bergenia crassifolia",
+      "emoji": "🌸",
+      "status": "planned",
+      "water": "Moderate",
+      "sun": "Part shade to full sun",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Pigsqueak. Large leathery leaves turn red in winter. Pink spring flowers.",
+      "maintenance": [
+        {
+          "task": "Remove old leaves in spring as new growth appears",
+          "months": [
+            3,
+            4
+          ]
+        },
+        {
+          "task": "Divide large clumps every 3-4 years",
+          "months": [
+            3,
+            9
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Leaf scorch in hot sun",
+          "url": "https://www.google.com/search?q=Bergenia+leaf+scorch+fix"
+        },
+        {
+          "issue": "Vine weevil",
+          "url": "https://www.google.com/search?q=Bergenia+vine+weevil+fix"
+        }
+      ],
+      "category": "Perennials"
     }
   ],
   "indoorPlants": [
@@ -4331,7 +6659,7 @@
       "section": "Floor",
       "name": "ZZ Plant",
       "scientific": "Zamioculcas zamiifolia",
-      "emoji": "🌿",
+      "emoji": "emoji_ip1",
       "status": "alive",
       "water": "Every 2-3 weeks — let soil dry completely",
       "sun": "Low to bright indirect",
@@ -4392,7 +6720,8 @@
           "issue": "Yellow leaves (overwatering)",
           "url": "https://www.google.com/search?q=Yellow%20leaves%20(overwatering)%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Tropical Foliage"
     },
     {
       "id": "ip2",
@@ -4400,7 +6729,7 @@
       "section": "Floor",
       "name": "China Doll",
       "scientific": "Radermachera sinica",
-      "emoji": "🌳",
+      "emoji": "emoji_ip2",
       "status": "alive",
       "water": "Moderate — keep evenly moist",
       "sun": "Bright indirect",
@@ -4455,7 +6784,8 @@
           "issue": "Leaf drop",
           "url": "https://www.google.com/search?q=Leaf%20drop%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Tropical Foliage"
     },
     {
       "id": "ip3",
@@ -4463,7 +6793,7 @@
       "section": "Floor",
       "name": "Variegated Monstera",
       "scientific": "Monstera deliciosa 'Variegata'",
-      "emoji": "🤍",
+      "emoji": "emoji_ip3",
       "status": "alive",
       "water": "When top 2 inches dry",
       "sun": "Bright indirect — no direct sun",
@@ -4507,7 +6837,8 @@
           "issue": "Browning white sections (direct sun)",
           "url": "https://www.google.com/search?q=Browning%20white%20sections%20(direct%20sun)%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Tropical Foliage"
     },
     {
       "id": "ip4",
@@ -4515,7 +6846,7 @@
       "section": "Plant Stand",
       "name": "Pothos",
       "scientific": "Epipremnum aureum",
-      "emoji": "💚",
+      "emoji": "emoji_ip4",
       "status": "alive",
       "water": "Every 1-2 weeks when top inch dry",
       "sun": "Low to bright indirect",
@@ -4555,7 +6886,8 @@
           "issue": "Yellow leaves (overwatering)",
           "url": "https://www.google.com/search?q=Yellow%20leaves%20(overwatering)%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Tropical Foliage"
     },
     {
       "id": "ip5",
@@ -4624,7 +6956,8 @@
           "issue": "Crispy frond edges (low humidity)",
           "url": "https://www.google.com/search?q=Crispy%20frond%20edges%20(low%20humidity)%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Ferns"
     },
     {
       "id": "ip6",
@@ -4683,7 +7016,8 @@
           "issue": "Leggy growth",
           "url": "https://www.google.com/search?q=Leggy%20growth%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Tropical Foliage"
     },
     {
       "id": "ip7",
@@ -4691,7 +7025,7 @@
       "section": "Plant Stand",
       "name": "Swiss Cheese Plant",
       "scientific": "Monstera adansonii",
-      "emoji": "🧀",
+      "emoji": "emoji_ip7",
       "status": "alive",
       "water": "When top 2 inches dry",
       "sun": "Bright indirect",
@@ -4735,7 +7069,8 @@
           "issue": "Yellow leaves (overwatering)",
           "url": "https://www.google.com/search?q=Yellow%20leaves%20(overwatering)%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Tropical Foliage"
     },
     {
       "id": "ip8",
@@ -4809,7 +7144,8 @@
           "issue": "Brown tips (fluoride/overwatering)",
           "url": "https://www.google.com/search?q=Brown%20tips%20(fluoride%2Foverwatering)%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Tropical Foliage"
     },
     {
       "id": "ip9",
@@ -4844,7 +7180,8 @@
           "issue": "Loss of red color (low light)",
           "url": "https://www.google.com/search?q=Loss%20of%20red%20color%20(low%20light)%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Tropical Foliage"
     },
     {
       "id": "ip10",
@@ -4901,7 +7238,8 @@
           "issue": "Dropping leaves (overwatering)",
           "url": "https://www.google.com/search?q=Dropping%20leaves%20(overwatering)%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Succulents & Cacti"
     },
     {
       "id": "ip11",
@@ -4966,7 +7304,8 @@
           "issue": "Sudden frond drop",
           "url": "https://www.google.com/search?q=Sudden%20frond%20drop%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Ferns"
     },
     {
       "id": "ip12",
@@ -5021,7 +7360,8 @@
           "issue": "Brown leaf tips",
           "url": "https://www.google.com/search?q=Brown%20leaf%20tips%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Tropical Foliage"
     },
     {
       "id": "ip13",
@@ -5071,7 +7411,8 @@
           "issue": "Not blooming",
           "url": "https://www.google.com/search?q=Not%20blooming%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Tropical Foliage"
     },
     {
       "id": "ip14",
@@ -5131,7 +7472,8 @@
           "issue": "Leaf drop",
           "url": "https://www.google.com/search?q=Leaf%20drop%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Tropical Foliage"
     },
     {
       "id": "ip15",
@@ -5139,7 +7481,7 @@
       "section": "Wall Shelves",
       "name": "Purple Shamrock + String of Pearls",
       "scientific": "Oxalis triangularis + Senecio rowleyanus",
-      "emoji": "💜",
+      "emoji": "emoji_ip15",
       "status": "alive",
       "water": "Moderate Oxalis / Low String of Pearls",
       "sun": "Bright indirect",
@@ -5179,7 +7521,8 @@
           "issue": "String of Pearls shriveling (underwatering)",
           "url": "https://www.google.com/search?q=String%20of%20Pearls%20shriveling%20(underwatering)%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Succulents & Cacti"
     },
     {
       "id": "ip16",
@@ -5239,7 +7582,8 @@
           "issue": "Bud drop (moved while budding)",
           "url": "https://www.google.com/search?q=Bud%20drop%20(moved%20while%20budding)%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Succulents & Cacti"
     },
     {
       "id": "ip17",
@@ -5296,7 +7640,8 @@
           "issue": "Sudden frond drop",
           "url": "https://www.google.com/search?q=Sudden%20frond%20drop%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Ferns"
     },
     {
       "id": "ip18",
@@ -5360,7 +7705,8 @@
           "issue": "Curling leaves (underwatering)",
           "url": "https://www.google.com/search?q=Curling%20leaves%20(underwatering)%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Tropical Foliage"
     },
     {
       "id": "ip19",
@@ -5425,7 +7771,8 @@
           "issue": "Browning (low humidity)",
           "url": "https://www.google.com/search?q=Browning%20(low%20humidity)%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Ferns"
     },
     {
       "id": "ip20",
@@ -5503,7 +7850,8 @@
           "issue": "Yellow leaves (overwatering)",
           "url": "https://www.google.com/search?q=Yellow%20leaves%20(overwatering)%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Tropical Foliage"
     },
     {
       "id": "ip21",
@@ -5555,7 +7903,8 @@
           "issue": "Losing pink variegation (low light)",
           "url": "https://www.google.com/search?q=Losing%20pink%20variegation%20(low%20light)%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Tropical Foliage"
     },
     {
       "id": "ip22",
@@ -5611,7 +7960,8 @@
           "issue": "Drooping leaves (underwatering)",
           "url": "https://www.google.com/search?q=Drooping%20leaves%20(underwatering)%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Tropical Foliage"
     },
     {
       "id": "ip23",
@@ -5674,7 +8024,8 @@
           "issue": "Brown tips (fluoride/dry air)",
           "url": "https://www.google.com/search?q=Brown%20tips%20(fluoride%2Fdry%20air)%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Tropical Foliage"
     },
     {
       "id": "ip24",
@@ -5748,7 +8099,8 @@
           "issue": "Crispy edges (low humidity/fluoride)",
           "url": "https://www.google.com/search?q=Crispy%20edges%20(low%20humidity%2Ffluoride)%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Tropical Foliage"
     },
     {
       "id": "ip25",
@@ -5815,7 +8167,8 @@
           "issue": "No rebloom",
           "url": "https://www.google.com/search?q=No%20rebloom%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Orchids"
     },
     {
       "id": "ip26",
@@ -5893,7 +8246,8 @@
           "issue": "Yellow leaves (overwatering)",
           "url": "https://www.google.com/search?q=Yellow%20leaves%20(overwatering)%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Tropical Foliage"
     },
     {
       "id": "ip27",
@@ -5924,7 +8278,8 @@
           "issue": "Yellow leaves",
           "url": "https://www.google.com/search?q=Yellow%20leaves%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Tropical Foliage"
     },
     {
       "id": "ip28",
@@ -5976,7 +8331,8 @@
           "issue": "Yellow leaves",
           "url": "https://www.google.com/search?q=Yellow%20leaves%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Tropical Foliage"
     },
     {
       "id": "ip29",
@@ -6016,7 +8372,8 @@
           "issue": "Brown tips",
           "url": "https://www.google.com/search?q=Brown%20tips%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Tropical Foliage"
     },
     {
       "id": "ip30",
@@ -6062,7 +8419,8 @@
           "issue": "Brown tips",
           "url": "https://www.google.com/search?q=Brown%20tips%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Tropical Foliage"
     },
     {
       "id": "ip31",
@@ -6122,7 +8480,8 @@
           "issue": "No rebloom",
           "url": "https://www.google.com/search?q=No%20rebloom%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Orchids"
     },
     {
       "id": "ip32",
@@ -6174,7 +8533,8 @@
           "issue": "Dropping leaves (overwatering)",
           "url": "https://www.google.com/search?q=Dropping%20leaves%20(overwatering)%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Tropical Foliage"
     },
     {
       "id": "ip33",
@@ -6224,7 +8584,8 @@
           "issue": "Etiolation (stretching toward light)",
           "url": "https://www.google.com/search?q=Etiolation%20(stretching%20toward%20light)%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Succulents & Cacti"
     },
     {
       "id": "ip34",
@@ -6274,18 +8635,19 @@
           "issue": "Dropping leaves (overwatering)",
           "url": "https://www.google.com/search?q=Dropping%20leaves%20(overwatering)%20plant%20care%20fix"
         }
-      ]
+      ],
+      "category": "Succulents & Cacti"
     },
     {
       "id": "ip1778088094425",
       "roomId": "r-house",
       "section": "Bedroom",
       "name": "Fern",
-      "scientific": "",
+      "scientific": "Polystichum spp.",
       "emoji": "🌿",
       "status": "alive",
-      "water": "",
-      "sun": "",
+      "water": "Keep consistently moist — never let dry out",
+      "sun": "Low to medium indirect",
       "notes": "",
       "maintenance": [
         {
@@ -6335,35 +8697,43 @@
           ]
         }
       ],
-      "trouble": []
+      "trouble": [],
+      "category": "Ferns"
     }
   ],
   "todos": [
     {
+      "id": "t1778942607819",
+      "text": "In late June / early July - light sprinkle of fertilizer for hydrangeas (Epsoma Holly tone)",
+      "done": false,
+      "date": "2026-06-27",
+      "category": "Maintenance"
+    },
+    {
       "id": "t1",
       "text": "Train Iceberg climbing rose canes horizontally across Side Arbor — vine eyes + soft ties now while flexible",
-      "done": false,
+      "done": true,
       "date": "",
       "category": "Maintenance"
     },
     {
       "id": "t2",
       "text": "Cut back Distictis buccinatoria (Trumpet Vine on Fountain Wall) hard to framework — create structure as you cut",
-      "done": false,
+      "done": true,
       "date": "",
       "category": "Maintenance"
     },
     {
       "id": "t3",
       "text": "Move White Bougainvillea to back of BBQ bed",
-      "done": false,
+      "done": true,
       "date": "",
       "category": "Maintenance"
     },
     {
       "id": "t4",
       "text": "Cut back existing 6ft Fatsia — take 6-8 cuttings with rooting hormone",
-      "done": false,
+      "done": true,
       "date": "",
       "category": "Maintenance"
     },
@@ -6377,77 +8747,77 @@
     {
       "id": "t6",
       "text": "White Stripe bougainvillea — Super Bloom HALF strength to MOIST soil. Monthly.",
-      "done": false,
+      "done": true,
       "date": "",
       "category": "Maintenance"
     },
     {
       "id": "t7",
       "text": "Diseased rose — Safer spray every 7-14 days. Do NOT feed until healthy.",
-      "done": false,
+      "done": true,
       "date": "",
       "category": "Maintenance"
     },
     {
       "id": "t8",
       "text": "Deadhead all geraniums aggressively",
-      "done": false,
+      "done": true,
       "date": "",
       "category": "Maintenance"
     },
     {
       "id": "t9",
       "text": "Cut back leggy tall geranium by half to two thirds",
-      "done": false,
+      "done": true,
       "date": "",
       "category": "Maintenance"
     },
     {
       "id": "t10",
       "text": "Move kitchen windowsill plants (Peperomia, Succulent, Mini Jade) to office once Rieger Begonias arrive",
-      "done": false,
+      "done": true,
       "date": "",
       "category": "Indoor"
     },
     {
       "id": "t11",
       "text": "Monitor irrigation — check soil 48hrs after watering. Drop to 2x/week if still moist.",
-      "done": false,
+      "done": true,
       "date": "",
       "category": "Irrigation"
     },
     {
       "id": "t12",
       "text": "Spot plant all new plants with pots on ground first — step back to street, adjust, THEN plant",
-      "done": false,
+      "done": true,
       "date": "",
       "category": "Maintenance"
     },
     {
       "id": "t13",
       "text": "Confirm Breath of Heaven variety matches existing — check foliage color at nursery",
-      "done": false,
+      "done": true,
       "date": "",
       "category": "Maintenance"
     },
     {
       "id": "t14",
       "text": "Check nursery tag on fern in white smiley cat pot (plant stand) — ID species",
-      "done": false,
+      "done": true,
       "date": "",
       "category": "Indoor"
     },
     {
       "id": "t15",
       "text": "Get remaining rose names from Side Arbor — varieties beyond Iceberg, Angel Face, Burst of Joy",
-      "done": false,
+      "done": true,
       "date": "",
       "category": "Maintenance"
     },
     {
       "id": "t16",
       "text": "ID David Austin rose variety in Back Rose Bed — check tag for exact name",
-      "done": false,
+      "done": true,
       "date": "",
       "category": "Maintenance"
     },
@@ -6891,7 +9261,24 @@
     }
   ],
   "notes": [],
+  "gardenNote": "—— Water: ——\nApril 30 - deep watered apricot, orange and persimmon\n\nMay 10 - apricot and persimmon got deeeep watering due to water leak. \n\nMay 15 - deep water orange \n\n——-Treat: ———\nApril 30 -\n- rose on back bed \n- iceberg in bbq \n\nMay 12\n- all roses in back\n- China doll and jade \n- Snail bait front and back\n\nMay 15 - all indoor plants for thrips ",
   "propagation": [
+    {
+      "id": "pr1778970240429",
+      "plant": "Fatsia Japonica",
+      "dateCut": "2026-05-16",
+      "datePlanted": "",
+      "notes": "",
+      "status": "pending"
+    },
+    {
+      "id": "pr1778970216521",
+      "plant": "Geranium",
+      "dateCut": "2026-05-16",
+      "datePlanted": "2026-05-16",
+      "notes": "",
+      "status": "pending"
+    },
     {
       "id": "pr1",
       "plant": "Sweet Potato Vine (Ipomoea batatas)",
@@ -6903,12 +9290,116 @@
     {
       "id": "pr2",
       "plant": "Creeping Geranium (Pelargonium spp.)",
-      "dateCut": "",
-      "datePlanted": "",
+      "dateCut": "2026-05-16",
+      "datePlanted": "2026-05-16",
       "status": "pending",
       "notes": "Stem cuttings to be taken from existing plants to fill Fountain Wall Bed. Red + pink varieties."
     }
   ],
   "irrigation": [],
-  "syncedAt": "2026-05-06T17:45:54.025Z"
+  "imageRefs": {
+    "bed_b-fl": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/bed_b-fl.txt",
+    "bed_b-mp": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/bed_b-mp.txt",
+    "room_r-office": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/room_r-office.txt",
+    "section_outdoor": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/section_outdoor.txt",
+    "bed_b-rw": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/bed_b-rw.txt",
+    "yard_front": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/yard_front.txt",
+    "bed_b-ch": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/bed_b-ch.txt",
+    "bed_b-fr": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/bed_b-fr.txt",
+    "bed_b-ros": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/bed_b-ros.txt",
+    "yard_back": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/yard_back.txt",
+    "section_indoor": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/section_indoor.txt",
+    "room_r-house": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/room_r-house.txt",
+    "emoji_rw-oxalis": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_rw-oxalis.txt",
+    "emoji_ip3": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_ip3.txt",
+    "emoji_fl-mondo": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_fl-mondo.txt",
+    "emoji_fl-lamium": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_fl-lamium.txt",
+    "emoji_fl-clivia": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_fl-clivia.txt",
+    "emoji_rw-camellia": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_rw-camellia.txt",
+    "emoji_rw-clivia": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_rw-clivia.txt",
+    "emoji_mp-camellia": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_mp-camellia.txt",
+    "emoji_mp-mondo": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_mp-mondo.txt",
+    "emoji_mp-lamium": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_mp-lamium.txt",
+    "emoji_ch-mondo": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_ch-mondo.txt",
+    "emoji_ch-lamium": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_ch-lamium.txt",
+    "emoji_br-azalea": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_br-azalea.txt",
+    "emoji_br-liriope": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_br-liriope.txt",
+    "emoji_br-coleus": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_br-coleus.txt",
+    "emoji_br-torenia": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_br-torenia.txt",
+    "emoji_br-impatiens-curve": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_br-impatiens-curve.txt",
+    "emoji_bl-ivy": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_bl-ivy.txt",
+    "emoji_bl-azalea": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_bl-azalea.txt",
+    "emoji_bl-liriope": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_bl-liriope.txt",
+    "emoji_bl-impatiens": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_bl-impatiens.txt",
+    "emoji_fw-distictis": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_fw-distictis.txt",
+    "emoji_fw-rose": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_fw-rose.txt",
+    "emoji_fw-geranium": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_fw-geranium.txt",
+    "emoji_fw-begonia": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_fw-begonia.txt",
+    "emoji_ma-palm": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_ma-palm.txt",
+    "emoji_ma-calibrachoa": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_ma-calibrachoa.txt",
+    "emoji_sa-bougainvillea": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_sa-bougainvillea.txt",
+    "emoji_sa-iceberg": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_sa-iceberg.txt",
+    "emoji_sa-angelface": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_sa-angelface.txt",
+    "emoji_sa-burstjoy": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_sa-burstjoy.txt",
+    "emoji_sa-mophead": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_sa-mophead.txt",
+    "emoji_sa-oakleaf": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_sa-oakleaf.txt",
+    "emoji_sa-passiflora": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_sa-passiflora.txt",
+    "emoji_sa-salvia": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_sa-salvia.txt",
+    "emoji_bbq-chrysanthemum": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_bbq-chrysanthemum.txt",
+    "emoji_bbq-existrose": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_bbq-existrose.txt",
+    "emoji_bbq-whiteboug": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_bbq-whiteboug.txt",
+    "emoji_bbq-dahlia": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_bbq-dahlia.txt",
+    "emoji_st-aeonium": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_st-aeonium.txt",
+    "emoji_ps-persimmon": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_ps-persimmon.txt",
+    "emoji_ps-pomegranate": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_ps-pomegranate.txt",
+    "emoji_ps-salvia": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_ps-salvia.txt",
+    "emoji_ts-plum": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_ts-plum.txt",
+    "emoji_brs-sunburst": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_brs-sunburst.txt",
+    "emoji_brs-daustinrose": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_brs-daustinrose.txt",
+    "emoji_brs-dahlia": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_brs-dahlia.txt",
+    "emoji_p1778114397874": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_p1778114397874.txt",
+    "emoji_p1778117705415": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_p1778117705415.txt",
+    "emoji_p1778117734357": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_p1778117734357.txt",
+    "emoji_p1778118235543": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_p1778118235543.txt",
+    "emoji_p1778118317106": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_p1778118317106.txt",
+    "emoji_p1778118350650": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_p1778118350650.txt",
+    "emoji_p1778118393809": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_p1778118393809.txt",
+    "emoji_p1778118413483": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_p1778118413483.txt",
+    "emoji_p1778118483625": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_p1778118483625.txt",
+    "emoji_p1778124227613": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_p1778124227613.txt",
+    "emoji_p1778124307829": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_p1778124307829.txt",
+    "emoji_p1778131182060": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_p1778131182060.txt",
+    "emoji_p1778131211972": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_p1778131211972.txt",
+    "emoji_p1778170415313": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_p1778170415313.txt",
+    "emoji_p1778171162160": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_p1778171162160.txt",
+    "emoji_p1778174102041": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_p1778174102041.txt",
+    "emoji_p1778178188173": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_p1778178188173.txt",
+    "emoji_p1778178506166": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_p1778178506166.txt",
+    "emoji_p1778178720492": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_p1778178720492.txt",
+    "emoji_p1778192924840": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_p1778192924840.txt",
+    "emoji_p1778194878756922": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_p1778194878756922.txt",
+    "emoji_p1778194888421204": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_p1778194888421204.txt",
+    "emoji_p1778194904648727": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_p1778194904648727.txt",
+    "emoji_p1778195347203525": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_p1778195347203525.txt",
+    "emoji_ip1": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_ip1.txt",
+    "emoji_ip2": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_ip2.txt",
+    "emoji_ip4": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_ip4.txt",
+    "emoji_ip7": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_ip7.txt",
+    "emoji_ip15": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_ip15.txt",
+    "emoji_p1778869421207": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_p1778869421207.txt",
+    "emoji_ros-treerose": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_ros-treerose.txt",
+    "emoji_p1778799623602268": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_p1778799623602268.txt",
+    "emoji_p17787997919964": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_p17787997919964.txt",
+    "emoji_p1778799801113570": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_p1778799801113570.txt",
+    "emoji_p1778800032324516": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_p1778800032324516.txt",
+    "emoji_p1778800074164216": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_p1778800074164216.txt",
+    "bed_b-back-rose": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/bed_b-back-rose.txt",
+    "bed_b-berry": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/bed_b-berry.txt",
+    "bed_b-bl": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/bed_b-bl.txt",
+    "bed_b-br": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/bed_b-br.txt",
+    "bed_b-ma": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/bed_b-ma.txt",
+    "bed_b-sa": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/bed_b-sa.txt",
+    "bed_b-tom": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/bed_b-tom.txt"
+  },
+  "syncedAt": "2026-05-17T07:32:56.383Z"
 }
