@@ -1211,7 +1211,7 @@
       "bedId": "b-ch",
       "name": "Day Lilies",
       "scientific": "Hemerocallis spp.",
-      "emoji": "🌼",
+      "emoji": "emoji_ch-daylily",
       "status": "alive",
       "water": "Low-moderate",
       "sun": "Part shade",
@@ -1241,7 +1241,8 @@
           "url": "https://www.google.com/search?q=Rust%20disease%20plant%20care%20fix"
         }
       ],
-      "category": "Bulbs"
+      "category": "Bulbs",
+      "howPlanted": ""
     },
     {
       "id": "ch-abelia",
@@ -9537,5 +9538,5 @@
       "pg_Check for scale and aphids — treat with neem oil if found": false
     }
   },
-  "syncedAt": "2026-05-17T22:24:23.543Z"
+  "syncedAt": "2026-05-17T22:24:51.139Z"
 }
