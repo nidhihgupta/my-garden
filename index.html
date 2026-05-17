@@ -364,7 +364,8 @@ function emojiHtml(val,px){
   const e=val||'🌿';
   const resolved=resolveEmoji(e);
   if(resolved){return`<img src="${resolved}" style="width:${px}px;height:${px}px;object-fit:contain;border-radius:4px;display:inline-block;vertical-align:middle">`;}
-  return`<span style="font-size:${px}px;line-height:1">${e}</span>`;
+  const display=e.startsWith('emoji_')?'🌿':e;
+  return`<span style="font-size:${px}px;line-height:1">${display}</span>`;
 }
 // Compresses pasted Genmoji image to 64x64 WebP ~3-6KB
 function compressEmojiImage(src,callback){
@@ -1048,7 +1049,11 @@ async function _deletePhotoFromGitHub(key){
 async function loadAllPhotos(){
   if(!Object.keys(photoRefs).length)return;
   await Promise.all(Object.entries(photoRefs).map(async([key,url])=>{
-    if(imageCache[key])return; // already loaded
+    if(imageCache[key])return; // already loaded (from garden-images.json)
+    // For emoji keys, prefer localStorage — captures unsync'd uploads from before last reload
+    if(key.startsWith('emoji_')){
+      try{const ls=localStorage.getItem('garden_img_'+key);if(ls&&ls.startsWith('data:')){imageCache[key]=ls;scheduleSyncImages();return;}}catch(e){}
+    }
     try{
       const r=await fetch(url+'?v='+Date.now());
       if(r.ok){const text=await r.text();if(text.startsWith('data:'))imageCache[key]=text;}
@@ -1311,6 +1316,14 @@ async function init(){
   });}catch(e){}
   if(_imgMigrated)syncImagesToGitHub();
   await loadAllPhotos();
+  // Recover emoji images still missing (no photoRefs entry) from localStorage
+  let _localRecovered=false;
+  [...S.plants,...S.indoorPlants].forEach(function(p){
+    if(!p.emoji||!p.emoji.startsWith('emoji_'))return;
+    if(imageCache[p.emoji])return;
+    try{const ls=localStorage.getItem('garden_img_'+p.emoji);if(ls&&ls.startsWith('data:')){imageCache[p.emoji]=ls;_localRecovered=true;}}catch(e){}
+  });
+  if(_localRecovered)scheduleSyncImages();
   await save();
   migratePlantCategories();
   updateHomeCounts();
