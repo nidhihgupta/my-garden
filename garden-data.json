@@ -1926,7 +1926,7 @@
     {
       "id": "br-hosta",
       "bedId": "b-br",
-      "name": "Empress Wu Hosta",
+      "name": "Blue Angel Hosta",
       "scientific": "Hosta Empress Wu",
       "emoji": "🍃",
       "status": "planned",
@@ -1968,7 +1968,8 @@
           "url": "https://www.google.com/search?q=Slug%20damage%20plant%20care%20fix"
         }
       ],
-      "category": "Perennials"
+      "category": "Perennials",
+      "howPlanted": ""
     },
     {
       "id": "br-anemone",
@@ -9440,5 +9441,5 @@
     "emoji_mp-jenny": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_mp-jenny.txt",
     "emoji_ch-jenny": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_ch-jenny.txt"
   },
-  "syncedAt": "2026-05-17T18:31:53.187Z"
+  "syncedAt": "2026-05-17T18:33:04.519Z"
 }
