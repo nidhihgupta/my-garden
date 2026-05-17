@@ -855,6 +855,7 @@ function checkYearReset(){
     if(stored!==thisYear){
       for(let m=1;m<=12;m++){try{localStorage.removeItem('sc'+m);}catch(e){}}
       localStorage.setItem('sched_year',thisYear);
+      syncToGitHub();
     }
   }catch(e){}
 }
@@ -995,7 +996,8 @@ async function ghWriteFile(data,sha){
 let _ghSha=null;
 async function syncToGitHub(){
   if(!ghConfigured())return;
-  const data={rooms:S.rooms,beds:S.beds,plants:S.plants,indoorPlants:S.indoorPlants,todos:S.todos,shopping:S.shopping,notes:S.notes,gardenNote:S.gardenNote,propagation:S.propagation,irrigation:S.irrigation,photoRefs,syncedAt:new Date().toISOString()};
+  const sched={};for(let m=1;m<=12;m++){try{const v=localStorage.getItem('sc'+m);if(v)sched[m]=JSON.parse(v);}catch(e){}}
+  const data={rooms:S.rooms,beds:S.beds,plants:S.plants,indoorPlants:S.indoorPlants,todos:S.todos,shopping:S.shopping,notes:S.notes,gardenNote:S.gardenNote,propagation:S.propagation,irrigation:S.irrigation,photoRefs,schedChecked:sched,syncedAt:new Date().toISOString()};
   const newSha=await ghWriteFile(data,_ghSha);
   if(newSha){
     _ghSha=newSha;
@@ -1122,6 +1124,7 @@ async function loadFromGitHub(){
   if(d.irrigation)S.irrigation=d.irrigation;
   if(d.gardenNote!==undefined)S.gardenNote=d.gardenNote;
   if(d.photoRefs)photoRefs=d.photoRefs;
+  if(d.schedChecked){Object.entries(d.schedChecked).forEach(([m,v])=>{try{localStorage.setItem('sc'+m,JSON.stringify(v));}catch(e){}});}
   return true;
 }
 
@@ -1740,7 +1743,7 @@ function selectMonth(m,el){document.querySelectorAll('.month-chip').forEach(c=>c
 function renderCurrentSchedule(){renderSchedule(currentScheduleMonth);}
 function filterSchedTab(tab,btn){currentSchedTab=tab;document.querySelectorAll('#sched-tab-bar .segment-btn').forEach(b=>b.classList.remove('active'));if(btn)btn.classList.add('active');renderSchedule(currentScheduleMonth);}
 function getSchedChecked(month){try{const v=localStorage.getItem('sc'+month);return v?JSON.parse(v):{};}catch(e){return {};}}
-function toggleSchedTask(month,key){const d=getSchedChecked(month);d[key]=!d[key];try{localStorage.setItem('sc'+month,JSON.stringify(d));}catch(e){}renderSchedule(month);}
+function toggleSchedTask(month,key){const d=getSchedChecked(month);d[key]=!d[key];try{localStorage.setItem('sc'+month,JSON.stringify(d));}catch(e){}syncToGitHub();renderSchedule(month);}
 function renderSchedule(month){
   // Always repopulate bed filter preserving selection
   const bedSel=document.getElementById('sched-filter-bed');
