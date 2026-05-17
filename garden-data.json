@@ -4805,13 +4805,15 @@
       "scientific": "Calibrachoa spp.",
       "emoji": "emoji_p1778170415313",
       "category": "Annuals",
-      "status": "planned",
+      "status": "alive",
       "water": "Regular — keep evenly moist",
       "sun": "Full sun to part sun",
       "notes": "",
       "fromCutting": false,
       "maintenance": [],
-      "trouble": []
+      "trouble": [],
+      "datePlanted": "2026-05-16",
+      "howPlanted": "bought"
     },
     {
       "id": "p1778171162160",
@@ -9405,5 +9407,5 @@
     "bed_b-sa": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/bed_b-sa.txt",
     "bed_b-tom": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/bed_b-tom.txt"
   },
-  "syncedAt": "2026-05-17T17:53:21.034Z"
+  "syncedAt": "2026-05-17T17:53:59.059Z"
 }
