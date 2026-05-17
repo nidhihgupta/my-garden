@@ -6350,7 +6350,7 @@
       "bedId": "b-rw",
       "name": "Oxalis Oregana",
       "scientific": "Oxalis oregana",
-      "emoji": "🌿",
+      "emoji": "emoji_rw-oxalis-oregana",
       "status": "planned",
       "water": "Low to moderate",
       "sun": "Full shade to part shade",
@@ -6374,7 +6374,8 @@
           "url": "https://www.google.com/search?q=Oxalis+oregana+summer+dormancy"
         }
       ],
-      "category": "Groundcovers"
+      "category": "",
+      "howPlanted": ""
     },
     {
       "id": "rw-clivia-add",
@@ -9533,5 +9534,5 @@
       "pg_Check for scale and aphids — treat with neem oil if found": true
     }
   },
-  "syncedAt": "2026-05-17T22:14:45.652Z"
+  "syncedAt": "2026-05-17T22:15:42.982Z"
 }
