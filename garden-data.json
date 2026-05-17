@@ -5534,7 +5534,7 @@
       "bedId": "b-berry",
       "name": "Fatsia japonica",
       "scientific": "Fatsia japonica",
-      "emoji": "🌿",
+      "emoji": "emoji_p1778195377685437",
       "status": "planned",
       "water": "Moderate",
       "sun": "Part shade",
@@ -5564,7 +5564,8 @@
         }
       ],
       "category": "Tropical Foliage",
-      "isIndoor": false
+      "isIndoor": false,
+      "howPlanted": ""
     },
     {
       "id": "p1778514288212",
@@ -9542,5 +9543,5 @@
       "pg_Check for scale and aphids — treat with neem oil if found": false
     }
   },
-  "syncedAt": "2026-05-17T22:35:53.283Z"
+  "syncedAt": "2026-05-17T22:36:10.984Z"
 }
