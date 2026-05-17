@@ -3465,7 +3465,7 @@
     {
       "id": "ps-orange",
       "bedId": "b-berry",
-      "name": "Orange Tree",
+      "name": "Citrus Tree",
       "scientific": "Citrus sinensis",
       "emoji": "🍊",
       "status": "alive",
@@ -8735,6 +8735,13 @@
   ],
   "todos": [
     {
+      "id": "t1779053256633",
+      "text": "Support Jasmine at top of the pillar post flowering",
+      "done": false,
+      "date": "2026-06-13",
+      "category": "Maintenance"
+    },
+    {
       "id": "t1778942607819",
       "text": "In late June / early July - light sprinkle of fertilizer for hydrangeas (Epsoma Holly tone)",
       "done": false,
@@ -9441,5 +9448,5 @@
     "emoji_mp-jenny": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_mp-jenny.txt",
     "emoji_ch-jenny": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_ch-jenny.txt"
   },
-  "syncedAt": "2026-05-17T18:33:04.519Z"
+  "syncedAt": "2026-05-17T21:27:36.649Z"
 }
