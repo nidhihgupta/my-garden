@@ -7787,7 +7787,7 @@
       "section": "Wall Shelves",
       "name": "Alocasia 'Regal Shields'",
       "scientific": "Alocasia 'Regal Shields'",
-      "emoji": "🖤",
+      "emoji": "emoji_ip20",
       "status": "alive",
       "water": "When top 2 inches dry",
       "sun": "Bright indirect",
@@ -7858,7 +7858,8 @@
           "url": "https://www.google.com/search?q=Yellow%20leaves%20(overwatering)%20plant%20care%20fix"
         }
       ],
-      "category": "Tropical Foliage"
+      "category": "Tropical Foliage",
+      "howPlanted": ""
     },
     {
       "id": "ip21",
@@ -9406,7 +9407,8 @@
     "bed_b-br": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/bed_b-br.txt",
     "bed_b-ma": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/bed_b-ma.txt",
     "bed_b-sa": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/bed_b-sa.txt",
-    "bed_b-tom": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/bed_b-tom.txt"
+    "bed_b-tom": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/bed_b-tom.txt",
+    "emoji_ip20": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_ip20.txt"
   },
-  "syncedAt": "2026-05-17T18:00:10.775Z"
+  "syncedAt": "2026-05-17T18:04:03.040Z"
 }
