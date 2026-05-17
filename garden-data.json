@@ -9415,8 +9415,9 @@
       "pg_Remove dead outer leaves as needed": true,
       "ig_Rotate weekly for even growth — leans toward light": true,
       "ig_Remove offsets (pups) when they appear": true,
-      "pg_Pinch tips in spring for bushier plant": true
+      "pg_Pinch tips in spring for bushier plant": true,
+      "pg_Check for scale and aphids — treat with neem oil if found": true
     }
   },
-  "syncedAt": "2026-05-17T21:42:05.211Z"
+  "syncedAt": "2026-05-17T21:42:50.308Z"
 }
