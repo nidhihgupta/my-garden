@@ -6311,7 +6311,7 @@
       "bedId": "b-rw",
       "name": "Aucuba",
       "scientific": "Aucuba japonica",
-      "emoji": "🌿",
+      "emoji": "emoji_rw-aucuba",
       "status": "alive",
       "water": "Low to moderate",
       "sun": "Full to part shade",
@@ -6344,7 +6344,8 @@
           "url": "https://www.google.com/search?q=Aucuba+leaf+scorch+fix"
         }
       ],
-      "category": "Shrubs"
+      "category": "Shrubs",
+      "howPlanted": ""
     },
     {
       "id": "rw-oxalis-oregana",
@@ -9436,7 +9437,8 @@
     "bed_b-sa": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/bed_b-sa.txt",
     "bed_b-tom": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/bed_b-tom.txt",
     "emoji_ip20": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_ip20.txt",
-    "emoji_mp-aucuba": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_mp-aucuba.txt"
+    "emoji_mp-aucuba": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_mp-aucuba.txt",
+    "emoji_rw-aucuba": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_rw-aucuba.txt"
   },
-  "syncedAt": "2026-05-17T18:12:47.420Z"
+  "syncedAt": "2026-05-17T18:13:20.615Z"
 }
