@@ -7676,7 +7676,7 @@
       "section": "Wall Shelves",
       "name": "Coin Plant",
       "scientific": "Pilea peperomioides",
-      "emoji": "🪙",
+      "emoji": "emoji_ip18",
       "status": "alive",
       "water": "When top inch dry",
       "sun": "Bright indirect",
@@ -7733,7 +7733,8 @@
           "url": "https://www.google.com/search?q=Curling%20leaves%20(underwatering)%20plant%20care%20fix"
         }
       ],
-      "category": "Tropical Foliage"
+      "category": "Tropical Foliage",
+      "howPlanted": ""
     },
     {
       "id": "ip19",
@@ -9432,7 +9433,8 @@
     "emoji_mp-aucuba": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_mp-aucuba.txt",
     "emoji_rw-aucuba": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_rw-aucuba.txt",
     "emoji_fr-mondo": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_fr-mondo.txt",
-    "emoji_mp-bridal": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_mp-bridal.txt"
+    "emoji_mp-bridal": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_mp-bridal.txt",
+    "emoji_ip18": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_ip18.txt"
   },
-  "syncedAt": "2026-05-17T18:27:21.797Z"
+  "syncedAt": "2026-05-17T18:28:58.822Z"
 }
