@@ -6099,7 +6099,7 @@
       "bedId": "b-mp",
       "name": "Bridal Wreath Spirea",
       "scientific": "Spiraea prunifolia",
-      "emoji": "🌿",
+      "emoji": "emoji_mp-bridal",
       "status": "alive",
       "water": "Moderate",
       "sun": "Full sun to part shade",
@@ -6139,7 +6139,8 @@
           "url": "https://www.google.com/search?q=Bridal+Wreath+Spirea+aphids+fix"
         }
       ],
-      "category": "Shrubs"
+      "category": "Shrubs",
+      "howPlanted": ""
     },
     {
       "id": "rw-ferns",
@@ -9429,7 +9430,8 @@
     "emoji_ip20": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_ip20.txt",
     "emoji_mp-aucuba": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_mp-aucuba.txt",
     "emoji_rw-aucuba": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_rw-aucuba.txt",
-    "emoji_fr-mondo": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_fr-mondo.txt"
+    "emoji_fr-mondo": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_fr-mondo.txt",
+    "emoji_mp-bridal": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_mp-bridal.txt"
   },
-  "syncedAt": "2026-05-17T18:24:15.043Z"
+  "syncedAt": "2026-05-17T18:26:07.682Z"
 }
