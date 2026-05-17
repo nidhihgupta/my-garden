@@ -2354,7 +2354,7 @@
     {
       "id": "fw-rose",
       "bedId": "b-fw",
-      "name": "Rose",
+      "name": "Knock out Rose",
       "scientific": "Rosa White Out",
       "emoji": "emoji_fw-rose",
       "status": "alive",
@@ -9407,5 +9407,5 @@
     "bed_b-sa": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/bed_b-sa.txt",
     "bed_b-tom": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/bed_b-tom.txt"
   },
-  "syncedAt": "2026-05-17T17:53:59.059Z"
+  "syncedAt": "2026-05-17T17:54:22.218Z"
 }
