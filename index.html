@@ -978,11 +978,29 @@ async function ghWriteFile(data,sha){
   };
   let result=await _doWrite(sha);
   if(!result.ok&&result.status===409){
-    // SHA conflict — re-read current SHA and retry once
+    // SHA conflict — merge remote imageRefs to avoid clobbering refs written by another device/tab
     try{
       const cur=await fetch(`https://api.github.com/repos/${c.user}/${c.repo}/contents/garden-data.json`,
         {headers:{'Authorization':'token '+c.token,'Accept':'application/vnd.github.v3+json'}});
-      if(cur.ok){const cd=await cur.json();result=await _doWrite(cd.sha);}
+      if(cur.ok){
+        const cd=await cur.json();
+        let remote=null;
+        if(cd.content){
+          const bytes=Uint8Array.from(atob(cd.content.replace(/\n/g,'')),ch=>ch.charCodeAt(0));
+          try{remote=JSON.parse(new TextDecoder().decode(bytes));}catch(e){}
+        } else if(cd.download_url){
+          try{const dr=await fetch(cd.download_url);if(dr.ok)remote=await dr.json();}catch(e){}
+        }
+        if(remote&&remote.imageRefs){
+          // Union: keep all keys from both sides; local wins on conflict (more recent)
+          Object.entries(remote.imageRefs).forEach(([k,v])=>{
+            if(!data.imageRefs[k])data.imageRefs[k]=v;
+          });
+          // Mirror back to global imageRefs so in-memory state stays consistent
+          Object.assign(imageRefs,data.imageRefs);
+        }
+        result=await _doWrite(cd.sha);
+      }
     }catch(e){}
   }
   if(result.ok){return result.sha;}
@@ -1003,7 +1021,6 @@ async function syncToGitHub(){
   }
 }
 
-let _uploadSaveTimer=null;
 async function uploadImage(key,dataUri){
   if(!ghConfigured()||!dataUri)return;
   const c=ghCredentials();
@@ -1022,7 +1039,8 @@ async function uploadImage(key,dataUri){
       {method:'PUT',headers:{'Authorization':'token '+c.token,'Accept':'application/vnd.github.v3+json','Content-Type':'application/json'},body:JSON.stringify(body)});
     if(r.ok){
       imageRefs[key]=`https://raw.githubusercontent.com/${c.user}/${c.repo}/main/${path}`;
-      clearTimeout(_uploadSaveTimer);_uploadSaveTimer=setTimeout(()=>save(),2000);
+      // Persist the ref immediately — never leave it floating in memory waiting for a debounce
+      await save();
     }
   }catch(e){console.log('uploadImage error:',e);}
 }
@@ -1213,6 +1231,7 @@ async function init(){
       S.gardenNote=await DB.get('gardenNote')||'';
       S.propagation=await DB.get('propagation')||defaultPropagation;
       S.irrigation=await DB.get('irrigation')||[];
+      imageRefs=await DB.get('imageRefs')||{};
     }
   }
   await DB.set('dataVersion',DATA_VERSION);
@@ -1311,7 +1330,8 @@ async function save(){
   await DB.set('gardenNote',S.gardenNote);
   await DB.set('propagation',S.propagation);
   await DB.set('irrigation',S.irrigation);
-  syncToGitHub();
+  await DB.set('imageRefs',imageRefs);
+  await syncToGitHub();
 }
 function showScreen(name){
   document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
