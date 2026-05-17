@@ -1126,7 +1126,8 @@ async function loadFromGitHub(){
   if(d.propagation)S.propagation=d.propagation;
   if(d.irrigation)S.irrigation=d.irrigation;
   if(d.gardenNote!==undefined)S.gardenNote=d.gardenNote;
-  if(d.photoRefs)photoRefs=d.photoRefs;
+  const loadedRefs=d.photoRefs&&Object.keys(d.photoRefs).length?d.photoRefs:d.imageRefs;
+  if(loadedRefs&&Object.keys(loadedRefs).length)photoRefs=loadedRefs;
   if(d.schedChecked){Object.entries(d.schedChecked).forEach(([m,v])=>{try{localStorage.setItem('sc'+m,JSON.stringify(v));}catch(e){}});}
   return true;
 }
