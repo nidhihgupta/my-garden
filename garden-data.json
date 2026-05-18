@@ -3935,7 +3935,7 @@
       "datePlanted": "",
       "nursery": "",
       "fromCutting": false,
-      "notes": "Existing. Orange/coral bush.",
+      "notes": "Existing. ",
       "maintenance": [
         {
           "task": "Deadhead every 2 weeks — outward facing bud, 45° cut",
@@ -3970,7 +3970,8 @@
           "url": "https://www.google.com/search?q=Black%20spot%20plant%20care%20fix"
         }
       ],
-      "category": "Bush Roses"
+      "category": "Bush Roses",
+      "howPlanted": ""
     },
     {
       "id": "brs-daustinrose",
@@ -9546,5 +9547,5 @@
       "pg_Check for scale and aphids — treat with neem oil if found": false
     }
   },
-  "syncedAt": "2026-05-17T22:39:25.585Z"
+  "syncedAt": "2026-05-18T00:20:46.401Z"
 }
