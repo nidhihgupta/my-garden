@@ -9354,6 +9354,7 @@
     }
   ],
   "irrigation": [],
+  "projects": [],
   "photoRefs": {
     "bed_b-fl": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/bed_b-fl.txt",
     "bed_b-mp": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/bed_b-mp.txt",
@@ -9548,5 +9549,5 @@
       "pg_Check for scale and aphids — treat with neem oil if found": false
     }
   },
-  "syncedAt": "2026-05-18T17:26:24.329Z"
+  "syncedAt": "2026-05-18T18:23:08.757Z"
 }
