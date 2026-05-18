@@ -198,7 +198,6 @@ body{font-family:'DM Sans',sans-serif;background:var(--warm-white);color:var(--t
   <input type="file" id="card-photo-input" accept="image/*" style="display:none" onchange="handleCardPhotoUpload(event)">
   <div class="quick-actions"><div class="section-title">Quick Access</div><div class="quick-row"><div class="quick-btn" onclick="showScreen('todo')"><span>✅</span><span>To-Do</span></div><div class="quick-btn" onclick="showScreen('shopping')"><span>🛒</span><span>Shopping</span></div><div class="quick-btn" onclick="showScreen('schedule')"><span>📅</span><span>Schedule</span></div><div class="quick-btn" onclick="showScreen('notes')"><span>📝</span><span>Notes</span></div></div></div>
   <div class="quick-actions"><div class="section-title">Garden Tools</div><div class="quick-row"><div class="quick-btn" onclick="showScreen('propagation')"><span>🌱</span><span>Cuttings</span></div><div class="quick-btn" onclick="showScreen('irrigation')"><span>💧</span><span>Irrigation</span></div><div class="quick-btn" onclick="addToTodo()"><span>➕</span><span>Add Task</span></div><div class="quick-btn" onclick="showScreen('allplants')"><span>🔍</span><span>All Plants</span></div></div></div>
-  <div style="padding:4px 20px 8px;text-align:right"><span style="font-size:10px;color:var(--text-light);cursor:pointer" onclick="resetToDefaults()">↺ Reset data</span></div>
 </div>
 <div id="screen-outdoor" class="screen">
   <div style="position:relative"><div class="room-hero" id="outdoor-hero-area"><span class="room-hero-placeholder">🌳</span></div><div style="position:absolute;top:56px;left:20px;cursor:pointer;background:rgba(255,255,255,0.9);border-radius:20px;padding:6px 14px;font-size:13px;font-weight:500" onclick="showScreen('home')">← Home</div><button class="room-hero-edit" onclick="triggerSectionImageUpload('outdoor')">📷 Edit Photo</button></div>
@@ -327,12 +326,17 @@ body{font-family:'DM Sans',sans-serif;background:var(--warm-white);color:var(--t
       <button class="btn-secondary" onclick="forceSyncToGitHub()">⬆️ Force Sync Now</button>
       <button class="btn-secondary" onclick="restoreFromGitHub()">⬇️ Restore from GitHub</button>
     </div>
-    <div style="background:white;border-radius:var(--radius);padding:20px;box-shadow:var(--shadow)">
+    <div style="background:white;border-radius:var(--radius);padding:20px;margin-bottom:16px;box-shadow:var(--shadow)">
       <h3 style="font-family:'Playfair Display',serif;font-size:18px;margin-bottom:8px;color:var(--text-dark)">💾 Local Backup</h3>
       <p style="font-size:13px;color:var(--text-light);margin-bottom:16px">Download all your data as a JSON file. Keep it somewhere safe as a manual backup.</p>
       <button class="btn-primary" onclick="exportDataJSON()">⬇️ Download Backup</button>
       <button class="btn-secondary" onclick="document.getElementById('import-json-input').click()">⬆️ Restore from File</button>
       <input type="file" id="import-json-input" accept=".json" style="display:none" onchange="importDataJSON(event)">
+    </div>
+    <div style="background:white;border-radius:var(--radius);padding:20px;box-shadow:var(--shadow);border:1px solid #f0d0d0">
+      <h3 style="font-family:'Playfair Display',serif;font-size:18px;margin-bottom:8px;color:var(--terracotta)">⚠️ Danger Zone</h3>
+      <p style="font-size:13px;color:var(--text-light);margin-bottom:16px">Wipes all local data and reloads app defaults. GitHub data is not affected — you can restore from GitHub afterwards. Only use this if something is seriously broken.</p>
+      <button class="btn-secondary" style="border-color:var(--terracotta);color:var(--terracotta)" onclick="resetToDefaults()">↺ Reset Local Data</button>
     </div>
   </div>
 </div>
