@@ -9356,6 +9356,12 @@
   "irrigation": [],
   "projects": [
     {
+      "id": "proj1779128725068",
+      "title": "Tree Trimming Records",
+      "date": "2026-05-18",
+      "notes": ""
+    },
+    {
       "id": "proj1779128702798",
       "title": "2026 Projects",
       "date": "2026-05-18",
@@ -9556,5 +9562,5 @@
       "pg_Check for scale and aphids — treat with neem oil if found": false
     }
   },
-  "syncedAt": "2026-05-18T18:25:08.504Z"
+  "syncedAt": "2026-05-18T18:25:25.071Z"
 }
