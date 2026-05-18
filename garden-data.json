@@ -4020,7 +4020,8 @@
           "url": "https://www.google.com/search?q=Black%20spot%20plant%20care%20fix"
         }
       ],
-      "category": "Bush Roses"
+      "category": "Bush Roses",
+      "howPlanted": ""
     },
     {
       "id": "brs-dahlia",
@@ -9547,5 +9548,5 @@
       "pg_Check for scale and aphids — treat with neem oil if found": false
     }
   },
-  "syncedAt": "2026-05-18T00:20:46.401Z"
+  "syncedAt": "2026-05-18T00:22:16.623Z"
 }
