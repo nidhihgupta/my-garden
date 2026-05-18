@@ -293,10 +293,10 @@ body{font-family:'DM Sans',sans-serif;background:var(--warm-white);color:var(--t
 </div>
 <div id="screen-notes" class="screen">
   <div class="header"><div class="header-back" onclick="showScreen('home')">← Home</div><h1>📝 Notes</h1></div>
-  <div class="segment"><div class="segment-btn active" onclick="showNoteTab('notes',this)">Notes</div><div class="segment-btn" onclick="showNoteTab('propagation',this)">Cuttings</div></div>
+  <div class="segment"><div class="segment-btn active" onclick="showNoteTab('notes',this)">Notes</div><div class="segment-btn" onclick="showNoteTab('projects',this)">Projects</div></div>
   <div id="notes-tab"><div class="list-container" id="notes-list"></div></div>
-  <div id="propagation-tab" style="display:none"><div class="list-container" id="prop-list-inline"></div></div>
-  <button class="fab" id="notes-fab" onclick="addNote()">+</button>
+  <div id="projects-tab" style="display:none"><div class="list-container" id="projects-list"></div></div>
+  <button class="fab" id="notes-fab" style="display:none">+</button>
 </div>
 <div id="screen-propagation" class="screen">
   <div class="header"><div class="header-back" onclick="showScreen('home')">← Home</div><h1>🌱 Cuttings</h1></div>
@@ -864,7 +864,7 @@ function checkYearReset(){
   }catch(e){}
 }
 
-let S={beds:[],plants:[],todos:[],shopping:[],notes:[],gardenNote:'',propagation:[],irrigation:[],rooms:[],indoorPlants:[],currentBed:null,currentPlant:null,currentYard:'front',currentRoom:null,todoFilter:'pending',shopFilter:'needed',bedFilter:'all',plantSource:null,_noteTimer:null};
+let S={beds:[],plants:[],todos:[],shopping:[],notes:[],gardenNote:'',propagation:[],irrigation:[],projects:[],rooms:[],indoorPlants:[],currentBed:null,currentPlant:null,currentYard:'front',currentRoom:null,todoFilter:'pending',shopFilter:'needed',bedFilter:'all',plantSource:null,_noteTimer:null};
 let imageCache={};   // emoji key → base64 DataUri (synced to garden-images.json)
 let photoRefs={};    // photo key → GitHub raw URL (synced to garden-data.json)
 let _ghImagesSha=null;
@@ -1001,7 +1001,7 @@ let _ghSha=null;
 async function syncToGitHub(){
   if(!ghConfigured())return;
   const sched={};for(let m=1;m<=12;m++){try{const v=localStorage.getItem('sc'+m);if(v)sched[m]=JSON.parse(v);}catch(e){}}
-  const data={rooms:S.rooms,beds:S.beds,plants:S.plants,indoorPlants:S.indoorPlants,todos:S.todos,shopping:S.shopping,notes:S.notes,gardenNote:S.gardenNote,propagation:S.propagation,irrigation:S.irrigation,photoRefs,schedChecked:sched,syncedAt:new Date().toISOString()};
+  const data={rooms:S.rooms,beds:S.beds,plants:S.plants,indoorPlants:S.indoorPlants,todos:S.todos,shopping:S.shopping,notes:S.notes,gardenNote:S.gardenNote,propagation:S.propagation,irrigation:S.irrigation,projects:S.projects,photoRefs,schedChecked:sched,syncedAt:new Date().toISOString()};
   const newSha=await ghWriteFile(data,_ghSha);
   if(newSha){
     _ghSha=newSha;
@@ -1130,6 +1130,7 @@ async function loadFromGitHub(){
   if(d.notes)S.notes=d.notes;
   if(d.propagation)S.propagation=d.propagation;
   if(d.irrigation)S.irrigation=d.irrigation;
+  if(d.projects)S.projects=d.projects;
   if(d.gardenNote!==undefined)S.gardenNote=d.gardenNote;
   const loadedRefs=d.photoRefs&&Object.keys(d.photoRefs).length?d.photoRefs:d.imageRefs;
   if(loadedRefs&&Object.keys(loadedRefs).length)photoRefs=loadedRefs;
@@ -1202,7 +1203,7 @@ async function restoreFromGitHub(){
 }
 
 function exportDataJSON(){
-  const data={rooms:S.rooms,beds:S.beds,plants:S.plants,indoorPlants:S.indoorPlants,todos:S.todos,shopping:S.shopping,notes:S.notes,gardenNote:S.gardenNote,propagation:S.propagation,irrigation:S.irrigation,exportedAt:new Date().toISOString()};
+  const data={rooms:S.rooms,beds:S.beds,plants:S.plants,indoorPlants:S.indoorPlants,todos:S.todos,shopping:S.shopping,notes:S.notes,gardenNote:S.gardenNote,propagation:S.propagation,irrigation:S.irrigation,projects:S.projects,exportedAt:new Date().toISOString()};
   const a=document.createElement('a');
   a.href=URL.createObjectURL(new Blob([JSON.stringify(data,null,2)],{type:'application/json'}));
   a.download='garden-backup-'+new Date().toISOString().split('T')[0]+'.json';
@@ -1224,6 +1225,7 @@ function importDataJSON(e){
       if(d.notes)S.notes=d.notes;
       if(d.propagation)S.propagation=d.propagation;
       if(d.irrigation)S.irrigation=d.irrigation;
+      if(d.projects)S.projects=d.projects;
       if(d.gardenNote!==undefined)S.gardenNote=d.gardenNote;
       await save();
       updateHomeCounts();
@@ -1261,6 +1263,7 @@ async function init(){
       S.gardenNote=await DB.get('gardenNote')||'';
       S.propagation=await DB.get('propagation')||defaultPropagation;
       S.irrigation=await DB.get('irrigation')||[];
+      S.projects=await DB.get('projects')||[];
     }
   }
   await DB.set('dataVersion',DATA_VERSION);
@@ -1342,6 +1345,7 @@ async function save(){
   await DB.set('gardenNote',S.gardenNote);
   await DB.set('propagation',S.propagation);
   await DB.set('irrigation',S.irrigation);
+  await DB.set('projects',S.projects);
   syncToGitHub();
 }
 function showScreen(name){
@@ -1872,10 +1876,10 @@ function showNoteTab(tab,btn){
   document.querySelectorAll('#screen-notes .segment-btn').forEach(b=>b.classList.remove('active'));
   if(btn)btn.classList.add('active');
   document.getElementById('notes-tab').style.display=tab==='notes'?'block':'none';
-  document.getElementById('propagation-tab').style.display=tab==='propagation'?'block':'none';
+  document.getElementById('projects-tab').style.display=tab==='projects'?'block':'none';
   const fab=document.getElementById('notes-fab');
-  if(tab==='notes'){fab.style.display='none';}
-  else{fab.style.display='';fab.onclick=addPropagation;renderPropagationInline();}
+  if(tab==='projects'){fab.style.display='';fab.onclick=addProject;renderProjects();}
+  else{fab.style.display='none';}
   if(tab==='notes')renderNotes();
 }
 function renderNotes(){
@@ -1890,6 +1894,36 @@ function renderNotes(){
   ta.addEventListener('input',function(){S.gardenNote=this.value;clearTimeout(S._noteTimer);S._noteTimer=setTimeout(()=>save(),1500);});
 }
 function addNote(){}
+function renderProjects(){
+  const el=document.getElementById('projects-list');
+  if(!S.projects||!S.projects.length){el.innerHTML='<div class="empty-state"><span>🔨</span><p>No projects logged yet.<br>Tap + to add one.</p></div>';return;}
+  el.innerHTML='<div style="padding:16px 20px 80px">'+[...S.projects].sort((a,b)=>b.date.localeCompare(a.date)).map(proj=>`<div style="background:white;border-radius:var(--radius);padding:16px;margin-bottom:12px;border:1px solid var(--border);box-shadow:var(--shadow)"><div style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:6px"><div style="flex:1"><h4 style="font-size:15px;font-weight:500;margin:0 0 2px">${proj.title}</h4><div style="font-size:12px;color:var(--text-light)">${proj.date||'—'}</div></div><div style="display:flex;gap:12px;flex-shrink:0;margin-left:8px"><span style="font-size:12px;color:var(--sage-dark);cursor:pointer" onclick="editProject('${proj.id}')">Edit</span><span style="font-size:12px;color:var(--terracotta);cursor:pointer" onclick="deleteProject('${proj.id}')">Delete</span></div></div>${proj.notes?`<div style="font-size:13px;color:var(--text-mid);white-space:pre-wrap;margin-top:8px;line-height:1.5">${proj.notes}</div>`:''}</div>`).join('')+'</div>';
+}
+function addProject(){
+  document.getElementById('modal-body').innerHTML=`<h3>New Project</h3><div class="form-group"><label class="form-label">Title *</label><input class="form-input" id="proj-title" placeholder="e.g. Tree Trimming 2026"></div><div class="form-group"><label class="form-label">Date</label><input class="form-input" type="date" id="proj-date" value="${new Date().toISOString().split('T')[0]}"></div><div class="form-group"><label class="form-label">Notes</label><textarea class="form-textarea" id="proj-notes" placeholder="What was done, who did it, observations..." rows="6"></textarea></div><button class="btn-primary" onclick="saveProject()">Save</button><button class="btn-secondary" onclick="closeModal()">Cancel</button>`;
+  document.getElementById('modal-overlay').classList.add('active');
+}
+function editProject(id){
+  const proj=S.projects.find(x=>x.id===id);if(!proj)return;
+  document.getElementById('modal-body').innerHTML=`<h3>Edit Project</h3><div class="form-group"><label class="form-label">Title *</label><input class="form-input" id="proj-title" value="${proj.title}"></div><div class="form-group"><label class="form-label">Date</label><input class="form-input" type="date" id="proj-date" value="${proj.date||''}"></div><div class="form-group"><label class="form-label">Notes</label><textarea class="form-textarea" id="proj-notes" rows="6">${proj.notes||''}</textarea></div><button class="btn-primary" onclick="saveEditProject('${id}')">Save</button><button class="btn-secondary" onclick="closeModal()">Cancel</button>`;
+  document.getElementById('modal-overlay').classList.add('active');
+}
+function saveProject(){
+  const title=document.getElementById('proj-title').value.trim();if(!title)return;
+  S.projects.unshift({id:'proj'+Date.now(),title,date:document.getElementById('proj-date').value,notes:document.getElementById('proj-notes').value.trim()});
+  save();closeModal();renderProjects();
+}
+function saveEditProject(id){
+  const proj=S.projects.find(x=>x.id===id);if(!proj)return;
+  const title=document.getElementById('proj-title').value.trim();if(title)proj.title=title;
+  proj.date=document.getElementById('proj-date').value;
+  proj.notes=document.getElementById('proj-notes').value.trim();
+  save();closeModal();renderProjects();
+}
+function deleteProject(id){
+  if(!confirm('Delete this project record?'))return;
+  S.projects=S.projects.filter(x=>x.id!==id);save();renderProjects();
+}
 function renderPropagation(){document.getElementById('prop-list').innerHTML=S.propagation.length===0?'<div class="empty-state"><span>🌱</span><p>No cuttings logged yet.</p></div>':S.propagation.map(p=>propHTML(p)).join('');}
 function renderPropagationInline(){document.getElementById('prop-list-inline').innerHTML=S.propagation.length===0?'<div class="empty-state"><span>🌱</span><p>No cuttings logged yet.</p></div>':S.propagation.map(p=>propHTML(p)).join('');}
 function propHTML(p){const sl={pending:'⏳ Rooting',success:'✓ Survived',failed:'✕ Failed'};return`<div class="prop-item"><div style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:4px"><h4 style="flex:1;margin:0">${p.plant}</h4><div style="display:flex;gap:12px;flex-shrink:0;margin-left:8px"><span style="font-size:12px;color:var(--sage-dark);cursor:pointer" onclick="editPropagation('${p.id}')">Edit</span><span style="font-size:12px;color:var(--terracotta);cursor:pointer" onclick="deleteProp('${p.id}')">Delete</span></div></div><div style="font-size:12px;color:var(--text-light);margin-bottom:8px">Cut: ${p.dateCut||'—'} · Planted: ${p.datePlanted||'Not yet'}</div>${p.notes?`<div style="font-size:12px;color:var(--text-mid);margin-bottom:8px">${p.notes}</div>`:''}<span class="prop-status ${p.status||'pending'}" style="cursor:pointer" onclick="cyclePropStatus('${p.id}')" title="Tap to change status">${sl[p.status]||'⏳ Rooting'} ↻</span></div>`;}
