@@ -9135,8 +9135,9 @@
       "pg_Trim back to control spread": true,
       "pg_High phosphorus fertilizer monthly": true,
       "pg_Deadhead spent blooms": true,
-      "pg_Prune heavily after flowering in spring to maintain shape": true
+      "pg_Prune heavily after flowering in spring to maintain shape": true,
+      "ig_Cut flower spikes when they appear": true
     }
   },
-  "syncedAt": "2026-05-23T05:00:05.979Z"
+  "syncedAt": "2026-05-23T05:00:30.930Z"
 }
