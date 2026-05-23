@@ -9131,8 +9131,9 @@
       "pg_Pinch tips in spring for bushier plant": true,
       "pg_Check for scale and aphids — treat with neem oil if found": true,
       "pg_Feed diluted fertilizer after flowering": true,
-      "pg_Mulch roots to keep cool — never cultivate around base": true
+      "pg_Mulch roots to keep cool — never cultivate around base": true,
+      "pg_Trim back to control spread": true
     }
   },
-  "syncedAt": "2026-05-23T04:59:19.142Z"
+  "syncedAt": "2026-05-23T04:59:22.823Z"
 }
