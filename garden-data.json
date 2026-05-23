@@ -9130,8 +9130,9 @@
       "ig_Remove offsets (pups) when they appear": true,
       "pg_Pinch tips in spring for bushier plant": true,
       "pg_Check for scale and aphids — treat with neem oil if found": true,
-      "pg_Feed diluted fertilizer after flowering": true
+      "pg_Feed diluted fertilizer after flowering": true,
+      "pg_Mulch roots to keep cool — never cultivate around base": true
     }
   },
-  "syncedAt": "2026-05-23T04:59:13.493Z"
+  "syncedAt": "2026-05-23T04:59:19.142Z"
 }
