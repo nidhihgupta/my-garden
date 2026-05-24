@@ -6396,36 +6396,6 @@
       "howPlanted": ""
     },
     {
-      "id": "rw-clivia-add",
-      "bedId": "b-rw",
-      "name": "Clivias (additional)",
-      "scientific": "Clivia miniata",
-      "emoji": "emoji_rw-clivia",
-      "status": "planned",
-      "water": "Low once established",
-      "sun": "Full shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Additional clivias to fill gaps. Orange trumpet flowers spring-summer.",
-      "maintenance": [
-        {
-          "task": "Feed diluted fertilizer after flowering",
-          "months": [
-            4,
-            5
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Not flowering",
-          "url": "https://www.google.com/search?q=Not%20flowering%20plant%20care%20fix"
-        }
-      ],
-      "category": "Bulbs"
-    },
-    {
       "id": "fl-catmint",
       "bedId": "b-fl",
       "name": "Catmint",
@@ -9147,5 +9117,5 @@
       "ig_Cut flower spikes when they appear": true
     }
   },
-  "syncedAt": "2026-05-24T04:00:36.213Z"
+  "syncedAt": "2026-05-24T04:11:51.699Z"
 }
