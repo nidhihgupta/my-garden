@@ -4202,29 +4202,24 @@
       "fromCutting": false,
       "maintenance": [
         {
-          "task": "Deep water monthly — slow hose at drip line",
-          "months": [
-            6,
-            7,
-            8,
-            9
-          ]
-        },
-        {
-          "task": "Feed slow release balanced fertilizer in spring",
-          "months": [
-            3
-          ]
-        },
-        {
           "task": "Check for dead/crossing branches — remove cleanly",
           "months": [
             1,
             2
           ]
+        },
+        {
+          "task": "Palm fertilizer April - Aug",
+          "months": [
+            4,
+            6,
+            8
+          ]
         }
       ],
-      "trouble": []
+      "trouble": [],
+      "datePlanted": "",
+      "howPlanted": ""
     },
     {
       "id": "p1778117705415",
@@ -9117,5 +9112,5 @@
       "ig_Cut flower spikes when they appear": true
     }
   },
-  "syncedAt": "2026-05-24T04:11:51.699Z"
+  "syncedAt": "2026-05-24T04:47:35.422Z"
 }
