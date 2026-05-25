@@ -9128,7 +9128,10 @@
       "pg_Wipe leaves monthly to remove dust": true,
       "pg_Feed after first flush": true,
       "pg_Feed every 4-6 weeks for continuous bloom": true
+    },
+    "6": {
+      "s_Feeding_Feed dahlias high phosphorus": true
     }
   },
-  "syncedAt": "2026-05-25T20:14:37.625Z"
+  "syncedAt": "2026-05-25T20:14:44.722Z"
 }
