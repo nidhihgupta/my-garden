@@ -9109,8 +9109,9 @@
       "pg_High phosphorus fertilizer monthly": true,
       "pg_Deadhead spent blooms": true,
       "pg_Prune heavily after flowering in spring to maintain shape": true,
-      "ig_Cut flower spikes when they appear": true
+      "ig_Cut flower spikes when they appear": true,
+      "pg_Feed citrus fertilizer": true
     }
   },
-  "syncedAt": "2026-05-25T01:12:55.312Z"
+  "syncedAt": "2026-05-25T01:15:33.317Z"
 }
