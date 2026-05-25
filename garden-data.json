@@ -9112,8 +9112,9 @@
       "ig_Cut flower spikes when they appear": true,
       "pg_Feed citrus fertilizer": true,
       "pg_Feed rose fertilizer after first bloom flush": true,
-      "pg_Wipe leaves monthly to remove dust": true
+      "pg_Wipe leaves monthly to remove dust": true,
+      "pg_Feed after first flush": true
     }
   },
-  "syncedAt": "2026-05-25T01:15:52.428Z"
+  "syncedAt": "2026-05-25T01:16:02.701Z"
 }
