@@ -8899,6 +8899,12 @@
   "irrigation": [],
   "projects": [
     {
+      "id": "proj1779685938183",
+      "title": "2026 Irrigation project (bring all valves over ground)",
+      "date": "2026-05-25",
+      "notes": "Went with Shruti’s guy David. \n\nQuotes below:\nAffordable irrigation: \n$140 per hour \n4-6 hours \nAbout 6 valves \nNo trees \nService valve - 1-2 hours \n\nDouglas irrigation: whacko!!\n$60 per hour. Bradley. Will take about 2 days \nBut he didn’t inspire much confidence \n\nRodrigo: \n$3900 for the project \n\n✅David (Shruti’s guy):\nOption 1: \nMove each remaining valve overground $150 per valve \n\nOption 2:\nMove all valves overground and clean these up so that all over ground boxes is close by. Add an irrigation shut off valve. And swap out Rodrigo valves for better quality ones. $300 per valve and will take about 2 days. $60 per valve to upgrade existing overground valves that Rodrigo installed in 2025"
+    },
+    {
       "id": "proj1779128725068",
       "title": "Tree Trimming Records",
       "date": "2026-05-18",
@@ -9116,5 +9122,5 @@
       "pg_Feed after first flush": true
     }
   },
-  "syncedAt": "2026-05-25T01:16:02.701Z"
+  "syncedAt": "2026-05-25T05:12:18.186Z"
 }
