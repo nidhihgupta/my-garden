@@ -96,6 +96,9 @@ body{font-family:'DM Sans',sans-serif;background:var(--warm-white);color:var(--t
 .status-dot.planned{background:#f0a500;}
 .status-dot.struggling{background:#e05555;}
 .status-dot.dead{background:#9a9a9a;}
+.drag-handle{width:28px;flex-shrink:0;display:flex;align-items:center;justify-content:center;color:var(--text-light);font-size:18px;cursor:grab;touch-action:none;-webkit-user-select:none;user-select:none;}
+.plant-card.dragging{opacity:0.2;border:2px dashed var(--sage);}
+.plant-card[data-plant-id]{transition:none;}
 .plant-hero{width:100%;height:220px;background:var(--cream);display:flex;align-items:center;justify-content:center;font-size:80px;position:relative;}
 .plant-status-badge{position:absolute;bottom:16px;right:16px;padding:6px 14px;border-radius:20px;font-size:12px;font-weight:500;background:white;box-shadow:var(--shadow);}
 .plant-status-badge.alive{color:var(--sage-dark);}
@@ -228,7 +231,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--warm-white);color:var(--t
 </div>
 <div id="screen-bed" class="screen">
   <div style="position:relative"><div class="bed-hero" id="bed-hero-area"><span class="bed-hero-placeholder">🌿</span></div><div style="position:absolute;top:56px;left:20px;cursor:pointer;background:rgba(255,255,255,0.9);border-radius:20px;padding:6px 14px;font-size:13px;font-weight:500" id="bed-back-link">← Back</div><button class="bed-hero-edit" onclick="triggerBedImageUpload()">📷 Edit Photo</button></div>
-  <div class="header" style="padding-top:16px"><div class="header-actions"><h1 id="bed-title">Bed</h1><span class="edit-btn" onclick="showEditBedModal()">Edit</span></div><p id="bed-subtitle"></p></div>
+  <div class="header" style="padding-top:16px"><div class="header-actions"><h1 id="bed-title">Bed</h1><div style="display:flex;gap:8px"><span class="edit-btn" id="reorder-btn" onclick="toggleReorderMode()">⇅ Reorder</span><span class="edit-btn" onclick="showEditBedModal()">Edit</span></div></div><p id="bed-subtitle"></p></div>
   <div class="bed-info-bar"><div class="bed-stat"><span class="bed-stat-label">Zone</span><span class="bed-stat-value" id="bed-zone">—</span></div><div class="bed-stat"><span class="bed-stat-label">Sun</span><span class="bed-stat-value" id="bed-sun">—</span></div><div class="bed-stat"><span class="bed-stat-label">Plants</span><span class="bed-stat-value" id="bed-plant-count">0</span></div><div class="bed-stat"><span class="bed-stat-label">Planned</span><span class="bed-stat-value" id="bed-planned-count">0</span></div></div>
   <div class="bed-filter" id="bed-filter-bar"><div class="filter-chip active" onclick="filterBedPlants('all',this)">All</div><div class="filter-chip" onclick="filterBedPlants('alive',this)">Existing</div><div class="filter-chip" onclick="filterBedPlants('planned',this)">Planned</div></div>
   <div class="list-container" id="bed-plants-list"></div>
@@ -874,6 +877,8 @@ let photoRefs={};    // photo key → GitHub raw URL (synced to garden-data.json
 let _ghImagesSha=null;
 let _imageSyncTimer=null;
 let _uploadSaveTimer=null;
+let _reorderMode=false;
+let _drag=null;
 
 const defaultRooms=[
   {id:'r-office',name:'Office',icon:'💻',sections:['Floor','Plant Stand','Wall Shelves','Hanging','Table','Window Sill']},
@@ -1431,7 +1436,7 @@ function showEditRoomModal(){
 function saveEditRoom(){const r=S.rooms.find(x=>x.id===S.currentRoom.id);if(!r)return;r.name=document.getElementById('er-name').value;r.icon=document.getElementById('er-icon').value;S.currentRoom=r;save();closeModal();showRoom(r.id);}
 function showBed(bedId){
   const bed=S.beds.find(b=>b.id===bedId);if(!bed){console.warn('Bed not found:',bedId);return;}
-  S.currentBed=bed;S.bedFilter='all';
+  S.currentBed=bed;S.bedFilter='all';_reorderMode=false;
   document.getElementById('bed-back-link').onclick=()=>showYard(bed.yard);
   const heroArea=document.getElementById('bed-hero-area');
   const img=DB.getImg('bed_'+bed.id);
@@ -1452,13 +1457,70 @@ function renderBedPlants(filter){
   document.getElementById('bed-subtitle').textContent=`${alive} existing · ${planned} planned`;
   document.getElementById('bed-plant-count').textContent=alive;
   document.getElementById('bed-planned-count').textContent=planned;
+  const rbtn=document.getElementById('reorder-btn');
+  if(rbtn){rbtn.textContent=_reorderMode?'✓ Done':'⇅ Reorder';rbtn.style.background=_reorderMode?'var(--sage-dark)':'';rbtn.style.color=_reorderMode?'white':'var(--sage-dark)';}
   document.getElementById('bed-plants-list').innerHTML=filtered.length===0?'<div class="empty-state"><span>🌱</span><p>No plants here yet.</p></div>':
-    filtered.map(p=>`<div class="plant-card ${p.status==='planned'?'planned':''}" onclick="showOutdoorPlant('${p.id}')"><div class="plant-thumb">${emojiHtml(p.emoji,28)}</div><div class="plant-card-info"><div class="plant-card-name">${p.name}</div><div class="plant-card-detail">${p.scientific||p.water||'—'}</div></div><div class="status-dot ${p.status||'alive'}"></div></div>`).join('');
+    filtered.map(p=>{
+      const handle=_reorderMode?`<div class="drag-handle" ontouchstart="_dragHandleStart(event,'${p.id}')">☰</div>`:'';
+      const click=_reorderMode?'':`onclick="showOutdoorPlant('${p.id}')"`;
+      return`<div class="plant-card ${p.status==='planned'?'planned':''}" data-plant-id="${p.id}" ${click}>${handle}<div class="plant-thumb">${emojiHtml(p.emoji,28)}</div><div class="plant-card-info"><div class="plant-card-name">${p.name}</div><div class="plant-card-detail">${p.scientific||p.water||'—'}</div></div><div class="status-dot ${p.status||'alive'}"></div></div>`;
+    }).join('');
   document.querySelectorAll('.filter-chip').forEach(c=>c.classList.remove('active'));
   const chips=document.querySelectorAll('.filter-chip');
   chips.forEach(c=>{const t=c.textContent.trim();if((filter==='all'&&t==='All')||(filter==='alive'&&t==='Existing')||(filter==='planned'&&t==='Planned'))c.classList.add('active');});
 }
 function filterBedPlants(filter,el){S.bedFilter=filter;renderBedPlants(filter);}
+function toggleReorderMode(){
+  _reorderMode=!_reorderMode;
+  renderBedPlants(S.bedFilter);
+}
+function _dragHandleStart(e,plantId){
+  e.preventDefault();
+  const card=e.currentTarget.closest('.plant-card');
+  if(!card)return;
+  const touch=e.touches[0];
+  const rect=card.getBoundingClientRect();
+  const ghost=card.cloneNode(true);
+  ghost.style.cssText=`position:fixed;left:${rect.left}px;top:${rect.top}px;width:${rect.width}px;opacity:0.85;z-index:9999;pointer-events:none;box-shadow:0 8px 24px rgba(0,0,0,0.18);margin:0;`;
+  document.body.appendChild(ghost);
+  card.classList.add('dragging');
+  _drag={plantId,ghost,card,offsetY:touch.clientY-rect.top};
+  document.addEventListener('touchmove',_dragMove,{passive:false});
+  document.addEventListener('touchend',_dragEnd);
+}
+function _dragMove(e){
+  if(!_drag||!_drag.ghost)return;
+  e.preventDefault();
+  const touch=e.touches[0];
+  _drag.ghost.style.top=(touch.clientY-_drag.offsetY)+'px';
+  _drag.ghost.style.display='none';
+  const el=document.elementFromPoint(touch.clientX,touch.clientY);
+  _drag.ghost.style.display='';
+  const targetCard=el&&el.closest('.plant-card[data-plant-id]');
+  if(targetCard&&targetCard!==_drag.card){
+    const list=document.getElementById('bed-plants-list');
+    const cards=[...list.querySelectorAll('.plant-card[data-plant-id]')];
+    const targetIdx=cards.indexOf(targetCard);
+    const dragIdx=cards.indexOf(_drag.card);
+    if(targetIdx>dragIdx)list.insertBefore(_drag.card,targetCard.nextSibling);
+    else list.insertBefore(_drag.card,targetCard);
+  }
+}
+function _dragEnd(){
+  if(!_drag)return;
+  document.removeEventListener('touchmove',_dragMove);
+  document.removeEventListener('touchend',_dragEnd);
+  if(_drag.ghost)_drag.ghost.remove();
+  if(_drag.card)_drag.card.classList.remove('dragging');
+  const list=document.getElementById('bed-plants-list');
+  const newOrder=[...list.querySelectorAll('.plant-card[data-plant-id]')].map(c=>c.dataset.plantId);
+  const bedId=S.currentBed.id;
+  const bedPlants=newOrder.map(id=>S.plants.find(p=>p.id===id)).filter(Boolean);
+  const others=S.plants.filter(p=>p.bedId!==bedId);
+  S.plants=[...others,...bedPlants];
+  _drag=null;
+  save();
+}
 function triggerBedImageUpload(){document.getElementById('bed-image-input').click();}
 function handleBedImageUpload(e){const f=e.target.files[0];if(!f)return;const r=new FileReader();r.onload=ev=>{compressImage(ev.target.result,1200,800,0.75,compressed=>{DB.setImg('bed_'+S.currentBed.id,compressed);showBed(S.currentBed.id);});};r.readAsDataURL(f);e.target.value='';}
 function showEditBedModal(){
