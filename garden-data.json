@@ -9111,8 +9111,9 @@
       "pg_Prune heavily after flowering in spring to maintain shape": true,
       "ig_Cut flower spikes when they appear": true,
       "pg_Feed citrus fertilizer": true,
-      "pg_Feed rose fertilizer after first bloom flush": true
+      "pg_Feed rose fertilizer after first bloom flush": true,
+      "pg_Wipe leaves monthly to remove dust": true
     }
   },
-  "syncedAt": "2026-05-25T01:15:40.634Z"
+  "syncedAt": "2026-05-25T01:15:52.428Z"
 }
