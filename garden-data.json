@@ -9130,8 +9130,9 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     },
     "6": {
-      "s_Feeding_Feed dahlias high phosphorus": true
+      "s_Feeding_Feed dahlias high phosphorus": true,
+      "pg_Feed rose fertilizer after first bloom flush": true
     }
   },
-  "syncedAt": "2026-05-25T20:14:44.722Z"
+  "syncedAt": "2026-05-25T20:14:47.023Z"
 }
