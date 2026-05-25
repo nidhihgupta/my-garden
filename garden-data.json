@@ -9132,8 +9132,9 @@
     "6": {
       "s_Feeding_Feed dahlias high phosphorus": true,
       "pg_Feed rose fertilizer after first bloom flush": true,
-      "pg_Feed monthly spring-summer": true
+      "pg_Feed monthly spring-summer": true,
+      "pg_Palm fertilizer April - Aug": true
     }
   },
-  "syncedAt": "2026-05-25T20:15:04.712Z"
+  "syncedAt": "2026-05-25T20:15:07.544Z"
 }
