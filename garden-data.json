@@ -7278,57 +7278,6 @@
       "howPlanted": "seed"
     },
     {
-      "id": "ps-pomegranate",
-      "bedId": "b-berry",
-      "name": "Pomegranate",
-      "scientific": "Punica granatum",
-      "emoji": "emoji_ps-pomegranate",
-      "status": "dead",
-      "water": "Monthly spring / every 2 weeks July-August",
-      "sun": "Full sun",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Existing. Consistent water improves fruit quality.",
-      "maintenance": [
-        {
-          "task": "Monthly watering spring",
-          "months": [
-            3,
-            4,
-            5,
-            6
-          ]
-        },
-        {
-          "task": "Every 2 weeks summer",
-          "months": [
-            7,
-            8
-          ]
-        },
-        {
-          "task": "Monthly fall/winter",
-          "months": [
-            9,
-            10,
-            11,
-            12,
-            1,
-            2
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Fruit splitting (inconsistent watering)",
-          "url": "https://www.google.com/search?q=Fruit%20splitting%20(inconsistent%20watering)%20plant%20care%20fix"
-        }
-      ],
-      "category": "Fruit Trees",
-      "howPlanted": ""
-    },
-    {
       "id": "p1778869421207",
       "bedId": "b-berry",
       "name": "Okra",
@@ -7415,6 +7364,57 @@
       ],
       "trouble": [],
       "datePlanted": "",
+      "howPlanted": ""
+    },
+    {
+      "id": "ps-pomegranate",
+      "bedId": "b-berry",
+      "name": "Pomegranate",
+      "scientific": "Punica granatum",
+      "emoji": "emoji_ps-pomegranate",
+      "status": "dead",
+      "water": "Monthly spring / every 2 weeks July-August",
+      "sun": "Full sun",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Existing. Consistent water improves fruit quality.",
+      "maintenance": [
+        {
+          "task": "Monthly watering spring",
+          "months": [
+            3,
+            4,
+            5,
+            6
+          ]
+        },
+        {
+          "task": "Every 2 weeks summer",
+          "months": [
+            7,
+            8
+          ]
+        },
+        {
+          "task": "Monthly fall/winter",
+          "months": [
+            9,
+            10,
+            11,
+            12,
+            1,
+            2
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Fruit splitting (inconsistent watering)",
+          "url": "https://www.google.com/search?q=Fruit%20splitting%20(inconsistent%20watering)%20plant%20care%20fix"
+        }
+      ],
+      "category": "Fruit Trees",
       "howPlanted": ""
     }
   ],
@@ -9884,5 +9884,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-26T18:39:56.427Z"
+  "syncedAt": "2026-05-26T18:39:58.860Z"
 }
