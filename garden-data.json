@@ -6162,7 +6162,7 @@
     {
       "id": "ros-flowercarpet",
       "bedId": "b-ros",
-      "name": "Rose",
+      "name": "Carpet Rose",
       "scientific": "Rosa Flower Carpet",
       "emoji": "🌹",
       "status": "alive",
@@ -6198,7 +6198,8 @@
           "url": "https://www.google.com/search?q=Black%20spot%20plant%20care%20fix"
         }
       ],
-      "category": "Bush Roses"
+      "category": "Bush Roses",
+      "howPlanted": ""
     },
     {
       "id": "ros-treerose",
@@ -9517,5 +9518,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-26T04:55:03.830Z"
+  "syncedAt": "2026-05-26T04:55:50.642Z"
 }
