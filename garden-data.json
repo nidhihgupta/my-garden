@@ -7263,6 +7263,55 @@
       "howPlanted": ""
     },
     {
+      "id": "p1778178155450",
+      "bedId": "b-back-rose",
+      "name": "Rose bush",
+      "scientific": "Rosa spp.",
+      "emoji": "🌿",
+      "category": "Bush Roses",
+      "status": "alive",
+      "water": "Deep water weekly",
+      "sun": "Full sun to part sun",
+      "notes": "",
+      "fromCutting": false,
+      "maintenance": [
+        {
+          "task": "Hard prune to outward facing buds",
+          "months": [
+            1,
+            2
+          ]
+        },
+        {
+          "task": "Deadhead every 2 weeks — outward facing bud, 45° cut",
+          "months": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "task": "Feed rose fertilizer after first bloom flush",
+          "months": [
+            5
+          ]
+        },
+        {
+          "task": "Monitor for powdery mildew — neem oil if spotted",
+          "months": [
+            6,
+            7,
+            8
+          ]
+        }
+      ],
+      "trouble": []
+    },
+    {
       "id": "brs-daustinrose",
       "bedId": "b-back-rose",
       "name": "Rose",
@@ -7384,55 +7433,6 @@
         }
       ],
       "category": "Ornamental Grasses"
-    },
-    {
-      "id": "p1778178155450",
-      "bedId": "b-back-rose",
-      "name": "Rose bush",
-      "scientific": "Rosa spp.",
-      "emoji": "🌿",
-      "category": "Bush Roses",
-      "status": "alive",
-      "water": "Deep water weekly",
-      "sun": "Full sun to part sun",
-      "notes": "",
-      "fromCutting": false,
-      "maintenance": [
-        {
-          "task": "Hard prune to outward facing buds",
-          "months": [
-            1,
-            2
-          ]
-        },
-        {
-          "task": "Deadhead every 2 weeks — outward facing bud, 45° cut",
-          "months": [
-            4,
-            5,
-            6,
-            7,
-            8,
-            9,
-            10
-          ]
-        },
-        {
-          "task": "Feed rose fertilizer after first bloom flush",
-          "months": [
-            5
-          ]
-        },
-        {
-          "task": "Monitor for powdery mildew — neem oil if spotted",
-          "months": [
-            6,
-            7,
-            8
-          ]
-        }
-      ],
-      "trouble": []
     },
     {
       "id": "p1778178167609",
@@ -9967,5 +9967,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-26T21:27:33.900Z"
+  "syncedAt": "2026-05-26T21:27:49.560Z"
 }
