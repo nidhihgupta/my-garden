@@ -6843,46 +6843,6 @@
       "howPlanted": ""
     },
     {
-      "id": "bl-ivy",
-      "bedId": "b-bl",
-      "name": "Boston Ivy",
-      "scientific": "Parthenocissus tricuspidata",
-      "emoji": "emoji_bl-ivy",
-      "status": "planned",
-      "water": "Moderate",
-      "sun": "Part shade to full sun",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "x1. 1-gallon. Climbing fence.",
-      "maintenance": [
-        {
-          "task": "Train on fence — tie new growth as it extends",
-          "months": [
-            4,
-            5,
-            6,
-            7,
-            8
-          ]
-        },
-        {
-          "task": "Cut back in late winter to control spread",
-          "months": [
-            1,
-            2
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Japanese beetles",
-          "url": "https://www.google.com/search?q=Japanese%20beetles%20plant%20care%20fix"
-        }
-      ],
-      "category": "Vines & Climbers"
-    },
-    {
       "id": "bl-azalea",
       "bedId": "b-bl",
       "name": "Encore Azalea White",
@@ -6981,6 +6941,46 @@
         }
       ],
       "category": "Annuals"
+    },
+    {
+      "id": "bl-ivy",
+      "bedId": "b-bl",
+      "name": "Boston Ivy",
+      "scientific": "Parthenocissus tricuspidata",
+      "emoji": "emoji_bl-ivy",
+      "status": "planned",
+      "water": "Moderate",
+      "sun": "Part shade to full sun",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "x1. 1-gallon. Climbing fence.",
+      "maintenance": [
+        {
+          "task": "Train on fence — tie new growth as it extends",
+          "months": [
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "task": "Cut back in late winter to control spread",
+          "months": [
+            1,
+            2
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Japanese beetles",
+          "url": "https://www.google.com/search?q=Japanese%20beetles%20plant%20care%20fix"
+        }
+      ],
+      "category": "Vines & Climbers"
     },
     {
       "id": "p1778118393809",
@@ -9553,5 +9553,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-26T05:19:52.612Z"
+  "syncedAt": "2026-05-26T05:20:05.561Z"
 }
