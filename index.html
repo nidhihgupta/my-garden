@@ -1391,7 +1391,7 @@ function updateYardCounts(){
 }
 function showYard(yard){
   S.currentYard=yard;
-  const beds=S.beds.filter(b=>b.yard===yard);
+  const beds=S.beds.filter(b=>b.yard===yard).sort((a,b)=>(a.order||99)-(b.order||99));
   document.getElementById('yard-title').textContent=yard==='front'?'🏡 Front Yard':'🌿 Back Yard';
   document.getElementById('yard-subtitle').textContent=`${beds.length} beds`;
   document.getElementById('yard-beds-list').innerHTML=beds.length===0?'<div class="empty-state"><span>🌱</span><p>No beds yet.</p></div>':
