@@ -6196,6 +6196,53 @@
       "howPlanted": ""
     },
     {
+      "id": "mp-daphne",
+      "bedId": "b-mp",
+      "name": "Daphne Odora",
+      "scientific": "Daphne odora",
+      "emoji": "🌸",
+      "status": "alive",
+      "water": "Low — drought-tolerant once established",
+      "sun": "Part shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Existing. Winter–spring fragrant blooms. Resents root disturbance.",
+      "maintenance": [
+        {
+          "task": "Feed low-nitrogen fertilizer after flowering",
+          "months": [
+            4
+          ]
+        },
+        {
+          "task": "Light trim after flowering — never cut into old wood",
+          "months": [
+            3,
+            4
+          ]
+        },
+        {
+          "task": "Mulch roots to keep cool — never cultivate around base",
+          "months": [
+            4,
+            5
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Root rot (overwatering — ensure perfect drainage)",
+          "url": "https://www.google.com/search?q=Root%20rot%20(overwatering%20—%20ensure%20perfect%20drainage)%20plant%20care%20fix"
+        },
+        {
+          "issue": "Sudden dieback (Phytophthora — improve drainage immediately)",
+          "url": "https://www.google.com/search?q=Sudden%20dieback%20(Phytophthora%20—%20improve%20drainage%20immediately)%20plant%20care%20fix"
+        }
+      ],
+      "category": "None"
+    },
+    {
       "id": "mp-camellia",
       "bedId": "b-mp",
       "name": "Camellia",
@@ -6265,53 +6312,6 @@
         }
       ],
       "category": "Trees"
-    },
-    {
-      "id": "mp-daphne",
-      "bedId": "b-mp",
-      "name": "Daphne Odora",
-      "scientific": "Daphne odora",
-      "emoji": "🌸",
-      "status": "alive",
-      "water": "Low — drought-tolerant once established",
-      "sun": "Part shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Existing. Winter–spring fragrant blooms. Resents root disturbance.",
-      "maintenance": [
-        {
-          "task": "Feed low-nitrogen fertilizer after flowering",
-          "months": [
-            4
-          ]
-        },
-        {
-          "task": "Light trim after flowering — never cut into old wood",
-          "months": [
-            3,
-            4
-          ]
-        },
-        {
-          "task": "Mulch roots to keep cool — never cultivate around base",
-          "months": [
-            4,
-            5
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Root rot (overwatering — ensure perfect drainage)",
-          "url": "https://www.google.com/search?q=Root%20rot%20(overwatering%20—%20ensure%20perfect%20drainage)%20plant%20care%20fix"
-        },
-        {
-          "issue": "Sudden dieback (Phytophthora — improve drainage immediately)",
-          "url": "https://www.google.com/search?q=Sudden%20dieback%20(Phytophthora%20—%20improve%20drainage%20immediately)%20plant%20care%20fix"
-        }
-      ],
-      "category": "None"
     },
     {
       "id": "mp-hostamm",
@@ -9137,5 +9137,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-26T04:31:18.661Z"
+  "syncedAt": "2026-05-26T04:31:22.573Z"
 }
