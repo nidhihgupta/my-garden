@@ -6303,6 +6303,36 @@
       "category": "Perennials"
     },
     {
+      "id": "rw-pittosporum",
+      "bedId": "b-rw",
+      "name": "Pittosporum Tobira Shrub",
+      "scientific": "Pittosporum tobira",
+      "emoji": "🌿",
+      "status": "alive",
+      "water": "Low once established",
+      "sun": "Part shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Existing structural shrub.",
+      "maintenance": [
+        {
+          "task": "Light trim to maintain shape",
+          "months": [
+            3,
+            4
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Scale insects",
+          "url": "https://www.google.com/search?q=Scale%20insects%20plant%20care%20fix"
+        }
+      ],
+      "category": "Trees"
+    },
+    {
       "id": "rw-camellia",
       "bedId": "b-rw",
       "name": "Camellia",
@@ -6343,36 +6373,6 @@
         }
       ],
       "category": "Hydrangeas"
-    },
-    {
-      "id": "rw-pittosporum",
-      "bedId": "b-rw",
-      "name": "Pittosporum Tobira Shrub",
-      "scientific": "Pittosporum tobira",
-      "emoji": "🌿",
-      "status": "alive",
-      "water": "Low once established",
-      "sun": "Part shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Existing structural shrub.",
-      "maintenance": [
-        {
-          "task": "Light trim to maintain shape",
-          "months": [
-            3,
-            4
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Scale insects",
-          "url": "https://www.google.com/search?q=Scale%20insects%20plant%20care%20fix"
-        }
-      ],
-      "category": "Trees"
     },
     {
       "id": "rw-clivia",
@@ -9167,5 +9167,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-26T04:28:44.586Z"
+  "syncedAt": "2026-05-26T04:28:51.545Z"
 }
