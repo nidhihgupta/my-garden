@@ -6446,6 +6446,35 @@
       "category": "Succulents"
     },
     {
+      "id": "fl-bergenia",
+      "bedId": "b-fl",
+      "name": "Bergenia Crassifolia",
+      "scientific": "Bergenia crassifolia",
+      "emoji": "🌸",
+      "status": "planned",
+      "water": "Moderate",
+      "sun": "Part shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "x3. 1-gallon. Left of Viburnum. Bold round leaves, magenta spring flowers, ruby winter foliage.",
+      "maintenance": [
+        {
+          "task": "Remove dead leaves in spring",
+          "months": [
+            3
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Floppy leaves (overwatering)",
+          "url": "https://www.google.com/search?q=Floppy%20leaves%20(overwatering)%20plant%20care%20fix"
+        }
+      ],
+      "category": "Perennials"
+    },
+    {
       "id": "fl-breath",
       "bedId": "b-fl",
       "name": "Breath of Heaven",
@@ -6474,35 +6503,6 @@
         }
       ],
       "category": "Shrubs"
-    },
-    {
-      "id": "fl-bergenia",
-      "bedId": "b-fl",
-      "name": "Bergenia Crassifolia",
-      "scientific": "Bergenia crassifolia",
-      "emoji": "🌸",
-      "status": "planned",
-      "water": "Moderate",
-      "sun": "Part shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "x3. 1-gallon. Left of Viburnum. Bold round leaves, magenta spring flowers, ruby winter foliage.",
-      "maintenance": [
-        {
-          "task": "Remove dead leaves in spring",
-          "months": [
-            3
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Floppy leaves (overwatering)",
-          "url": "https://www.google.com/search?q=Floppy%20leaves%20(overwatering)%20plant%20care%20fix"
-        }
-      ],
-      "category": "Perennials"
     },
     {
       "id": "fl-viburnum",
@@ -9167,5 +9167,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-26T03:43:59.979Z"
+  "syncedAt": "2026-05-26T03:44:01.437Z"
 }
