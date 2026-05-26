@@ -6314,6 +6314,35 @@
       "category": "Trees"
     },
     {
+      "id": "mp-carex",
+      "bedId": "b-mp",
+      "name": "Carex Ice Dance",
+      "scientific": "Carex morrowii Ice Dance",
+      "emoji": "🌾",
+      "status": "planned",
+      "water": "Moderate",
+      "sun": "Part shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "x3. 4\".",
+      "maintenance": [
+        {
+          "task": "Divide clumps every 3-4 years",
+          "months": [
+            3
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Brown tips",
+          "url": "https://www.google.com/search?q=Brown%20tips%20plant%20care%20fix"
+        }
+      ],
+      "category": "Ornamental Grasses"
+    },
+    {
       "id": "mp-hostamm",
       "bedId": "b-mp",
       "name": "Hosta Minute Man",
@@ -6418,35 +6447,6 @@
         {
           "issue": "Loss of variegation",
           "url": "https://www.google.com/search?q=Loss%20of%20variegation%20plant%20care%20fix"
-        }
-      ],
-      "category": "Ornamental Grasses"
-    },
-    {
-      "id": "mp-carex",
-      "bedId": "b-mp",
-      "name": "Carex Ice Dance",
-      "scientific": "Carex morrowii Ice Dance",
-      "emoji": "🌾",
-      "status": "planned",
-      "water": "Moderate",
-      "sun": "Part shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "x3. 4\".",
-      "maintenance": [
-        {
-          "task": "Divide clumps every 3-4 years",
-          "months": [
-            3
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Brown tips",
-          "url": "https://www.google.com/search?q=Brown%20tips%20plant%20care%20fix"
         }
       ],
       "category": "Ornamental Grasses"
@@ -9137,5 +9137,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-26T04:31:28.201Z"
+  "syncedAt": "2026-05-26T04:31:49.197Z"
 }
