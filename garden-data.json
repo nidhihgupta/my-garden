@@ -527,8 +527,8 @@
       "sun": "Part shade",
       "datePlanted": "2026-05-16",
       "nursery": "",
-      "fromCutting": true,
-      "notes": "Red + pink. Propagating from stem cuttings.",
+      "fromCutting": false,
+      "notes": "Red + Red and white ",
       "maintenance": [
         {
           "task": "Deadhead spent blooms aggressively",
@@ -557,7 +557,7 @@
         }
       ],
       "category": "Perennials",
-      "howPlanted": "cutting"
+      "howPlanted": "bought"
     },
     {
       "id": "fw-fuchsia",
@@ -9553,5 +9553,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-26T05:13:59.329Z"
+  "syncedAt": "2026-05-26T05:17:36.067Z"
 }
