@@ -1515,9 +1515,11 @@ function _dragEnd(){
   const list=document.getElementById('bed-plants-list');
   const newOrder=[...list.querySelectorAll('.plant-card[data-plant-id]')].map(c=>c.dataset.plantId);
   const bedId=S.currentBed.id;
-  const bedPlants=newOrder.map(id=>S.plants.find(p=>p.id===id)).filter(Boolean);
+  const allBedPlants=S.plants.filter(p=>p.bedId===bedId);
+  const shownInOrder=newOrder.map(id=>allBedPlants.find(p=>p.id===id)).filter(Boolean);
+  const notShown=allBedPlants.filter(p=>!newOrder.includes(p.id));
   const others=S.plants.filter(p=>p.bedId!==bedId);
-  S.plants=[...others,...bedPlants];
+  S.plants=[...others,...shownInOrder,...notShown];
   _drag=null;
   save();
 }
