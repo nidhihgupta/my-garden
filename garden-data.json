@@ -6601,6 +6601,38 @@
       "howPlanted": ""
     },
     {
+      "id": "rw-oxalis-oregana",
+      "bedId": "b-rw",
+      "name": "Oxalis Oregana",
+      "scientific": "Oxalis oregana",
+      "emoji": "emoji_rw-oxalis-oregana",
+      "status": "planned",
+      "water": "Low to moderate",
+      "sun": "Full shade to part shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Native redwood sorrel. Classic groundcover under redwoods.",
+      "maintenance": [
+        {
+          "task": "Cut back if spreading too aggressively",
+          "months": [
+            4,
+            5,
+            9
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Browning in summer heat",
+          "url": "https://www.google.com/search?q=Oxalis+oregana+summer+dormancy"
+        }
+      ],
+      "category": "None",
+      "howPlanted": ""
+    },
+    {
       "id": "p1778089554019",
       "bedId": "b-rw",
       "name": "Redwood Trees",
@@ -6637,38 +6669,6 @@
       ],
       "trouble": [],
       "category": "Trees"
-    },
-    {
-      "id": "rw-oxalis-oregana",
-      "bedId": "b-rw",
-      "name": "Oxalis Oregana",
-      "scientific": "Oxalis oregana",
-      "emoji": "emoji_rw-oxalis-oregana",
-      "status": "planned",
-      "water": "Low to moderate",
-      "sun": "Full shade to part shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Native redwood sorrel. Classic groundcover under redwoods.",
-      "maintenance": [
-        {
-          "task": "Cut back if spreading too aggressively",
-          "months": [
-            4,
-            5,
-            9
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Browning in summer heat",
-          "url": "https://www.google.com/search?q=Oxalis+oregana+summer+dormancy"
-        }
-      ],
-      "category": "None",
-      "howPlanted": ""
     },
     {
       "id": "rw-clivia-add",
@@ -9167,5 +9167,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-26T04:28:13.077Z"
+  "syncedAt": "2026-05-26T04:28:16.013Z"
 }
