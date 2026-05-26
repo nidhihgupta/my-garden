@@ -6735,6 +6735,44 @@
       "category": "Fruit Trees"
     },
     {
+      "id": "berry-fig",
+      "bedId": "b-berry",
+      "name": "Dwarf Fig — Little Miss Figgy",
+      "scientific": "Ficus carica Little Miss Figgy",
+      "emoji": "🌿",
+      "status": "alive",
+      "category": "Fruit Trees",
+      "water": "Moderate",
+      "sun": "Full sun",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Compact dwarf fig, stays under 4ft. Produces full-size figs twice a year.",
+      "maintenance": [
+        {
+          "task": "Feed slow release fertilizer in spring",
+          "months": [
+            3
+          ]
+        },
+        {
+          "task": "Light prune to shape in winter",
+          "months": [
+            1,
+            2
+          ]
+        },
+        {
+          "task": "Deep water weekly July-August",
+          "months": [
+            7,
+            8
+          ]
+        }
+      ],
+      "trouble": []
+    },
+    {
       "id": "ps-raspberry",
       "bedId": "b-berry",
       "name": "Raspberry Bababerry",
@@ -6864,44 +6902,6 @@
         }
       ],
       "category": "Salvias"
-    },
-    {
-      "id": "berry-fig",
-      "bedId": "b-berry",
-      "name": "Dwarf Fig — Little Miss Figgy",
-      "scientific": "Ficus carica Little Miss Figgy",
-      "emoji": "🌿",
-      "status": "alive",
-      "category": "Fruit Trees",
-      "water": "Moderate",
-      "sun": "Full sun",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Compact dwarf fig, stays under 4ft. Produces full-size figs twice a year.",
-      "maintenance": [
-        {
-          "task": "Feed slow release fertilizer in spring",
-          "months": [
-            3
-          ]
-        },
-        {
-          "task": "Light prune to shape in winter",
-          "months": [
-            1,
-            2
-          ]
-        },
-        {
-          "task": "Deep water weekly July-August",
-          "months": [
-            7,
-            8
-          ]
-        }
-      ],
-      "trouble": []
     },
     {
       "id": "ps-beets",
@@ -9833,5 +9833,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-26T18:37:16.687Z"
+  "syncedAt": "2026-05-26T18:37:18.677Z"
 }
