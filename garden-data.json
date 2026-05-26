@@ -189,322 +189,6 @@
   ],
   "plants": [
     {
-      "id": "fl-viburnum",
-      "bedId": "b-fl",
-      "name": "Viburnum davidii",
-      "scientific": "Viburnum davidii",
-      "emoji": "🌿",
-      "status": "planned",
-      "water": "Moderate",
-      "sun": "Part shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Center anchor. 3-gallon. Turquoise berries in fall.",
-      "maintenance": [
-        {
-          "task": "Feed slow release fertilizer in spring",
-          "months": [
-            3
-          ]
-        },
-        {
-          "task": "Light prune after flowering to maintain shape",
-          "months": [
-            6,
-            7
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "No berries",
-          "url": "https://www.google.com/search?q=No%20berries%20plant%20care%20fix"
-        }
-      ],
-      "category": "Shrubs"
-    },
-    {
-      "id": "fl-sarcococca",
-      "bedId": "b-fl",
-      "name": "Sweet Box",
-      "scientific": "Sarcococca confusa",
-      "emoji": "🌿",
-      "status": "planned",
-      "water": "Moderate",
-      "sun": "Part to full shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Far left corner. 3-gallon. Fragrant winter bloomer.",
-      "maintenance": [
-        {
-          "task": "Enjoy intensely fragrant winter flowers — no action needed",
-          "months": [
-            12,
-            1,
-            2
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Leaf yellowing",
-          "url": "https://www.google.com/search?q=Leaf%20yellowing%20plant%20care%20fix"
-        }
-      ],
-      "category": "Shrubs"
-    },
-    {
-      "id": "fl-breath",
-      "bedId": "b-fl",
-      "name": "Breath of Heaven",
-      "scientific": "Coleonema pulchrum",
-      "emoji": "🌸",
-      "status": "alive",
-      "water": "Low-moderate",
-      "sun": "Part sun",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Middle zone. 2-gallon. Standard green confirmed.",
-      "maintenance": [
-        {
-          "task": "Light trim after flowering — do NOT hard prune",
-          "months": [
-            4,
-            5
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Dieback from hard pruning — never cut to old wood",
-          "url": "https://www.google.com/search?q=Dieback%20from%20hard%20pruning%20%E2%80%94%20never%20cut%20to%20old%20wood%20plant%20care%20fix"
-        }
-      ],
-      "category": "Shrubs"
-    },
-    {
-      "id": "fl-loro",
-      "bedId": "b-fl",
-      "name": "Loropetalum Purple Diamond",
-      "scientific": "Loropetalum chinense",
-      "emoji": "emoji_fl-loro",
-      "status": "planned",
-      "water": "Moderate",
-      "sun": "Part shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "x3. 2-gallon. Deep purple foliage + hot pink fringe flowers.",
-      "maintenance": [
-        {
-          "task": "Feed slow release fertilizer in spring",
-          "months": [
-            3
-          ]
-        },
-        {
-          "task": "Light trim after spring flowering",
-          "months": [
-            5,
-            6
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Loss of purple color",
-          "url": "https://www.google.com/search?q=Loss%20of%20purple%20color%20plant%20care%20fix"
-        }
-      ],
-      "category": "Shrubs",
-      "howPlanted": ""
-    },
-    {
-      "id": "fl-abelia",
-      "bedId": "b-fl",
-      "name": "Abelia Kaleidoscope",
-      "scientific": "Abelia grandiflora Kaleidoscope",
-      "emoji": "🌿",
-      "status": "planned",
-      "water": "Moderate",
-      "sun": "Part shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "x3. 3-gallon.",
-      "maintenance": [
-        {
-          "task": "Feed slow release fertilizer in spring",
-          "months": [
-            3
-          ]
-        },
-        {
-          "task": "Light trim after spring flowering",
-          "months": [
-            5,
-            6
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Loss of variegation",
-          "url": "https://www.google.com/search?q=Loss%20of%20variegation%20plant%20care%20fix"
-        }
-      ],
-      "category": "Shrubs"
-    },
-    {
-      "id": "fl-bergenia",
-      "bedId": "b-fl",
-      "name": "Bergenia Crassifolia",
-      "scientific": "Bergenia crassifolia",
-      "emoji": "🌸",
-      "status": "planned",
-      "water": "Moderate",
-      "sun": "Part shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "x3. 1-gallon. Left of Viburnum. Bold round leaves, magenta spring flowers, ruby winter foliage.",
-      "maintenance": [
-        {
-          "task": "Remove dead leaves in spring",
-          "months": [
-            3
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Floppy leaves (overwatering)",
-          "url": "https://www.google.com/search?q=Floppy%20leaves%20(overwatering)%20plant%20care%20fix"
-        }
-      ],
-      "category": "Perennials"
-    },
-    {
-      "id": "fl-mondo",
-      "bedId": "b-fl",
-      "name": "Black Mondo",
-      "scientific": "Ophiopogon planiscapus Nigrescens",
-      "emoji": "emoji_fl-mondo",
-      "status": "planned",
-      "water": "Moderate",
-      "sun": "Part shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "x11. 1-gallon.",
-      "maintenance": [
-        {
-          "task": "Divide clumps every 3-4 years",
-          "months": [
-            3
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Loss of black color",
-          "url": "https://www.google.com/search?q=Loss%20of%20black%20color%20plant%20care%20fix"
-        }
-      ],
-      "category": "Ornamental Grasses"
-    },
-    {
-      "id": "fl-carex",
-      "bedId": "b-fl",
-      "name": "Carex Ice Dance",
-      "scientific": "Carex morrowii Ice Dance",
-      "emoji": "🌾",
-      "status": "planned",
-      "water": "Moderate",
-      "sun": "Part shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "x5. 4\".",
-      "maintenance": [
-        {
-          "task": "Divide clumps every 3-4 years",
-          "months": [
-            3
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Brown tips",
-          "url": "https://www.google.com/search?q=Brown%20tips%20plant%20care%20fix"
-        }
-      ],
-      "category": "Ornamental Grasses"
-    },
-    {
-      "id": "fl-hellebores",
-      "bedId": "b-fl",
-      "name": "Hellebores Pippa's Purple",
-      "scientific": "Helleborus x hybridus",
-      "emoji": "🌸",
-      "status": "planned",
-      "water": "Moderate",
-      "sun": "Part to full shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "x3 mixed burgundy/plum + blush pink.",
-      "maintenance": [
-        {
-          "task": "Remove old leaves in late fall to showcase winter flowers",
-          "months": [
-            11
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Black death virus",
-          "url": "https://www.google.com/search?q=Black%20death%20virus%20plant%20care%20fix"
-        }
-      ],
-      "category": "Perennials"
-    },
-    {
-      "id": "fl-lamium",
-      "bedId": "b-fl",
-      "name": "Lamium White Nancy",
-      "scientific": "Lamium maculatum White Nancy",
-      "emoji": "emoji_fl-lamium",
-      "status": "planned",
-      "water": "Moderate",
-      "sun": "Part shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Ground cover throughout bed.",
-      "maintenance": [
-        {
-          "task": "Trim back if getting leggy",
-          "months": [
-            5,
-            8
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Leggy growth",
-          "url": "https://www.google.com/search?q=Leggy%20growth%20plant%20care%20fix"
-        }
-      ],
-      "category": "Perennials"
-    },
-    {
       "id": "rw-camellia",
       "bedId": "b-rw",
       "name": "Camellia",
@@ -6392,6 +6076,467 @@
       "howPlanted": ""
     },
     {
+      "id": "fr-lomandra",
+      "bedId": "b-fr",
+      "name": "Lomandra Platinum Beauty",
+      "scientific": "Lomandra longifolia",
+      "emoji": "🌾",
+      "status": "planned",
+      "water": "Low to moderate",
+      "sun": "Full sun to part shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Variegated strappy grass. Low maintenance. Deer resistant.",
+      "maintenance": [
+        {
+          "task": "Trim dead tips in late winter",
+          "months": [
+            2,
+            3
+          ]
+        },
+        {
+          "task": "Divide if clump gets too large",
+          "months": [
+            3,
+            4
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Brown tips",
+          "url": "https://www.google.com/search?q=Lomandra+brown+tips+fix"
+        }
+      ],
+      "category": "Ornamental Grasses"
+    },
+    {
+      "id": "fr-sedum",
+      "bedId": "b-fr",
+      "name": "Sedum Angelina",
+      "scientific": "Sedum rupestre",
+      "emoji": "🌿",
+      "status": "planned",
+      "water": "Low",
+      "sun": "Full sun",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Golden-chartreuse succulent groundcover. Drought tolerant.",
+      "maintenance": [
+        {
+          "task": "Trim to shape in spring",
+          "months": [
+            3,
+            4
+          ]
+        },
+        {
+          "task": "Divide if spreading too wide",
+          "months": [
+            4,
+            9
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Root rot from overwatering",
+          "url": "https://www.google.com/search?q=Sedum+angelina+root+rot+fix"
+        }
+      ],
+      "category": "Succulents"
+    },
+    {
+      "id": "fr-bergenia",
+      "bedId": "b-fr",
+      "name": "Bergenia Crassifolia",
+      "scientific": "Bergenia crassifolia",
+      "emoji": "🌸",
+      "status": "planned",
+      "water": "Moderate",
+      "sun": "Part shade to full sun",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Pigsqueak. Large leathery leaves turn red in winter. Pink spring flowers.",
+      "maintenance": [
+        {
+          "task": "Remove old leaves in spring as new growth appears",
+          "months": [
+            3,
+            4
+          ]
+        },
+        {
+          "task": "Divide large clumps every 3-4 years",
+          "months": [
+            3,
+            9
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Leaf scorch in hot sun",
+          "url": "https://www.google.com/search?q=Bergenia+leaf+scorch+fix"
+        },
+        {
+          "issue": "Vine weevil",
+          "url": "https://www.google.com/search?q=Bergenia+vine+weevil+fix"
+        }
+      ],
+      "category": "Perennials"
+    },
+    {
+      "id": "rw-clivia-add",
+      "bedId": "b-rw",
+      "name": "Clivias (additional)",
+      "scientific": "Clivia miniata",
+      "emoji": "emoji_rw-clivia",
+      "status": "planned",
+      "water": "Low once established",
+      "sun": "Full shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Additional clivias to fill gaps. Orange trumpet flowers spring-summer.",
+      "maintenance": [
+        {
+          "task": "Feed diluted fertilizer after flowering",
+          "months": [
+            4,
+            5
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Not flowering",
+          "url": "https://www.google.com/search?q=Not%20flowering%20plant%20care%20fix"
+        }
+      ],
+      "category": "Bulbs"
+    },
+    {
+      "id": "fl-abelia",
+      "bedId": "b-fl",
+      "name": "Abelia Kaleidoscope",
+      "scientific": "Abelia grandiflora Kaleidoscope",
+      "emoji": "🌿",
+      "status": "planned",
+      "water": "Moderate",
+      "sun": "Part shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "x3. 3-gallon.",
+      "maintenance": [
+        {
+          "task": "Feed slow release fertilizer in spring",
+          "months": [
+            3
+          ]
+        },
+        {
+          "task": "Light trim after spring flowering",
+          "months": [
+            5,
+            6
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Loss of variegation",
+          "url": "https://www.google.com/search?q=Loss%20of%20variegation%20plant%20care%20fix"
+        }
+      ],
+      "category": "Shrubs"
+    },
+    {
+      "id": "fl-viburnum",
+      "bedId": "b-fl",
+      "name": "Viburnum davidii",
+      "scientific": "Viburnum davidii",
+      "emoji": "🌿",
+      "status": "planned",
+      "water": "Moderate",
+      "sun": "Part shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Center anchor. 3-gallon. Turquoise berries in fall.",
+      "maintenance": [
+        {
+          "task": "Feed slow release fertilizer in spring",
+          "months": [
+            3
+          ]
+        },
+        {
+          "task": "Light prune after flowering to maintain shape",
+          "months": [
+            6,
+            7
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "No berries",
+          "url": "https://www.google.com/search?q=No%20berries%20plant%20care%20fix"
+        }
+      ],
+      "category": "Shrubs"
+    },
+    {
+      "id": "fl-sarcococca",
+      "bedId": "b-fl",
+      "name": "Sweet Box",
+      "scientific": "Sarcococca confusa",
+      "emoji": "🌿",
+      "status": "planned",
+      "water": "Moderate",
+      "sun": "Part to full shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Far left corner. 3-gallon. Fragrant winter bloomer.",
+      "maintenance": [
+        {
+          "task": "Enjoy intensely fragrant winter flowers — no action needed",
+          "months": [
+            12,
+            1,
+            2
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Leaf yellowing",
+          "url": "https://www.google.com/search?q=Leaf%20yellowing%20plant%20care%20fix"
+        }
+      ],
+      "category": "Shrubs"
+    },
+    {
+      "id": "fl-breath",
+      "bedId": "b-fl",
+      "name": "Breath of Heaven",
+      "scientific": "Coleonema pulchrum",
+      "emoji": "🌸",
+      "status": "alive",
+      "water": "Low-moderate",
+      "sun": "Part sun",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Middle zone. 2-gallon. Standard green confirmed.",
+      "maintenance": [
+        {
+          "task": "Light trim after flowering — do NOT hard prune",
+          "months": [
+            4,
+            5
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Dieback from hard pruning — never cut to old wood",
+          "url": "https://www.google.com/search?q=Dieback%20from%20hard%20pruning%20%E2%80%94%20never%20cut%20to%20old%20wood%20plant%20care%20fix"
+        }
+      ],
+      "category": "Shrubs"
+    },
+    {
+      "id": "fl-loro",
+      "bedId": "b-fl",
+      "name": "Loropetalum Purple Diamond",
+      "scientific": "Loropetalum chinense",
+      "emoji": "emoji_fl-loro",
+      "status": "planned",
+      "water": "Moderate",
+      "sun": "Part shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "x3. 2-gallon. Deep purple foliage + hot pink fringe flowers.",
+      "maintenance": [
+        {
+          "task": "Feed slow release fertilizer in spring",
+          "months": [
+            3
+          ]
+        },
+        {
+          "task": "Light trim after spring flowering",
+          "months": [
+            5,
+            6
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Loss of purple color",
+          "url": "https://www.google.com/search?q=Loss%20of%20purple%20color%20plant%20care%20fix"
+        }
+      ],
+      "category": "Shrubs",
+      "howPlanted": ""
+    },
+    {
+      "id": "fl-bergenia",
+      "bedId": "b-fl",
+      "name": "Bergenia Crassifolia",
+      "scientific": "Bergenia crassifolia",
+      "emoji": "🌸",
+      "status": "planned",
+      "water": "Moderate",
+      "sun": "Part shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "x3. 1-gallon. Left of Viburnum. Bold round leaves, magenta spring flowers, ruby winter foliage.",
+      "maintenance": [
+        {
+          "task": "Remove dead leaves in spring",
+          "months": [
+            3
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Floppy leaves (overwatering)",
+          "url": "https://www.google.com/search?q=Floppy%20leaves%20(overwatering)%20plant%20care%20fix"
+        }
+      ],
+      "category": "Perennials"
+    },
+    {
+      "id": "fl-mondo",
+      "bedId": "b-fl",
+      "name": "Black Mondo",
+      "scientific": "Ophiopogon planiscapus Nigrescens",
+      "emoji": "emoji_fl-mondo",
+      "status": "planned",
+      "water": "Moderate",
+      "sun": "Part shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "x11. 1-gallon.",
+      "maintenance": [
+        {
+          "task": "Divide clumps every 3-4 years",
+          "months": [
+            3
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Loss of black color",
+          "url": "https://www.google.com/search?q=Loss%20of%20black%20color%20plant%20care%20fix"
+        }
+      ],
+      "category": "Ornamental Grasses"
+    },
+    {
+      "id": "fl-carex",
+      "bedId": "b-fl",
+      "name": "Carex Ice Dance",
+      "scientific": "Carex morrowii Ice Dance",
+      "emoji": "🌾",
+      "status": "planned",
+      "water": "Moderate",
+      "sun": "Part shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "x5. 4\".",
+      "maintenance": [
+        {
+          "task": "Divide clumps every 3-4 years",
+          "months": [
+            3
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Brown tips",
+          "url": "https://www.google.com/search?q=Brown%20tips%20plant%20care%20fix"
+        }
+      ],
+      "category": "Ornamental Grasses"
+    },
+    {
+      "id": "fl-hellebores",
+      "bedId": "b-fl",
+      "name": "Hellebores Pippa's Purple",
+      "scientific": "Helleborus x hybridus",
+      "emoji": "🌸",
+      "status": "planned",
+      "water": "Moderate",
+      "sun": "Part to full shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "x3 mixed burgundy/plum + blush pink.",
+      "maintenance": [
+        {
+          "task": "Remove old leaves in late fall to showcase winter flowers",
+          "months": [
+            11
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Black death virus",
+          "url": "https://www.google.com/search?q=Black%20death%20virus%20plant%20care%20fix"
+        }
+      ],
+      "category": "Perennials"
+    },
+    {
+      "id": "fl-lamium",
+      "bedId": "b-fl",
+      "name": "Lamium White Nancy",
+      "scientific": "Lamium maculatum White Nancy",
+      "emoji": "emoji_fl-lamium",
+      "status": "planned",
+      "water": "Moderate",
+      "sun": "Part shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Ground cover throughout bed.",
+      "maintenance": [
+        {
+          "task": "Trim back if getting leggy",
+          "months": [
+            5,
+            8
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Leggy growth",
+          "url": "https://www.google.com/search?q=Leggy%20growth%20plant%20care%20fix"
+        }
+      ],
+      "category": "Perennials"
+    },
+    {
       "id": "fl-catmint",
       "bedId": "b-fl",
       "name": "Catmint",
@@ -6554,151 +6699,6 @@
         }
       ],
       "category": "Succulents"
-    },
-    {
-      "id": "fr-lomandra",
-      "bedId": "b-fr",
-      "name": "Lomandra Platinum Beauty",
-      "scientific": "Lomandra longifolia",
-      "emoji": "🌾",
-      "status": "planned",
-      "water": "Low to moderate",
-      "sun": "Full sun to part shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Variegated strappy grass. Low maintenance. Deer resistant.",
-      "maintenance": [
-        {
-          "task": "Trim dead tips in late winter",
-          "months": [
-            2,
-            3
-          ]
-        },
-        {
-          "task": "Divide if clump gets too large",
-          "months": [
-            3,
-            4
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Brown tips",
-          "url": "https://www.google.com/search?q=Lomandra+brown+tips+fix"
-        }
-      ],
-      "category": "Ornamental Grasses"
-    },
-    {
-      "id": "fr-sedum",
-      "bedId": "b-fr",
-      "name": "Sedum Angelina",
-      "scientific": "Sedum rupestre",
-      "emoji": "🌿",
-      "status": "planned",
-      "water": "Low",
-      "sun": "Full sun",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Golden-chartreuse succulent groundcover. Drought tolerant.",
-      "maintenance": [
-        {
-          "task": "Trim to shape in spring",
-          "months": [
-            3,
-            4
-          ]
-        },
-        {
-          "task": "Divide if spreading too wide",
-          "months": [
-            4,
-            9
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Root rot from overwatering",
-          "url": "https://www.google.com/search?q=Sedum+angelina+root+rot+fix"
-        }
-      ],
-      "category": "Succulents"
-    },
-    {
-      "id": "fr-bergenia",
-      "bedId": "b-fr",
-      "name": "Bergenia Crassifolia",
-      "scientific": "Bergenia crassifolia",
-      "emoji": "🌸",
-      "status": "planned",
-      "water": "Moderate",
-      "sun": "Part shade to full sun",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Pigsqueak. Large leathery leaves turn red in winter. Pink spring flowers.",
-      "maintenance": [
-        {
-          "task": "Remove old leaves in spring as new growth appears",
-          "months": [
-            3,
-            4
-          ]
-        },
-        {
-          "task": "Divide large clumps every 3-4 years",
-          "months": [
-            3,
-            9
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Leaf scorch in hot sun",
-          "url": "https://www.google.com/search?q=Bergenia+leaf+scorch+fix"
-        },
-        {
-          "issue": "Vine weevil",
-          "url": "https://www.google.com/search?q=Bergenia+vine+weevil+fix"
-        }
-      ],
-      "category": "Perennials"
-    },
-    {
-      "id": "rw-clivia-add",
-      "bedId": "b-rw",
-      "name": "Clivias (additional)",
-      "scientific": "Clivia miniata",
-      "emoji": "emoji_rw-clivia",
-      "status": "planned",
-      "water": "Low once established",
-      "sun": "Full shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Additional clivias to fill gaps. Orange trumpet flowers spring-summer.",
-      "maintenance": [
-        {
-          "task": "Feed diluted fertilizer after flowering",
-          "months": [
-            4,
-            5
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Not flowering",
-          "url": "https://www.google.com/search?q=Not%20flowering%20plant%20care%20fix"
-        }
-      ],
-      "category": "Bulbs"
     }
   ],
   "indoorPlants": [
@@ -9167,5 +9167,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-26T03:42:09.239Z"
+  "syncedAt": "2026-05-26T03:42:37.272Z"
 }
