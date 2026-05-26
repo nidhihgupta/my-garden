@@ -7225,6 +7225,48 @@
       "category": "Bush Roses"
     },
     {
+      "id": "sa-knockoutrose",
+      "bedId": "b-sa",
+      "name": "Rose bush",
+      "scientific": "Rosa Double Knock Out",
+      "emoji": "🌹",
+      "status": "planned",
+      "water": "Deep water every 2 weeks",
+      "sun": "Part sun",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "x3. 3-gallon. Behind Side Arbor.",
+      "maintenance": [
+        {
+          "task": "Deadhead every 2 weeks — outward facing bud, 45° cut",
+          "months": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "task": "Hard cutback annually in January/February",
+          "months": [
+            1,
+            2
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Black spot",
+          "url": "https://www.google.com/search?q=Black%20spot%20plant%20care%20fix"
+        }
+      ],
+      "category": "Bush Roses"
+    },
+    {
       "id": "sa-iceberg",
       "bedId": "b-sa",
       "name": "Rose bush",
@@ -7272,48 +7314,6 @@
         }
       ],
       "category": "Climbing Roses"
-    },
-    {
-      "id": "sa-knockoutrose",
-      "bedId": "b-sa",
-      "name": "Rose bush",
-      "scientific": "Rosa Double Knock Out",
-      "emoji": "🌹",
-      "status": "planned",
-      "water": "Deep water every 2 weeks",
-      "sun": "Part sun",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "x3. 3-gallon. Behind Side Arbor.",
-      "maintenance": [
-        {
-          "task": "Deadhead every 2 weeks — outward facing bud, 45° cut",
-          "months": [
-            4,
-            5,
-            6,
-            7,
-            8,
-            9,
-            10
-          ]
-        },
-        {
-          "task": "Hard cutback annually in January/February",
-          "months": [
-            1,
-            2
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Black spot",
-          "url": "https://www.google.com/search?q=Black%20spot%20plant%20care%20fix"
-        }
-      ],
-      "category": "Bush Roses"
     },
     {
       "id": "p1778130459270",
@@ -9967,5 +9967,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-26T23:28:44.995Z"
+  "syncedAt": "2026-05-26T23:28:47.204Z"
 }
