@@ -189,108 +189,6 @@
   ],
   "plants": [
     {
-      "id": "rw-camellia",
-      "bedId": "b-rw",
-      "name": "Camellia",
-      "scientific": "Camellia japonica",
-      "emoji": "emoji_rw-camellia",
-      "status": "alive",
-      "water": "Regular",
-      "sun": "Part to full shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Existing.",
-      "maintenance": [
-        {
-          "task": "Deadwood removal only — no hard cutback",
-          "months": [
-            1
-          ]
-        },
-        {
-          "task": "Feed with azalea fertilizer",
-          "months": [
-            3
-          ]
-        },
-        {
-          "task": "Prune ONLY after flowering complete",
-          "months": [
-            8,
-            9
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Bud drop",
-          "url": "https://www.google.com/search?q=Bud%20drop%20plant%20care%20fix"
-        }
-      ],
-      "category": "Hydrangeas"
-    },
-    {
-      "id": "rw-pittosporum",
-      "bedId": "b-rw",
-      "name": "Pittosporum Tobira Shrub",
-      "scientific": "Pittosporum tobira",
-      "emoji": "🌿",
-      "status": "alive",
-      "water": "Low once established",
-      "sun": "Part shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Existing structural shrub.",
-      "maintenance": [
-        {
-          "task": "Light trim to maintain shape",
-          "months": [
-            3,
-            4
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Scale insects",
-          "url": "https://www.google.com/search?q=Scale%20insects%20plant%20care%20fix"
-        }
-      ],
-      "category": "Trees"
-    },
-    {
-      "id": "rw-clivia",
-      "bedId": "b-rw",
-      "name": "Clivia",
-      "scientific": "Clivia miniata",
-      "emoji": "emoji_rw-clivia",
-      "status": "alive",
-      "water": "Low once established",
-      "sun": "Full shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Existing. Under redwoods.",
-      "maintenance": [
-        {
-          "task": "Feed diluted fertilizer after flowering",
-          "months": [
-            4,
-            5
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Not flowering",
-          "url": "https://www.google.com/search?q=Not%20flowering%20plant%20care%20fix"
-        }
-      ],
-      "category": "Bulbs"
-    },
-    {
       "id": "mp-maple",
       "bedId": "b-mp",
       "name": "Japanese Maple",
@@ -3580,44 +3478,6 @@
       "category": "Ornamental Grasses"
     },
     {
-      "id": "p1778089554019",
-      "bedId": "b-rw",
-      "name": "Redwood Trees",
-      "scientific": "Sequoia sempervirens",
-      "emoji": "🌲",
-      "status": "alive",
-      "water": "Deep water monthly during summer dry season",
-      "sun": "Full sun to part shade",
-      "notes": "Trimming:\n2019 - Johnson’s tree care \n2025 - Rodrigo ",
-      "fromCutting": false,
-      "maintenance": [
-        {
-          "task": "Deep water monthly — slow hose at drip line",
-          "months": [
-            6,
-            7,
-            8,
-            9
-          ]
-        },
-        {
-          "task": "Feed slow release balanced fertilizer in spring",
-          "months": [
-            3
-          ]
-        },
-        {
-          "task": "Check for dead/crossing branches — remove cleanly",
-          "months": [
-            1,
-            2
-          ]
-        }
-      ],
-      "trouble": [],
-      "category": "Trees"
-    },
-    {
       "id": "p1778114273511",
       "bedId": "b-fw",
       "name": "Phormium",
@@ -5647,264 +5507,6 @@
       "howPlanted": ""
     },
     {
-      "id": "rw-ferns",
-      "bedId": "b-rw",
-      "name": "Western Sword Ferns",
-      "scientific": "Polystichum munitum",
-      "emoji": "🌿",
-      "status": "alive",
-      "water": "Low to moderate",
-      "sun": "Full shade to part shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Native fern. Established in redwood bed.",
-      "maintenance": [
-        {
-          "task": "Remove old fronds in late winter before new growth emerges",
-          "months": [
-            2,
-            3
-          ]
-        },
-        {
-          "task": "Water during dry spells in first year",
-          "months": [
-            7,
-            8,
-            9
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Brown fronds",
-          "url": "https://www.google.com/search?q=Western+Sword+Fern+brown+fronds+fix"
-        }
-      ],
-      "category": "Ferns"
-    },
-    {
-      "id": "rw-hellebores",
-      "bedId": "b-rw",
-      "name": "Hellebores Pippa's Purple",
-      "scientific": "Helleborus x hybridus",
-      "emoji": "🌸",
-      "status": "planned",
-      "water": "Moderate",
-      "sun": "Part to full shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Pippa's Purple variety. Deep burgundy blooms in late winter.",
-      "maintenance": [
-        {
-          "task": "Remove old foliage in late winter before flowering",
-          "months": [
-            1,
-            2
-          ]
-        },
-        {
-          "task": "Divide clumps every 3-4 years",
-          "months": [
-            9,
-            10
-          ]
-        },
-        {
-          "task": "Top dress with compost in fall",
-          "months": [
-            10,
-            11
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Black spot on leaves",
-          "url": "https://www.google.com/search?q=Hellebore+black+spot+fix"
-        },
-        {
-          "issue": "No flowers",
-          "url": "https://www.google.com/search?q=Hellebore+not+flowering+fix"
-        }
-      ],
-      "category": "Perennials"
-    },
-    {
-      "id": "rw-oxalis",
-      "bedId": "b-rw",
-      "name": "Oxalis Klamath Ruby",
-      "scientific": "Oxalis oregana",
-      "emoji": "emoji_rw-oxalis",
-      "status": "planned",
-      "water": "Low to moderate",
-      "sun": "Full shade to part shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Klamath Ruby variety with deep red foliage. Native groundcover.",
-      "maintenance": [
-        {
-          "task": "Cut back if spreading too aggressively",
-          "months": [
-            4,
-            5,
-            9
-          ]
-        },
-        {
-          "task": "Water during first summer to establish",
-          "months": [
-            6,
-            7,
-            8
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Spreading too aggressively",
-          "url": "https://www.google.com/search?q=Oxalis+oregana+control"
-        }
-      ],
-      "category": "Groundcovers"
-    },
-    {
-      "id": "rw-pittosporum-tree",
-      "bedId": "b-rw",
-      "name": "Pittosporum Tree",
-      "scientific": "Pittosporum undulatum",
-      "emoji": "🌿",
-      "status": "alive",
-      "water": "Low once established",
-      "sun": "Part shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Established tree form pittosporum. Provides canopy in redwood bed.",
-      "maintenance": [
-        {
-          "task": "Light trim to maintain shape",
-          "months": [
-            3,
-            4
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Scale insects",
-          "url": "https://www.google.com/search?q=Scale%20insects%20plant%20care%20fix"
-        }
-      ],
-      "category": "Trees"
-    },
-    {
-      "id": "rw-aucuba",
-      "bedId": "b-rw",
-      "name": "Aucuba",
-      "scientific": "Aucuba japonica",
-      "emoji": "emoji_rw-aucuba",
-      "status": "alive",
-      "water": "Low to moderate",
-      "sun": "Full to part shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Gold dust plant. Shade-tolerant shrub. Established in bed.",
-      "maintenance": [
-        {
-          "task": "Prune to shape in spring",
-          "months": [
-            3,
-            4
-          ]
-        },
-        {
-          "task": "Feed with slow release fertilizer in spring",
-          "months": [
-            3
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Black sooty mold",
-          "url": "https://www.google.com/search?q=Aucuba+sooty+mold+fix"
-        },
-        {
-          "issue": "Leaf scorch",
-          "url": "https://www.google.com/search?q=Aucuba+leaf+scorch+fix"
-        }
-      ],
-      "category": "Shrubs",
-      "howPlanted": ""
-    },
-    {
-      "id": "rw-oxalis-oregana",
-      "bedId": "b-rw",
-      "name": "Oxalis Oregana",
-      "scientific": "Oxalis oregana",
-      "emoji": "emoji_rw-oxalis-oregana",
-      "status": "planned",
-      "water": "Low to moderate",
-      "sun": "Full shade to part shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Native redwood sorrel. Classic groundcover under redwoods.",
-      "maintenance": [
-        {
-          "task": "Cut back if spreading too aggressively",
-          "months": [
-            4,
-            5,
-            9
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Browning in summer heat",
-          "url": "https://www.google.com/search?q=Oxalis+oregana+summer+dormancy"
-        }
-      ],
-      "category": "None",
-      "howPlanted": ""
-    },
-    {
-      "id": "rw-clivia-add",
-      "bedId": "b-rw",
-      "name": "Clivias (additional)",
-      "scientific": "Clivia miniata",
-      "emoji": "emoji_rw-clivia",
-      "status": "planned",
-      "water": "Low once established",
-      "sun": "Full shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Additional clivias to fill gaps. Orange trumpet flowers spring-summer.",
-      "maintenance": [
-        {
-          "task": "Feed diluted fertilizer after flowering",
-          "months": [
-            4,
-            5
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Not flowering",
-          "url": "https://www.google.com/search?q=Not%20flowering%20plant%20care%20fix"
-        }
-      ],
-      "category": "Bulbs"
-    },
-    {
       "id": "fl-abelia",
       "bedId": "b-fl",
       "name": "Abelia Kaleidoscope",
@@ -6699,6 +6301,404 @@
         }
       ],
       "category": "Perennials"
+    },
+    {
+      "id": "rw-camellia",
+      "bedId": "b-rw",
+      "name": "Camellia",
+      "scientific": "Camellia japonica",
+      "emoji": "emoji_rw-camellia",
+      "status": "alive",
+      "water": "Regular",
+      "sun": "Part to full shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Existing.",
+      "maintenance": [
+        {
+          "task": "Deadwood removal only — no hard cutback",
+          "months": [
+            1
+          ]
+        },
+        {
+          "task": "Feed with azalea fertilizer",
+          "months": [
+            3
+          ]
+        },
+        {
+          "task": "Prune ONLY after flowering complete",
+          "months": [
+            8,
+            9
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Bud drop",
+          "url": "https://www.google.com/search?q=Bud%20drop%20plant%20care%20fix"
+        }
+      ],
+      "category": "Hydrangeas"
+    },
+    {
+      "id": "rw-pittosporum",
+      "bedId": "b-rw",
+      "name": "Pittosporum Tobira Shrub",
+      "scientific": "Pittosporum tobira",
+      "emoji": "🌿",
+      "status": "alive",
+      "water": "Low once established",
+      "sun": "Part shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Existing structural shrub.",
+      "maintenance": [
+        {
+          "task": "Light trim to maintain shape",
+          "months": [
+            3,
+            4
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Scale insects",
+          "url": "https://www.google.com/search?q=Scale%20insects%20plant%20care%20fix"
+        }
+      ],
+      "category": "Trees"
+    },
+    {
+      "id": "rw-clivia",
+      "bedId": "b-rw",
+      "name": "Clivia",
+      "scientific": "Clivia miniata",
+      "emoji": "emoji_rw-clivia",
+      "status": "alive",
+      "water": "Low once established",
+      "sun": "Full shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Existing. Under redwoods.",
+      "maintenance": [
+        {
+          "task": "Feed diluted fertilizer after flowering",
+          "months": [
+            4,
+            5
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Not flowering",
+          "url": "https://www.google.com/search?q=Not%20flowering%20plant%20care%20fix"
+        }
+      ],
+      "category": "Bulbs"
+    },
+    {
+      "id": "rw-ferns",
+      "bedId": "b-rw",
+      "name": "Western Sword Ferns",
+      "scientific": "Polystichum munitum",
+      "emoji": "🌿",
+      "status": "alive",
+      "water": "Low to moderate",
+      "sun": "Full shade to part shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Native fern. Established in redwood bed.",
+      "maintenance": [
+        {
+          "task": "Remove old fronds in late winter before new growth emerges",
+          "months": [
+            2,
+            3
+          ]
+        },
+        {
+          "task": "Water during dry spells in first year",
+          "months": [
+            7,
+            8,
+            9
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Brown fronds",
+          "url": "https://www.google.com/search?q=Western+Sword+Fern+brown+fronds+fix"
+        }
+      ],
+      "category": "Ferns"
+    },
+    {
+      "id": "rw-hellebores",
+      "bedId": "b-rw",
+      "name": "Hellebores Pippa's Purple",
+      "scientific": "Helleborus x hybridus",
+      "emoji": "🌸",
+      "status": "planned",
+      "water": "Moderate",
+      "sun": "Part to full shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Pippa's Purple variety. Deep burgundy blooms in late winter.",
+      "maintenance": [
+        {
+          "task": "Remove old foliage in late winter before flowering",
+          "months": [
+            1,
+            2
+          ]
+        },
+        {
+          "task": "Divide clumps every 3-4 years",
+          "months": [
+            9,
+            10
+          ]
+        },
+        {
+          "task": "Top dress with compost in fall",
+          "months": [
+            10,
+            11
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Black spot on leaves",
+          "url": "https://www.google.com/search?q=Hellebore+black+spot+fix"
+        },
+        {
+          "issue": "No flowers",
+          "url": "https://www.google.com/search?q=Hellebore+not+flowering+fix"
+        }
+      ],
+      "category": "Perennials"
+    },
+    {
+      "id": "rw-oxalis",
+      "bedId": "b-rw",
+      "name": "Oxalis Klamath Ruby",
+      "scientific": "Oxalis oregana",
+      "emoji": "emoji_rw-oxalis",
+      "status": "planned",
+      "water": "Low to moderate",
+      "sun": "Full shade to part shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Klamath Ruby variety with deep red foliage. Native groundcover.",
+      "maintenance": [
+        {
+          "task": "Cut back if spreading too aggressively",
+          "months": [
+            4,
+            5,
+            9
+          ]
+        },
+        {
+          "task": "Water during first summer to establish",
+          "months": [
+            6,
+            7,
+            8
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Spreading too aggressively",
+          "url": "https://www.google.com/search?q=Oxalis+oregana+control"
+        }
+      ],
+      "category": "Groundcovers"
+    },
+    {
+      "id": "rw-pittosporum-tree",
+      "bedId": "b-rw",
+      "name": "Pittosporum Tree",
+      "scientific": "Pittosporum undulatum",
+      "emoji": "🌿",
+      "status": "alive",
+      "water": "Low once established",
+      "sun": "Part shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Established tree form pittosporum. Provides canopy in redwood bed.",
+      "maintenance": [
+        {
+          "task": "Light trim to maintain shape",
+          "months": [
+            3,
+            4
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Scale insects",
+          "url": "https://www.google.com/search?q=Scale%20insects%20plant%20care%20fix"
+        }
+      ],
+      "category": "Trees"
+    },
+    {
+      "id": "rw-aucuba",
+      "bedId": "b-rw",
+      "name": "Aucuba",
+      "scientific": "Aucuba japonica",
+      "emoji": "emoji_rw-aucuba",
+      "status": "alive",
+      "water": "Low to moderate",
+      "sun": "Full to part shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Gold dust plant. Shade-tolerant shrub. Established in bed.",
+      "maintenance": [
+        {
+          "task": "Prune to shape in spring",
+          "months": [
+            3,
+            4
+          ]
+        },
+        {
+          "task": "Feed with slow release fertilizer in spring",
+          "months": [
+            3
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Black sooty mold",
+          "url": "https://www.google.com/search?q=Aucuba+sooty+mold+fix"
+        },
+        {
+          "issue": "Leaf scorch",
+          "url": "https://www.google.com/search?q=Aucuba+leaf+scorch+fix"
+        }
+      ],
+      "category": "Shrubs",
+      "howPlanted": ""
+    },
+    {
+      "id": "p1778089554019",
+      "bedId": "b-rw",
+      "name": "Redwood Trees",
+      "scientific": "Sequoia sempervirens",
+      "emoji": "🌲",
+      "status": "alive",
+      "water": "Deep water monthly during summer dry season",
+      "sun": "Full sun to part shade",
+      "notes": "Trimming:\n2019 - Johnson’s tree care \n2025 - Rodrigo ",
+      "fromCutting": false,
+      "maintenance": [
+        {
+          "task": "Deep water monthly — slow hose at drip line",
+          "months": [
+            6,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "task": "Feed slow release balanced fertilizer in spring",
+          "months": [
+            3
+          ]
+        },
+        {
+          "task": "Check for dead/crossing branches — remove cleanly",
+          "months": [
+            1,
+            2
+          ]
+        }
+      ],
+      "trouble": [],
+      "category": "Trees"
+    },
+    {
+      "id": "rw-oxalis-oregana",
+      "bedId": "b-rw",
+      "name": "Oxalis Oregana",
+      "scientific": "Oxalis oregana",
+      "emoji": "emoji_rw-oxalis-oregana",
+      "status": "planned",
+      "water": "Low to moderate",
+      "sun": "Full shade to part shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Native redwood sorrel. Classic groundcover under redwoods.",
+      "maintenance": [
+        {
+          "task": "Cut back if spreading too aggressively",
+          "months": [
+            4,
+            5,
+            9
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Browning in summer heat",
+          "url": "https://www.google.com/search?q=Oxalis+oregana+summer+dormancy"
+        }
+      ],
+      "category": "None",
+      "howPlanted": ""
+    },
+    {
+      "id": "rw-clivia-add",
+      "bedId": "b-rw",
+      "name": "Clivias (additional)",
+      "scientific": "Clivia miniata",
+      "emoji": "emoji_rw-clivia",
+      "status": "planned",
+      "water": "Low once established",
+      "sun": "Full shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Additional clivias to fill gaps. Orange trumpet flowers spring-summer.",
+      "maintenance": [
+        {
+          "task": "Feed diluted fertilizer after flowering",
+          "months": [
+            4,
+            5
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Not flowering",
+          "url": "https://www.google.com/search?q=Not%20flowering%20plant%20care%20fix"
+        }
+      ],
+      "category": "Bulbs"
     }
   ],
   "indoorPlants": [
@@ -9167,5 +9167,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-26T03:47:04.214Z"
+  "syncedAt": "2026-05-26T04:28:13.077Z"
 }
