@@ -6488,35 +6488,6 @@
       "howPlanted": ""
     },
     {
-      "id": "fr-camphor",
-      "bedId": "b-fr",
-      "name": "Camphor Tree",
-      "scientific": "Cinnamomum camphora",
-      "emoji": "🌳",
-      "status": "alive",
-      "water": "Low once established",
-      "sun": "Part shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Existing large tree.",
-      "maintenance": [
-        {
-          "task": "No pruning needed",
-          "months": [
-            1
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Root invasion",
-          "url": "https://www.google.com/search?q=Root%20invasion%20plant%20care%20fix"
-        }
-      ],
-      "category": "Trees"
-    },
-    {
       "id": "fr-catmint",
       "bedId": "b-fr",
       "name": "Catmint",
@@ -6553,6 +6524,35 @@
         }
       ],
       "category": "Herbs"
+    },
+    {
+      "id": "fr-camphor",
+      "bedId": "b-fr",
+      "name": "Camphor Tree",
+      "scientific": "Cinnamomum camphora",
+      "emoji": "🌳",
+      "status": "alive",
+      "water": "Low once established",
+      "sun": "Part shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Existing large tree.",
+      "maintenance": [
+        {
+          "task": "No pruning needed",
+          "months": [
+            1
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Root invasion",
+          "url": "https://www.google.com/search?q=Root%20invasion%20plant%20care%20fix"
+        }
+      ],
+      "category": "Trees"
     },
     {
       "id": "fr-lamium",
@@ -9167,5 +9167,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-26T03:46:36.183Z"
+  "syncedAt": "2026-05-26T03:46:37.692Z"
 }
