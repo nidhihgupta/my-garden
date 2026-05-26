@@ -6926,6 +6926,40 @@
       "trouble": []
     },
     {
+      "id": "ros-lantana",
+      "bedId": "b-ros",
+      "name": "Yellow Lantana",
+      "scientific": "Lantana camara",
+      "emoji": "🌼",
+      "status": "alive",
+      "category": "Perennials",
+      "water": "Low once established",
+      "sun": "Full sun",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Yellow flower clusters. Long blooming season.",
+      "maintenance": [
+        {
+          "task": "Cut back hard in late winter",
+          "months": [
+            2
+          ]
+        },
+        {
+          "task": "Deadhead spent blooms daily during peak bloom",
+          "months": [
+            5,
+            6,
+            7,
+            8,
+            9
+          ]
+        }
+      ],
+      "trouble": []
+    },
+    {
       "id": "p177977020573752",
       "bedId": "b-ros",
       "name": "Camphor Tree",
@@ -6980,40 +7014,6 @@
           "task": "Feed slow release fertilizer in spring",
           "months": [
             3
-          ]
-        }
-      ],
-      "trouble": []
-    },
-    {
-      "id": "ros-lantana",
-      "bedId": "b-ros",
-      "name": "Yellow Lantana",
-      "scientific": "Lantana camara",
-      "emoji": "🌼",
-      "status": "alive",
-      "category": "Perennials",
-      "water": "Low once established",
-      "sun": "Full sun",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Yellow flower clusters. Long blooming season.",
-      "maintenance": [
-        {
-          "task": "Cut back hard in late winter",
-          "months": [
-            2
-          ]
-        },
-        {
-          "task": "Deadhead spent blooms daily during peak bloom",
-          "months": [
-            5,
-            6,
-            7,
-            8,
-            9
           ]
         }
       ],
@@ -9518,5 +9518,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-26T04:56:16.329Z"
+  "syncedAt": "2026-05-26T04:56:20.104Z"
 }
