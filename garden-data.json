@@ -7057,16 +7057,16 @@
     {
       "id": "p1779772206300480",
       "bedId": "b-porch",
-      "name": "Coleus Dark Purple",
+      "name": "Coleus",
       "scientific": "Plectranthus scutellarioides",
       "emoji": "emoji_br-coleus",
-      "status": "planned",
+      "status": "alive",
       "water": "Moderate",
       "sun": "Part shade",
-      "datePlanted": "",
+      "datePlanted": "2026-05-24",
       "nursery": "",
       "fromCutting": false,
-      "notes": "x8. Filler.",
+      "notes": "Red with fuschia and green with yellow edge with abutilon ",
       "maintenance": [
         {
           "task": "Replace or cut back if getting leggy",
@@ -7083,7 +7083,8 @@
         }
       ],
       "category": "Annuals",
-      "isIndoor": false
+      "isIndoor": false,
+      "howPlanted": "bought"
     }
   ],
   "indoorPlants": [
@@ -9552,5 +9553,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-26T05:10:07.586Z"
+  "syncedAt": "2026-05-26T05:11:25.211Z"
 }
