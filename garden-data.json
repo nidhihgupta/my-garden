@@ -6856,6 +6856,52 @@
       "category": "Hydrangeas"
     },
     {
+      "id": "sa-salvia",
+      "bedId": "b-sa",
+      "name": "Salvia Amistad",
+      "scientific": "Salvia Amistad",
+      "emoji": "emoji_sa-salvia",
+      "status": "planned",
+      "water": "Low-moderate",
+      "sun": "Part sun",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "x3. 1-gallon. Behind Side Arbor.",
+      "maintenance": [
+        {
+          "task": "Deadhead spent spikes continuously",
+          "months": [
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "task": "Cut back by 1/3 if getting leggy — reblooms in 3 weeks",
+          "months": [
+            7
+          ]
+        },
+        {
+          "task": "Hard cutback annually",
+          "months": [
+            2
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Leggy growth",
+          "url": "https://www.google.com/search?q=Leggy%20growth%20plant%20care%20fix"
+        }
+      ],
+      "category": "Salvias"
+    },
+    {
       "id": "sa-oakleaf",
       "bedId": "b-sa",
       "name": "Oakleaf Hydrangea",
@@ -6933,52 +6979,6 @@
         }
       ],
       "category": "Bush Roses"
-    },
-    {
-      "id": "sa-salvia",
-      "bedId": "b-sa",
-      "name": "Salvia Amistad",
-      "scientific": "Salvia Amistad",
-      "emoji": "emoji_sa-salvia",
-      "status": "planned",
-      "water": "Low-moderate",
-      "sun": "Part sun",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "x3. 1-gallon. Behind Side Arbor.",
-      "maintenance": [
-        {
-          "task": "Deadhead spent spikes continuously",
-          "months": [
-            5,
-            6,
-            7,
-            8,
-            9,
-            10
-          ]
-        },
-        {
-          "task": "Cut back by 1/3 if getting leggy — reblooms in 3 weeks",
-          "months": [
-            7
-          ]
-        },
-        {
-          "task": "Hard cutback annually",
-          "months": [
-            2
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Leggy growth",
-          "url": "https://www.google.com/search?q=Leggy%20growth%20plant%20care%20fix"
-        }
-      ],
-      "category": "Salvias"
     },
     {
       "id": "p1778130459270",
@@ -9594,5 +9594,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-26T05:26:19.064Z"
+  "syncedAt": "2026-05-26T05:26:20.604Z"
 }
