@@ -7377,7 +7377,7 @@
       "name": "Geranium",
       "scientific": "Pelargonium spp.",
       "emoji": "emoji_p1778195347203525",
-      "status": "alive",
+      "status": "planned",
       "water": "Moderate",
       "sun": "Part shade",
       "datePlanted": "",
@@ -7412,7 +7412,8 @@
         }
       ],
       "category": "None",
-      "isIndoor": false
+      "isIndoor": false,
+      "howPlanted": ""
     }
   ],
   "indoorPlants": [
@@ -9881,5 +9882,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-26T18:48:46.925Z"
+  "syncedAt": "2026-05-26T18:50:16.120Z"
 }
