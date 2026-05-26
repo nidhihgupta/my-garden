@@ -6439,6 +6439,43 @@
       "category": "Perennials"
     },
     {
+      "id": "fl-sedum",
+      "bedId": "b-fl",
+      "name": "Sedum Angelina",
+      "scientific": "Sedum rupestre",
+      "emoji": "🌿",
+      "status": "planned",
+      "water": "Low",
+      "sun": "Full sun",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Golden-chartreuse succulent groundcover. Drought tolerant.",
+      "maintenance": [
+        {
+          "task": "Trim to shape in spring",
+          "months": [
+            3,
+            4
+          ]
+        },
+        {
+          "task": "Divide if spreading too wide",
+          "months": [
+            4,
+            9
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Root rot from overwatering",
+          "url": "https://www.google.com/search?q=Sedum+angelina+root+rot+fix"
+        }
+      ],
+      "category": "Succulents"
+    },
+    {
       "id": "fl-catmint",
       "bedId": "b-fl",
       "name": "Catmint",
@@ -6478,43 +6515,6 @@
         }
       ],
       "category": "Perennials"
-    },
-    {
-      "id": "fl-sedum",
-      "bedId": "b-fl",
-      "name": "Sedum Angelina",
-      "scientific": "Sedum rupestre",
-      "emoji": "🌿",
-      "status": "planned",
-      "water": "Low",
-      "sun": "Full sun",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Golden-chartreuse succulent groundcover. Drought tolerant.",
-      "maintenance": [
-        {
-          "task": "Trim to shape in spring",
-          "months": [
-            3,
-            4
-          ]
-        },
-        {
-          "task": "Divide if spreading too wide",
-          "months": [
-            4,
-            9
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Root rot from overwatering",
-          "url": "https://www.google.com/search?q=Sedum+angelina+root+rot+fix"
-        }
-      ],
-      "category": "Succulents"
     },
     {
       "id": "fl-hellebores",
@@ -9167,5 +9167,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-26T03:44:53.046Z"
+  "syncedAt": "2026-05-26T03:44:59.154Z"
 }
