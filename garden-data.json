@@ -6280,57 +6280,6 @@
       "trouble": []
     },
     {
-      "id": "p1778799623602268",
-      "bedId": "b-ros",
-      "name": "Tree Rose - orange (Strike it Rich)",
-      "scientific": "Rosa standard",
-      "emoji": "emoji_p1778799623602268",
-      "status": "alive",
-      "water": "Deep water weekly",
-      "sun": "Part sun",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Existing standard form rose.",
-      "maintenance": [
-        {
-          "task": "Deadhead every 2 weeks — outward facing bud, 45° cut",
-          "months": [
-            4,
-            5,
-            6,
-            7,
-            8,
-            9,
-            10
-          ]
-        },
-        {
-          "task": "Hard cutback annually in January/February",
-          "months": [
-            1,
-            2
-          ]
-        },
-        {
-          "task": "Feed rose fertilizer after first bloom flush",
-          "months": [
-            5,
-            6
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Black spot",
-          "url": "https://www.google.com/search?q=Black%20spot%20plant%20care%20fix"
-        }
-      ],
-      "category": "Bush Roses",
-      "howPlanted": "",
-      "isIndoor": false
-    },
-    {
       "id": "p177879979683086",
       "bedId": "b-ros",
       "name": "Tree Rose - red",
@@ -6489,6 +6438,57 @@
       "name": "Tree Rose - lavender",
       "scientific": "Rosa standard",
       "emoji": "emoji_p17787997919964",
+      "status": "alive",
+      "water": "Deep water weekly",
+      "sun": "Part sun",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Existing standard form rose.",
+      "maintenance": [
+        {
+          "task": "Deadhead every 2 weeks — outward facing bud, 45° cut",
+          "months": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "task": "Hard cutback annually in January/February",
+          "months": [
+            1,
+            2
+          ]
+        },
+        {
+          "task": "Feed rose fertilizer after first bloom flush",
+          "months": [
+            5,
+            6
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Black spot",
+          "url": "https://www.google.com/search?q=Black%20spot%20plant%20care%20fix"
+        }
+      ],
+      "category": "Bush Roses",
+      "howPlanted": "",
+      "isIndoor": false
+    },
+    {
+      "id": "p1778799623602268",
+      "bedId": "b-ros",
+      "name": "Tree Rose - orange (Strike it Rich)",
+      "scientific": "Rosa standard",
+      "emoji": "emoji_p1778799623602268",
       "status": "alive",
       "water": "Deep water weekly",
       "sun": "Part sun",
@@ -9137,5 +9137,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-26T04:34:37.135Z"
+  "syncedAt": "2026-05-26T04:34:40.603Z"
 }
