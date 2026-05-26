@@ -6330,6 +6330,43 @@
       "category": "Shrubs"
     },
     {
+      "id": "fl-lomandra",
+      "bedId": "b-fl",
+      "name": "Lomandra Platinum Beauty",
+      "scientific": "Lomandra longifolia",
+      "emoji": "🌾",
+      "status": "planned",
+      "water": "Low to moderate",
+      "sun": "Full sun to part shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Variegated strappy grass. Low maintenance. Deer resistant.",
+      "maintenance": [
+        {
+          "task": "Trim dead tips in late winter",
+          "months": [
+            2,
+            3
+          ]
+        },
+        {
+          "task": "Divide if clump gets too large",
+          "months": [
+            3,
+            4
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Brown tips",
+          "url": "https://www.google.com/search?q=Lomandra+brown+tips+fix"
+        }
+      ],
+      "category": "Ornamental Grasses"
+    },
+    {
       "id": "fl-sarcococca",
       "bedId": "b-fl",
       "name": "Sweet Box",
@@ -6473,43 +6510,6 @@
         {
           "issue": "Brown tips",
           "url": "https://www.google.com/search?q=Brown%20tips%20plant%20care%20fix"
-        }
-      ],
-      "category": "Ornamental Grasses"
-    },
-    {
-      "id": "fl-lomandra",
-      "bedId": "b-fl",
-      "name": "Lomandra Platinum Beauty",
-      "scientific": "Lomandra longifolia",
-      "emoji": "🌾",
-      "status": "planned",
-      "water": "Low to moderate",
-      "sun": "Full sun to part shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Variegated strappy grass. Low maintenance. Deer resistant.",
-      "maintenance": [
-        {
-          "task": "Trim dead tips in late winter",
-          "months": [
-            2,
-            3
-          ]
-        },
-        {
-          "task": "Divide if clump gets too large",
-          "months": [
-            3,
-            4
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Brown tips",
-          "url": "https://www.google.com/search?q=Lomandra+brown+tips+fix"
         }
       ],
       "category": "Ornamental Grasses"
@@ -9167,5 +9167,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-26T03:42:50.886Z"
+  "syncedAt": "2026-05-26T03:42:57.892Z"
 }
