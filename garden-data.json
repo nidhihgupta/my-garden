@@ -6446,35 +6446,6 @@
       "category": "Succulents"
     },
     {
-      "id": "fl-bergenia",
-      "bedId": "b-fl",
-      "name": "Bergenia Crassifolia",
-      "scientific": "Bergenia crassifolia",
-      "emoji": "🌸",
-      "status": "planned",
-      "water": "Moderate",
-      "sun": "Part shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "x3. 1-gallon. Left of Viburnum. Bold round leaves, magenta spring flowers, ruby winter foliage.",
-      "maintenance": [
-        {
-          "task": "Remove dead leaves in spring",
-          "months": [
-            3
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Floppy leaves (overwatering)",
-          "url": "https://www.google.com/search?q=Floppy%20leaves%20(overwatering)%20plant%20care%20fix"
-        }
-      ],
-      "category": "Perennials"
-    },
-    {
       "id": "fl-hellebores",
       "bedId": "b-fl",
       "name": "Hellebores Pippa's Purple",
@@ -6499,6 +6470,35 @@
         {
           "issue": "Black death virus",
           "url": "https://www.google.com/search?q=Black%20death%20virus%20plant%20care%20fix"
+        }
+      ],
+      "category": "Perennials"
+    },
+    {
+      "id": "fl-bergenia",
+      "bedId": "b-fl",
+      "name": "Bergenia Crassifolia",
+      "scientific": "Bergenia crassifolia",
+      "emoji": "🌸",
+      "status": "planned",
+      "water": "Moderate",
+      "sun": "Part shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "x3. 1-gallon. Left of Viburnum. Bold round leaves, magenta spring flowers, ruby winter foliage.",
+      "maintenance": [
+        {
+          "task": "Remove dead leaves in spring",
+          "months": [
+            3
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Floppy leaves (overwatering)",
+          "url": "https://www.google.com/search?q=Floppy%20leaves%20(overwatering)%20plant%20care%20fix"
         }
       ],
       "category": "Perennials"
@@ -9167,5 +9167,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-26T03:44:16.614Z"
+  "syncedAt": "2026-05-26T03:44:22.242Z"
 }
