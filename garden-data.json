@@ -6910,6 +6910,41 @@
       "category": "Ornamental Grasses"
     },
     {
+      "id": "p1778118393809",
+      "bedId": "b-bl",
+      "name": "Mop head hydrangea",
+      "scientific": "Hydrangea macrophylla",
+      "emoji": "emoji_p1778118393809",
+      "category": "Hydrangeas",
+      "status": "alive",
+      "water": "Regular — keep consistently moist",
+      "sun": "Part shade — morning sun preferred",
+      "notes": "",
+      "fromCutting": false,
+      "maintenance": [
+        {
+          "task": "Deadwood removal only — no hard cutback",
+          "months": [
+            1
+          ]
+        },
+        {
+          "task": "Feed with azalea fertilizer",
+          "months": [
+            3
+          ]
+        },
+        {
+          "task": "Prune ONLY after flowering complete",
+          "months": [
+            8,
+            9
+          ]
+        }
+      ],
+      "trouble": []
+    },
+    {
       "id": "bl-impatiens",
       "bedId": "b-bl",
       "name": "Impatiens White",
@@ -6981,41 +7016,6 @@
         }
       ],
       "category": "Vines & Climbers"
-    },
-    {
-      "id": "p1778118393809",
-      "bedId": "b-bl",
-      "name": "Mop head hydrangea",
-      "scientific": "Hydrangea macrophylla",
-      "emoji": "emoji_p1778118393809",
-      "category": "Hydrangeas",
-      "status": "alive",
-      "water": "Regular — keep consistently moist",
-      "sun": "Part shade — morning sun preferred",
-      "notes": "",
-      "fromCutting": false,
-      "maintenance": [
-        {
-          "task": "Deadwood removal only — no hard cutback",
-          "months": [
-            1
-          ]
-        },
-        {
-          "task": "Feed with azalea fertilizer",
-          "months": [
-            3
-          ]
-        },
-        {
-          "task": "Prune ONLY after flowering complete",
-          "months": [
-            8,
-            9
-          ]
-        }
-      ],
-      "trouble": []
     },
     {
       "id": "bl-fatsia",
@@ -9553,5 +9553,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-26T05:20:05.561Z"
+  "syncedAt": "2026-05-26T05:20:11.597Z"
 }
