@@ -6491,6 +6491,41 @@
       "category": "None"
     },
     {
+      "id": "ch-nandina",
+      "bedId": "b-ch",
+      "name": "Nandina",
+      "scientific": "Nandina domestica",
+      "emoji": "🌿",
+      "status": "alive",
+      "water": "Low once established",
+      "sun": "Part shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Existing. Red berries fall/winter.",
+      "maintenance": [
+        {
+          "task": "Light trim in spring if leggy",
+          "months": [
+            3
+          ]
+        },
+        {
+          "task": "Remove oldest canes at ground level",
+          "months": [
+            2
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Not fruiting",
+          "url": "https://www.google.com/search?q=Not%20fruiting%20plant%20care%20fix"
+        }
+      ],
+      "category": "Shrubs"
+    },
+    {
       "id": "ch-cherry",
       "bedId": "b-ch",
       "name": "Flowering Cherry Tree",
@@ -6525,41 +6560,6 @@
         }
       ],
       "category": "Trees"
-    },
-    {
-      "id": "ch-nandina",
-      "bedId": "b-ch",
-      "name": "Nandina",
-      "scientific": "Nandina domestica",
-      "emoji": "🌿",
-      "status": "alive",
-      "water": "Low once established",
-      "sun": "Part shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Existing. Red berries fall/winter.",
-      "maintenance": [
-        {
-          "task": "Light trim in spring if leggy",
-          "months": [
-            3
-          ]
-        },
-        {
-          "task": "Remove oldest canes at ground level",
-          "months": [
-            2
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Not fruiting",
-          "url": "https://www.google.com/search?q=Not%20fruiting%20plant%20care%20fix"
-        }
-      ],
-      "category": "Shrubs"
     },
     {
       "id": "ch-daylily",
@@ -9137,5 +9137,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-26T04:33:14.033Z"
+  "syncedAt": "2026-05-26T04:33:26.600Z"
 }
