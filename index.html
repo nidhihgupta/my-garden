@@ -423,9 +423,11 @@ function buildEmojiField(id,val){
   val=val||'🌿';
   const resolved=resolveEmoji(val)||val;
   const isImg=resolved.startsWith('data:');
-  const previewHtml=isImg?`<img src="${resolved}" style="width:36px;height:36px;object-fit:contain;border-radius:4px;display:block">`:`<span style="font-size:28px;line-height:1">${resolved}</span>`;
-  const clearBtn=isImg?`<button type="button" class="btn-secondary emoji-clear-btn" style="margin:0;padding:6px 10px;font-size:11px;width:auto" onclick="clearEmojiField('${id}')">✕ Clear</button>`:'';
-  return`<div class="emoji-field" id="${id}-wrap"><div class="emoji-field-preview" id="${id}-preview">${previewHtml}</div><input class="emoji-field-input" id="${id}" value="${isImg?'':resolved}" placeholder="Type emoji" oninput="syncEmojiPreview('${id}')" style="${isImg?'display:none':''}"><input type="hidden" id="${id}-data" value="${val}"><button type="button" class="btn-secondary" style="margin:0;padding:8px 10px;font-size:15px;width:auto;flex-shrink:0;line-height:1" onclick="pasteGenmoji('${id}')" title="Paste Genmoji">📋</button>${clearBtn}</div>`;
+  const isUnresolvedKey=val.startsWith('emoji_')&&!isImg;
+  const previewHtml=isImg?`<img src="${resolved}" style="width:36px;height:36px;object-fit:contain;border-radius:4px;display:block">`:`<span style="font-size:28px;line-height:1">${isUnresolvedKey?'🌿':resolved}</span>`;
+  const hideInput=isImg||isUnresolvedKey;
+  const clearBtn=(isImg||isUnresolvedKey)?`<button type="button" class="btn-secondary emoji-clear-btn" style="margin:0;padding:6px 10px;font-size:11px;width:auto" onclick="clearEmojiField('${id}')">✕ Clear</button>`:'';
+  return`<div class="emoji-field" id="${id}-wrap"><div class="emoji-field-preview" id="${id}-preview">${previewHtml}</div><input class="emoji-field-input" id="${id}" value="${hideInput?'':resolved}" placeholder="Type emoji" oninput="syncEmojiPreview('${id}')" style="${hideInput?'display:none':''}"><input type="hidden" id="${id}-data" value="${val}"><button type="button" class="btn-secondary" style="margin:0;padding:8px 10px;font-size:15px;width:auto;flex-shrink:0;line-height:1" onclick="pasteGenmoji('${id}')" title="Paste Genmoji">📋</button>${clearBtn}</div>`;
 }
 function getEmojiFieldValue(id){
   const d=document.getElementById(id+'-data');
@@ -1396,7 +1398,7 @@ function showYard(yard){
   document.getElementById('yard-subtitle').textContent=`${beds.length} beds`;
   document.getElementById('yard-beds-list').innerHTML=beds.length===0?'<div class="empty-state"><span>🌱</span><p>No beds yet.</p></div>':
     beds.map(bed=>{
-      const c=S.plants.filter(p=>p.bedId===bed.id).length;
+      const c=S.plants.filter(p=>p.bedId===bed.id&&p.status!=='dead').length;
       const img=DB.getImg('bed_'+bed.id);
       return`<div class="list-item" onclick="showBed('${bed.id}')"><div class="list-item-icon">${img?`<img src="${img}">`:(bed.icon||'🌿')}</div><div class="list-item-info"><h3>${bed.name}</h3><p>${c} plant${c!==1?'s':''} · ${bed.sun||'—'}</p></div><div class="list-item-arrow">›</div></div>`;
     }).join('');
@@ -1451,7 +1453,7 @@ function showBed(bedId){
 }
 function renderBedPlants(filter){
   const bedId=S.currentBed.id;
-  const allPlants=S.plants.filter(p=>p.bedId===bedId);
+  const allPlants=S.plants.filter(p=>p.bedId===bedId&&p.status!=='dead');
   console.log('renderBedPlants: bed='+bedId+' filter='+filter+' total plants='+S.plants.length+' matching='+allPlants.length);
   const filtered=filter==='all'?allPlants:allPlants.filter(p=>(p.status||'alive')===filter);
   const alive=allPlants.filter(p=>(p.status||'alive')==='alive'||p.status==='struggling').length;
@@ -2024,7 +2026,8 @@ function renderAllPlants(query){
       const loc=p._indoor?(()=>{const room=S.rooms.find(r=>r.id===p.roomId);return(room?room.name:'')+(p.section?' · '+p.section:'');})():(()=>{const bed=S.beds.find(b=>b.id===p.bedId);return bed?bed.name:'Unknown';})();
       const icon=p._indoor?'🪴':'🌳';
       const onclick=p._indoor?`showIndoorPlantFromAll('${p.id}')`:`showOutdoorPlantFromAll('${p.id}')`;
-      html+=`<div class="plant-card ${p.status==='planned'?'planned':''}" onclick="${onclick}"><div class="plant-thumb">${emojiHtml(p.emoji,28)}</div><div class="plant-card-info"><div class="plant-card-name">${p.name}</div><div class="plant-card-detail">${icon} ${loc}</div></div><div class="status-dot ${p.status||'alive'}"></div></div>`;
+      const isDead=p.status==='dead';
+      html+=`<div class="plant-card ${p.status==='planned'?'planned':''}" onclick="${onclick}" style="${isDead?'opacity:0.45;filter:grayscale(0.6)':''}"><div class="plant-thumb">${emojiHtml(p.emoji,28)}</div><div class="plant-card-info"><div class="plant-card-name">${p.name}${isDead?' <span style="font-size:10px;color:#999;font-weight:400">removed</span>':''}</div><div class="plant-card-detail">${icon} ${loc}</div></div><div class="status-dot ${p.status||'alive'}"></div></div>`;
     });
     html+='</div>';
   });
