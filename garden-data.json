@@ -6380,7 +6380,7 @@
       "datePlanted": "",
       "nursery": "",
       "fromCutting": false,
-      "notes": "x1. 3-gallon. 4ft x 4ft at maturity.",
+      "notes": "x1. 3-gallon. 4ft x 6ft at maturity.",
       "maintenance": [
         {
           "task": "Monitor for slugs and snails — bait if needed",
@@ -6414,7 +6414,7 @@
         }
       ],
       "category": "Perennials",
-      "howPlanted": ""
+      "howPlanted": "bought"
     },
     {
       "id": "br-tiarella",
@@ -9553,5 +9553,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-26T05:13:23.079Z"
+  "syncedAt": "2026-05-26T05:13:59.329Z"
 }
