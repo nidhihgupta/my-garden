@@ -7235,7 +7235,7 @@
       "bedId": "b-ros",
       "name": "Caroline Cherry",
       "scientific": "Prunus Caroliniana",
-      "emoji": "🌿",
+      "emoji": "🌳",
       "category": "Trees",
       "status": "alive",
       "water": "",
@@ -7266,7 +7266,9 @@
           ]
         }
       ],
-      "trouble": []
+      "trouble": [],
+      "datePlanted": "",
+      "howPlanted": ""
     },
     {
       "id": "p177977020573752",
@@ -9831,5 +9833,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-26T18:34:23.214Z"
+  "syncedAt": "2026-05-26T18:35:35.393Z"
 }
