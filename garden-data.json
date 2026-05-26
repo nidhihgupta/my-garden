@@ -189,302 +189,6 @@
   ],
   "plants": [
     {
-      "id": "ch-cherry",
-      "bedId": "b-ch",
-      "name": "Flowering Cherry Tree",
-      "scientific": "Prunus spp.",
-      "emoji": "🌸",
-      "status": "alive",
-      "water": "Regular when young",
-      "sun": "Part shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Existing anchor.",
-      "maintenance": [
-        {
-          "task": "Feed balanced fertilizer in spring",
-          "months": [
-            3
-          ]
-        },
-        {
-          "task": "Water deeply in summer heat",
-          "months": [
-            7,
-            8
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Brown rot",
-          "url": "https://www.google.com/search?q=Brown%20rot%20plant%20care%20fix"
-        }
-      ],
-      "category": "Trees"
-    },
-    {
-      "id": "ch-nandina",
-      "bedId": "b-ch",
-      "name": "Nandina",
-      "scientific": "Nandina domestica",
-      "emoji": "🌿",
-      "status": "alive",
-      "water": "Low once established",
-      "sun": "Part shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Existing. Red berries fall/winter.",
-      "maintenance": [
-        {
-          "task": "Light trim in spring if leggy",
-          "months": [
-            3
-          ]
-        },
-        {
-          "task": "Remove oldest canes at ground level",
-          "months": [
-            2
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Not fruiting",
-          "url": "https://www.google.com/search?q=Not%20fruiting%20plant%20care%20fix"
-        }
-      ],
-      "category": "Shrubs"
-    },
-    {
-      "id": "ch-daylily",
-      "bedId": "b-ch",
-      "name": "Day Lilies",
-      "scientific": "Hemerocallis spp.",
-      "emoji": "emoji_ch-daylily",
-      "status": "alive",
-      "water": "Low-moderate",
-      "sun": "Part shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Existing.",
-      "maintenance": [
-        {
-          "task": "Deadhead spent blooms daily during peak bloom",
-          "months": [
-            5,
-            6,
-            7
-          ]
-        },
-        {
-          "task": "Divide every 3-4 years",
-          "months": [
-            3
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Rust disease",
-          "url": "https://www.google.com/search?q=Rust%20disease%20plant%20care%20fix"
-        }
-      ],
-      "category": "Bulbs",
-      "howPlanted": ""
-    },
-    {
-      "id": "ch-abelia",
-      "bedId": "b-ch",
-      "name": "Abelia Kaleidoscope",
-      "scientific": "Abelia grandiflora Kaleidoscope",
-      "emoji": "🌿",
-      "status": "planned",
-      "water": "Moderate",
-      "sun": "Part shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "x3. 3-gallon.",
-      "maintenance": [
-        {
-          "task": "Feed slow release fertilizer in spring",
-          "months": [
-            3
-          ]
-        },
-        {
-          "task": "Light trim after spring flowering",
-          "months": [
-            5,
-            6
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Loss of variegation",
-          "url": "https://www.google.com/search?q=Loss%20of%20variegation%20plant%20care%20fix"
-        }
-      ],
-      "category": "Shrubs"
-    },
-    {
-      "id": "ch-mondo",
-      "bedId": "b-ch",
-      "name": "Black Mondo",
-      "scientific": "Ophiopogon planiscapus Nigrescens",
-      "emoji": "emoji_ch-mondo",
-      "status": "planned",
-      "water": "Moderate",
-      "sun": "Part shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "x3. 1-gallon.",
-      "maintenance": [
-        {
-          "task": "Divide clumps every 3-4 years",
-          "months": [
-            3
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Loss of black color",
-          "url": "https://www.google.com/search?q=Loss%20of%20black%20color%20plant%20care%20fix"
-        }
-      ],
-      "category": "Ornamental Grasses"
-    },
-    {
-      "id": "ch-lamium",
-      "bedId": "b-ch",
-      "name": "Lamium White Nancy",
-      "scientific": "Lamium maculatum White Nancy",
-      "emoji": "emoji_ch-lamium",
-      "status": "planned",
-      "water": "Moderate",
-      "sun": "Part shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Ground cover.",
-      "maintenance": [
-        {
-          "task": "Trim back if getting leggy",
-          "months": [
-            5,
-            8
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Leggy growth",
-          "url": "https://www.google.com/search?q=Leggy%20growth%20plant%20care%20fix"
-        }
-      ],
-      "category": "Perennials"
-    },
-    {
-      "id": "ch-jenny",
-      "bedId": "b-ch",
-      "name": "Creeping Jenny",
-      "scientific": "Lysimachia nummularia",
-      "emoji": "emoji_ch-jenny",
-      "status": "alive",
-      "water": "Low to moderate",
-      "sun": "Part shade to full shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Existing groundcover. Trim to keep in bounds under cherry tree.",
-      "maintenance": [
-        {
-          "task": "Trim back to control spread",
-          "months": [
-            4,
-            5,
-            6,
-            7,
-            8,
-            9
-          ]
-        },
-        {
-          "task": "Divide if overcrowded",
-          "months": [
-            3
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Root rot in waterlogged soil",
-          "url": "https://www.google.com/search?q=Root%20rot%20in%20waterlogged%20soil%20plant%20care%20fix"
-        }
-      ],
-      "category": "None",
-      "howPlanted": ""
-    },
-    {
-      "id": "ch-hosta",
-      "bedId": "b-ch",
-      "name": "Hosta Patriot",
-      "scientific": "Hosta Patriot",
-      "emoji": "🍃",
-      "status": "planned",
-      "water": "Moderate",
-      "sun": "Part shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Planned. Classic white-margined hosta. Slug magnet — bait proactively.",
-      "maintenance": [
-        {
-          "task": "Monitor for slugs and snails — apply bait as soon as growth emerges",
-          "months": [
-            3,
-            4,
-            5,
-            6,
-            7,
-            8
-          ]
-        },
-        {
-          "task": "Emerges late Feb/March — mark location and do not disturb soil",
-          "months": [
-            1,
-            2
-          ]
-        },
-        {
-          "task": "Cut back dead foliage in fall",
-          "months": [
-            11
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Slug and snail damage",
-          "url": "https://www.google.com/search?q=Slug%20and%20snail%20damage%20plant%20care%20fix"
-        },
-        {
-          "issue": "Crown rot in waterlogged soil",
-          "url": "https://www.google.com/search?q=Crown%20rot%20in%20waterlogged%20soil%20plant%20care%20fix"
-        }
-      ],
-      "category": "None"
-    },
-    {
       "id": "ros-apricot",
       "bedId": "b-back-rose",
       "name": "Apricot Tree",
@@ -6669,6 +6373,302 @@
       ],
       "category": "Shrubs",
       "howPlanted": ""
+    },
+    {
+      "id": "ch-abelia",
+      "bedId": "b-ch",
+      "name": "Abelia Kaleidoscope",
+      "scientific": "Abelia grandiflora Kaleidoscope",
+      "emoji": "🌿",
+      "status": "planned",
+      "water": "Moderate",
+      "sun": "Part shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "x3. 3-gallon.",
+      "maintenance": [
+        {
+          "task": "Feed slow release fertilizer in spring",
+          "months": [
+            3
+          ]
+        },
+        {
+          "task": "Light trim after spring flowering",
+          "months": [
+            5,
+            6
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Loss of variegation",
+          "url": "https://www.google.com/search?q=Loss%20of%20variegation%20plant%20care%20fix"
+        }
+      ],
+      "category": "Shrubs"
+    },
+    {
+      "id": "ch-cherry",
+      "bedId": "b-ch",
+      "name": "Flowering Cherry Tree",
+      "scientific": "Prunus spp.",
+      "emoji": "🌸",
+      "status": "alive",
+      "water": "Regular when young",
+      "sun": "Part shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Existing anchor.",
+      "maintenance": [
+        {
+          "task": "Feed balanced fertilizer in spring",
+          "months": [
+            3
+          ]
+        },
+        {
+          "task": "Water deeply in summer heat",
+          "months": [
+            7,
+            8
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Brown rot",
+          "url": "https://www.google.com/search?q=Brown%20rot%20plant%20care%20fix"
+        }
+      ],
+      "category": "Trees"
+    },
+    {
+      "id": "ch-nandina",
+      "bedId": "b-ch",
+      "name": "Nandina",
+      "scientific": "Nandina domestica",
+      "emoji": "🌿",
+      "status": "alive",
+      "water": "Low once established",
+      "sun": "Part shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Existing. Red berries fall/winter.",
+      "maintenance": [
+        {
+          "task": "Light trim in spring if leggy",
+          "months": [
+            3
+          ]
+        },
+        {
+          "task": "Remove oldest canes at ground level",
+          "months": [
+            2
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Not fruiting",
+          "url": "https://www.google.com/search?q=Not%20fruiting%20plant%20care%20fix"
+        }
+      ],
+      "category": "Shrubs"
+    },
+    {
+      "id": "ch-daylily",
+      "bedId": "b-ch",
+      "name": "Day Lilies",
+      "scientific": "Hemerocallis spp.",
+      "emoji": "emoji_ch-daylily",
+      "status": "alive",
+      "water": "Low-moderate",
+      "sun": "Part shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Existing.",
+      "maintenance": [
+        {
+          "task": "Deadhead spent blooms daily during peak bloom",
+          "months": [
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "task": "Divide every 3-4 years",
+          "months": [
+            3
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Rust disease",
+          "url": "https://www.google.com/search?q=Rust%20disease%20plant%20care%20fix"
+        }
+      ],
+      "category": "Bulbs",
+      "howPlanted": ""
+    },
+    {
+      "id": "ch-mondo",
+      "bedId": "b-ch",
+      "name": "Black Mondo",
+      "scientific": "Ophiopogon planiscapus Nigrescens",
+      "emoji": "emoji_ch-mondo",
+      "status": "planned",
+      "water": "Moderate",
+      "sun": "Part shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "x3. 1-gallon.",
+      "maintenance": [
+        {
+          "task": "Divide clumps every 3-4 years",
+          "months": [
+            3
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Loss of black color",
+          "url": "https://www.google.com/search?q=Loss%20of%20black%20color%20plant%20care%20fix"
+        }
+      ],
+      "category": "Ornamental Grasses"
+    },
+    {
+      "id": "ch-lamium",
+      "bedId": "b-ch",
+      "name": "Lamium White Nancy",
+      "scientific": "Lamium maculatum White Nancy",
+      "emoji": "emoji_ch-lamium",
+      "status": "planned",
+      "water": "Moderate",
+      "sun": "Part shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Ground cover.",
+      "maintenance": [
+        {
+          "task": "Trim back if getting leggy",
+          "months": [
+            5,
+            8
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Leggy growth",
+          "url": "https://www.google.com/search?q=Leggy%20growth%20plant%20care%20fix"
+        }
+      ],
+      "category": "Perennials"
+    },
+    {
+      "id": "ch-jenny",
+      "bedId": "b-ch",
+      "name": "Creeping Jenny",
+      "scientific": "Lysimachia nummularia",
+      "emoji": "emoji_ch-jenny",
+      "status": "alive",
+      "water": "Low to moderate",
+      "sun": "Part shade to full shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Existing groundcover. Trim to keep in bounds under cherry tree.",
+      "maintenance": [
+        {
+          "task": "Trim back to control spread",
+          "months": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "task": "Divide if overcrowded",
+          "months": [
+            3
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Root rot in waterlogged soil",
+          "url": "https://www.google.com/search?q=Root%20rot%20in%20waterlogged%20soil%20plant%20care%20fix"
+        }
+      ],
+      "category": "None",
+      "howPlanted": ""
+    },
+    {
+      "id": "ch-hosta",
+      "bedId": "b-ch",
+      "name": "Hosta Patriot",
+      "scientific": "Hosta Patriot",
+      "emoji": "🍃",
+      "status": "planned",
+      "water": "Moderate",
+      "sun": "Part shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Planned. Classic white-margined hosta. Slug magnet — bait proactively.",
+      "maintenance": [
+        {
+          "task": "Monitor for slugs and snails — apply bait as soon as growth emerges",
+          "months": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "task": "Emerges late Feb/March — mark location and do not disturb soil",
+          "months": [
+            1,
+            2
+          ]
+        },
+        {
+          "task": "Cut back dead foliage in fall",
+          "months": [
+            11
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Slug and snail damage",
+          "url": "https://www.google.com/search?q=Slug%20and%20snail%20damage%20plant%20care%20fix"
+        },
+        {
+          "issue": "Crown rot in waterlogged soil",
+          "url": "https://www.google.com/search?q=Crown%20rot%20in%20waterlogged%20soil%20plant%20care%20fix"
+        }
+      ],
+      "category": "None"
     }
   ],
   "indoorPlants": [
@@ -9137,5 +9137,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-26T04:32:26.299Z"
+  "syncedAt": "2026-05-26T04:33:05.476Z"
 }
