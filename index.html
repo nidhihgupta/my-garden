@@ -24,6 +24,8 @@ body{font-family:'DM Sans',sans-serif;background:var(--warm-white);color:var(--t
 .header p{font-size:13px;color:var(--text-light);margin-top:4px;}
 .header-actions{display:flex;align-items:center;justify-content:space-between;}
 .edit-btn{font-size:13px;color:var(--sage-dark);font-weight:500;cursor:pointer;padding:4px 10px;border:1.5px solid var(--sage-dark);border-radius:20px;}
+.icon-btn{width:36px;height:36px;display:flex;align-items:center;justify-content:center;border:1.5px solid var(--sage-dark);border-radius:50%;color:var(--sage-dark);cursor:pointer;font-size:16px;flex-shrink:0;transition:background 0.15s,color 0.15s;}
+.icon-btn.active{background:var(--sage-dark);color:white;}
 .home-hero{background:linear-gradient(135deg,var(--sage-dark) 0%,var(--sage) 60%,var(--sage-light) 100%);padding:60px 24px 40px;position:relative;overflow:hidden;}
 .home-hero::before{content:'';position:absolute;top:-40px;right:-40px;width:200px;height:200px;border-radius:50%;background:rgba(255,255,255,0.08);}
 .home-greeting{font-size:13px;color:rgba(255,255,255,0.7);letter-spacing:1px;text-transform:uppercase;margin-bottom:8px;}
@@ -224,14 +226,14 @@ body{font-family:'DM Sans',sans-serif;background:var(--warm-white);color:var(--t
 </div>
 <div id="screen-room" class="screen">
   <div style="position:relative"><div class="room-hero" id="room-hero-area"><span class="room-hero-placeholder">🪴</span></div><div style="position:absolute;top:56px;left:20px;cursor:pointer;background:rgba(255,255,255,0.9);border-radius:20px;padding:6px 14px;font-size:13px;font-weight:500" onclick="showScreen('indoor')">← Indoor</div><button class="room-hero-edit" onclick="triggerRoomImageUpload()">📷 Edit Photo</button></div>
-  <div class="header" style="padding-top:16px"><div class="header-actions"><h1 id="room-title">Office</h1><span class="edit-btn" onclick="showEditRoomModal()">Edit</span></div><p id="room-subtitle"></p></div>
+  <div class="header" style="padding-top:16px"><div class="header-actions"><h1 id="room-title">Office</h1><span class="icon-btn" onclick="showEditRoomModal()" title="Edit">✏</span></div><p id="room-subtitle"></p></div>
   <div id="room-sections-list"></div>
   <input type="file" id="room-image-input" accept="image/*" style="display:none" onchange="handleRoomImageUpload(event)">
   <button class="fab" onclick="showAddPlantToRoomModal()">+</button>
 </div>
 <div id="screen-bed" class="screen">
   <div style="position:relative"><div class="bed-hero" id="bed-hero-area"><span class="bed-hero-placeholder">🌿</span></div><div style="position:absolute;top:56px;left:20px;cursor:pointer;background:rgba(255,255,255,0.9);border-radius:20px;padding:6px 14px;font-size:13px;font-weight:500" id="bed-back-link">← Back</div><button class="bed-hero-edit" onclick="triggerBedImageUpload()">📷 Edit Photo</button></div>
-  <div class="header" style="padding-top:16px"><div class="header-actions"><h1 id="bed-title">Bed</h1><div style="display:flex;gap:8px"><span class="edit-btn" id="reorder-btn" onclick="toggleReorderMode()">⇅ Reorder</span><span class="edit-btn" onclick="showEditBedModal()">Edit</span></div></div><p id="bed-subtitle"></p></div>
+  <div class="header" style="padding-top:16px"><div class="header-actions"><h1 id="bed-title">Bed</h1><div style="display:flex;gap:12px"><span class="icon-btn" id="reorder-btn" onclick="toggleReorderMode()" title="Reorder">⇅</span><span class="icon-btn" onclick="showEditBedModal()" title="Edit">✏</span></div></div><p id="bed-subtitle"></p></div>
   <div class="bed-info-bar"><div class="bed-stat"><span class="bed-stat-label">Zone</span><span class="bed-stat-value" id="bed-zone">—</span></div><div class="bed-stat"><span class="bed-stat-label">Sun</span><span class="bed-stat-value" id="bed-sun">—</span></div><div class="bed-stat"><span class="bed-stat-label">Plants</span><span class="bed-stat-value" id="bed-plant-count">0</span></div><div class="bed-stat"><span class="bed-stat-label">Planned</span><span class="bed-stat-value" id="bed-planned-count">0</span></div></div>
   <div class="bed-filter" id="bed-filter-bar"><div class="filter-chip active" onclick="filterBedPlants('all',this)">All</div><div class="filter-chip" onclick="filterBedPlants('alive',this)">Existing</div><div class="filter-chip" onclick="filterBedPlants('planned',this)">Planned</div></div>
   <div class="list-container" id="bed-plants-list"></div>
@@ -1458,7 +1460,7 @@ function renderBedPlants(filter){
   document.getElementById('bed-plant-count').textContent=alive;
   document.getElementById('bed-planned-count').textContent=planned;
   const rbtn=document.getElementById('reorder-btn');
-  if(rbtn){rbtn.textContent=_reorderMode?'✓ Done':'⇅ Reorder';rbtn.style.background=_reorderMode?'var(--sage-dark)':'';rbtn.style.color=_reorderMode?'white':'var(--sage-dark)';}
+  if(rbtn){rbtn.classList.toggle('active',_reorderMode);}
   document.getElementById('bed-plants-list').innerHTML=filtered.length===0?'<div class="empty-state"><span>🌱</span><p>No plants here yet.</p></div>':
     filtered.map(p=>{
       const handle=_reorderMode?`<div class="drag-handle" ontouchstart="_dragHandleStart(event,'${p.id}')">☰</div>`:'';
