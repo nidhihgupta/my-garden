@@ -6664,43 +6664,6 @@
       "howPlanted": ""
     },
     {
-      "id": "br-azalea",
-      "bedId": "b-br",
-      "name": "Encore Azalea White",
-      "scientific": "Rhododendron Encore",
-      "emoji": "emoji_br-azalea",
-      "status": "planned",
-      "water": "Regular",
-      "sun": "Part shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "x2. 3-gallon. White. Diagonal back layout.",
-      "maintenance": [
-        {
-          "task": "Feed azalea fertilizer after each bloom cycle",
-          "months": [
-            4,
-            7,
-            10
-          ]
-        },
-        {
-          "task": "Light prune after spring bloom only",
-          "months": [
-            5
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Not reblooming",
-          "url": "https://www.google.com/search?q=Not%20reblooming%20plant%20care%20fix"
-        }
-      ],
-      "category": "Shrubs"
-    },
-    {
       "id": "br-tiarella",
       "bedId": "b-br",
       "name": "Tiarella Spring Symphony",
@@ -6788,6 +6751,43 @@
         }
       ],
       "category": "Annuals"
+    },
+    {
+      "id": "br-azalea",
+      "bedId": "b-br",
+      "name": "Encore Azalea White",
+      "scientific": "Rhododendron Encore",
+      "emoji": "emoji_br-azalea",
+      "status": "planned",
+      "water": "Regular",
+      "sun": "Part shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "x2. 3-gallon. White. Diagonal back layout.",
+      "maintenance": [
+        {
+          "task": "Feed azalea fertilizer after each bloom cycle",
+          "months": [
+            4,
+            7,
+            10
+          ]
+        },
+        {
+          "task": "Light prune after spring bloom only",
+          "months": [
+            5
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Not reblooming",
+          "url": "https://www.google.com/search?q=Not%20reblooming%20plant%20care%20fix"
+        }
+      ],
+      "category": "Shrubs"
     },
     {
       "id": "br-torenia",
@@ -9521,5 +9521,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-26T05:08:52.091Z"
+  "syncedAt": "2026-05-26T05:09:03.162Z"
 }
