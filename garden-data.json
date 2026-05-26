@@ -7136,49 +7136,6 @@
       "category": "Vegetables"
     },
     {
-      "id": "p1778195347203525",
-      "bedId": "b-berry",
-      "name": "Geranium",
-      "scientific": "Pelargonium spp.",
-      "emoji": "emoji_p1778195347203525",
-      "status": "alive",
-      "water": "Moderate",
-      "sun": "Part shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Red + pink. Propagating from stem cuttings.",
-      "maintenance": [
-        {
-          "task": "Deadhead spent blooms aggressively",
-          "months": [
-            4,
-            5,
-            6,
-            7,
-            8,
-            9,
-            10
-          ]
-        },
-        {
-          "task": "Cut back hard after first flush — feed high phosphorus after",
-          "months": [
-            5,
-            6
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Leggy growth",
-          "url": "https://www.google.com/search?q=Leggy%20growth%20plant%20care%20fix"
-        }
-      ],
-      "category": "None",
-      "isIndoor": false
-    },
-    {
       "id": "p1778869421207",
       "bedId": "b-berry",
       "name": "Okra",
@@ -7350,6 +7307,49 @@
       "trouble": [],
       "datePlanted": "",
       "howPlanted": ""
+    },
+    {
+      "id": "p1778195347203525",
+      "bedId": "b-berry",
+      "name": "Geranium",
+      "scientific": "Pelargonium spp.",
+      "emoji": "emoji_p1778195347203525",
+      "status": "alive",
+      "water": "Moderate",
+      "sun": "Part shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Red + pink. Propagating from stem cuttings.",
+      "maintenance": [
+        {
+          "task": "Deadhead spent blooms aggressively",
+          "months": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "task": "Cut back hard after first flush — feed high phosphorus after",
+          "months": [
+            5,
+            6
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Leggy growth",
+          "url": "https://www.google.com/search?q=Leggy%20growth%20plant%20care%20fix"
+        }
+      ],
+      "category": "None",
+      "isIndoor": false
     },
     {
       "id": "p1778178506166",
@@ -9884,5 +9884,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-26T18:41:45.844Z"
+  "syncedAt": "2026-05-26T18:41:50.961Z"
 }
