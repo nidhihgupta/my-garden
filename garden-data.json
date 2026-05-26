@@ -6918,40 +6918,6 @@
       "trouble": []
     },
     {
-      "id": "ros-peruvian",
-      "bedId": "b-ros",
-      "name": "Peruvian Lily",
-      "scientific": "Alstroemeria spp.",
-      "emoji": "🌸",
-      "status": "alive",
-      "water": "Moderate",
-      "sun": "Part sun",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Existing. Long-lasting cut flowers.",
-      "maintenance": [
-        {
-          "task": "Deadhead at base — pull stem out, do not cut",
-          "months": [
-            4,
-            5,
-            6,
-            7,
-            8,
-            9
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Not flowering",
-          "url": "https://www.google.com/search?q=Not%20flowering%20plant%20care%20fix"
-        }
-      ],
-      "category": "Bulbs"
-    },
-    {
       "id": "p1778514288212",
       "bedId": "b-ros",
       "name": "Caroline Cherry",
@@ -7018,6 +6984,40 @@
       ],
       "category": "Trees",
       "isIndoor": false
+    },
+    {
+      "id": "ros-peruvian",
+      "bedId": "b-ros",
+      "name": "Peruvian Lily",
+      "scientific": "Alstroemeria spp.",
+      "emoji": "🌸",
+      "status": "alive",
+      "water": "Moderate",
+      "sun": "Part sun",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Existing. Long-lasting cut flowers.",
+      "maintenance": [
+        {
+          "task": "Deadhead at base — pull stem out, do not cut",
+          "months": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Not flowering",
+          "url": "https://www.google.com/search?q=Not%20flowering%20plant%20care%20fix"
+        }
+      ],
+      "category": "Bulbs"
     },
     {
       "id": "ros-daylily",
@@ -9518,5 +9518,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-26T04:56:31.655Z"
+  "syncedAt": "2026-05-26T04:56:41.559Z"
 }
