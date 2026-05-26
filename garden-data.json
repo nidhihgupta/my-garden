@@ -6135,11 +6135,11 @@
     {
       "id": "porch-cordyline",
       "bedId": "b-porch",
-      "name": "Cordyline / NZ Flax",
+      "name": "Cordyline",
       "scientific": "Cordyline australis",
       "emoji": "🌿",
       "status": "alive",
-      "category": "Tropicals",
+      "category": "",
       "water": "Low once established",
       "sun": "Full sun to part shade",
       "datePlanted": "",
@@ -6155,7 +6155,8 @@
           ]
         }
       ],
-      "trouble": []
+      "trouble": [],
+      "howPlanted": ""
     },
     {
       "id": "porch-begonia",
@@ -9520,5 +9521,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-26T05:05:49.070Z"
+  "syncedAt": "2026-05-26T05:06:58.359Z"
 }
