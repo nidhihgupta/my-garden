@@ -6368,42 +6368,6 @@
       "category": "Succulents"
     },
     {
-      "id": "fl-viburnum",
-      "bedId": "b-fl",
-      "name": "Viburnum davidii",
-      "scientific": "Viburnum davidii",
-      "emoji": "🌿",
-      "status": "planned",
-      "water": "Moderate",
-      "sun": "Part shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Center anchor. 3-gallon. Turquoise berries in fall.",
-      "maintenance": [
-        {
-          "task": "Feed slow release fertilizer in spring",
-          "months": [
-            3
-          ]
-        },
-        {
-          "task": "Light prune after flowering to maintain shape",
-          "months": [
-            6,
-            7
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "No berries",
-          "url": "https://www.google.com/search?q=No%20berries%20plant%20care%20fix"
-        }
-      ],
-      "category": "Shrubs"
-    },
-    {
       "id": "fl-daylily",
       "bedId": "b-fl",
       "name": "Day Lilies",
@@ -6539,6 +6503,42 @@
         }
       ],
       "category": "Ornamental Grasses"
+    },
+    {
+      "id": "fl-viburnum",
+      "bedId": "b-fl",
+      "name": "Viburnum davidii",
+      "scientific": "Viburnum davidii",
+      "emoji": "🌿",
+      "status": "planned",
+      "water": "Moderate",
+      "sun": "Part shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Center anchor. 3-gallon. Turquoise berries in fall.",
+      "maintenance": [
+        {
+          "task": "Feed slow release fertilizer in spring",
+          "months": [
+            3
+          ]
+        },
+        {
+          "task": "Light prune after flowering to maintain shape",
+          "months": [
+            6,
+            7
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "No berries",
+          "url": "https://www.google.com/search?q=No%20berries%20plant%20care%20fix"
+        }
+      ],
+      "category": "Shrubs"
     },
     {
       "id": "fl-carex",
@@ -9167,5 +9167,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-26T03:43:35.119Z"
+  "syncedAt": "2026-05-26T03:43:39.428Z"
 }
