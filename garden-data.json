@@ -6164,6 +6164,57 @@
       "category": "Trees"
     },
     {
+      "id": "mp-hostamm",
+      "bedId": "b-mp",
+      "name": "Hosta Minute Man",
+      "scientific": "Hosta Minute Man",
+      "emoji": "🍃",
+      "status": "planned",
+      "water": "Moderate",
+      "sun": "Part shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Planned. Bold white-edged foliage. Slug magnet — bait proactively.",
+      "maintenance": [
+        {
+          "task": "Monitor for slugs and snails — apply bait as soon as growth emerges",
+          "months": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "task": "Emerges late Feb/March — mark location and do not disturb soil",
+          "months": [
+            1,
+            2
+          ]
+        },
+        {
+          "task": "Cut back dead foliage in fall",
+          "months": [
+            11
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Slug and snail damage",
+          "url": "https://www.google.com/search?q=Slug%20and%20snail%20damage%20plant%20care%20fix"
+        },
+        {
+          "issue": "Crown rot in waterlogged soil",
+          "url": "https://www.google.com/search?q=Crown%20rot%20in%20waterlogged%20soil%20plant%20care%20fix"
+        }
+      ],
+      "category": "None"
+    },
+    {
       "id": "mp-fern",
       "bedId": "b-mp",
       "name": "Western Sword Fern",
@@ -6220,57 +6271,6 @@
         }
       ],
       "category": "Ornamental Grasses"
-    },
-    {
-      "id": "mp-hostamm",
-      "bedId": "b-mp",
-      "name": "Hosta Minute Man",
-      "scientific": "Hosta Minute Man",
-      "emoji": "🍃",
-      "status": "planned",
-      "water": "Moderate",
-      "sun": "Part shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Planned. Bold white-edged foliage. Slug magnet — bait proactively.",
-      "maintenance": [
-        {
-          "task": "Monitor for slugs and snails — apply bait as soon as growth emerges",
-          "months": [
-            3,
-            4,
-            5,
-            6,
-            7,
-            8
-          ]
-        },
-        {
-          "task": "Emerges late Feb/March — mark location and do not disturb soil",
-          "months": [
-            1,
-            2
-          ]
-        },
-        {
-          "task": "Cut back dead foliage in fall",
-          "months": [
-            11
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Slug and snail damage",
-          "url": "https://www.google.com/search?q=Slug%20and%20snail%20damage%20plant%20care%20fix"
-        },
-        {
-          "issue": "Crown rot in waterlogged soil",
-          "url": "https://www.google.com/search?q=Crown%20rot%20in%20waterlogged%20soil%20plant%20care%20fix"
-        }
-      ],
-      "category": "None"
     },
     {
       "id": "mp-daylily",
@@ -9137,5 +9137,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-26T04:30:24.029Z"
+  "syncedAt": "2026-05-26T04:30:26.477Z"
 }
