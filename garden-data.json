@@ -6360,6 +6360,36 @@
       "category": "Ornamental Grasses"
     },
     {
+      "id": "fl-lamium",
+      "bedId": "b-fl",
+      "name": "Lamium White Nancy",
+      "scientific": "Lamium maculatum White Nancy",
+      "emoji": "emoji_fl-lamium",
+      "status": "planned",
+      "water": "Moderate",
+      "sun": "Part shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Ground cover throughout bed.",
+      "maintenance": [
+        {
+          "task": "Trim back if getting leggy",
+          "months": [
+            5,
+            8
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Leggy growth",
+          "url": "https://www.google.com/search?q=Leggy%20growth%20plant%20care%20fix"
+        }
+      ],
+      "category": "Perennials"
+    },
+    {
       "id": "fl-daylily",
       "bedId": "b-fl",
       "name": "Day Lilies",
@@ -6407,36 +6437,6 @@
       ],
       "category": "Perennials",
       "howPlanted": ""
-    },
-    {
-      "id": "fl-lamium",
-      "bedId": "b-fl",
-      "name": "Lamium White Nancy",
-      "scientific": "Lamium maculatum White Nancy",
-      "emoji": "emoji_fl-lamium",
-      "status": "planned",
-      "water": "Moderate",
-      "sun": "Part shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Ground cover throughout bed.",
-      "maintenance": [
-        {
-          "task": "Trim back if getting leggy",
-          "months": [
-            5,
-            8
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Leggy growth",
-          "url": "https://www.google.com/search?q=Leggy%20growth%20plant%20care%20fix"
-        }
-      ],
-      "category": "Perennials"
     },
     {
       "id": "fl-sedum",
@@ -9167,5 +9167,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-26T03:44:36.276Z"
+  "syncedAt": "2026-05-26T03:44:39.282Z"
 }
