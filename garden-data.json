@@ -6926,6 +6926,36 @@
       "howPlanted": ""
     },
     {
+      "id": "porch-foxtail-fern",
+      "bedId": "b-porch",
+      "name": "Foxtail Fern",
+      "scientific": "Asparagus densiflorus",
+      "emoji": "🌿",
+      "status": "alive",
+      "category": "Ferns",
+      "water": "Moderate",
+      "sun": "Part shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Feathery arching stems. Not a true fern.",
+      "maintenance": [
+        {
+          "task": "Feed slow release fertilizer in spring",
+          "months": [
+            3
+          ]
+        },
+        {
+          "task": "Cut back dead stems",
+          "months": [
+            2
+          ]
+        }
+      ],
+      "trouble": []
+    },
+    {
       "id": "p1779772206300480",
       "bedId": "b-porch",
       "name": "Coleus",
@@ -6956,36 +6986,6 @@
       "category": "Annuals",
       "isIndoor": false,
       "howPlanted": "bought"
-    },
-    {
-      "id": "porch-foxtail-fern",
-      "bedId": "b-porch",
-      "name": "Foxtail Fern",
-      "scientific": "Asparagus densiflorus",
-      "emoji": "🌿",
-      "status": "alive",
-      "category": "Ferns",
-      "water": "Moderate",
-      "sun": "Part shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Feathery arching stems. Not a true fern.",
-      "maintenance": [
-        {
-          "task": "Feed slow release fertilizer in spring",
-          "months": [
-            3
-          ]
-        },
-        {
-          "task": "Cut back dead stems",
-          "months": [
-            2
-          ]
-        }
-      ],
-      "trouble": []
     },
     {
       "id": "porch-fuchsia",
@@ -9553,5 +9553,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-26T05:11:35.659Z"
+  "syncedAt": "2026-05-26T05:11:42.983Z"
 }
