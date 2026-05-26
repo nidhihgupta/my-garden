@@ -7005,47 +7005,6 @@
       "howPlanted": "seed"
     },
     {
-      "id": "ps-raspberry",
-      "bedId": "b-berry",
-      "name": "Raspberry Bababerry",
-      "scientific": "Rubus idaeus Bababerry",
-      "emoji": "emoji_ps-raspberry",
-      "status": "planned",
-      "water": "Weekly on drip",
-      "sun": "Full sun",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Existing x1 + new x1. On drip system.",
-      "maintenance": [
-        {
-          "task": "On drip system weekly — check system functioning monthly",
-          "months": [
-            4,
-            5,
-            6,
-            7,
-            8
-          ]
-        },
-        {
-          "task": "Remove old fruited canes after harvest",
-          "months": [
-            8,
-            9
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Poor fruiting",
-          "url": "https://www.google.com/search?q=Poor%20fruiting%20plant%20care%20fix"
-        }
-      ],
-      "category": "Fruit Trees",
-      "howPlanted": ""
-    },
-    {
       "id": "ps-blackberry",
       "bedId": "b-berry",
       "name": "Blackberry Triple Crown",
@@ -7177,6 +7136,47 @@
       ],
       "category": "None",
       "isIndoor": false
+    },
+    {
+      "id": "ps-raspberry",
+      "bedId": "b-berry",
+      "name": "Raspberry Bababerry",
+      "scientific": "Rubus idaeus Bababerry",
+      "emoji": "emoji_ps-raspberry",
+      "status": "planned",
+      "water": "Weekly on drip",
+      "sun": "Full sun",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Existing x1 + new x1. On drip system.",
+      "maintenance": [
+        {
+          "task": "On drip system weekly — check system functioning monthly",
+          "months": [
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "task": "Remove old fruited canes after harvest",
+          "months": [
+            8,
+            9
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Poor fruiting",
+          "url": "https://www.google.com/search?q=Poor%20fruiting%20plant%20care%20fix"
+        }
+      ],
+      "category": "Fruit Trees",
+      "howPlanted": ""
     },
     {
       "id": "p1778869421207",
@@ -9884,5 +9884,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-26T18:41:11.411Z"
+  "syncedAt": "2026-05-26T18:41:28.517Z"
 }
