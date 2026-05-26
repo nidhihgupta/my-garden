@@ -5494,253 +5494,6 @@
       "howPlanted": ""
     },
     {
-      "id": "porch-ginger",
-      "bedId": "b-porch",
-      "name": "Ginger Plant",
-      "scientific": "Zingiber officinale",
-      "emoji": "🌿",
-      "status": "alive",
-      "category": "Tropicals",
-      "water": "Moderate",
-      "sun": "Part shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "",
-      "maintenance": [
-        {
-          "task": "Feed slow release fertilizer in spring",
-          "months": [
-            3
-          ]
-        },
-        {
-          "task": "Cut back old stems in winter",
-          "months": [
-            12
-          ]
-        }
-      ],
-      "trouble": []
-    },
-    {
-      "id": "porch-dichondra",
-      "bedId": "b-porch",
-      "name": "Dichondra",
-      "scientific": "Dichondra argentea",
-      "emoji": "🌿",
-      "status": "alive",
-      "category": "Groundcovers",
-      "water": "Moderate",
-      "sun": "Part shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Trailing silver foliage, great for spilling over pots.",
-      "maintenance": [
-        {
-          "task": "Trim to shape as needed",
-          "months": [
-            4,
-            5,
-            9
-          ]
-        }
-      ],
-      "trouble": []
-    },
-    {
-      "id": "porch-cordyline",
-      "bedId": "b-porch",
-      "name": "Cordyline",
-      "scientific": "Cordyline australis",
-      "emoji": "🌿",
-      "status": "alive",
-      "category": "",
-      "water": "Low once established",
-      "sun": "Full sun to part shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Architectural focal point.",
-      "maintenance": [
-        {
-          "task": "Remove dead lower leaves",
-          "months": [
-            3,
-            9
-          ]
-        }
-      ],
-      "trouble": [],
-      "howPlanted": ""
-    },
-    {
-      "id": "porch-begonia",
-      "bedId": "b-porch",
-      "name": "Tuberous Begonia",
-      "scientific": "Begonia x tuberhybrida",
-      "emoji": "🌸",
-      "status": "alive",
-      "category": "Annuals",
-      "water": "Moderate",
-      "sun": "Part shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Summer bloomer. Yellow ones with abutilon and red with fuschia ",
-      "maintenance": [
-        {
-          "task": "Feed liquid fertilizer every 2 weeks during bloom",
-          "months": [
-            5,
-            6,
-            7,
-            8
-          ]
-        },
-        {
-          "task": "Deadhead spent blooms daily during peak bloom",
-          "months": [
-            6,
-            7,
-            8
-          ]
-        }
-      ],
-      "trouble": [],
-      "howPlanted": ""
-    },
-    {
-      "id": "porch-foxtail-fern",
-      "bedId": "b-porch",
-      "name": "Foxtail Fern",
-      "scientific": "Asparagus densiflorus",
-      "emoji": "🌿",
-      "status": "alive",
-      "category": "Ferns",
-      "water": "Moderate",
-      "sun": "Part shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Feathery arching stems. Not a true fern.",
-      "maintenance": [
-        {
-          "task": "Feed slow release fertilizer in spring",
-          "months": [
-            3
-          ]
-        },
-        {
-          "task": "Cut back dead stems",
-          "months": [
-            2
-          ]
-        }
-      ],
-      "trouble": []
-    },
-    {
-      "id": "porch-fuchsia",
-      "bedId": "b-porch",
-      "name": "Trailing Fuchsia",
-      "scientific": "Fuchsia hybrida",
-      "emoji": "🌸",
-      "status": "alive",
-      "category": "Annuals",
-      "water": "Moderate to high",
-      "sun": "Part shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Hanging basket plant. Hummingbird magnet.",
-      "maintenance": [
-        {
-          "task": "Feed liquid fertilizer every 2 weeks during bloom",
-          "months": [
-            4,
-            5,
-            6,
-            7,
-            8,
-            9
-          ]
-        },
-        {
-          "task": "Deadhead spent blooms daily during peak bloom",
-          "months": [
-            5,
-            6,
-            7,
-            8,
-            9
-          ]
-        },
-        {
-          "task": "Cut back hard in late winter",
-          "months": [
-            2
-          ]
-        }
-      ],
-      "trouble": []
-    },
-    {
-      "id": "porch-abutilon",
-      "bedId": "b-porch",
-      "name": "Tiger Eye Abutilon",
-      "scientific": "Abutilon pictum",
-      "emoji": "🌿",
-      "status": "alive",
-      "category": "Shrubs",
-      "water": "Moderate",
-      "sun": "Part shade to full sun",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Variegated foliage with orange bell flowers.",
-      "maintenance": [
-        {
-          "task": "Feed slow release fertilizer in spring",
-          "months": [
-            3
-          ]
-        },
-        {
-          "task": "Prune lightly after flowering",
-          "months": [
-            10
-          ]
-        }
-      ],
-      "trouble": []
-    },
-    {
-      "id": "porch-oxalis",
-      "bedId": "b-porch",
-      "name": "Golden Oxalis",
-      "scientific": "Oxalis chrysantha",
-      "emoji": "🌿",
-      "status": "alive",
-      "category": "Bulbs",
-      "water": "Moderate",
-      "sun": "Part shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Bright golden-yellow flowers, clover-like foliage.",
-      "maintenance": [
-        {
-          "task": "Divide clumps every 3-4 years",
-          "months": [
-            9
-          ]
-        }
-      ],
-      "trouble": []
-    },
-    {
       "id": "p1778183645573",
       "bedId": "b-ros",
       "name": "Potato Vine",
@@ -7055,6 +6808,124 @@
       "trouble": []
     },
     {
+      "id": "porch-ginger",
+      "bedId": "b-porch",
+      "name": "Ginger Plant",
+      "scientific": "Zingiber officinale",
+      "emoji": "🌿",
+      "status": "alive",
+      "category": "Tropicals",
+      "water": "Moderate",
+      "sun": "Part shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "",
+      "maintenance": [
+        {
+          "task": "Feed slow release fertilizer in spring",
+          "months": [
+            3
+          ]
+        },
+        {
+          "task": "Cut back old stems in winter",
+          "months": [
+            12
+          ]
+        }
+      ],
+      "trouble": []
+    },
+    {
+      "id": "porch-dichondra",
+      "bedId": "b-porch",
+      "name": "Dichondra",
+      "scientific": "Dichondra argentea",
+      "emoji": "🌿",
+      "status": "alive",
+      "category": "Groundcovers",
+      "water": "Moderate",
+      "sun": "Part shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Trailing silver foliage, great for spilling over pots.",
+      "maintenance": [
+        {
+          "task": "Trim to shape as needed",
+          "months": [
+            4,
+            5,
+            9
+          ]
+        }
+      ],
+      "trouble": []
+    },
+    {
+      "id": "porch-cordyline",
+      "bedId": "b-porch",
+      "name": "Cordyline",
+      "scientific": "Cordyline australis",
+      "emoji": "🌿",
+      "status": "alive",
+      "category": "",
+      "water": "Low once established",
+      "sun": "Full sun to part shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Architectural focal point.",
+      "maintenance": [
+        {
+          "task": "Remove dead lower leaves",
+          "months": [
+            3,
+            9
+          ]
+        }
+      ],
+      "trouble": [],
+      "howPlanted": ""
+    },
+    {
+      "id": "porch-begonia",
+      "bedId": "b-porch",
+      "name": "Tuberous Begonia",
+      "scientific": "Begonia x tuberhybrida",
+      "emoji": "🌸",
+      "status": "alive",
+      "category": "Annuals",
+      "water": "Moderate",
+      "sun": "Part shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Summer bloomer. Yellow ones with abutilon and red with fuschia ",
+      "maintenance": [
+        {
+          "task": "Feed liquid fertilizer every 2 weeks during bloom",
+          "months": [
+            5,
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "task": "Deadhead spent blooms daily during peak bloom",
+          "months": [
+            6,
+            7,
+            8
+          ]
+        }
+      ],
+      "trouble": [],
+      "howPlanted": ""
+    },
+    {
       "id": "p1779772206300480",
       "bedId": "b-porch",
       "name": "Coleus",
@@ -7085,6 +6956,135 @@
       "category": "Annuals",
       "isIndoor": false,
       "howPlanted": "bought"
+    },
+    {
+      "id": "porch-foxtail-fern",
+      "bedId": "b-porch",
+      "name": "Foxtail Fern",
+      "scientific": "Asparagus densiflorus",
+      "emoji": "🌿",
+      "status": "alive",
+      "category": "Ferns",
+      "water": "Moderate",
+      "sun": "Part shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Feathery arching stems. Not a true fern.",
+      "maintenance": [
+        {
+          "task": "Feed slow release fertilizer in spring",
+          "months": [
+            3
+          ]
+        },
+        {
+          "task": "Cut back dead stems",
+          "months": [
+            2
+          ]
+        }
+      ],
+      "trouble": []
+    },
+    {
+      "id": "porch-fuchsia",
+      "bedId": "b-porch",
+      "name": "Trailing Fuchsia",
+      "scientific": "Fuchsia hybrida",
+      "emoji": "🌸",
+      "status": "alive",
+      "category": "Annuals",
+      "water": "Moderate to high",
+      "sun": "Part shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Hanging basket plant. Hummingbird magnet.",
+      "maintenance": [
+        {
+          "task": "Feed liquid fertilizer every 2 weeks during bloom",
+          "months": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "task": "Deadhead spent blooms daily during peak bloom",
+          "months": [
+            5,
+            6,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "task": "Cut back hard in late winter",
+          "months": [
+            2
+          ]
+        }
+      ],
+      "trouble": []
+    },
+    {
+      "id": "porch-abutilon",
+      "bedId": "b-porch",
+      "name": "Tiger Eye Abutilon",
+      "scientific": "Abutilon pictum",
+      "emoji": "🌿",
+      "status": "alive",
+      "category": "Shrubs",
+      "water": "Moderate",
+      "sun": "Part shade to full sun",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Variegated foliage with orange bell flowers.",
+      "maintenance": [
+        {
+          "task": "Feed slow release fertilizer in spring",
+          "months": [
+            3
+          ]
+        },
+        {
+          "task": "Prune lightly after flowering",
+          "months": [
+            10
+          ]
+        }
+      ],
+      "trouble": []
+    },
+    {
+      "id": "porch-oxalis",
+      "bedId": "b-porch",
+      "name": "Golden Oxalis",
+      "scientific": "Oxalis chrysantha",
+      "emoji": "🌿",
+      "status": "alive",
+      "category": "Bulbs",
+      "water": "Moderate",
+      "sun": "Part shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Bright golden-yellow flowers, clover-like foliage.",
+      "maintenance": [
+        {
+          "task": "Divide clumps every 3-4 years",
+          "months": [
+            9
+          ]
+        }
+      ],
+      "trouble": []
     }
   ],
   "indoorPlants": [
@@ -9553,5 +9553,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-26T05:11:25.211Z"
+  "syncedAt": "2026-05-26T05:11:35.659Z"
 }
