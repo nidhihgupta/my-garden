@@ -6314,6 +6314,36 @@
       "category": "Trees"
     },
     {
+      "id": "mp-lamium",
+      "bedId": "b-mp",
+      "name": "Lamium White Nancy",
+      "scientific": "Lamium maculatum White Nancy",
+      "emoji": "emoji_mp-lamium",
+      "status": "planned",
+      "water": "Moderate",
+      "sun": "Part shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Ground cover.",
+      "maintenance": [
+        {
+          "task": "Trim back if getting leggy",
+          "months": [
+            5,
+            8
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Leggy growth",
+          "url": "https://www.google.com/search?q=Leggy%20growth%20plant%20care%20fix"
+        }
+      ],
+      "category": "Perennials"
+    },
+    {
       "id": "mp-carex",
       "bedId": "b-mp",
       "name": "Carex Ice Dance",
@@ -6450,36 +6480,6 @@
         }
       ],
       "category": "Ornamental Grasses"
-    },
-    {
-      "id": "mp-lamium",
-      "bedId": "b-mp",
-      "name": "Lamium White Nancy",
-      "scientific": "Lamium maculatum White Nancy",
-      "emoji": "emoji_mp-lamium",
-      "status": "planned",
-      "water": "Moderate",
-      "sun": "Part shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Ground cover.",
-      "maintenance": [
-        {
-          "task": "Trim back if getting leggy",
-          "months": [
-            5,
-            8
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Leggy growth",
-          "url": "https://www.google.com/search?q=Leggy%20growth%20plant%20care%20fix"
-        }
-      ],
-      "category": "Perennials"
     },
     {
       "id": "mp-aucuba",
@@ -9137,5 +9137,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-26T04:31:49.197Z"
+  "syncedAt": "2026-05-26T04:31:54.661Z"
 }
