@@ -7365,55 +7365,6 @@
       "trouble": []
     },
     {
-      "id": "p1778130459270",
-      "bedId": "b-sa",
-      "name": "Climbing rose",
-      "scientific": "Rosa spp.",
-      "emoji": "🌹",
-      "category": "Climbing Roses",
-      "status": "alive",
-      "water": "Deep water weekly",
-      "sun": "Full sun to part sun",
-      "notes": "",
-      "fromCutting": false,
-      "maintenance": [
-        {
-          "task": "Light tip prune only — do not hard cut",
-          "months": [
-            1,
-            2
-          ]
-        },
-        {
-          "task": "Deadhead spent blooms",
-          "months": [
-            4,
-            5,
-            6,
-            7,
-            8,
-            9,
-            10
-          ]
-        },
-        {
-          "task": "Train and tie new canes to structure",
-          "months": [
-            3,
-            4,
-            5
-          ]
-        },
-        {
-          "task": "Feed after first flush",
-          "months": [
-            5
-          ]
-        }
-      ],
-      "trouble": []
-    },
-    {
       "id": "sa-burstjoy",
       "bedId": "b-sa",
       "name": "Rose bush",
@@ -7461,6 +7412,55 @@
         }
       ],
       "category": "Bush Roses"
+    },
+    {
+      "id": "p1778130459270",
+      "bedId": "b-sa",
+      "name": "Climbing rose",
+      "scientific": "Rosa spp.",
+      "emoji": "🌹",
+      "category": "Climbing Roses",
+      "status": "alive",
+      "water": "Deep water weekly",
+      "sun": "Full sun to part sun",
+      "notes": "",
+      "fromCutting": false,
+      "maintenance": [
+        {
+          "task": "Light tip prune only — do not hard cut",
+          "months": [
+            1,
+            2
+          ]
+        },
+        {
+          "task": "Deadhead spent blooms",
+          "months": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "task": "Train and tie new canes to structure",
+          "months": [
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "task": "Feed after first flush",
+          "months": [
+            5
+          ]
+        }
+      ],
+      "trouble": []
     },
     {
       "id": "sa-shasta",
@@ -9967,5 +9967,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-26T23:28:54.324Z"
+  "syncedAt": "2026-05-26T23:28:57.191Z"
 }
