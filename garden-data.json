@@ -6375,36 +6375,6 @@
       "category": "Hydrangeas"
     },
     {
-      "id": "rw-clivia",
-      "bedId": "b-rw",
-      "name": "Clivia",
-      "scientific": "Clivia miniata",
-      "emoji": "emoji_rw-clivia",
-      "status": "alive",
-      "water": "Low once established",
-      "sun": "Full shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Existing. Under redwoods.",
-      "maintenance": [
-        {
-          "task": "Feed diluted fertilizer after flowering",
-          "months": [
-            4,
-            5
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Not flowering",
-          "url": "https://www.google.com/search?q=Not%20flowering%20plant%20care%20fix"
-        }
-      ],
-      "category": "Bulbs"
-    },
-    {
       "id": "rw-ferns",
       "bedId": "b-rw",
       "name": "Western Sword Ferns",
@@ -6441,6 +6411,36 @@
         }
       ],
       "category": "Ferns"
+    },
+    {
+      "id": "rw-clivia",
+      "bedId": "b-rw",
+      "name": "Clivia",
+      "scientific": "Clivia miniata",
+      "emoji": "emoji_rw-clivia",
+      "status": "alive",
+      "water": "Low once established",
+      "sun": "Full shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Existing. Under redwoods.",
+      "maintenance": [
+        {
+          "task": "Feed diluted fertilizer after flowering",
+          "months": [
+            4,
+            5
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Not flowering",
+          "url": "https://www.google.com/search?q=Not%20flowering%20plant%20care%20fix"
+        }
+      ],
+      "category": "Bulbs"
     },
     {
       "id": "rw-hellebores",
@@ -9167,5 +9167,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-26T04:28:51.545Z"
+  "syncedAt": "2026-05-26T04:28:58.700Z"
 }
