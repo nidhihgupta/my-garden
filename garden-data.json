@@ -6200,6 +6200,35 @@
       "category": "Trees"
     },
     {
+      "id": "mp-mondo",
+      "bedId": "b-mp",
+      "name": "Black Mondo",
+      "scientific": "Ophiopogon planiscapus Nigrescens",
+      "emoji": "emoji_mp-mondo",
+      "status": "planned",
+      "water": "Moderate",
+      "sun": "Part shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "x6. 1-gallon.",
+      "maintenance": [
+        {
+          "task": "Divide clumps every 3-4 years",
+          "months": [
+            3
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Loss of black color",
+          "url": "https://www.google.com/search?q=Loss%20of%20black%20color%20plant%20care%20fix"
+        }
+      ],
+      "category": "Ornamental Grasses"
+    },
+    {
       "id": "mp-hostamm",
       "bedId": "b-mp",
       "name": "Hosta Minute Man",
@@ -6304,35 +6333,6 @@
         {
           "issue": "Loss of variegation",
           "url": "https://www.google.com/search?q=Loss%20of%20variegation%20plant%20care%20fix"
-        }
-      ],
-      "category": "Ornamental Grasses"
-    },
-    {
-      "id": "mp-mondo",
-      "bedId": "b-mp",
-      "name": "Black Mondo",
-      "scientific": "Ophiopogon planiscapus Nigrescens",
-      "emoji": "emoji_mp-mondo",
-      "status": "planned",
-      "water": "Moderate",
-      "sun": "Part shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "x6. 1-gallon.",
-      "maintenance": [
-        {
-          "task": "Divide clumps every 3-4 years",
-          "months": [
-            3
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Loss of black color",
-          "url": "https://www.google.com/search?q=Loss%20of%20black%20color%20plant%20care%20fix"
         }
       ],
       "category": "Ornamental Grasses"
@@ -9137,5 +9137,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-26T04:30:41.870Z"
+  "syncedAt": "2026-05-26T04:30:45.144Z"
 }
