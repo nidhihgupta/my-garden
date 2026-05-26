@@ -6669,6 +6669,36 @@
         }
       ],
       "trouble": []
+    },
+    {
+      "id": "p177977020573752",
+      "bedId": "b-ros",
+      "name": "Camphor Tree",
+      "scientific": "Cinnamomum camphora",
+      "emoji": "🌳",
+      "status": "alive",
+      "water": "Low once established",
+      "sun": "Part shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Existing large tree.",
+      "maintenance": [
+        {
+          "task": "No pruning needed",
+          "months": [
+            1
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Root invasion",
+          "url": "https://www.google.com/search?q=Root%20invasion%20plant%20care%20fix"
+        }
+      ],
+      "category": "Trees",
+      "isIndoor": false
     }
   ],
   "indoorPlants": [
@@ -9137,5 +9167,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-26T04:36:14.630Z"
+  "syncedAt": "2026-05-26T04:36:47.305Z"
 }
