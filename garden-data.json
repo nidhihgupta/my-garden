@@ -6257,6 +6257,43 @@
       "category": "Shrubs"
     },
     {
+      "id": "fl-loro",
+      "bedId": "b-fl",
+      "name": "Loropetalum Purple Diamond",
+      "scientific": "Loropetalum chinense",
+      "emoji": "emoji_fl-loro",
+      "status": "planned",
+      "water": "Moderate",
+      "sun": "Part shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "x3. 2-gallon. Deep purple foliage + hot pink fringe flowers.",
+      "maintenance": [
+        {
+          "task": "Feed slow release fertilizer in spring",
+          "months": [
+            3
+          ]
+        },
+        {
+          "task": "Light trim after spring flowering",
+          "months": [
+            5,
+            6
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Loss of purple color",
+          "url": "https://www.google.com/search?q=Loss%20of%20purple%20color%20plant%20care%20fix"
+        }
+      ],
+      "category": "Shrubs",
+      "howPlanted": ""
+    },
+    {
       "id": "fl-viburnum",
       "bedId": "b-fl",
       "name": "Viburnum davidii",
@@ -6352,43 +6389,6 @@
         }
       ],
       "category": "Shrubs"
-    },
-    {
-      "id": "fl-loro",
-      "bedId": "b-fl",
-      "name": "Loropetalum Purple Diamond",
-      "scientific": "Loropetalum chinense",
-      "emoji": "emoji_fl-loro",
-      "status": "planned",
-      "water": "Moderate",
-      "sun": "Part shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "x3. 2-gallon. Deep purple foliage + hot pink fringe flowers.",
-      "maintenance": [
-        {
-          "task": "Feed slow release fertilizer in spring",
-          "months": [
-            3
-          ]
-        },
-        {
-          "task": "Light trim after spring flowering",
-          "months": [
-            5,
-            6
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Loss of purple color",
-          "url": "https://www.google.com/search?q=Loss%20of%20purple%20color%20plant%20care%20fix"
-        }
-      ],
-      "category": "Shrubs",
-      "howPlanted": ""
     },
     {
       "id": "fl-bergenia",
@@ -9167,5 +9167,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-26T03:42:37.272Z"
+  "syncedAt": "2026-05-26T03:42:42.667Z"
 }
