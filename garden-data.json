@@ -7100,7 +7100,7 @@
       "bedId": "b-berry",
       "name": "Blackberry Triple Crown",
       "scientific": "Rubus spp. Triple Crown",
-      "emoji": "🫐",
+      "emoji": "emoji_ps-blackberry",
       "status": "planned",
       "water": "Regular during fruiting",
       "sun": "Full sun",
@@ -7137,7 +7137,8 @@
           "url": "https://www.google.com/search?q=Poor%20fruiting%20plant%20care%20fix"
         }
       ],
-      "category": "Fruit Trees"
+      "category": "Fruit Trees",
+      "howPlanted": ""
     },
     {
       "id": "berry-boysenberry",
@@ -9914,5 +9915,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-26T21:25:30.131Z"
+  "syncedAt": "2026-05-26T21:26:26.423Z"
 }
