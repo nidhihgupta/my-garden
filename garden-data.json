@@ -6169,7 +6169,7 @@
       "datePlanted": "",
       "nursery": "",
       "fromCutting": false,
-      "notes": "Summer bloomer. Lift tubers in fall if frost risk.",
+      "notes": "Summer bloomer. Yellow ones with abutilon and red with fuschia ",
       "maintenance": [
         {
           "task": "Feed liquid fertilizer every 2 weeks during bloom",
@@ -6189,7 +6189,8 @@
           ]
         }
       ],
-      "trouble": []
+      "trouble": [],
+      "howPlanted": ""
     },
     {
       "id": "porch-foxtail-fern",
@@ -9518,5 +9519,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-26T04:56:41.559Z"
+  "syncedAt": "2026-05-26T04:58:09.094Z"
 }
