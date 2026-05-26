@@ -7187,6 +7187,41 @@
       "category": "Salvias"
     },
     {
+      "id": "berry-greenbeans",
+      "bedId": "b-berry",
+      "name": "Green Beans",
+      "scientific": "Phaseolus vulgaris",
+      "emoji": "🌱",
+      "status": "alive",
+      "category": "Vegetables",
+      "water": "Moderate",
+      "sun": "Full sun",
+      "datePlanted": "2026-05-12",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Planted from seed May 12",
+      "maintenance": [
+        {
+          "task": "Harvest beans regularly to encourage more pods",
+          "months": [
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "task": "Water at base, keep consistent moisture",
+          "months": [
+            5,
+            6,
+            7,
+            8
+          ]
+        }
+      ],
+      "trouble": []
+    },
+    {
       "id": "p1778178590870",
       "bedId": "b-berry",
       "name": "Fan Palm",
@@ -7280,57 +7315,6 @@
       "trouble": []
     },
     {
-      "id": "ps-pomegranate",
-      "bedId": "b-berry",
-      "name": "Pomegranate",
-      "scientific": "Punica granatum",
-      "emoji": "emoji_ps-pomegranate",
-      "status": "dead",
-      "water": "Monthly spring / every 2 weeks July-August",
-      "sun": "Full sun",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Existing. Consistent water improves fruit quality.",
-      "maintenance": [
-        {
-          "task": "Monthly watering spring",
-          "months": [
-            3,
-            4,
-            5,
-            6
-          ]
-        },
-        {
-          "task": "Every 2 weeks summer",
-          "months": [
-            7,
-            8
-          ]
-        },
-        {
-          "task": "Monthly fall/winter",
-          "months": [
-            9,
-            10,
-            11,
-            12,
-            1,
-            2
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Fruit splitting (inconsistent watering)",
-          "url": "https://www.google.com/search?q=Fruit%20splitting%20(inconsistent%20watering)%20plant%20care%20fix"
-        }
-      ],
-      "category": "Fruit Trees",
-      "howPlanted": ""
-    },
-    {
       "id": "p1779821189039291",
       "bedId": "b-berry",
       "name": "Geranium",
@@ -7413,39 +7397,55 @@
       "trouble": []
     },
     {
-      "id": "berry-greenbeans",
+      "id": "ps-pomegranate",
       "bedId": "b-berry",
-      "name": "Green Beans",
-      "scientific": "Phaseolus vulgaris",
-      "emoji": "🌱",
-      "status": "alive",
-      "category": "Vegetables",
-      "water": "Moderate",
+      "name": "Pomegranate",
+      "scientific": "Punica granatum",
+      "emoji": "emoji_ps-pomegranate",
+      "status": "dead",
+      "water": "Monthly spring / every 2 weeks July-August",
       "sun": "Full sun",
-      "datePlanted": "2026-05-12",
+      "datePlanted": "",
       "nursery": "",
       "fromCutting": false,
-      "notes": "Planted from seed May 12",
+      "notes": "Existing. Consistent water improves fruit quality.",
       "maintenance": [
         {
-          "task": "Harvest beans regularly to encourage more pods",
+          "task": "Monthly watering spring",
           "months": [
-            7,
-            8,
-            9
+            3,
+            4,
+            5,
+            6
           ]
         },
         {
-          "task": "Water at base, keep consistent moisture",
+          "task": "Every 2 weeks summer",
           "months": [
-            5,
-            6,
             7,
             8
           ]
+        },
+        {
+          "task": "Monthly fall/winter",
+          "months": [
+            9,
+            10,
+            11,
+            12,
+            1,
+            2
+          ]
         }
       ],
-      "trouble": []
+      "trouble": [
+        {
+          "issue": "Fruit splitting (inconsistent watering)",
+          "url": "https://www.google.com/search?q=Fruit%20splitting%20(inconsistent%20watering)%20plant%20care%20fix"
+        }
+      ],
+      "category": "Fruit Trees",
+      "howPlanted": ""
     }
   ],
   "indoorPlants": [
@@ -9914,5 +9914,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-26T19:07:37.154Z"
+  "syncedAt": "2026-05-26T19:08:26.968Z"
 }
