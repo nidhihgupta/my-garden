@@ -6505,6 +6505,47 @@
       "category": "Perennials"
     },
     {
+      "id": "fl-catmint",
+      "bedId": "b-fl",
+      "name": "Catmint",
+      "scientific": "Nepeta x faassenii",
+      "emoji": "💜",
+      "status": "alive",
+      "water": "Low",
+      "sun": "Full sun",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Blue-purple flowers spring through fall. Drought tolerant once established.",
+      "maintenance": [
+        {
+          "task": "Cut back hard after first flush to encourage reblooming",
+          "months": [
+            6,
+            7
+          ]
+        },
+        {
+          "task": "Divide every 2-3 years in spring",
+          "months": [
+            3,
+            4
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Powdery mildew",
+          "url": "https://www.google.com/search?q=Catmint+powdery+mildew+fix"
+        },
+        {
+          "issue": "Root rot from overwatering",
+          "url": "https://www.google.com/search?q=Catmint+root+rot+fix"
+        }
+      ],
+      "category": "Perennials"
+    },
+    {
       "id": "fl-bergenia",
       "bedId": "b-fl",
       "name": "Bergenia Crassifolia",
@@ -6627,47 +6668,6 @@
         }
       ],
       "category": "Shrubs"
-    },
-    {
-      "id": "fl-catmint",
-      "bedId": "b-fl",
-      "name": "Catmint",
-      "scientific": "Nepeta x faassenii",
-      "emoji": "💜",
-      "status": "alive",
-      "water": "Low",
-      "sun": "Full sun",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Blue-purple flowers spring through fall. Drought tolerant once established.",
-      "maintenance": [
-        {
-          "task": "Cut back hard after first flush to encourage reblooming",
-          "months": [
-            6,
-            7
-          ]
-        },
-        {
-          "task": "Divide every 2-3 years in spring",
-          "months": [
-            3,
-            4
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Powdery mildew",
-          "url": "https://www.google.com/search?q=Catmint+powdery+mildew+fix"
-        },
-        {
-          "issue": "Root rot from overwatering",
-          "url": "https://www.google.com/search?q=Catmint+root+rot+fix"
-        }
-      ],
-      "category": "Perennials"
     },
     {
       "id": "fl-sarcococca",
@@ -9167,5 +9167,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-26T03:44:44.997Z"
+  "syncedAt": "2026-05-26T03:44:50.365Z"
 }
