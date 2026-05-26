@@ -7263,6 +7263,21 @@
       "howPlanted": ""
     },
     {
+      "id": "p1778178506166",
+      "bedId": "b-berry",
+      "name": "Pittosporum Tree",
+      "scientific": "Pittosporum tobira",
+      "emoji": "emoji_p1778178506166",
+      "category": "Trees",
+      "status": "alive",
+      "water": "Low once established",
+      "sun": "Full sun to part shade",
+      "notes": "",
+      "fromCutting": false,
+      "maintenance": [],
+      "trouble": []
+    },
+    {
       "id": "p1778195347203525",
       "bedId": "b-berry",
       "name": "Geranium",
@@ -7304,21 +7319,6 @@
       ],
       "category": "None",
       "isIndoor": false
-    },
-    {
-      "id": "p1778178506166",
-      "bedId": "b-berry",
-      "name": "Pittosporum Tree",
-      "scientific": "Pittosporum tobira",
-      "emoji": "emoji_p1778178506166",
-      "category": "Trees",
-      "status": "alive",
-      "water": "Low once established",
-      "sun": "Full sun to part shade",
-      "notes": "",
-      "fromCutting": false,
-      "maintenance": [],
-      "trouble": []
     },
     {
       "id": "ps-beets",
@@ -9884,5 +9884,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-26T18:41:55.938Z"
+  "syncedAt": "2026-05-26T18:41:58.701Z"
 }
