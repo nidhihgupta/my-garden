@@ -6200,6 +6200,44 @@
       "category": "Hydrangeas"
     },
     {
+      "id": "mp-daylily",
+      "bedId": "b-mp",
+      "name": "Day Lilies",
+      "scientific": "Hemerocallis spp.",
+      "emoji": "emoji_mp-daylily",
+      "status": "alive",
+      "water": "Low-moderate",
+      "sun": "Part shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Existing.",
+      "maintenance": [
+        {
+          "task": "Deadhead spent blooms daily during peak bloom",
+          "months": [
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "task": "Divide every 3-4 years",
+          "months": [
+            3
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Rust disease",
+          "url": "https://www.google.com/search?q=Rust%20disease%20plant%20care%20fix"
+        }
+      ],
+      "category": "Bulbs",
+      "howPlanted": ""
+    },
+    {
       "id": "mp-maple",
       "bedId": "b-mp",
       "name": "Japanese Maple",
@@ -6336,44 +6374,6 @@
         }
       ],
       "category": "Ornamental Grasses"
-    },
-    {
-      "id": "mp-daylily",
-      "bedId": "b-mp",
-      "name": "Day Lilies",
-      "scientific": "Hemerocallis spp.",
-      "emoji": "emoji_mp-daylily",
-      "status": "alive",
-      "water": "Low-moderate",
-      "sun": "Part shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Existing.",
-      "maintenance": [
-        {
-          "task": "Deadhead spent blooms daily during peak bloom",
-          "months": [
-            5,
-            6,
-            7
-          ]
-        },
-        {
-          "task": "Divide every 3-4 years",
-          "months": [
-            3
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Rust disease",
-          "url": "https://www.google.com/search?q=Rust%20disease%20plant%20care%20fix"
-        }
-      ],
-      "category": "Bulbs",
-      "howPlanted": ""
     },
     {
       "id": "mp-carex",
@@ -9137,5 +9137,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-26T04:30:47.169Z"
+  "syncedAt": "2026-05-26T04:30:53.332Z"
 }
