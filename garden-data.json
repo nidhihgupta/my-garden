@@ -6986,6 +6986,41 @@
       "howPlanted": "seed"
     },
     {
+      "id": "berry-greenbeans",
+      "bedId": "b-berry",
+      "name": "Green Beans",
+      "scientific": "Phaseolus vulgaris",
+      "emoji": "🌱",
+      "status": "alive",
+      "category": "Vegetables",
+      "water": "Moderate",
+      "sun": "Full sun",
+      "datePlanted": "2026-05-12",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Planted from seed May 12",
+      "maintenance": [
+        {
+          "task": "Harvest beans regularly to encourage more pods",
+          "months": [
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "task": "Water at base, keep consistent moisture",
+          "months": [
+            5,
+            6,
+            7,
+            8
+          ]
+        }
+      ],
+      "trouble": []
+    },
+    {
       "id": "p1778614834266",
       "bedId": "b-berry",
       "name": "Snap Peas",
@@ -7103,41 +7138,6 @@
         }
       ],
       "category": "Fruit Trees"
-    },
-    {
-      "id": "berry-greenbeans",
-      "bedId": "b-berry",
-      "name": "Green Beans",
-      "scientific": "Phaseolus vulgaris",
-      "emoji": "🌱",
-      "status": "alive",
-      "category": "Vegetables",
-      "water": "Moderate",
-      "sun": "Full sun",
-      "datePlanted": "2026-05-12",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Planted from seed May 12",
-      "maintenance": [
-        {
-          "task": "Harvest beans regularly to encourage more pods",
-          "months": [
-            7,
-            8,
-            9
-          ]
-        },
-        {
-          "task": "Water at base, keep consistent moisture",
-          "months": [
-            5,
-            6,
-            7,
-            8
-          ]
-        }
-      ],
-      "trouble": []
     },
     {
       "id": "p1778869421207",
@@ -9914,5 +9914,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-26T19:08:29.298Z"
+  "syncedAt": "2026-05-26T19:08:31.222Z"
 }
