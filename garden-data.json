@@ -6439,6 +6439,47 @@
       "category": "Perennials"
     },
     {
+      "id": "fl-catmint",
+      "bedId": "b-fl",
+      "name": "Catmint",
+      "scientific": "Nepeta x faassenii",
+      "emoji": "💜",
+      "status": "alive",
+      "water": "Low",
+      "sun": "Full sun",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Blue-purple flowers spring through fall. Drought tolerant once established.",
+      "maintenance": [
+        {
+          "task": "Cut back hard after first flush to encourage reblooming",
+          "months": [
+            6,
+            7
+          ]
+        },
+        {
+          "task": "Divide every 2-3 years in spring",
+          "months": [
+            3,
+            4
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Powdery mildew",
+          "url": "https://www.google.com/search?q=Catmint+powdery+mildew+fix"
+        },
+        {
+          "issue": "Root rot from overwatering",
+          "url": "https://www.google.com/search?q=Catmint+root+rot+fix"
+        }
+      ],
+      "category": "Perennials"
+    },
+    {
       "id": "fl-sedum",
       "bedId": "b-fl",
       "name": "Sedum Angelina",
@@ -6500,47 +6541,6 @@
         {
           "issue": "Black death virus",
           "url": "https://www.google.com/search?q=Black%20death%20virus%20plant%20care%20fix"
-        }
-      ],
-      "category": "Perennials"
-    },
-    {
-      "id": "fl-catmint",
-      "bedId": "b-fl",
-      "name": "Catmint",
-      "scientific": "Nepeta x faassenii",
-      "emoji": "💜",
-      "status": "alive",
-      "water": "Low",
-      "sun": "Full sun",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Blue-purple flowers spring through fall. Drought tolerant once established.",
-      "maintenance": [
-        {
-          "task": "Cut back hard after first flush to encourage reblooming",
-          "months": [
-            6,
-            7
-          ]
-        },
-        {
-          "task": "Divide every 2-3 years in spring",
-          "months": [
-            3,
-            4
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Powdery mildew",
-          "url": "https://www.google.com/search?q=Catmint+powdery+mildew+fix"
-        },
-        {
-          "issue": "Root rot from overwatering",
-          "url": "https://www.google.com/search?q=Catmint+root+rot+fix"
         }
       ],
       "category": "Perennials"
@@ -9167,5 +9167,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-26T03:44:50.365Z"
+  "syncedAt": "2026-05-26T03:44:53.046Z"
 }
