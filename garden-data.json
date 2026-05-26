@@ -249,177 +249,6 @@
       "category": "Fruit Trees"
     },
     {
-      "id": "bl-fatsia",
-      "bedId": "b-bl",
-      "name": "Fatsia japonica",
-      "scientific": "Fatsia japonica",
-      "emoji": "emoji_bl-fatsia",
-      "status": "planned",
-      "water": "Moderate",
-      "sun": "Part shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "x1. 2-gallon.",
-      "maintenance": [
-        {
-          "task": "Cut back in spring before growth pushes",
-          "months": [
-            2,
-            3
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Leaf drop",
-          "url": "https://www.google.com/search?q=Leaf%20drop%20plant%20care%20fix"
-        }
-      ],
-      "category": "Tropical Foliage",
-      "howPlanted": ""
-    },
-    {
-      "id": "bl-ivy",
-      "bedId": "b-bl",
-      "name": "Boston Ivy",
-      "scientific": "Parthenocissus tricuspidata",
-      "emoji": "emoji_bl-ivy",
-      "status": "planned",
-      "water": "Moderate",
-      "sun": "Part shade to full sun",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "x1. 1-gallon. Climbing fence.",
-      "maintenance": [
-        {
-          "task": "Train on fence — tie new growth as it extends",
-          "months": [
-            4,
-            5,
-            6,
-            7,
-            8
-          ]
-        },
-        {
-          "task": "Cut back in late winter to control spread",
-          "months": [
-            1,
-            2
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Japanese beetles",
-          "url": "https://www.google.com/search?q=Japanese%20beetles%20plant%20care%20fix"
-        }
-      ],
-      "category": "Vines & Climbers"
-    },
-    {
-      "id": "bl-azalea",
-      "bedId": "b-bl",
-      "name": "Encore Azalea White",
-      "scientific": "Rhododendron Encore",
-      "emoji": "emoji_bl-azalea",
-      "status": "planned",
-      "water": "Regular",
-      "sun": "Part shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "x1. 3-gallon. White.",
-      "maintenance": [
-        {
-          "task": "Feed azalea fertilizer after each bloom cycle",
-          "months": [
-            4,
-            7,
-            10
-          ]
-        },
-        {
-          "task": "Light prune after spring bloom only",
-          "months": [
-            5
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Not reblooming",
-          "url": "https://www.google.com/search?q=Not%20reblooming%20plant%20care%20fix"
-        }
-      ],
-      "category": "Shrubs"
-    },
-    {
-      "id": "bl-liriope",
-      "bedId": "b-bl",
-      "name": "Liriope Big Blue",
-      "scientific": "Liriope muscari Big Blue",
-      "emoji": "emoji_bl-liriope",
-      "status": "planned",
-      "water": "Low-moderate",
-      "sun": "Part shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "x6. 4\". 2 clusters of 3.",
-      "maintenance": [
-        {
-          "task": "Divide every 3-4 years · trim back in late winter",
-          "months": [
-            2,
-            3
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Crown rot",
-          "url": "https://www.google.com/search?q=Crown%20rot%20plant%20care%20fix"
-        }
-      ],
-      "category": "Ornamental Grasses"
-    },
-    {
-      "id": "bl-impatiens",
-      "bedId": "b-bl",
-      "name": "Impatiens White",
-      "scientific": "Impatiens walleriana",
-      "emoji": "emoji_bl-impatiens",
-      "status": "planned",
-      "water": "Regular",
-      "sun": "Part shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "x18. White. Along curve.",
-      "maintenance": [
-        {
-          "task": "Feed liquid fertilizer every 2 weeks",
-          "months": [
-            5,
-            6,
-            7,
-            8,
-            9
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Downy mildew",
-          "url": "https://www.google.com/search?q=Downy%20mildew%20plant%20care%20fix"
-        }
-      ],
-      "category": "Annuals"
-    },
-    {
       "id": "fw-distictis",
       "bedId": "b-fw",
       "name": "Distictis buccinatoria",
@@ -2239,116 +2068,6 @@
       "trouble": []
     },
     {
-      "id": "p1778118393809",
-      "bedId": "b-bl",
-      "name": "Mop head hydrangea",
-      "scientific": "Hydrangea macrophylla",
-      "emoji": "emoji_p1778118393809",
-      "category": "Hydrangeas",
-      "status": "alive",
-      "water": "Regular — keep consistently moist",
-      "sun": "Part shade — morning sun preferred",
-      "notes": "",
-      "fromCutting": false,
-      "maintenance": [
-        {
-          "task": "Deadwood removal only — no hard cutback",
-          "months": [
-            1
-          ]
-        },
-        {
-          "task": "Feed with azalea fertilizer",
-          "months": [
-            3
-          ]
-        },
-        {
-          "task": "Prune ONLY after flowering complete",
-          "months": [
-            8,
-            9
-          ]
-        }
-      ],
-      "trouble": []
-    },
-    {
-      "id": "p1778118413483",
-      "bedId": "b-bl",
-      "name": "Oak Leaf Hydrangea",
-      "scientific": "Hydrangea quercifolia",
-      "emoji": "emoji_p1778118413483",
-      "category": "Hydrangeas",
-      "status": "alive",
-      "water": "Regular — keep consistently moist",
-      "sun": "Part shade",
-      "notes": "",
-      "fromCutting": false,
-      "maintenance": [
-        {
-          "task": "Deadwood removal only — no hard cutback",
-          "months": [
-            1
-          ]
-        },
-        {
-          "task": "Feed with azalea fertilizer",
-          "months": [
-            3
-          ]
-        },
-        {
-          "task": "Prune ONLY after flowering complete",
-          "months": [
-            8,
-            9
-          ]
-        }
-      ],
-      "trouble": [],
-      "datePlanted": "",
-      "howPlanted": ""
-    },
-    {
-      "id": "p1778118483625",
-      "bedId": "b-bl",
-      "name": "Podocarpus",
-      "scientific": "Podocarpus macrophyllus",
-      "emoji": "emoji_p1778118483625",
-      "category": "Trees",
-      "status": "alive",
-      "water": "Moderate — low once established",
-      "sun": "Full sun to part shade",
-      "notes": "",
-      "fromCutting": false,
-      "maintenance": [
-        {
-          "task": "Deep water monthly — slow hose at drip line",
-          "months": [
-            6,
-            7,
-            8,
-            9
-          ]
-        },
-        {
-          "task": "Feed slow release balanced fertilizer in spring",
-          "months": [
-            3
-          ]
-        },
-        {
-          "task": "Check for dead/crossing branches — remove cleanly",
-          "months": [
-            1,
-            2
-          ]
-        }
-      ],
-      "trouble": []
-    },
-    {
       "id": "p1778124227613",
       "bedId": "b-ma",
       "name": "Bougainvillea",
@@ -3142,49 +2861,6 @@
       "fromCutting": false,
       "maintenance": [],
       "trouble": []
-    },
-    {
-      "id": "p1778194888421204",
-      "bedId": "b-bl",
-      "name": "Camellia",
-      "scientific": "Camellia japonica",
-      "emoji": "emoji_p1778194888421204",
-      "status": "alive",
-      "water": "Regular",
-      "sun": "Part to full shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Existing.",
-      "maintenance": [
-        {
-          "task": "Deadwood removal only — no hard cutback",
-          "months": [
-            1
-          ]
-        },
-        {
-          "task": "Feed with azalea fertilizer",
-          "months": [
-            3
-          ]
-        },
-        {
-          "task": "Prune ONLY after flowering complete",
-          "months": [
-            8,
-            9
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Bud drop",
-          "url": "https://www.google.com/search?q=Bud%20drop%20plant%20care%20fix"
-        }
-      ],
-      "category": "Hydrangeas",
-      "isIndoor": false
     },
     {
       "id": "p1778194904648727",
@@ -7085,6 +6761,330 @@
         }
       ],
       "trouble": []
+    },
+    {
+      "id": "bl-ivy",
+      "bedId": "b-bl",
+      "name": "Boston Ivy",
+      "scientific": "Parthenocissus tricuspidata",
+      "emoji": "emoji_bl-ivy",
+      "status": "planned",
+      "water": "Moderate",
+      "sun": "Part shade to full sun",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "x1. 1-gallon. Climbing fence.",
+      "maintenance": [
+        {
+          "task": "Train on fence — tie new growth as it extends",
+          "months": [
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "task": "Cut back in late winter to control spread",
+          "months": [
+            1,
+            2
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Japanese beetles",
+          "url": "https://www.google.com/search?q=Japanese%20beetles%20plant%20care%20fix"
+        }
+      ],
+      "category": "Vines & Climbers"
+    },
+    {
+      "id": "bl-azalea",
+      "bedId": "b-bl",
+      "name": "Encore Azalea White",
+      "scientific": "Rhododendron Encore",
+      "emoji": "emoji_bl-azalea",
+      "status": "planned",
+      "water": "Regular",
+      "sun": "Part shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "x1. 3-gallon. White.",
+      "maintenance": [
+        {
+          "task": "Feed azalea fertilizer after each bloom cycle",
+          "months": [
+            4,
+            7,
+            10
+          ]
+        },
+        {
+          "task": "Light prune after spring bloom only",
+          "months": [
+            5
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Not reblooming",
+          "url": "https://www.google.com/search?q=Not%20reblooming%20plant%20care%20fix"
+        }
+      ],
+      "category": "Shrubs"
+    },
+    {
+      "id": "bl-fatsia",
+      "bedId": "b-bl",
+      "name": "Fatsia japonica",
+      "scientific": "Fatsia japonica",
+      "emoji": "emoji_bl-fatsia",
+      "status": "planned",
+      "water": "Moderate",
+      "sun": "Part shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "x1. 2-gallon.",
+      "maintenance": [
+        {
+          "task": "Cut back in spring before growth pushes",
+          "months": [
+            2,
+            3
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Leaf drop",
+          "url": "https://www.google.com/search?q=Leaf%20drop%20plant%20care%20fix"
+        }
+      ],
+      "category": "Tropical Foliage",
+      "howPlanted": ""
+    },
+    {
+      "id": "bl-liriope",
+      "bedId": "b-bl",
+      "name": "Liriope Big Blue",
+      "scientific": "Liriope muscari Big Blue",
+      "emoji": "emoji_bl-liriope",
+      "status": "planned",
+      "water": "Low-moderate",
+      "sun": "Part shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "x6. 4\". 2 clusters of 3.",
+      "maintenance": [
+        {
+          "task": "Divide every 3-4 years · trim back in late winter",
+          "months": [
+            2,
+            3
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Crown rot",
+          "url": "https://www.google.com/search?q=Crown%20rot%20plant%20care%20fix"
+        }
+      ],
+      "category": "Ornamental Grasses"
+    },
+    {
+      "id": "bl-impatiens",
+      "bedId": "b-bl",
+      "name": "Impatiens White",
+      "scientific": "Impatiens walleriana",
+      "emoji": "emoji_bl-impatiens",
+      "status": "planned",
+      "water": "Regular",
+      "sun": "Part shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "x18. White. Along curve.",
+      "maintenance": [
+        {
+          "task": "Feed liquid fertilizer every 2 weeks",
+          "months": [
+            5,
+            6,
+            7,
+            8,
+            9
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Downy mildew",
+          "url": "https://www.google.com/search?q=Downy%20mildew%20plant%20care%20fix"
+        }
+      ],
+      "category": "Annuals"
+    },
+    {
+      "id": "p1778118393809",
+      "bedId": "b-bl",
+      "name": "Mop head hydrangea",
+      "scientific": "Hydrangea macrophylla",
+      "emoji": "emoji_p1778118393809",
+      "category": "Hydrangeas",
+      "status": "alive",
+      "water": "Regular — keep consistently moist",
+      "sun": "Part shade — morning sun preferred",
+      "notes": "",
+      "fromCutting": false,
+      "maintenance": [
+        {
+          "task": "Deadwood removal only — no hard cutback",
+          "months": [
+            1
+          ]
+        },
+        {
+          "task": "Feed with azalea fertilizer",
+          "months": [
+            3
+          ]
+        },
+        {
+          "task": "Prune ONLY after flowering complete",
+          "months": [
+            8,
+            9
+          ]
+        }
+      ],
+      "trouble": []
+    },
+    {
+      "id": "p1778118413483",
+      "bedId": "b-bl",
+      "name": "Oak Leaf Hydrangea",
+      "scientific": "Hydrangea quercifolia",
+      "emoji": "emoji_p1778118413483",
+      "category": "Hydrangeas",
+      "status": "alive",
+      "water": "Regular — keep consistently moist",
+      "sun": "Part shade",
+      "notes": "",
+      "fromCutting": false,
+      "maintenance": [
+        {
+          "task": "Deadwood removal only — no hard cutback",
+          "months": [
+            1
+          ]
+        },
+        {
+          "task": "Feed with azalea fertilizer",
+          "months": [
+            3
+          ]
+        },
+        {
+          "task": "Prune ONLY after flowering complete",
+          "months": [
+            8,
+            9
+          ]
+        }
+      ],
+      "trouble": [],
+      "datePlanted": "",
+      "howPlanted": ""
+    },
+    {
+      "id": "p1778118483625",
+      "bedId": "b-bl",
+      "name": "Podocarpus",
+      "scientific": "Podocarpus macrophyllus",
+      "emoji": "emoji_p1778118483625",
+      "category": "Trees",
+      "status": "alive",
+      "water": "Moderate — low once established",
+      "sun": "Full sun to part shade",
+      "notes": "",
+      "fromCutting": false,
+      "maintenance": [
+        {
+          "task": "Deep water monthly — slow hose at drip line",
+          "months": [
+            6,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "task": "Feed slow release balanced fertilizer in spring",
+          "months": [
+            3
+          ]
+        },
+        {
+          "task": "Check for dead/crossing branches — remove cleanly",
+          "months": [
+            1,
+            2
+          ]
+        }
+      ],
+      "trouble": []
+    },
+    {
+      "id": "p1778194888421204",
+      "bedId": "b-bl",
+      "name": "Camellia",
+      "scientific": "Camellia japonica",
+      "emoji": "emoji_p1778194888421204",
+      "status": "alive",
+      "water": "Regular",
+      "sun": "Part to full shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Existing.",
+      "maintenance": [
+        {
+          "task": "Deadwood removal only — no hard cutback",
+          "months": [
+            1
+          ]
+        },
+        {
+          "task": "Feed with azalea fertilizer",
+          "months": [
+            3
+          ]
+        },
+        {
+          "task": "Prune ONLY after flowering complete",
+          "months": [
+            8,
+            9
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Bud drop",
+          "url": "https://www.google.com/search?q=Bud%20drop%20plant%20care%20fix"
+        }
+      ],
+      "category": "Hydrangeas",
+      "isIndoor": false
     }
   ],
   "indoorPlants": [
@@ -9553,5 +9553,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-26T05:17:36.067Z"
+  "syncedAt": "2026-05-26T05:19:16.043Z"
 }
