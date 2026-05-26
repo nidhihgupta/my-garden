@@ -6458,6 +6458,36 @@
       "howPlanted": ""
     },
     {
+      "id": "fr-mondo",
+      "bedId": "b-fr",
+      "name": "Black Mondo",
+      "scientific": "Ophiopogon planiscapus Nigrescens",
+      "emoji": "emoji_fr-mondo",
+      "status": "planned",
+      "water": "Moderate",
+      "sun": "Part shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "x5. 1-gallon.",
+      "maintenance": [
+        {
+          "task": "Divide clumps every 3-4 years",
+          "months": [
+            3
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Loss of black color",
+          "url": "https://www.google.com/search?q=Loss%20of%20black%20color%20plant%20care%20fix"
+        }
+      ],
+      "category": "Ornamental Grasses",
+      "howPlanted": ""
+    },
+    {
       "id": "fr-camphor",
       "bedId": "b-fr",
       "name": "Camphor Tree",
@@ -6523,36 +6553,6 @@
         }
       ],
       "category": "Herbs"
-    },
-    {
-      "id": "fr-mondo",
-      "bedId": "b-fr",
-      "name": "Black Mondo",
-      "scientific": "Ophiopogon planiscapus Nigrescens",
-      "emoji": "emoji_fr-mondo",
-      "status": "planned",
-      "water": "Moderate",
-      "sun": "Part shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "x5. 1-gallon.",
-      "maintenance": [
-        {
-          "task": "Divide clumps every 3-4 years",
-          "months": [
-            3
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Loss of black color",
-          "url": "https://www.google.com/search?q=Loss%20of%20black%20color%20plant%20care%20fix"
-        }
-      ],
-      "category": "Ornamental Grasses",
-      "howPlanted": ""
     },
     {
       "id": "fr-lamium",
@@ -9167,5 +9167,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-26T03:46:29.350Z"
+  "syncedAt": "2026-05-26T03:46:34.147Z"
 }
