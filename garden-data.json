@@ -6748,6 +6748,43 @@
       "category": "Hydrangeas"
     },
     {
+      "id": "sa-oakleaf",
+      "bedId": "b-sa",
+      "name": "Oakleaf Hydrangea",
+      "scientific": "Hydrangea quercifolia",
+      "emoji": "emoji_sa-oakleaf",
+      "status": "alive",
+      "water": "Regular",
+      "sun": "Part shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Existing. Stunning fall foliage.",
+      "maintenance": [
+        {
+          "task": "Prune ONLY after flowering in August — never fall/winter",
+          "months": [
+            8
+          ]
+        },
+        {
+          "task": "Feed azalea fertilizer in spring",
+          "months": [
+            3,
+            4
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Not blooming",
+          "url": "https://www.google.com/search?q=Not%20blooming%20plant%20care%20fix"
+        }
+      ],
+      "category": "Hydrangeas",
+      "howPlanted": ""
+    },
+    {
       "id": "sa-iceberg",
       "bedId": "b-sa",
       "name": "Rose bush",
@@ -6900,43 +6937,6 @@
         }
       ],
       "category": "Bush Roses"
-    },
-    {
-      "id": "sa-oakleaf",
-      "bedId": "b-sa",
-      "name": "Oakleaf Hydrangea",
-      "scientific": "Hydrangea quercifolia",
-      "emoji": "emoji_sa-oakleaf",
-      "status": "alive",
-      "water": "Regular",
-      "sun": "Part shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Existing. Stunning fall foliage.",
-      "maintenance": [
-        {
-          "task": "Prune ONLY after flowering in August — never fall/winter",
-          "months": [
-            8
-          ]
-        },
-        {
-          "task": "Feed azalea fertilizer in spring",
-          "months": [
-            3,
-            4
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Not blooming",
-          "url": "https://www.google.com/search?q=Not%20blooming%20plant%20care%20fix"
-        }
-      ],
-      "category": "Hydrangeas",
-      "howPlanted": ""
     },
     {
       "id": "sa-knockoutrose",
@@ -9594,5 +9594,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-26T05:26:48.439Z"
+  "syncedAt": "2026-05-26T05:26:50.905Z"
 }
