@@ -6469,6 +6469,47 @@
       "category": "None"
     },
     {
+      "id": "mp-jenny",
+      "bedId": "b-mp",
+      "name": "Creeping Jenny",
+      "scientific": "Lysimachia nummularia",
+      "emoji": "emoji_mp-jenny",
+      "status": "alive",
+      "water": "Low to moderate",
+      "sun": "Part shade to full shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Existing groundcover. Spreads readily — trim to keep in bounds.",
+      "maintenance": [
+        {
+          "task": "Trim back to control spread",
+          "months": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "task": "Divide if overcrowded",
+          "months": [
+            3
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Root rot in waterlogged soil",
+          "url": "https://www.google.com/search?q=Root%20rot%20in%20waterlogged%20soil%20plant%20care%20fix"
+        }
+      ],
+      "category": "None",
+      "howPlanted": ""
+    },
+    {
       "id": "mp-fern",
       "bedId": "b-mp",
       "name": "Western Sword Fern",
@@ -6579,47 +6620,6 @@
         }
       ],
       "category": "Shrubs",
-      "howPlanted": ""
-    },
-    {
-      "id": "mp-jenny",
-      "bedId": "b-mp",
-      "name": "Creeping Jenny",
-      "scientific": "Lysimachia nummularia",
-      "emoji": "emoji_mp-jenny",
-      "status": "alive",
-      "water": "Low to moderate",
-      "sun": "Part shade to full shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Existing groundcover. Spreads readily — trim to keep in bounds.",
-      "maintenance": [
-        {
-          "task": "Trim back to control spread",
-          "months": [
-            4,
-            5,
-            6,
-            7,
-            8,
-            9
-          ]
-        },
-        {
-          "task": "Divide if overcrowded",
-          "months": [
-            3
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Root rot in waterlogged soil",
-          "url": "https://www.google.com/search?q=Root%20rot%20in%20waterlogged%20soil%20plant%20care%20fix"
-        }
-      ],
-      "category": "None",
       "howPlanted": ""
     },
     {
@@ -9137,5 +9137,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-26T04:32:10.604Z"
+  "syncedAt": "2026-05-26T04:32:22.515Z"
 }
