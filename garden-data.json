@@ -6723,6 +6723,44 @@
       "category": "Fruit Trees"
     },
     {
+      "id": "p1778195377685437",
+      "bedId": "b-berry",
+      "name": "Fatsia japonica",
+      "scientific": "Fatsia japonica",
+      "emoji": "emoji_p1778195377685437",
+      "status": "planned",
+      "water": "Moderate",
+      "sun": "Part shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "2-gallon. Behind planter area.",
+      "maintenance": [
+        {
+          "task": "Cut back in spring before growth pushes",
+          "months": [
+            2,
+            3
+          ]
+        },
+        {
+          "task": "Take cuttings for propagation",
+          "months": [
+            3
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Leaf drop",
+          "url": "https://www.google.com/search?q=Leaf%20drop%20plant%20care%20fix"
+        }
+      ],
+      "category": "Tropical Foliage",
+      "isIndoor": false,
+      "howPlanted": ""
+    },
+    {
       "id": "ps-pomegranate",
       "bedId": "b-berry",
       "name": "Pomegranate",
@@ -6811,44 +6849,6 @@
         }
       ],
       "category": "Fruit Trees",
-      "howPlanted": ""
-    },
-    {
-      "id": "p1778195377685437",
-      "bedId": "b-berry",
-      "name": "Fatsia japonica",
-      "scientific": "Fatsia japonica",
-      "emoji": "emoji_p1778195377685437",
-      "status": "planned",
-      "water": "Moderate",
-      "sun": "Part shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "2-gallon. Behind planter area.",
-      "maintenance": [
-        {
-          "task": "Cut back in spring before growth pushes",
-          "months": [
-            2,
-            3
-          ]
-        },
-        {
-          "task": "Take cuttings for propagation",
-          "months": [
-            3
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Leaf drop",
-          "url": "https://www.google.com/search?q=Leaf%20drop%20plant%20care%20fix"
-        }
-      ],
-      "category": "Tropical Foliage",
-      "isIndoor": false,
       "howPlanted": ""
     },
     {
@@ -9833,5 +9833,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-26T18:37:38.498Z"
+  "syncedAt": "2026-05-26T18:37:40.735Z"
 }
