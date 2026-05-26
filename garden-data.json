@@ -6067,6 +6067,43 @@
       "howPlanted": ""
     },
     {
+      "id": "p1778183645573",
+      "bedId": "b-ros",
+      "name": "Potato Vine",
+      "scientific": "Solanum laxum",
+      "emoji": "🌿",
+      "category": "Vines & Climbers",
+      "status": "alive",
+      "water": "Moderate — low once established",
+      "sun": "Full sun to part sun",
+      "notes": "",
+      "fromCutting": false,
+      "maintenance": [
+        {
+          "task": "Train and tie new canes to structure",
+          "months": [
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "task": "Feed after first flush",
+          "months": [
+            5
+          ]
+        },
+        {
+          "task": "Hard cutback by 1/3 to 1/2 in late winter before new growth",
+          "months": [
+            1,
+            2
+          ]
+        }
+      ],
+      "trouble": []
+    },
+    {
       "id": "ros-lemon",
       "bedId": "b-ros",
       "name": "Dwarf Meyer’s Lemon Tree",
@@ -6203,43 +6240,6 @@
       ],
       "category": "Bush Roses",
       "howPlanted": ""
-    },
-    {
-      "id": "p1778183645573",
-      "bedId": "b-ros",
-      "name": "Potato Vine",
-      "scientific": "Solanum laxum",
-      "emoji": "🌿",
-      "category": "Vines & Climbers",
-      "status": "alive",
-      "water": "Moderate — low once established",
-      "sun": "Full sun to part sun",
-      "notes": "",
-      "fromCutting": false,
-      "maintenance": [
-        {
-          "task": "Train and tie new canes to structure",
-          "months": [
-            3,
-            4,
-            5
-          ]
-        },
-        {
-          "task": "Feed after first flush",
-          "months": [
-            5
-          ]
-        },
-        {
-          "task": "Hard cutback by 1/3 to 1/2 in late winter before new growth",
-          "months": [
-            1,
-            2
-          ]
-        }
-      ],
-      "trouble": []
     },
     {
       "id": "p1778514288212",
@@ -9137,5 +9137,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-26T04:34:51.630Z"
+  "syncedAt": "2026-05-26T04:36:04.550Z"
 }
