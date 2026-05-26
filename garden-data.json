@@ -6659,48 +6659,6 @@
       "isIndoor": false
     },
     {
-      "id": "ros-flowercarpet",
-      "bedId": "b-ros",
-      "name": "Carpet Rose",
-      "scientific": "Rosa Flower Carpet",
-      "emoji": "🌹",
-      "status": "alive",
-      "water": "Moderate",
-      "sun": "Part sun",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Existing ground cover rose.",
-      "maintenance": [
-        {
-          "task": "Deadhead every 2 weeks — outward facing bud, 45° cut",
-          "months": [
-            4,
-            5,
-            6,
-            7,
-            8,
-            9,
-            10
-          ]
-        },
-        {
-          "task": "Light trim to tidy in February",
-          "months": [
-            2
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Black spot",
-          "url": "https://www.google.com/search?q=Black%20spot%20plant%20care%20fix"
-        }
-      ],
-      "category": "Bush Roses",
-      "howPlanted": ""
-    },
-    {
       "id": "p1778799623602268",
       "bedId": "b-ros",
       "name": "Tree Rose - orange (Strike it Rich)",
@@ -6801,6 +6759,48 @@
       "category": "Bush Roses",
       "howPlanted": "",
       "isIndoor": false
+    },
+    {
+      "id": "ros-flowercarpet",
+      "bedId": "b-ros",
+      "name": "Carpet Rose",
+      "scientific": "Rosa Flower Carpet",
+      "emoji": "🌹",
+      "status": "alive",
+      "water": "Moderate",
+      "sun": "Part sun",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Existing ground cover rose.",
+      "maintenance": [
+        {
+          "task": "Deadhead every 2 weeks — outward facing bud, 45° cut",
+          "months": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "task": "Light trim to tidy in February",
+          "months": [
+            2
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Black spot",
+          "url": "https://www.google.com/search?q=Black%20spot%20plant%20care%20fix"
+        }
+      ],
+      "category": "Bush Roses",
+      "howPlanted": ""
     },
     {
       "id": "p1778800032324516",
@@ -9518,5 +9518,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-26T04:56:03.733Z"
+  "syncedAt": "2026-05-26T04:56:08.797Z"
 }
