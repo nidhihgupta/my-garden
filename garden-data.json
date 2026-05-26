@@ -6463,6 +6463,55 @@
       "category": "Perennials"
     },
     {
+      "id": "fl-daylily",
+      "bedId": "b-fl",
+      "name": "Day Lilies",
+      "scientific": "Hemerocallis",
+      "emoji": "emoji_fl-daylily",
+      "status": "alive",
+      "water": "Moderate",
+      "sun": "Full sun to part shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Established in bed. Orange/yellow summer blooms.",
+      "maintenance": [
+        {
+          "task": "Deadhead spent blooms to encourage reblooming",
+          "months": [
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "task": "Divide clumps every 3-4 years in fall",
+          "months": [
+            9,
+            10
+          ]
+        },
+        {
+          "task": "Cut back foliage in late fall",
+          "months": [
+            11
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Rust",
+          "url": "https://www.google.com/search?q=Daylily+rust+fix"
+        },
+        {
+          "issue": "Aphids",
+          "url": "https://www.google.com/search?q=Daylily+aphids+fix"
+        }
+      ],
+      "category": "Perennials",
+      "howPlanted": ""
+    },
+    {
       "id": "fl-mondo",
       "bedId": "b-fl",
       "name": "Black Mondo",
@@ -6619,55 +6668,6 @@
         }
       ],
       "category": "Perennials"
-    },
-    {
-      "id": "fl-daylily",
-      "bedId": "b-fl",
-      "name": "Day Lilies",
-      "scientific": "Hemerocallis",
-      "emoji": "emoji_fl-daylily",
-      "status": "alive",
-      "water": "Moderate",
-      "sun": "Full sun to part shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Established in bed. Orange/yellow summer blooms.",
-      "maintenance": [
-        {
-          "task": "Deadhead spent blooms to encourage reblooming",
-          "months": [
-            6,
-            7,
-            8
-          ]
-        },
-        {
-          "task": "Divide clumps every 3-4 years in fall",
-          "months": [
-            9,
-            10
-          ]
-        },
-        {
-          "task": "Cut back foliage in late fall",
-          "months": [
-            11
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Rust",
-          "url": "https://www.google.com/search?q=Daylily+rust+fix"
-        },
-        {
-          "issue": "Aphids",
-          "url": "https://www.google.com/search?q=Daylily+aphids+fix"
-        }
-      ],
-      "category": "Perennials",
-      "howPlanted": ""
     },
     {
       "id": "fl-sarcococca",
@@ -9167,5 +9167,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-26T03:43:27.971Z"
+  "syncedAt": "2026-05-26T03:43:32.372Z"
 }
