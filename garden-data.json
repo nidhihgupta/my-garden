@@ -6530,36 +6530,6 @@
       "category": "Groundcovers"
     },
     {
-      "id": "rw-pittosporum-tree",
-      "bedId": "b-rw",
-      "name": "Pittosporum Tree",
-      "scientific": "Pittosporum undulatum",
-      "emoji": "🌿",
-      "status": "alive",
-      "water": "Low once established",
-      "sun": "Part shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Established tree form pittosporum. Provides canopy in redwood bed.",
-      "maintenance": [
-        {
-          "task": "Light trim to maintain shape",
-          "months": [
-            3,
-            4
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Scale insects",
-          "url": "https://www.google.com/search?q=Scale%20insects%20plant%20care%20fix"
-        }
-      ],
-      "category": "Trees"
-    },
-    {
       "id": "rw-aucuba",
       "bedId": "b-rw",
       "name": "Aucuba",
@@ -6668,6 +6638,36 @@
         }
       ],
       "trouble": [],
+      "category": "Trees"
+    },
+    {
+      "id": "rw-pittosporum-tree",
+      "bedId": "b-rw",
+      "name": "Pittosporum Tree",
+      "scientific": "Pittosporum undulatum",
+      "emoji": "🌿",
+      "status": "alive",
+      "water": "Low once established",
+      "sun": "Part shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Established tree form pittosporum. Provides canopy in redwood bed.",
+      "maintenance": [
+        {
+          "task": "Light trim to maintain shape",
+          "months": [
+            3,
+            4
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Scale insects",
+          "url": "https://www.google.com/search?q=Scale%20insects%20plant%20care%20fix"
+        }
+      ],
       "category": "Trees"
     },
     {
@@ -9167,5 +9167,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-26T04:28:29.301Z"
+  "syncedAt": "2026-05-26T04:28:32.308Z"
 }
