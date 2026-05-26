@@ -6331,9 +6331,9 @@
       "isIndoor": false
     },
     {
-      "id": "p1778799611982893",
+      "id": "p177879979683086",
       "bedId": "b-ros",
-      "name": "Tree Rose - unknown (second)",
+      "name": "Tree Rose - red",
       "scientific": "Rosa standard",
       "emoji": "🌹",
       "status": "alive",
@@ -6382,9 +6382,9 @@
       "isIndoor": false
     },
     {
-      "id": "p177879979683086",
+      "id": "p1778799611982893",
       "bedId": "b-ros",
-      "name": "Tree Rose - red",
+      "name": "Tree Rose - unknown (second)",
       "scientific": "Rosa standard",
       "emoji": "🌹",
       "status": "alive",
@@ -9137,5 +9137,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-26T04:34:34.987Z"
+  "syncedAt": "2026-05-26T04:34:37.135Z"
 }
