@@ -6811,6 +6811,61 @@
       "category": "Fruit Trees"
     },
     {
+      "id": "p1778178720492",
+      "bedId": "b-berry",
+      "name": "Wisteria",
+      "scientific": "Wisteria sinensis",
+      "emoji": "emoji_p1778178720492",
+      "category": "Vines & Climbers",
+      "status": "alive",
+      "water": "Moderate — deep water during establishment",
+      "sun": "Full sun",
+      "notes": "Two trim cycles to maximize bloom. \nMay - cut back to 6 nodes. Get rid of all seed pods \nJan/feb - cut back to 2 or 3. This is where the flowers will come from ",
+      "fromCutting": false,
+      "maintenance": [
+        {
+          "task": "Light tip prune only — do not hard cut",
+          "months": [
+            1,
+            2
+          ]
+        },
+        {
+          "task": "Deadhead spent blooms",
+          "months": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "task": "Train and tie new canes to structure",
+          "months": [
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "task": "Feed after first flush",
+          "months": [
+            5
+          ]
+        },
+        {
+          "task": "Cut back new side shoots to 5 leaves — do NOT cut main structural canes",
+          "months": [
+            5
+          ]
+        }
+      ],
+      "trouble": []
+    },
+    {
       "id": "ps-raspberry",
       "bedId": "b-berry",
       "name": "Raspberry Bababerry",
@@ -6894,61 +6949,6 @@
         }
       ],
       "category": "Fruit Trees"
-    },
-    {
-      "id": "p1778178720492",
-      "bedId": "b-berry",
-      "name": "Wisteria",
-      "scientific": "Wisteria sinensis",
-      "emoji": "emoji_p1778178720492",
-      "category": "Vines & Climbers",
-      "status": "alive",
-      "water": "Moderate — deep water during establishment",
-      "sun": "Full sun",
-      "notes": "Two trim cycles to maximize bloom. \nMay - cut back to 6 nodes. Get rid of all seed pods \nJan/feb - cut back to 2 or 3. This is where the flowers will come from ",
-      "fromCutting": false,
-      "maintenance": [
-        {
-          "task": "Light tip prune only — do not hard cut",
-          "months": [
-            1,
-            2
-          ]
-        },
-        {
-          "task": "Deadhead spent blooms",
-          "months": [
-            4,
-            5,
-            6,
-            7,
-            8,
-            9,
-            10
-          ]
-        },
-        {
-          "task": "Train and tie new canes to structure",
-          "months": [
-            3,
-            4,
-            5
-          ]
-        },
-        {
-          "task": "Feed after first flush",
-          "months": [
-            5
-          ]
-        },
-        {
-          "task": "Cut back new side shoots to 5 leaves — do NOT cut main structural canes",
-          "months": [
-            5
-          ]
-        }
-      ],
-      "trouble": []
     },
     {
       "id": "ps-beets",
@@ -9884,5 +9884,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-26T18:40:42.313Z"
+  "syncedAt": "2026-05-26T18:40:57.294Z"
 }
