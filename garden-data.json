@@ -7328,36 +7328,6 @@
       "category": "Perennials"
     },
     {
-      "id": "br-coleus",
-      "bedId": "b-br",
-      "name": "Coleus Dark Purple",
-      "scientific": "Plectranthus scutellarioides",
-      "emoji": "emoji_br-coleus",
-      "status": "planned",
-      "water": "Moderate",
-      "sun": "Part shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "x8. Filler.",
-      "maintenance": [
-        {
-          "task": "Replace or cut back if getting leggy",
-          "months": [
-            7,
-            8
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Leggy growth",
-          "url": "https://www.google.com/search?q=Leggy%20growth%20plant%20care%20fix"
-        }
-      ],
-      "category": "Annuals"
-    },
-    {
       "id": "br-torenia",
       "bedId": "b-br",
       "name": "Torenia White/Purple",
@@ -7458,6 +7428,36 @@
       ],
       "category": "Tropical Foliage",
       "howPlanted": ""
+    },
+    {
+      "id": "br-coleus",
+      "bedId": "b-br",
+      "name": "Coleus Dark Purple",
+      "scientific": "Plectranthus scutellarioides",
+      "emoji": "emoji_br-coleus",
+      "status": "planned",
+      "water": "Moderate",
+      "sun": "Part shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "x8. Filler.",
+      "maintenance": [
+        {
+          "task": "Replace or cut back if getting leggy",
+          "months": [
+            7,
+            8
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Leggy growth",
+          "url": "https://www.google.com/search?q=Leggy%20growth%20plant%20care%20fix"
+        }
+      ],
+      "category": "Annuals"
     },
     {
       "id": "br-alocasia",
@@ -10095,5 +10095,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-27T00:43:53.722Z"
+  "syncedAt": "2026-05-27T00:44:07.766Z"
 }
