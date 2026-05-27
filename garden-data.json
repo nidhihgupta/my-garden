@@ -7073,6 +7073,37 @@
       "trouble": []
     },
     {
+      "id": "berry-thyme",
+      "bedId": "b-berry",
+      "name": "Woolly Thyme",
+      "scientific": "Thymus pseudolanuginosus",
+      "emoji": "🌿",
+      "status": "alive",
+      "category": "Groundcovers",
+      "water": "Low once established",
+      "sun": "Full sun",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Low creeping groundcover with soft woolly leaves. Tolerates light foot traffic.",
+      "maintenance": [
+        {
+          "task": "Trim lightly after flowering",
+          "months": [
+            7,
+            8
+          ]
+        },
+        {
+          "task": "Divide if becomes woody in center",
+          "months": [
+            4
+          ]
+        }
+      ],
+      "trouble": []
+    },
+    {
       "id": "p1778194904648727",
       "bedId": "b-berry",
       "name": "Camellia",
@@ -7182,37 +7213,6 @@
       "trouble": [],
       "datePlanted": "2026-05-12",
       "howPlanted": "seed"
-    },
-    {
-      "id": "berry-thyme",
-      "bedId": "b-berry",
-      "name": "Woolly Thyme",
-      "scientific": "Thymus pseudolanuginosus",
-      "emoji": "🌿",
-      "status": "alive",
-      "category": "Groundcovers",
-      "water": "Low once established",
-      "sun": "Full sun",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Low creeping groundcover with soft woolly leaves. Tolerates light foot traffic.",
-      "maintenance": [
-        {
-          "task": "Trim lightly after flowering",
-          "months": [
-            7,
-            8
-          ]
-        },
-        {
-          "task": "Divide if becomes woody in center",
-          "months": [
-            4
-          ]
-        }
-      ],
-      "trouble": []
     },
     {
       "id": "berry-greenbeans",
@@ -10095,5 +10095,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-27T00:38:22.637Z"
+  "syncedAt": "2026-05-27T00:38:26.459Z"
 }
