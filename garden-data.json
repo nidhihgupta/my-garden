@@ -431,304 +431,6 @@
       "category": "Annuals"
     },
     {
-      "id": "bbq-daisy",
-      "bedId": "b-bbq",
-      "name": "Daisy",
-      "scientific": "Leucanthemum spp.",
-      "emoji": "🌼",
-      "status": "alive",
-      "water": "Moderate",
-      "sun": "Full sun",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Existing.",
-      "maintenance": [
-        {
-          "task": "Deadhead spent blooms",
-          "months": [
-            5,
-            6,
-            7,
-            8,
-            9
-          ]
-        },
-        {
-          "task": "Cut back hard after flowering",
-          "months": [
-            8,
-            9
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Powdery mildew",
-          "url": "https://www.google.com/search?q=Powdery%20mildew%20plant%20care%20fix"
-        }
-      ],
-      "category": "Perennials"
-    },
-    {
-      "id": "bbq-chrysanthemum",
-      "bedId": "b-bbq",
-      "name": "Chrysanthemum",
-      "scientific": "Chrysanthemum spp.",
-      "emoji": "emoji_bbq-chrysanthemum",
-      "status": "alive",
-      "water": "Regular",
-      "sun": "Full sun",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Existing. Move to front edge of bed.",
-      "maintenance": [
-        {
-          "task": "Pinch tips in spring for bushier plant",
-          "months": [
-            4,
-            5
-          ]
-        },
-        {
-          "task": "Feed high phosphorus for bloom",
-          "months": [
-            7,
-            8
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Aphids",
-          "url": "https://www.google.com/search?q=Aphids%20plant%20care%20fix"
-        }
-      ],
-      "category": "Perennials"
-    },
-    {
-      "id": "bbq-existrose",
-      "bedId": "b-bbq",
-      "name": "Existing Rose bush",
-      "scientific": "Rosa spp.",
-      "emoji": "emoji_bbq-existrose",
-      "status": "alive",
-      "water": "Deep water weekly",
-      "sun": "Full sun",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Existing rose.",
-      "maintenance": [
-        {
-          "task": "Deadhead every 2 weeks — outward facing bud, 45° cut",
-          "months": [
-            4,
-            5,
-            6,
-            7,
-            8,
-            9,
-            10
-          ]
-        },
-        {
-          "task": "Hard cutback annually in January/February",
-          "months": [
-            1,
-            2
-          ]
-        },
-        {
-          "task": "Feed rose fertilizer after first bloom flush",
-          "months": [
-            5,
-            6
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Black spot",
-          "url": "https://www.google.com/search?q=Black%20spot%20plant%20care%20fix"
-        }
-      ],
-      "category": "Bush Roses"
-    },
-    {
-      "id": "bbq-whiteboug",
-      "bedId": "b-bbq",
-      "name": "White Bougainvillea",
-      "scientific": "Bougainvillea White Stripe",
-      "emoji": "emoji_bbq-whiteboug",
-      "status": "alive",
-      "water": "Deep water weekly — Super Bloom half strength monthly",
-      "sun": "Full sun",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Moving to BACK of BBQ bed.",
-      "maintenance": [
-        {
-          "task": "Apply Super Bloom half strength to MOIST soil — monthly",
-          "months": [
-            4,
-            5,
-            6,
-            7,
-            8,
-            9
-          ]
-        },
-        {
-          "task": "Cut back by 1/3 after flowering",
-          "months": [
-            8,
-            9
-          ]
-        },
-        {
-          "task": "Train new growth to desired position — tie regularly",
-          "months": [
-            4,
-            5,
-            6,
-            7,
-            8
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Not blooming",
-          "url": "https://www.google.com/search?q=Not%20blooming%20plant%20care%20fix"
-        }
-      ],
-      "category": "Bougainvillea"
-    },
-    {
-      "id": "bbq-salvia",
-      "bedId": "b-bbq",
-      "name": "Salvia Amistad",
-      "scientific": "Salvia Amistad",
-      "emoji": "💜",
-      "status": "planned",
-      "water": "Low-moderate",
-      "sun": "Full sun",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "x3. 1-gallon. Back layer.",
-      "maintenance": [
-        {
-          "task": "Deadhead spent spikes continuously",
-          "months": [
-            5,
-            6,
-            7,
-            8,
-            9,
-            10
-          ]
-        },
-        {
-          "task": "Cut back by 1/3 if getting leggy — reblooms in 3 weeks",
-          "months": [
-            7
-          ]
-        },
-        {
-          "task": "Hard cutback annually",
-          "months": [
-            2
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Leggy growth",
-          "url": "https://www.google.com/search?q=Leggy%20growth%20plant%20care%20fix"
-        }
-      ],
-      "category": "Salvias"
-    },
-    {
-      "id": "bbq-dahlia",
-      "bedId": "b-bbq",
-      "name": "Dahlia Magenta",
-      "scientific": "Dahlia spp.",
-      "emoji": "emoji_bbq-dahlia",
-      "status": "planned",
-      "water": "Regular",
-      "sun": "Full sun",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "x4. Magenta/hot pink — select at nursery.",
-      "maintenance": [
-        {
-          "task": "Deadhead continuously — every spent bloom = more blooms",
-          "months": [
-            6,
-            7,
-            8,
-            9,
-            10
-          ]
-        },
-        {
-          "task": "Feed high phosphorus fertilizer",
-          "months": [
-            6,
-            7,
-            8
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Powdery mildew",
-          "url": "https://www.google.com/search?q=Powdery%20mildew%20plant%20care%20fix"
-        }
-      ],
-      "category": "Bulbs"
-    },
-    {
-      "id": "bbq-verbena",
-      "bedId": "b-bbq",
-      "name": "Verbena Lollipop",
-      "scientific": "Verbena bonariensis Lollipop",
-      "emoji": "💜",
-      "status": "planned",
-      "water": "Low once established",
-      "sun": "Full sun",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "x4. 4\". Compact purple. Interweave with dahlias.",
-      "maintenance": [
-        {
-          "task": "Deadhead to extend bloom season",
-          "months": [
-            5,
-            6,
-            7,
-            8,
-            9,
-            10
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Powdery mildew",
-          "url": "https://www.google.com/search?q=Powdery%20mildew%20plant%20care%20fix"
-        }
-      ],
-      "category": "Perennials"
-    },
-    {
       "id": "st-aeonium",
       "bedId": "b-stump",
       "name": "Aeonium Zwartkop",
@@ -940,130 +642,6 @@
       "trouble": []
     },
     {
-      "id": "p1778130742776",
-      "bedId": "b-bbq",
-      "name": "Hibiscus",
-      "scientific": "Hibiscus rosa-sinensis",
-      "emoji": "🌺",
-      "category": "Shrubs",
-      "status": "alive",
-      "water": "Regular — keep consistently moist in summer",
-      "sun": "Full sun",
-      "notes": "",
-      "fromCutting": false,
-      "maintenance": [
-        {
-          "task": "Cut back by 1/3 if leggy — reblooms in 3 weeks",
-          "months": [
-            7,
-            8
-          ]
-        },
-        {
-          "task": "Hard cutback after last frost risk",
-          "months": [
-            3
-          ]
-        },
-        {
-          "task": "High phosphorus fertilizer monthly",
-          "months": [
-            5,
-            6,
-            7,
-            8,
-            9
-          ]
-        }
-      ],
-      "trouble": []
-    },
-    {
-      "id": "p1778131182060",
-      "bedId": "b-bbq",
-      "name": "Iceberg rose",
-      "scientific": "Rosa 'Iceberg'",
-      "emoji": "emoji_p1778131182060",
-      "category": "Climbing Roses",
-      "status": "alive",
-      "water": "Deep water weekly",
-      "sun": "Full sun to part sun",
-      "notes": "",
-      "fromCutting": false,
-      "maintenance": [
-        {
-          "task": "Light tip prune only — do not hard cut",
-          "months": [
-            1,
-            2
-          ]
-        },
-        {
-          "task": "Deadhead spent blooms",
-          "months": [
-            4,
-            5,
-            6,
-            7,
-            8,
-            9,
-            10
-          ]
-        },
-        {
-          "task": "Train and tie new canes to structure",
-          "months": [
-            3,
-            4,
-            5
-          ]
-        },
-        {
-          "task": "Feed after first flush",
-          "months": [
-            5
-          ]
-        }
-      ],
-      "trouble": []
-    },
-    {
-      "id": "p1778131211972",
-      "bedId": "b-bbq",
-      "name": "Bougainvillea",
-      "scientific": "Bougainvillea spp.",
-      "emoji": "emoji_p1778131211972",
-      "category": "Bougainvillea",
-      "status": "alive",
-      "water": "Deep water weekly",
-      "sun": "Full sun",
-      "notes": "",
-      "fromCutting": false,
-      "maintenance": [
-        {
-          "task": "Hard prune — cut by 1/3",
-          "months": [
-            2
-          ]
-        },
-        {
-          "task": "Feed Super Bloom half strength to moist soil",
-          "months": [
-            7,
-            8,
-            9
-          ]
-        },
-        {
-          "task": "Cut by 1/3 after bloom finishes",
-          "months": [
-            8
-          ]
-        }
-      ],
-      "trouble": []
-    },
-    {
       "id": "p1778170415313",
       "bedId": "b-fw",
       "name": "Calibrachoa",
@@ -1079,42 +657,6 @@
       "trouble": [],
       "datePlanted": "2026-05-16",
       "howPlanted": "bought"
-    },
-    {
-      "id": "p1778171162160",
-      "bedId": "b-bbq",
-      "name": "Lantana",
-      "scientific": "Lantana camara",
-      "emoji": "emoji_p1778171162160",
-      "category": "Shrubs",
-      "status": "planned",
-      "water": "Low — drought tolerant once established",
-      "sun": "Full sun",
-      "notes": "",
-      "fromCutting": false,
-      "maintenance": [
-        {
-          "task": "Cut back by 1/3 if leggy — reblooms in 3 weeks",
-          "months": [
-            7,
-            8
-          ]
-        },
-        {
-          "task": "Hard cutback after last frost risk",
-          "months": [
-            3
-          ]
-        },
-        {
-          "task": "Feed balanced fertilizer in spring",
-          "months": [
-            3,
-            4
-          ]
-        }
-      ],
-      "trouble": []
     },
     {
       "id": "p1778183472337",
@@ -7499,6 +7041,464 @@
         }
       ],
       "category": "Salvias"
+    },
+    {
+      "id": "bbq-daisy",
+      "bedId": "b-bbq",
+      "name": "Daisy",
+      "scientific": "Leucanthemum spp.",
+      "emoji": "🌼",
+      "status": "alive",
+      "water": "Moderate",
+      "sun": "Full sun",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Existing.",
+      "maintenance": [
+        {
+          "task": "Deadhead spent blooms",
+          "months": [
+            5,
+            6,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "task": "Cut back hard after flowering",
+          "months": [
+            8,
+            9
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Powdery mildew",
+          "url": "https://www.google.com/search?q=Powdery%20mildew%20plant%20care%20fix"
+        }
+      ],
+      "category": "Perennials"
+    },
+    {
+      "id": "bbq-chrysanthemum",
+      "bedId": "b-bbq",
+      "name": "Chrysanthemum",
+      "scientific": "Chrysanthemum spp.",
+      "emoji": "emoji_bbq-chrysanthemum",
+      "status": "alive",
+      "water": "Regular",
+      "sun": "Full sun",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Existing. Move to front edge of bed.",
+      "maintenance": [
+        {
+          "task": "Pinch tips in spring for bushier plant",
+          "months": [
+            4,
+            5
+          ]
+        },
+        {
+          "task": "Feed high phosphorus for bloom",
+          "months": [
+            7,
+            8
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Aphids",
+          "url": "https://www.google.com/search?q=Aphids%20plant%20care%20fix"
+        }
+      ],
+      "category": "Perennials"
+    },
+    {
+      "id": "bbq-existrose",
+      "bedId": "b-bbq",
+      "name": "Existing Rose bush",
+      "scientific": "Rosa spp.",
+      "emoji": "emoji_bbq-existrose",
+      "status": "alive",
+      "water": "Deep water weekly",
+      "sun": "Full sun",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Existing rose.",
+      "maintenance": [
+        {
+          "task": "Deadhead every 2 weeks — outward facing bud, 45° cut",
+          "months": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "task": "Hard cutback annually in January/February",
+          "months": [
+            1,
+            2
+          ]
+        },
+        {
+          "task": "Feed rose fertilizer after first bloom flush",
+          "months": [
+            5,
+            6
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Black spot",
+          "url": "https://www.google.com/search?q=Black%20spot%20plant%20care%20fix"
+        }
+      ],
+      "category": "Bush Roses"
+    },
+    {
+      "id": "bbq-whiteboug",
+      "bedId": "b-bbq",
+      "name": "White Bougainvillea",
+      "scientific": "Bougainvillea White Stripe",
+      "emoji": "emoji_bbq-whiteboug",
+      "status": "alive",
+      "water": "Deep water weekly — Super Bloom half strength monthly",
+      "sun": "Full sun",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Moving to BACK of BBQ bed.",
+      "maintenance": [
+        {
+          "task": "Apply Super Bloom half strength to MOIST soil — monthly",
+          "months": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "task": "Cut back by 1/3 after flowering",
+          "months": [
+            8,
+            9
+          ]
+        },
+        {
+          "task": "Train new growth to desired position — tie regularly",
+          "months": [
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Not blooming",
+          "url": "https://www.google.com/search?q=Not%20blooming%20plant%20care%20fix"
+        }
+      ],
+      "category": "Bougainvillea"
+    },
+    {
+      "id": "bbq-salvia",
+      "bedId": "b-bbq",
+      "name": "Salvia Amistad",
+      "scientific": "Salvia Amistad",
+      "emoji": "💜",
+      "status": "planned",
+      "water": "Low-moderate",
+      "sun": "Full sun",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "x3. 1-gallon. Back layer.",
+      "maintenance": [
+        {
+          "task": "Deadhead spent spikes continuously",
+          "months": [
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "task": "Cut back by 1/3 if getting leggy — reblooms in 3 weeks",
+          "months": [
+            7
+          ]
+        },
+        {
+          "task": "Hard cutback annually",
+          "months": [
+            2
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Leggy growth",
+          "url": "https://www.google.com/search?q=Leggy%20growth%20plant%20care%20fix"
+        }
+      ],
+      "category": "Salvias"
+    },
+    {
+      "id": "bbq-dahlia",
+      "bedId": "b-bbq",
+      "name": "Dahlia Magenta",
+      "scientific": "Dahlia spp.",
+      "emoji": "emoji_bbq-dahlia",
+      "status": "planned",
+      "water": "Regular",
+      "sun": "Full sun",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "x4. Magenta/hot pink — select at nursery.",
+      "maintenance": [
+        {
+          "task": "Deadhead continuously — every spent bloom = more blooms",
+          "months": [
+            6,
+            7,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "task": "Feed high phosphorus fertilizer",
+          "months": [
+            6,
+            7,
+            8
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Powdery mildew",
+          "url": "https://www.google.com/search?q=Powdery%20mildew%20plant%20care%20fix"
+        }
+      ],
+      "category": "Bulbs"
+    },
+    {
+      "id": "bbq-verbena",
+      "bedId": "b-bbq",
+      "name": "Verbena Lollipop",
+      "scientific": "Verbena bonariensis Lollipop",
+      "emoji": "💜",
+      "status": "planned",
+      "water": "Low once established",
+      "sun": "Full sun",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "x4. 4\". Compact purple. Interweave with dahlias.",
+      "maintenance": [
+        {
+          "task": "Deadhead to extend bloom season",
+          "months": [
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Powdery mildew",
+          "url": "https://www.google.com/search?q=Powdery%20mildew%20plant%20care%20fix"
+        }
+      ],
+      "category": "Perennials"
+    },
+    {
+      "id": "p1778130742776",
+      "bedId": "b-bbq",
+      "name": "Hibiscus",
+      "scientific": "Hibiscus rosa-sinensis",
+      "emoji": "🌺",
+      "category": "Shrubs",
+      "status": "alive",
+      "water": "Regular — keep consistently moist in summer",
+      "sun": "Full sun",
+      "notes": "",
+      "fromCutting": false,
+      "maintenance": [
+        {
+          "task": "Cut back by 1/3 if leggy — reblooms in 3 weeks",
+          "months": [
+            7,
+            8
+          ]
+        },
+        {
+          "task": "Hard cutback after last frost risk",
+          "months": [
+            3
+          ]
+        },
+        {
+          "task": "High phosphorus fertilizer monthly",
+          "months": [
+            5,
+            6,
+            7,
+            8,
+            9
+          ]
+        }
+      ],
+      "trouble": []
+    },
+    {
+      "id": "p1778131182060",
+      "bedId": "b-bbq",
+      "name": "Iceberg rose",
+      "scientific": "Rosa 'Iceberg'",
+      "emoji": "emoji_p1778131182060",
+      "category": "Climbing Roses",
+      "status": "alive",
+      "water": "Deep water weekly",
+      "sun": "Full sun to part sun",
+      "notes": "",
+      "fromCutting": false,
+      "maintenance": [
+        {
+          "task": "Light tip prune only — do not hard cut",
+          "months": [
+            1,
+            2
+          ]
+        },
+        {
+          "task": "Deadhead spent blooms",
+          "months": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "task": "Train and tie new canes to structure",
+          "months": [
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "task": "Feed after first flush",
+          "months": [
+            5
+          ]
+        }
+      ],
+      "trouble": []
+    },
+    {
+      "id": "p1778131211972",
+      "bedId": "b-bbq",
+      "name": "Bougainvillea",
+      "scientific": "Bougainvillea spp.",
+      "emoji": "emoji_p1778131211972",
+      "category": "Bougainvillea",
+      "status": "alive",
+      "water": "Deep water weekly",
+      "sun": "Full sun",
+      "notes": "",
+      "fromCutting": false,
+      "maintenance": [
+        {
+          "task": "Hard prune — cut by 1/3",
+          "months": [
+            2
+          ]
+        },
+        {
+          "task": "Feed Super Bloom half strength to moist soil",
+          "months": [
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "task": "Cut by 1/3 after bloom finishes",
+          "months": [
+            8
+          ]
+        }
+      ],
+      "trouble": []
+    },
+    {
+      "id": "p1778171162160",
+      "bedId": "b-bbq",
+      "name": "Lantana",
+      "scientific": "Lantana camara",
+      "emoji": "emoji_p1778171162160",
+      "category": "Shrubs",
+      "status": "planned",
+      "water": "Low — drought tolerant once established",
+      "sun": "Full sun",
+      "notes": "",
+      "fromCutting": false,
+      "maintenance": [
+        {
+          "task": "Cut back by 1/3 if leggy — reblooms in 3 weeks",
+          "months": [
+            7,
+            8
+          ]
+        },
+        {
+          "task": "Hard cutback after last frost risk",
+          "months": [
+            3
+          ]
+        },
+        {
+          "task": "Feed balanced fertilizer in spring",
+          "months": [
+            3,
+            4
+          ]
+        }
+      ],
+      "trouble": []
     }
   ],
   "indoorPlants": [
@@ -9967,5 +9967,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-27T00:24:11.964Z"
+  "syncedAt": "2026-05-27T00:25:40.702Z"
 }
