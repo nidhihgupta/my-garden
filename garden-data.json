@@ -9929,6 +9929,17 @@
       "bed": "",
       "category": "Gardener — Individual",
       "bought": false
+    },
+    {
+      "id": "s1779913318271",
+      "name": "Dichondra",
+      "orderAs": "Dichondra",
+      "qty": "1",
+      "size": "",
+      "color": "",
+      "bed": "",
+      "category": "Gardener — Individual",
+      "bought": false
     }
   ],
   "notes": [],
@@ -10207,5 +10218,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-27T20:21:45.645Z"
+  "syncedAt": "2026-05-27T20:21:58.273Z"
 }
