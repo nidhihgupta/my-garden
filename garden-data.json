@@ -7479,6 +7479,47 @@
       "trouble": []
     },
     {
+      "id": "p1779842177739619",
+      "bedId": "b-tom",
+      "name": "Podocarpus in corner",
+      "scientific": "Podocarpus macrophyllus",
+      "emoji": "emoji_p1778118483625",
+      "category": "Trees",
+      "status": "alive",
+      "water": "Moderate — low once established",
+      "sun": "Full sun to part shade",
+      "notes": "",
+      "fromCutting": false,
+      "maintenance": [
+        {
+          "task": "Deep water monthly — slow hose at drip line",
+          "months": [
+            6,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "task": "Feed slow release balanced fertilizer in spring",
+          "months": [
+            3
+          ]
+        },
+        {
+          "task": "Check for dead/crossing branches — remove cleanly",
+          "months": [
+            1,
+            2
+          ]
+        }
+      ],
+      "trouble": [],
+      "datePlanted": "",
+      "howPlanted": "",
+      "isIndoor": false
+    },
+    {
       "id": "p1778192989476",
       "bedId": "b-tom",
       "name": "Night jasmine",
@@ -7639,47 +7680,6 @@
       "fromCutting": false,
       "maintenance": [],
       "trouble": []
-    },
-    {
-      "id": "p1779842177739619",
-      "bedId": "b-tom",
-      "name": "Podocarpus in corner",
-      "scientific": "Podocarpus macrophyllus",
-      "emoji": "emoji_p1778118483625",
-      "category": "Trees",
-      "status": "alive",
-      "water": "Moderate — low once established",
-      "sun": "Full sun to part shade",
-      "notes": "",
-      "fromCutting": false,
-      "maintenance": [
-        {
-          "task": "Deep water monthly — slow hose at drip line",
-          "months": [
-            6,
-            7,
-            8,
-            9
-          ]
-        },
-        {
-          "task": "Feed slow release balanced fertilizer in spring",
-          "months": [
-            3
-          ]
-        },
-        {
-          "task": "Check for dead/crossing branches — remove cleanly",
-          "months": [
-            1,
-            2
-          ]
-        }
-      ],
-      "trouble": [],
-      "datePlanted": "",
-      "howPlanted": "",
-      "isIndoor": false
     }
   ],
   "indoorPlants": [
@@ -10148,5 +10148,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-27T00:36:42.060Z"
+  "syncedAt": "2026-05-27T00:37:08.092Z"
 }
