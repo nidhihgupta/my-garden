@@ -7332,6 +7332,36 @@
       "trouble": []
     },
     {
+      "id": "bl-liriope",
+      "bedId": "b-bl",
+      "name": "Liriope Big Blue",
+      "scientific": "Liriope muscari Big Blue",
+      "emoji": "emoji_bl-liriope",
+      "status": "planned",
+      "water": "Low-moderate",
+      "sun": "Part shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "x6. 4\". 2 clusters of 3.",
+      "maintenance": [
+        {
+          "task": "Divide every 3-4 years · trim back in late winter",
+          "months": [
+            2,
+            3
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Crown rot",
+          "url": "https://www.google.com/search?q=Crown%20rot%20plant%20care%20fix"
+        }
+      ],
+      "category": "Ornamental Grasses"
+    },
+    {
       "id": "bl-azalea",
       "bedId": "b-bl",
       "name": "Encore Azalea White",
@@ -7367,36 +7397,6 @@
         }
       ],
       "category": "Shrubs"
-    },
-    {
-      "id": "bl-liriope",
-      "bedId": "b-bl",
-      "name": "Liriope Big Blue",
-      "scientific": "Liriope muscari Big Blue",
-      "emoji": "emoji_bl-liriope",
-      "status": "planned",
-      "water": "Low-moderate",
-      "sun": "Part shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "x6. 4\". 2 clusters of 3.",
-      "maintenance": [
-        {
-          "task": "Divide every 3-4 years · trim back in late winter",
-          "months": [
-            2,
-            3
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Crown rot",
-          "url": "https://www.google.com/search?q=Crown%20rot%20plant%20care%20fix"
-        }
-      ],
-      "category": "Ornamental Grasses"
     },
     {
       "id": "bl-impatiens",
@@ -10095,5 +10095,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-27T00:45:52.772Z"
+  "syncedAt": "2026-05-27T00:46:01.523Z"
 }
