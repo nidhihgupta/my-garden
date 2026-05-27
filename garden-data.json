@@ -10212,7 +10212,8 @@
       "pg_Wipe leaves monthly to remove dust": true,
       "pg_Feed after first flush": true,
       "pg_Feed every 4-6 weeks for continuous bloom": true,
-      "pg_Feed liquid fertilizer every 2 weeks during bloom": true
+      "pg_Feed liquid fertilizer every 2 weeks during bloom": true,
+      "pg_Water only when soil is dry": true
     },
     "6": {
       "s_Feeding_Feed dahlias high phosphorus": true,
@@ -10222,5 +10223,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-27T22:26:37.605Z"
+  "syncedAt": "2026-05-27T22:26:44.283Z"
 }
