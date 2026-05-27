@@ -7174,6 +7174,46 @@
       "category": "Perennials"
     },
     {
+      "id": "bbq-daisy",
+      "bedId": "b-bbq",
+      "name": "Daisy",
+      "scientific": "Leucanthemum spp.",
+      "emoji": "🌼",
+      "status": "alive",
+      "water": "Moderate",
+      "sun": "Full sun",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Existing.",
+      "maintenance": [
+        {
+          "task": "Deadhead spent blooms",
+          "months": [
+            5,
+            6,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "task": "Cut back hard after flowering",
+          "months": [
+            8,
+            9
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Powdery mildew",
+          "url": "https://www.google.com/search?q=Powdery%20mildew%20plant%20care%20fix"
+        }
+      ],
+      "category": "Perennials"
+    },
+    {
       "id": "bbq-existrose",
       "bedId": "b-bbq",
       "name": "Existing Rose bush",
@@ -7221,46 +7261,6 @@
         }
       ],
       "category": "Bush Roses"
-    },
-    {
-      "id": "bbq-daisy",
-      "bedId": "b-bbq",
-      "name": "Daisy",
-      "scientific": "Leucanthemum spp.",
-      "emoji": "🌼",
-      "status": "alive",
-      "water": "Moderate",
-      "sun": "Full sun",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Existing.",
-      "maintenance": [
-        {
-          "task": "Deadhead spent blooms",
-          "months": [
-            5,
-            6,
-            7,
-            8,
-            9
-          ]
-        },
-        {
-          "task": "Cut back hard after flowering",
-          "months": [
-            8,
-            9
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Powdery mildew",
-          "url": "https://www.google.com/search?q=Powdery%20mildew%20plant%20care%20fix"
-        }
-      ],
-      "category": "Perennials"
     },
     {
       "id": "bbq-chrysanthemum",
@@ -9967,5 +9967,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-27T00:26:48.953Z"
+  "syncedAt": "2026-05-27T00:26:52.929Z"
 }
