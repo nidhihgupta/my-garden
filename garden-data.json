@@ -7140,6 +7140,40 @@
       "category": "Salvias"
     },
     {
+      "id": "bbq-verbena",
+      "bedId": "b-bbq",
+      "name": "Verbena Lollipop",
+      "scientific": "Verbena bonariensis Lollipop",
+      "emoji": "💜",
+      "status": "planned",
+      "water": "Low once established",
+      "sun": "Full sun",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "x4. 4\". Compact purple. Interweave with dahlias.",
+      "maintenance": [
+        {
+          "task": "Deadhead to extend bloom season",
+          "months": [
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Powdery mildew",
+          "url": "https://www.google.com/search?q=Powdery%20mildew%20plant%20care%20fix"
+        }
+      ],
+      "category": "Perennials"
+    },
+    {
       "id": "bbq-existrose",
       "bedId": "b-bbq",
       "name": "Existing Rose bush",
@@ -7187,40 +7221,6 @@
         }
       ],
       "category": "Bush Roses"
-    },
-    {
-      "id": "bbq-verbena",
-      "bedId": "b-bbq",
-      "name": "Verbena Lollipop",
-      "scientific": "Verbena bonariensis Lollipop",
-      "emoji": "💜",
-      "status": "planned",
-      "water": "Low once established",
-      "sun": "Full sun",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "x4. 4\". Compact purple. Interweave with dahlias.",
-      "maintenance": [
-        {
-          "task": "Deadhead to extend bloom season",
-          "months": [
-            5,
-            6,
-            7,
-            8,
-            9,
-            10
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Powdery mildew",
-          "url": "https://www.google.com/search?q=Powdery%20mildew%20plant%20care%20fix"
-        }
-      ],
-      "category": "Perennials"
     },
     {
       "id": "bbq-daisy",
@@ -9967,5 +9967,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-27T00:26:42.117Z"
+  "syncedAt": "2026-05-27T00:26:48.953Z"
 }
