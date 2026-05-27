@@ -7343,6 +7343,37 @@
       "trouble": []
     },
     {
+      "id": "berry-thyme",
+      "bedId": "b-berry",
+      "name": "Woolly Thyme",
+      "scientific": "Thymus pseudolanuginosus",
+      "emoji": "🌿",
+      "status": "alive",
+      "category": "Groundcovers",
+      "water": "Low once established",
+      "sun": "Full sun",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Low creeping groundcover with soft woolly leaves. Tolerates light foot traffic.",
+      "maintenance": [
+        {
+          "task": "Trim lightly after flowering",
+          "months": [
+            7,
+            8
+          ]
+        },
+        {
+          "task": "Divide if becomes woody in center",
+          "months": [
+            4
+          ]
+        }
+      ],
+      "trouble": []
+    },
+    {
       "id": "p1778869421207",
       "bedId": "b-berry",
       "name": "Okra",
@@ -7545,37 +7576,6 @@
       "category": "None",
       "isIndoor": false,
       "howPlanted": ""
-    },
-    {
-      "id": "berry-thyme",
-      "bedId": "b-berry",
-      "name": "Woolly Thyme",
-      "scientific": "Thymus pseudolanuginosus",
-      "emoji": "🌿",
-      "status": "alive",
-      "category": "Groundcovers",
-      "water": "Low once established",
-      "sun": "Full sun",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Low creeping groundcover with soft woolly leaves. Tolerates light foot traffic.",
-      "maintenance": [
-        {
-          "task": "Trim lightly after flowering",
-          "months": [
-            7,
-            8
-          ]
-        },
-        {
-          "task": "Divide if becomes woody in center",
-          "months": [
-            4
-          ]
-        }
-      ],
-      "trouble": []
     },
     {
       "id": "ps-pomegranate",
@@ -10095,5 +10095,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-27T00:38:02.083Z"
+  "syncedAt": "2026-05-27T00:38:18.045Z"
 }
