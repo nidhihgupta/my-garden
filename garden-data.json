@@ -7423,43 +7423,6 @@
       "howPlanted": ""
     },
     {
-      "id": "br-alocasia",
-      "bedId": "b-br",
-      "name": "Alocasia",
-      "scientific": "Alocasia",
-      "emoji": "🌿",
-      "status": "alive",
-      "category": "Tropicals",
-      "water": "Moderate",
-      "sun": "Part shade to shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Large dramatic arrow-shaped leaves. Tropical statement plant.",
-      "maintenance": [
-        {
-          "task": "Feed liquid fertilizer every 2 weeks during growing season",
-          "months": [
-            4,
-            5,
-            6,
-            7,
-            8,
-            9
-          ]
-        },
-        {
-          "task": "Protect from frost",
-          "months": [
-            11,
-            12,
-            1
-          ]
-        }
-      ],
-      "trouble": []
-    },
-    {
       "id": "br-fatsia",
       "bedId": "b-br",
       "name": "Fatsia japonica",
@@ -7495,6 +7458,43 @@
       ],
       "category": "Tropical Foliage",
       "howPlanted": ""
+    },
+    {
+      "id": "br-alocasia",
+      "bedId": "b-br",
+      "name": "Alocasia",
+      "scientific": "Alocasia",
+      "emoji": "🌿",
+      "status": "alive",
+      "category": "Tropicals",
+      "water": "Moderate",
+      "sun": "Part shade to shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Large dramatic arrow-shaped leaves. Tropical statement plant.",
+      "maintenance": [
+        {
+          "task": "Feed liquid fertilizer every 2 weeks during growing season",
+          "months": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "task": "Protect from frost",
+          "months": [
+            11,
+            12,
+            1
+          ]
+        }
+      ],
+      "trouble": []
     },
     {
       "id": "p1778117705415",
@@ -10095,5 +10095,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-27T00:43:50.819Z"
+  "syncedAt": "2026-05-27T00:43:53.722Z"
 }
