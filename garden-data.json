@@ -7266,39 +7266,6 @@
       "category": "Shrubs"
     },
     {
-      "id": "br-impatiens-curve",
-      "bedId": "b-br",
-      "name": "Impatiens White (Curve)",
-      "scientific": "Impatiens walleriana",
-      "emoji": "emoji_br-impatiens-curve",
-      "status": "planned",
-      "water": "Regular",
-      "sun": "Part shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "x18. White. At curve ends Back Bed Right.",
-      "maintenance": [
-        {
-          "task": "Feed liquid fertilizer every 2 weeks",
-          "months": [
-            5,
-            6,
-            7,
-            8,
-            9
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Downy mildew",
-          "url": "https://www.google.com/search?q=Downy%20mildew%20plant%20care%20fix"
-        }
-      ],
-      "category": "Annuals"
-    },
-    {
       "id": "br-tiarella",
       "bedId": "b-br",
       "name": "Tiarella Spring Symphony",
@@ -7428,6 +7395,39 @@
       ],
       "category": "Tropical Foliage",
       "howPlanted": ""
+    },
+    {
+      "id": "br-impatiens-curve",
+      "bedId": "b-br",
+      "name": "Impatiens White (Curve)",
+      "scientific": "Impatiens walleriana",
+      "emoji": "emoji_br-impatiens-curve",
+      "status": "planned",
+      "water": "Regular",
+      "sun": "Part shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "x18. White. At curve ends Back Bed Right.",
+      "maintenance": [
+        {
+          "task": "Feed liquid fertilizer every 2 weeks",
+          "months": [
+            5,
+            6,
+            7,
+            8,
+            9
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Downy mildew",
+          "url": "https://www.google.com/search?q=Downy%20mildew%20plant%20care%20fix"
+        }
+      ],
+      "category": "Annuals"
     },
     {
       "id": "br-coleus",
@@ -10095,5 +10095,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-27T00:44:07.766Z"
+  "syncedAt": "2026-05-27T00:44:12.850Z"
 }
