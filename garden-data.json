@@ -471,123 +471,6 @@
       "category": "Succulents & Cacti"
     },
     {
-      "id": "ts-plum",
-      "bedId": "b-tom",
-      "name": "Espalier Prune",
-      "scientific": "Prunus domestica",
-      "emoji": "emoji_ts-plum",
-      "status": "alive",
-      "water": "Every 2 weeks spring / weekly July-August",
-      "sun": "Full sun",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Existing espalier on wall.",
-      "maintenance": [
-        {
-          "task": "Deep water every 2 weeks spring — slow hose 10 min at drip line",
-          "months": [
-            3,
-            4,
-            5,
-            6
-          ]
-        },
-        {
-          "task": "Deep water weekly July-August",
-          "months": [
-            7,
-            8
-          ]
-        },
-        {
-          "task": "Train espalier wires — tie new canes in desired direction",
-          "months": [
-            4,
-            5,
-            6
-          ]
-        },
-        {
-          "task": "Prune espalier shape in late winter",
-          "months": [
-            1,
-            2
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Brown rot",
-          "url": "https://www.google.com/search?q=Brown%20rot%20plant%20care%20fix"
-        }
-      ],
-      "category": "Fruit Trees"
-    },
-    {
-      "id": "ts-rainier",
-      "bedId": "b-tom",
-      "name": "Espalier Rainier Cherry ",
-      "scientific": "Prunus avium Rainier",
-      "emoji": "🍒",
-      "status": "alive",
-      "water": "Every 2 weeks spring / weekly July-August",
-      "sun": "Full sun",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Existing espalier. NEVER skip summer watering.",
-      "maintenance": [
-        {
-          "task": "Deep water every 2 weeks spring — slow hose 10 min at drip line",
-          "months": [
-            3,
-            4,
-            5,
-            6
-          ]
-        },
-        {
-          "task": "Deep water weekly July-August",
-          "months": [
-            7,
-            8
-          ]
-        },
-        {
-          "task": "Extra water during any heat wave 3+ days over 90°F",
-          "months": [
-            6,
-            7,
-            8,
-            9
-          ]
-        },
-        {
-          "task": "Train espalier wires — tie new canes in desired direction",
-          "months": [
-            4,
-            5,
-            6
-          ]
-        },
-        {
-          "task": "Prune espalier shape in late winter",
-          "months": [
-            1,
-            2
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Fruit cracking (water stress)",
-          "url": "https://www.google.com/search?q=Fruit%20cracking%20(water%20stress)%20plant%20care%20fix"
-        }
-      ],
-      "category": "Fruit Trees"
-    },
-    {
       "id": "p1778114273511",
       "bedId": "b-fw",
       "name": "Phormium",
@@ -657,89 +540,6 @@
       "trouble": [],
       "datePlanted": "2026-05-16",
       "howPlanted": "bought"
-    },
-    {
-      "id": "p1778183472337",
-      "bedId": "b-tom",
-      "name": "Dichondra ground cover",
-      "scientific": "Dichondra micrantha",
-      "emoji": "🌿",
-      "category": "Perennials",
-      "status": "alive",
-      "water": "Regular — keep consistently moist",
-      "sun": "Part shade to full shade",
-      "notes": "",
-      "fromCutting": false,
-      "maintenance": [],
-      "trouble": []
-    },
-    {
-      "id": "p1778183527031",
-      "bedId": "b-tom",
-      "name": "Gazania",
-      "scientific": "Gazania rigens",
-      "emoji": "🌿",
-      "category": "Annuals",
-      "status": "alive",
-      "water": "Low — drought tolerant",
-      "sun": "Full sun",
-      "notes": "",
-      "fromCutting": false,
-      "maintenance": [],
-      "trouble": []
-    },
-    {
-      "id": "p1778192924840",
-      "bedId": "b-tom",
-      "name": "Pittosporum",
-      "scientific": "Pittosporum tobira",
-      "emoji": "emoji_p1778192924840",
-      "category": "Trees",
-      "status": "alive",
-      "water": "Low once established",
-      "sun": "Full sun to part shade",
-      "notes": "",
-      "fromCutting": false,
-      "maintenance": [
-        {
-          "task": "Deep water monthly — slow hose at drip line",
-          "months": [
-            6,
-            7,
-            8,
-            9
-          ]
-        },
-        {
-          "task": "Feed slow release balanced fertilizer in spring",
-          "months": [
-            3
-          ]
-        },
-        {
-          "task": "Check for dead/crossing branches — remove cleanly",
-          "months": [
-            1,
-            2
-          ]
-        }
-      ],
-      "trouble": []
-    },
-    {
-      "id": "p1778192989476",
-      "bedId": "b-tom",
-      "name": "Night jasmine",
-      "scientific": "Cestrum nocturnum ",
-      "emoji": "🌿",
-      "category": "Shrubs",
-      "status": "alive",
-      "water": "Moderate",
-      "sun": "Full sun to part sun",
-      "notes": "",
-      "fromCutting": false,
-      "maintenance": [],
-      "trouble": []
     },
     {
       "id": "fl-abelia",
@@ -7501,6 +7301,206 @@
         }
       ],
       "trouble": []
+    },
+    {
+      "id": "p1778192924840",
+      "bedId": "b-tom",
+      "name": "Pittosporum",
+      "scientific": "Pittosporum tobira",
+      "emoji": "emoji_p1778192924840",
+      "category": "Trees",
+      "status": "alive",
+      "water": "Low once established",
+      "sun": "Full sun to part shade",
+      "notes": "",
+      "fromCutting": false,
+      "maintenance": [
+        {
+          "task": "Deep water monthly — slow hose at drip line",
+          "months": [
+            6,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "task": "Feed slow release balanced fertilizer in spring",
+          "months": [
+            3
+          ]
+        },
+        {
+          "task": "Check for dead/crossing branches — remove cleanly",
+          "months": [
+            1,
+            2
+          ]
+        }
+      ],
+      "trouble": []
+    },
+    {
+      "id": "ts-plum",
+      "bedId": "b-tom",
+      "name": "Espalier Prune",
+      "scientific": "Prunus domestica",
+      "emoji": "emoji_ts-plum",
+      "status": "alive",
+      "water": "Every 2 weeks spring / weekly July-August",
+      "sun": "Full sun",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Existing espalier on wall.",
+      "maintenance": [
+        {
+          "task": "Deep water every 2 weeks spring — slow hose 10 min at drip line",
+          "months": [
+            3,
+            4,
+            5,
+            6
+          ]
+        },
+        {
+          "task": "Deep water weekly July-August",
+          "months": [
+            7,
+            8
+          ]
+        },
+        {
+          "task": "Train espalier wires — tie new canes in desired direction",
+          "months": [
+            4,
+            5,
+            6
+          ]
+        },
+        {
+          "task": "Prune espalier shape in late winter",
+          "months": [
+            1,
+            2
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Brown rot",
+          "url": "https://www.google.com/search?q=Brown%20rot%20plant%20care%20fix"
+        }
+      ],
+      "category": "Fruit Trees"
+    },
+    {
+      "id": "ts-rainier",
+      "bedId": "b-tom",
+      "name": "Espalier Rainier Cherry ",
+      "scientific": "Prunus avium Rainier",
+      "emoji": "🍒",
+      "status": "alive",
+      "water": "Every 2 weeks spring / weekly July-August",
+      "sun": "Full sun",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Existing espalier. NEVER skip summer watering.",
+      "maintenance": [
+        {
+          "task": "Deep water every 2 weeks spring — slow hose 10 min at drip line",
+          "months": [
+            3,
+            4,
+            5,
+            6
+          ]
+        },
+        {
+          "task": "Deep water weekly July-August",
+          "months": [
+            7,
+            8
+          ]
+        },
+        {
+          "task": "Extra water during any heat wave 3+ days over 90°F",
+          "months": [
+            6,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "task": "Train espalier wires — tie new canes in desired direction",
+          "months": [
+            4,
+            5,
+            6
+          ]
+        },
+        {
+          "task": "Prune espalier shape in late winter",
+          "months": [
+            1,
+            2
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Fruit cracking (water stress)",
+          "url": "https://www.google.com/search?q=Fruit%20cracking%20(water%20stress)%20plant%20care%20fix"
+        }
+      ],
+      "category": "Fruit Trees"
+    },
+    {
+      "id": "p1778183472337",
+      "bedId": "b-tom",
+      "name": "Dichondra ground cover",
+      "scientific": "Dichondra micrantha",
+      "emoji": "🌿",
+      "category": "Perennials",
+      "status": "alive",
+      "water": "Regular — keep consistently moist",
+      "sun": "Part shade to full shade",
+      "notes": "",
+      "fromCutting": false,
+      "maintenance": [],
+      "trouble": []
+    },
+    {
+      "id": "p1778183527031",
+      "bedId": "b-tom",
+      "name": "Gazania",
+      "scientific": "Gazania rigens",
+      "emoji": "🌿",
+      "category": "Annuals",
+      "status": "alive",
+      "water": "Low — drought tolerant",
+      "sun": "Full sun",
+      "notes": "",
+      "fromCutting": false,
+      "maintenance": [],
+      "trouble": []
+    },
+    {
+      "id": "p1778192989476",
+      "bedId": "b-tom",
+      "name": "Night jasmine",
+      "scientific": "Cestrum nocturnum ",
+      "emoji": "🌿",
+      "category": "Shrubs",
+      "status": "alive",
+      "water": "Moderate",
+      "sun": "Full sun to part sun",
+      "notes": "",
+      "fromCutting": false,
+      "maintenance": [],
+      "trouble": []
     }
   ],
   "indoorPlants": [
@@ -9969,5 +9969,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-27T00:27:58.895Z"
+  "syncedAt": "2026-05-27T00:28:52.033Z"
 }
