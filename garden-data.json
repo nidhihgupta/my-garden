@@ -7456,6 +7456,50 @@
       "category": "Salvias"
     },
     {
+      "id": "p1779821189039291",
+      "bedId": "b-berry",
+      "name": "Geranium",
+      "scientific": "Pelargonium spp.",
+      "emoji": "emoji_p1778195347203525",
+      "status": "planned",
+      "water": "Moderate",
+      "sun": "Part shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Red + pink. Propagating from stem cuttings.",
+      "maintenance": [
+        {
+          "task": "Deadhead spent blooms aggressively",
+          "months": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "task": "Cut back hard after first flush — feed high phosphorus after",
+          "months": [
+            5,
+            6
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Leggy growth",
+          "url": "https://www.google.com/search?q=Leggy%20growth%20plant%20care%20fix"
+        }
+      ],
+      "category": "None",
+      "isIndoor": false,
+      "howPlanted": ""
+    },
+    {
       "id": "p1778178590870",
       "bedId": "b-berry",
       "name": "Fan Palm",
@@ -7531,50 +7575,6 @@
       ],
       "trouble": [],
       "datePlanted": "",
-      "howPlanted": ""
-    },
-    {
-      "id": "p1779821189039291",
-      "bedId": "b-berry",
-      "name": "Geranium",
-      "scientific": "Pelargonium spp.",
-      "emoji": "emoji_p1778195347203525",
-      "status": "planned",
-      "water": "Moderate",
-      "sun": "Part shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Red + pink. Propagating from stem cuttings.",
-      "maintenance": [
-        {
-          "task": "Deadhead spent blooms aggressively",
-          "months": [
-            4,
-            5,
-            6,
-            7,
-            8,
-            9,
-            10
-          ]
-        },
-        {
-          "task": "Cut back hard after first flush — feed high phosphorus after",
-          "months": [
-            5,
-            6
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Leggy growth",
-          "url": "https://www.google.com/search?q=Leggy%20growth%20plant%20care%20fix"
-        }
-      ],
-      "category": "None",
-      "isIndoor": false,
       "howPlanted": ""
     },
     {
@@ -10095,5 +10095,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-27T00:38:40.540Z"
+  "syncedAt": "2026-05-27T00:38:54.355Z"
 }
