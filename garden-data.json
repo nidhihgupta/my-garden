@@ -7174,6 +7174,47 @@
       "category": "Perennials"
     },
     {
+      "id": "bbq-dahlia",
+      "bedId": "b-bbq",
+      "name": "Dahlia Magenta",
+      "scientific": "Dahlia spp.",
+      "emoji": "emoji_bbq-dahlia",
+      "status": "planned",
+      "water": "Regular",
+      "sun": "Full sun",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "x4. Magenta/hot pink — select at nursery.",
+      "maintenance": [
+        {
+          "task": "Deadhead continuously — every spent bloom = more blooms",
+          "months": [
+            6,
+            7,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "task": "Feed high phosphorus fertilizer",
+          "months": [
+            6,
+            7,
+            8
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Powdery mildew",
+          "url": "https://www.google.com/search?q=Powdery%20mildew%20plant%20care%20fix"
+        }
+      ],
+      "category": "Bulbs"
+    },
+    {
       "id": "bbq-daisy",
       "bedId": "b-bbq",
       "name": "Daisy",
@@ -7298,47 +7339,6 @@
         }
       ],
       "category": "Perennials"
-    },
-    {
-      "id": "bbq-dahlia",
-      "bedId": "b-bbq",
-      "name": "Dahlia Magenta",
-      "scientific": "Dahlia spp.",
-      "emoji": "emoji_bbq-dahlia",
-      "status": "planned",
-      "water": "Regular",
-      "sun": "Full sun",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "x4. Magenta/hot pink — select at nursery.",
-      "maintenance": [
-        {
-          "task": "Deadhead continuously — every spent bloom = more blooms",
-          "months": [
-            6,
-            7,
-            8,
-            9,
-            10
-          ]
-        },
-        {
-          "task": "Feed high phosphorus fertilizer",
-          "months": [
-            6,
-            7,
-            8
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Powdery mildew",
-          "url": "https://www.google.com/search?q=Powdery%20mildew%20plant%20care%20fix"
-        }
-      ],
-      "category": "Bulbs"
     },
     {
       "id": "p1778130742776",
@@ -9967,5 +9967,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-27T00:26:52.929Z"
+  "syncedAt": "2026-05-27T00:27:06.473Z"
 }
