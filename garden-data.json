@@ -2654,588 +2654,6 @@
       "howPlanted": ""
     },
     {
-      "id": "p1778194878756922",
-      "bedId": "b-br",
-      "name": "Camellia",
-      "scientific": "Camellia japonica",
-      "emoji": "emoji_p1778194878756922",
-      "status": "alive",
-      "water": "Regular",
-      "sun": "Part to full shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Existing.",
-      "maintenance": [
-        {
-          "task": "Deadwood removal only — no hard cutback",
-          "months": [
-            1
-          ]
-        },
-        {
-          "task": "Feed with azalea fertilizer",
-          "months": [
-            3
-          ]
-        },
-        {
-          "task": "Prune ONLY after flowering complete",
-          "months": [
-            8,
-            9
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Bud drop",
-          "url": "https://www.google.com/search?q=Bud%20drop%20plant%20care%20fix"
-        }
-      ],
-      "category": "Hydrangeas",
-      "isIndoor": false
-    },
-    {
-      "id": "p1778118350650",
-      "bedId": "b-br",
-      "name": "Oak Leaf Hydrangea",
-      "scientific": "Hydrangea quercifolia",
-      "emoji": "emoji_p1778118350650",
-      "category": "Hydrangeas",
-      "status": "alive",
-      "water": "Regular — keep consistently moist",
-      "sun": "Part shade",
-      "notes": "",
-      "fromCutting": false,
-      "maintenance": [
-        {
-          "task": "Deadwood removal only — no hard cutback",
-          "months": [
-            1
-          ]
-        },
-        {
-          "task": "Feed with azalea fertilizer",
-          "months": [
-            3
-          ]
-        },
-        {
-          "task": "Prune ONLY after flowering complete",
-          "months": [
-            8,
-            9
-          ]
-        }
-      ],
-      "trouble": [],
-      "datePlanted": "",
-      "howPlanted": ""
-    },
-    {
-      "id": "p1778118317106",
-      "bedId": "b-br",
-      "name": "Mop head hydrangeas",
-      "scientific": "Hydrangea macrophylla",
-      "emoji": "emoji_p1778118317106",
-      "category": "Hydrangeas",
-      "status": "alive",
-      "water": "Regular — keep consistently moist",
-      "sun": "Part shade — morning sun preferred",
-      "notes": "",
-      "fromCutting": false,
-      "maintenance": [
-        {
-          "task": "Deadwood removal only — no hard cutback",
-          "months": [
-            1
-          ]
-        },
-        {
-          "task": "Feed with azalea fertilizer",
-          "months": [
-            3
-          ]
-        },
-        {
-          "task": "Prune ONLY after flowering complete",
-          "months": [
-            8,
-            9
-          ]
-        }
-      ],
-      "trouble": []
-    },
-    {
-      "id": "br-anemone",
-      "bedId": "b-br",
-      "name": "Japanese Anemone Honorine Jobert",
-      "scientific": "Anemone hybrida Honorine Jobert",
-      "emoji": "🌸",
-      "status": "planned",
-      "water": "Moderate",
-      "sun": "Part shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "x1. 3-gallon. White. Fall drama.",
-      "maintenance": [
-        {
-          "task": "Cut back dead foliage in late fall",
-          "months": [
-            11
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Not blooming",
-          "url": "https://www.google.com/search?q=Not%20blooming%20plant%20care%20fix"
-        }
-      ],
-      "category": "Bulbs"
-    },
-    {
-      "id": "br-hosta",
-      "bedId": "b-br",
-      "name": "Blue Angel Hosta",
-      "scientific": "Hosta x ‘Blue Angel’",
-      "emoji": "🍃",
-      "status": "planned",
-      "water": "Regular",
-      "sun": "Full shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "x1. 3-gallon. 4ft x 6ft at maturity.",
-      "maintenance": [
-        {
-          "task": "Monitor for slugs and snails — bait if needed",
-          "months": [
-            3,
-            4,
-            5,
-            6,
-            7,
-            8
-          ]
-        },
-        {
-          "task": "Emerges late Feb/March — do not disturb soil",
-          "months": [
-            1,
-            2
-          ]
-        },
-        {
-          "task": "Cut back dead foliage in fall",
-          "months": [
-            11
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Slug damage",
-          "url": "https://www.google.com/search?q=Slug%20damage%20plant%20care%20fix"
-        }
-      ],
-      "category": "Perennials",
-      "howPlanted": "bought"
-    },
-    {
-      "id": "br-tiarella",
-      "bedId": "b-br",
-      "name": "Tiarella Spring Symphony",
-      "scientific": "Tiarella cordifolia Spring Symphony",
-      "emoji": "🌿",
-      "status": "planned",
-      "water": "Moderate",
-      "sun": "Part to full shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "x5. Long cluster in front of Hosta.",
-      "maintenance": [
-        {
-          "task": "Divide every 3-4 years",
-          "months": [
-            3
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Crown rot",
-          "url": "https://www.google.com/search?q=Crown%20rot%20plant%20care%20fix"
-        }
-      ],
-      "category": "Perennials"
-    },
-    {
-      "id": "br-liriope",
-      "bedId": "b-br",
-      "name": "Liriope Big Blue",
-      "scientific": "Liriope muscari Big Blue",
-      "emoji": "emoji_br-liriope",
-      "status": "planned",
-      "water": "Low-moderate",
-      "sun": "Part shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "x6. 4\". 2 clusters of 3. Front border.",
-      "maintenance": [
-        {
-          "task": "Divide every 3-4 years · trim back in late winter",
-          "months": [
-            2,
-            3
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Crown rot",
-          "url": "https://www.google.com/search?q=Crown%20rot%20plant%20care%20fix"
-        }
-      ],
-      "category": "Ornamental Grasses"
-    },
-    {
-      "id": "br-coleus",
-      "bedId": "b-br",
-      "name": "Coleus Dark Purple",
-      "scientific": "Plectranthus scutellarioides",
-      "emoji": "emoji_br-coleus",
-      "status": "planned",
-      "water": "Moderate",
-      "sun": "Part shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "x8. Filler.",
-      "maintenance": [
-        {
-          "task": "Replace or cut back if getting leggy",
-          "months": [
-            7,
-            8
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Leggy growth",
-          "url": "https://www.google.com/search?q=Leggy%20growth%20plant%20care%20fix"
-        }
-      ],
-      "category": "Annuals"
-    },
-    {
-      "id": "br-azalea",
-      "bedId": "b-br",
-      "name": "Encore Azalea White",
-      "scientific": "Rhododendron Encore",
-      "emoji": "emoji_br-azalea",
-      "status": "planned",
-      "water": "Regular",
-      "sun": "Part shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "x2. 3-gallon. White. Diagonal back layout.",
-      "maintenance": [
-        {
-          "task": "Feed azalea fertilizer after each bloom cycle",
-          "months": [
-            4,
-            7,
-            10
-          ]
-        },
-        {
-          "task": "Light prune after spring bloom only",
-          "months": [
-            5
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Not reblooming",
-          "url": "https://www.google.com/search?q=Not%20reblooming%20plant%20care%20fix"
-        }
-      ],
-      "category": "Shrubs"
-    },
-    {
-      "id": "br-torenia",
-      "bedId": "b-br",
-      "name": "Torenia White/Purple",
-      "scientific": "Torenia fournieri",
-      "emoji": "emoji_br-torenia",
-      "status": "planned",
-      "water": "Regular",
-      "sun": "Part to full shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "x8. Filler. White with purple markings.",
-      "maintenance": [
-        {
-          "task": "Deadhead spent flowers to extend bloom",
-          "months": [
-            6,
-            7,
-            8,
-            9
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Root rot",
-          "url": "https://www.google.com/search?q=Root%20rot%20plant%20care%20fix"
-        }
-      ],
-      "category": "Annuals"
-    },
-    {
-      "id": "br-impatiens-curve",
-      "bedId": "b-br",
-      "name": "Impatiens White (Curve)",
-      "scientific": "Impatiens walleriana",
-      "emoji": "emoji_br-impatiens-curve",
-      "status": "planned",
-      "water": "Regular",
-      "sun": "Part shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "x18. White. At curve ends Back Bed Right.",
-      "maintenance": [
-        {
-          "task": "Feed liquid fertilizer every 2 weeks",
-          "months": [
-            5,
-            6,
-            7,
-            8,
-            9
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Downy mildew",
-          "url": "https://www.google.com/search?q=Downy%20mildew%20plant%20care%20fix"
-        }
-      ],
-      "category": "Annuals"
-    },
-    {
-      "id": "p1778114397874",
-      "bedId": "b-br",
-      "name": "Palm in planter",
-      "scientific": "Arecaceae spp.",
-      "emoji": "emoji_p1778114397874",
-      "category": "Trees",
-      "status": "alive",
-      "water": "Regular — keep evenly moist",
-      "sun": "Full sun to part sun",
-      "notes": "",
-      "fromCutting": false,
-      "maintenance": [
-        {
-          "task": "Check for dead/crossing branches — remove cleanly",
-          "months": [
-            1,
-            2
-          ]
-        },
-        {
-          "task": "Palm fertilizer April - Aug",
-          "months": [
-            4,
-            6,
-            8
-          ]
-        }
-      ],
-      "trouble": [],
-      "datePlanted": "",
-      "howPlanted": ""
-    },
-    {
-      "id": "br-alocasia",
-      "bedId": "b-br",
-      "name": "Alocasia",
-      "scientific": "Alocasia",
-      "emoji": "🌿",
-      "status": "alive",
-      "category": "Tropicals",
-      "water": "Moderate",
-      "sun": "Part shade to shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Large dramatic arrow-shaped leaves. Tropical statement plant.",
-      "maintenance": [
-        {
-          "task": "Feed liquid fertilizer every 2 weeks during growing season",
-          "months": [
-            4,
-            5,
-            6,
-            7,
-            8,
-            9
-          ]
-        },
-        {
-          "task": "Protect from frost",
-          "months": [
-            11,
-            12,
-            1
-          ]
-        }
-      ],
-      "trouble": []
-    },
-    {
-      "id": "br-fatsia",
-      "bedId": "b-br",
-      "name": "Fatsia japonica",
-      "scientific": "Fatsia japonica",
-      "emoji": "emoji_br-fatsia",
-      "status": "planned",
-      "water": "Moderate",
-      "sun": "Part shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "2-gallon. Behind planter area.",
-      "maintenance": [
-        {
-          "task": "Cut back in spring before growth pushes",
-          "months": [
-            2,
-            3
-          ]
-        },
-        {
-          "task": "Take cuttings for propagation",
-          "months": [
-            3
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Leaf drop",
-          "url": "https://www.google.com/search?q=Leaf%20drop%20plant%20care%20fix"
-        }
-      ],
-      "category": "Tropical Foliage",
-      "howPlanted": ""
-    },
-    {
-      "id": "p1778117705415",
-      "bedId": "b-br",
-      "name": "Grecian Laurel",
-      "scientific": "Laurus nobilis",
-      "emoji": "emoji_p1778117705415",
-      "category": "Trees",
-      "status": "alive",
-      "water": "Low once established — drought tolerant",
-      "sun": "Full sun to part shade",
-      "notes": "",
-      "fromCutting": false,
-      "maintenance": [
-        {
-          "task": "Deep water monthly — slow hose at drip line",
-          "months": [
-            6,
-            7,
-            8,
-            9
-          ]
-        },
-        {
-          "task": "Feed slow release balanced fertilizer in spring",
-          "months": [
-            3
-          ]
-        },
-        {
-          "task": "Check for dead/crossing branches — remove cleanly",
-          "months": [
-            1,
-            2
-          ]
-        }
-      ],
-      "trouble": []
-    },
-    {
-      "id": "p1778118235543",
-      "bedId": "b-br",
-      "name": "Boston Ivy",
-      "scientific": "Parthenocissus tricuspidata",
-      "emoji": "emoji_p1778118235543",
-      "category": "Vines & Climbers",
-      "status": "alive",
-      "water": "Moderate — more water when young",
-      "sun": "Part shade to full sun",
-      "notes": "",
-      "fromCutting": false,
-      "maintenance": [
-        {
-          "task": "Feed monthly spring-summer",
-          "months": [
-            3,
-            4,
-            5,
-            6,
-            7,
-            8,
-            9
-          ]
-        },
-        {
-          "task": "Wipe leaves monthly to remove dust",
-          "months": [
-            1,
-            2,
-            3,
-            4,
-            5,
-            6,
-            7,
-            8,
-            9,
-            10,
-            11,
-            12
-          ]
-        },
-        {
-          "task": "Reduce watering in winter",
-          "months": [
-            11,
-            12,
-            1,
-            2
-          ]
-        }
-      ],
-      "trouble": []
-    },
-    {
       "id": "porch-ginger",
       "bedId": "b-porch",
       "name": "Ginger Plant",
@@ -4658,46 +4076,6 @@
         }
       ],
       "trouble": []
-    },
-    {
-      "id": "p1778118483625",
-      "bedId": "b-br",
-      "name": "Podocarpus in corner",
-      "scientific": "Podocarpus macrophyllus",
-      "emoji": "emoji_p1778118483625",
-      "category": "Trees",
-      "status": "alive",
-      "water": "Moderate — low once established",
-      "sun": "Full sun to part shade",
-      "notes": "",
-      "fromCutting": false,
-      "maintenance": [
-        {
-          "task": "Deep water monthly — slow hose at drip line",
-          "months": [
-            6,
-            7,
-            8,
-            9
-          ]
-        },
-        {
-          "task": "Feed slow release balanced fertilizer in spring",
-          "months": [
-            3
-          ]
-        },
-        {
-          "task": "Check for dead/crossing branches — remove cleanly",
-          "months": [
-            1,
-            2
-          ]
-        }
-      ],
-      "trouble": [],
-      "datePlanted": "",
-      "howPlanted": ""
     },
     {
       "id": "ros-apricot",
@@ -7627,6 +7005,628 @@
       ],
       "category": "Fruit Trees",
       "howPlanted": ""
+    },
+    {
+      "id": "p1778194878756922",
+      "bedId": "b-br",
+      "name": "Camellia",
+      "scientific": "Camellia japonica",
+      "emoji": "emoji_p1778194878756922",
+      "status": "alive",
+      "water": "Regular",
+      "sun": "Part to full shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Existing.",
+      "maintenance": [
+        {
+          "task": "Deadwood removal only — no hard cutback",
+          "months": [
+            1
+          ]
+        },
+        {
+          "task": "Feed with azalea fertilizer",
+          "months": [
+            3
+          ]
+        },
+        {
+          "task": "Prune ONLY after flowering complete",
+          "months": [
+            8,
+            9
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Bud drop",
+          "url": "https://www.google.com/search?q=Bud%20drop%20plant%20care%20fix"
+        }
+      ],
+      "category": "Hydrangeas",
+      "isIndoor": false
+    },
+    {
+      "id": "p1778118350650",
+      "bedId": "b-br",
+      "name": "Oak Leaf Hydrangea",
+      "scientific": "Hydrangea quercifolia",
+      "emoji": "emoji_p1778118350650",
+      "category": "Hydrangeas",
+      "status": "alive",
+      "water": "Regular — keep consistently moist",
+      "sun": "Part shade",
+      "notes": "",
+      "fromCutting": false,
+      "maintenance": [
+        {
+          "task": "Deadwood removal only — no hard cutback",
+          "months": [
+            1
+          ]
+        },
+        {
+          "task": "Feed with azalea fertilizer",
+          "months": [
+            3
+          ]
+        },
+        {
+          "task": "Prune ONLY after flowering complete",
+          "months": [
+            8,
+            9
+          ]
+        }
+      ],
+      "trouble": [],
+      "datePlanted": "",
+      "howPlanted": ""
+    },
+    {
+      "id": "p1778118317106",
+      "bedId": "b-br",
+      "name": "Mop head hydrangeas",
+      "scientific": "Hydrangea macrophylla",
+      "emoji": "emoji_p1778118317106",
+      "category": "Hydrangeas",
+      "status": "alive",
+      "water": "Regular — keep consistently moist",
+      "sun": "Part shade — morning sun preferred",
+      "notes": "",
+      "fromCutting": false,
+      "maintenance": [
+        {
+          "task": "Deadwood removal only — no hard cutback",
+          "months": [
+            1
+          ]
+        },
+        {
+          "task": "Feed with azalea fertilizer",
+          "months": [
+            3
+          ]
+        },
+        {
+          "task": "Prune ONLY after flowering complete",
+          "months": [
+            8,
+            9
+          ]
+        }
+      ],
+      "trouble": []
+    },
+    {
+      "id": "br-anemone",
+      "bedId": "b-br",
+      "name": "Japanese Anemone Honorine Jobert",
+      "scientific": "Anemone hybrida Honorine Jobert",
+      "emoji": "🌸",
+      "status": "planned",
+      "water": "Moderate",
+      "sun": "Part shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "x1. 3-gallon. White. Fall drama.",
+      "maintenance": [
+        {
+          "task": "Cut back dead foliage in late fall",
+          "months": [
+            11
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Not blooming",
+          "url": "https://www.google.com/search?q=Not%20blooming%20plant%20care%20fix"
+        }
+      ],
+      "category": "Bulbs"
+    },
+    {
+      "id": "br-liriope",
+      "bedId": "b-br",
+      "name": "Liriope Big Blue",
+      "scientific": "Liriope muscari Big Blue",
+      "emoji": "emoji_br-liriope",
+      "status": "planned",
+      "water": "Low-moderate",
+      "sun": "Part shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "x6. 4\". 2 clusters of 3. Front border.",
+      "maintenance": [
+        {
+          "task": "Divide every 3-4 years · trim back in late winter",
+          "months": [
+            2,
+            3
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Crown rot",
+          "url": "https://www.google.com/search?q=Crown%20rot%20plant%20care%20fix"
+        }
+      ],
+      "category": "Ornamental Grasses"
+    },
+    {
+      "id": "br-hosta",
+      "bedId": "b-br",
+      "name": "Blue Angel Hosta",
+      "scientific": "Hosta x ‘Blue Angel’",
+      "emoji": "🍃",
+      "status": "planned",
+      "water": "Regular",
+      "sun": "Full shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "x1. 3-gallon. 4ft x 6ft at maturity.",
+      "maintenance": [
+        {
+          "task": "Monitor for slugs and snails — bait if needed",
+          "months": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "task": "Emerges late Feb/March — do not disturb soil",
+          "months": [
+            1,
+            2
+          ]
+        },
+        {
+          "task": "Cut back dead foliage in fall",
+          "months": [
+            11
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Slug damage",
+          "url": "https://www.google.com/search?q=Slug%20damage%20plant%20care%20fix"
+        }
+      ],
+      "category": "Perennials",
+      "howPlanted": "bought"
+    },
+    {
+      "id": "br-tiarella",
+      "bedId": "b-br",
+      "name": "Tiarella Spring Symphony",
+      "scientific": "Tiarella cordifolia Spring Symphony",
+      "emoji": "🌿",
+      "status": "planned",
+      "water": "Moderate",
+      "sun": "Part to full shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "x5. Long cluster in front of Hosta.",
+      "maintenance": [
+        {
+          "task": "Divide every 3-4 years",
+          "months": [
+            3
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Crown rot",
+          "url": "https://www.google.com/search?q=Crown%20rot%20plant%20care%20fix"
+        }
+      ],
+      "category": "Perennials"
+    },
+    {
+      "id": "br-coleus",
+      "bedId": "b-br",
+      "name": "Coleus Dark Purple",
+      "scientific": "Plectranthus scutellarioides",
+      "emoji": "emoji_br-coleus",
+      "status": "planned",
+      "water": "Moderate",
+      "sun": "Part shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "x8. Filler.",
+      "maintenance": [
+        {
+          "task": "Replace or cut back if getting leggy",
+          "months": [
+            7,
+            8
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Leggy growth",
+          "url": "https://www.google.com/search?q=Leggy%20growth%20plant%20care%20fix"
+        }
+      ],
+      "category": "Annuals"
+    },
+    {
+      "id": "br-azalea",
+      "bedId": "b-br",
+      "name": "Encore Azalea White",
+      "scientific": "Rhododendron Encore",
+      "emoji": "emoji_br-azalea",
+      "status": "planned",
+      "water": "Regular",
+      "sun": "Part shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "x2. 3-gallon. White. Diagonal back layout.",
+      "maintenance": [
+        {
+          "task": "Feed azalea fertilizer after each bloom cycle",
+          "months": [
+            4,
+            7,
+            10
+          ]
+        },
+        {
+          "task": "Light prune after spring bloom only",
+          "months": [
+            5
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Not reblooming",
+          "url": "https://www.google.com/search?q=Not%20reblooming%20plant%20care%20fix"
+        }
+      ],
+      "category": "Shrubs"
+    },
+    {
+      "id": "br-torenia",
+      "bedId": "b-br",
+      "name": "Torenia White/Purple",
+      "scientific": "Torenia fournieri",
+      "emoji": "emoji_br-torenia",
+      "status": "planned",
+      "water": "Regular",
+      "sun": "Part to full shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "x8. Filler. White with purple markings.",
+      "maintenance": [
+        {
+          "task": "Deadhead spent flowers to extend bloom",
+          "months": [
+            6,
+            7,
+            8,
+            9
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Root rot",
+          "url": "https://www.google.com/search?q=Root%20rot%20plant%20care%20fix"
+        }
+      ],
+      "category": "Annuals"
+    },
+    {
+      "id": "br-impatiens-curve",
+      "bedId": "b-br",
+      "name": "Impatiens White (Curve)",
+      "scientific": "Impatiens walleriana",
+      "emoji": "emoji_br-impatiens-curve",
+      "status": "planned",
+      "water": "Regular",
+      "sun": "Part shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "x18. White. At curve ends Back Bed Right.",
+      "maintenance": [
+        {
+          "task": "Feed liquid fertilizer every 2 weeks",
+          "months": [
+            5,
+            6,
+            7,
+            8,
+            9
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Downy mildew",
+          "url": "https://www.google.com/search?q=Downy%20mildew%20plant%20care%20fix"
+        }
+      ],
+      "category": "Annuals"
+    },
+    {
+      "id": "p1778114397874",
+      "bedId": "b-br",
+      "name": "Palm in planter",
+      "scientific": "Arecaceae spp.",
+      "emoji": "emoji_p1778114397874",
+      "category": "Trees",
+      "status": "alive",
+      "water": "Regular — keep evenly moist",
+      "sun": "Full sun to part sun",
+      "notes": "",
+      "fromCutting": false,
+      "maintenance": [
+        {
+          "task": "Check for dead/crossing branches — remove cleanly",
+          "months": [
+            1,
+            2
+          ]
+        },
+        {
+          "task": "Palm fertilizer April - Aug",
+          "months": [
+            4,
+            6,
+            8
+          ]
+        }
+      ],
+      "trouble": [],
+      "datePlanted": "",
+      "howPlanted": ""
+    },
+    {
+      "id": "br-alocasia",
+      "bedId": "b-br",
+      "name": "Alocasia",
+      "scientific": "Alocasia",
+      "emoji": "🌿",
+      "status": "alive",
+      "category": "Tropicals",
+      "water": "Moderate",
+      "sun": "Part shade to shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Large dramatic arrow-shaped leaves. Tropical statement plant.",
+      "maintenance": [
+        {
+          "task": "Feed liquid fertilizer every 2 weeks during growing season",
+          "months": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "task": "Protect from frost",
+          "months": [
+            11,
+            12,
+            1
+          ]
+        }
+      ],
+      "trouble": []
+    },
+    {
+      "id": "br-fatsia",
+      "bedId": "b-br",
+      "name": "Fatsia japonica",
+      "scientific": "Fatsia japonica",
+      "emoji": "emoji_br-fatsia",
+      "status": "planned",
+      "water": "Moderate",
+      "sun": "Part shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "2-gallon. Behind planter area.",
+      "maintenance": [
+        {
+          "task": "Cut back in spring before growth pushes",
+          "months": [
+            2,
+            3
+          ]
+        },
+        {
+          "task": "Take cuttings for propagation",
+          "months": [
+            3
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Leaf drop",
+          "url": "https://www.google.com/search?q=Leaf%20drop%20plant%20care%20fix"
+        }
+      ],
+      "category": "Tropical Foliage",
+      "howPlanted": ""
+    },
+    {
+      "id": "p1778117705415",
+      "bedId": "b-br",
+      "name": "Grecian Laurel",
+      "scientific": "Laurus nobilis",
+      "emoji": "emoji_p1778117705415",
+      "category": "Trees",
+      "status": "alive",
+      "water": "Low once established — drought tolerant",
+      "sun": "Full sun to part shade",
+      "notes": "",
+      "fromCutting": false,
+      "maintenance": [
+        {
+          "task": "Deep water monthly — slow hose at drip line",
+          "months": [
+            6,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "task": "Feed slow release balanced fertilizer in spring",
+          "months": [
+            3
+          ]
+        },
+        {
+          "task": "Check for dead/crossing branches — remove cleanly",
+          "months": [
+            1,
+            2
+          ]
+        }
+      ],
+      "trouble": []
+    },
+    {
+      "id": "p1778118235543",
+      "bedId": "b-br",
+      "name": "Boston Ivy",
+      "scientific": "Parthenocissus tricuspidata",
+      "emoji": "emoji_p1778118235543",
+      "category": "Vines & Climbers",
+      "status": "alive",
+      "water": "Moderate — more water when young",
+      "sun": "Part shade to full sun",
+      "notes": "",
+      "fromCutting": false,
+      "maintenance": [
+        {
+          "task": "Feed monthly spring-summer",
+          "months": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "task": "Wipe leaves monthly to remove dust",
+          "months": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ]
+        },
+        {
+          "task": "Reduce watering in winter",
+          "months": [
+            11,
+            12,
+            1,
+            2
+          ]
+        }
+      ],
+      "trouble": []
+    },
+    {
+      "id": "p1778118483625",
+      "bedId": "b-br",
+      "name": "Podocarpus in corner",
+      "scientific": "Podocarpus macrophyllus",
+      "emoji": "emoji_p1778118483625",
+      "category": "Trees",
+      "status": "alive",
+      "water": "Moderate — low once established",
+      "sun": "Full sun to part shade",
+      "notes": "",
+      "fromCutting": false,
+      "maintenance": [
+        {
+          "task": "Deep water monthly — slow hose at drip line",
+          "months": [
+            6,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "task": "Feed slow release balanced fertilizer in spring",
+          "months": [
+            3
+          ]
+        },
+        {
+          "task": "Check for dead/crossing branches — remove cleanly",
+          "months": [
+            1,
+            2
+          ]
+        }
+      ],
+      "trouble": [],
+      "datePlanted": "",
+      "howPlanted": ""
     }
   ],
   "indoorPlants": [
@@ -10095,5 +10095,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-27T00:38:54.355Z"
+  "syncedAt": "2026-05-27T00:42:03.962Z"
 }
