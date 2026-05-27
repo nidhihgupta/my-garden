@@ -5423,7 +5423,7 @@
     {
       "id": "p1778118483625",
       "bedId": "b-br",
-      "name": "Podocarpus",
+      "name": "Podocarpus in corner",
       "scientific": "Podocarpus macrophyllus",
       "emoji": "emoji_p1778118483625",
       "category": "Trees",
@@ -10105,5 +10105,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-27T00:35:46.990Z"
+  "syncedAt": "2026-05-27T00:36:04.991Z"
 }
