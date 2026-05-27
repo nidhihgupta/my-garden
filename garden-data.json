@@ -7361,6 +7361,42 @@
       "trouble": []
     },
     {
+      "id": "p1778124307829",
+      "bedId": "b-ma",
+      "name": "White Stripe Bougainvillea",
+      "scientific": "Bougainvillea 'White Stripe'",
+      "emoji": "emoji_p1778124307829",
+      "category": "Bougainvillea",
+      "status": "alive",
+      "water": "Deep water weekly — Super Bloom half strength monthly",
+      "sun": "Full sun",
+      "notes": "",
+      "fromCutting": false,
+      "maintenance": [
+        {
+          "task": "Hard prune — cut by 1/3",
+          "months": [
+            2
+          ]
+        },
+        {
+          "task": "Feed Super Bloom half strength to moist soil",
+          "months": [
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "task": "Cut by 1/3 after bloom finishes",
+          "months": [
+            8
+          ]
+        }
+      ],
+      "trouble": []
+    },
+    {
       "id": "ma-salvia",
       "bedId": "b-ma",
       "name": "Salvia Amistad",
@@ -7463,42 +7499,6 @@
       "trouble": [],
       "datePlanted": "",
       "howPlanted": ""
-    },
-    {
-      "id": "p1778124307829",
-      "bedId": "b-ma",
-      "name": "White Stripe Bougainvillea",
-      "scientific": "Bougainvillea 'White Stripe'",
-      "emoji": "emoji_p1778124307829",
-      "category": "Bougainvillea",
-      "status": "alive",
-      "water": "Deep water weekly — Super Bloom half strength monthly",
-      "sun": "Full sun",
-      "notes": "",
-      "fromCutting": false,
-      "maintenance": [
-        {
-          "task": "Hard prune — cut by 1/3",
-          "months": [
-            2
-          ]
-        },
-        {
-          "task": "Feed Super Bloom half strength to moist soil",
-          "months": [
-            7,
-            8,
-            9
-          ]
-        },
-        {
-          "task": "Cut by 1/3 after bloom finishes",
-          "months": [
-            8
-          ]
-        }
-      ],
-      "trouble": []
     }
   ],
   "indoorPlants": [
@@ -9967,5 +9967,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-27T00:23:55.092Z"
+  "syncedAt": "2026-05-27T00:23:58.526Z"
 }
