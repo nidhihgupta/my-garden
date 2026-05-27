@@ -7444,6 +7444,60 @@
       "trouble": []
     },
     {
+      "id": "p1778118235543",
+      "bedId": "b-br",
+      "name": "Boston Ivy",
+      "scientific": "Parthenocissus tricuspidata",
+      "emoji": "emoji_p1778118235543",
+      "category": "Vines & Climbers",
+      "status": "alive",
+      "water": "Moderate — more water when young",
+      "sun": "Part shade to full sun",
+      "notes": "",
+      "fromCutting": false,
+      "maintenance": [
+        {
+          "task": "Feed monthly spring-summer",
+          "months": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "task": "Wipe leaves monthly to remove dust",
+          "months": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ]
+        },
+        {
+          "task": "Reduce watering in winter",
+          "months": [
+            11,
+            12,
+            1,
+            2
+          ]
+        }
+      ],
+      "trouble": []
+    },
+    {
       "id": "br-tiarella",
       "bedId": "b-br",
       "name": "Tiarella Spring Symphony",
@@ -7533,60 +7587,6 @@
         }
       ],
       "category": "Annuals"
-    },
-    {
-      "id": "p1778118235543",
-      "bedId": "b-br",
-      "name": "Boston Ivy",
-      "scientific": "Parthenocissus tricuspidata",
-      "emoji": "emoji_p1778118235543",
-      "category": "Vines & Climbers",
-      "status": "alive",
-      "water": "Moderate — more water when young",
-      "sun": "Part shade to full sun",
-      "notes": "",
-      "fromCutting": false,
-      "maintenance": [
-        {
-          "task": "Feed monthly spring-summer",
-          "months": [
-            3,
-            4,
-            5,
-            6,
-            7,
-            8,
-            9
-          ]
-        },
-        {
-          "task": "Wipe leaves monthly to remove dust",
-          "months": [
-            1,
-            2,
-            3,
-            4,
-            5,
-            6,
-            7,
-            8,
-            9,
-            10,
-            11,
-            12
-          ]
-        },
-        {
-          "task": "Reduce watering in winter",
-          "months": [
-            11,
-            12,
-            1,
-            2
-          ]
-        }
-      ],
-      "trouble": []
     },
     {
       "id": "p1778118483625",
@@ -10095,5 +10095,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-27T00:44:46.020Z"
+  "syncedAt": "2026-05-27T00:44:48.533Z"
 }
