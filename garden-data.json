@@ -6930,6 +6930,37 @@
       "howPlanted": ""
     },
     {
+      "id": "berry-thyme",
+      "bedId": "b-berry",
+      "name": "Woolly Thyme",
+      "scientific": "Thymus pseudolanuginosus",
+      "emoji": "🌿",
+      "status": "alive",
+      "category": "Groundcovers",
+      "water": "Low once established",
+      "sun": "Full sun",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Low creeping groundcover with soft woolly leaves. Tolerates light foot traffic.",
+      "maintenance": [
+        {
+          "task": "Trim lightly after flowering",
+          "months": [
+            7,
+            8
+          ]
+        },
+        {
+          "task": "Divide if becomes woody in center",
+          "months": [
+            4
+          ]
+        }
+      ],
+      "trouble": []
+    },
+    {
       "id": "p1778195377685437",
       "bedId": "b-berry",
       "name": "Fatsia japonica",
@@ -7067,37 +7098,6 @@
           "task": "Cut back new side shoots to 5 leaves — do NOT cut main structural canes",
           "months": [
             5
-          ]
-        }
-      ],
-      "trouble": []
-    },
-    {
-      "id": "berry-thyme",
-      "bedId": "b-berry",
-      "name": "Woolly Thyme",
-      "scientific": "Thymus pseudolanuginosus",
-      "emoji": "🌿",
-      "status": "alive",
-      "category": "Groundcovers",
-      "water": "Low once established",
-      "sun": "Full sun",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Low creeping groundcover with soft woolly leaves. Tolerates light foot traffic.",
-      "maintenance": [
-        {
-          "task": "Trim lightly after flowering",
-          "months": [
-            7,
-            8
-          ]
-        },
-        {
-          "task": "Divide if becomes woody in center",
-          "months": [
-            4
           ]
         }
       ],
@@ -10095,5 +10095,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-27T00:38:26.459Z"
+  "syncedAt": "2026-05-27T00:38:29.292Z"
 }
