@@ -7441,44 +7441,6 @@
       "trouble": []
     },
     {
-      "id": "p1778192924840",
-      "bedId": "b-tom",
-      "name": "Pittosporum",
-      "scientific": "Pittosporum tobira",
-      "emoji": "emoji_p1778192924840",
-      "category": "Trees",
-      "status": "alive",
-      "water": "Low once established",
-      "sun": "Full sun to part shade",
-      "notes": "",
-      "fromCutting": false,
-      "maintenance": [
-        {
-          "task": "Deep water monthly — slow hose at drip line",
-          "months": [
-            6,
-            7,
-            8,
-            9
-          ]
-        },
-        {
-          "task": "Feed slow release balanced fertilizer in spring",
-          "months": [
-            3
-          ]
-        },
-        {
-          "task": "Check for dead/crossing branches — remove cleanly",
-          "months": [
-            1,
-            2
-          ]
-        }
-      ],
-      "trouble": []
-    },
-    {
       "id": "p1779842177739619",
       "bedId": "b-tom",
       "name": "Podocarpus in corner",
@@ -10148,5 +10110,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-27T00:37:08.092Z"
+  "syncedAt": "2026-05-27T00:37:18.641Z"
 }
