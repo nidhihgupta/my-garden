@@ -7341,6 +7341,21 @@
       "trouble": []
     },
     {
+      "id": "p1778192989476",
+      "bedId": "b-tom",
+      "name": "Night jasmine",
+      "scientific": "Cestrum nocturnum ",
+      "emoji": "🌿",
+      "category": "Shrubs",
+      "status": "alive",
+      "water": "Moderate",
+      "sun": "Full sun to part sun",
+      "notes": "",
+      "fromCutting": false,
+      "maintenance": [],
+      "trouble": []
+    },
+    {
       "id": "ts-rainier",
       "bedId": "b-tom",
       "name": "Espalier Rainier Cherry ",
@@ -7482,21 +7497,6 @@
       "status": "alive",
       "water": "Low — drought tolerant",
       "sun": "Full sun",
-      "notes": "",
-      "fromCutting": false,
-      "maintenance": [],
-      "trouble": []
-    },
-    {
-      "id": "p1778192989476",
-      "bedId": "b-tom",
-      "name": "Night jasmine",
-      "scientific": "Cestrum nocturnum ",
-      "emoji": "🌿",
-      "category": "Shrubs",
-      "status": "alive",
-      "water": "Moderate",
-      "sun": "Full sun to part sun",
       "notes": "",
       "fromCutting": false,
       "maintenance": [],
@@ -9969,5 +9969,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-27T00:28:55.282Z"
+  "syncedAt": "2026-05-27T00:29:02.900Z"
 }
