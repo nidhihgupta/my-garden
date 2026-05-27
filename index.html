@@ -76,11 +76,11 @@ body{font-family:'DM Sans',sans-serif;background:var(--warm-white);color:var(--t
 .bed-hero{width:100%;height:200px;background:var(--cream);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;}
 .bed-hero img{width:100%;height:100%;object-fit:cover;}
 .bed-hero-placeholder{font-size:60px;}
-.bed-hero-edit{position:absolute;bottom:12px;right:12px;background:rgba(255,255,255,0.9);border:none;border-radius:20px;padding:6px 14px;font-size:12px;font-weight:500;cursor:pointer;color:var(--sage-dark);}
+.bed-hero-edit{position:absolute;bottom:12px;right:12px;width:40px;height:40px;background:rgba(255,255,255,0.9);border:none;border-radius:50%;font-size:20px;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 4px rgba(0,0,0,0.15);}
 .room-hero{width:100%;height:220px;background:var(--cream);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;}
 .room-hero img{width:100%;height:100%;object-fit:cover;}
 .room-hero-placeholder{font-size:60px;}
-.room-hero-edit{position:absolute;bottom:12px;right:12px;background:rgba(255,255,255,0.9);border:none;border-radius:20px;padding:6px 14px;font-size:12px;font-weight:500;cursor:pointer;color:var(--sage-dark);}
+.room-hero-edit{position:absolute;bottom:12px;right:12px;width:40px;height:40px;background:rgba(255,255,255,0.9);border:none;border-radius:50%;font-size:20px;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 4px rgba(0,0,0,0.15);}
 .bed-info-bar{background:white;padding:16px 20px;border-bottom:1px solid var(--border);display:flex;gap:20px;overflow-x:auto;}
 .bed-stat{display:flex;flex-direction:column;gap:2px;flex-shrink:0;}
 .bed-stat-label{font-size:10px;text-transform:uppercase;letter-spacing:1px;color:var(--text-light);}
@@ -205,34 +205,34 @@ body{font-family:'DM Sans',sans-serif;background:var(--warm-white);color:var(--t
   <div class="quick-actions"><div class="section-title">Garden Tools</div><div class="quick-row"><div class="quick-btn" onclick="showScreen('propagation')"><span>🌱</span><span>Cuttings</span></div><div class="quick-btn" onclick="showScreen('irrigation')"><span>💧</span><span>Irrigation</span></div><div class="quick-btn" onclick="addToTodo()"><span>➕</span><span>Add Task</span></div><div class="quick-btn" onclick="showScreen('allplants')"><span>🔍</span><span>All Plants</span></div></div></div>
 </div>
 <div id="screen-outdoor" class="screen">
-  <div style="position:relative"><div class="room-hero" id="outdoor-hero-area"><span class="room-hero-placeholder">🌳</span></div><div style="position:absolute;top:56px;left:20px;cursor:pointer;background:rgba(255,255,255,0.9);border-radius:20px;padding:6px 14px;font-size:13px;font-weight:500" onclick="showScreen('home')">← Home</div><button class="room-hero-edit" onclick="triggerSectionImageUpload('outdoor')">📷 Edit Photo</button></div>
+  <div style="position:relative"><div class="room-hero" id="outdoor-hero-area"><span class="room-hero-placeholder">🌳</span></div><div style="position:absolute;top:56px;left:20px;cursor:pointer;background:rgba(255,255,255,0.9);border-radius:20px;padding:6px 14px;font-size:13px;font-weight:500" onclick="showScreen('home')">← Home</div><button class="room-hero-edit" onclick="triggerSectionImageUpload('outdoor')">📷</button></div>
   <div class="header" style="padding-top:16px"><h1>🌳 Outdoor</h1><p>Select a yard area</p></div>
   <div class="yard-cards"><div class="yard-card" id="yard-card-front" onclick="showYard('front')"><div class="yard-card-icon front" id="yard-icon-front">🏡</div><div class="yard-card-info"><h3>Front Yard</h3><p id="front-yard-count">Loading...</p></div><div class="yard-card-arrow">›</div></div><div class="yard-card" id="yard-card-back" onclick="showYard('back')"><div class="yard-card-icon back" id="yard-icon-back">🌿</div><div class="yard-card-info"><h3>Back Yard</h3><p id="back-yard-count">Loading...</p></div><div class="yard-card-arrow">›</div></div></div>
   <input type="file" id="section-image-input" accept="image/*" style="display:none" onchange="handleSectionImageUpload(event)">
   <button class="fab" onclick="showAddBedModal()">+</button>
 </div>
 <div id="screen-indoor" class="screen">
-  <div style="position:relative"><div class="room-hero" id="indoor-hero-area"><span class="room-hero-placeholder">🪴</span></div><div style="position:absolute;top:56px;left:20px;cursor:pointer;background:rgba(255,255,255,0.9);border-radius:20px;padding:6px 14px;font-size:13px;font-weight:500" onclick="showScreen('home')">← Home</div><button class="room-hero-edit" onclick="triggerSectionImageUpload('indoor')">📷 Edit Photo</button></div>
+  <div style="position:relative"><div class="room-hero" id="indoor-hero-area"><span class="room-hero-placeholder">🪴</span></div><div style="position:absolute;top:56px;left:20px;cursor:pointer;background:rgba(255,255,255,0.9);border-radius:20px;padding:6px 14px;font-size:13px;font-weight:500" onclick="showScreen('home')">← Home</div><button class="room-hero-edit" onclick="triggerSectionImageUpload('indoor')">📷</button></div>
   <div class="header" style="padding-top:16px"><h1>🪴 Indoor</h1><p>Select a room</p></div>
   <div class="yard-cards" id="indoor-rooms-list"></div>
   <button class="fab" onclick="showAddRoomModal()">+</button>
 </div>
 <div id="screen-yard" class="screen">
-  <div style="position:relative"><div class="room-hero" id="yard-hero-area"><span class="room-hero-placeholder">🌿</span></div><div style="position:absolute;top:56px;left:20px;cursor:pointer;background:rgba(255,255,255,0.9);border-radius:20px;padding:6px 14px;font-size:13px;font-weight:500" onclick="showScreen('outdoor')">← Outdoor</div><button class="room-hero-edit" onclick="triggerYardImageUpload()">📷 Edit Photo</button></div>
+  <div style="position:relative"><div class="room-hero" id="yard-hero-area"><span class="room-hero-placeholder">🌿</span></div><div style="position:absolute;top:56px;left:20px;cursor:pointer;background:rgba(255,255,255,0.9);border-radius:20px;padding:6px 14px;font-size:13px;font-weight:500" onclick="showScreen('outdoor')">← Outdoor</div><button class="room-hero-edit" onclick="triggerYardImageUpload()">📷</button></div>
   <div class="header" style="padding-top:16px"><div class="header-actions"><h1 id="yard-title">Front Yard</h1></div><p id="yard-subtitle"></p></div>
   <div class="list-container" id="yard-beds-list"></div>
   <input type="file" id="yard-image-input" accept="image/*" style="display:none" onchange="handleYardImageUpload(event)">
   <button class="fab" onclick="showAddBedModal()">+</button>
 </div>
 <div id="screen-room" class="screen">
-  <div style="position:relative"><div class="room-hero" id="room-hero-area"><span class="room-hero-placeholder">🪴</span></div><div style="position:absolute;top:56px;left:20px;cursor:pointer;background:rgba(255,255,255,0.9);border-radius:20px;padding:6px 14px;font-size:13px;font-weight:500" onclick="showScreen('indoor')">← Indoor</div><button class="room-hero-edit" onclick="triggerRoomImageUpload()">📷 Edit Photo</button></div>
+  <div style="position:relative"><div class="room-hero" id="room-hero-area"><span class="room-hero-placeholder">🪴</span></div><div style="position:absolute;top:56px;left:20px;cursor:pointer;background:rgba(255,255,255,0.9);border-radius:20px;padding:6px 14px;font-size:13px;font-weight:500" onclick="showScreen('indoor')">← Indoor</div><button class="room-hero-edit" onclick="triggerRoomImageUpload()">📷</button></div>
   <div class="header" style="padding-top:16px"><div class="header-actions"><h1 id="room-title">Office</h1><span class="icon-btn" onclick="showEditRoomModal()" title="Edit">✏</span></div><p id="room-subtitle"></p></div>
   <div id="room-sections-list"></div>
   <input type="file" id="room-image-input" accept="image/*" style="display:none" onchange="handleRoomImageUpload(event)">
   <button class="fab" onclick="showAddPlantToRoomModal()">+</button>
 </div>
 <div id="screen-bed" class="screen">
-  <div style="position:relative"><div class="bed-hero" id="bed-hero-area"><span class="bed-hero-placeholder">🌿</span></div><div style="position:absolute;top:56px;left:20px;cursor:pointer;background:rgba(255,255,255,0.9);border-radius:20px;padding:6px 14px;font-size:13px;font-weight:500" id="bed-back-link">← Back</div><button class="bed-hero-edit" onclick="triggerBedImageUpload()">📷 Edit Photo</button></div>
+  <div style="position:relative"><div class="bed-hero" id="bed-hero-area"><span class="bed-hero-placeholder">🌿</span></div><div style="position:absolute;top:56px;left:20px;cursor:pointer;background:rgba(255,255,255,0.9);border-radius:20px;padding:6px 14px;font-size:13px;font-weight:500" id="bed-back-link">← Back</div><button class="bed-hero-edit" onclick="triggerBedImageUpload()">📷</button></div>
   <div class="header" style="padding-top:16px"><div class="header-actions"><h1 id="bed-title">Bed</h1><div style="display:flex;gap:12px"><span class="icon-btn" id="reorder-btn" onclick="toggleReorderMode()" title="Reorder">⇅</span><span class="icon-btn" onclick="showEditBedModal()" title="Edit">✏</span></div></div><p id="bed-subtitle"></p></div>
   <div class="bed-info-bar"><div class="bed-stat"><span class="bed-stat-label">Zone</span><span class="bed-stat-value" id="bed-zone">—</span></div><div class="bed-stat"><span class="bed-stat-label">Sun</span><span class="bed-stat-value" id="bed-sun">—</span></div><div class="bed-stat"><span class="bed-stat-label">Plants</span><span class="bed-stat-value" id="bed-plant-count">0</span></div><div class="bed-stat"><span class="bed-stat-label">Planned</span><span class="bed-stat-value" id="bed-planned-count">0</span></div></div>
   <div class="bed-filter" id="bed-filter-bar"><div class="filter-chip active" onclick="filterBedPlants('all',this)">All</div><div class="filter-chip" onclick="filterBedPlants('alive',this)">Existing</div><div class="filter-chip" onclick="filterBedPlants('planned',this)">Planned</div></div>
@@ -271,7 +271,6 @@ body{font-family:'DM Sans',sans-serif;background:var(--warm-white);color:var(--t
 <div id="screen-shopping" class="screen">
   <div class="header"><div class="header-back" onclick="showScreen('home')">← Home</div><h1>🛒 Shopping</h1><p id="shop-count">0 items</p></div>
   <div class="segment"><div class="segment-btn active" onclick="filterShop('needed',this)">Need to Buy</div><div class="segment-btn" onclick="filterShop('bought',this)">Bought</div></div>
-  <div style="padding:8px 20px"><button class="export-btn" onclick="exportShoppingList()">📄 Export List for Gardener</button></div>
   <div class="list-container" id="shop-list"></div>
   <button class="fab" onclick="addShopItem()">+</button>
 </div>
@@ -1576,7 +1575,11 @@ function showMovePlantModal(id){
 }
 function updateMoveSections(roomId){const room=S.rooms.find(r=>r.id===roomId);document.getElementById('move-section').innerHTML=(room?.sections||['Other']).map(s=>`<option value="${s}">${s}</option>`).join('');}
 function saveMovePlant(id){const p=S.indoorPlants.find(x=>x.id===id);if(!p)return;p.roomId=document.getElementById('move-room').value;p.section=document.getElementById('move-section').value;save();closeModal();showIndoorPlant(id);}
-function goBackFromPlant(){if(S.plantSource==='allplants'){S.plantSource=null;showScreen('allplants');}else if(S.currentPlant?.isIndoor&&S.currentRoom)showRoom(S.currentRoom.id);else if(S.currentBed)showBed(S.currentBed.id);else showScreen('home');}
+function goBackFromPlant(){if(S.plantSource==='allplants'){S.plantSource=null;showScreen('allplants');}else if(S.plantSource==='schedule'){S.plantSource=null;showScreen('schedule');}else if(S.currentPlant?.isIndoor&&S.currentRoom)showRoom(S.currentRoom.id);else if(S.currentBed)showBed(S.currentBed.id);else showScreen('home');}
+function navToSchedPlant(plantName,isIndoor){
+  if(isIndoor){const p=S.indoorPlants.find(x=>x.name===plantName);if(!p)return;S.currentRoom=S.rooms.find(r=>r.id===p.roomId)||null;S.plantSource='schedule';showIndoorPlant(p.id);}
+  else{const p=S.plants.find(x=>x.name===plantName);if(!p)return;S.currentBed=S.beds.find(b=>b.id===p.bedId)||null;S.plantSource='schedule';showOutdoorPlant(p.id);}
+}
 function editPlant(){
   const p=S.currentPlant;
   const isIndoor=p.isIndoor;
@@ -1789,14 +1792,31 @@ function renderShopping(filter){
   list.innerHTML=cats.map(cat=>{
     const catItems=items.filter(s=>(s.category||'Gardener — Individual')===cat);
     if(!catItems.length)return'';
-    return`<div class="shop-section-header">${catLabels[cat]}</div>${catItems.map(s=>`<div class="shop-item"><div class="todo-check ${s.bought?'checked':''}" onclick="toggleShop('${s.id}')">${s.bought?'✓':''}</div><div style="flex:1"><div style="font-size:14px;font-weight:500;${s.bought?'text-decoration:line-through;color:var(--text-light)':'color:var(--text-dark)'}">${s.orderAs||s.name}</div><div style="font-size:11px;color:var(--text-light);margin-top:2px">${s.qty||''} · ${s.size||''}</div>${s.color&&s.color!=='—'?`<div style="font-size:11px;color:var(--terracotta);margin-top:2px">🎨 ${s.color}</div>`:''}${s.bed?`<div style="font-size:11px;color:var(--text-light);margin-top:2px">📍 ${s.bed}</div>`:''}</div><div class="todo-delete" onclick="deleteShop('${s.id}')">×</div></div>`).join('')}`;
+    return`<div class="shop-section-header">${catLabels[cat]}</div>${catItems.map(s=>`<div class="shop-item"><div class="todo-check ${s.bought?'checked':''}" onclick="toggleShop('${s.id}')">${s.bought?'✓':''}</div><div style="flex:1;cursor:pointer" onclick="editShopItem('${s.id}')"><div style="font-size:14px;font-weight:500;${s.bought?'text-decoration:line-through;color:var(--text-light)':'color:var(--text-dark)'}">${s.orderAs||s.name}</div><div style="font-size:11px;color:var(--text-light);margin-top:2px">${s.qty||''} · ${s.size||''}</div>${s.color&&s.color!=='—'?`<div style="font-size:11px;color:var(--terracotta);margin-top:2px">🎨 ${s.color}</div>`:''}${s.bed?`<div style="font-size:11px;color:var(--text-light);margin-top:2px">📍 ${s.bed}</div>`:''}</div><div class="todo-delete" onclick="deleteShop('${s.id}')">×</div></div>`).join('')}`;
   }).join('');
 }
 function filterShop(f,btn){document.querySelectorAll('#screen-shopping .segment-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');renderShopping(f);}
 function toggleShop(id){const s=S.shopping.find(s=>s.id===id);if(s){s.bought=!s.bought;save();renderShopping(S.shopFilter);}}
 function deleteShop(id){S.shopping=S.shopping.filter(s=>s.id!==id);save();renderShopping(S.shopFilter);}
+function editShopItem(id){
+  const s=S.shopping.find(x=>x.id===id);if(!s)return;
+  const catOpts=['You Buy — Individual','You Buy — Flat','Gardener — Individual','Gardener — Flat'].map(c=>`<option value="${c}"${(s.category||'Gardener — Individual')===c?' selected':''}>${c}</option>`).join('');
+  document.getElementById('modal-body').innerHTML=`<h3>Edit Item</h3><div class="form-group"><label class="form-label">Plant Name</label><input class="form-input" id="esi-name" value="${s.name||''}"></div><div class="form-group"><label class="form-label">Order As</label><input class="form-input" id="esi-orderas" value="${s.orderAs||''}"></div><div class="form-group"><label class="form-label">Qty</label><input class="form-input" id="esi-qty" value="${s.qty||''}"></div><div class="form-group"><label class="form-label">Size</label><input class="form-input" id="esi-size" value="${s.size||''}"></div><div class="form-group"><label class="form-label">Color</label><input class="form-input" id="esi-color" value="${s.color||''}"></div><div class="form-group"><label class="form-label">For which bed?</label><input class="form-input" id="esi-bed" value="${s.bed||''}"></div><div class="form-group"><label class="form-label">Buyer</label><select class="form-select" id="esi-cat">${catOpts}</select></div><button class="btn-primary" onclick="saveShopItemEdit('${id}')">Save</button><button class="btn-secondary" onclick="closeModal()">Cancel</button>`;
+  document.getElementById('modal-overlay').classList.add('active');
+}
+function saveShopItemEdit(id){
+  const s=S.shopping.find(x=>x.id===id);if(!s)return;
+  s.name=document.getElementById('esi-name').value;
+  s.orderAs=document.getElementById('esi-orderas').value;
+  s.qty=document.getElementById('esi-qty').value;
+  s.size=document.getElementById('esi-size').value;
+  s.color=document.getElementById('esi-color').value;
+  s.bed=document.getElementById('esi-bed').value;
+  s.category=document.getElementById('esi-cat').value;
+  save();closeModal();renderShopping(S.shopFilter);
+}
 function addShopItem(){
-  document.getElementById('modal-body').innerHTML=`<h3>Add to Shopping List</h3><div class="form-group"><label class="form-label">Plant Name *</label><input class="form-input" id="new-shop"></div><div class="form-group"><label class="form-label">Order As</label><input class="form-input" id="shop-order-as"></div><div class="form-group"><label class="form-label">Qty</label><input class="form-input" id="shop-qty"></div><div class="form-group"><label class="form-label">Size</label><input class="form-input" id="shop-size"></div><div class="form-group"><label class="form-label">Color</label><input class="form-input" id="shop-color"></div><div class="form-group"><label class="form-label">For which bed?</label><input class="form-input" id="shop-bed"></div><div class="form-group"><label class="form-label">Buyer</label><select class="form-select" id="shop-cat"><option value="Gardener — Individual">Gardener — Individual</option><option value="Gardener — Flat">Gardener — Flat</option><option value="You Buy — Individual">You Buy — Individual</option><option value="You Buy — Flat">You Buy — Flat</option></select></div><button class="btn-primary" onclick="saveShopItem()">Add</button><button class="btn-secondary" onclick="closeModal()">Cancel</button>`;
+  document.getElementById('modal-body').innerHTML=`<h3>Add to Shopping List</h3><div class="form-group"><label class="form-label">Plant Name *</label><input class="form-input" id="new-shop"></div><div class="form-group"><label class="form-label">Order As</label><input class="form-input" id="shop-order-as"></div><div class="form-group"><label class="form-label">Qty</label><input class="form-input" id="shop-qty"></div><div class="form-group"><label class="form-label">Size</label><input class="form-input" id="shop-size"></div><div class="form-group"><label class="form-label">Color</label><input class="form-input" id="shop-color"></div><div class="form-group"><label class="form-label">For which bed?</label><input class="form-input" id="shop-bed"></div><div class="form-group"><label class="form-label">Buyer</label><select class="form-select" id="shop-cat"><option value="You Buy — Individual">You Buy — Individual</option><option value="You Buy — Flat">You Buy — Flat</option><option value="Gardener — Individual">Gardener — Individual</option><option value="Gardener — Flat">Gardener — Flat</option></select></div><button class="btn-primary" onclick="saveShopItem()">Add</button><button class="btn-secondary" onclick="closeModal()">Cancel</button>`;
   document.getElementById('modal-overlay').classList.add('active');
 }
 function saveShopItem(){const name=document.getElementById('new-shop').value.trim();if(!name)return;S.shopping.push({id:'s'+Date.now(),name,orderAs:document.getElementById('shop-order-as').value||name,qty:document.getElementById('shop-qty').value,size:document.getElementById('shop-size').value,color:document.getElementById('shop-color').value,bed:document.getElementById('shop-bed').value,category:document.getElementById('shop-cat').value,bought:false});save();closeModal();renderShopping('needed');}
@@ -1939,7 +1959,14 @@ function renderSchedule(month){
       var isDone=currentSchedTab==='done';
       var safeKey=t.key.replace(/\\/g,'\\\\').replace(/'/g,"\\'");
       var border=t.indoor?'var(--terracotta)':'var(--sage)';
-      out+='<div class="schedule-task '+(isDone?'task-done':'')+'" style="border-left-color:'+border+'"><div style="display:flex;align-items:flex-start"><div class="sched-check '+(isDone?'checked':'')+'" onclick="toggleSchedTask('+month+',\''+safeKey+'\')">'+( isDone?'✓':'')+'</div><div style="flex:1"><div style="font-size:10px;text-transform:uppercase;letter-spacing:1px;color:'+(t.indoor?'var(--terracotta)':'var(--sage-dark)')+';font-weight:500;margin-bottom:3px">'+t.cat+'</div><h4>'+t.title+'</h4>'+(t.desc?'<p>'+t.desc+'</p>':'')+'</div></div></div>';
+      var navPlant=(!t.isStatic&&t.plants&&t.plants.length===1)?t.plants[0]:'';
+      var navFn=navPlant?'navToSchedPlant(\''+navPlant.replace(/\\/g,'\\\\').replace(/'/g,"\\'")+'\',' +(t.indoor?'true':'false')+')':'';
+      out+='<div class="schedule-task '+(isDone?'task-done':'')+'" style="border-left-color:'+border+'"><div style="display:flex;align-items:flex-start">'
+        +'<div class="sched-check '+(isDone?'checked':'')+'" onclick="toggleSchedTask('+month+',\''+safeKey+'\')">'+(isDone?'✓':'')+'</div>'
+        +'<div style="flex:1;'+(navFn?'cursor:pointer':'')+'"'+(navFn?' onclick="'+navFn+'"':'')+'>'
+        +'<div style="display:flex;align-items:center;justify-content:space-between"><div style="font-size:10px;text-transform:uppercase;letter-spacing:1px;color:'+(t.indoor?'var(--terracotta)':'var(--sage-dark)')+';font-weight:500;margin-bottom:3px">'+t.cat+'</div>'+(navFn?'<span style="color:var(--text-light);font-size:14px;margin-top:-2px">›</span>':'')+'</div>'
+        +'<h4>'+t.title+'</h4>'+(t.desc?'<p>'+t.desc+'</p>':'')
+        +'</div></div></div>';
     });
   });
   document.getElementById('schedule-list').innerHTML=out;
