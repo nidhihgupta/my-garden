@@ -7533,7 +7533,7 @@
       "datePlanted": "",
       "nursery": "",
       "fromCutting": false,
-      "notes": "x1. 1-gallon. Climbing fence.",
+      "notes": "Green one is Green Showers \nRed one is Veitchii cultivar ",
       "maintenance": [
         {
           "task": "Train on fence — tie new growth as it extends",
@@ -7559,7 +7559,8 @@
           "url": "https://www.google.com/search?q=Japanese%20beetles%20plant%20care%20fix"
         }
       ],
-      "category": "Vines & Climbers"
+      "category": "Vines & Climbers",
+      "howPlanted": ""
     },
     {
       "id": "bl-phormium",
@@ -10194,5 +10195,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-27T03:53:33.173Z"
+  "syncedAt": "2026-05-27T03:54:15.364Z"
 }
