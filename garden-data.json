@@ -10216,7 +10216,8 @@
       "pg_Water only when soil is dry": true,
       "pg_Water only when soil is completely dry": true,
       "pg_Feed liquid fertilizer every 2 weeks during growing season": true,
-      "ig_Mist fronds or use pebble tray for humidity": true
+      "ig_Mist fronds or use pebble tray for humidity": true,
+      "ig_Pinch tips regularly to prevent legginess": true
     },
     "6": {
       "s_Feeding_Feed dahlias high phosphorus": true,
@@ -10226,5 +10227,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-27T22:27:05.195Z"
+  "syncedAt": "2026-05-27T22:27:07.646Z"
 }
