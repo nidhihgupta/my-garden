@@ -2918,7 +2918,7 @@
       "category": "Bulbs",
       "water": "Moderate",
       "sun": "Part shade",
-      "datePlanted": "",
+      "datePlanted": "2026-05-27",
       "nursery": "",
       "fromCutting": false,
       "notes": "Bright golden-yellow flowers, clover-like foliage.",
@@ -2930,7 +2930,8 @@
           ]
         }
       ],
-      "trouble": []
+      "trouble": [],
+      "howPlanted": ""
     },
     {
       "id": "p1778183645573",
@@ -10218,5 +10219,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-27T20:21:58.273Z"
+  "syncedAt": "2026-05-27T20:22:44.847Z"
 }
