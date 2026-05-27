@@ -7497,6 +7497,31 @@
       "category": "Vines & Climbers"
     },
     {
+      "id": "bl-phormium",
+      "bedId": "b-bl",
+      "name": "Phormium",
+      "scientific": "Phormium tenax",
+      "emoji": "🌿",
+      "status": "alive",
+      "category": "Ornamental Grasses",
+      "water": "Low once established",
+      "sun": "Full sun to part shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "New Zealand flax. Bold strappy foliage, architectural accent.",
+      "maintenance": [
+        {
+          "task": "Remove dead leaves from base",
+          "months": [
+            3,
+            9
+          ]
+        }
+      ],
+      "trouble": []
+    },
+    {
       "id": "bl-fatsia",
       "bedId": "b-bl",
       "name": "Fatsia japonica",
@@ -7565,31 +7590,6 @@
       ],
       "trouble": [],
       "isIndoor": false
-    },
-    {
-      "id": "bl-phormium",
-      "bedId": "b-bl",
-      "name": "Phormium",
-      "scientific": "Phormium tenax",
-      "emoji": "🌿",
-      "status": "alive",
-      "category": "Ornamental Grasses",
-      "water": "Low once established",
-      "sun": "Full sun to part shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "New Zealand flax. Bold strappy foliage, architectural accent.",
-      "maintenance": [
-        {
-          "task": "Remove dead leaves from base",
-          "months": [
-            3,
-            9
-          ]
-        }
-      ],
-      "trouble": []
     },
     {
       "id": "bl-alocasia",
@@ -10095,5 +10095,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-27T00:46:13.450Z"
+  "syncedAt": "2026-05-27T00:46:22.947Z"
 }
