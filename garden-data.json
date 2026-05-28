@@ -10224,7 +10224,8 @@
       "pg_Water consistently — do not let dry out": true,
       "pg_Water at base, keep consistent moisture": true,
       "pg_Harvest pods regularly when plump and crisp": true,
-      "pg_Cut back new side shoots to 5 leaves — do NOT cut main structural canes": true
+      "pg_Cut back new side shoots to 5 leaves — do NOT cut main structural canes": true,
+      "pg_Trim to shape as needed": true
     },
     "6": {
       "s_Feeding_Feed dahlias high phosphorus": true,
@@ -10234,5 +10235,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-28T01:37:15.154Z"
+  "syncedAt": "2026-05-28T01:37:41.185Z"
 }
