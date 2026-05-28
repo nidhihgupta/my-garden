@@ -9942,7 +9942,7 @@
       "qty": "1",
       "size": "",
       "color": "",
-      "bed": "",
+      "bed": "Tall planter ",
       "category": "You Buy — Individual",
       "bought": false
     },
@@ -10295,5 +10295,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-28T18:37:52.140Z"
+  "syncedAt": "2026-05-28T18:38:02.555Z"
 }
