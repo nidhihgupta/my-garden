@@ -9943,6 +9943,17 @@
       "bed": "",
       "category": "You Buy — Individual",
       "bought": false
+    },
+    {
+      "id": "s1779942625618",
+      "name": "Yellow lantana for rose bed",
+      "orderAs": "Yellow lantana for rose bed",
+      "qty": "",
+      "size": "",
+      "color": "",
+      "bed": "",
+      "category": "You Buy — Individual",
+      "bought": false
     }
   ],
   "notes": [],
@@ -10238,5 +10249,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-28T04:29:49.026Z"
+  "syncedAt": "2026-05-28T04:30:25.620Z"
 }
