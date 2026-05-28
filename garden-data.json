@@ -9930,7 +9930,7 @@
       "size": "",
       "color": "",
       "bed": "",
-      "category": "Gardener — Individual",
+      "category": "You Buy — Individual",
       "bought": false
     },
     {
@@ -10238,5 +10238,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-28T02:06:27.080Z"
+  "syncedAt": "2026-05-28T04:29:44.030Z"
 }
