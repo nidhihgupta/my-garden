@@ -9976,6 +9976,17 @@
       "bed": "",
       "category": "You Buy — Individual",
       "bought": false
+    },
+    {
+      "id": "s1779942721909",
+      "name": "Palm",
+      "orderAs": "Palm",
+      "qty": "1",
+      "size": "",
+      "color": "",
+      "bed": "",
+      "category": "You Buy — Individual",
+      "bought": false
     }
   ],
   "notes": [],
@@ -10271,5 +10282,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-28T04:31:09.973Z"
+  "syncedAt": "2026-05-28T04:32:01.912Z"
 }
