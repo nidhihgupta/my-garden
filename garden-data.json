@@ -10000,6 +10000,17 @@
       "bed": "",
       "category": "You Buy — Individual",
       "bought": false
+    },
+    {
+      "id": "s1779944500916",
+      "name": "Test 2",
+      "orderAs": "Test 2",
+      "qty": "",
+      "size": "",
+      "color": "",
+      "bed": "",
+      "category": "You Buy — Individual",
+      "bought": false
     }
   ],
   "notes": [],
@@ -10295,5 +10306,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-28T05:01:31.972Z"
+  "syncedAt": "2026-05-28T05:01:40.918Z"
 }
