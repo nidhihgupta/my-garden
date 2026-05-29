@@ -9942,8 +9942,9 @@
       "id": "s1779942625618",
       "name": "Yellow lantana for rose bed",
       "qty": "",
-      "bed": "",
-      "bought": false
+      "bed": "Front rose bed ",
+      "bought": false,
+      "notes": ""
     },
     {
       "id": "s1779942649880",
@@ -10267,5 +10268,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-28T21:35:16.993Z"
+  "syncedAt": "2026-05-29T04:44:00.150Z"
 }
