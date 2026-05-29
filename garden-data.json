@@ -10269,7 +10269,8 @@
       "pg_Train and tie new canes to structure": true,
       "pg_Light prune after flowering to maintain shape": true,
       "pg_Deadhead at base — pull stem out, do not cut": true,
-      "pg_Deadhead spent blooms continuously": true
+      "pg_Deadhead spent blooms continuously": true,
+      "pg_Light trim after spring flowering": true
     },
     "6": {
       "s_Feeding_Feed dahlias high phosphorus": true,
@@ -10279,5 +10280,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-29T04:46:03.773Z"
+  "syncedAt": "2026-05-29T04:46:05.623Z"
 }
