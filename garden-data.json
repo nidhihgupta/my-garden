@@ -10271,7 +10271,8 @@
       "pg_Deadhead at base — pull stem out, do not cut": true,
       "pg_Deadhead spent blooms continuously": true,
       "pg_Light trim after spring flowering": true,
-      "pg_Trim back if getting leggy": true
+      "pg_Trim back if getting leggy": true,
+      "pg_Cut back if spreading too aggressively": true
     },
     "6": {
       "s_Feeding_Feed dahlias high phosphorus": true,
@@ -10281,5 +10282,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-29T04:46:07.540Z"
+  "syncedAt": "2026-05-29T04:46:14.375Z"
 }
