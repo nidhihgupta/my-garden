@@ -10275,7 +10275,8 @@
       "pg_Cut back if spreading too aggressively": true,
       "pg_Monitor for slugs and snails — apply bait as soon as growth emerges": true,
       "pg_Trim back if leggy · feed liquid fertilizer every 2 weeks": true,
-      "pg_Deadhead spent spikes continuously": true
+      "pg_Deadhead spent spikes continuously": true,
+      "pg_Deadhead to extend bloom season": true
     },
     "6": {
       "s_Feeding_Feed dahlias high phosphorus": true,
@@ -10285,5 +10286,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-29T04:46:25.076Z"
+  "syncedAt": "2026-05-29T04:46:28.144Z"
 }
