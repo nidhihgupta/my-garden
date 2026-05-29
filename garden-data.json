@@ -10011,14 +10011,6 @@
       "datePlanted": "",
       "status": "pending",
       "notes": "Sprouting in water in Coca-Cola glass on kitchen windowsill."
-    },
-    {
-      "id": "pr2",
-      "plant": "Creeping Geranium (Pelargonium spp.)",
-      "dateCut": "2026-05-16",
-      "datePlanted": "2026-05-16",
-      "status": "pending",
-      "notes": "Stem cuttings to be taken from existing plants to fill Fountain Wall Bed. Red + pink varieties."
     }
   ],
   "irrigation": [],
@@ -10287,5 +10279,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-29T04:46:36.365Z"
+  "syncedAt": "2026-05-29T04:49:56.514Z"
 }
