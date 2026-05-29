@@ -10169,7 +10169,7 @@
       "ig_Water when leaves just start to droop — reliable indicator": true,
       "s_Iceberg_Train Iceberg rose on Side Arbor": true,
       "pg_Keep evenly moist spring": true,
-      "pg_Keep consistently moist — does not like to dry out": false,
+      "pg_Keep consistently moist — does not like to dry out": true,
       "ig_Water every 2-3 weeks only — let soil fully dry": true,
       "ig_Water when top inch dry": true,
       "ig_Water when top 2 inches dry": true,
@@ -10278,5 +10278,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-29T04:45:16.385Z"
+  "syncedAt": "2026-05-29T04:45:47.662Z"
 }
