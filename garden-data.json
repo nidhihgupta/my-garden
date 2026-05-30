@@ -9790,6 +9790,13 @@
   ],
   "todos": [
     {
+      "id": "t1780184872919",
+      "text": "Wash fountain wall",
+      "done": false,
+      "date": "2026-06-13",
+      "category": "Maintenance"
+    },
+    {
       "id": "t1779053256633",
       "text": "Support Jasmine at top of the pillar post flowering",
       "done": false,
@@ -10289,5 +10296,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-30T23:47:29.392Z"
+  "syncedAt": "2026-05-30T23:47:52.921Z"
 }
