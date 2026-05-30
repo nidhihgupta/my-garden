@@ -9992,6 +9992,14 @@
       "bed": "BBQ bed",
       "notes": "This is replacement for the chrysanthemum ",
       "bought": false
+    },
+    {
+      "id": "s1780152162886",
+      "name": "ajuga reptans for back bed",
+      "qty": "",
+      "bed": "Back bed ",
+      "notes": "",
+      "bought": false
     }
   ],
   "notes": [],
@@ -10288,5 +10296,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-30T14:42:32.439Z"
+  "syncedAt": "2026-05-30T14:42:42.889Z"
 }
