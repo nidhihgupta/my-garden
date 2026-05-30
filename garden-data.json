@@ -9940,7 +9940,7 @@
     },
     {
       "id": "s1779942625618",
-      "name": "Yellow lantana for rose bed",
+      "name": "Yellow lantana for front rose bed",
       "qty": "",
       "bed": "Front rose bed ",
       "bought": false,
@@ -10289,5 +10289,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-30T17:39:26.385Z"
+  "syncedAt": "2026-05-30T21:32:24.363Z"
 }
