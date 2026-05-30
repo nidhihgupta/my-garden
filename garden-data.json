@@ -9950,8 +9950,9 @@
       "id": "s1779942649880",
       "name": "Ground cover for stepping stones; ajuga reptans for back bed ",
       "qty": "",
-      "bed": "",
-      "bought": false
+      "bed": "Side stepping stones ",
+      "bought": false,
+      "notes": "Ground cover options: green carpet/rupturewort or blue star creeper."
     },
     {
       "id": "s1779942669971",
@@ -10287,5 +10288,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-30T14:31:02.077Z"
+  "syncedAt": "2026-05-30T14:42:19.903Z"
 }
