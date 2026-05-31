@@ -7735,47 +7735,6 @@
         }
       ],
       "trouble": []
-    },
-    {
-      "id": "p1780249571908964",
-      "bedId": "b-stump",
-      "name": "Aeonium Zwartkop",
-      "scientific": "Aeonium arboreum Zwartkop",
-      "emoji": "emoji_st-aeonium",
-      "status": "alive",
-      "water": "Low — drought tolerant",
-      "sun": "Full sun",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Dark rosettes against pool blue.",
-      "maintenance": [
-        {
-          "task": "Water deeply monthly in summer",
-          "months": [
-            6,
-            7,
-            8,
-            9
-          ]
-        },
-        {
-          "task": "Remove dead rosettes",
-          "months": [
-            3,
-            4,
-            5
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Etiolation",
-          "url": "https://www.google.com/search?q=Etiolation%20plant%20care%20fix"
-        }
-      ],
-      "category": "Succulents & Cacti",
-      "isIndoor": false
     }
   ],
   "indoorPlants": [
@@ -10407,5 +10366,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-31T17:46:13.197Z"
+  "syncedAt": "2026-05-31T17:48:04.366Z"
 }
