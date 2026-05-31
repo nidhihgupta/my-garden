@@ -2774,399 +2774,6 @@
       "trouble": []
     },
     {
-      "id": "ros-apricot",
-      "bedId": "b-back-rose",
-      "name": "Apricot Tree",
-      "scientific": "Prunus armeniaca",
-      "emoji": "🍑",
-      "status": "alive",
-      "water": "Every 2 weeks spring/summer",
-      "sun": "Full sun to part sun",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Existing.",
-      "maintenance": [
-        {
-          "task": "Deep water every 2 weeks spring — slow hose 10 min at drip line",
-          "months": [
-            3,
-            4,
-            5,
-            6
-          ]
-        },
-        {
-          "task": "Deep water every 2 weeks July-August — check soil 6 inches first",
-          "months": [
-            7,
-            8
-          ]
-        },
-        {
-          "task": "Monthly watering sufficient fall/winter",
-          "months": [
-            9,
-            10,
-            11,
-            12,
-            1,
-            2
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Brown rot on fruit",
-          "url": "https://www.google.com/search?q=Brown%20rot%20on%20fruit%20plant%20care%20fix"
-        }
-      ],
-      "category": "Fruit Trees"
-    },
-    {
-      "id": "p177983083306646",
-      "bedId": "b-back-rose",
-      "name": "Bougainvillea",
-      "scientific": "Bougainvillea spp.",
-      "emoji": "emoji_sa-bougainvillea",
-      "status": "alive",
-      "water": "Deep water weekly",
-      "sun": "Part sun",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Existing on arbor.",
-      "maintenance": [
-        {
-          "task": "Apply Super Bloom half strength to MOIST soil — monthly",
-          "months": [
-            4,
-            5,
-            6,
-            7,
-            8,
-            9
-          ]
-        },
-        {
-          "task": "Cut back by 1/3 after flowering",
-          "months": [
-            6,
-            7,
-            8,
-            9
-          ]
-        },
-        {
-          "task": "Train new growth to desired position — tie regularly",
-          "months": [
-            4,
-            5,
-            6,
-            7,
-            8
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Not blooming",
-          "url": "https://www.google.com/search?q=Not%20blooming%20plant%20care%20fix"
-        }
-      ],
-      "category": "Bougainvillea",
-      "isIndoor": false,
-      "howPlanted": ""
-    },
-    {
-      "id": "brs-sunburst",
-      "bedId": "b-back-rose",
-      "name": "Rose",
-      "scientific": "Rosa Sunburst",
-      "emoji": "emoji_brs-sunburst",
-      "status": "alive",
-      "water": "Deep water weekly",
-      "sun": "Part sun",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Existing. ",
-      "maintenance": [
-        {
-          "task": "Deadhead every 2 weeks — outward facing bud, 45° cut",
-          "months": [
-            4,
-            5,
-            6,
-            7,
-            8,
-            9,
-            10
-          ]
-        },
-        {
-          "task": "Hard cutback annually in January/February",
-          "months": [
-            1,
-            2
-          ]
-        },
-        {
-          "task": "Feed rose fertilizer after first bloom flush",
-          "months": [
-            5,
-            6
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Black spot",
-          "url": "https://www.google.com/search?q=Black%20spot%20plant%20care%20fix"
-        }
-      ],
-      "category": "Bush Roses",
-      "howPlanted": ""
-    },
-    {
-      "id": "p1778178155450",
-      "bedId": "b-back-rose",
-      "name": "Rose bush",
-      "scientific": "Rosa spp.",
-      "emoji": "🌿",
-      "category": "Bush Roses",
-      "status": "alive",
-      "water": "Deep water weekly",
-      "sun": "Full sun to part sun",
-      "notes": "",
-      "fromCutting": false,
-      "maintenance": [
-        {
-          "task": "Hard prune to outward facing buds",
-          "months": [
-            1,
-            2
-          ]
-        },
-        {
-          "task": "Deadhead every 2 weeks — outward facing bud, 45° cut",
-          "months": [
-            4,
-            5,
-            6,
-            7,
-            8,
-            9,
-            10
-          ]
-        },
-        {
-          "task": "Feed rose fertilizer after first bloom flush",
-          "months": [
-            5
-          ]
-        },
-        {
-          "task": "Monitor for powdery mildew — neem oil if spotted",
-          "months": [
-            6,
-            7,
-            8
-          ]
-        }
-      ],
-      "trouble": []
-    },
-    {
-      "id": "p1778178167609",
-      "bedId": "b-back-rose",
-      "name": "Rose bush",
-      "scientific": "Rosa spp.",
-      "emoji": "🌿",
-      "category": "Bush Roses",
-      "status": "alive",
-      "water": "Deep water weekly",
-      "sun": "Full sun to part sun",
-      "notes": "",
-      "fromCutting": false,
-      "maintenance": [
-        {
-          "task": "Hard prune to outward facing buds",
-          "months": [
-            1,
-            2
-          ]
-        },
-        {
-          "task": "Deadhead every 2 weeks — outward facing bud, 45° cut",
-          "months": [
-            4,
-            5,
-            6,
-            7,
-            8,
-            9,
-            10
-          ]
-        },
-        {
-          "task": "Feed rose fertilizer after first bloom flush",
-          "months": [
-            5
-          ]
-        },
-        {
-          "task": "Monitor for powdery mildew — neem oil if spotted",
-          "months": [
-            6,
-            7,
-            8
-          ]
-        }
-      ],
-      "trouble": []
-    },
-    {
-      "id": "p1778178188173",
-      "bedId": "b-back-rose",
-      "name": "Rose bush",
-      "scientific": "Rosa spp.",
-      "emoji": "emoji_p1778178188173",
-      "category": "Bush Roses",
-      "status": "alive",
-      "water": "Deep water weekly",
-      "sun": "Full sun to part sun",
-      "notes": "",
-      "fromCutting": false,
-      "maintenance": [],
-      "trouble": [],
-      "datePlanted": "",
-      "howPlanted": ""
-    },
-    {
-      "id": "brs-daustinrose",
-      "bedId": "b-back-rose",
-      "name": "Rose",
-      "scientific": "Rosa David Austin",
-      "emoji": "emoji_brs-daustinrose",
-      "status": "alive",
-      "water": "Deep water weekly",
-      "sun": "Part sun",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Existing. Yellow fragrant. Check tag for exact variety.",
-      "maintenance": [
-        {
-          "task": "Deadhead every 2 weeks — outward facing bud, 45° cut",
-          "months": [
-            4,
-            5,
-            6,
-            7,
-            8,
-            9,
-            10
-          ]
-        },
-        {
-          "task": "Hard cutback annually in January/February",
-          "months": [
-            1,
-            2
-          ]
-        },
-        {
-          "task": "Feed rose fertilizer after first bloom flush",
-          "months": [
-            5,
-            6
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Black spot",
-          "url": "https://www.google.com/search?q=Black%20spot%20plant%20care%20fix"
-        }
-      ],
-      "category": "Bush Roses",
-      "howPlanted": ""
-    },
-    {
-      "id": "brs-dahlia",
-      "bedId": "b-back-rose",
-      "name": "Dahlia Large Purple",
-      "scientific": "Dahlia spp.",
-      "emoji": "emoji_brs-dahlia",
-      "status": "alive",
-      "water": "Regular",
-      "sun": "Part sun",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Existing large purple dahlia.",
-      "maintenance": [
-        {
-          "task": "Deadhead continuously — every spent bloom = more blooms",
-          "months": [
-            6,
-            7,
-            8,
-            9,
-            10
-          ]
-        },
-        {
-          "task": "Tubers stay in ground Z9",
-          "months": [
-            11,
-            12,
-            1,
-            2
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Powdery mildew",
-          "url": "https://www.google.com/search?q=Powdery%20mildew%20plant%20care%20fix"
-        }
-      ],
-      "category": "Bulbs"
-    },
-    {
-      "id": "brs-phormium",
-      "bedId": "b-back-rose",
-      "name": "Phormium",
-      "scientific": "Phormium tenax",
-      "emoji": "🌾",
-      "status": "alive",
-      "water": "Low-moderate",
-      "sun": "Part sun",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Existing. Sword-like leaves.",
-      "maintenance": [
-        {
-          "task": "Remove dead outer leaves as needed",
-          "months": [
-            3,
-            4,
-            5
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Crown rot (overwatering)",
-          "url": "https://www.google.com/search?q=Crown%20rot%20(overwatering)%20plant%20care%20fix"
-        }
-      ],
-      "category": "Ornamental Grasses"
-    },
-    {
       "id": "sa-bougainvillea",
       "bedId": "b-sa",
       "name": "Bougainvillea",
@@ -7874,6 +7481,260 @@
       "howPlanted": ""
     },
     {
+      "id": "p1780252724631128",
+      "bedId": "b-br",
+      "name": "Day Lilies",
+      "scientific": "Hemerocallis",
+      "emoji": "emoji_fl-daylily",
+      "status": "alive",
+      "water": "Moderate",
+      "sun": "Full sun to part shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Established in bed. Orange/yellow summer blooms.",
+      "maintenance": [
+        {
+          "task": "Deadhead spent blooms to encourage reblooming",
+          "months": [
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "task": "Divide clumps every 3-4 years in fall",
+          "months": [
+            9,
+            10
+          ]
+        },
+        {
+          "task": "Cut back foliage in late fall",
+          "months": [
+            11
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Rust",
+          "url": "https://www.google.com/search?q=Daylily+rust+fix"
+        },
+        {
+          "issue": "Aphids",
+          "url": "https://www.google.com/search?q=Daylily+aphids+fix"
+        }
+      ],
+      "category": "Perennials",
+      "howPlanted": "",
+      "isIndoor": false
+    },
+    {
+      "id": "ros-apricot",
+      "bedId": "b-back-rose",
+      "name": "Apricot Tree",
+      "scientific": "Prunus armeniaca",
+      "emoji": "🍑",
+      "status": "alive",
+      "water": "Every 2 weeks spring/summer",
+      "sun": "Full sun to part sun",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Existing.",
+      "maintenance": [
+        {
+          "task": "Deep water every 2 weeks spring — slow hose 10 min at drip line",
+          "months": [
+            3,
+            4,
+            5,
+            6
+          ]
+        },
+        {
+          "task": "Deep water every 2 weeks July-August — check soil 6 inches first",
+          "months": [
+            7,
+            8
+          ]
+        },
+        {
+          "task": "Monthly watering sufficient fall/winter",
+          "months": [
+            9,
+            10,
+            11,
+            12,
+            1,
+            2
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Brown rot on fruit",
+          "url": "https://www.google.com/search?q=Brown%20rot%20on%20fruit%20plant%20care%20fix"
+        }
+      ],
+      "category": "Fruit Trees"
+    },
+    {
+      "id": "p177983083306646",
+      "bedId": "b-back-rose",
+      "name": "Bougainvillea",
+      "scientific": "Bougainvillea spp.",
+      "emoji": "emoji_sa-bougainvillea",
+      "status": "alive",
+      "water": "Deep water weekly",
+      "sun": "Part sun",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Existing on arbor.",
+      "maintenance": [
+        {
+          "task": "Apply Super Bloom half strength to MOIST soil — monthly",
+          "months": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "task": "Cut back by 1/3 after flowering",
+          "months": [
+            6,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "task": "Train new growth to desired position — tie regularly",
+          "months": [
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Not blooming",
+          "url": "https://www.google.com/search?q=Not%20blooming%20plant%20care%20fix"
+        }
+      ],
+      "category": "Bougainvillea",
+      "isIndoor": false,
+      "howPlanted": ""
+    },
+    {
+      "id": "brs-sunburst",
+      "bedId": "b-back-rose",
+      "name": "Rose",
+      "scientific": "Rosa Sunburst",
+      "emoji": "emoji_brs-sunburst",
+      "status": "alive",
+      "water": "Deep water weekly",
+      "sun": "Part sun",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Existing. ",
+      "maintenance": [
+        {
+          "task": "Deadhead every 2 weeks — outward facing bud, 45° cut",
+          "months": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "task": "Hard cutback annually in January/February",
+          "months": [
+            1,
+            2
+          ]
+        },
+        {
+          "task": "Feed rose fertilizer after first bloom flush",
+          "months": [
+            5,
+            6
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Black spot",
+          "url": "https://www.google.com/search?q=Black%20spot%20plant%20care%20fix"
+        }
+      ],
+      "category": "Bush Roses",
+      "howPlanted": ""
+    },
+    {
+      "id": "p1778178155450",
+      "bedId": "b-back-rose",
+      "name": "Rose bush",
+      "scientific": "Rosa spp.",
+      "emoji": "🌿",
+      "category": "Bush Roses",
+      "status": "alive",
+      "water": "Deep water weekly",
+      "sun": "Full sun to part sun",
+      "notes": "",
+      "fromCutting": false,
+      "maintenance": [
+        {
+          "task": "Hard prune to outward facing buds",
+          "months": [
+            1,
+            2
+          ]
+        },
+        {
+          "task": "Deadhead every 2 weeks — outward facing bud, 45° cut",
+          "months": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "task": "Feed rose fertilizer after first bloom flush",
+          "months": [
+            5
+          ]
+        },
+        {
+          "task": "Monitor for powdery mildew — neem oil if spotted",
+          "months": [
+            6,
+            7,
+            8
+          ]
+        }
+      ],
+      "trouble": []
+    },
+    {
       "id": "p1780252714024879",
       "bedId": "b-back-rose",
       "name": "Day Lilies",
@@ -7924,54 +7785,193 @@
       "isIndoor": false
     },
     {
-      "id": "p1780252724631128",
-      "bedId": "b-br",
-      "name": "Day Lilies",
-      "scientific": "Hemerocallis",
-      "emoji": "emoji_fl-daylily",
+      "id": "p1778178167609",
+      "bedId": "b-back-rose",
+      "name": "Rose bush",
+      "scientific": "Rosa spp.",
+      "emoji": "🌿",
+      "category": "Bush Roses",
       "status": "alive",
-      "water": "Moderate",
-      "sun": "Full sun to part shade",
-      "datePlanted": "",
-      "nursery": "",
+      "water": "Deep water weekly",
+      "sun": "Full sun to part sun",
+      "notes": "",
       "fromCutting": false,
-      "notes": "Established in bed. Orange/yellow summer blooms.",
       "maintenance": [
         {
-          "task": "Deadhead spent blooms to encourage reblooming",
+          "task": "Hard prune to outward facing buds",
           "months": [
-            6,
-            7,
-            8
+            1,
+            2
           ]
         },
         {
-          "task": "Divide clumps every 3-4 years in fall",
+          "task": "Deadhead every 2 weeks — outward facing bud, 45° cut",
           "months": [
+            4,
+            5,
+            6,
+            7,
+            8,
             9,
             10
           ]
         },
         {
-          "task": "Cut back foliage in late fall",
+          "task": "Feed rose fertilizer after first bloom flush",
           "months": [
-            11
+            5
+          ]
+        },
+        {
+          "task": "Monitor for powdery mildew — neem oil if spotted",
+          "months": [
+            6,
+            7,
+            8
+          ]
+        }
+      ],
+      "trouble": []
+    },
+    {
+      "id": "p1778178188173",
+      "bedId": "b-back-rose",
+      "name": "Rose bush",
+      "scientific": "Rosa spp.",
+      "emoji": "emoji_p1778178188173",
+      "category": "Bush Roses",
+      "status": "alive",
+      "water": "Deep water weekly",
+      "sun": "Full sun to part sun",
+      "notes": "",
+      "fromCutting": false,
+      "maintenance": [],
+      "trouble": [],
+      "datePlanted": "",
+      "howPlanted": ""
+    },
+    {
+      "id": "brs-daustinrose",
+      "bedId": "b-back-rose",
+      "name": "Rose",
+      "scientific": "Rosa David Austin",
+      "emoji": "emoji_brs-daustinrose",
+      "status": "alive",
+      "water": "Deep water weekly",
+      "sun": "Part sun",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Existing. Yellow fragrant. Check tag for exact variety.",
+      "maintenance": [
+        {
+          "task": "Deadhead every 2 weeks — outward facing bud, 45° cut",
+          "months": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "task": "Hard cutback annually in January/February",
+          "months": [
+            1,
+            2
+          ]
+        },
+        {
+          "task": "Feed rose fertilizer after first bloom flush",
+          "months": [
+            5,
+            6
           ]
         }
       ],
       "trouble": [
         {
-          "issue": "Rust",
-          "url": "https://www.google.com/search?q=Daylily+rust+fix"
-        },
-        {
-          "issue": "Aphids",
-          "url": "https://www.google.com/search?q=Daylily+aphids+fix"
+          "issue": "Black spot",
+          "url": "https://www.google.com/search?q=Black%20spot%20plant%20care%20fix"
         }
       ],
-      "category": "Perennials",
-      "howPlanted": "",
-      "isIndoor": false
+      "category": "Bush Roses",
+      "howPlanted": ""
+    },
+    {
+      "id": "brs-dahlia",
+      "bedId": "b-back-rose",
+      "name": "Dahlia Large Purple",
+      "scientific": "Dahlia spp.",
+      "emoji": "emoji_brs-dahlia",
+      "status": "alive",
+      "water": "Regular",
+      "sun": "Part sun",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Existing large purple dahlia.",
+      "maintenance": [
+        {
+          "task": "Deadhead continuously — every spent bloom = more blooms",
+          "months": [
+            6,
+            7,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "task": "Tubers stay in ground Z9",
+          "months": [
+            11,
+            12,
+            1,
+            2
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Powdery mildew",
+          "url": "https://www.google.com/search?q=Powdery%20mildew%20plant%20care%20fix"
+        }
+      ],
+      "category": "Bulbs"
+    },
+    {
+      "id": "brs-phormium",
+      "bedId": "b-back-rose",
+      "name": "Phormium",
+      "scientific": "Phormium tenax",
+      "emoji": "🌾",
+      "status": "alive",
+      "water": "Low-moderate",
+      "sun": "Part sun",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Existing. Sword-like leaves.",
+      "maintenance": [
+        {
+          "task": "Remove dead outer leaves as needed",
+          "months": [
+            3,
+            4,
+            5
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Crown rot (overwatering)",
+          "url": "https://www.google.com/search?q=Crown%20rot%20(overwatering)%20plant%20care%20fix"
+        }
+      ],
+      "category": "Ornamental Grasses"
     }
   ],
   "indoorPlants": [
@@ -10603,5 +10603,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-31T18:38:45.668Z"
+  "syncedAt": "2026-05-31T18:39:07.785Z"
 }
