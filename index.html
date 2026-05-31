@@ -191,6 +191,48 @@ body{font-family:'DM Sans',sans-serif;background:var(--warm-white);color:var(--t
 .bed-filter::-webkit-scrollbar{display:none;}
 .filter-chip{padding:6px 14px;border-radius:20px;font-size:12px;font-weight:500;white-space:nowrap;cursor:pointer;border:1.5px solid var(--border);background:white;color:var(--text-mid);flex-shrink:0;}
 .filter-chip.active{background:var(--sage-dark);color:white;border-color:var(--sage-dark);}
+/* Maintenance home */
+.maint-greeting{padding:20px 20px 4px;font-size:22px;font-weight:700;color:var(--text-dark);}
+.maint-season{padding:0 20px 16px;font-size:13px;color:var(--text-light);}
+.maint-sub-tab{display:flex;border-bottom:1.5px solid var(--border);padding:0 20px;gap:0;background:white;position:sticky;top:0;z-index:10;}
+.maint-sub-btn{padding:12px 16px;font-size:13px;font-weight:500;color:var(--text-light);cursor:pointer;border-bottom:2.5px solid transparent;margin-bottom:-1.5px;white-space:nowrap;}
+.maint-sub-btn.active{color:var(--sage-dark);border-bottom-color:var(--sage-dark);}
+.maint-tab-content{display:none;padding:16px 20px 80px;}
+.maint-tab-content.active{display:block;}
+.maint-card{background:white;border-radius:var(--radius);padding:16px;margin-bottom:12px;border:1px solid var(--border);box-shadow:var(--shadow);}
+.maint-card-title{font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-light);margin-bottom:12px;}
+.maint-task-row{display:flex;align-items:flex-start;gap:10px;padding:8px 0;border-bottom:1px solid var(--border);}
+.maint-task-row:last-child{border-bottom:none;}
+.maint-task-check{width:22px;height:22px;border-radius:50%;border:2px solid var(--border);flex-shrink:0;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:11px;margin-top:1px;}
+.maint-task-check.done{background:var(--sage);border-color:var(--sage);color:white;}
+.maint-task-body{flex:1;}
+.maint-task-name{font-size:14px;font-weight:500;color:var(--text-dark);}
+.maint-task-name.done{text-decoration:line-through;color:var(--text-light);}
+.maint-task-sub{font-size:11px;color:var(--text-light);margin-top:2px;}
+.maint-type-chip{display:inline-block;font-size:10px;font-weight:600;padding:2px 8px;border-radius:10px;margin-left:6px;vertical-align:middle;}
+.chip-prune{background:#f0f7f0;color:#4a7c59;}
+.chip-feed{background:#fff8e7;color:#b07d20;}
+.chip-pest{background:#fff0f0;color:#c04a4a;}
+.chip-water{background:#e8f4fc;color:#2e7fb8;}
+.chip-plant{background:#f3eeff;color:#7a4fc5;}
+.chip-tidy{background:#f5f5f5;color:#666;}
+.insight-line{display:flex;gap:10px;padding:6px 0;font-size:13px;color:var(--text-dark);line-height:1.5;}
+.insight-line:not(:last-child){border-bottom:1px solid var(--border);}
+.insight-icon{font-size:16px;flex-shrink:0;margin-top:1px;}
+.rhythm-row{display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid var(--border);}
+.rhythm-row:last-child{border-bottom:none;}
+.rhythm-icon{font-size:18px;flex-shrink:0;}
+.rhythm-label{font-size:13px;font-weight:500;color:var(--text-dark);}
+.rhythm-note{font-size:11px;color:var(--text-light);margin-top:1px;}
+.rhythm-badge{margin-left:auto;font-size:11px;font-weight:600;color:var(--sage-dark);background:var(--sage-light);padding:2px 10px;border-radius:10px;white-space:nowrap;}
+.planting-season{border-radius:var(--radius);padding:14px 16px;margin-bottom:10px;}
+.planting-now{background:linear-gradient(135deg,var(--sage-light),#e8f5e9);border:1.5px solid var(--sage);}
+.planting-upcoming{background:white;border:1px solid var(--border);}
+.planting-season-label{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:6px;}
+.planting-season h3{font-size:14px;font-weight:600;color:var(--text-dark);margin-bottom:6px;}
+.planting-item{font-size:13px;color:var(--text-dark);padding:3px 0;display:flex;gap:8px;}
+.progress-bar-wrap{background:var(--border);border-radius:4px;height:6px;margin-top:8px;}
+.progress-bar-fill{background:var(--sage);border-radius:4px;height:6px;transition:width 0.3s;}
 </style>
 </head>
 <body>
@@ -275,24 +317,36 @@ body{font-family:'DM Sans',sans-serif;background:var(--warm-white);color:var(--t
   <button class="fab" onclick="addShopItem()">+</button>
 </div>
 <div id="screen-schedule" class="screen">
-  <div class="header"><div class="header-back" onclick="showScreen('home')">← Home</div><h1>📅 Schedule</h1><p>Care tasks by month</p></div>
-  <div class="month-selector" id="month-selector"></div>
-  <div style="padding:0 20px 8px;display:flex;gap:8px">
-    <select class="form-select" id="sched-filter-type" onchange="renderCurrentSchedule()" style="flex:1;padding:8px 12px;font-size:13px">
-      <option value="all">All Categories</option>
-      <option value="Pruning">✂️ Pruning</option>
-      <option value="Feeding">🌱 Feeding</option>
-      <option value="Watering">💧 Watering</option>
-      <option value="Pest">🐛 Pest</option>
-      <option value="Maintenance">🔧 Maintenance</option>
-    </select>
-    <select class="form-select" id="sched-filter-bed" onchange="renderCurrentSchedule()" style="flex:1;padding:8px 12px;font-size:13px">
-      <option value="all">All Locations</option>
-      <option value="indoor">🪴 Indoor</option>
-    </select>
+  <div id="maint-greeting" class="maint-greeting"></div>
+  <div id="maint-season" class="maint-season"></div>
+  <div class="maint-sub-tab">
+    <div class="maint-sub-btn active" onclick="switchMaintTab('week',this)">This Week</div>
+    <div class="maint-sub-btn" onclick="switchMaintTab('month',this)">Month</div>
+    <div class="maint-sub-btn" onclick="switchMaintTab('planting',this)">Planting</div>
+    <div class="maint-sub-btn" onclick="switchMaintTab('tasks',this)">All Tasks</div>
   </div>
-  <div class="segment" id="sched-tab-bar"><div class="segment-btn active" onclick="filterSchedTab('tasks',this)">Tasks</div><div class="segment-btn" onclick="filterSchedTab('done',this)">Done</div></div>
-  <div class="list-container" id="schedule-list"></div>
+  <div id="maint-week" class="maint-tab-content active"></div>
+  <div id="maint-month" class="maint-tab-content"></div>
+  <div id="maint-planting" class="maint-tab-content"></div>
+  <div id="maint-tasks" class="maint-tab-content" style="padding:0 0 80px">
+    <div class="month-selector" id="month-selector"></div>
+    <div style="padding:0 20px 8px;display:flex;gap:8px">
+      <select class="form-select" id="sched-filter-type" onchange="renderCurrentSchedule()" style="flex:1;padding:8px 12px;font-size:13px">
+        <option value="all">All Categories</option>
+        <option value="Pruning">✂️ Pruning</option>
+        <option value="Feeding">🌱 Feeding</option>
+        <option value="Watering">💧 Watering</option>
+        <option value="Pest">🐛 Pest</option>
+        <option value="Maintenance">🔧 Maintenance</option>
+      </select>
+      <select class="form-select" id="sched-filter-bed" onchange="renderCurrentSchedule()" style="flex:1;padding:8px 12px;font-size:13px">
+        <option value="all">All Locations</option>
+        <option value="indoor">🪴 Indoor</option>
+      </select>
+    </div>
+    <div class="segment" id="sched-tab-bar"><div class="segment-btn active" onclick="filterSchedTab('tasks',this)">Tasks</div><div class="segment-btn" onclick="filterSchedTab('done',this)">Done</div></div>
+    <div class="list-container" id="schedule-list"></div>
+  </div>
 </div>
 <div id="screen-notes" class="screen">
   <div class="header"><div class="header-back" onclick="showScreen('home')">← Home</div><h1>📝 Notes</h1></div>
@@ -348,7 +402,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--warm-white);color:var(--t
   <div class="nav-item active" onclick="showScreen('home')" id="nav-home"><span>🏠</span><span>Home</span></div>
   <div class="nav-item" onclick="showScreen('todo')" id="nav-todo"><span>✅</span><span>To-Do</span></div>
   <div class="nav-item" onclick="showScreen('shopping')" id="nav-shopping"><span>🛒</span><span>Shop</span></div>
-  <div class="nav-item" onclick="showScreen('schedule')" id="nav-schedule"><span>📅</span><span>Schedule</span></div>
+  <div class="nav-item" onclick="showScreen('schedule')" id="nav-schedule"><span>🌿</span><span>Maintenance</span></div>
   <div class="nav-item" onclick="showScreen('settings')" id="nav-settings"><span>⚙️</span><span>Settings</span></div>
 </nav>
 <div class="modal-overlay" id="modal-overlay" onclick="closeModal(event)"><div class="modal"><div class="modal-handle"></div><div id="modal-body"></div></div></div>
@@ -1374,7 +1428,7 @@ function showScreen(name){
   if(name==='propagation')renderPropagation();
   if(name==='irrigation')renderIrrigation();
   if(name==='allplants')renderAllPlants('');
-  if(name==='schedule'){renderScheduleMonths();setTimeout(()=>document.querySelector('.month-chip.active')?.scrollIntoView({behavior:'smooth',inline:'center'}),100);}
+  if(name==='schedule'){renderMaintenanceHome();setTimeout(()=>document.querySelector('.month-chip.active')?.scrollIntoView({behavior:'smooth',inline:'center'}),100);}
   if(name==='settings')loadGitHubSettingsUI();
 }
 function updateHomeCounts(){
@@ -1816,6 +1870,338 @@ function exportShoppingList(){
   items.forEach(s=>{text+=`• ${s.name}\n  Qty: ${s.qty||'—'} | For: ${s.bed||'—'}${s.notes?'\n  '+s.notes:''}\n\n`;});
   const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([text],{type:'text/plain'}));a.download='garden-shopping-list.txt';document.body.appendChild(a);a.click();document.body.removeChild(a);
 }
+// ── MAINTENANCE HOME DATA ────────────────────────────────────────────────────
+const monthBriefings={
+  1:{greeting:"January — let your garden rest",season:"Mid-winter · pruning season",insights:[
+    {icon:"✂️",text:"Rose pruning window is open — hard prune to outward-facing buds. Do all bush, tree, and climbing roses now."},
+    {icon:"🍑",text:"Prune deciduous fruit trees while dormant: apricot, Rainier cherry, plum espalier, dwarf fig."},
+    {icon:"💤",text:"Skip outdoor fertilizing — beds are dormant. Resume in March."},
+    {icon:"🌸",text:"Camellias and Daphne in bloom — no action needed, just enjoy the winter colour."},
+    {icon:"📋",text:"Good time to plan: order dahlia starts and summer annuals (begonias, impatiens, calibrachoa, coleus) for April planting."},
+  ],rhythm:{indoor:"Monthly feeding on hold until March",outdoor:"No feeding — beds dormant",exceptions:["Skip all outdoor fertilizing Jan–Feb"]}},
+  2:{greeting:"February — first signs of life",season:"Late winter · prune before growth",insights:[
+    {icon:"✂️",text:"Bougainvillea: cut back by 1/3 after bloom finishes. Distictis: hard prune to framework on Fountain Wall — flowers on new wood, no loss."},
+    {icon:"🌹",text:"Finish rose pruning if not done in January. Feed Jack's 20-20-20 after pruning."},
+    {icon:"🫐",text:"Raspberries + blackberries: first feed of season — Jack's 20-20-20 as new canes begin to emerge."},
+    {icon:"🐌",text:"Slugs are active as things warm up — bait around Hosta now, before damage starts."},
+    {icon:"🌿",text:"Hellebores + Daphne at peak — remove old leaves around hellebores to show off the blooms."},
+  ],rhythm:{indoor:"Resume light feeding late Feb as days lengthen",outdoor:"No general feeding yet — targeted only (berries, roses post-prune)",exceptions:["Still too early for most outdoor beds"]}},
+  3:{greeting:"March — the garden wakes up",season:"Early spring · first feed of the year",insights:[
+    {icon:"🌱",text:"First fertilizer of season: Jack's 20-20-20 to all established beds. Camellia fertilizer to camellias, all hydrangeas, and azaleas."},
+    {icon:"🍋",text:"Citrus first feed of year (Feb–Mar window). Feed again in May and August."},
+    {icon:"🪴",text:"Hosta emerging — mark location, don't disturb soil, bait slugs immediately around new growth."},
+    {icon:"✂️",text:"Fatsia: cut back to desired height and take 6–8 stem cuttings with rooting hormone."},
+    {icon:"🌿",text:"Resume monthly indoor feeding as days lengthen. Repot any root-bound houseplants now."},
+  ],rhythm:{indoor:"Resume mid-month feeding",outdoor:"End-of-month: first outdoor feed of year",exceptions:[]}},
+  4:{greeting:"April — planting season begins",season:"Spring · summer annual swap",insights:[
+    {icon:"🌸",text:"Summer annual swap time: begonias, impatiens, calibrachoa, coleus go in now. Porch planters: tuberous begonias + trailing fuchsia."},
+    {icon:"🌺",text:"Compact dahlias (BBQ bed — new starts each year) and cannas in once soil is warm. Caladiums follow in late April/May."},
+    {icon:"💜",text:"Bougainvillea: begin Super Bloom feeding (half strength, to moist soil) monthly through September."},
+    {icon:"🌹",text:"Roses: deadheading season opens — outward-facing bud, 45° cut, every 2 weeks."},
+    {icon:"🫛",text:"Peas and snap peas approaching harvest — pick regularly to keep plants producing."},
+  ],rhythm:{indoor:"Mid-month feeding",outdoor:"End-of-month: Jack's 20-20-20 + Camellia fertilizer to acid-lovers",exceptions:["Wisteria: no nitrogen — only Super Bloom after first flush"]}},
+  5:{greeting:"May — everything is growing fast",season:"Late spring · training season",insights:[
+    {icon:"✂️",text:"Geraniums (Fountain Wall): cut back hard after spring flush, feed Super Bloom immediately after."},
+    {icon:"🌿",text:"Wisteria: cut new side shoots to 5 leaves — never cut main structural canes. No nitrogen fertilizer."},
+    {icon:"🌹",text:"Iceberg rose: train canes horizontally onto Side Arbor while still flexible."},
+    {icon:"💜",text:"Encore Azaleas: light prune after spring bloom only — never in fall or winter."},
+    {icon:"🌿",text:"Catmint + English Lavender: cut back hard after first flush to encourage strong second bloom."},
+  ],rhythm:{indoor:"Mid-month feeding",outdoor:"End-of-month: Jack's 20-20-20 all beds",exceptions:["Wisteria: Super Bloom after first flush ONLY — no other nitrogen","Herb beds: light feed or skip — lavender + rosemary prefer lean soil"]}},
+  6:{greeting:"June — peak season in full swing",season:"Early summer · harvest begins",insights:[
+    {icon:"🌹",text:"Roses at peak — deadhead every 2 weeks. Powdery mildew season: cool nights + warm days. Neem oil at first sign on leaf undersides."},
+    {icon:"🌺",text:"Dahlias (BBQ + Back Rose bed): begin Super Bloom every 3–4 weeks through August."},
+    {icon:"🍑",text:"Apricot approaching harvest — check weekly. Rainier cherry most critical: water weekly, stress causes cracking and drop."},
+    {icon:"🫐",text:"Raspberry + blackberry harvest approaching. Harvest regularly to keep producing."},
+    {icon:"🌿",text:"Lawn: annual grub killer application this month."},
+    {icon:"🔍",text:"Leaf yellowing? All-over paleness = nitrogen (Jack's 20-20-20). Yellowing between green veins on camellias/hydrangeas = iron chlorosis (use acidifier). Burned tips = over-fertilizing, flush with water."},
+  ],rhythm:{indoor:"Mid-month feeding",outdoor:"End-of-month: Jack's 20-20-20 + Super Bloom for dahlias + bougainvillea",exceptions:["Wisteria: no nitrogen now — skip end-of-month feed for wisteria bed"]}},
+  7:{greeting:"July — summer at full height",season:"Mid-summer · keep on top of deadheading",insights:[
+    {icon:"✂️",text:"Salvia Amistad (all beds): cut back 1/3 if leggy — reblooms vigorously in 3 weeks. Catmint: second cutback if leggy."},
+    {icon:"🌺",text:"Dahlias: deadhead every 3–4 days. Compact dahlias (BBQ) at peak — keep feeding and deadheading consistently."},
+    {icon:"🍑",text:"Fruit trees: most critical watering month. Rainier cherry + plum weekly — heat stress = cracking and drop."},
+    {icon:"🐛",text:"Indoor plants: check for spider mites on leaf undersides — hot dry conditions are prime mite season. Neem oil if found."},
+    {icon:"🌿",text:"Fuchsia (Fountain Wall): deadhead daily during peak bloom, feed Super Bloom every 2 weeks."},
+  ],rhythm:{indoor:"Mid-month feeding",outdoor:"End-of-month: Jack's 20-20-20 + Super Bloom for dahlias",exceptions:["Wisteria: no nitrogen — skip"]}},
+  8:{greeting:"August — prune the hydrangeas now",season:"Late summer · critical pruning window",insights:[
+    {icon:"✂️",text:"Hydrangeas: prune ONLY after flowering is complete — mophead + oakleaf in all beds. Never in fall or winter. This is the only window."},
+    {icon:"✂️",text:"Camellia: light prune after flowering (Aug–Sep). Bougainvillea: cut back 1/3 after main flowering."},
+    {icon:"🫐",text:"Berries: remove old fruited raspberry and blackberry canes after harvest. Cut to ground."},
+    {icon:"🌺",text:"Dahlias still at peak — heavy deadheading every 3–4 days. Super Bloom feeding ongoing."},
+    {icon:"🌵",text:"Indoor: begin drought stress for Christmas cactus — reduce watering now to trigger November bloom."},
+  ],rhythm:{indoor:"Mid-month feeding. Begin Christmas cactus drought",outdoor:"End-of-month: last big outdoor feed — Jack's 20-20-20",exceptions:[]}},
+  9:{greeting:"September — season starts to wind down",season:"Early fall · last fertilizer",insights:[
+    {icon:"🌱",text:"Last fertilizer of season: Jack's 20-20-20 at half strength to all outdoor beds. Camellia fertilizer to acid-lovers."},
+    {icon:"🌸",text:"Japanese Anemone in bloom — one of the best plants in the garden this month. No action needed."},
+    {icon:"🌺",text:"Encore Azalea third bloom cycle — feed Camellia fertilizer after bloom."},
+    {icon:"🌿",text:"Day lilies: good month to divide overcrowded clumps if needed."},
+    {icon:"🍊",text:"Reduce fruit tree watering as temperatures drop. Persimmon developing nicely."},
+  ],rhythm:{indoor:"Last mid-month feeding of season — stop until March",outdoor:"End-of-month: last feed",exceptions:["After this month — no more outdoor feeding until March"]}},
+  10:{greeting:"October — making room for winter",season:"Mid-fall · swap annuals out",insights:[
+    {icon:"🌺",text:"Compact dahlias (BBQ bed): pull after first cold snap — these are annuals, replace fresh next spring. Back Rose bed dahlia: leave, it'll die back and return."},
+    {icon:"🌸",text:"Summer annuals winding down: pull impatiens, calibrachoa, coleus. Replace with pansies, snapdragons, cyclamen for winter colour."},
+    {icon:"🪴",text:"Caladiums + cannas: Bay Area is mild enough — leave in place and mulch well. No need to lift."},
+    {icon:"🌿",text:"Hydrangeas: best window to relocate if you want to move any plants this year."},
+    {icon:"🌸",text:"Camellias beginning to bud up. Indoor: Christmas cactus darkness treatment — 12 hrs/night for 4 weeks triggers blooms."},
+  ],rhythm:{indoor:"No feeding",outdoor:"No feeding — winding down",exceptions:["Skip all fertilizing this month and through February"]}},
+  11:{greeting:"November — the quiet season",season:"Late fall · clean up and wind down",insights:[
+    {icon:"✂️",text:"Hosta: cut back dead foliage as it dies. Mark locations so you don't disturb them in spring. Shasta Daisy + Day Lilies: cut foliage to ground."},
+    {icon:"🌿",text:"Hellebores: remove old leaves to showcase the winter flowers starting to emerge."},
+    {icon:"✂️",text:"Geraniums (Fountain Wall): final cutback for the season."},
+    {icon:"💧",text:"Irrigation: reduce all zone run times as Bay Area rains begin."},
+    {icon:"🌸",text:"Camellias beginning to bloom. Daphne: first intensely fragrant flowers appearing."},
+  ],rhythm:{indoor:"No feeding until March",outdoor:"No feeding",exceptions:[]}},
+  12:{greeting:"December — a quiet, fragrant garden",season:"Winter · planning season",insights:[
+    {icon:"🌸",text:"Camellias in full bloom — enjoy, deadwood removal only if needed. Sarcococca (Front Bed Left): intensely fragrant white flowers. Daphne: peak winter fragrance."},
+    {icon:"💤",text:"All beds dormant or near-dormant — skip outdoor feeding entirely until March."},
+    {icon:"🌵",text:"Indoor: Christmas cactus at peak bloom — keep away from drafts, don't move once in bloom."},
+    {icon:"📋",text:"Planning time: choose summer annuals for April swap, order new dahlia starts (compact for BBQ bed), decide on any new beds or changes."},
+    {icon:"🌹",text:"Rose pruning window opens January — no need to rush, but note what needs attention."},
+  ],rhythm:{indoor:"No feeding",outdoor:"No feeding — dormant",exceptions:["Resume indoor feeding in late February as days lengthen","Outdoor feeding resumes March"]}}
+};
+
+const plantingGuide=[
+  {months:[1,2],label:"Winter Planning",icon:"📋",season:"winter",items:[
+    "Order summer annual starts (begonias, impatiens, calibrachoa, coleus) for April planting",
+    "Order compact dahlia starts for BBQ bed (x4 — new plants each year)",
+    "Plan any new beds or changes while garden is quiet",
+  ]},
+  {months:[3],label:"Early Spring Prep",icon:"🌱",season:"spring",items:[
+    "Check summer annuals are ordered and arriving in time for April",
+    "Prepare porch planters for tuberous begonias + trailing fuchsia",
+    "Pick up fresh dahlia starts if not ordered — look for compact varieties",
+  ]},
+  {months:[4],label:"Summer Annual Swap",icon:"🌸",season:"spring",items:[
+    "🏠 Porch: tuberous begonias (yellow with abutilon, red with fuchsia) + trailing fuchsia",
+    "🌿 Fountain Wall: calibrachoa fills gaps",
+    "🌿 Back Beds: impatiens white along curves (Back Right + Back Left)",
+    "🌿 Main Arbor: portulaca in sunny spots",
+    "🌺 BBQ Bed: compact dahlias x4 (magenta/hot pink — annual replacement)",
+    "🌿 Cannas + Caladiums in once soil is warm",
+    "🌿 Coleus on porch or shaded spots",
+  ]},
+  {months:[5],label:"Late-Planting Window",icon:"⏰",season:"spring",items:[
+    "Last chance for summer annuals — anything not in yet, get in by mid-May",
+    "Caladiums: go in as soil warms above 60° — later than other summer plants is fine",
+  ]},
+  {months:[9,10],label:"Fall Swap — Cool Season",icon:"🍂",season:"fall",items:[
+    "Pull summer annuals as they fade: impatiens, calibrachoa, coleus",
+    "Replace with pansies, snapdragons, cyclamen (shade spots) for winter colour",
+    "Compact dahlias (BBQ): pull after first cold snap — annual, replace in April",
+    "Leave cannas + caladiums in place — Bay Area mild enough, just mulch well",
+  ]},
+  {months:[11,12],label:"Winter Interest",icon:"❄️",season:"winter",items:[
+    "Camellias, Daphne, Sarcococca carry winter interest — no planting needed",
+    "Consider adding a hellebore or two if shaded spots need winter colour",
+    "Order next year's summer annuals once favorites are confirmed",
+  ]},
+];
+
+// ── MAINTENANCE COMPLETION TRACKING ─────────────────────────────────────────
+function getMaintDone(){
+  const yr=new Date().getFullYear();
+  const mo=new Date().getMonth()+1;
+  try{return JSON.parse(localStorage.getItem('md_'+yr+'_'+mo)||'{}');}catch(e){return {};}
+}
+function setMaintTaskDone(key,done){
+  const yr=new Date().getFullYear();
+  const mo=new Date().getMonth()+1;
+  const d=getMaintDone();
+  if(done)d[key]=true;else delete d[key];
+  try{localStorage.setItem('md_'+yr+'_'+mo,JSON.stringify(d));}catch(e){}
+  renderMaintWeek();
+}
+function getMaintProgress(){
+  const mo=new Date().getMonth()+1;
+  const tasks=buildWeekTasks(mo);
+  const done=getMaintDone();
+  const total=tasks.reduce((n,g)=>n+g.tasks.length,0);
+  const doneCount=tasks.reduce((n,g)=>n+g.tasks.filter(t=>done[t.key]).length,0);
+  return{total,done:doneCount};
+}
+
+// ── MAINTENANCE RENDERING ────────────────────────────────────────────────────
+let currentMaintTab='week';
+function switchMaintTab(tab,btn){
+  currentMaintTab=tab;
+  document.querySelectorAll('.maint-sub-btn').forEach(b=>b.classList.remove('active'));
+  if(btn)btn.classList.add('active');
+  document.querySelectorAll('.maint-tab-content').forEach(c=>c.classList.remove('active'));
+  document.getElementById('maint-'+tab).classList.add('active');
+  if(tab==='week')renderMaintWeek();
+  else if(tab==='month')renderMaintMonth();
+  else if(tab==='planting')renderMaintPlanting();
+  else if(tab==='tasks')renderScheduleMonths();
+}
+
+function buildWeekTasks(month){
+  // Collect all tasks for month, grouped by task type + text (consolidated)
+  const taskMap={};
+  const now=new Date();
+  const dayOfMonth=now.getDate();
+  // Classify bucket: weekend, midmonth, endofmonth, ongoing
+  function bucket(taskText,cat,isIndoor){
+    const t=taskText.toLowerCase();
+    if(isIndoor){
+      if(t.includes('feed')||t.includes('fertiliz'))return'midmonth';
+      return'ongoing';
+    }
+    if(t.includes('feed')||t.includes('fertiliz'))return'endofmonth';
+    if(t.includes('prune')||t.includes('cutback')||t.includes('cut back')||t.includes('deadhead')||t.includes('trim')||t.includes('train')||t.includes('divide')||t.includes('plant')||t.includes('lift'))return'weekend';
+    if(t.includes('pest')||t.includes('monitor')||t.includes('mite')||t.includes('slug')||t.includes('neem')||t.includes('check for'))return'ongoing';
+    if(t.includes('water')||t.includes('moist')||t.includes('drip'))return'ongoing';
+    return'weekend';
+  }
+  function taskType(taskText){
+    const t=taskText.toLowerCase();
+    if(t.includes('prune')||t.includes('cutback')||t.includes('cut back')||t.includes('deadhead')||t.includes('trim'))return'prune';
+    if(t.includes('feed')||t.includes('fertiliz'))return'feed';
+    if(t.includes('pest')||t.includes('mite')||t.includes('slug')||t.includes('neem')||t.includes('monitor')||t.includes('check for'))return'pest';
+    if(t.includes('water')||t.includes('moist')||t.includes('drip'))return'water';
+    if(t.includes('plant')||t.includes('swap')||t.includes('replace'))return'plant';
+    return'tidy';
+  }
+  const allPlants=[...S.plants.filter(p=>p.status==='alive'||p.status==='struggling'),...S.indoorPlants.filter(p=>p.status==='alive'||p.status==='struggling')];
+  allPlants.forEach(p=>{
+    const isIndoor=!!S.indoorPlants.find(x=>x.id===p.id);
+    (p.maintenance||[]).forEach(m=>{
+      if(!(m.months||[]).includes(month))return;
+      const b=bucket(m.task,p.category,isIndoor);
+      const type=taskType(m.task);
+      // Group by task text (consolidated across plants)
+      const key=b+'|'+m.task;
+      if(!taskMap[key])taskMap[key]={bucket:b,type,task:m.task,plants:[],isIndoor,key:'wk_'+month+'_'+encodeURIComponent(m.task).slice(0,40)};
+      taskMap[key].plants.push(p.name);
+    });
+  });
+  // Add static schedule tasks
+  (staticSchedule[month]||[]).forEach(t=>{
+    const b=t.indoor?'ongoing':bucket(t.title,'',false);
+    const type=taskType(t.title);
+    const key=b+'|'+t.title;
+    if(!taskMap[key])taskMap[key]={bucket:b,type,task:t.title,plants:[],isIndoor:t.indoor,isStatic:true,desc:t.desc,key:'wk_'+month+'_'+encodeURIComponent(t.title).slice(0,40)};
+  });
+  // Build buckets
+  const groups=[
+    {id:'weekend',label:'🌿 This Weekend',items:[]},
+    {id:'midmonth',label:'🪴 Mid-Month · Indoor Feeding',items:[]},
+    {id:'endofmonth',label:'🌱 End of Month · Outdoor Feeding',items:[]},
+    {id:'ongoing',label:'👀 Ongoing This Month',items:[]},
+  ];
+  Object.values(taskMap).forEach(t=>{
+    const g=groups.find(g=>g.id===t.bucket);
+    if(g)g.items.push(t);
+  });
+  // Consolidate feeding: group all "Feed Jack's 20-20-20" plants into one
+  groups.forEach(g=>{
+    const feedGroups={};
+    g.items=g.items.filter(t=>{
+      if(t.type==='feed'&&!t.isStatic&&t.plants.length>0){
+        const product=t.task.match(/Jack's 20-20-20|Camellia fertilizer|Super Bloom|bonemeal|blood meal|citrus fertilizer|palm fertilizer/i)?.[0]||'fertilizer';
+        const pk=g.id+'_feed_'+product.toLowerCase().replace(/\s/g,'_');
+        if(!feedGroups[pk])feedGroups[pk]={...t,key:'wk_'+month+'_feed_'+product.replace(/\s/g,''),plants:[],task:'Feed '+product};
+        feedGroups[pk].plants.push(...t.plants);
+        return false;
+      }
+      return true;
+    });
+    g.items.push(...Object.values(feedGroups));
+    // Deduplicate by task text
+    const seen=new Set();
+    g.items=g.items.filter(t=>{if(seen.has(t.task))return false;seen.add(t.task);return true;});
+  });
+  return groups.filter(g=>g.items.length>0).map(g=>({...g,tasks:g.items}));
+}
+
+function renderMaintWeek(){
+  const mo=new Date().getMonth()+1;
+  const groups=buildWeekTasks(mo);
+  const done=getMaintDone();
+  const chipClass={prune:'chip-prune',feed:'chip-feed',pest:'chip-pest',water:'chip-water',plant:'chip-plant',tidy:'chip-tidy'};
+  const chipLabel={prune:'Prune',feed:'Feed',pest:'Pest',water:'Water',plant:'Plant',tidy:'Tidy'};
+  const prog=getMaintProgress();
+  let html='';
+  if(prog.total>0){
+    const pct=Math.round(prog.done/prog.total*100);
+    html+=`<div class="maint-card" style="margin-bottom:12px"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px"><span style="font-size:13px;font-weight:500;color:var(--text-dark)">${prog.done} of ${prog.total} tasks done this month</span><span style="font-size:12px;color:var(--sage-dark);font-weight:600">${pct}%</span></div><div class="progress-bar-wrap"><div class="progress-bar-fill" style="width:${pct}%"></div></div></div>`;
+  }
+  groups.forEach(g=>{
+    html+=`<div class="maint-card"><div class="maint-card-title">${g.label}</div>`;
+    g.tasks.forEach(t=>{
+      const isDone=!!done[t.key];
+      const plantCount=t.plants.length;
+      const plantStr=plantCount===0?'':(plantCount===1?t.plants[0]:`${t.plants[0]} +${plantCount-1} more`);
+      html+=`<div class="maint-task-row">
+        <div class="maint-task-check ${isDone?'done':''}" onclick="setMaintTaskDone('${t.key.replace(/'/g,"\\'")}',${!isDone})">${isDone?'✓':''}</div>
+        <div class="maint-task-body">
+          <div class="maint-task-name ${isDone?'done':''}">${t.task}<span class="maint-type-chip ${chipClass[t.type]||'chip-tidy'}">${chipLabel[t.type]||'Task'}</span></div>
+          ${plantStr?`<div class="maint-task-sub">${plantStr}</div>`:''}
+          ${t.desc?`<div class="maint-task-sub">${t.desc}</div>`:''}
+        </div>
+      </div>`;
+    });
+    html+='</div>';
+  });
+  if(!html)html='<div class="empty-state"><span>🌿</span><p>No tasks for this month.</p></div>';
+  document.getElementById('maint-week').innerHTML=html;
+}
+
+function renderMaintMonth(){
+  const mo=new Date().getMonth()+1;
+  const b=monthBriefings[mo];
+  if(!b){document.getElementById('maint-month').innerHTML='<div class="empty-state"><span>📅</span><p>No briefing for this month.</p></div>';return;}
+  const exText=b.rhythm.exceptions.length?`<div style="margin-top:8px;font-size:11px;color:var(--terracotta)">${b.rhythm.exceptions.map(e=>`⚠️ ${e}`).join('<br>')}</div>`:'';
+  let html=`<div class="maint-card">
+    <div class="maint-card-title">Rhythm</div>
+    <div class="rhythm-row"><span class="rhythm-icon">💧</span><div><div class="rhythm-label">Indoor watering</div><div class="rhythm-note">Weekly — check soil by feel, water when top inch is dry</div></div></div>
+    <div class="rhythm-row"><span class="rhythm-icon">🪴</span><div><div class="rhythm-label">Indoor feeding</div><div class="rhythm-note">${b.rhythm.indoor}</div></div><div class="rhythm-badge">~15th</div></div>
+    <div class="rhythm-row"><span class="rhythm-icon">🌿</span><div><div class="rhythm-label">Outdoor feeding</div><div class="rhythm-note">${b.rhythm.outdoor}</div></div><div class="rhythm-badge">~30th</div></div>
+    ${exText}
+  </div>`;
+  html+=`<div class="maint-card"><div class="maint-card-title">What to know this month</div>`;
+  b.insights.forEach(ins=>{
+    html+=`<div class="insight-line"><span class="insight-icon">${ins.icon}</span><span>${ins.text}</span></div>`;
+  });
+  html+='</div>';
+  document.getElementById('maint-month').innerHTML=html;
+}
+
+function renderMaintPlanting(){
+  const mo=new Date().getMonth()+1;
+  const seasonColor={spring:'#4a7c59',summer:'#b07d20',fall:'#c04a4a',winter:'#2e7fb8'};
+  let html='';
+  let currentShown=false;
+  plantingGuide.forEach(g=>{
+    const isCurrent=g.months.includes(mo);
+    if(isCurrent)currentShown=true;
+    const cls=isCurrent?'planting-now':'planting-upcoming';
+    const col=seasonColor[g.season]||'#666';
+    html+=`<div class="planting-season ${cls}">
+      <div class="planting-season-label" style="color:${col}">${isCurrent?'▶ NOW — ':''} ${g.label}</div>
+      <h3>${g.icon} ${g.months.map(m=>['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][m-1]).join(' · ')}</h3>
+      ${g.items.map(item=>`<div class="planting-item"><span>•</span><span>${item}</span></div>`).join('')}
+    </div>`;
+  });
+  if(!currentShown){
+    html=`<div class="maint-card" style="margin-bottom:12px"><div class="insight-line"><span class="insight-icon">😌</span><span>Nothing to plant or swap right now. Next window coming up below.</span></div></div>`+html;
+  }
+  document.getElementById('maint-planting').innerHTML=html;
+}
+
+function renderMaintenanceHome(){
+  const mo=new Date().getMonth()+1;
+  const b=monthBriefings[mo];
+  const hr=new Date().getHours();
+  const greet=hr<12?'Good morning':hr<17?'Good afternoon':'Good evening';
+  const prog=getMaintProgress();
+  const progressStr=prog.total>0?` — ${prog.done} of ${prog.total} tasks done this month`:'';
+  document.getElementById('maint-greeting').textContent=(greet+', Nidhi 🌿'+progressStr);
+  document.getElementById('maint-season').textContent=b?b.season:'';
+  if(currentMaintTab==='week')renderMaintWeek();
+  else if(currentMaintTab==='month')renderMaintMonth();
+  else if(currentMaintTab==='planting')renderMaintPlanting();
+  else renderScheduleMonths();
+}
+
 let currentScheduleMonth=new Date().getMonth()+1;
 let currentSchedTab='tasks';
 function renderScheduleMonths(){
