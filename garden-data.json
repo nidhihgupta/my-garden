@@ -389,7 +389,7 @@
     {
       "id": "fw-begonia",
       "bedId": "b-fw",
-      "name": "Tuberous Begonia Orange",
+      "name": "Tuberous Begonia",
       "scientific": "Begonia tuberhybrida",
       "emoji": "emoji_fw-begonia",
       "status": "alive",
@@ -428,7 +428,8 @@
           "url": "https://www.google.com/search?q=Powdery%20mildew%20plant%20care%20fix"
         }
       ],
-      "category": "Annuals"
+      "category": "Annuals",
+      "howPlanted": ""
     },
     {
       "id": "st-aeonium",
@@ -10512,5 +10513,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-31T18:31:35.898Z"
+  "syncedAt": "2026-05-31T18:32:14.497Z"
 }
