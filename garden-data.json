@@ -3586,7 +3586,8 @@
           "url": "https://www.google.com/search?q=Black%20spot%20plant%20care%20fix"
         }
       ],
-      "category": "Bush Roses"
+      "category": "Bush Roses",
+      "howPlanted": ""
     },
     {
       "id": "p1778130459270",
@@ -11053,5 +11054,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-31T19:34:00.586Z"
+  "syncedAt": "2026-05-31T19:34:36.369Z"
 }
