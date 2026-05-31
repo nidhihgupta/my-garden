@@ -7546,6 +7546,36 @@
       "category": "Annuals"
     },
     {
+      "id": "p1780252153779167",
+      "bedId": "b-br",
+      "name": "Bergenia Crassifolia",
+      "scientific": "Bergenia crassifolia",
+      "emoji": "🌸",
+      "status": "alive",
+      "water": "Moderate",
+      "sun": "Part shade",
+      "datePlanted": "2026-05-27",
+      "nursery": "bought",
+      "fromCutting": false,
+      "notes": "x3. 1-gallon. Left of Viburnum. Bold round leaves, magenta spring flowers, ruby winter foliage.",
+      "maintenance": [
+        {
+          "task": "Remove dead leaves in spring",
+          "months": [
+            3
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Floppy leaves (overwatering)",
+          "url": "https://www.google.com/search?q=Floppy%20leaves%20(overwatering)%20plant%20care%20fix"
+        }
+      ],
+      "category": "Perennials",
+      "isIndoor": false
+    },
+    {
       "id": "p1778114397874",
       "bedId": "b-br",
       "name": "Palm in planter",
@@ -7614,36 +7644,6 @@
       ],
       "category": "Tropical Foliage",
       "howPlanted": ""
-    },
-    {
-      "id": "p1780252153779167",
-      "bedId": "b-br",
-      "name": "Bergenia Crassifolia",
-      "scientific": "Bergenia crassifolia",
-      "emoji": "🌸",
-      "status": "alive",
-      "water": "Moderate",
-      "sun": "Part shade",
-      "datePlanted": "2026-05-27",
-      "nursery": "bought",
-      "fromCutting": false,
-      "notes": "x3. 1-gallon. Left of Viburnum. Bold round leaves, magenta spring flowers, ruby winter foliage.",
-      "maintenance": [
-        {
-          "task": "Remove dead leaves in spring",
-          "months": [
-            3
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Floppy leaves (overwatering)",
-          "url": "https://www.google.com/search?q=Floppy%20leaves%20(overwatering)%20plant%20care%20fix"
-        }
-      ],
-      "category": "Perennials",
-      "isIndoor": false
     },
     {
       "id": "br-alocasia",
@@ -10478,5 +10478,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-31T18:30:31.968Z"
+  "syncedAt": "2026-05-31T18:30:34.207Z"
 }
