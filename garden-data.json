@@ -7416,36 +7416,6 @@
       "howPlanted": "bought"
     },
     {
-      "id": "br-campanula",
-      "bedId": "b-br",
-      "name": "Campanula Blue Waterfall",
-      "scientific": "Campanula poscharskyana 'Camgood'",
-      "emoji": "💜",
-      "status": "alive",
-      "category": "Perennials",
-      "water": "Moderate",
-      "sun": "Part shade to full sun",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Trailing bellflower with blue-purple flowers. Great for edges and spilling.",
-      "maintenance": [
-        {
-          "task": "Cut back after first flush of bloom to encourage rebloom",
-          "months": [
-            7
-          ]
-        },
-        {
-          "task": "Divide clumps every 3-4 years",
-          "months": [
-            9
-          ]
-        }
-      ],
-      "trouble": []
-    },
-    {
       "id": "br-liriope",
       "bedId": "b-br",
       "name": "Liriope Big Blue",
@@ -7474,6 +7444,36 @@
         }
       ],
       "category": "Ornamental Grasses"
+    },
+    {
+      "id": "br-campanula",
+      "bedId": "b-br",
+      "name": "Campanula Blue Waterfall",
+      "scientific": "Campanula poscharskyana 'Camgood'",
+      "emoji": "💜",
+      "status": "alive",
+      "category": "Perennials",
+      "water": "Moderate",
+      "sun": "Part shade to full sun",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Trailing bellflower with blue-purple flowers. Great for edges and spilling.",
+      "maintenance": [
+        {
+          "task": "Cut back after first flush of bloom to encourage rebloom",
+          "months": [
+            7
+          ]
+        },
+        {
+          "task": "Divide clumps every 3-4 years",
+          "months": [
+            9
+          ]
+        }
+      ],
+      "trouble": []
     },
     {
       "id": "br-azalea",
@@ -10478,5 +10478,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-31T18:30:11.054Z"
+  "syncedAt": "2026-05-31T18:30:13.923Z"
 }
