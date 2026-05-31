@@ -1810,7 +1810,7 @@
     {
       "id": "ch-hosta",
       "bedId": "b-ch",
-      "name": "Hosta Patriot",
+      "name": "Hosta Fire and Ice",
       "scientific": "Hosta Patriot",
       "emoji": "🍃",
       "status": "alive",
@@ -1856,7 +1856,8 @@
           "url": "https://www.google.com/search?q=Crown%20rot%20in%20waterlogged%20soil%20plant%20care%20fix"
         }
       ],
-      "category": "None"
+      "category": "None",
+      "howPlanted": ""
     },
     {
       "id": "ch-lamium",
@@ -10420,5 +10421,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-31T17:51:17.573Z"
+  "syncedAt": "2026-05-31T17:51:53.878Z"
 }
