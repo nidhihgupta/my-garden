@@ -7566,32 +7566,6 @@
       "trouble": []
     },
     {
-      "id": "porch-cordyline",
-      "bedId": "b-porch",
-      "name": "Cordyline",
-      "scientific": "Cordyline australis",
-      "emoji": "🌿",
-      "status": "alive",
-      "category": "None",
-      "water": "Low once established",
-      "sun": "Full sun to part shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Architectural focal point.",
-      "maintenance": [
-        {
-          "task": "Remove dead lower leaves",
-          "months": [
-            3,
-            9
-          ]
-        }
-      ],
-      "trouble": [],
-      "howPlanted": ""
-    },
-    {
       "id": "p1780250003797996",
       "bedId": "b-porch",
       "name": "Creeping Jenny",
@@ -7632,6 +7606,32 @@
       "category": "None",
       "howPlanted": "",
       "isIndoor": false
+    },
+    {
+      "id": "porch-cordyline",
+      "bedId": "b-porch",
+      "name": "Cordyline",
+      "scientific": "Cordyline australis",
+      "emoji": "🌿",
+      "status": "alive",
+      "category": "None",
+      "water": "Low once established",
+      "sun": "Full sun to part shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Architectural focal point.",
+      "maintenance": [
+        {
+          "task": "Remove dead lower leaves",
+          "months": [
+            3,
+            9
+          ]
+        }
+      ],
+      "trouble": [],
+      "howPlanted": ""
     },
     {
       "id": "porch-begonia",
@@ -10463,5 +10463,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-31T17:53:45.297Z"
+  "syncedAt": "2026-05-31T17:53:49.278Z"
 }
