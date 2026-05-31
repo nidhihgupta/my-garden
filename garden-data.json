@@ -7847,6 +7847,40 @@
       "trouble": [],
       "datePlanted": "",
       "howPlanted": ""
+    },
+    {
+      "id": "p1780252281254785",
+      "bedId": "b-br",
+      "name": "Calibrachoa",
+      "scientific": "Calibrachoa spp.",
+      "emoji": "emoji_ma-calibrachoa",
+      "status": "alive",
+      "water": "Regular",
+      "sun": "Part sun",
+      "datePlanted": "2026-05-27",
+      "nursery": "bought",
+      "fromCutting": false,
+      "notes": "x8 (2 per planter). Color TBD.",
+      "maintenance": [
+        {
+          "task": "Trim back if leggy · feed liquid fertilizer every 2 weeks",
+          "months": [
+            5,
+            6,
+            7,
+            8,
+            9
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Iron deficiency (yellowing)",
+          "url": "https://www.google.com/search?q=Iron%20deficiency%20(yellowing)%20plant%20care%20fix"
+        }
+      ],
+      "category": "Annuals",
+      "isIndoor": false
     }
   ],
   "indoorPlants": [
@@ -10478,5 +10512,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-31T18:30:38.637Z"
+  "syncedAt": "2026-05-31T18:31:22.244Z"
 }
