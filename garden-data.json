@@ -7841,6 +7841,37 @@
         }
       ],
       "trouble": []
+    },
+    {
+      "id": "p1780252656543568",
+      "bedId": "b-berry",
+      "name": "English Lavender",
+      "scientific": "Lavandula angustifolia",
+      "emoji": "💜",
+      "status": "alive",
+      "category": "Herbs",
+      "water": "Low once established",
+      "sun": "Full sun",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "",
+      "maintenance": [
+        {
+          "task": "Cut back by one third after first flush of bloom",
+          "months": [
+            7
+          ]
+        },
+        {
+          "task": "Feed slow release fertilizer in spring",
+          "months": [
+            3
+          ]
+        }
+      ],
+      "trouble": [],
+      "isIndoor": false
     }
   ],
   "indoorPlants": [
@@ -10472,5 +10503,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-31T18:37:15.894Z"
+  "syncedAt": "2026-05-31T18:37:37.560Z"
 }
