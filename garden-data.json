@@ -8220,7 +8220,7 @@
       "status": "alive",
       "water": "Deep water weekly",
       "sun": "Full sun to part sun",
-      "notes": "",
+      "notes": "Scalloped ruffled edges. Mango-orange, peach, coral",
       "fromCutting": false,
       "maintenance": [
         {
@@ -11054,5 +11054,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-31T19:40:02.360Z"
+  "syncedAt": "2026-05-31T19:42:16.089Z"
 }
