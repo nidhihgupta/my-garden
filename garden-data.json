@@ -7531,56 +7531,6 @@
       "isIndoor": false
     },
     {
-      "id": "ros-apricot",
-      "bedId": "b-back-rose",
-      "name": "Apricot Tree",
-      "scientific": "Prunus armeniaca",
-      "emoji": "🍑",
-      "status": "alive",
-      "water": "Every 2 weeks spring/summer",
-      "sun": "Full sun to part sun",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Existing.",
-      "maintenance": [
-        {
-          "task": "Deep water every 2 weeks spring — slow hose 10 min at drip line",
-          "months": [
-            3,
-            4,
-            5,
-            6
-          ]
-        },
-        {
-          "task": "Deep water every 2 weeks July-August — check soil 6 inches first",
-          "months": [
-            7,
-            8
-          ]
-        },
-        {
-          "task": "Monthly watering sufficient fall/winter",
-          "months": [
-            9,
-            10,
-            11,
-            12,
-            1,
-            2
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Brown rot on fruit",
-          "url": "https://www.google.com/search?q=Brown%20rot%20on%20fruit%20plant%20care%20fix"
-        }
-      ],
-      "category": "Fruit Trees"
-    },
-    {
       "id": "p1780252714024879",
       "bedId": "b-back-rose",
       "name": "Day Lilies",
@@ -7629,6 +7579,56 @@
       "category": "Perennials",
       "howPlanted": "",
       "isIndoor": false
+    },
+    {
+      "id": "ros-apricot",
+      "bedId": "b-back-rose",
+      "name": "Apricot Tree",
+      "scientific": "Prunus armeniaca",
+      "emoji": "🍑",
+      "status": "alive",
+      "water": "Every 2 weeks spring/summer",
+      "sun": "Full sun to part sun",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Existing.",
+      "maintenance": [
+        {
+          "task": "Deep water every 2 weeks spring — slow hose 10 min at drip line",
+          "months": [
+            3,
+            4,
+            5,
+            6
+          ]
+        },
+        {
+          "task": "Deep water every 2 weeks July-August — check soil 6 inches first",
+          "months": [
+            7,
+            8
+          ]
+        },
+        {
+          "task": "Monthly watering sufficient fall/winter",
+          "months": [
+            9,
+            10,
+            11,
+            12,
+            1,
+            2
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Brown rot on fruit",
+          "url": "https://www.google.com/search?q=Brown%20rot%20on%20fruit%20plant%20care%20fix"
+        }
+      ],
+      "category": "Fruit Trees"
     },
     {
       "id": "p177983083306646",
@@ -10603,5 +10603,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-31T18:39:09.773Z"
+  "syncedAt": "2026-05-31T18:39:11.606Z"
 }
