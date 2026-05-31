@@ -6269,35 +6269,6 @@
       "howPlanted": ""
     },
     {
-      "id": "br-tiarella",
-      "bedId": "b-br",
-      "name": "Tiarella Spring Symphony",
-      "scientific": "Tiarella cordifolia Spring Symphony",
-      "emoji": "🌿",
-      "status": "planned",
-      "water": "Moderate",
-      "sun": "Part to full shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "x5. Long cluster in front of Hosta.",
-      "maintenance": [
-        {
-          "task": "Divide every 3-4 years",
-          "months": [
-            3
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Crown rot",
-          "url": "https://www.google.com/search?q=Crown%20rot%20plant%20care%20fix"
-        }
-      ],
-      "category": "Perennials"
-    },
-    {
       "id": "br-coleus",
       "bedId": "b-br",
       "name": "Coleus Dark Purple",
@@ -10431,5 +10402,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-31T17:55:10.624Z"
+  "syncedAt": "2026-05-31T17:55:16.057Z"
 }
