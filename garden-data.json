@@ -7476,6 +7476,52 @@
       "trouble": []
     },
     {
+      "id": "p1780252190191436",
+      "bedId": "b-bl",
+      "name": "Hellebores Pippa's Purple",
+      "scientific": "Helleborus Pippa's Purple",
+      "emoji": "🌸",
+      "status": "alive",
+      "water": "Low once established",
+      "sun": "Part to full shade",
+      "datePlanted": "2026-05-27",
+      "nursery": "bought",
+      "fromCutting": false,
+      "notes": "Planned. Winter-blooming, deer resistant. Do not move once established.",
+      "maintenance": [
+        {
+          "task": "Feed slow release fertilizer in early spring before flowering",
+          "months": [
+            2
+          ]
+        },
+        {
+          "task": "Remove old/damaged leaves in late fall to showcase winter blooms",
+          "months": [
+            11
+          ]
+        },
+        {
+          "task": "Divide large clumps after flowering only if necessary",
+          "months": [
+            4
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Black death virus (incurable — remove and destroy affected plant)",
+          "url": "https://www.google.com/search?q=Black%20death%20virus%20(incurable%20—%20remove%20and%20destroy%20affected%20plant)%20plant%20care%20fix"
+        },
+        {
+          "issue": "Crown rot from poor drainage",
+          "url": "https://www.google.com/search?q=Crown%20rot%20from%20poor%20drainage%20plant%20care%20fix"
+        }
+      ],
+      "category": "None",
+      "isIndoor": false
+    },
+    {
       "id": "bl-liriope",
       "bedId": "b-bl",
       "name": "Liriope Big Blue",
@@ -7529,52 +7575,6 @@
         }
       ],
       "trouble": []
-    },
-    {
-      "id": "p1780252190191436",
-      "bedId": "b-bl",
-      "name": "Hellebores Pippa's Purple",
-      "scientific": "Helleborus Pippa's Purple",
-      "emoji": "🌸",
-      "status": "alive",
-      "water": "Low once established",
-      "sun": "Part to full shade",
-      "datePlanted": "2026-05-27",
-      "nursery": "bought",
-      "fromCutting": false,
-      "notes": "Planned. Winter-blooming, deer resistant. Do not move once established.",
-      "maintenance": [
-        {
-          "task": "Feed slow release fertilizer in early spring before flowering",
-          "months": [
-            2
-          ]
-        },
-        {
-          "task": "Remove old/damaged leaves in late fall to showcase winter blooms",
-          "months": [
-            11
-          ]
-        },
-        {
-          "task": "Divide large clumps after flowering only if necessary",
-          "months": [
-            4
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Black death virus (incurable — remove and destroy affected plant)",
-          "url": "https://www.google.com/search?q=Black%20death%20virus%20(incurable%20—%20remove%20and%20destroy%20affected%20plant)%20plant%20care%20fix"
-        },
-        {
-          "issue": "Crown rot from poor drainage",
-          "url": "https://www.google.com/search?q=Crown%20rot%20from%20poor%20drainage%20plant%20care%20fix"
-        }
-      ],
-      "category": "None",
-      "isIndoor": false
     },
     {
       "id": "bl-azalea",
@@ -10513,5 +10513,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-31T18:32:49.329Z"
+  "syncedAt": "2026-05-31T18:32:52.167Z"
 }
