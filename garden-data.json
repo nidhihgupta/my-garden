@@ -4362,7 +4362,7 @@
     {
       "id": "p1778183472337",
       "bedId": "b-tom",
-      "name": "Dichondra ground cover",
+      "name": "Dichondra",
       "scientific": "Dichondra micrantha",
       "emoji": "🌿",
       "category": "Perennials",
@@ -4372,7 +4372,9 @@
       "notes": "",
       "fromCutting": false,
       "maintenance": [],
-      "trouble": []
+      "trouble": [],
+      "datePlanted": "",
+      "howPlanted": ""
     },
     {
       "id": "p1778183527031",
@@ -10604,5 +10606,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-05-31T18:42:54.198Z"
+  "syncedAt": "2026-05-31T18:43:41.977Z"
 }
