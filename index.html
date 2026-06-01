@@ -1997,23 +1997,19 @@ const plantingGuide=[
 ];
 
 // ── MAINTENANCE COMPLETION TRACKING ─────────────────────────────────────────
-function getMaintDone(){
-  const yr=new Date().getFullYear();
-  const mo=new Date().getMonth()+1;
-  try{return JSON.parse(localStorage.getItem('md_'+yr+'_'+mo)||'{}');}catch(e){return {};}
-}
-function setMaintTaskDone(key,done){
-  const yr=new Date().getFullYear();
-  const mo=new Date().getMonth()+1;
-  const d=getMaintDone();
-  if(done)d[key]=true;else delete d[key];
-  try{localStorage.setItem('md_'+yr+'_'+mo,JSON.stringify(d));}catch(e){}
+// Week tab shares sc{month} localStorage keys with All Tasks — toggling either syncs both
+function toggleWeekTask(month,key){
+  const d=getSchedChecked(month);
+  d[key]=!d[key];
+  try{localStorage.setItem('sc'+month,JSON.stringify(d));}catch(e){}
   renderMaintWeek();
+  const tasksPane=document.getElementById('maint-tasks');
+  if(tasksPane&&tasksPane.classList.contains('active'))renderScheduleMonths();
 }
 function getMaintProgress(){
   const mo=new Date().getMonth()+1;
   const tasks=buildWeekTasks(mo);
-  const done=getMaintDone();
+  const done=getSchedChecked(mo);
   const total=tasks.reduce((n,g)=>n+g.tasks.length,0);
   const doneCount=tasks.reduce((n,g)=>n+g.tasks.filter(t=>done[t.key]).length,0);
   return{total,done:doneCount};
@@ -2034,95 +2030,78 @@ function switchMaintTab(tab,btn){
 }
 
 function buildWeekTasks(month){
-  // Collect all tasks for month, grouped by task type + text (consolidated)
-  const taskMap={};
-  const now=new Date();
-  const dayOfMonth=now.getDate();
-  // Classify bucket: weekend, midmonth, endofmonth, ongoing
-  function bucket(taskText,cat,isIndoor){
-    const t=taskText.toLowerCase();
-    if(isIndoor){
-      if(t.includes('feed')||t.includes('fertiliz'))return'midmonth';
-      return'ongoing';
-    }
+  // Curated: static schedule tasks + top plant tasks by count, max 3 extras per section.
+  // Keys match All Tasks exactly: s_{cat}_{title}, pg_{task}, ig_{task}
+  const MAX_PLANT=3;
+  function classify(title,isIndoor){
+    const t=title.toLowerCase();
+    if(isIndoor){return t.includes('feed')||t.includes('fertiliz')?'midmonth':'ongoing';}
     if(t.includes('feed')||t.includes('fertiliz'))return'endofmonth';
-    if(t.includes('prune')||t.includes('cutback')||t.includes('cut back')||t.includes('deadhead')||t.includes('trim')||t.includes('train')||t.includes('divide')||t.includes('plant')||t.includes('lift'))return'weekend';
     if(t.includes('pest')||t.includes('monitor')||t.includes('mite')||t.includes('slug')||t.includes('neem')||t.includes('check for'))return'ongoing';
-    if(t.includes('water')||t.includes('moist')||t.includes('drip'))return'ongoing';
+    if(t.includes('water')||t.includes('moist'))return'ongoing';
     return'weekend';
   }
-  function taskType(taskText){
-    const t=taskText.toLowerCase();
-    if(t.includes('prune')||t.includes('cutback')||t.includes('cut back')||t.includes('deadhead')||t.includes('trim'))return'prune';
-    if(t.includes('feed')||t.includes('fertiliz'))return'feed';
-    if(t.includes('pest')||t.includes('mite')||t.includes('slug')||t.includes('neem')||t.includes('monitor')||t.includes('check for'))return'pest';
-    if(t.includes('water')||t.includes('moist')||t.includes('drip'))return'water';
-    if(t.includes('plant')||t.includes('swap')||t.includes('replace'))return'plant';
-    return'tidy';
-  }
-  const allPlants=[...S.plants.filter(p=>p.status==='alive'||p.status==='struggling'),...S.indoorPlants.filter(p=>p.status==='alive'||p.status==='struggling')];
-  allPlants.forEach(p=>{
-    const isIndoor=!!S.indoorPlants.find(x=>x.id===p.id);
+  const weekend=[],midmonth=[],endofmonth=[],ongoing=[];
+  // Static tasks (always included — already hand-curated)
+  (staticSchedule[month]||[]).forEach(t=>{
+    const key='s_'+t.cat+'_'+t.title;
+    const item={key,task:t.title,desc:t.desc||'',plants:[],isStatic:true,isIndoor:t.indoor||false};
+    const b=classify(t.title,t.indoor||false);
+    if(b==='midmonth')midmonth.push(item);
+    else if(b==='endofmonth')endofmonth.push(item);
+    else if(b==='ongoing')ongoing.push(item);
+    else weekend.push(item);
+  });
+  // Outdoor plant tasks — grouped by task text, sorted by plant count desc
+  const outdoorMap={};
+  S.plants.forEach(p=>{
+    if(p.status!=='alive'&&p.status!=='struggling')return;
     (p.maintenance||[]).forEach(m=>{
       if(!(m.months||[]).includes(month))return;
-      const b=bucket(m.task,p.category,isIndoor);
-      const type=taskType(m.task);
-      // Group by task text (consolidated across plants)
-      const key=b+'|'+m.task;
-      if(!taskMap[key])taskMap[key]={bucket:b,type,task:m.task,plants:[],isIndoor,key:'wk_'+month+'_'+encodeURIComponent(m.task).slice(0,40)};
-      taskMap[key].plants.push(p.name);
+      const key='pg_'+m.task;
+      if(!outdoorMap[key])outdoorMap[key]={key,task:m.task,plants:[],isIndoor:false};
+      outdoorMap[key].plants.push(p.name);
     });
   });
-  // Add static schedule tasks
-  (staticSchedule[month]||[]).forEach(t=>{
-    const b=t.indoor?'ongoing':bucket(t.title,'',false);
-    const type=taskType(t.title);
-    const key=b+'|'+t.title;
-    if(!taskMap[key])taskMap[key]={bucket:b,type,task:t.title,plants:[],isIndoor:t.indoor,isStatic:true,desc:t.desc,key:'wk_'+month+'_'+encodeURIComponent(t.title).slice(0,40)};
+  Object.values(outdoorMap).sort((a,b)=>b.plants.length-a.plants.length).forEach(item=>{
+    const b=classify(item.task,false);
+    if(b==='endofmonth'&&endofmonth.filter(x=>!x.isStatic).length<MAX_PLANT)endofmonth.push(item);
+    else if(b==='ongoing'&&ongoing.filter(x=>!x.isStatic&&!x.isIndoor).length<MAX_PLANT)ongoing.push(item);
+    else if(b==='weekend'&&weekend.filter(x=>!x.isStatic).length<MAX_PLANT)weekend.push(item);
   });
-  // Build buckets
-  const groups=[
-    {id:'weekend',label:'🌿 This Weekend',items:[]},
-    {id:'midmonth',label:'🪴 Mid-Month · Indoor Feeding',items:[]},
-    {id:'endofmonth',label:'🌱 End of Month · Outdoor Feeding',items:[]},
-    {id:'ongoing',label:'👀 Ongoing This Month',items:[]},
-  ];
-  Object.values(taskMap).forEach(t=>{
-    const g=groups.find(g=>g.id===t.bucket);
-    if(g)g.items.push(t);
-  });
-  // Consolidate feeding: group all "Feed Jack's 20-20-20" plants into one
-  groups.forEach(g=>{
-    const feedGroups={};
-    g.items=g.items.filter(t=>{
-      if(t.type==='feed'&&!t.isStatic&&t.plants.length>0){
-        const product=t.task.match(/Jack's 20-20-20|Camellia fertilizer|Super Bloom|bonemeal|blood meal|citrus fertilizer|palm fertilizer/i)?.[0]||'fertilizer';
-        const pk=g.id+'_feed_'+product.toLowerCase().replace(/\s/g,'_');
-        if(!feedGroups[pk])feedGroups[pk]={...t,key:'wk_'+month+'_feed_'+product.replace(/\s/g,''),plants:[],task:'Feed '+product};
-        feedGroups[pk].plants.push(...t.plants);
-        return false;
-      }
-      return true;
+  // Indoor plant tasks
+  const indoorMap={};
+  S.indoorPlants.forEach(p=>{
+    if(p.status!=='alive'&&p.status!=='struggling')return;
+    (p.maintenance||[]).forEach(m=>{
+      if(!(m.months||[]).includes(month))return;
+      const key='ig_'+m.task;
+      if(!indoorMap[key])indoorMap[key]={key,task:m.task,plants:[],isIndoor:true};
+      indoorMap[key].plants.push(p.name);
     });
-    g.items.push(...Object.values(feedGroups));
-    // Deduplicate by task text
-    const seen=new Set();
-    g.items=g.items.filter(t=>{if(seen.has(t.task))return false;seen.add(t.task);return true;});
   });
-  return groups.filter(g=>g.items.length>0).map(g=>({...g,tasks:g.items}));
+  Object.values(indoorMap).sort((a,b)=>b.plants.length-a.plants.length).forEach(item=>{
+    const b=classify(item.task,true);
+    if(b==='midmonth'&&midmonth.filter(x=>!x.isStatic).length<MAX_PLANT)midmonth.push(item);
+    else if(ongoing.filter(x=>!x.isStatic&&x.isIndoor).length<2)ongoing.push(item);
+  });
+  const groups=[];
+  if(weekend.length)groups.push({id:'weekend',label:'🌿 This Weekend',tasks:weekend});
+  if(midmonth.length)groups.push({id:'midmonth',label:'🪴 Mid-Month · Indoor Feeding',tasks:midmonth});
+  if(endofmonth.length)groups.push({id:'endofmonth',label:'🌱 End of Month · Outdoor Feeding',tasks:endofmonth});
+  if(ongoing.length)groups.push({id:'ongoing',label:'👀 Ongoing This Month',tasks:ongoing});
+  return groups;
 }
 
 function renderMaintWeek(){
   const mo=new Date().getMonth()+1;
   const groups=buildWeekTasks(mo);
-  const done=getMaintDone();
-  const chipClass={prune:'chip-prune',feed:'chip-feed',pest:'chip-pest',water:'chip-water',plant:'chip-plant',tidy:'chip-tidy'};
-  const chipLabel={prune:'Prune',feed:'Feed',pest:'Pest',water:'Water',plant:'Plant',tidy:'Tidy'};
+  const done=getSchedChecked(mo);
   const prog=getMaintProgress();
   let html='';
   if(prog.total>0){
     const pct=Math.round(prog.done/prog.total*100);
-    html+=`<div class="maint-card" style="margin-bottom:12px"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px"><span style="font-size:13px;font-weight:500;color:var(--text-dark)">${prog.done} of ${prog.total} tasks done this month</span><span style="font-size:12px;color:var(--sage-dark);font-weight:600">${pct}%</span></div><div class="progress-bar-wrap"><div class="progress-bar-fill" style="width:${pct}%"></div></div></div>`;
+    html+=`<div class="maint-card" style="margin-bottom:12px"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px"><span style="font-size:13px;font-weight:500;color:var(--text-dark)">${prog.done} of ${prog.total} tasks done</span><span style="font-size:12px;color:var(--sage-dark);font-weight:600">${pct}%</span></div><div class="progress-bar-wrap"><div class="progress-bar-fill" style="width:${pct}%"></div></div></div>`;
   }
   groups.forEach(g=>{
     html+=`<div class="maint-card"><div class="maint-card-title">${g.label}</div>`;
@@ -2130,18 +2109,19 @@ function renderMaintWeek(){
       const isDone=!!done[t.key];
       const plantCount=t.plants.length;
       const plantStr=plantCount===0?'':(plantCount===1?t.plants[0]:`${t.plants[0]} +${plantCount-1} more`);
-      html+=`<div class="maint-task-row">
-        <div class="maint-task-check ${isDone?'done':''}" onclick="setMaintTaskDone('${t.key.replace(/'/g,"\\'")}',${!isDone})">${isDone?'✓':''}</div>
+      const safeKey=t.key.replace(/\\/g,'\\\\').replace(/'/g,"\\'");
+      html+=`<div class="maint-task-row" style="${isDone?'opacity:0.55':''}">
+        <div class="maint-task-check ${isDone?'done':''}" style="${isDone?'':'border-color:var(--sage);'}" onclick="toggleWeekTask(${mo},'${safeKey}')">${isDone?'✓':''}</div>
         <div class="maint-task-body">
-          <div class="maint-task-name ${isDone?'done':''}">${t.task}<span class="maint-type-chip ${chipClass[t.type]||'chip-tidy'}">${chipLabel[t.type]||'Task'}</span></div>
-          ${plantStr?`<div class="maint-task-sub">${plantStr}</div>`:''}
+          <div class="maint-task-name ${isDone?'done':''}">${t.task}</div>
+          ${plantStr?`<div class="maint-task-sub">${t.isIndoor?'🪴 ':'🌿 '}${plantStr}</div>`:''}
           ${t.desc?`<div class="maint-task-sub">${t.desc}</div>`:''}
         </div>
       </div>`;
     });
     html+='</div>';
   });
-  if(!html)html='<div class="empty-state"><span>🌿</span><p>No tasks for this month.</p></div>';
+  if(groups.length===0)html='<div class="empty-state"><span>🌿</span><p>No tasks for this month.</p></div>';
   document.getElementById('maint-week').innerHTML=html;
 }
 
