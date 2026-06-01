@@ -6,6 +6,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="Nidhi's Garden">
+<meta name="theme-color" content="#5d784d">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="icon-192.png">
 <title>Nidhi's Garden</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
@@ -21,6 +24,8 @@ body{font-family:'DM Sans',sans-serif;background:var(--warm-white);color:var(--t
 .header p{font-size:13px;color:var(--text-light);margin-top:4px;}
 .header-actions{display:flex;align-items:center;justify-content:space-between;}
 .edit-btn{font-size:13px;color:var(--sage-dark);font-weight:500;cursor:pointer;padding:4px 10px;border:1.5px solid var(--sage-dark);border-radius:20px;}
+.icon-btn{width:36px;height:36px;display:flex;align-items:center;justify-content:center;border:1.5px solid var(--sage-dark);border-radius:50%;color:var(--sage-dark);cursor:pointer;font-size:16px;flex-shrink:0;transition:background 0.15s,color 0.15s;}
+.icon-btn.active{background:var(--sage-dark);color:white;}
 .home-hero{background:linear-gradient(135deg,var(--sage-dark) 0%,var(--sage) 60%,var(--sage-light) 100%);padding:60px 24px 40px;position:relative;overflow:hidden;}
 .home-hero::before{content:'';position:absolute;top:-40px;right:-40px;width:200px;height:200px;border-radius:50%;background:rgba(255,255,255,0.08);}
 .home-greeting{font-size:13px;color:rgba(255,255,255,0.7);letter-spacing:1px;text-transform:uppercase;margin-bottom:8px;}
@@ -71,11 +76,11 @@ body{font-family:'DM Sans',sans-serif;background:var(--warm-white);color:var(--t
 .bed-hero{width:100%;height:200px;background:var(--cream);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;}
 .bed-hero img{width:100%;height:100%;object-fit:cover;}
 .bed-hero-placeholder{font-size:60px;}
-.bed-hero-edit{position:absolute;bottom:12px;right:12px;background:rgba(255,255,255,0.9);border:none;border-radius:20px;padding:6px 14px;font-size:12px;font-weight:500;cursor:pointer;color:var(--sage-dark);}
+.bed-hero-edit{position:absolute;bottom:12px;right:12px;width:40px;height:40px;background:rgba(255,255,255,0.9);border:none;border-radius:50%;font-size:20px;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 4px rgba(0,0,0,0.15);}
 .room-hero{width:100%;height:220px;background:var(--cream);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;}
 .room-hero img{width:100%;height:100%;object-fit:cover;}
 .room-hero-placeholder{font-size:60px;}
-.room-hero-edit{position:absolute;bottom:12px;right:12px;background:rgba(255,255,255,0.9);border:none;border-radius:20px;padding:6px 14px;font-size:12px;font-weight:500;cursor:pointer;color:var(--sage-dark);}
+.room-hero-edit{position:absolute;bottom:12px;right:12px;width:40px;height:40px;background:rgba(255,255,255,0.9);border:none;border-radius:50%;font-size:20px;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 4px rgba(0,0,0,0.15);}
 .bed-info-bar{background:white;padding:16px 20px;border-bottom:1px solid var(--border);display:flex;gap:20px;overflow-x:auto;}
 .bed-stat{display:flex;flex-direction:column;gap:2px;flex-shrink:0;}
 .bed-stat-label{font-size:10px;text-transform:uppercase;letter-spacing:1px;color:var(--text-light);}
@@ -186,6 +191,48 @@ body{font-family:'DM Sans',sans-serif;background:var(--warm-white);color:var(--t
 .bed-filter::-webkit-scrollbar{display:none;}
 .filter-chip{padding:6px 14px;border-radius:20px;font-size:12px;font-weight:500;white-space:nowrap;cursor:pointer;border:1.5px solid var(--border);background:white;color:var(--text-mid);flex-shrink:0;}
 .filter-chip.active{background:var(--sage-dark);color:white;border-color:var(--sage-dark);}
+/* Maintenance home */
+.maint-greeting{padding:20px 20px 4px;font-size:22px;font-weight:700;color:var(--text-dark);}
+.maint-season{padding:0 20px 16px;font-size:13px;color:var(--text-light);}
+.maint-sub-tab{display:flex;border-bottom:1.5px solid var(--border);padding:0 20px;gap:0;background:white;position:sticky;top:0;z-index:10;}
+.maint-sub-btn{padding:12px 16px;font-size:13px;font-weight:500;color:var(--text-light);cursor:pointer;border-bottom:2.5px solid transparent;margin-bottom:-1.5px;white-space:nowrap;}
+.maint-sub-btn.active{color:var(--sage-dark);border-bottom-color:var(--sage-dark);}
+.maint-tab-content{display:none;padding:16px 20px 80px;}
+.maint-tab-content.active{display:block;}
+.maint-card{background:white;border-radius:var(--radius);padding:16px;margin-bottom:12px;border:1px solid var(--border);box-shadow:var(--shadow);}
+.maint-card-title{font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-light);margin-bottom:12px;}
+.maint-task-row{display:flex;align-items:flex-start;gap:10px;padding:8px 0;border-bottom:1px solid var(--border);}
+.maint-task-row:last-child{border-bottom:none;}
+.maint-task-check{width:22px;height:22px;border-radius:50%;border:2px solid var(--border);flex-shrink:0;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:11px;margin-top:1px;}
+.maint-task-check.done{background:var(--sage);border-color:var(--sage);color:white;}
+.maint-task-body{flex:1;}
+.maint-task-name{font-size:14px;font-weight:500;color:var(--text-dark);}
+.maint-task-name.done{text-decoration:line-through;color:var(--text-light);}
+.maint-task-sub{font-size:11px;color:var(--text-light);margin-top:2px;}
+.maint-type-chip{display:inline-block;font-size:10px;font-weight:600;padding:2px 8px;border-radius:10px;margin-left:6px;vertical-align:middle;}
+.chip-prune{background:#f0f7f0;color:#4a7c59;}
+.chip-feed{background:#fff8e7;color:#b07d20;}
+.chip-pest{background:#fff0f0;color:#c04a4a;}
+.chip-water{background:#e8f4fc;color:#2e7fb8;}
+.chip-plant{background:#f3eeff;color:#7a4fc5;}
+.chip-tidy{background:#f5f5f5;color:#666;}
+.insight-line{display:flex;gap:10px;padding:6px 0;font-size:13px;color:var(--text-dark);line-height:1.5;}
+.insight-line:not(:last-child){border-bottom:1px solid var(--border);}
+.insight-icon{font-size:16px;flex-shrink:0;margin-top:1px;}
+.rhythm-row{display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid var(--border);}
+.rhythm-row:last-child{border-bottom:none;}
+.rhythm-icon{font-size:18px;flex-shrink:0;}
+.rhythm-label{font-size:13px;font-weight:500;color:var(--text-dark);}
+.rhythm-note{font-size:11px;color:var(--text-light);margin-top:1px;}
+.rhythm-badge{margin-left:auto;font-size:11px;font-weight:600;color:var(--sage-dark);background:var(--sage-light);padding:2px 10px;border-radius:10px;white-space:nowrap;}
+.planting-season{border-radius:var(--radius);padding:14px 16px;margin-bottom:10px;}
+.planting-now{background:linear-gradient(135deg,var(--sage-light),#e8f5e9);border:1.5px solid var(--sage);}
+.planting-upcoming{background:white;border:1px solid var(--border);}
+.planting-season-label{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:6px;}
+.planting-season h3{font-size:14px;font-weight:600;color:var(--text-dark);margin-bottom:6px;}
+.planting-item{font-size:13px;color:var(--text-dark);padding:3px 0;display:flex;gap:8px;}
+.progress-bar-wrap{background:var(--border);border-radius:4px;height:6px;margin-top:8px;}
+.progress-bar-fill{background:var(--sage);border-radius:4px;height:6px;transition:width 0.3s;}
 </style>
 </head>
 <body>
@@ -198,38 +245,37 @@ body{font-family:'DM Sans',sans-serif;background:var(--warm-white);color:var(--t
   <input type="file" id="card-photo-input" accept="image/*" style="display:none" onchange="handleCardPhotoUpload(event)">
   <div class="quick-actions"><div class="section-title">Quick Access</div><div class="quick-row"><div class="quick-btn" onclick="showScreen('todo')"><span>✅</span><span>To-Do</span></div><div class="quick-btn" onclick="showScreen('shopping')"><span>🛒</span><span>Shopping</span></div><div class="quick-btn" onclick="showScreen('schedule')"><span>📅</span><span>Schedule</span></div><div class="quick-btn" onclick="showScreen('notes')"><span>📝</span><span>Notes</span></div></div></div>
   <div class="quick-actions"><div class="section-title">Garden Tools</div><div class="quick-row"><div class="quick-btn" onclick="showScreen('propagation')"><span>🌱</span><span>Cuttings</span></div><div class="quick-btn" onclick="showScreen('irrigation')"><span>💧</span><span>Irrigation</span></div><div class="quick-btn" onclick="addToTodo()"><span>➕</span><span>Add Task</span></div><div class="quick-btn" onclick="showScreen('allplants')"><span>🔍</span><span>All Plants</span></div></div></div>
-  <div style="padding:4px 20px 8px;text-align:right"><span style="font-size:10px;color:var(--text-light);cursor:pointer" onclick="resetToDefaults()">↺ Reset data</span></div>
 </div>
 <div id="screen-outdoor" class="screen">
-  <div style="position:relative"><div class="room-hero" id="outdoor-hero-area"><span class="room-hero-placeholder">🌳</span></div><div style="position:absolute;top:56px;left:20px;cursor:pointer;background:rgba(255,255,255,0.9);border-radius:20px;padding:6px 14px;font-size:13px;font-weight:500" onclick="showScreen('home')">← Home</div><button class="room-hero-edit" onclick="triggerSectionImageUpload('outdoor')">📷 Edit Photo</button></div>
+  <div style="position:relative"><div class="room-hero" id="outdoor-hero-area"><span class="room-hero-placeholder">🌳</span></div><div style="position:absolute;top:56px;left:20px;cursor:pointer;background:rgba(255,255,255,0.9);border-radius:20px;padding:6px 14px;font-size:13px;font-weight:500" onclick="showScreen('home')">← Home</div><button class="room-hero-edit" onclick="triggerSectionImageUpload('outdoor')">📷</button></div>
   <div class="header" style="padding-top:16px"><h1>🌳 Outdoor</h1><p>Select a yard area</p></div>
   <div class="yard-cards"><div class="yard-card" id="yard-card-front" onclick="showYard('front')"><div class="yard-card-icon front" id="yard-icon-front">🏡</div><div class="yard-card-info"><h3>Front Yard</h3><p id="front-yard-count">Loading...</p></div><div class="yard-card-arrow">›</div></div><div class="yard-card" id="yard-card-back" onclick="showYard('back')"><div class="yard-card-icon back" id="yard-icon-back">🌿</div><div class="yard-card-info"><h3>Back Yard</h3><p id="back-yard-count">Loading...</p></div><div class="yard-card-arrow">›</div></div></div>
   <input type="file" id="section-image-input" accept="image/*" style="display:none" onchange="handleSectionImageUpload(event)">
   <button class="fab" onclick="showAddBedModal()">+</button>
 </div>
 <div id="screen-indoor" class="screen">
-  <div style="position:relative"><div class="room-hero" id="indoor-hero-area"><span class="room-hero-placeholder">🪴</span></div><div style="position:absolute;top:56px;left:20px;cursor:pointer;background:rgba(255,255,255,0.9);border-radius:20px;padding:6px 14px;font-size:13px;font-weight:500" onclick="showScreen('home')">← Home</div><button class="room-hero-edit" onclick="triggerSectionImageUpload('indoor')">📷 Edit Photo</button></div>
+  <div style="position:relative"><div class="room-hero" id="indoor-hero-area"><span class="room-hero-placeholder">🪴</span></div><div style="position:absolute;top:56px;left:20px;cursor:pointer;background:rgba(255,255,255,0.9);border-radius:20px;padding:6px 14px;font-size:13px;font-weight:500" onclick="showScreen('home')">← Home</div><button class="room-hero-edit" onclick="triggerSectionImageUpload('indoor')">📷</button></div>
   <div class="header" style="padding-top:16px"><h1>🪴 Indoor</h1><p>Select a room</p></div>
   <div class="yard-cards" id="indoor-rooms-list"></div>
   <button class="fab" onclick="showAddRoomModal()">+</button>
 </div>
 <div id="screen-yard" class="screen">
-  <div style="position:relative"><div class="room-hero" id="yard-hero-area"><span class="room-hero-placeholder">🌿</span></div><div style="position:absolute;top:56px;left:20px;cursor:pointer;background:rgba(255,255,255,0.9);border-radius:20px;padding:6px 14px;font-size:13px;font-weight:500" onclick="showScreen('outdoor')">← Outdoor</div><button class="room-hero-edit" onclick="triggerYardImageUpload()">📷 Edit Photo</button></div>
+  <div style="position:relative"><div class="room-hero" id="yard-hero-area"><span class="room-hero-placeholder">🌿</span></div><div style="position:absolute;top:56px;left:20px;cursor:pointer;background:rgba(255,255,255,0.9);border-radius:20px;padding:6px 14px;font-size:13px;font-weight:500" onclick="showScreen('outdoor')">← Outdoor</div><button class="room-hero-edit" onclick="triggerYardImageUpload()">📷</button></div>
   <div class="header" style="padding-top:16px"><div class="header-actions"><h1 id="yard-title">Front Yard</h1></div><p id="yard-subtitle"></p></div>
   <div class="list-container" id="yard-beds-list"></div>
   <input type="file" id="yard-image-input" accept="image/*" style="display:none" onchange="handleYardImageUpload(event)">
   <button class="fab" onclick="showAddBedModal()">+</button>
 </div>
 <div id="screen-room" class="screen">
-  <div style="position:relative"><div class="room-hero" id="room-hero-area"><span class="room-hero-placeholder">🪴</span></div><div style="position:absolute;top:56px;left:20px;cursor:pointer;background:rgba(255,255,255,0.9);border-radius:20px;padding:6px 14px;font-size:13px;font-weight:500" onclick="showScreen('indoor')">← Indoor</div><button class="room-hero-edit" onclick="triggerRoomImageUpload()">📷 Edit Photo</button></div>
-  <div class="header" style="padding-top:16px"><div class="header-actions"><h1 id="room-title">Office</h1><span class="edit-btn" onclick="showEditRoomModal()">Edit</span></div><p id="room-subtitle"></p></div>
+  <div style="position:relative"><div class="room-hero" id="room-hero-area"><span class="room-hero-placeholder">🪴</span></div><div style="position:absolute;top:56px;left:20px;cursor:pointer;background:rgba(255,255,255,0.9);border-radius:20px;padding:6px 14px;font-size:13px;font-weight:500" onclick="showScreen('indoor')">← Indoor</div><button class="room-hero-edit" onclick="triggerRoomImageUpload()">📷</button></div>
+  <div class="header" style="padding-top:16px"><div class="header-actions"><h1 id="room-title">Office</h1><span class="icon-btn" onclick="showEditRoomModal()" title="Edit">✏</span></div><p id="room-subtitle"></p></div>
   <div id="room-sections-list"></div>
   <input type="file" id="room-image-input" accept="image/*" style="display:none" onchange="handleRoomImageUpload(event)">
   <button class="fab" onclick="showAddPlantToRoomModal()">+</button>
 </div>
 <div id="screen-bed" class="screen">
-  <div style="position:relative"><div class="bed-hero" id="bed-hero-area"><span class="bed-hero-placeholder">🌿</span></div><div style="position:absolute;top:56px;left:20px;cursor:pointer;background:rgba(255,255,255,0.9);border-radius:20px;padding:6px 14px;font-size:13px;font-weight:500" id="bed-back-link">← Back</div><button class="bed-hero-edit" onclick="triggerBedImageUpload()">📷 Edit Photo</button></div>
-  <div class="header" style="padding-top:16px"><div class="header-actions"><h1 id="bed-title">Bed</h1><div style="display:flex;gap:8px"><span class="edit-btn" id="reorder-btn" onclick="toggleReorderMode()">⇅ Reorder</span><span class="edit-btn" onclick="showEditBedModal()">Edit</span></div></div><p id="bed-subtitle"></p></div>
+  <div style="position:relative"><div class="bed-hero" id="bed-hero-area"><span class="bed-hero-placeholder">🌿</span></div><div style="position:absolute;top:56px;left:20px;cursor:pointer;background:rgba(255,255,255,0.9);border-radius:20px;padding:6px 14px;font-size:13px;font-weight:500" id="bed-back-link">← Back</div><button class="bed-hero-edit" onclick="triggerBedImageUpload()">📷</button></div>
+  <div class="header" style="padding-top:16px"><div class="header-actions"><h1 id="bed-title">Bed</h1><div style="display:flex;gap:12px"><span class="icon-btn" id="reorder-btn" onclick="toggleReorderMode()" title="Reorder">⇅</span><span class="icon-btn" onclick="showEditBedModal()" title="Edit">✏</span></div></div><p id="bed-subtitle"></p></div>
   <div class="bed-info-bar"><div class="bed-stat"><span class="bed-stat-label">Zone</span><span class="bed-stat-value" id="bed-zone">—</span></div><div class="bed-stat"><span class="bed-stat-label">Sun</span><span class="bed-stat-value" id="bed-sun">—</span></div><div class="bed-stat"><span class="bed-stat-label">Plants</span><span class="bed-stat-value" id="bed-plant-count">0</span></div><div class="bed-stat"><span class="bed-stat-label">Planned</span><span class="bed-stat-value" id="bed-planned-count">0</span></div></div>
   <div class="bed-filter" id="bed-filter-bar"><div class="filter-chip active" onclick="filterBedPlants('all',this)">All</div><div class="filter-chip" onclick="filterBedPlants('alive',this)">Existing</div><div class="filter-chip" onclick="filterBedPlants('planned',this)">Planned</div></div>
   <div class="list-container" id="bed-plants-list"></div>
@@ -267,36 +313,47 @@ body{font-family:'DM Sans',sans-serif;background:var(--warm-white);color:var(--t
 <div id="screen-shopping" class="screen">
   <div class="header"><div class="header-back" onclick="showScreen('home')">← Home</div><h1>🛒 Shopping</h1><p id="shop-count">0 items</p></div>
   <div class="segment"><div class="segment-btn active" onclick="filterShop('needed',this)">Need to Buy</div><div class="segment-btn" onclick="filterShop('bought',this)">Bought</div></div>
-  <div style="padding:8px 20px"><button class="export-btn" onclick="exportShoppingList()">📄 Export List for Gardener</button></div>
   <div class="list-container" id="shop-list"></div>
   <button class="fab" onclick="addShopItem()">+</button>
 </div>
 <div id="screen-schedule" class="screen">
-  <div class="header"><div class="header-back" onclick="showScreen('home')">← Home</div><h1>📅 Schedule</h1><p>Care tasks by month</p></div>
-  <div class="month-selector" id="month-selector"></div>
-  <div style="padding:0 20px 8px;display:flex;gap:8px">
-    <select class="form-select" id="sched-filter-type" onchange="renderCurrentSchedule()" style="flex:1;padding:8px 12px;font-size:13px">
-      <option value="all">All Categories</option>
-      <option value="Pruning">✂️ Pruning</option>
-      <option value="Feeding">🌱 Feeding</option>
-      <option value="Watering">💧 Watering</option>
-      <option value="Pest">🐛 Pest</option>
-      <option value="Maintenance">🔧 Maintenance</option>
-    </select>
-    <select class="form-select" id="sched-filter-bed" onchange="renderCurrentSchedule()" style="flex:1;padding:8px 12px;font-size:13px">
-      <option value="all">All Locations</option>
-      <option value="indoor">🪴 Indoor</option>
-    </select>
+  <div id="maint-greeting" class="maint-greeting"></div>
+  <div id="maint-season" class="maint-season"></div>
+  <div class="maint-sub-tab">
+    <div class="maint-sub-btn active" onclick="switchMaintTab('week',this)">This Week</div>
+    <div class="maint-sub-btn" onclick="switchMaintTab('month',this)">Month</div>
+    <div class="maint-sub-btn" onclick="switchMaintTab('planting',this)">Planting</div>
+    <div class="maint-sub-btn" onclick="switchMaintTab('tasks',this)">All Tasks</div>
   </div>
-  <div class="segment" id="sched-tab-bar"><div class="segment-btn active" onclick="filterSchedTab('tasks',this)">Tasks</div><div class="segment-btn" onclick="filterSchedTab('done',this)">Done</div></div>
-  <div class="list-container" id="schedule-list"></div>
+  <div id="maint-week" class="maint-tab-content active"></div>
+  <div id="maint-month" class="maint-tab-content"></div>
+  <div id="maint-planting" class="maint-tab-content"></div>
+  <div id="maint-tasks" class="maint-tab-content" style="padding:0 0 80px">
+    <div class="month-selector" id="month-selector"></div>
+    <div style="padding:0 20px 8px;display:flex;gap:8px">
+      <select class="form-select" id="sched-filter-type" onchange="renderCurrentSchedule()" style="flex:1;padding:8px 12px;font-size:13px">
+        <option value="all">All Categories</option>
+        <option value="Pruning">✂️ Pruning</option>
+        <option value="Feeding">🌱 Feeding</option>
+        <option value="Watering">💧 Watering</option>
+        <option value="Pest">🐛 Pest</option>
+        <option value="Maintenance">🔧 Maintenance</option>
+      </select>
+      <select class="form-select" id="sched-filter-bed" onchange="renderCurrentSchedule()" style="flex:1;padding:8px 12px;font-size:13px">
+        <option value="all">All Locations</option>
+        <option value="indoor">🪴 Indoor</option>
+      </select>
+    </div>
+    <div class="segment" id="sched-tab-bar"><div class="segment-btn active" onclick="filterSchedTab('tasks',this)">Tasks</div><div class="segment-btn" onclick="filterSchedTab('done',this)">Done</div></div>
+    <div class="list-container" id="schedule-list"></div>
+  </div>
 </div>
 <div id="screen-notes" class="screen">
   <div class="header"><div class="header-back" onclick="showScreen('home')">← Home</div><h1>📝 Notes</h1></div>
-  <div class="segment"><div class="segment-btn active" onclick="showNoteTab('notes',this)">Notes</div><div class="segment-btn" onclick="showNoteTab('propagation',this)">Cuttings</div></div>
+  <div class="segment"><div class="segment-btn active" onclick="showNoteTab('notes',this)">Notes</div><div class="segment-btn" onclick="showNoteTab('projects',this)">Projects</div></div>
   <div id="notes-tab"><div class="list-container" id="notes-list"></div></div>
-  <div id="propagation-tab" style="display:none"><div class="list-container" id="prop-list-inline"></div></div>
-  <button class="fab" id="notes-fab" onclick="addNote()">+</button>
+  <div id="projects-tab" style="display:none"><div class="list-container" id="projects-list"></div></div>
+  <button class="fab" id="notes-fab" style="display:none">+</button>
 </div>
 <div id="screen-propagation" class="screen">
   <div class="header"><div class="header-back" onclick="showScreen('home')">← Home</div><h1>🌱 Cuttings</h1></div>
@@ -327,12 +384,17 @@ body{font-family:'DM Sans',sans-serif;background:var(--warm-white);color:var(--t
       <button class="btn-secondary" onclick="forceSyncToGitHub()">⬆️ Force Sync Now</button>
       <button class="btn-secondary" onclick="restoreFromGitHub()">⬇️ Restore from GitHub</button>
     </div>
-    <div style="background:white;border-radius:var(--radius);padding:20px;box-shadow:var(--shadow)">
+    <div style="background:white;border-radius:var(--radius);padding:20px;margin-bottom:16px;box-shadow:var(--shadow)">
       <h3 style="font-family:'Playfair Display',serif;font-size:18px;margin-bottom:8px;color:var(--text-dark)">💾 Local Backup</h3>
       <p style="font-size:13px;color:var(--text-light);margin-bottom:16px">Download all your data as a JSON file. Keep it somewhere safe as a manual backup.</p>
       <button class="btn-primary" onclick="exportDataJSON()">⬇️ Download Backup</button>
       <button class="btn-secondary" onclick="document.getElementById('import-json-input').click()">⬆️ Restore from File</button>
       <input type="file" id="import-json-input" accept=".json" style="display:none" onchange="importDataJSON(event)">
+    </div>
+    <div style="background:white;border-radius:var(--radius);padding:20px;box-shadow:var(--shadow);border:1px solid #f0d0d0">
+      <h3 style="font-family:'Playfair Display',serif;font-size:18px;margin-bottom:8px;color:var(--terracotta)">⚠️ Danger Zone</h3>
+      <p style="font-size:13px;color:var(--text-light);margin-bottom:16px">Wipes all local data and reloads app defaults. GitHub data is not affected — you can restore from GitHub afterwards. Only use this if something is seriously broken.</p>
+      <button class="btn-secondary" style="border-color:var(--terracotta);color:var(--terracotta)" onclick="resetToDefaults()">↺ Reset Local Data</button>
     </div>
   </div>
 </div>
@@ -340,7 +402,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--warm-white);color:var(--t
   <div class="nav-item active" onclick="showScreen('home')" id="nav-home"><span>🏠</span><span>Home</span></div>
   <div class="nav-item" onclick="showScreen('todo')" id="nav-todo"><span>✅</span><span>To-Do</span></div>
   <div class="nav-item" onclick="showScreen('shopping')" id="nav-shopping"><span>🛒</span><span>Shop</span></div>
-  <div class="nav-item" onclick="showScreen('schedule')" id="nav-schedule"><span>📅</span><span>Schedule</span></div>
+  <div class="nav-item" onclick="showScreen('schedule')" id="nav-schedule"><span>🌿</span><span>Maintenance</span></div>
   <div class="nav-item" onclick="showScreen('settings')" id="nav-settings"><span>⚙️</span><span>Settings</span></div>
 </nav>
 <div class="modal-overlay" id="modal-overlay" onclick="closeModal(event)"><div class="modal"><div class="modal-handle"></div><div id="modal-body"></div></div></div>
@@ -364,7 +426,8 @@ function emojiHtml(val,px){
   const e=val||'🌿';
   const resolved=resolveEmoji(e);
   if(resolved){return`<img src="${resolved}" style="width:${px}px;height:${px}px;object-fit:contain;border-radius:4px;display:inline-block;vertical-align:middle">`;}
-  return`<span style="font-size:${px}px;line-height:1">${e}</span>`;
+  const display=e.startsWith('emoji_')?'🌿':e;
+  return`<span style="font-size:${px}px;line-height:1">${display}</span>`;
 }
 // Compresses pasted Genmoji image to 64x64 WebP ~3-6KB
 function compressEmojiImage(src,callback){
@@ -413,9 +476,11 @@ function buildEmojiField(id,val){
   val=val||'🌿';
   const resolved=resolveEmoji(val)||val;
   const isImg=resolved.startsWith('data:');
-  const previewHtml=isImg?`<img src="${resolved}" style="width:36px;height:36px;object-fit:contain;border-radius:4px;display:block">`:`<span style="font-size:28px;line-height:1">${resolved}</span>`;
-  const clearBtn=isImg?`<button type="button" class="btn-secondary emoji-clear-btn" style="margin:0;padding:6px 10px;font-size:11px;width:auto" onclick="clearEmojiField('${id}')">✕ Clear</button>`:'';
-  return`<div class="emoji-field" id="${id}-wrap"><div class="emoji-field-preview" id="${id}-preview">${previewHtml}</div><input class="emoji-field-input" id="${id}" value="${isImg?'':resolved}" placeholder="Type emoji" oninput="syncEmojiPreview('${id}')" style="${isImg?'display:none':''}"><input type="hidden" id="${id}-data" value="${val}"><button type="button" class="btn-secondary" style="margin:0;padding:8px 10px;font-size:15px;width:auto;flex-shrink:0;line-height:1" onclick="pasteGenmoji('${id}')" title="Paste Genmoji">📋</button>${clearBtn}</div>`;
+  const isUnresolvedKey=val.startsWith('emoji_')&&!isImg;
+  const previewHtml=isImg?`<img src="${resolved}" style="width:36px;height:36px;object-fit:contain;border-radius:4px;display:block">`:`<span style="font-size:28px;line-height:1">${isUnresolvedKey?'🌿':resolved}</span>`;
+  const hideInput=isImg||isUnresolvedKey;
+  const clearBtn=(isImg||isUnresolvedKey)?`<button type="button" class="btn-secondary emoji-clear-btn" style="margin:0;padding:6px 10px;font-size:11px;width:auto" onclick="clearEmojiField('${id}')">✕ Clear</button>`:'';
+  return`<div class="emoji-field" id="${id}-wrap"><div class="emoji-field-preview" id="${id}-preview">${previewHtml}</div><input class="emoji-field-input" id="${id}" value="${hideInput?'':resolved}" placeholder="Type emoji" oninput="syncEmojiPreview('${id}')" style="${hideInput?'display:none':''}"><input type="hidden" id="${id}-data" value="${val}"><button type="button" class="btn-secondary" style="margin:0;padding:8px 10px;font-size:15px;width:auto;flex-shrink:0;line-height:1" onclick="pasteGenmoji('${id}')" title="Paste Genmoji">📋</button>${clearBtn}</div>`;
 }
 function getEmojiFieldValue(id){
   const d=document.getElementById(id+'-data');
@@ -687,45 +752,45 @@ const defaultIndoorPlants=[
   {id:'ip34',roomId:'r-house',section:'Kitchen',name:'Mini Jade',scientific:"Crassula ovata 'Minima'",emoji:'💚',status:'alive',water:'Every 2-3 weeks — fully dry between',sun:'Bright indirect to some direct',datePlanted:'',nursery:'',fromCutting:false,notes:'White sheep pot. Moving to office once Rieger Begonias arrive.',maintenance:[{task:'Water only when soil completely dry',months:[1,2,3,4,5,6,7,8,9,10,11,12]},{task:'Feed diluted cactus fertilizer spring-summer only',months:[4,5,6,7,8]}],trouble:[{issue:'Dropping leaves (overwatering)',url:'https://www.google.com/search?q=Dropping%20leaves%20(overwatering)%20plant%20care%20fix'}]},
 ];
 const defaultShopping=[
-  {id:'sf1',name:'Tuberous Begonia Non Stop Orange',bought:false,qty:'15 / 1 flat',size:'Flat',color:'Orange',bed:'Fountain Wall Bed',category:'You Buy — Flat',orderAs:'Tuberous Begonia Non Stop — Orange (Flat)'},
-  {id:'sf2',name:'Tuberous Begonia Non Stop Yellow',bought:false,qty:'11 / 1 flat',size:'Flat',color:'Yellow',bed:'Front Bed Left x6 · Front Bed Right x5',category:'You Buy — Flat',orderAs:'Tuberous Begonia Non Stop — Yellow (Flat)'},
-  {id:'sf3',name:'Impatiens White',bought:false,qty:'54 / 3 flats',size:'Flat',color:'White',bed:'Front of planter x18 · Back Bed Right curve x18 · Back Bed Left curve x18',category:'You Buy — Flat',orderAs:'Impatiens — White (Flat)'},
-  {id:'sf4',name:'Coleus Dark Purple',bought:false,qty:'8 / 1 flat',size:'Flat',color:'Dark purple',bed:'Back Bed Right interior filler',category:'You Buy — Flat',orderAs:'Coleus — Dark Purple (Flat)'},
-  {id:'sf5',name:'Torenia White/Purple',bought:false,qty:'8 / 1 flat',size:'Flat',color:'White with purple markings',bed:'Back Bed Right interior filler',category:'You Buy — Flat',orderAs:'Torenia — White/Purple (Flat)'},
-  {id:'si1',name:'Oxalis triangularis Purple',bought:false,qty:'5',size:'Smallest',color:'Purple',bed:'Redwood Bed',category:'You Buy — Individual',orderAs:'Oxalis triangularis — Purple (Smallest)'},
-  {id:'si2',name:'Dahlia Magenta/Hot Pink',bought:false,qty:'4',size:'Smallest',color:'Magenta/hot pink',bed:'BBQ Bed',category:'You Buy — Individual',orderAs:'Dahlia — Magenta/Hot Pink (Smallest)'},
-  {id:'si3',name:'Helleborus Burgundy/Plum',bought:false,qty:'4',size:'Smallest',color:'Burgundy/plum',bed:'Front Bed Left x2 · Redwood Bed x2',category:'You Buy — Individual',orderAs:'Helleborus — Burgundy/Plum (Smallest)'},
-  {id:'si4',name:'Helleborus Blush Pink',bought:false,qty:'2',size:'Smallest',color:'Blush pink',bed:'Front Bed Left x1 · Redwood Bed x1',category:'You Buy — Individual',orderAs:'Helleborus — Blush Pink (Smallest)'},
-  {id:'si5',name:"Heucherella Alabama Sunrise",bought:false,qty:'6',size:'Smallest',color:'Gold with red veins',bed:'Front Bed Left x3 · Maple Bed x3',category:'You Buy — Individual',orderAs:"Heucherella 'Alabama Sunrise' (Smallest)"},
-  {id:'si6',name:"Heucherella Buttered Rum",bought:false,qty:'9',size:'Smallest',color:'Caramel/mahogany',bed:'Front Bed Left x3 · Front Bed Right x6',category:'You Buy — Individual',orderAs:"Heucherella 'Buttered Rum' (Smallest)"},
-  {id:'si7',name:"Tiarella Spring Symphony",bought:false,qty:'8',size:'Smallest',color:'Green with dark markings',bed:'Front Bed Left x3 · Back Bed Right x5',category:'You Buy — Individual',orderAs:"Tiarella 'Spring Symphony' (Smallest)"},
-  {id:'si8',name:'Rieger Begonia',bought:false,qty:'1',size:'4" pot',color:'Coral or orange',bed:'Kitchen windowsill indoor',category:'You Buy — Individual',orderAs:'Rieger Begonia — Coral or Orange (4" pot)'},
-  {id:'si9',name:'Tuberous Begonia trailing',bought:false,qty:'2',size:'Smallest',color:'TBD at nursery',bed:'Porch planters',category:'You Buy — Individual',orderAs:'Tuberous Begonia trailing — TBD (Smallest)'},
-  {id:'gf1',name:"Lamium White Nancy",bought:false,qty:'33 / 2 flats',size:'Flat',color:'Silver/white',bed:'Front Bed Left x12 · Front Bed Right x6 · Maple Bed x9 · Cherry Bed x6',category:'Gardener — Flat',orderAs:"Lamium 'White Nancy' — Silver/White (Flat)"},
-  {id:'gi1',name:"Abelia Kaleidoscope",bought:false,qty:'12',size:'3-gallon',color:'—',bed:'Front Bed Left x3 · Front Bed Right x3 · Maple Bed x3 · Cherry Bed x3',category:'Gardener — Individual',orderAs:"Abelia 'Kaleidoscope' (3-gallon)"},
-  {id:'gi2',name:"Loropetalum Purple Daydream",bought:false,qty:'5',size:'2-gallon',color:'Deep purple',bed:'Front Bed Left x3 · Front Bed Right x2',category:'Gardener — Individual',orderAs:"Loropetalum 'Purple Daydream' — Deep Purple (2-gallon)"},
-  {id:'gi3',name:"Bergenia Bressingham Ruby",bought:false,qty:'3',size:'1-gallon',color:'Magenta flowers',bed:'Front Bed Left — left of Viburnum',category:'Gardener — Individual',orderAs:"Bergenia 'Bressingham Ruby' — Magenta (1-gallon)"},
-  {id:'gi4',name:'Viburnum davidii',bought:false,qty:'1',size:'3-gallon',color:'—',bed:'Front Bed Left — center anchor',category:'Gardener — Individual',orderAs:'Viburnum davidii (3-gallon)'},
-  {id:'gi5',name:'Sarcococca confusa',bought:false,qty:'1',size:'3-gallon',color:'—',bed:'Front Bed Left — far left corner',category:'Gardener — Individual',orderAs:'Sarcococca confusa (3-gallon)'},
-  {id:'gi6',name:'Breath of Heaven',bought:false,qty:'1',size:'2-gallon',color:'Standard green — confirm matches existing',bed:'Front Bed Left — middle zone',category:'Gardener — Individual',orderAs:'Breath of Heaven — Standard Green (2-gallon)'},
-  {id:'gi7',name:'Black Mondo',bought:false,qty:'25',size:'1-gallon',color:'—',bed:'Front Bed Left x11 · Front Bed Right x5 · Maple Bed x6 · Cherry Bed x3',category:'Gardener — Individual',orderAs:'Black Mondo (1-gallon)'},
-  {id:'gi8',name:"Carex Ice Dance",bought:false,qty:'8',size:'4"',color:'—',bed:'Front Bed Left x5 · Maple Bed x3',category:'Gardener — Individual',orderAs:"Carex 'Ice Dance' (4\")"},
-  {id:'gi9',name:"Salvia Amistad",bought:false,qty:'10',size:'1-gallon',color:'—',bed:'BBQ Bed x3 · Main Arbor x1 · Side Arbor x3 · Pepper Side x3',category:'Gardener — Individual',orderAs:"Salvia 'Amistad' (1-gallon)"},
-  {id:'gi10',name:"Verbena Lollipop",bought:false,qty:'4',size:'4"',color:'Purple compact',bed:'BBQ Bed',category:'Gardener — Individual',orderAs:"Verbena bonariensis 'Lollipop' — Purple (4\")"},
-  {id:'gi11',name:"Double Knock Out Rose White Out",bought:false,qty:'2',size:'2-gallon',color:'White double',bed:'Fountain Wall Bed',category:'Gardener — Individual',orderAs:"Double Knock Out Rose 'White Out' — White (2-gallon)"},
-  {id:'gi12',name:'Double Knock Out Rose Pink',bought:false,qty:'3',size:'3-gallon',color:'Pink double',bed:'Side Arbor',category:'Gardener — Individual',orderAs:'Double Knock Out Rose — Pink (3-gallon)'},
-  {id:'gi13',name:"Fuchsia Gartenmeister Bonstedt",bought:false,qty:'8',size:'4"',color:'Red/orange',bed:'Fountain Wall Bed — 12-15 inch spacing',category:'Gardener — Individual',orderAs:"Fuchsia 'Gartenmeister Bonstedt' — Red/Orange (4\")"},
-  {id:'gi14',name:'Fatsia japonica',bought:false,qty:'2',size:'2-gallon',color:'Standard green',bed:'Back Bed Right x1 · Back Bed Left x1',category:'Gardener — Individual',orderAs:'Fatsia japonica — Standard Green (2-gallon)'},
-  {id:'gi15',name:"Encore Azalea White",bought:false,qty:'3',size:'3-gallon',color:'White',bed:'Back Bed Right x2 · Back Bed Left x1',category:'Gardener — Individual',orderAs:"Encore Azalea 'Encore' — White (3-gallon)"},
-  {id:'gi16',name:"Japanese Anemone Honorine Jobert",bought:false,qty:'1',size:'3-gallon',color:'White',bed:'Back Bed Right',category:'Gardener — Individual',orderAs:"Japanese Anemone 'Honorine Jobert' — White (3-gallon)"},
-  {id:'gi17',name:"Empress Wu Hosta",bought:false,qty:'1',size:'3-gallon',color:'—',bed:'Back Bed Right',category:'Gardener — Individual',orderAs:"Empress Wu Hosta (3-gallon)"},
-  {id:'gi18',name:"Liriope muscari Big Blue",bought:false,qty:'12',size:'4"',color:'Purple spikes',bed:'Back Bed Right x6 · Back Bed Left x6',category:'Gardener — Individual',orderAs:"Liriope muscari 'Big Blue' — Purple spikes (4\")"},
-  {id:'gi19',name:'Boston Ivy',bought:false,qty:'1',size:'1-gallon',color:'—',bed:'Back Bed Left — climbing fence',category:'Gardener — Individual',orderAs:'Boston Ivy (1-gallon)'},
-  {id:'gi20',name:'Passiflora caerulea',bought:false,qty:'4',size:'3-gallon',color:'White/blue-purple',bed:'Side Arbor fence — evenly spaced 35ft',category:'Gardener — Individual',orderAs:'Passiflora caerulea — White/Blue-Purple (3-gallon)'},
-  {id:'gi21',name:'Western Sword Fern',bought:false,qty:'13',size:'1-gallon',color:'—',bed:'Redwood Bed x10 · Maple Bed x3',category:'Gardener — Individual',orderAs:'Western Sword Fern (1-gallon)'},
-  {id:'gi22',name:"Blackberry Triple Crown Thornless",bought:false,qty:'2',size:'1-gallon',color:'Natchez as backup',bed:'Pepper Side',category:'Gardener — Individual',orderAs:"Blackberry 'Triple Crown Thornless' (1-gallon)"},
-  {id:'gi23',name:"Raspberry Bababerry",bought:false,qty:'1',size:'1-gallon',color:'Heritage as backup',bed:'Pepper Side',category:'Gardener — Individual',orderAs:"Raspberry 'Bababerry' (1-gallon)"},
-  {id:'gi24',name:'Gypsum',bought:false,qty:'1 bag',size:'40lb',color:'—',bed:'Front beds — mix into planting holes',category:'Gardener — Individual',orderAs:'Gypsum (40lb bag)'},
+  {id:'sf1',name:'Tuberous Begonia Non Stop Orange',bought:false,qty:'15 / 1 flat',bed:'Fountain Wall Bed'},
+  {id:'sf2',name:'Tuberous Begonia Non Stop Yellow',bought:false,qty:'11 / 1 flat',bed:'Front Bed Left x6 · Front Bed Right x5'},
+  {id:'sf3',name:'Impatiens White',bought:false,qty:'54 / 3 flats',bed:'Front of planter x18 · Back Bed Right curve x18 · Back Bed Left curve x18'},
+  {id:'sf4',name:'Coleus Dark Purple',bought:false,qty:'8 / 1 flat',bed:'Back Bed Right interior filler'},
+  {id:'sf5',name:'Torenia White/Purple',bought:false,qty:'8 / 1 flat',bed:'Back Bed Right interior filler'},
+  {id:'si1',name:'Oxalis triangularis Purple',bought:false,qty:'5',bed:'Redwood Bed'},
+  {id:'si2',name:'Dahlia Magenta/Hot Pink',bought:false,qty:'4',bed:'BBQ Bed'},
+  {id:'si3',name:'Helleborus Burgundy/Plum',bought:false,qty:'4',bed:'Front Bed Left x2 · Redwood Bed x2'},
+  {id:'si4',name:'Helleborus Blush Pink',bought:false,qty:'2',bed:'Front Bed Left x1 · Redwood Bed x1'},
+  {id:'si5',name:'Heucherella Alabama Sunrise',bought:false,qty:'6',bed:'Front Bed Left x3 · Maple Bed x3'},
+  {id:'si6',name:'Heucherella Buttered Rum',bought:false,qty:'9',bed:'Front Bed Left x3 · Front Bed Right x6'},
+  {id:'si7',name:'Tiarella Spring Symphony',bought:false,qty:'8',bed:'Front Bed Left x3 · Back Bed Right x5'},
+  {id:'si8',name:'Rieger Begonia',bought:false,qty:'1',bed:'Kitchen windowsill indoor',notes:'Coral or orange'},
+  {id:'si9',name:'Tuberous Begonia trailing',bought:false,qty:'2',bed:'Porch planters'},
+  {id:'gf1',name:'Lamium White Nancy',bought:false,qty:'33 / 2 flats',bed:'Front Bed Left x12 · Front Bed Right x6 · Maple Bed x9 · Cherry Bed x6'},
+  {id:'gi1',name:'Abelia Kaleidoscope',bought:false,qty:'12',bed:'Front Bed Left x3 · Front Bed Right x3 · Maple Bed x3 · Cherry Bed x3'},
+  {id:'gi2',name:'Loropetalum Purple Daydream',bought:false,qty:'5',bed:'Front Bed Left x3 · Front Bed Right x2'},
+  {id:'gi3',name:'Bergenia Bressingham Ruby',bought:false,qty:'3',bed:'Front Bed Left — left of Viburnum'},
+  {id:'gi4',name:'Viburnum davidii',bought:false,qty:'1',bed:'Front Bed Left — center anchor'},
+  {id:'gi5',name:'Sarcococca confusa',bought:false,qty:'1',bed:'Front Bed Left — far left corner'},
+  {id:'gi6',name:'Breath of Heaven',bought:false,qty:'1',bed:'Front Bed Left — middle zone'},
+  {id:'gi7',name:'Black Mondo',bought:false,qty:'25',bed:'Front Bed Left x11 · Front Bed Right x5 · Maple Bed x6 · Cherry Bed x3'},
+  {id:'gi8',name:'Carex Ice Dance',bought:false,qty:'8',bed:'Front Bed Left x5 · Maple Bed x3'},
+  {id:'gi9',name:'Salvia Amistad',bought:false,qty:'10',bed:'BBQ Bed x3 · Main Arbor x1 · Side Arbor x3 · Pepper Side x3'},
+  {id:'gi10',name:'Verbena Lollipop',bought:false,qty:'4',bed:'BBQ Bed'},
+  {id:'gi11',name:'Double Knock Out Rose White Out',bought:false,qty:'2',bed:'Fountain Wall Bed'},
+  {id:'gi12',name:'Double Knock Out Rose Pink',bought:false,qty:'3',bed:'Side Arbor'},
+  {id:'gi13',name:'Fuchsia Gartenmeister Bonstedt',bought:false,qty:'8',bed:'Fountain Wall Bed — 12-15 inch spacing'},
+  {id:'gi14',name:'Fatsia japonica',bought:false,qty:'2',bed:'Back Bed Right x1 · Back Bed Left x1'},
+  {id:'gi15',name:'Encore Azalea White',bought:false,qty:'3',bed:'Back Bed Right x2 · Back Bed Left x1'},
+  {id:'gi16',name:'Japanese Anemone Honorine Jobert',bought:false,qty:'1',bed:'Back Bed Right'},
+  {id:'gi17',name:'Empress Wu Hosta',bought:false,qty:'1',bed:'Back Bed Right'},
+  {id:'gi18',name:'Liriope muscari Big Blue',bought:false,qty:'12',bed:'Back Bed Right x6 · Back Bed Left x6'},
+  {id:'gi19',name:'Boston Ivy',bought:false,qty:'1',bed:'Back Bed Left — climbing fence'},
+  {id:'gi20',name:'Passiflora caerulea',bought:false,qty:'4',bed:'Side Arbor fence — evenly spaced 35ft'},
+  {id:'gi21',name:'Western Sword Fern',bought:false,qty:'13',bed:'Redwood Bed x10 · Maple Bed x3'},
+  {id:'gi22',name:'Blackberry Triple Crown Thornless',bought:false,qty:'2',bed:'Pepper Side',notes:'Natchez as backup'},
+  {id:'gi23',name:'Raspberry Bababerry',bought:false,qty:'1',bed:'Pepper Side',notes:'Heritage as backup'},
+  {id:'gi24',name:'Gypsum',bought:false,qty:'1 bag',bed:'Front beds — mix into planting holes'},
 ];
 
 const defaultTodos=[
@@ -863,7 +928,7 @@ function checkYearReset(){
   }catch(e){}
 }
 
-let S={beds:[],plants:[],todos:[],shopping:[],notes:[],gardenNote:'',propagation:[],irrigation:[],rooms:[],indoorPlants:[],currentBed:null,currentPlant:null,currentYard:'front',currentRoom:null,todoFilter:'pending',shopFilter:'needed',bedFilter:'all',plantSource:null,_noteTimer:null};
+let S={beds:[],plants:[],todos:[],shopping:[],notes:[],gardenNote:'',propagation:[],irrigation:[],projects:[],rooms:[],indoorPlants:[],currentBed:null,currentPlant:null,currentYard:'front',currentRoom:null,todoFilter:'pending',shopFilter:'needed',bedFilter:'all',plantSource:null,_noteTimer:null};
 let imageCache={};   // emoji key → base64 DataUri (synced to garden-images.json)
 let photoRefs={};    // photo key → GitHub raw URL (synced to garden-data.json)
 let _ghImagesSha=null;
@@ -899,14 +964,14 @@ const defaultBeds=[
 // Static schedule - care only, no planting tasks
 const staticSchedule={
   1:[{cat:'Bougainvillea',title:'Prepare for bougainvillea cutback',desc:'Late Jan/early Feb. White Stripe — wait until after it blooms.',indoor:false},{cat:'Hydrangea',title:'Deadwood removal on hydrangeas only',desc:'Side Arbor mophead and oakleaf. Remove dead/crossing stems only — no hard cutback.',indoor:false}],
-  2:[{cat:'Bougainvillea',title:'Bougainvillea cutback',desc:'White Stripe: cut 1/3 after bloom finishes. Feed balanced fertilizer after.',indoor:false},{cat:'Trumpet Vine',title:'Hard prune Distictis buccinatoria',desc:'Cut back to framework on Fountain Wall stone. Flowers on new wood — no bloom lost. Feed after.',indoor:false}],
-  3:[{cat:'Feeding',title:'First fertilizer of season',desc:'Apply slow release balanced fertilizer to all established beds.',indoor:false},{cat:'Fatsia',title:'Cut back Fatsia + take cuttings',desc:'Cut to desired height. Take 6-8 stem cuttings with rooting hormone.',indoor:false},{cat:'Hydrangea',title:'Feed hydrangeas',desc:'Azalea fertilizer to all hydrangeas in Side Arbor. Deadwood only — no hard prune.',indoor:false},{cat:'Citrus',title:'Feed citrus',desc:'Orange Tree + Lemon: citrus fertilizer. Feb, May, August schedule.',indoor:false},{cat:'Indoor',title:'Resume feeding all indoor plants',desc:'Monthly liquid fertilizer as days lengthen.',indoor:true},{cat:'Indoor',title:'Repot root-bound houseplants',desc:'Check Monstera, Pothos, ZZ Plant for roots escaping drainage.',indoor:true}],
+  2:[{cat:'Bougainvillea',title:'Bougainvillea cutback',desc:"White Stripe: cut 1/3 after bloom finishes. Feed Jack's 20-20-20 after.",indoor:false},{cat:'Trumpet Vine',title:'Hard prune Distictis buccinatoria',desc:'Cut back to framework on Fountain Wall stone. Flowers on new wood — no bloom lost. Feed after.',indoor:false}],
+  3:[{cat:'Feeding',title:'First fertilizer of season',desc:"Apply Jack's 20-20-20 to all established beds. Camellia fertilizer to camellias, hydrangeas and azaleas.",indoor:false},{cat:'Fatsia',title:'Cut back Fatsia + take cuttings',desc:'Cut to desired height. Take 6-8 stem cuttings with rooting hormone.',indoor:false},{cat:'Hydrangea',title:'Feed hydrangeas',desc:'Azalea fertilizer to all hydrangeas in Side Arbor. Deadwood only — no hard prune.',indoor:false},{cat:'Citrus',title:'Feed citrus',desc:'Orange Tree + Lemon: citrus fertilizer. Feb, May, August schedule.',indoor:false},{cat:'Indoor',title:'Resume feeding all indoor plants',desc:'Monthly liquid fertilizer as days lengthen.',indoor:true},{cat:'Indoor',title:'Repot root-bound houseplants',desc:'Check Monstera, Pothos, ZZ Plant for roots escaping drainage.',indoor:true}],
   4:[{cat:'Geranium',title:'Deadhead geraniums aggressively',desc:'Fountain Wall Bed — remove every spent bloom for continuous flowering.',indoor:false},{cat:'Trumpet Vine',title:'Train Distictis new growth onto wall',desc:'New shoots pushing — tie to wall immediately to build structure.',indoor:false},{cat:'Fruit Trees',title:'Start fruit tree watering schedule',desc:'Orange + Apricot every 2 weeks. Persimmon + Pomegranate monthly. Cherry + Plum every 2 weeks.',indoor:false}],
-  5:[{cat:'Geranium',title:'Cut back geraniums hard after spring flush',desc:'Fountain Wall Bed. Cut by half to two thirds. Feed high phosphorus after.',indoor:false},{cat:'Azalea',title:'Light prune Encore Azaleas after spring bloom',desc:'Back Bed Right and Left — light tidy only after spring flowering.',indoor:false},{cat:'Iceberg',title:'Train Iceberg rose on Side Arbor',desc:'Tie canes horizontally to arbor structure while still flexible.',indoor:false}],
-  6:[{cat:'Pest',title:'Monitor for powdery mildew on roses',desc:'Cool nights + warm days = prime conditions. Neem oil spray if spotted.',indoor:false},{cat:'Feeding',title:'Feed dahlias high phosphorus',desc:'BBQ Bed + Back Rose Bed dahlias. Every 3-4 weeks through August.',indoor:false},{cat:'Fruit Trees',title:'Increase fruit tree watering',desc:'All trees every 2 weeks. Rainier Cherry weekly. Check soil first.',indoor:false},{cat:'Indoor',title:'Check all indoor plants for spider mites',desc:'Hot dry conditions = spider mite season. Check leaf undersides. Neem oil if found.',indoor:true}],
+  5:[{cat:'Geranium',title:'Cut back geraniums hard after spring flush',desc:'Fountain Wall Bed. Cut by half to two thirds. Feed Super Bloom after.',indoor:false},{cat:'Azalea',title:'Light prune Encore Azaleas after spring bloom',desc:'Back Bed Right and Left — light tidy only after spring flowering.',indoor:false},{cat:'Iceberg',title:'Train Iceberg rose on Side Arbor',desc:'Tie canes horizontally to arbor structure while still flexible.',indoor:false}],
+  6:[{cat:'Pest',title:'Monitor for powdery mildew on roses',desc:'Cool nights + warm days = prime conditions. Neem oil spray if spotted.',indoor:false},{cat:'Feeding',title:'Feed dahlias Super Bloom',desc:'BBQ Bed + Back Rose Bed dahlias. Super Bloom every 3-4 weeks through August.',indoor:false},{cat:'Lawn',title:'Apply grub killer to lawn',desc:'Annual June application. Follow product label for timing and rate.',indoor:false},{cat:'Fruit Trees',title:'Increase fruit tree watering',desc:'All trees every 2 weeks. Rainier Cherry weekly. Check soil first.',indoor:false},{cat:'Indoor',title:'Check all indoor plants for spider mites',desc:'Hot dry conditions = spider mite season. Check leaf undersides. Neem oil if found.',indoor:true}],
   7:[{cat:'Salvia',title:'Cut back Salvia Amistad if leggy',desc:'All beds (BBQ, Main Arbor, Side Arbor, Pepper Side) — cut by 1/3. Reblooms in 3 weeks.',indoor:false},{cat:'Dahlias',title:'Deadhead dahlias continuously',desc:'BBQ Bed + Back Rose Bed. Check every 3-4 days.',indoor:false},{cat:'Fruit Trees',title:'Peak summer fruit tree watering',desc:'ALL trees every 2 weeks. Rainier Cherry + Plum weekly. Heat wave = extra water for Cherry.',indoor:false},{cat:'Bougainvillea',title:'Feed White Stripe bougainvillea',desc:'Super Bloom half strength to MOIST soil only. Monthly.',indoor:false},{cat:'Indoor',title:'Prayer Plant: mist daily',desc:'Hot dry summer air. Daily misting critical.',indoor:true}],
   8:[{cat:'Hydrangea',title:'Prune hydrangeas AFTER flowering',desc:'Side Arbor mophead + oakleaf — ONLY after flowering complete. Never hard cutback.',indoor:false},{cat:'Bougainvillea',title:'Cut back White Stripe bougainvillea',desc:'After flowering. Cut by 1/3.',indoor:false},{cat:'Fruit Trees',title:'Continue weekly Rainier Cherry + Plum watering',desc:'Most critical month. Water stress = cracking and drop.',indoor:false},{cat:'Berries',title:'Remove old fruited raspberry + blackberry canes',desc:'After harvest — cut old canes to ground.',indoor:false},{cat:'Indoor',title:'Christmas Cactus: begin drought stress',desc:'Reduce watering now. Cool nights + drought triggers Nov/Dec bloom.',indoor:true}],
-  9:[{cat:'Feeding',title:'Last fertilizer of season',desc:'Low nitrogen slow release to all outdoor beds.',indoor:false},{cat:'Fruit Trees',title:'Reduce fruit tree watering',desc:'Temps dropping. Persimmon + Pomegranate back to monthly.',indoor:false},{cat:'Indoor',title:'Reduce fertilizer — all indoor plants',desc:'Growth slowing — stop feeding until March.',indoor:true}],
+  9:[{cat:'Feeding',title:'Last fertilizer of season',desc:"Low-nitrogen application to all outdoor beds — Jack's 20-20-20 at 1/2 strength or skip nitrogen-heavy plants.",indoor:false},{cat:'Fruit Trees',title:'Reduce fruit tree watering',desc:'Temps dropping. Persimmon + Pomegranate back to monthly.',indoor:false},{cat:'Indoor',title:'Reduce fertilizer — all indoor plants',desc:'Growth slowing — stop feeding until March.',indoor:true}],
   10:[{cat:'Hydrangea',title:'Move mophead hydrangeas if needed',desc:'October/November ideal. Water in with seaweed solution.',indoor:false},{cat:'Indoor',title:'Christmas Cactus: 12+ hours darkness nightly',desc:'4 weeks triggers buds. Keep in unused room 12hrs per night.',indoor:true},{cat:'Indoor',title:'Orchids: watch for bloom spike',desc:'Cool fall nights trigger new spike. Do not move once spike appears.',indoor:true}],
   11:[{cat:'Geranium',title:'Final geranium cutback',desc:'After last flush. Hard cutback. Last cutback of season.',indoor:false},{cat:'Hosta',title:'Cut back Empress Wu Hosta dead foliage',desc:'As it dies back for winter. Mark location.',indoor:false},{cat:'Indoor',title:'Christmas Cactus buds should be visible',desc:'Move back to bright spot — do not move again once buds set.',indoor:true},{cat:'Irrigation',title:'Reduce all irrigation',desc:'Bay Area rains beginning. Reduce all zone run times.',indoor:false}],
   12:[{cat:'Indoor',title:'Christmas Cactus in bloom',desc:'Keep away from drafts. Do not move. Water when top inch dry.',indoor:true},{cat:'Sarcococca',title:'Enjoy Sarcococca fragrant winter flowers',desc:'Front Bed Left far left corner. Intensely fragrant white flowers. No action needed.',indoor:false}],
@@ -1002,7 +1067,7 @@ let _ghSha=null;
 async function syncToGitHub(){
   if(!ghConfigured())return;
   const sched={};for(let m=1;m<=12;m++){try{const v=localStorage.getItem('sc'+m);if(v)sched[m]=JSON.parse(v);}catch(e){}}
-  const data={rooms:S.rooms,beds:S.beds,plants:S.plants,indoorPlants:S.indoorPlants,todos:S.todos,shopping:S.shopping,notes:S.notes,gardenNote:S.gardenNote,propagation:S.propagation,irrigation:S.irrigation,photoRefs,schedChecked:sched,syncedAt:new Date().toISOString()};
+  const data={rooms:S.rooms,beds:S.beds,plants:S.plants,indoorPlants:S.indoorPlants,todos:S.todos,shopping:S.shopping,notes:S.notes,gardenNote:S.gardenNote,propagation:S.propagation,irrigation:S.irrigation,projects:S.projects,photoRefs,schedChecked:sched,syncedAt:new Date().toISOString()};
   const newSha=await ghWriteFile(data,_ghSha);
   if(newSha){
     _ghSha=newSha;
@@ -1050,7 +1115,11 @@ async function _deletePhotoFromGitHub(key){
 async function loadAllPhotos(){
   if(!Object.keys(photoRefs).length)return;
   await Promise.all(Object.entries(photoRefs).map(async([key,url])=>{
-    if(imageCache[key])return; // already loaded
+    if(imageCache[key])return; // already loaded (from garden-images.json)
+    // For emoji keys, prefer localStorage — captures unsync'd uploads from before last reload
+    if(key.startsWith('emoji_')){
+      try{const ls=localStorage.getItem('garden_img_'+key);if(ls&&ls.startsWith('data:')){imageCache[key]=ls;scheduleSyncImages();return;}}catch(e){}
+    }
     try{
       const r=await fetch(url+'?v='+Date.now());
       if(r.ok){const text=await r.text();if(text.startsWith('data:'))imageCache[key]=text;}
@@ -1127,8 +1196,10 @@ async function loadFromGitHub(){
   if(d.notes)S.notes=d.notes;
   if(d.propagation)S.propagation=d.propagation;
   if(d.irrigation)S.irrigation=d.irrigation;
+  if(d.projects)S.projects=d.projects;
   if(d.gardenNote!==undefined)S.gardenNote=d.gardenNote;
-  if(d.photoRefs)photoRefs=d.photoRefs;
+  const loadedRefs=d.photoRefs&&Object.keys(d.photoRefs).length?d.photoRefs:d.imageRefs;
+  if(loadedRefs&&Object.keys(loadedRefs).length)photoRefs=loadedRefs;
   if(d.schedChecked){Object.entries(d.schedChecked).forEach(([m,v])=>{try{localStorage.setItem('sc'+m,JSON.stringify(v));}catch(e){}});}
   return true;
 }
@@ -1198,7 +1269,7 @@ async function restoreFromGitHub(){
 }
 
 function exportDataJSON(){
-  const data={rooms:S.rooms,beds:S.beds,plants:S.plants,indoorPlants:S.indoorPlants,todos:S.todos,shopping:S.shopping,notes:S.notes,gardenNote:S.gardenNote,propagation:S.propagation,irrigation:S.irrigation,exportedAt:new Date().toISOString()};
+  const data={rooms:S.rooms,beds:S.beds,plants:S.plants,indoorPlants:S.indoorPlants,todos:S.todos,shopping:S.shopping,notes:S.notes,gardenNote:S.gardenNote,propagation:S.propagation,irrigation:S.irrigation,projects:S.projects,exportedAt:new Date().toISOString()};
   const a=document.createElement('a');
   a.href=URL.createObjectURL(new Blob([JSON.stringify(data,null,2)],{type:'application/json'}));
   a.download='garden-backup-'+new Date().toISOString().split('T')[0]+'.json';
@@ -1220,6 +1291,7 @@ function importDataJSON(e){
       if(d.notes)S.notes=d.notes;
       if(d.propagation)S.propagation=d.propagation;
       if(d.irrigation)S.irrigation=d.irrigation;
+      if(d.projects)S.projects=d.projects;
       if(d.gardenNote!==undefined)S.gardenNote=d.gardenNote;
       await save();
       updateHomeCounts();
@@ -1257,6 +1329,7 @@ async function init(){
       S.gardenNote=await DB.get('gardenNote')||'';
       S.propagation=await DB.get('propagation')||defaultPropagation;
       S.irrigation=await DB.get('irrigation')||[];
+      S.projects=await DB.get('projects')||[];
     }
   }
   await DB.set('dataVersion',DATA_VERSION);
@@ -1275,7 +1348,7 @@ async function init(){
     'Double Knock Out Rose Pink':'Rose','Existing Rose':'Rose',
     'Sunburst Rose Bush':'Rose','English Rose David Austin':'Rose',
     'Double Knock Out Rose White Out':'Rose',
-    'Dwarf Lemon Tree':'Citrus Tree','Orange Tree':'Citrus Tree',
+    'Dwarf Lemon Tree':'Citrus Tree',
     'Plum Espalier':'Espalier','Rainier Cherry Espalier':'Espalier',
   };
   [...S.plants,...S.indoorPlants].forEach(function(plant){
@@ -1312,6 +1385,14 @@ async function init(){
   });}catch(e){}
   if(_imgMigrated)syncImagesToGitHub();
   await loadAllPhotos();
+  // Recover emoji images still missing (no photoRefs entry) from localStorage
+  let _localRecovered=false;
+  [...S.plants,...S.indoorPlants].forEach(function(p){
+    if(!p.emoji||!p.emoji.startsWith('emoji_'))return;
+    if(imageCache[p.emoji])return;
+    try{const ls=localStorage.getItem('garden_img_'+p.emoji);if(ls&&ls.startsWith('data:')){imageCache[p.emoji]=ls;_localRecovered=true;}}catch(e){}
+  });
+  if(_localRecovered)scheduleSyncImages();
   await save();
   migratePlantCategories();
   updateHomeCounts();
@@ -1330,6 +1411,7 @@ async function save(){
   await DB.set('gardenNote',S.gardenNote);
   await DB.set('propagation',S.propagation);
   await DB.set('irrigation',S.irrigation);
+  await DB.set('projects',S.projects);
   syncToGitHub();
 }
 function showScreen(name){
@@ -1346,7 +1428,7 @@ function showScreen(name){
   if(name==='propagation')renderPropagation();
   if(name==='irrigation')renderIrrigation();
   if(name==='allplants')renderAllPlants('');
-  if(name==='schedule'){renderScheduleMonths();setTimeout(()=>document.querySelector('.month-chip.active')?.scrollIntoView({behavior:'smooth',inline:'center'}),100);}
+  if(name==='schedule'){renderMaintenanceHome();setTimeout(()=>document.querySelector('.month-chip.active')?.scrollIntoView({behavior:'smooth',inline:'center'}),100);}
   if(name==='settings')loadGitHubSettingsUI();
 }
 function updateHomeCounts(){
@@ -1364,12 +1446,12 @@ function updateYardCounts(){
 }
 function showYard(yard){
   S.currentYard=yard;
-  const beds=S.beds.filter(b=>b.yard===yard).sort((a,b)=>a.order-b.order);
+  const beds=S.beds.filter(b=>b.yard===yard).sort((a,b)=>(a.order||99)-(b.order||99));
   document.getElementById('yard-title').textContent=yard==='front'?'🏡 Front Yard':'🌿 Back Yard';
   document.getElementById('yard-subtitle').textContent=`${beds.length} beds`;
   document.getElementById('yard-beds-list').innerHTML=beds.length===0?'<div class="empty-state"><span>🌱</span><p>No beds yet.</p></div>':
     beds.map(bed=>{
-      const c=S.plants.filter(p=>p.bedId===bed.id).length;
+      const c=S.plants.filter(p=>p.bedId===bed.id&&p.status!=='dead').length;
       const img=DB.getImg('bed_'+bed.id);
       return`<div class="list-item" onclick="showBed('${bed.id}')"><div class="list-item-icon">${img?`<img src="${img}">`:(bed.icon||'🌿')}</div><div class="list-item-info"><h3>${bed.name}</h3><p>${c} plant${c!==1?'s':''} · ${bed.sun||'—'}</p></div><div class="list-item-arrow">›</div></div>`;
     }).join('');
@@ -1424,7 +1506,7 @@ function showBed(bedId){
 }
 function renderBedPlants(filter){
   const bedId=S.currentBed.id;
-  const allPlants=S.plants.filter(p=>p.bedId===bedId);
+  const allPlants=S.plants.filter(p=>p.bedId===bedId&&p.status!=='dead');
   console.log('renderBedPlants: bed='+bedId+' filter='+filter+' total plants='+S.plants.length+' matching='+allPlants.length);
   const filtered=filter==='all'?allPlants:allPlants.filter(p=>(p.status||'alive')===filter);
   const alive=allPlants.filter(p=>(p.status||'alive')==='alive'||p.status==='struggling').length;
@@ -1433,7 +1515,7 @@ function renderBedPlants(filter){
   document.getElementById('bed-plant-count').textContent=alive;
   document.getElementById('bed-planned-count').textContent=planned;
   const rbtn=document.getElementById('reorder-btn');
-  if(rbtn){rbtn.textContent=_reorderMode?'✓ Done':'⇅ Reorder';rbtn.style.background=_reorderMode?'var(--sage-dark)':'';rbtn.style.color=_reorderMode?'white':'var(--sage-dark)';}
+  if(rbtn){rbtn.classList.toggle('active',_reorderMode);}
   document.getElementById('bed-plants-list').innerHTML=filtered.length===0?'<div class="empty-state"><span>🌱</span><p>No plants here yet.</p></div>':
     filtered.map(p=>{
       const handle=_reorderMode?`<div class="drag-handle" ontouchstart="_dragHandleStart(event,'${p.id}')">☰</div>`:'';
@@ -1490,9 +1572,11 @@ function _dragEnd(){
   const list=document.getElementById('bed-plants-list');
   const newOrder=[...list.querySelectorAll('.plant-card[data-plant-id]')].map(c=>c.dataset.plantId);
   const bedId=S.currentBed.id;
-  const bedPlants=newOrder.map(id=>S.plants.find(p=>p.id===id)).filter(Boolean);
+  const allBedPlants=S.plants.filter(p=>p.bedId===bedId);
+  const shownInOrder=newOrder.map(id=>allBedPlants.find(p=>p.id===id)).filter(Boolean);
+  const notShown=allBedPlants.filter(p=>!newOrder.includes(p.id));
   const others=S.plants.filter(p=>p.bedId!==bedId);
-  S.plants=[...others,...bedPlants];
+  S.plants=[...others,...shownInOrder,...notShown];
   _drag=null;
   save();
 }
@@ -1505,8 +1589,8 @@ function showEditBedModal(){
 }
 function saveEditBed(){const b=S.beds.find(x=>x.id===S.currentBed.id);if(!b)return;b.name=document.getElementById('eb-name').value;b.icon=document.getElementById('eb-icon').value;b.zone=document.getElementById('eb-zone').value;b.sun=document.getElementById('eb-sun').value;b.notes=document.getElementById('eb-notes').value;S.currentBed=b;save();closeModal();showBed(b.id);}
 function removeBedImage(){const k='bed_'+S.currentBed.id;delete imageCache[k];try{localStorage.removeItem('garden_img_'+k);}catch(e){}if(photoRefs[k]){_deletePhotoFromGitHub(k);delete photoRefs[k];save();}closeModal();showBed(S.currentBed.id);}
-function showIndoorPlant(id){const p=S.indoorPlants.find(x=>x.id===id);if(!p)return;if(S.plantSource!=='allplants')S.plantSource=null;S.currentPlant={...p,isIndoor:true};renderPlantDetail(p,true);showScreen('plant');}
-function showOutdoorPlant(id){const p=S.plants.find(x=>x.id===id);if(!p)return;if(S.plantSource!=='allplants')S.plantSource=null;S.currentPlant={...p,isIndoor:false};renderPlantDetail(p,false);showScreen('plant');}
+function showIndoorPlant(id){const p=S.indoorPlants.find(x=>x.id===id);if(!p)return;if(S.plantSource!=='allplants'&&S.plantSource!=='schedule')S.plantSource=null;S.currentPlant={...p,isIndoor:true};renderPlantDetail(p,true);showScreen('plant');}
+function showOutdoorPlant(id){const p=S.plants.find(x=>x.id===id);if(!p)return;if(S.plantSource!=='allplants'&&S.plantSource!=='schedule')S.plantSource=null;S.currentPlant={...p,isIndoor:false};renderPlantDetail(p,false);showScreen('plant');}
 function renderPlantDetail(plant,isIndoor){
   document.getElementById('plant-hero').innerHTML=emojiHtml(plant.emoji,80);
   document.getElementById('plant-detail-name').textContent=plant.name;
@@ -1545,7 +1629,11 @@ function showMovePlantModal(id){
 }
 function updateMoveSections(roomId){const room=S.rooms.find(r=>r.id===roomId);document.getElementById('move-section').innerHTML=(room?.sections||['Other']).map(s=>`<option value="${s}">${s}</option>`).join('');}
 function saveMovePlant(id){const p=S.indoorPlants.find(x=>x.id===id);if(!p)return;p.roomId=document.getElementById('move-room').value;p.section=document.getElementById('move-section').value;save();closeModal();showIndoorPlant(id);}
-function goBackFromPlant(){if(S.plantSource==='allplants'){S.plantSource=null;showScreen('allplants');}else if(S.currentPlant?.isIndoor&&S.currentRoom)showRoom(S.currentRoom.id);else if(S.currentBed)showBed(S.currentBed.id);else showScreen('home');}
+function goBackFromPlant(){if(S.plantSource==='allplants'){S.plantSource=null;showScreen('allplants');}else if(S.plantSource==='schedule'){S.plantSource=null;showScreen('schedule');}else if(S.currentPlant?.isIndoor&&S.currentRoom)showRoom(S.currentRoom.id);else if(S.currentBed)showBed(S.currentBed.id);else showScreen('home');}
+function navToSchedPlant(plantName,isIndoor){
+  if(isIndoor){const p=S.indoorPlants.find(x=>x.name===plantName);if(!p)return;S.currentRoom=S.rooms.find(r=>r.id===p.roomId)||null;S.plantSource='schedule';showIndoorPlant(p.id);}
+  else{const p=S.plants.find(x=>x.name===plantName);if(!p)return;S.currentBed=S.beds.find(b=>b.id===p.bedId)||null;S.plantSource='schedule';showOutdoorPlant(p.id);}
+}
 function editPlant(){
   const p=S.currentPlant;
   const isIndoor=p.isIndoor;
@@ -1753,30 +1841,367 @@ function renderShopping(filter){
   document.getElementById('shop-count').textContent=`${needed} item${needed!==1?'s':''} to buy`;
   const list=document.getElementById('shop-list');
   if(items.length===0){list.innerHTML=`<div class="empty-state"><span>🛒</span><p>${filter==='needed'?'Shopping list is clear!':'Nothing bought yet.'}</p></div>`;return;}
-  const cats=['You Buy — Flat','You Buy — Individual','Gardener — Flat','Gardener — Individual'];
-  const catLabels={'You Buy — Flat':'🛍️ You Buy — Flats','You Buy — Individual':'🛍️ You Buy — Individual','Gardener — Flat':'👷 Gardener Buys — Flats','Gardener — Individual':'👷 Gardener Buys — Individual'};
-  list.innerHTML=cats.map(cat=>{
-    const catItems=items.filter(s=>(s.category||'Gardener — Individual')===cat);
-    if(!catItems.length)return'';
-    return`<div class="shop-section-header">${catLabels[cat]}</div>${catItems.map(s=>`<div class="shop-item"><div class="todo-check ${s.bought?'checked':''}" onclick="toggleShop('${s.id}')">${s.bought?'✓':''}</div><div style="flex:1"><div style="font-size:14px;font-weight:500;${s.bought?'text-decoration:line-through;color:var(--text-light)':'color:var(--text-dark)'}">${s.orderAs||s.name}</div><div style="font-size:11px;color:var(--text-light);margin-top:2px">${s.qty||''} · ${s.size||''}</div>${s.color&&s.color!=='—'?`<div style="font-size:11px;color:var(--terracotta);margin-top:2px">🎨 ${s.color}</div>`:''}${s.bed?`<div style="font-size:11px;color:var(--text-light);margin-top:2px">📍 ${s.bed}</div>`:''}</div><div class="todo-delete" onclick="deleteShop('${s.id}')">×</div></div>`).join('')}`;
-  }).join('');
+  list.innerHTML=items.map(s=>`<div class="shop-item"><div class="todo-check ${s.bought?'checked':''}" onclick="toggleShop('${s.id}')">${s.bought?'✓':''}</div><div style="flex:1;cursor:pointer" onclick="editShopItem('${s.id}')"><div style="font-size:14px;font-weight:500;${s.bought?'text-decoration:line-through;color:var(--text-light)':'color:var(--text-dark)'}">${s.name}</div>${s.qty?`<div style="font-size:11px;color:var(--text-light);margin-top:2px">Qty: ${s.qty}</div>`:''}${s.bed?`<div style="font-size:11px;color:var(--text-light);margin-top:2px">📍 ${s.bed}</div>`:''}${s.notes?`<div style="font-size:11px;color:var(--text-light);margin-top:2px">${s.notes}</div>`:''}</div><div class="todo-delete" onclick="deleteShop('${s.id}')">×</div></div>`).join('');
 }
 function filterShop(f,btn){document.querySelectorAll('#screen-shopping .segment-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');renderShopping(f);}
 function toggleShop(id){const s=S.shopping.find(s=>s.id===id);if(s){s.bought=!s.bought;save();renderShopping(S.shopFilter);}}
 function deleteShop(id){S.shopping=S.shopping.filter(s=>s.id!==id);save();renderShopping(S.shopFilter);}
-function addShopItem(){
-  document.getElementById('modal-body').innerHTML=`<h3>Add to Shopping List</h3><div class="form-group"><label class="form-label">Plant Name *</label><input class="form-input" id="new-shop"></div><div class="form-group"><label class="form-label">Order As</label><input class="form-input" id="shop-order-as"></div><div class="form-group"><label class="form-label">Qty</label><input class="form-input" id="shop-qty"></div><div class="form-group"><label class="form-label">Size</label><input class="form-input" id="shop-size"></div><div class="form-group"><label class="form-label">Color</label><input class="form-input" id="shop-color"></div><div class="form-group"><label class="form-label">For which bed?</label><input class="form-input" id="shop-bed"></div><div class="form-group"><label class="form-label">Buyer</label><select class="form-select" id="shop-cat"><option value="Gardener — Individual">Gardener — Individual</option><option value="Gardener — Flat">Gardener — Flat</option><option value="You Buy — Individual">You Buy — Individual</option><option value="You Buy — Flat">You Buy — Flat</option></select></div><button class="btn-primary" onclick="saveShopItem()">Add</button><button class="btn-secondary" onclick="closeModal()">Cancel</button>`;
+function editShopItem(id){
+  const s=S.shopping.find(x=>x.id===id);if(!s)return;
+  document.getElementById('modal-body').innerHTML=`<h3>Edit Item</h3><div class="form-group"><label class="form-label">Plant Name</label><input class="form-input" id="esi-name" value="${s.name||''}"></div><div class="form-group"><label class="form-label">Qty</label><input class="form-input" id="esi-qty" value="${s.qty||''}"></div><div class="form-group"><label class="form-label">For which bed?</label><input class="form-input" id="esi-bed" value="${s.bed||''}"></div><div class="form-group"><label class="form-label">Notes</label><input class="form-input" id="esi-notes" value="${s.notes||''}"></div><button class="btn-primary" onclick="saveShopItemEdit('${id}')">Save</button><button class="btn-secondary" onclick="closeModal()">Cancel</button>`;
   document.getElementById('modal-overlay').classList.add('active');
 }
-function saveShopItem(){const name=document.getElementById('new-shop').value.trim();if(!name)return;S.shopping.push({id:'s'+Date.now(),name,orderAs:document.getElementById('shop-order-as').value||name,qty:document.getElementById('shop-qty').value,size:document.getElementById('shop-size').value,color:document.getElementById('shop-color').value,bed:document.getElementById('shop-bed').value,category:document.getElementById('shop-cat').value,bought:false});save();closeModal();renderShopping('needed');}
+function saveShopItemEdit(id){
+  const s=S.shopping.find(x=>x.id===id);if(!s)return;
+  s.name=document.getElementById('esi-name').value;
+  s.qty=document.getElementById('esi-qty').value;
+  s.bed=document.getElementById('esi-bed').value;
+  s.notes=document.getElementById('esi-notes').value;
+  save();closeModal();renderShopping(S.shopFilter);
+}
+function addShopItem(){
+  document.getElementById('modal-body').innerHTML=`<h3>Add to Shopping List</h3><div class="form-group"><label class="form-label">Plant Name *</label><input class="form-input" id="new-shop"></div><div class="form-group"><label class="form-label">Qty</label><input class="form-input" id="shop-qty"></div><div class="form-group"><label class="form-label">For which bed?</label><input class="form-input" id="shop-bed"></div><div class="form-group"><label class="form-label">Notes</label><input class="form-input" id="shop-notes"></div><button class="btn-primary" onclick="saveShopItem()">Add</button><button class="btn-secondary" onclick="closeModal()">Cancel</button>`;
+  document.getElementById('modal-overlay').classList.add('active');
+}
+function saveShopItem(){const name=document.getElementById('new-shop').value.trim();if(!name)return;S.shopping.push({id:'s'+Date.now(),name,qty:document.getElementById('shop-qty').value,bed:document.getElementById('shop-bed').value,notes:document.getElementById('shop-notes').value,bought:false});save();closeModal();renderShopping('needed');}
 function exportShoppingList(){
   const items=S.shopping.filter(s=>!s.bought);
-  const cats=['You Buy — Flat','You Buy — Individual','Gardener — Flat','Gardener — Individual'];
-  const catLabels={'You Buy — Flat':'YOU BUY — FLATS','You Buy — Individual':'YOU BUY — INDIVIDUAL','Gardener — Flat':'GARDENER BUYS — FLATS','Gardener — Individual':'GARDENER BUYS — INDIVIDUAL'};
   let text='GARDEN SHOPPING LIST\n'+`Generated: ${new Date().toLocaleDateString('en-US',{month:'long',day:'numeric',year:'numeric'})}\n`+'='.repeat(50)+'\n\n';
-  cats.forEach(cat=>{const catItems=items.filter(s=>(s.category||'Gardener — Individual')===cat);if(!catItems.length)return;text+=catLabels[cat]+':\n'+'-'.repeat(30)+'\n';catItems.forEach(s=>{text+=`• ${s.orderAs||s.name}\n  Qty: ${s.qty||'—'} | Size: ${s.size||'—'}\n  Color: ${s.color&&s.color!=='—'?s.color:'—'}\n  For: ${s.bed||'—'}\n\n`;});});
+  items.forEach(s=>{text+=`• ${s.name}\n  Qty: ${s.qty||'—'} | For: ${s.bed||'—'}${s.notes?'\n  '+s.notes:''}\n\n`;});
   const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([text],{type:'text/plain'}));a.download='garden-shopping-list.txt';document.body.appendChild(a);a.click();document.body.removeChild(a);
 }
+// ── MAINTENANCE HOME DATA ────────────────────────────────────────────────────
+const monthBriefings={
+  1:{greeting:"January — let your garden rest",season:"Mid-winter · pruning season",insights:[
+    {icon:"✂️",text:"Rose pruning window is open — hard prune to outward-facing buds. Do all bush, tree, and climbing roses now."},
+    {icon:"🍑",text:"Prune deciduous fruit trees while dormant: apricot, Rainier cherry, plum espalier, dwarf fig."},
+    {icon:"💤",text:"Skip outdoor fertilizing — beds are dormant. Resume in March."},
+    {icon:"🌸",text:"Camellias and Daphne in bloom — no action needed, just enjoy the winter colour."},
+    {icon:"📋",text:"Good time to plan: order dahlia starts and summer annuals (begonias, impatiens, calibrachoa, coleus) for April planting."},
+  ],rhythm:{indoor:"Monthly feeding on hold until March",outdoor:"No feeding — beds dormant",exceptions:["Skip all outdoor fertilizing Jan–Feb"]}},
+  2:{greeting:"February — first signs of life",season:"Late winter · prune before growth",insights:[
+    {icon:"✂️",text:"Bougainvillea: cut back by 1/3 after bloom finishes. Distictis: hard prune to framework on Fountain Wall — flowers on new wood, no loss."},
+    {icon:"🌹",text:"Finish rose pruning if not done in January. Feed Jack's 20-20-20 after pruning."},
+    {icon:"🫐",text:"Raspberries + blackberries: first feed of season — Jack's 20-20-20 as new canes begin to emerge."},
+    {icon:"🐌",text:"Slugs are active as things warm up — bait around Hosta now, before damage starts."},
+    {icon:"🌿",text:"Hellebores + Daphne at peak — remove old leaves around hellebores to show off the blooms."},
+  ],rhythm:{indoor:"Resume light feeding late Feb as days lengthen",outdoor:"No general feeding yet — targeted only (berries, roses post-prune)",exceptions:["Still too early for most outdoor beds"]}},
+  3:{greeting:"March — the garden wakes up",season:"Early spring · first feed of the year",insights:[
+    {icon:"🌱",text:"First fertilizer of season: Jack's 20-20-20 to all established beds. Camellia fertilizer to camellias, all hydrangeas, and azaleas."},
+    {icon:"🍋",text:"Citrus first feed of year (Feb–Mar window). Feed again in May and August."},
+    {icon:"🪴",text:"Hosta emerging — mark location, don't disturb soil, bait slugs immediately around new growth."},
+    {icon:"✂️",text:"Fatsia: cut back to desired height and take 6–8 stem cuttings with rooting hormone."},
+    {icon:"🌿",text:"Resume monthly indoor feeding as days lengthen. Repot any root-bound houseplants now."},
+  ],rhythm:{indoor:"Resume mid-month feeding",outdoor:"End-of-month: first outdoor feed of year",exceptions:[]}},
+  4:{greeting:"April — planting season begins",season:"Spring · summer annual swap",insights:[
+    {icon:"🌸",text:"Summer annual swap time: begonias, impatiens, calibrachoa, coleus go in now. Porch planters: tuberous begonias + trailing fuchsia."},
+    {icon:"🌺",text:"Compact dahlias (BBQ bed — new starts each year) and cannas in once soil is warm. Caladiums follow in late April/May."},
+    {icon:"💜",text:"Bougainvillea: begin Super Bloom feeding (half strength, to moist soil) monthly through September."},
+    {icon:"🌹",text:"Roses: deadheading season opens — outward-facing bud, 45° cut, every 2 weeks."},
+    {icon:"🫛",text:"Peas and snap peas approaching harvest — pick regularly to keep plants producing."},
+  ],rhythm:{indoor:"Mid-month feeding",outdoor:"End-of-month: Jack's 20-20-20 + Camellia fertilizer to acid-lovers",exceptions:["Wisteria: no nitrogen — only Super Bloom after first flush"]}},
+  5:{greeting:"May — everything is growing fast",season:"Late spring · training season",insights:[
+    {icon:"✂️",text:"Geraniums (Fountain Wall): cut back hard after spring flush, feed Super Bloom immediately after."},
+    {icon:"🌿",text:"Wisteria: cut new side shoots to 5 leaves — never cut main structural canes. No nitrogen fertilizer."},
+    {icon:"🌹",text:"Iceberg rose: train canes horizontally onto Side Arbor while still flexible."},
+    {icon:"💜",text:"Encore Azaleas: light prune after spring bloom only — never in fall or winter."},
+    {icon:"🌿",text:"Catmint + English Lavender: cut back hard after first flush to encourage strong second bloom."},
+  ],rhythm:{indoor:"Mid-month feeding",outdoor:"End-of-month: Jack's 20-20-20 all beds",exceptions:["Wisteria: Super Bloom after first flush ONLY — no other nitrogen","Herb beds: light feed or skip — lavender + rosemary prefer lean soil"]}},
+  6:{greeting:"June — peak season in full swing",season:"Early summer · harvest begins",insights:[
+    {icon:"🌹",text:"Roses at peak — deadhead every 2 weeks. Powdery mildew season: cool nights + warm days. Neem oil at first sign on leaf undersides."},
+    {icon:"🌺",text:"Dahlias (BBQ + Back Rose bed): begin Super Bloom every 3–4 weeks through August."},
+    {icon:"🍑",text:"Apricot approaching harvest — check weekly. Rainier cherry most critical: water weekly, stress causes cracking and drop."},
+    {icon:"🫐",text:"Raspberry + blackberry harvest approaching. Harvest regularly to keep producing."},
+    {icon:"🌿",text:"Lawn: annual grub killer application this month."},
+    {icon:"🔍",text:"Leaf yellowing? All-over paleness = nitrogen (Jack's 20-20-20). Yellowing between green veins on camellias/hydrangeas = iron chlorosis (use acidifier). Burned tips = over-fertilizing, flush with water."},
+  ],rhythm:{indoor:"Mid-month feeding",outdoor:"End-of-month: Jack's 20-20-20 + Super Bloom for dahlias + bougainvillea",exceptions:["Wisteria: no nitrogen now — skip end-of-month feed for wisteria bed"]}},
+  7:{greeting:"July — summer at full height",season:"Mid-summer · keep on top of deadheading",insights:[
+    {icon:"✂️",text:"Salvia Amistad (all beds): cut back 1/3 if leggy — reblooms vigorously in 3 weeks. Catmint: second cutback if leggy."},
+    {icon:"🌺",text:"Dahlias: deadhead every 3–4 days. Compact dahlias (BBQ) at peak — keep feeding and deadheading consistently."},
+    {icon:"🍑",text:"Fruit trees: most critical watering month. Rainier cherry + plum weekly — heat stress = cracking and drop."},
+    {icon:"🐛",text:"Indoor plants: check for spider mites on leaf undersides — hot dry conditions are prime mite season. Neem oil if found."},
+    {icon:"🌿",text:"Fuchsia (Fountain Wall): deadhead daily during peak bloom, feed Super Bloom every 2 weeks."},
+  ],rhythm:{indoor:"Mid-month feeding",outdoor:"End-of-month: Jack's 20-20-20 + Super Bloom for dahlias",exceptions:["Wisteria: no nitrogen — skip"]}},
+  8:{greeting:"August — prune the hydrangeas now",season:"Late summer · critical pruning window",insights:[
+    {icon:"✂️",text:"Hydrangeas: prune ONLY after flowering is complete — mophead + oakleaf in all beds. Never in fall or winter. This is the only window."},
+    {icon:"✂️",text:"Camellia: light prune after flowering (Aug–Sep). Bougainvillea: cut back 1/3 after main flowering."},
+    {icon:"🫐",text:"Berries: remove old fruited raspberry and blackberry canes after harvest. Cut to ground."},
+    {icon:"🌺",text:"Dahlias still at peak — heavy deadheading every 3–4 days. Super Bloom feeding ongoing."},
+    {icon:"🌵",text:"Indoor: begin drought stress for Christmas cactus — reduce watering now to trigger November bloom."},
+  ],rhythm:{indoor:"Mid-month feeding. Begin Christmas cactus drought",outdoor:"End-of-month: last big outdoor feed — Jack's 20-20-20",exceptions:[]}},
+  9:{greeting:"September — season starts to wind down",season:"Early fall · last fertilizer",insights:[
+    {icon:"🌱",text:"Last fertilizer of season: Jack's 20-20-20 at half strength to all outdoor beds. Camellia fertilizer to acid-lovers."},
+    {icon:"🌸",text:"Japanese Anemone in bloom — one of the best plants in the garden this month. No action needed."},
+    {icon:"🌺",text:"Encore Azalea third bloom cycle — feed Camellia fertilizer after bloom."},
+    {icon:"🌿",text:"Day lilies: good month to divide overcrowded clumps if needed."},
+    {icon:"🍊",text:"Reduce fruit tree watering as temperatures drop. Persimmon developing nicely."},
+  ],rhythm:{indoor:"Last mid-month feeding of season — stop until March",outdoor:"End-of-month: last feed",exceptions:["After this month — no more outdoor feeding until March"]}},
+  10:{greeting:"October — making room for winter",season:"Mid-fall · swap annuals out",insights:[
+    {icon:"🌺",text:"Compact dahlias (BBQ bed): pull after first cold snap — these are annuals, replace fresh next spring. Back Rose bed dahlia: leave, it'll die back and return."},
+    {icon:"🌸",text:"Summer annuals winding down: pull impatiens, calibrachoa, coleus. Replace with pansies, snapdragons, cyclamen for winter colour."},
+    {icon:"🪴",text:"Caladiums + cannas: Bay Area is mild enough — leave in place and mulch well. No need to lift."},
+    {icon:"🌿",text:"Hydrangeas: best window to relocate if you want to move any plants this year."},
+    {icon:"🌸",text:"Camellias beginning to bud up. Indoor: Christmas cactus darkness treatment — 12 hrs/night for 4 weeks triggers blooms."},
+  ],rhythm:{indoor:"No feeding",outdoor:"No feeding — winding down",exceptions:["Skip all fertilizing this month and through February"]}},
+  11:{greeting:"November — the quiet season",season:"Late fall · clean up and wind down",insights:[
+    {icon:"✂️",text:"Hosta: cut back dead foliage as it dies. Mark locations so you don't disturb them in spring. Shasta Daisy + Day Lilies: cut foliage to ground."},
+    {icon:"🌿",text:"Hellebores: remove old leaves to showcase the winter flowers starting to emerge."},
+    {icon:"✂️",text:"Geraniums (Fountain Wall): final cutback for the season."},
+    {icon:"💧",text:"Irrigation: reduce all zone run times as Bay Area rains begin."},
+    {icon:"🌸",text:"Camellias beginning to bloom. Daphne: first intensely fragrant flowers appearing."},
+  ],rhythm:{indoor:"No feeding until March",outdoor:"No feeding",exceptions:[]}},
+  12:{greeting:"December — a quiet, fragrant garden",season:"Winter · planning season",insights:[
+    {icon:"🌸",text:"Camellias in full bloom — enjoy, deadwood removal only if needed. Sarcococca (Front Bed Left): intensely fragrant white flowers. Daphne: peak winter fragrance."},
+    {icon:"💤",text:"All beds dormant or near-dormant — skip outdoor feeding entirely until March."},
+    {icon:"🌵",text:"Indoor: Christmas cactus at peak bloom — keep away from drafts, don't move once in bloom."},
+    {icon:"📋",text:"Planning time: choose summer annuals for April swap, order new dahlia starts (compact for BBQ bed), decide on any new beds or changes."},
+    {icon:"🌹",text:"Rose pruning window opens January — no need to rush, but note what needs attention."},
+  ],rhythm:{indoor:"No feeding",outdoor:"No feeding — dormant",exceptions:["Resume indoor feeding in late February as days lengthen","Outdoor feeding resumes March"]}}
+};
+
+const plantingGuide=[
+  {months:[1,2],label:"Winter Planning",icon:"📋",season:"winter",items:[
+    "Order summer annual starts (begonias, impatiens, calibrachoa, coleus) for April planting",
+    "Order compact dahlia starts for BBQ bed (x4 — new plants each year)",
+    "Plan any new beds or changes while garden is quiet",
+  ]},
+  {months:[3],label:"Early Spring Prep",icon:"🌱",season:"spring",items:[
+    "Check summer annuals are ordered and arriving in time for April",
+    "Prepare porch planters for tuberous begonias + trailing fuchsia",
+    "Pick up fresh dahlia starts if not ordered — look for compact varieties",
+  ]},
+  {months:[4],label:"Summer Annual Swap",icon:"🌸",season:"spring",items:[
+    "🏠 Porch: tuberous begonias (yellow with abutilon, red with fuchsia) + trailing fuchsia",
+    "🌿 Fountain Wall: calibrachoa fills gaps",
+    "🌿 Back Beds: impatiens white along curves (Back Right + Back Left)",
+    "🌿 Main Arbor: portulaca in sunny spots",
+    "🌺 BBQ Bed: compact dahlias x4 (magenta/hot pink — annual replacement)",
+    "🌿 Cannas + Caladiums in once soil is warm",
+    "🌿 Coleus on porch or shaded spots",
+  ]},
+  {months:[5],label:"Late-Planting Window",icon:"⏰",season:"spring",items:[
+    "Last chance for summer annuals — anything not in yet, get in by mid-May",
+    "Caladiums: go in as soil warms above 60° — later than other summer plants is fine",
+  ]},
+  {months:[9,10],label:"Fall Swap — Cool Season",icon:"🍂",season:"fall",items:[
+    "Pull summer annuals as they fade: impatiens, calibrachoa, coleus",
+    "Replace with pansies, snapdragons, cyclamen (shade spots) for winter colour",
+    "Compact dahlias (BBQ): pull after first cold snap — annual, replace in April",
+    "Leave cannas + caladiums in place — Bay Area mild enough, just mulch well",
+  ]},
+  {months:[11,12],label:"Winter Interest",icon:"❄️",season:"winter",items:[
+    "Camellias, Daphne, Sarcococca carry winter interest — no planting needed",
+    "Consider adding a hellebore or two if shaded spots need winter colour",
+    "Order next year's summer annuals once favorites are confirmed",
+  ]},
+];
+
+// ── MAINTENANCE COMPLETION TRACKING ─────────────────────────────────────────
+function getMaintDone(){
+  const yr=new Date().getFullYear();
+  const mo=new Date().getMonth()+1;
+  try{return JSON.parse(localStorage.getItem('md_'+yr+'_'+mo)||'{}');}catch(e){return {};}
+}
+function setMaintTaskDone(key,done){
+  const yr=new Date().getFullYear();
+  const mo=new Date().getMonth()+1;
+  const d=getMaintDone();
+  if(done)d[key]=true;else delete d[key];
+  try{localStorage.setItem('md_'+yr+'_'+mo,JSON.stringify(d));}catch(e){}
+  renderMaintWeek();
+}
+function getMaintProgress(){
+  const mo=new Date().getMonth()+1;
+  const tasks=buildWeekTasks(mo);
+  const done=getMaintDone();
+  const total=tasks.reduce((n,g)=>n+g.tasks.length,0);
+  const doneCount=tasks.reduce((n,g)=>n+g.tasks.filter(t=>done[t.key]).length,0);
+  return{total,done:doneCount};
+}
+
+// ── MAINTENANCE RENDERING ────────────────────────────────────────────────────
+let currentMaintTab='week';
+function switchMaintTab(tab,btn){
+  currentMaintTab=tab;
+  document.querySelectorAll('.maint-sub-btn').forEach(b=>b.classList.remove('active'));
+  if(btn)btn.classList.add('active');
+  document.querySelectorAll('.maint-tab-content').forEach(c=>c.classList.remove('active'));
+  document.getElementById('maint-'+tab).classList.add('active');
+  if(tab==='week')renderMaintWeek();
+  else if(tab==='month')renderMaintMonth();
+  else if(tab==='planting')renderMaintPlanting();
+  else if(tab==='tasks')renderScheduleMonths();
+}
+
+function buildWeekTasks(month){
+  // Collect all tasks for month, grouped by task type + text (consolidated)
+  const taskMap={};
+  const now=new Date();
+  const dayOfMonth=now.getDate();
+  // Classify bucket: weekend, midmonth, endofmonth, ongoing
+  function bucket(taskText,cat,isIndoor){
+    const t=taskText.toLowerCase();
+    if(isIndoor){
+      if(t.includes('feed')||t.includes('fertiliz'))return'midmonth';
+      return'ongoing';
+    }
+    if(t.includes('feed')||t.includes('fertiliz'))return'endofmonth';
+    if(t.includes('prune')||t.includes('cutback')||t.includes('cut back')||t.includes('deadhead')||t.includes('trim')||t.includes('train')||t.includes('divide')||t.includes('plant')||t.includes('lift'))return'weekend';
+    if(t.includes('pest')||t.includes('monitor')||t.includes('mite')||t.includes('slug')||t.includes('neem')||t.includes('check for'))return'ongoing';
+    if(t.includes('water')||t.includes('moist')||t.includes('drip'))return'ongoing';
+    return'weekend';
+  }
+  function taskType(taskText){
+    const t=taskText.toLowerCase();
+    if(t.includes('prune')||t.includes('cutback')||t.includes('cut back')||t.includes('deadhead')||t.includes('trim'))return'prune';
+    if(t.includes('feed')||t.includes('fertiliz'))return'feed';
+    if(t.includes('pest')||t.includes('mite')||t.includes('slug')||t.includes('neem')||t.includes('monitor')||t.includes('check for'))return'pest';
+    if(t.includes('water')||t.includes('moist')||t.includes('drip'))return'water';
+    if(t.includes('plant')||t.includes('swap')||t.includes('replace'))return'plant';
+    return'tidy';
+  }
+  const allPlants=[...S.plants.filter(p=>p.status==='alive'||p.status==='struggling'),...S.indoorPlants.filter(p=>p.status==='alive'||p.status==='struggling')];
+  allPlants.forEach(p=>{
+    const isIndoor=!!S.indoorPlants.find(x=>x.id===p.id);
+    (p.maintenance||[]).forEach(m=>{
+      if(!(m.months||[]).includes(month))return;
+      const b=bucket(m.task,p.category,isIndoor);
+      const type=taskType(m.task);
+      // Group by task text (consolidated across plants)
+      const key=b+'|'+m.task;
+      if(!taskMap[key])taskMap[key]={bucket:b,type,task:m.task,plants:[],isIndoor,key:'wk_'+month+'_'+encodeURIComponent(m.task).slice(0,40)};
+      taskMap[key].plants.push(p.name);
+    });
+  });
+  // Add static schedule tasks
+  (staticSchedule[month]||[]).forEach(t=>{
+    const b=t.indoor?'ongoing':bucket(t.title,'',false);
+    const type=taskType(t.title);
+    const key=b+'|'+t.title;
+    if(!taskMap[key])taskMap[key]={bucket:b,type,task:t.title,plants:[],isIndoor:t.indoor,isStatic:true,desc:t.desc,key:'wk_'+month+'_'+encodeURIComponent(t.title).slice(0,40)};
+  });
+  // Build buckets
+  const groups=[
+    {id:'weekend',label:'🌿 This Weekend',items:[]},
+    {id:'midmonth',label:'🪴 Mid-Month · Indoor Feeding',items:[]},
+    {id:'endofmonth',label:'🌱 End of Month · Outdoor Feeding',items:[]},
+    {id:'ongoing',label:'👀 Ongoing This Month',items:[]},
+  ];
+  Object.values(taskMap).forEach(t=>{
+    const g=groups.find(g=>g.id===t.bucket);
+    if(g)g.items.push(t);
+  });
+  // Consolidate feeding: group all "Feed Jack's 20-20-20" plants into one
+  groups.forEach(g=>{
+    const feedGroups={};
+    g.items=g.items.filter(t=>{
+      if(t.type==='feed'&&!t.isStatic&&t.plants.length>0){
+        const product=t.task.match(/Jack's 20-20-20|Camellia fertilizer|Super Bloom|bonemeal|blood meal|citrus fertilizer|palm fertilizer/i)?.[0]||'fertilizer';
+        const pk=g.id+'_feed_'+product.toLowerCase().replace(/\s/g,'_');
+        if(!feedGroups[pk])feedGroups[pk]={...t,key:'wk_'+month+'_feed_'+product.replace(/\s/g,''),plants:[],task:'Feed '+product};
+        feedGroups[pk].plants.push(...t.plants);
+        return false;
+      }
+      return true;
+    });
+    g.items.push(...Object.values(feedGroups));
+    // Deduplicate by task text
+    const seen=new Set();
+    g.items=g.items.filter(t=>{if(seen.has(t.task))return false;seen.add(t.task);return true;});
+  });
+  return groups.filter(g=>g.items.length>0).map(g=>({...g,tasks:g.items}));
+}
+
+function renderMaintWeek(){
+  const mo=new Date().getMonth()+1;
+  const groups=buildWeekTasks(mo);
+  const done=getMaintDone();
+  const chipClass={prune:'chip-prune',feed:'chip-feed',pest:'chip-pest',water:'chip-water',plant:'chip-plant',tidy:'chip-tidy'};
+  const chipLabel={prune:'Prune',feed:'Feed',pest:'Pest',water:'Water',plant:'Plant',tidy:'Tidy'};
+  const prog=getMaintProgress();
+  let html='';
+  if(prog.total>0){
+    const pct=Math.round(prog.done/prog.total*100);
+    html+=`<div class="maint-card" style="margin-bottom:12px"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px"><span style="font-size:13px;font-weight:500;color:var(--text-dark)">${prog.done} of ${prog.total} tasks done this month</span><span style="font-size:12px;color:var(--sage-dark);font-weight:600">${pct}%</span></div><div class="progress-bar-wrap"><div class="progress-bar-fill" style="width:${pct}%"></div></div></div>`;
+  }
+  groups.forEach(g=>{
+    html+=`<div class="maint-card"><div class="maint-card-title">${g.label}</div>`;
+    g.tasks.forEach(t=>{
+      const isDone=!!done[t.key];
+      const plantCount=t.plants.length;
+      const plantStr=plantCount===0?'':(plantCount===1?t.plants[0]:`${t.plants[0]} +${plantCount-1} more`);
+      html+=`<div class="maint-task-row">
+        <div class="maint-task-check ${isDone?'done':''}" onclick="setMaintTaskDone('${t.key.replace(/'/g,"\\'")}',${!isDone})">${isDone?'✓':''}</div>
+        <div class="maint-task-body">
+          <div class="maint-task-name ${isDone?'done':''}">${t.task}<span class="maint-type-chip ${chipClass[t.type]||'chip-tidy'}">${chipLabel[t.type]||'Task'}</span></div>
+          ${plantStr?`<div class="maint-task-sub">${plantStr}</div>`:''}
+          ${t.desc?`<div class="maint-task-sub">${t.desc}</div>`:''}
+        </div>
+      </div>`;
+    });
+    html+='</div>';
+  });
+  if(!html)html='<div class="empty-state"><span>🌿</span><p>No tasks for this month.</p></div>';
+  document.getElementById('maint-week').innerHTML=html;
+}
+
+function renderMaintMonth(){
+  const mo=new Date().getMonth()+1;
+  const b=monthBriefings[mo];
+  if(!b){document.getElementById('maint-month').innerHTML='<div class="empty-state"><span>📅</span><p>No briefing for this month.</p></div>';return;}
+  const exText=b.rhythm.exceptions.length?`<div style="margin-top:8px;font-size:11px;color:var(--terracotta)">${b.rhythm.exceptions.map(e=>`⚠️ ${e}`).join('<br>')}</div>`:'';
+  let html=`<div class="maint-card">
+    <div class="maint-card-title">Rhythm</div>
+    <div class="rhythm-row"><span class="rhythm-icon">💧</span><div><div class="rhythm-label">Indoor watering</div><div class="rhythm-note">Weekly — check soil by feel, water when top inch is dry</div></div></div>
+    <div class="rhythm-row"><span class="rhythm-icon">🪴</span><div><div class="rhythm-label">Indoor feeding</div><div class="rhythm-note">${b.rhythm.indoor}</div></div><div class="rhythm-badge">~15th</div></div>
+    <div class="rhythm-row"><span class="rhythm-icon">🌿</span><div><div class="rhythm-label">Outdoor feeding</div><div class="rhythm-note">${b.rhythm.outdoor}</div></div><div class="rhythm-badge">~30th</div></div>
+    ${exText}
+  </div>`;
+  html+=`<div class="maint-card"><div class="maint-card-title">What to know this month</div>`;
+  b.insights.forEach(ins=>{
+    html+=`<div class="insight-line"><span class="insight-icon">${ins.icon}</span><span>${ins.text}</span></div>`;
+  });
+  html+='</div>';
+  document.getElementById('maint-month').innerHTML=html;
+}
+
+function renderMaintPlanting(){
+  const mo=new Date().getMonth()+1;
+  const seasonColor={spring:'#4a7c59',summer:'#b07d20',fall:'#c04a4a',winter:'#2e7fb8'};
+  let html='';
+  let currentShown=false;
+  plantingGuide.forEach(g=>{
+    const isCurrent=g.months.includes(mo);
+    if(isCurrent)currentShown=true;
+    const cls=isCurrent?'planting-now':'planting-upcoming';
+    const col=seasonColor[g.season]||'#666';
+    html+=`<div class="planting-season ${cls}">
+      <div class="planting-season-label" style="color:${col}">${isCurrent?'▶ NOW — ':''} ${g.label}</div>
+      <h3>${g.icon} ${g.months.map(m=>['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][m-1]).join(' · ')}</h3>
+      ${g.items.map(item=>`<div class="planting-item"><span>•</span><span>${item}</span></div>`).join('')}
+    </div>`;
+  });
+  if(!currentShown){
+    html=`<div class="maint-card" style="margin-bottom:12px"><div class="insight-line"><span class="insight-icon">😌</span><span>Nothing to plant or swap right now. Next window coming up below.</span></div></div>`+html;
+  }
+  document.getElementById('maint-planting').innerHTML=html;
+}
+
+function renderMaintenanceHome(){
+  const mo=new Date().getMonth()+1;
+  const b=monthBriefings[mo];
+  const hr=new Date().getHours();
+  const greet=hr<12?'Good morning':hr<17?'Good afternoon':'Good evening';
+  const prog=getMaintProgress();
+  const progressStr=prog.total>0?` — ${prog.done} of ${prog.total} tasks done this month`:'';
+  document.getElementById('maint-greeting').textContent=(greet+', Nidhi 🌿'+progressStr);
+  document.getElementById('maint-season').textContent=b?b.season:'';
+  if(currentMaintTab==='week')renderMaintWeek();
+  else if(currentMaintTab==='month')renderMaintMonth();
+  else if(currentMaintTab==='planting')renderMaintPlanting();
+  else renderScheduleMonths();
+}
+
 let currentScheduleMonth=new Date().getMonth()+1;
 let currentSchedTab='tasks';
 function renderScheduleMonths(){
@@ -1908,7 +2333,14 @@ function renderSchedule(month){
       var isDone=currentSchedTab==='done';
       var safeKey=t.key.replace(/\\/g,'\\\\').replace(/'/g,"\\'");
       var border=t.indoor?'var(--terracotta)':'var(--sage)';
-      out+='<div class="schedule-task '+(isDone?'task-done':'')+'" style="border-left-color:'+border+'"><div style="display:flex;align-items:flex-start"><div class="sched-check '+(isDone?'checked':'')+'" onclick="toggleSchedTask('+month+',\''+safeKey+'\')">'+( isDone?'✓':'')+'</div><div style="flex:1"><div style="font-size:10px;text-transform:uppercase;letter-spacing:1px;color:'+(t.indoor?'var(--terracotta)':'var(--sage-dark)')+';font-weight:500;margin-bottom:3px">'+t.cat+'</div><h4>'+t.title+'</h4>'+(t.desc?'<p>'+t.desc+'</p>':'')+'</div></div></div>';
+      var navPlant=(!t.isStatic&&t.plants&&t.plants.length===1)?t.plants[0]:'';
+      var navFn=navPlant?'navToSchedPlant(\''+navPlant.replace(/\\/g,'\\\\').replace(/'/g,"\\'")+'\',' +(t.indoor?'true':'false')+')':'';
+      out+='<div class="schedule-task '+(isDone?'task-done':'')+'" style="border-left-color:'+border+'"><div style="display:flex;align-items:flex-start">'
+        +'<div class="sched-check '+(isDone?'checked':'')+'" onclick="toggleSchedTask('+month+',\''+safeKey+'\')">'+(isDone?'✓':'')+'</div>'
+        +'<div style="flex:1;'+(navFn?'cursor:pointer':'')+'"'+(navFn?' onclick="'+navFn+'"':'')+'>'
+        +'<div style="display:flex;align-items:center;justify-content:space-between"><div style="font-size:10px;text-transform:uppercase;letter-spacing:1px;color:'+(t.indoor?'var(--terracotta)':'var(--sage-dark)')+';font-weight:500;margin-bottom:3px">'+t.cat+'</div>'+(navFn?'<span style="color:var(--text-light);font-size:14px;margin-top:-2px">›</span>':'')+'</div>'
+        +'<h4>'+t.title+'</h4>'+(t.desc?'<p>'+t.desc+'</p>':'')
+        +'</div></div></div>';
     });
   });
   document.getElementById('schedule-list').innerHTML=out;
@@ -1917,10 +2349,10 @@ function showNoteTab(tab,btn){
   document.querySelectorAll('#screen-notes .segment-btn').forEach(b=>b.classList.remove('active'));
   if(btn)btn.classList.add('active');
   document.getElementById('notes-tab').style.display=tab==='notes'?'block':'none';
-  document.getElementById('propagation-tab').style.display=tab==='propagation'?'block':'none';
+  document.getElementById('projects-tab').style.display=tab==='projects'?'block':'none';
   const fab=document.getElementById('notes-fab');
-  if(tab==='notes'){fab.style.display='none';}
-  else{fab.style.display='';fab.onclick=addPropagation;renderPropagationInline();}
+  if(tab==='projects'){fab.style.display='';fab.onclick=addProject;renderProjects();}
+  else{fab.style.display='none';}
   if(tab==='notes')renderNotes();
 }
 function renderNotes(){
@@ -1935,6 +2367,36 @@ function renderNotes(){
   ta.addEventListener('input',function(){S.gardenNote=this.value;clearTimeout(S._noteTimer);S._noteTimer=setTimeout(()=>save(),1500);});
 }
 function addNote(){}
+function renderProjects(){
+  const el=document.getElementById('projects-list');
+  if(!S.projects||!S.projects.length){el.innerHTML='<div class="empty-state"><span>🔨</span><p>No projects logged yet.<br>Tap + to add one.</p></div>';return;}
+  el.innerHTML='<div style="padding:16px 20px 80px">'+[...S.projects].sort((a,b)=>b.date.localeCompare(a.date)).map(proj=>`<div style="background:white;border-radius:var(--radius);padding:16px;margin-bottom:12px;border:1px solid var(--border);box-shadow:var(--shadow)"><div style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:6px"><div style="flex:1"><h4 style="font-size:15px;font-weight:500;margin:0 0 2px">${proj.title}</h4><div style="font-size:12px;color:var(--text-light)">${proj.date||'—'}</div></div><div style="display:flex;gap:12px;flex-shrink:0;margin-left:8px"><span style="font-size:12px;color:var(--sage-dark);cursor:pointer" onclick="editProject('${proj.id}')">Edit</span><span style="font-size:12px;color:var(--terracotta);cursor:pointer" onclick="deleteProject('${proj.id}')">Delete</span></div></div>${proj.notes?`<div style="font-size:13px;color:var(--text-mid);white-space:pre-wrap;margin-top:8px;line-height:1.5">${proj.notes}</div>`:''}</div>`).join('')+'</div>';
+}
+function addProject(){
+  document.getElementById('modal-body').innerHTML=`<h3>New Project</h3><div class="form-group"><label class="form-label">Title *</label><input class="form-input" id="proj-title" placeholder="e.g. Tree Trimming 2026"></div><div class="form-group"><label class="form-label">Date</label><input class="form-input" type="date" id="proj-date" value="${new Date().toISOString().split('T')[0]}"></div><div class="form-group"><label class="form-label">Notes</label><textarea class="form-textarea" id="proj-notes" placeholder="What was done, who did it, observations..." rows="6"></textarea></div><button class="btn-primary" onclick="saveProject()">Save</button><button class="btn-secondary" onclick="closeModal()">Cancel</button>`;
+  document.getElementById('modal-overlay').classList.add('active');
+}
+function editProject(id){
+  const proj=S.projects.find(x=>x.id===id);if(!proj)return;
+  document.getElementById('modal-body').innerHTML=`<h3>Edit Project</h3><div class="form-group"><label class="form-label">Title *</label><input class="form-input" id="proj-title" value="${proj.title}"></div><div class="form-group"><label class="form-label">Date</label><input class="form-input" type="date" id="proj-date" value="${proj.date||''}"></div><div class="form-group"><label class="form-label">Notes</label><textarea class="form-textarea" id="proj-notes" rows="6">${proj.notes||''}</textarea></div><button class="btn-primary" onclick="saveEditProject('${id}')">Save</button><button class="btn-secondary" onclick="closeModal()">Cancel</button>`;
+  document.getElementById('modal-overlay').classList.add('active');
+}
+function saveProject(){
+  const title=document.getElementById('proj-title').value.trim();if(!title)return;
+  S.projects.unshift({id:'proj'+Date.now(),title,date:document.getElementById('proj-date').value,notes:document.getElementById('proj-notes').value.trim()});
+  save();closeModal();renderProjects();
+}
+function saveEditProject(id){
+  const proj=S.projects.find(x=>x.id===id);if(!proj)return;
+  const title=document.getElementById('proj-title').value.trim();if(title)proj.title=title;
+  proj.date=document.getElementById('proj-date').value;
+  proj.notes=document.getElementById('proj-notes').value.trim();
+  save();closeModal();renderProjects();
+}
+function deleteProject(id){
+  if(!confirm('Delete this project record?'))return;
+  S.projects=S.projects.filter(x=>x.id!==id);save();renderProjects();
+}
 function renderPropagation(){document.getElementById('prop-list').innerHTML=S.propagation.length===0?'<div class="empty-state"><span>🌱</span><p>No cuttings logged yet.</p></div>':S.propagation.map(p=>propHTML(p)).join('');}
 function renderPropagationInline(){document.getElementById('prop-list-inline').innerHTML=S.propagation.length===0?'<div class="empty-state"><span>🌱</span><p>No cuttings logged yet.</p></div>':S.propagation.map(p=>propHTML(p)).join('');}
 function propHTML(p){const sl={pending:'⏳ Rooting',success:'✓ Survived',failed:'✕ Failed'};return`<div class="prop-item"><div style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:4px"><h4 style="flex:1;margin:0">${p.plant}</h4><div style="display:flex;gap:12px;flex-shrink:0;margin-left:8px"><span style="font-size:12px;color:var(--sage-dark);cursor:pointer" onclick="editPropagation('${p.id}')">Edit</span><span style="font-size:12px;color:var(--terracotta);cursor:pointer" onclick="deleteProp('${p.id}')">Delete</span></div></div><div style="font-size:12px;color:var(--text-light);margin-bottom:8px">Cut: ${p.dateCut||'—'} · Planted: ${p.datePlanted||'Not yet'}</div>${p.notes?`<div style="font-size:12px;color:var(--text-mid);margin-bottom:8px">${p.notes}</div>`:''}<span class="prop-status ${p.status||'pending'}" style="cursor:pointer" onclick="cyclePropStatus('${p.id}')" title="Tap to change status">${sl[p.status]||'⏳ Rooting'} ↻</span></div>`;}
@@ -1965,7 +2427,8 @@ function renderAllPlants(query){
       const loc=p._indoor?(()=>{const room=S.rooms.find(r=>r.id===p.roomId);return(room?room.name:'')+(p.section?' · '+p.section:'');})():(()=>{const bed=S.beds.find(b=>b.id===p.bedId);return bed?bed.name:'Unknown';})();
       const icon=p._indoor?'🪴':'🌳';
       const onclick=p._indoor?`showIndoorPlantFromAll('${p.id}')`:`showOutdoorPlantFromAll('${p.id}')`;
-      html+=`<div class="plant-card ${p.status==='planned'?'planned':''}" onclick="${onclick}"><div class="plant-thumb">${emojiHtml(p.emoji,28)}</div><div class="plant-card-info"><div class="plant-card-name">${p.name}</div><div class="plant-card-detail">${icon} ${loc}</div></div><div class="status-dot ${p.status||'alive'}"></div></div>`;
+      const isDead=p.status==='dead';
+      html+=`<div class="plant-card ${p.status==='planned'?'planned':''}" onclick="${onclick}" style="${isDead?'opacity:0.45;filter:grayscale(0.6)':''}"><div class="plant-thumb">${emojiHtml(p.emoji,28)}</div><div class="plant-card-info"><div class="plant-card-name">${p.name}${isDead?' <span style="font-size:10px;color:#999;font-weight:400">removed</span>':''}</div><div class="plant-card-detail">${icon} ${loc}</div></div><div class="status-dot ${p.status||'alive'}"></div></div>`;
     });
     html+='</div>';
   });
