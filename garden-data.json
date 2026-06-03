@@ -3,7 +3,7 @@
     {
       "id": "r-office",
       "name": "Office",
-      "icon": "💻",
+      "icon": "\ud83d\udcbb",
       "sections": [
         "Floor",
         "Plant Stand",
@@ -16,7 +16,7 @@
     {
       "id": "r-house",
       "name": "Rest of House",
-      "icon": "🏠",
+      "icon": "\ud83c\udfe0",
       "sections": [
         "Kitchen",
         "Living Room",
@@ -33,7 +33,7 @@
       "zone": "Zone 1",
       "sun": "Part shade",
       "notes": "",
-      "icon": "🌿",
+      "icon": "\ud83c\udf3f",
       "order": 1
     },
     {
@@ -43,7 +43,7 @@
       "zone": "Zone 1",
       "sun": "Part shade",
       "notes": "",
-      "icon": "🌾",
+      "icon": "\ud83c\udf3e",
       "order": 2
     },
     {
@@ -53,7 +53,7 @@
       "zone": "Zone 1",
       "sun": "Shade",
       "notes": "",
-      "icon": "🌲",
+      "icon": "\ud83c\udf32",
       "order": 3
     },
     {
@@ -63,7 +63,7 @@
       "zone": "Zone 1",
       "sun": "Part shade",
       "notes": "",
-      "icon": "🍁",
+      "icon": "\ud83c\udf41",
       "order": 4
     },
     {
@@ -73,7 +73,7 @@
       "zone": "Zone 1",
       "sun": "Part shade",
       "notes": "",
-      "icon": "🌸",
+      "icon": "\ud83c\udf38",
       "order": 5
     },
     {
@@ -83,14 +83,14 @@
       "zone": "Zone 1",
       "sun": "Part sun",
       "notes": "",
-      "icon": "🌹",
+      "icon": "\ud83c\udf39",
       "order": 6
     },
     {
       "id": "b-porch",
       "yard": "front",
       "name": "Porch",
-      "icon": "🪴",
+      "icon": "\ud83e\udeb4",
       "zone": "",
       "sun": "Part shade",
       "notes": "Covered porch containers and planters",
@@ -103,7 +103,7 @@
       "zone": "Zone 2",
       "sun": "Part shade",
       "notes": "",
-      "icon": "🌿",
+      "icon": "\ud83c\udf3f",
       "order": 1
     },
     {
@@ -113,7 +113,7 @@
       "zone": "Zone 2",
       "sun": "Part shade",
       "notes": "",
-      "icon": "⛲",
+      "icon": "\u26f2",
       "order": 2
     },
     {
@@ -123,7 +123,7 @@
       "zone": "Zone 2",
       "sun": "Part shade",
       "notes": "",
-      "icon": "🍃",
+      "icon": "\ud83c\udf43",
       "order": 3
     },
     {
@@ -133,7 +133,7 @@
       "zone": "Zone 3",
       "sun": "Part sun",
       "notes": "",
-      "icon": "🌸",
+      "icon": "\ud83c\udf38",
       "order": 4
     },
     {
@@ -143,7 +143,7 @@
       "zone": "Zone 3",
       "sun": "Full sun",
       "notes": "",
-      "icon": "🍊",
+      "icon": "\ud83c\udf4a",
       "order": 5
     },
     {
@@ -153,7 +153,7 @@
       "zone": "Zone 3",
       "sun": "Part sun",
       "notes": "",
-      "icon": "🌹",
+      "icon": "\ud83c\udf39",
       "order": 6
     },
     {
@@ -163,7 +163,7 @@
       "zone": "Zone 3",
       "sun": "Part sun",
       "notes": "",
-      "icon": "🌿",
+      "icon": "\ud83c\udf3f",
       "order": 7
     },
     {
@@ -173,7 +173,7 @@
       "zone": "Zone 3",
       "sun": "Full sun",
       "notes": "",
-      "icon": "🌿",
+      "icon": "\ud83c\udf3f",
       "order": 8
     },
     {
@@ -183,7 +183,7 @@
       "zone": "Zone 4",
       "sun": "Full sun",
       "notes": "",
-      "icon": "🪨",
+      "icon": "\ud83e\udea8",
       "order": 9
     },
     {
@@ -193,7 +193,7 @@
       "zone": "Zone 3",
       "sun": "Full sun",
       "notes": "",
-      "icon": "🍅",
+      "icon": "\ud83c\udf45",
       "order": 10
     }
   ],
@@ -210,10 +210,10 @@
       "datePlanted": "",
       "nursery": "",
       "fromCutting": false,
-      "notes": "Existing on stone wall. Blood Red Trumpet Vine. Currently unruly — cutback planned now.",
+      "notes": "Existing on stone wall. Blood Red Trumpet Vine. Currently unruly \u2014 cutback planned now.",
       "maintenance": [
         {
-          "task": "Hard prune to framework in February — flowers on new wood",
+          "task": "Hard prune to framework in February \u2014 flowers on new wood",
           "months": [
             2
           ]
@@ -260,7 +260,7 @@
       "notes": "x2. 2-gallon. White double blooms.",
       "maintenance": [
         {
-          "task": "Deadhead every 2 weeks — outward facing bud, 45° cut",
+          "task": "Deadhead every 2 weeks \u2014 outward facing bud, 45\u00b0 cut",
           "months": [
             4,
             5,
@@ -322,7 +322,7 @@
           ]
         },
         {
-          "task": "Cut back hard after first flush",
+          "task": "Cut back by 1/3 after first bloom flush",
           "months": [
             5,
             6
@@ -350,7 +350,7 @@
       "bedId": "b-fw",
       "name": "Fuchsia Gartenmeister Bonstedt",
       "scientific": "Fuchsia Gartenmeister Bonstedt",
-      "emoji": "🪻",
+      "emoji": "\ud83e\udebb",
       "status": "alive",
       "water": "Keep consistently moist",
       "sun": "Part shade",
@@ -360,7 +360,7 @@
       "notes": "x8. 4\". Red/orange tubular flowers. 12-15 inch spacing.",
       "maintenance": [
         {
-          "task": "Keep consistently moist — does not like to dry out",
+          "task": "Keep consistently moist \u2014 never let dry out",
           "months": [
             1,
             2,
@@ -456,7 +456,7 @@
       "scientific": "Aeonium arboreum Zwartkop",
       "emoji": "emoji_st-aeonium",
       "status": "alive",
-      "water": "Low — drought tolerant",
+      "water": "Low \u2014 drought tolerant",
       "sun": "Full sun",
       "datePlanted": "",
       "nursery": "",
@@ -494,10 +494,10 @@
       "bedId": "b-stump",
       "name": "Succulents",
       "scientific": "",
-      "emoji": "🪴",
+      "emoji": "\ud83e\udeb4",
       "status": "alive",
       "category": "Succulents & Cacti",
-      "water": "Low — drought tolerant",
+      "water": "Low \u2014 drought tolerant",
       "sun": "Full sun to part shade",
       "datePlanted": "",
       "nursery": "",
@@ -505,7 +505,7 @@
       "notes": "Mixed succulents in stump planter.",
       "maintenance": [
         {
-          "task": "Water only when soil is completely dry",
+          "task": "Water only when soil completely dry",
           "months": [
             4,
             5,
@@ -531,10 +531,10 @@
       "bedId": "b-fw",
       "name": "Phormium",
       "scientific": "Phormium tenax",
-      "emoji": "🌿",
+      "emoji": "\ud83c\udf3f",
       "category": "Ornamental Grasses",
       "status": "alive",
-      "water": "Low-moderate — drought tolerant once established",
+      "water": "Low-moderate \u2014 drought tolerant once established",
       "sun": "Full sun to part shade",
       "notes": "",
       "fromCutting": false,
@@ -588,7 +588,7 @@
       "emoji": "emoji_p1778170415313",
       "category": "Annuals",
       "status": "alive",
-      "water": "Regular — keep evenly moist",
+      "water": "Regular \u2014 keep evenly moist",
       "sun": "Full sun to part sun",
       "notes": "",
       "fromCutting": false,
@@ -614,7 +614,7 @@
           ]
         },
         {
-          "task": "Water consistently — does not tolerate drought",
+          "task": "Water consistently \u2014 do not let dry out",
           "months": [
             4,
             5,
@@ -635,7 +635,7 @@
       "bedId": "b-fl",
       "name": "Abelia Kaleidoscope",
       "scientific": "Abelia grandiflora Kaleidoscope",
-      "emoji": "🌿",
+      "emoji": "\ud83c\udf3f",
       "status": "alive",
       "water": "Moderate",
       "sun": "Part shade",
@@ -708,7 +708,7 @@
       "bedId": "b-fl",
       "name": "Lomandra Platinum Beauty",
       "scientific": "Lomandra longifolia",
-      "emoji": "🌾",
+      "emoji": "\ud83c\udf3e",
       "status": "alive",
       "water": "Low to moderate",
       "sun": "Full sun to part shade",
@@ -873,7 +873,7 @@
       "bedId": "b-fl",
       "name": "Catmint",
       "scientific": "Nepeta x faassenii",
-      "emoji": "💜",
+      "emoji": "\ud83d\udc9c",
       "status": "alive",
       "water": "Low",
       "sun": "Full sun",
@@ -883,7 +883,7 @@
       "notes": "Blue-purple flowers spring through fall. Drought tolerant once established.",
       "maintenance": [
         {
-          "task": "Cut back hard after first flush to encourage reblooming",
+          "task": "Cut back by 1/3 after first bloom flush",
           "months": [
             6,
             7
@@ -914,7 +914,7 @@
       "bedId": "b-fl",
       "name": "Sedum Angelina",
       "scientific": "Sedum rupestre",
-      "emoji": "🌿",
+      "emoji": "\ud83c\udf3f",
       "status": "alive",
       "water": "Low",
       "sun": "Full sun",
@@ -924,7 +924,7 @@
       "notes": "Golden-chartreuse succulent groundcover. Drought tolerant.",
       "maintenance": [
         {
-          "task": "Trim to shape in spring",
+          "task": "Light tip prune only \u2014 do not hard cut",
           "months": [
             3,
             4
@@ -951,7 +951,7 @@
       "bedId": "b-fl",
       "name": "Hellebores Pippa's Purple",
       "scientific": "Helleborus x hybridus",
-      "emoji": "🌸",
+      "emoji": "\ud83c\udf38",
       "status": "alive",
       "water": "Moderate",
       "sun": "Part to full shade",
@@ -994,7 +994,7 @@
       "bedId": "b-fl",
       "name": "Bergenia Crassifolia",
       "scientific": "Bergenia crassifolia",
-      "emoji": "🌸",
+      "emoji": "\ud83c\udf38",
       "status": "alive",
       "water": "Moderate",
       "sun": "Part shade",
@@ -1038,7 +1038,7 @@
       "bedId": "b-fl",
       "name": "Viburnum davidii",
       "scientific": "Viburnum davidii",
-      "emoji": "🌿",
+      "emoji": "\ud83c\udf3f",
       "status": "alive",
       "water": "Moderate",
       "sun": "Part shade",
@@ -1074,7 +1074,7 @@
       "bedId": "b-fl",
       "name": "Carex Ice Dance",
       "scientific": "Carex morrowii Ice Dance",
-      "emoji": "🌾",
+      "emoji": "\ud83c\udf3e",
       "status": "alive",
       "water": "Moderate",
       "sun": "Part shade",
@@ -1090,7 +1090,7 @@
           ]
         },
         {
-          "task": "Water occasionally during dry season — prefers consistent moisture",
+          "task": "Water occasionally during dry season \u2014 prefers consistent moisture",
           "months": [
             6,
             7,
@@ -1111,7 +1111,7 @@
       "bedId": "b-fl",
       "name": "Breath of Heaven",
       "scientific": "Coleonema pulchrum",
-      "emoji": "🌸",
+      "emoji": "\ud83c\udf38",
       "status": "alive",
       "water": "Low-moderate",
       "sun": "Part sun",
@@ -1121,7 +1121,7 @@
       "notes": "Middle zone. 2-gallon. Standard green confirmed.",
       "maintenance": [
         {
-          "task": "Light trim after flowering — do NOT hard prune",
+          "task": "Light trim after flowering \u2014 do NOT hard prune",
           "months": [
             4,
             5
@@ -1130,7 +1130,7 @@
       ],
       "trouble": [
         {
-          "issue": "Dieback from hard pruning — never cut to old wood",
+          "issue": "Dieback from hard pruning \u2014 never cut to old wood",
           "url": "https://www.google.com/search?q=Dieback%20from%20hard%20pruning%20%E2%80%94%20never%20cut%20to%20old%20wood%20plant%20care%20fix"
         }
       ],
@@ -1141,7 +1141,7 @@
       "bedId": "b-fl",
       "name": "Sweet Box",
       "scientific": "Sarcococca confusa",
-      "emoji": "🌿",
+      "emoji": "\ud83c\udf3f",
       "status": "alive",
       "water": "Moderate",
       "sun": "Part to full shade",
@@ -1151,7 +1151,7 @@
       "notes": "Far left corner. 3-gallon. Fragrant winter bloomer.",
       "maintenance": [
         {
-          "task": "Enjoy intensely fragrant winter flowers — no action needed",
+          "task": "Enjoy intensely fragrant winter flowers \u2014 no action needed",
           "months": [
             12,
             1,
@@ -1172,7 +1172,7 @@
       "bedId": "b-fr",
       "name": "Abelia Kaleidoscope",
       "scientific": "Abelia grandiflora Kaleidoscope",
-      "emoji": "🌿",
+      "emoji": "\ud83c\udf3f",
       "status": "alive",
       "water": "Moderate",
       "sun": "Part shade",
@@ -1245,7 +1245,7 @@
       "bedId": "b-fr",
       "name": "Lomandra Platinum Beauty",
       "scientific": "Lomandra longifolia",
-      "emoji": "🌾",
+      "emoji": "\ud83c\udf3e",
       "status": "alive",
       "water": "Low to moderate",
       "sun": "Full sun to part shade",
@@ -1319,7 +1319,7 @@
       "bedId": "b-fr",
       "name": "Sedum Angelina",
       "scientific": "Sedum rupestre",
-      "emoji": "🌿",
+      "emoji": "\ud83c\udf3f",
       "status": "alive",
       "water": "Low",
       "sun": "Full sun",
@@ -1329,7 +1329,7 @@
       "notes": "Golden-chartreuse succulent groundcover. Drought tolerant.",
       "maintenance": [
         {
-          "task": "Trim to shape in spring",
+          "task": "Light tip prune only \u2014 do not hard cut",
           "months": [
             3,
             4
@@ -1356,9 +1356,9 @@
       "bedId": "b-fr",
       "name": "Catmint",
       "scientific": "Nepeta spp.",
-      "emoji": "💜",
+      "emoji": "\ud83d\udc9c",
       "status": "alive",
-      "water": "Low — drought tolerant",
+      "water": "Low \u2014 drought tolerant",
       "sun": "Part shade",
       "datePlanted": "",
       "nursery": "",
@@ -1394,7 +1394,7 @@
       "bedId": "b-fr",
       "name": "Camphor Tree",
       "scientific": "Cinnamomum camphora",
-      "emoji": "🌳",
+      "emoji": "\ud83c\udf33",
       "status": "alive",
       "water": "Low once established",
       "sun": "Part shade",
@@ -1460,7 +1460,7 @@
       "bedId": "b-fr",
       "name": "Bergenia Crassifolia",
       "scientific": "Bergenia crassifolia",
-      "emoji": "🌸",
+      "emoji": "\ud83c\udf38",
       "status": "alive",
       "water": "Moderate",
       "sun": "Part shade to full sun",
@@ -1516,7 +1516,7 @@
       "bedId": "b-rw",
       "name": "Pittosporum Tobira Shrub",
       "scientific": "Pittosporum tobira",
-      "emoji": "🌿",
+      "emoji": "\ud83c\udf3f",
       "status": "alive",
       "water": "Low once established",
       "sun": "Part shade",
@@ -1526,7 +1526,7 @@
       "notes": "Existing structural shrub.",
       "maintenance": [
         {
-          "task": "Light tip prune only — do not hard cut",
+          "task": "Light tip prune only \u2014 do not hard cut",
           "months": [
             3,
             4
@@ -1556,7 +1556,7 @@
       "notes": "Existing.",
       "maintenance": [
         {
-          "task": "Deadwood removal only — no hard cutback",
+          "task": "Deadwood removal only \u2014 no hard cutback",
           "months": [
             1
           ]
@@ -1588,7 +1588,7 @@
       "bedId": "b-rw",
       "name": "Western Sword Fern",
       "scientific": "Polystichum munitum",
-      "emoji": "🌿",
+      "emoji": "\ud83c\udf3f",
       "status": "alive",
       "water": "Low to moderate",
       "sun": "Full shade to part shade",
@@ -1643,7 +1643,7 @@
           ]
         },
         {
-          "task": "Keep drier in winter to encourage spring blooming — water every 2-3 weeks",
+          "task": "Keep drier in winter to encourage spring blooming \u2014 water every 2-3 weeks",
           "months": [
             11,
             12,
@@ -1676,7 +1676,7 @@
       "bedId": "b-rw",
       "name": "Hellebores Pippa's Purple",
       "scientific": "Helleborus x hybridus",
-      "emoji": "🌸",
+      "emoji": "\ud83c\udf38",
       "status": "alive",
       "water": "Moderate",
       "sun": "Part to full shade",
@@ -1809,15 +1809,15 @@
       "bedId": "b-rw",
       "name": "Redwood Trees",
       "scientific": "Sequoia sempervirens",
-      "emoji": "🌲",
+      "emoji": "\ud83c\udf32",
       "status": "alive",
       "water": "Deep water monthly during summer dry season",
       "sun": "Full sun to part shade",
-      "notes": "Trimming:\n2019 - Johnson’s tree care \n2025 - Rodrigo ",
+      "notes": "Trimming:\n2019 - Johnson\u2019s tree care \n2025 - Rodrigo ",
       "fromCutting": false,
       "maintenance": [
         {
-          "task": "Deep water monthly — slow hose at drip line",
+          "task": "Deep water monthly \u2014 slow hose at drip line",
           "months": [
             6,
             7,
@@ -1888,7 +1888,7 @@
       "bedId": "b-rw",
       "name": "Pittosporum Tree",
       "scientific": "Pittosporum undulatum",
-      "emoji": "🌿",
+      "emoji": "\ud83c\udf3f",
       "status": "alive",
       "water": "Low once established",
       "sun": "Part shade",
@@ -1898,7 +1898,7 @@
       "notes": "Established tree form pittosporum. Provides canopy in redwood bed.",
       "maintenance": [
         {
-          "task": "Light tip prune only — do not hard cut",
+          "task": "Light tip prune only \u2014 do not hard cut",
           "months": [
             3,
             4
@@ -1918,7 +1918,7 @@
       "bedId": "b-ch",
       "name": "Abelia Kaleidoscope",
       "scientific": "Abelia grandiflora Kaleidoscope",
-      "emoji": "🌿",
+      "emoji": "\ud83c\udf3f",
       "status": "alive",
       "water": "Moderate",
       "sun": "Part shade",
@@ -1990,14 +1990,14 @@
       "bedId": "b-ch",
       "name": "Hosta",
       "scientific": "Hosta Patriot",
-      "emoji": "🍃",
+      "emoji": "\ud83c\udf43",
       "status": "alive",
       "water": "Moderate",
       "sun": "Part shade",
       "datePlanted": "2026-05-27",
       "nursery": "bought",
       "fromCutting": false,
-      "notes": "Planned. Classic white-margined hosta. Slug magnet — bait proactively.. Patriot variety",
+      "notes": "Planned. Classic white-margined hosta. Slug magnet \u2014 bait proactively.. Patriot variety",
       "maintenance": [
         {
           "task": "Monitor for slugs and snails",
@@ -2011,7 +2011,7 @@
           ]
         },
         {
-          "task": "Emerges late Feb/March — mark location and do not disturb soil",
+          "task": "Emerges late Feb/March \u2014 mark location and do not disturb soil",
           "months": [
             1,
             2
@@ -2078,7 +2078,7 @@
       "bedId": "b-ch",
       "name": "Nandina",
       "scientific": "Nandina domestica",
-      "emoji": "🌿",
+      "emoji": "\ud83c\udf3f",
       "status": "alive",
       "water": "Low once established",
       "sun": "Part shade",
@@ -2113,7 +2113,7 @@
       "bedId": "b-ch",
       "name": "Flowering Cherry Tree",
       "scientific": "Prunus spp.",
-      "emoji": "🌸",
+      "emoji": "\ud83c\udf38",
       "status": "alive",
       "water": "Regular when young",
       "sun": "Part shade",
@@ -2235,10 +2235,10 @@
       "bedId": "b-ros",
       "name": "Potato Vine",
       "scientific": "Solanum laxum",
-      "emoji": "🌿",
+      "emoji": "\ud83c\udf3f",
       "category": "Vines & Climbers",
       "status": "alive",
-      "water": "Moderate — low once established",
+      "water": "Moderate \u2014 low once established",
       "sun": "Full sun to part sun",
       "notes": "",
       "fromCutting": false,
@@ -2270,9 +2270,9 @@
     {
       "id": "ros-lemon",
       "bedId": "b-ros",
-      "name": "Dwarf Meyer’s Lemon Tree",
+      "name": "Dwarf Meyer\u2019s Lemon Tree",
       "scientific": "Citrus limon dwarf",
-      "emoji": "🍋",
+      "emoji": "\ud83c\udf4b",
       "status": "alive",
       "water": "Every 2 weeks",
       "sun": "Full sun to part sun",
@@ -2290,7 +2290,7 @@
           ]
         },
         {
-          "task": "Deep water every 2 weeks spring — slow hose 10 min at drip line",
+          "task": "Deep water every 2 weeks spring \u2014 slow hose 10 min at drip line",
           "months": [
             3,
             4,
@@ -2299,7 +2299,7 @@
           ]
         },
         {
-          "task": "Deep water every 2 weeks July-August — check soil 6 inches first",
+          "task": "Deep water every 2 weeks July-August \u2014 check soil 6 inches first",
           "months": [
             7,
             8
@@ -2329,7 +2329,7 @@
       "notes": "Existing standard form rose.",
       "maintenance": [
         {
-          "task": "Deadhead every 2 weeks — outward facing bud, 45° cut",
+          "task": "Deadhead every 2 weeks \u2014 outward facing bud, 45\u00b0 cut",
           "months": [
             4,
             5,
@@ -2369,7 +2369,7 @@
       "bedId": "b-ros",
       "name": "Tree Rose - unknown (second)",
       "scientific": "Rosa standard",
-      "emoji": "🌹",
+      "emoji": "\ud83c\udf39",
       "status": "alive",
       "water": "Deep water weekly",
       "sun": "Part sun",
@@ -2379,7 +2379,7 @@
       "notes": "Existing standard form rose.",
       "maintenance": [
         {
-          "task": "Deadhead every 2 weeks — outward facing bud, 45° cut",
+          "task": "Deadhead every 2 weeks \u2014 outward facing bud, 45\u00b0 cut",
           "months": [
             4,
             5,
@@ -2430,7 +2430,7 @@
       "notes": "Existing standard form rose.",
       "maintenance": [
         {
-          "task": "Deadhead every 2 weeks — outward facing bud, 45° cut",
+          "task": "Deadhead every 2 weeks \u2014 outward facing bud, 45\u00b0 cut",
           "months": [
             4,
             5,
@@ -2481,7 +2481,7 @@
       "notes": "Existing standard form rose.",
       "maintenance": [
         {
-          "task": "Deadhead every 2 weeks — outward facing bud, 45° cut",
+          "task": "Deadhead every 2 weeks \u2014 outward facing bud, 45\u00b0 cut",
           "months": [
             4,
             5,
@@ -2532,7 +2532,7 @@
       "notes": "Existing standard form rose.",
       "maintenance": [
         {
-          "task": "Deadhead every 2 weeks — outward facing bud, 45° cut",
+          "task": "Deadhead every 2 weeks \u2014 outward facing bud, 45\u00b0 cut",
           "months": [
             4,
             5,
@@ -2583,7 +2583,7 @@
       "notes": "Existing standard form rose.",
       "maintenance": [
         {
-          "task": "Deadhead every 2 weeks — outward facing bud, 45° cut",
+          "task": "Deadhead every 2 weeks \u2014 outward facing bud, 45\u00b0 cut",
           "months": [
             4,
             5,
@@ -2634,7 +2634,7 @@
       "notes": "Existing standard form rose.",
       "maintenance": [
         {
-          "task": "Deadhead every 2 weeks — outward facing bud, 45° cut",
+          "task": "Deadhead every 2 weeks \u2014 outward facing bud, 45\u00b0 cut",
           "months": [
             4,
             5,
@@ -2685,7 +2685,7 @@
       "notes": "Existing standard form rose.",
       "maintenance": [
         {
-          "task": "Deadhead every 2 weeks — outward facing bud, 45° cut",
+          "task": "Deadhead every 2 weeks \u2014 outward facing bud, 45\u00b0 cut",
           "months": [
             4,
             5,
@@ -2726,7 +2726,7 @@
       "bedId": "b-ros",
       "name": "Carpet Rose",
       "scientific": "Rosa Flower Carpet",
-      "emoji": "🌹",
+      "emoji": "\ud83c\udf39",
       "status": "alive",
       "water": "Moderate",
       "sun": "Part sun",
@@ -2736,7 +2736,7 @@
       "notes": "Existing ground cover rose.",
       "maintenance": [
         {
-          "task": "Deadhead every 2 weeks — outward facing bud, 45° cut",
+          "task": "Deadhead every 2 weeks \u2014 outward facing bud, 45\u00b0 cut",
           "months": [
             4,
             5,
@@ -2768,7 +2768,7 @@
       "bedId": "b-ros",
       "name": "Yellow Lantana",
       "scientific": "Lantana camara",
-      "emoji": "🌼",
+      "emoji": "\ud83c\udf3c",
       "status": "alive",
       "category": "Perennials",
       "water": "Low once established",
@@ -2779,7 +2779,7 @@
       "notes": "Yellow flower clusters. Long blooming season.",
       "maintenance": [
         {
-          "task": "Cut back hard in late winter",
+          "task": "Hard cutback annually in January/February",
           "months": [
             2
           ]
@@ -2802,7 +2802,7 @@
       "bedId": "b-ros",
       "name": "English Lavender",
       "scientific": "Lavandula angustifolia",
-      "emoji": "💜",
+      "emoji": "\ud83d\udc9c",
       "status": "alive",
       "category": "Herbs",
       "water": "Low once established",
@@ -2813,7 +2813,7 @@
       "notes": "",
       "maintenance": [
         {
-          "task": "Cut back by one third after first flush of bloom",
+          "task": "Cut back by 1/3 after first bloom flush",
           "months": [
             7
           ]
@@ -2832,7 +2832,7 @@
       "bedId": "b-ros",
       "name": "Caroline Cherry",
       "scientific": "Prunus Caroliniana",
-      "emoji": "🌳",
+      "emoji": "\ud83c\udf33",
       "category": "Trees",
       "status": "alive",
       "water": "",
@@ -2841,7 +2841,7 @@
       "fromCutting": false,
       "maintenance": [
         {
-          "task": "Deep water monthly — slow hose at drip line",
+          "task": "Deep water monthly \u2014 slow hose at drip line",
           "months": [
             6,
             7,
@@ -2872,7 +2872,7 @@
       "bedId": "b-ros",
       "name": "Camphor Tree",
       "scientific": "Cinnamomum camphora",
-      "emoji": "🌳",
+      "emoji": "\ud83c\udf33",
       "status": "alive",
       "water": "Low once established",
       "sun": "Part shade",
@@ -2902,7 +2902,7 @@
       "bedId": "b-ros",
       "name": "Peruvian Lily",
       "scientific": "Alstroemeria spp.",
-      "emoji": "🌸",
+      "emoji": "\ud83c\udf38",
       "status": "alive",
       "water": "Moderate",
       "sun": "Part sun",
@@ -2912,7 +2912,7 @@
       "notes": "Existing. Long-lasting cut flowers.",
       "maintenance": [
         {
-          "task": "Deadhead at base — pull stem out, do not cut",
+          "task": "Deadhead at base \u2014 pull stem out, do not cut",
           "months": [
             4,
             5,
@@ -2936,7 +2936,7 @@
       "bedId": "b-ros",
       "name": "Day Lilies",
       "scientific": "Hemerocallis",
-      "emoji": "🌸",
+      "emoji": "\ud83c\udf38",
       "status": "alive",
       "category": "Perennials",
       "water": "Moderate",
@@ -2985,7 +2985,7 @@
       "notes": "Existing on arbor.",
       "maintenance": [
         {
-          "task": "Apply Super Bloom half strength to MOIST soil — monthly",
+          "task": "Apply Super Bloom half strength to MOIST soil \u2014 monthly",
           "months": [
             4,
             5,
@@ -2996,7 +2996,7 @@
           ]
         },
         {
-          "task": "Cut back by 1/3 after flowering",
+          "task": "Cut back by 1/3 after first bloom flush",
           "months": [
             8,
             9
@@ -3029,13 +3029,13 @@
       "emoji": "emoji_p1778174102041",
       "category": "Hydrangeas",
       "status": "alive",
-      "water": "Regular — keep consistently moist",
-      "sun": "Part shade — morning sun preferred",
+      "water": "Regular \u2014 keep consistently moist",
+      "sun": "Part shade \u2014 morning sun preferred",
       "notes": "",
       "fromCutting": false,
       "maintenance": [
         {
-          "task": "Deadwood removal only — no hard cutback",
+          "task": "Deadwood removal only \u2014 no hard cutback",
           "months": [
             1
           ]
@@ -3063,7 +3063,7 @@
       "scientific": "Arecaceae spp.",
       "emoji": "emoji_ma-palm",
       "status": "alive",
-      "water": "Regular — keep moist",
+      "water": "Regular \u2014 keep moist",
       "sun": "Part sun",
       "datePlanted": "",
       "nursery": "",
@@ -3154,7 +3154,7 @@
           ]
         },
         {
-          "task": "Cut back hard in late winter — flowers on new wood",
+          "task": "Cut back hard in late winter \u2014 flowers on new wood",
           "months": [
             1,
             2
@@ -3230,7 +3230,7 @@
       "notes": "Existing. Multiple plants.",
       "maintenance": [
         {
-          "task": "Prune ONLY after flowering in August — never fall/winter",
+          "task": "Prune ONLY after flowering in August \u2014 never fall/winter",
           "months": [
             8
           ]
@@ -3243,7 +3243,7 @@
           ]
         },
         {
-          "task": "Deadwood removal only in early spring — never fall",
+          "task": "Deadwood removal only in early spring \u2014 never fall",
           "months": [
             3
           ]
@@ -3272,7 +3272,7 @@
       "notes": "Existing. Stunning fall foliage.",
       "maintenance": [
         {
-          "task": "Prune ONLY after flowering in August — never fall/winter",
+          "task": "Prune ONLY after flowering in August \u2014 never fall/winter",
           "months": [
             8
           ]
@@ -3299,7 +3299,7 @@
       "bedId": "b-sa",
       "name": "Rose bush",
       "scientific": "Rosa spp.",
-      "emoji": "🌿",
+      "emoji": "\ud83c\udf3f",
       "category": "Bush Roses",
       "status": "alive",
       "water": "Deep water weekly",
@@ -3315,7 +3315,7 @@
           ]
         },
         {
-          "task": "Deadhead every 2 weeks — outward facing bud, 45° cut",
+          "task": "Deadhead every 2 weeks \u2014 outward facing bud, 45\u00b0 cut",
           "months": [
             4,
             5,
@@ -3333,7 +3333,7 @@
           ]
         },
         {
-          "task": "Monitor for powdery mildew — neem oil if spotted",
+          "task": "Monitor for powdery mildew \u2014 neem oil if spotted",
           "months": [
             6,
             7,
@@ -3365,7 +3365,7 @@
           ]
         },
         {
-          "task": "Deadhead every 2 weeks — outward facing bud, 45° cut",
+          "task": "Deadhead every 2 weeks \u2014 outward facing bud, 45\u00b0 cut",
           "months": [
             4,
             5,
@@ -3383,7 +3383,7 @@
           ]
         },
         {
-          "task": "Monitor for powdery mildew — neem oil if spotted",
+          "task": "Monitor for powdery mildew \u2014 neem oil if spotted",
           "months": [
             6,
             7,
@@ -3404,7 +3404,7 @@
       "bedId": "b-sa",
       "name": "Rose bush",
       "scientific": "Rosa Double Knock Out",
-      "emoji": "🌹",
+      "emoji": "\ud83c\udf39",
       "status": "alive",
       "water": "Deep water every 2 weeks",
       "sun": "Part sun",
@@ -3414,7 +3414,7 @@
       "notes": "x3. 3-gallon. Behind Side Arbor.",
       "maintenance": [
         {
-          "task": "Deadhead every 2 weeks — outward facing bud, 45° cut",
+          "task": "Deadhead every 2 weeks \u2014 outward facing bud, 45\u00b0 cut",
           "months": [
             4,
             5,
@@ -3456,7 +3456,7 @@
       "notes": "Existing. Train horizontally now while flexible.",
       "maintenance": [
         {
-          "task": "Deadhead every 2 weeks — outward facing bud, 45° cut",
+          "task": "Deadhead every 2 weeks \u2014 outward facing bud, 45\u00b0 cut",
           "months": [
             4,
             5,
@@ -3495,7 +3495,7 @@
       "bedId": "b-sa",
       "name": "Rose bush",
       "scientific": "Rosa spp.",
-      "emoji": "🌿",
+      "emoji": "\ud83c\udf3f",
       "category": "Bush Roses",
       "status": "alive",
       "water": "Deep water weekly",
@@ -3511,7 +3511,7 @@
           ]
         },
         {
-          "task": "Deadhead every 2 weeks — outward facing bud, 45° cut",
+          "task": "Deadhead every 2 weeks \u2014 outward facing bud, 45\u00b0 cut",
           "months": [
             4,
             5,
@@ -3529,7 +3529,7 @@
           ]
         },
         {
-          "task": "Monitor for powdery mildew — neem oil if spotted",
+          "task": "Monitor for powdery mildew \u2014 neem oil if spotted",
           "months": [
             6,
             7,
@@ -3554,7 +3554,7 @@
       "notes": "Existing bush rose. Orange/coral.",
       "maintenance": [
         {
-          "task": "Deadhead every 2 weeks — outward facing bud, 45° cut",
+          "task": "Deadhead every 2 weeks \u2014 outward facing bud, 45\u00b0 cut",
           "months": [
             4,
             5,
@@ -3594,7 +3594,7 @@
       "bedId": "b-sa",
       "name": "Climbing rose",
       "scientific": "Rosa spp.",
-      "emoji": "🌹",
+      "emoji": "\ud83c\udf39",
       "category": "Climbing Roses",
       "status": "struggling",
       "water": "Deep water weekly",
@@ -3603,7 +3603,7 @@
       "fromCutting": false,
       "maintenance": [
         {
-          "task": "Light tip prune only — do not hard cut",
+          "task": "Light tip prune only \u2014 do not hard cut",
           "months": [
             1,
             2
@@ -3648,13 +3648,13 @@
       "emoji": "emoji_p1778124227613",
       "category": "Bougainvillea",
       "status": "alive",
-      "water": "Deep water weekly — drought tolerant once established",
+      "water": "Deep water weekly \u2014 drought tolerant once established",
       "sun": "Full sun",
       "notes": "",
       "fromCutting": false,
       "maintenance": [
         {
-          "task": "Hard prune — cut by 1/3",
+          "task": "Hard prune \u2014 cut by 1/3",
           "months": [
             2
           ]
@@ -3684,13 +3684,13 @@
       "emoji": "emoji_p1778124307829",
       "category": "Bougainvillea",
       "status": "alive",
-      "water": "Deep water weekly — Super Bloom half strength monthly",
+      "water": "Deep water weekly \u2014 Super Bloom half strength monthly",
       "sun": "Full sun",
       "notes": "White stripe variety",
       "fromCutting": false,
       "maintenance": [
         {
-          "task": "Hard prune — cut by 1/3",
+          "task": "Hard prune \u2014 cut by 1/3",
           "months": [
             2
           ]
@@ -3717,7 +3717,7 @@
       "bedId": "b-ma",
       "name": "Sally Holmes",
       "scientific": "Rosa 'Sally Holmes'",
-      "emoji": "🌹",
+      "emoji": "\ud83c\udf39",
       "category": "Climbing Roses",
       "status": "alive",
       "water": "Deep water weekly",
@@ -3726,7 +3726,7 @@
       "fromCutting": false,
       "maintenance": [
         {
-          "task": "Light tip prune only — do not hard cut",
+          "task": "Light tip prune only \u2014 do not hard cut",
           "months": [
             1,
             2
@@ -3775,7 +3775,7 @@
       "bedId": "b-ma",
       "name": "Star Jasmine",
       "scientific": "Trachelospermum jasminoides",
-      "emoji": "🌸",
+      "emoji": "\ud83c\udf38",
       "status": "alive",
       "water": "Moderate",
       "sun": "Part sun",
@@ -3813,7 +3813,7 @@
       "bedId": "b-ma",
       "name": "Salvia Amistad",
       "scientific": "Salvia Amistad",
-      "emoji": "💜",
+      "emoji": "\ud83d\udc9c",
       "status": "alive",
       "water": "Low-moderate",
       "sun": "Part sun",
@@ -3859,10 +3859,10 @@
       "bedId": "b-ma",
       "name": "Portulaca",
       "scientific": "Portulaca grandiflora",
-      "emoji": "🌸",
+      "emoji": "\ud83c\udf38",
       "status": "alive",
       "category": "Annuals",
-      "water": "Low — drought tolerant",
+      "water": "Low \u2014 drought tolerant",
       "sun": "Full sun",
       "datePlanted": "",
       "nursery": "",
@@ -3879,7 +3879,7 @@
           ]
         },
         {
-          "task": "Water only when soil is dry",
+          "task": "Water only when soil completely dry",
           "months": [
             5,
             6,
@@ -3896,7 +3896,7 @@
       "bedId": "b-ma",
       "name": "Rosemary",
       "scientific": "Salvia rosmarinus",
-      "emoji": "🌿",
+      "emoji": "\ud83c\udf3f",
       "status": "alive",
       "category": "Herbs",
       "water": "Low once established",
@@ -3929,7 +3929,7 @@
       "scientific": "Bougainvillea White Stripe",
       "emoji": "emoji_bbq-whiteboug",
       "status": "alive",
-      "water": "Deep water weekly — Super Bloom half strength monthly",
+      "water": "Deep water weekly \u2014 Super Bloom half strength monthly",
       "sun": "Full sun",
       "datePlanted": "",
       "nursery": "",
@@ -3937,7 +3937,7 @@
       "notes": "Moving to BACK of BBQ bed.",
       "maintenance": [
         {
-          "task": "Apply Super Bloom half strength to MOIST soil — monthly",
+          "task": "Apply Super Bloom half strength to MOIST soil \u2014 monthly",
           "months": [
             4,
             5,
@@ -3948,7 +3948,7 @@
           ]
         },
         {
-          "task": "Cut back by 1/3 after flowering",
+          "task": "Cut back by 1/3 after first bloom flush",
           "months": [
             8,
             9
@@ -3978,7 +3978,7 @@
       "bedId": "b-bbq",
       "name": "Salvia Amistad",
       "scientific": "Salvia Amistad",
-      "emoji": "💜",
+      "emoji": "\ud83d\udc9c",
       "status": "alive",
       "water": "Low-moderate",
       "sun": "Full sun",
@@ -4024,7 +4024,7 @@
       "bedId": "b-bbq",
       "name": "Verbena Lollipop",
       "scientific": "Verbena bonariensis Lollipop",
-      "emoji": "💜",
+      "emoji": "\ud83d\udc9c",
       "status": "alive",
       "water": "Low once established",
       "sun": "Full sun",
@@ -4065,7 +4065,7 @@
       "datePlanted": "2026-05-27",
       "nursery": "bought",
       "fromCutting": false,
-      "notes": "x4. Magenta/hot pink — select at nursery.",
+      "notes": "x4. Magenta/hot pink \u2014 select at nursery.",
       "maintenance": [
         {
           "task": "Deadhead regularly",
@@ -4109,7 +4109,7 @@
       "notes": "Existing rose.",
       "maintenance": [
         {
-          "task": "Deadhead every 2 weeks — outward facing bud, 45° cut",
+          "task": "Deadhead every 2 weeks \u2014 outward facing bud, 45\u00b0 cut",
           "months": [
             4,
             5,
@@ -4148,7 +4148,7 @@
       "bedId": "b-bbq",
       "name": "Daisy",
       "scientific": "Leucanthemum spp.",
-      "emoji": "🌼",
+      "emoji": "\ud83c\udf3c",
       "status": "alive",
       "water": "Moderate",
       "sun": "Full sun",
@@ -4228,13 +4228,13 @@
       "emoji": "emoji_p1778171162160",
       "category": "Shrubs",
       "status": "alive",
-      "water": "Low — drought tolerant once established",
+      "water": "Low \u2014 drought tolerant once established",
       "sun": "Full sun",
       "notes": "",
       "fromCutting": false,
       "maintenance": [
         {
-          "task": "Cut back by 1/3 if leggy — reblooms in 3 weeks",
+          "task": "Cut back by 1/3 if leggy \u2014 reblooms in 3 weeks",
           "months": [
             7,
             8
@@ -4263,16 +4263,16 @@
       "bedId": "b-bbq",
       "name": "Hibiscus",
       "scientific": "Hibiscus rosa-sinensis",
-      "emoji": "🌺",
+      "emoji": "\ud83c\udf3a",
       "category": "Shrubs",
       "status": "dead",
-      "water": "Regular — keep consistently moist in summer",
+      "water": "Regular \u2014 keep consistently moist in summer",
       "sun": "Full sun",
       "notes": "",
       "fromCutting": false,
       "maintenance": [
         {
-          "task": "Cut back by 1/3 if leggy — reblooms in 3 weeks",
+          "task": "Cut back by 1/3 if leggy \u2014 reblooms in 3 weeks",
           "months": [
             7,
             8
@@ -4313,7 +4313,7 @@
       "fromCutting": false,
       "maintenance": [
         {
-          "task": "Hard prune — cut by 1/3",
+          "task": "Hard prune \u2014 cut by 1/3",
           "months": [
             2
           ]
@@ -4349,7 +4349,7 @@
       "fromCutting": false,
       "maintenance": [
         {
-          "task": "Light tip prune only — do not hard cut",
+          "task": "Light tip prune only \u2014 do not hard cut",
           "months": [
             1,
             2
@@ -4392,13 +4392,13 @@
       "emoji": "emoji_p1778118483625",
       "category": "Trees",
       "status": "alive",
-      "water": "Moderate — low once established",
+      "water": "Moderate \u2014 low once established",
       "sun": "Full sun to part shade",
       "notes": "",
       "fromCutting": false,
       "maintenance": [
         {
-          "task": "Deep water monthly — slow hose at drip line",
+          "task": "Deep water monthly \u2014 slow hose at drip line",
           "months": [
             6,
             7,
@@ -4430,7 +4430,7 @@
       "bedId": "b-tom",
       "name": "Night jasmine",
       "scientific": "Cestrum nocturnum ",
-      "emoji": "🌿",
+      "emoji": "\ud83c\udf3f",
       "category": "Shrubs",
       "status": "alive",
       "water": "Moderate",
@@ -4439,7 +4439,7 @@
       "fromCutting": false,
       "maintenance": [
         {
-          "task": "Water deeply weekly during warm months — drought tolerant once established",
+          "task": "Water deeply weekly during warm months \u2014 drought tolerant once established",
           "months": [
             5,
             6,
@@ -4449,7 +4449,7 @@
           ]
         },
         {
-          "task": "Light prune after bloom to shape — avoid hard cutback",
+          "task": "Light prune after bloom to shape \u2014 avoid hard cutback",
           "months": [
             10,
             11
@@ -4463,7 +4463,7 @@
       "bedId": "b-tom",
       "name": "Espalier Rainier Cherry ",
       "scientific": "Prunus avium Rainier",
-      "emoji": "🍒",
+      "emoji": "\ud83c\udf52",
       "status": "alive",
       "water": "Every 2 weeks spring / weekly July-August",
       "sun": "Full sun",
@@ -4473,7 +4473,7 @@
       "notes": "Existing espalier. NEVER skip summer watering.",
       "maintenance": [
         {
-          "task": "Deep water every 2 weeks spring — slow hose 10 min at drip line",
+          "task": "Deep water every 2 weeks spring \u2014 slow hose 10 min at drip line",
           "months": [
             3,
             4,
@@ -4489,7 +4489,7 @@
           ]
         },
         {
-          "task": "Extra water during any heat wave 3+ days over 90°F",
+          "task": "Extra water during any heat wave 3+ days over 90\u00b0F",
           "months": [
             6,
             7,
@@ -4536,7 +4536,7 @@
       "notes": "Existing espalier on wall.",
       "maintenance": [
         {
-          "task": "Deep water every 2 weeks spring — slow hose 10 min at drip line",
+          "task": "Deep water every 2 weeks spring \u2014 slow hose 10 min at drip line",
           "months": [
             3,
             4,
@@ -4580,16 +4580,16 @@
       "bedId": "b-tom",
       "name": "Dichondra",
       "scientific": "Dichondra micrantha",
-      "emoji": "🌿",
+      "emoji": "\ud83c\udf3f",
       "category": "Perennials",
       "status": "alive",
-      "water": "Regular — keep consistently moist",
+      "water": "Regular \u2014 keep consistently moist",
       "sun": "Part shade to full shade",
       "notes": "",
       "fromCutting": false,
       "maintenance": [
         {
-          "task": "Water every 1-2 weeks during dry season — very drought tolerant",
+          "task": "Water every 1-2 weeks during dry season \u2014 very drought tolerant",
           "months": [
             6,
             7,
@@ -4607,10 +4607,10 @@
       "bedId": "b-tom",
       "name": "Gazania",
       "scientific": "Gazania rigens",
-      "emoji": "🌿",
+      "emoji": "\ud83c\udf3f",
       "category": "Annuals",
       "status": "alive",
-      "water": "Low — drought tolerant",
+      "water": "Low \u2014 drought tolerant",
       "sun": "Full sun",
       "notes": "",
       "fromCutting": false,
@@ -4626,7 +4626,7 @@
           ]
         },
         {
-          "task": "Water sparingly — drought tolerant once established",
+          "task": "Water sparingly \u2014 drought tolerant once established",
           "months": [
             6,
             7,
@@ -4641,7 +4641,7 @@
       "bedId": "b-mp",
       "name": "Abelia Kaleidoscope",
       "scientific": "Abelia grandiflora Kaleidoscope",
-      "emoji": "🌿",
+      "emoji": "\ud83c\udf3f",
       "status": "alive",
       "water": "Moderate",
       "sun": "Part shade",
@@ -4713,14 +4713,14 @@
       "bedId": "b-mp",
       "name": "Daphne Odora",
       "scientific": "Daphne odora",
-      "emoji": "🌸",
+      "emoji": "\ud83c\udf38",
       "status": "alive",
-      "water": "Low — drought-tolerant once established",
+      "water": "Low \u2014 drought-tolerant once established",
       "sun": "Part shade",
       "datePlanted": "",
       "nursery": "",
       "fromCutting": false,
-      "notes": "Existing. Winter–spring fragrant blooms. Resents root disturbance.",
+      "notes": "Existing. Winter\u2013spring fragrant blooms. Resents root disturbance.",
       "maintenance": [
         {
           "task": "Feed bonemeal",
@@ -4729,14 +4729,14 @@
           ]
         },
         {
-          "task": "Light trim after flowering — never cut into old wood",
+          "task": "Light trim after flowering \u2014 never cut into old wood",
           "months": [
             3,
             4
           ]
         },
         {
-          "task": "Mulch roots to keep cool — never cultivate around base",
+          "task": "Mulch roots to keep cool \u2014 never cultivate around base",
           "months": [
             4,
             5
@@ -4745,12 +4745,12 @@
       ],
       "trouble": [
         {
-          "issue": "Root rot (overwatering — ensure perfect drainage)",
-          "url": "https://www.google.com/search?q=Root%20rot%20(overwatering%20—%20ensure%20perfect%20drainage)%20plant%20care%20fix"
+          "issue": "Root rot (overwatering \u2014 ensure perfect drainage)",
+          "url": "https://www.google.com/search?q=Root%20rot%20(overwatering%20\u2014%20ensure%20perfect%20drainage)%20plant%20care%20fix"
         },
         {
-          "issue": "Sudden dieback (Phytophthora — improve drainage immediately)",
-          "url": "https://www.google.com/search?q=Sudden%20dieback%20(Phytophthora%20—%20improve%20drainage%20immediately)%20plant%20care%20fix"
+          "issue": "Sudden dieback (Phytophthora \u2014 improve drainage immediately)",
+          "url": "https://www.google.com/search?q=Sudden%20dieback%20(Phytophthora%20\u2014%20improve%20drainage%20immediately)%20plant%20care%20fix"
         }
       ],
       "category": "Shrubs"
@@ -4851,7 +4851,7 @@
       "notes": "Existing.",
       "maintenance": [
         {
-          "task": "Deadwood removal only — no hard cutback",
+          "task": "Deadwood removal only \u2014 no hard cutback",
           "months": [
             1
           ]
@@ -4883,7 +4883,7 @@
       "bedId": "b-mp",
       "name": "Japanese Maple",
       "scientific": "Acer palmatum",
-      "emoji": "🍁",
+      "emoji": "\ud83c\udf41",
       "status": "alive",
       "water": "Regular when young",
       "sun": "Part shade",
@@ -4912,7 +4912,7 @@
       "bedId": "b-mp",
       "name": "Carex Ice Dance",
       "scientific": "Carex morrowii Ice Dance",
-      "emoji": "🌾",
+      "emoji": "\ud83c\udf3e",
       "status": "alive",
       "water": "Moderate",
       "sun": "Part shade",
@@ -4928,7 +4928,7 @@
           ]
         },
         {
-          "task": "Water occasionally during dry season — prefers consistent moisture",
+          "task": "Water occasionally during dry season \u2014 prefers consistent moisture",
           "months": [
             6,
             7,
@@ -4949,7 +4949,7 @@
       "bedId": "b-mp",
       "name": "Hellebores Pippa's Purple",
       "scientific": "Helleborus Pippa's Purple",
-      "emoji": "🌸",
+      "emoji": "\ud83c\udf38",
       "status": "alive",
       "water": "Low once established",
       "sun": "Part to full shade",
@@ -4993,8 +4993,8 @@
       ],
       "trouble": [
         {
-          "issue": "Black death virus (incurable — remove and destroy affected plant)",
-          "url": "https://www.google.com/search?q=Black%20death%20virus%20(incurable%20—%20remove%20and%20destroy%20affected%20plant)%20plant%20care%20fix"
+          "issue": "Black death virus (incurable \u2014 remove and destroy affected plant)",
+          "url": "https://www.google.com/search?q=Black%20death%20virus%20(incurable%20\u2014%20remove%20and%20destroy%20affected%20plant)%20plant%20care%20fix"
         },
         {
           "issue": "Crown rot from poor drainage",
@@ -5015,7 +5015,7 @@
       "datePlanted": "",
       "nursery": "",
       "fromCutting": false,
-      "notes": "Existing groundcover. Spreads readily — trim to keep in bounds.",
+      "notes": "Existing groundcover. Spreads readily \u2014 trim to keep in bounds.",
       "maintenance": [
         {
           "task": "Trim back to control spread",
@@ -5049,7 +5049,7 @@
       "bedId": "b-mp",
       "name": "Alocasia",
       "scientific": "Alocasia",
-      "emoji": "🌿",
+      "emoji": "\ud83c\udf3f",
       "status": "alive",
       "category": "Tropicals",
       "water": "Moderate",
@@ -5086,14 +5086,14 @@
       "bedId": "b-mp",
       "name": "Hosta",
       "scientific": "Hosta Minute Man",
-      "emoji": "🍃",
+      "emoji": "\ud83c\udf43",
       "status": "alive",
       "water": "Moderate",
       "sun": "Part shade",
       "datePlanted": "2026-05-27",
       "nursery": "bought",
       "fromCutting": false,
-      "notes": "Planned. Bold white-edged foliage. Slug magnet — bait proactively.. Patriot variety",
+      "notes": "Planned. Bold white-edged foliage. Slug magnet \u2014 bait proactively.. Patriot variety",
       "maintenance": [
         {
           "task": "Monitor for slugs and snails",
@@ -5107,7 +5107,7 @@
           ]
         },
         {
-          "task": "Emerges late Feb/March — mark location and do not disturb soil",
+          "task": "Emerges late Feb/March \u2014 mark location and do not disturb soil",
           "months": [
             1,
             2
@@ -5138,14 +5138,14 @@
       "bedId": "b-mp",
       "name": "Hosta",
       "scientific": "Hosta Minute Man",
-      "emoji": "🍃",
+      "emoji": "\ud83c\udf43",
       "status": "alive",
       "water": "Moderate",
       "sun": "Part shade",
       "datePlanted": "2026-05-27",
       "nursery": "bought",
       "fromCutting": false,
-      "notes": "Planned. Bold white-edged foliage. Slug magnet — bait proactively.. Patriot variety",
+      "notes": "Planned. Bold white-edged foliage. Slug magnet \u2014 bait proactively.. Patriot variety",
       "maintenance": [
         {
           "task": "Monitor for slugs and snails",
@@ -5159,7 +5159,7 @@
           ]
         },
         {
-          "task": "Emerges late Feb/March — mark location and do not disturb soil",
+          "task": "Emerges late Feb/March \u2014 mark location and do not disturb soil",
           "months": [
             1,
             2
@@ -5191,7 +5191,7 @@
       "bedId": "b-mp",
       "name": "Western Sword Fern",
       "scientific": "Polystichum munitum",
-      "emoji": "🌿",
+      "emoji": "\ud83c\udf3f",
       "status": "alive",
       "water": "Low once established",
       "sun": "Part shade to full shade",
@@ -5220,7 +5220,7 @@
       "bedId": "b-mp",
       "name": "Japanese Forest Grass",
       "scientific": "Hakonechloa macra",
-      "emoji": "🌾",
+      "emoji": "\ud83c\udf3e",
       "status": "alive",
       "water": "Moderate",
       "sun": "Part shade",
@@ -5273,7 +5273,7 @@
           ]
         },
         {
-          "task": "Check for scale and aphids — treat with neem oil if found",
+          "task": "Check for scale and aphids \u2014 treat with neem oil if found",
           "months": [
             4,
             5
@@ -5321,7 +5321,7 @@
           ]
         },
         {
-          "task": "Remove dead wood and crossing branches",
+          "task": "Remove dead/crossing branches",
           "months": [
             3
           ]
@@ -5352,7 +5352,7 @@
       "bedId": "b-porch",
       "name": "Ginger Plant",
       "scientific": "Zingiber officinale",
-      "emoji": "🌿",
+      "emoji": "\ud83c\udf3f",
       "status": "alive",
       "category": "Tropicals",
       "water": "Moderate",
@@ -5382,7 +5382,7 @@
       "bedId": "b-porch",
       "name": "Dichondra",
       "scientific": "Dichondra argentea",
-      "emoji": "🌿",
+      "emoji": "\ud83c\udf3f",
       "status": "alive",
       "category": "Groundcovers",
       "water": "Moderate",
@@ -5415,7 +5415,7 @@
       "datePlanted": "",
       "nursery": "",
       "fromCutting": false,
-      "notes": "Existing groundcover. Spreads readily — trim to keep in bounds.",
+      "notes": "Existing groundcover. Spreads readily \u2014 trim to keep in bounds.",
       "maintenance": [
         {
           "task": "Trim back to control spread",
@@ -5450,7 +5450,7 @@
       "bedId": "b-porch",
       "name": "Cordyline",
       "scientific": "Cordyline australis",
-      "emoji": "🌿",
+      "emoji": "\ud83c\udf3f",
       "status": "alive",
       "category": "Tropicals",
       "water": "Low once established",
@@ -5476,7 +5476,7 @@
       "bedId": "b-porch",
       "name": "Tuberous Begonia",
       "scientific": "Begonia x tuberhybrida",
-      "emoji": "🌸",
+      "emoji": "\ud83c\udf38",
       "status": "alive",
       "category": "Annuals",
       "water": "Moderate",
@@ -5512,7 +5512,7 @@
       "bedId": "b-porch",
       "name": "Foxtail Fern",
       "scientific": "Asparagus densiflorus",
-      "emoji": "🌿",
+      "emoji": "\ud83c\udf3f",
       "status": "alive",
       "category": "Ferns",
       "water": "Moderate",
@@ -5575,7 +5575,7 @@
       "bedId": "b-porch",
       "name": "Trailing Fuchsia",
       "scientific": "Fuchsia hybrida",
-      "emoji": "🌸",
+      "emoji": "\ud83c\udf38",
       "status": "alive",
       "category": "Annuals",
       "water": "Moderate to high",
@@ -5607,7 +5607,7 @@
           ]
         },
         {
-          "task": "Cut back hard in late winter",
+          "task": "Hard cutback annually in January/February",
           "months": [
             2
           ]
@@ -5620,7 +5620,7 @@
       "bedId": "b-porch",
       "name": "Tiger Eye Abutilon",
       "scientific": "Abutilon pictum",
-      "emoji": "🌿",
+      "emoji": "\ud83c\udf3f",
       "status": "alive",
       "category": "Shrubs",
       "water": "Moderate",
@@ -5651,7 +5651,7 @@
       "bedId": "b-porch",
       "name": "Golden Oxalis",
       "scientific": "Oxalis chrysantha",
-      "emoji": "🌿",
+      "emoji": "\ud83c\udf3f",
       "status": "alive",
       "category": "Bulbs",
       "water": "Moderate",
@@ -5686,7 +5686,7 @@
       "notes": "Existing.",
       "maintenance": [
         {
-          "task": "Deadwood removal only — no hard cutback",
+          "task": "Deadwood removal only \u2014 no hard cutback",
           "months": [
             1
           ]
@@ -5722,13 +5722,13 @@
       "emoji": "emoji_p1778118350650",
       "category": "Hydrangeas",
       "status": "alive",
-      "water": "Regular — keep consistently moist",
+      "water": "Regular \u2014 keep consistently moist",
       "sun": "Part shade",
       "notes": "",
       "fromCutting": false,
       "maintenance": [
         {
-          "task": "Deadwood removal only — no hard cutback",
+          "task": "Deadwood removal only \u2014 no hard cutback",
           "months": [
             1
           ]
@@ -5759,13 +5759,13 @@
       "emoji": "emoji_p1778118317106",
       "category": "Hydrangeas",
       "status": "alive",
-      "water": "Regular — keep consistently moist",
-      "sun": "Part shade — morning sun preferred",
+      "water": "Regular \u2014 keep consistently moist",
+      "sun": "Part shade \u2014 morning sun preferred",
       "notes": "",
       "fromCutting": false,
       "maintenance": [
         {
-          "task": "Deadwood removal only — no hard cutback",
+          "task": "Deadwood removal only \u2014 no hard cutback",
           "months": [
             1
           ]
@@ -5791,7 +5791,7 @@
       "bedId": "b-br",
       "name": "Japanese Anemone Honorine Jobert",
       "scientific": "Anemone hybrida Honorine Jobert",
-      "emoji": "🌸",
+      "emoji": "\ud83c\udf38",
       "status": "alive",
       "water": "Moderate",
       "sun": "Part shade",
@@ -5819,15 +5819,15 @@
       "id": "br-hosta",
       "bedId": "b-br",
       "name": "Hosta",
-      "scientific": "Hosta x ‘Blue Angel’",
-      "emoji": "🍃",
+      "scientific": "Hosta x \u2018Blue Angel\u2019",
+      "emoji": "\ud83c\udf43",
       "status": "alive",
       "water": "Regular",
       "sun": "Full shade",
       "datePlanted": "2026-05-27",
       "nursery": "bought",
       "fromCutting": false,
-      "notes": "x1. 3-gallon. 4ft x 6ft at maturity.. Blue Angel variety, 4ft×6ft at maturity",
+      "notes": "x1. 3-gallon. 4ft x 6ft at maturity.. Blue Angel variety, 4ft\u00d76ft at maturity",
       "maintenance": [
         {
           "task": "Monitor for slugs and snails",
@@ -5841,7 +5841,7 @@
           ]
         },
         {
-          "task": "Emerges late Feb/March — do not disturb soil",
+          "task": "Emerges late Feb/March \u2014 do not disturb soil",
           "months": [
             1,
             2
@@ -5885,7 +5885,7 @@
           ]
         },
         {
-          "task": "Water occasionally during first summer — drought tolerant once established",
+          "task": "Water occasionally during first summer \u2014 drought tolerant once established",
           "months": [
             6,
             7,
@@ -5906,7 +5906,7 @@
       "bedId": "b-br",
       "name": "Bergenia Crassifolia",
       "scientific": "Bergenia crassifolia",
-      "emoji": "🌸",
+      "emoji": "\ud83c\udf38",
       "status": "alive",
       "water": "Moderate",
       "sun": "Part shade",
@@ -5951,7 +5951,7 @@
       "bedId": "b-br",
       "name": "Campanula Blue Waterfall",
       "scientific": "Campanula poscharskyana 'Camgood'",
-      "emoji": "💜",
+      "emoji": "\ud83d\udc9c",
       "status": "alive",
       "category": "Perennials",
       "water": "Moderate",
@@ -6054,7 +6054,7 @@
       "emoji": "emoji_p1778114397874",
       "category": "Trees",
       "status": "alive",
-      "water": "Regular — keep evenly moist",
+      "water": "Regular \u2014 keep evenly moist",
       "sun": "Full sun to part sun",
       "notes": "",
       "fromCutting": false,
@@ -6155,7 +6155,7 @@
       "bedId": "b-br",
       "name": "Alocasia",
       "scientific": "Alocasia",
-      "emoji": "🌿",
+      "emoji": "\ud83c\udf3f",
       "status": "alive",
       "category": "Tropicals",
       "water": "Moderate",
@@ -6192,7 +6192,7 @@
       "bedId": "b-br",
       "name": "Caladium",
       "scientific": "Caladium bicolor",
-      "emoji": "🌿",
+      "emoji": "\ud83c\udf3f",
       "status": "alive",
       "category": "Tropicals",
       "water": "Moderate",
@@ -6229,13 +6229,13 @@
       "emoji": "emoji_p1778117705415",
       "category": "Trees",
       "status": "alive",
-      "water": "Low once established — drought tolerant",
+      "water": "Low once established \u2014 drought tolerant",
       "sun": "Full sun to part shade",
       "notes": "",
       "fromCutting": false,
       "maintenance": [
         {
-          "task": "Deep water monthly — slow hose at drip line",
+          "task": "Deep water monthly \u2014 slow hose at drip line",
           "months": [
             6,
             7,
@@ -6267,7 +6267,7 @@
       "emoji": "emoji_p1778118235543",
       "category": "Vines & Climbers",
       "status": "alive",
-      "water": "Moderate — more water when young",
+      "water": "Moderate \u2014 more water when young",
       "sun": "Part shade to full sun",
       "notes": "",
       "fromCutting": false,
@@ -6321,13 +6321,13 @@
       "emoji": "emoji_p1778118483625",
       "category": "Trees",
       "status": "alive",
-      "water": "Moderate — low once established",
+      "water": "Moderate \u2014 low once established",
       "sun": "Full sun to part shade",
       "notes": "",
       "fromCutting": false,
       "maintenance": [
         {
-          "task": "Deep water monthly — slow hose at drip line",
+          "task": "Deep water monthly \u2014 slow hose at drip line",
           "months": [
             6,
             7,
@@ -6368,7 +6368,7 @@
       "notes": "Existing.",
       "maintenance": [
         {
-          "task": "Deadwood removal only — no hard cutback",
+          "task": "Deadwood removal only \u2014 no hard cutback",
           "months": [
             1
           ]
@@ -6404,13 +6404,13 @@
       "emoji": "emoji_p1778118413483",
       "category": "Hydrangeas",
       "status": "alive",
-      "water": "Regular — keep consistently moist",
+      "water": "Regular \u2014 keep consistently moist",
       "sun": "Part shade",
       "notes": "",
       "fromCutting": false,
       "maintenance": [
         {
-          "task": "Deadwood removal only — no hard cutback",
+          "task": "Deadwood removal only \u2014 no hard cutback",
           "months": [
             1
           ]
@@ -6441,13 +6441,13 @@
       "emoji": "emoji_p1778118393809",
       "category": "Hydrangeas",
       "status": "alive",
-      "water": "Regular — keep consistently moist",
-      "sun": "Part shade — morning sun preferred",
+      "water": "Regular \u2014 keep consistently moist",
+      "sun": "Part shade \u2014 morning sun preferred",
       "notes": "",
       "fromCutting": false,
       "maintenance": [
         {
-          "task": "Deadwood removal only — no hard cutback",
+          "task": "Deadwood removal only \u2014 no hard cutback",
           "months": [
             1
           ]
@@ -6473,7 +6473,7 @@
       "bedId": "b-bl",
       "name": "Hellebores",
       "scientific": "Helleborus x iburgensis 'Dorothy's Dawn'",
-      "emoji": "🌸",
+      "emoji": "\ud83c\udf38",
       "status": "alive",
       "water": "Low once established",
       "sun": "Part to full shade",
@@ -6503,8 +6503,8 @@
       ],
       "trouble": [
         {
-          "issue": "Black death virus (incurable — remove and destroy affected plant)",
-          "url": "https://www.google.com/search?q=Black%20death%20virus%20(incurable%20—%20remove%20and%20destroy%20affected%20plant)%20plant%20care%20fix"
+          "issue": "Black death virus (incurable \u2014 remove and destroy affected plant)",
+          "url": "https://www.google.com/search?q=Black%20death%20virus%20(incurable%20\u2014%20remove%20and%20destroy%20affected%20plant)%20plant%20care%20fix"
         },
         {
           "issue": "Crown rot from poor drainage",
@@ -6537,7 +6537,7 @@
           ]
         },
         {
-          "task": "Water occasionally during first summer — drought tolerant once established",
+          "task": "Water occasionally during first summer \u2014 drought tolerant once established",
           "months": [
             6,
             7,
@@ -6558,7 +6558,7 @@
       "bedId": "b-bl",
       "name": "Feverfew",
       "scientific": "Tanacetum parthenium",
-      "emoji": "🌼",
+      "emoji": "\ud83c\udf3c",
       "status": "alive",
       "category": "Herbs",
       "water": "Moderate",
@@ -6620,7 +6620,7 @@
       "bedId": "b-bl",
       "name": "Bergenia Crassifolia",
       "scientific": "Bergenia crassifolia",
-      "emoji": "🌸",
+      "emoji": "\ud83c\udf38",
       "status": "alive",
       "water": "Moderate",
       "sun": "Part shade",
@@ -6739,7 +6739,7 @@
       "bedId": "b-bl",
       "name": "Phormium",
       "scientific": "Phormium tenax",
-      "emoji": "🌿",
+      "emoji": "\ud83c\udf3f",
       "status": "alive",
       "category": "Ornamental Grasses",
       "water": "Low once established",
@@ -6798,13 +6798,13 @@
       "emoji": "emoji_p1778117705415",
       "category": "Trees",
       "status": "alive",
-      "water": "Low once established — drought tolerant",
+      "water": "Low once established \u2014 drought tolerant",
       "sun": "Full sun to part shade",
       "notes": "",
       "fromCutting": false,
       "maintenance": [
         {
-          "task": "Deep water monthly — slow hose at drip line",
+          "task": "Deep water monthly \u2014 slow hose at drip line",
           "months": [
             6,
             7,
@@ -6834,7 +6834,7 @@
       "bedId": "b-bl",
       "name": "Alocasia",
       "scientific": "Alocasia",
-      "emoji": "🌿",
+      "emoji": "\ud83c\udf3f",
       "status": "alive",
       "category": "Tropicals",
       "water": "Moderate",
@@ -6871,7 +6871,7 @@
       "bedId": "b-bl",
       "name": "Caladium",
       "scientific": "Caladium bicolor",
-      "emoji": "🌿",
+      "emoji": "\ud83c\udf3f",
       "status": "alive",
       "category": "Tropicals",
       "water": "Moderate",
@@ -6905,7 +6905,7 @@
       "bedId": "b-berry",
       "name": "Shasta Daisy",
       "scientific": "Leucanthemum x superbum",
-      "emoji": "🌼",
+      "emoji": "\ud83c\udf3c",
       "status": "alive",
       "category": "Perennials",
       "water": "Moderate",
@@ -7006,9 +7006,9 @@
     {
       "id": "berry-fig",
       "bedId": "b-berry",
-      "name": "Dwarf Fig — Little Miss Figgy",
+      "name": "Dwarf Fig \u2014 Little Miss Figgy",
       "scientific": "Ficus carica Little Miss Figgy",
-      "emoji": "🌿",
+      "emoji": "\ud83c\udf3f",
       "status": "alive",
       "category": "Fruit Trees",
       "water": "Moderate",
@@ -7068,7 +7068,7 @@
           ]
         },
         {
-          "task": "Cut back hard after first flush",
+          "task": "Cut back by 1/3 after first bloom flush",
           "months": [
             5,
             6
@@ -7089,7 +7089,7 @@
       "bedId": "b-berry",
       "name": "Orange Tree",
       "scientific": "Citrus sinensis",
-      "emoji": "🍊",
+      "emoji": "\ud83c\udf4a",
       "status": "alive",
       "water": "Every 2 weeks spring/summer",
       "sun": "Full sun",
@@ -7107,7 +7107,7 @@
           ]
         },
         {
-          "task": "Deep water every 2 weeks spring — slow hose 10 min at drip line",
+          "task": "Deep water every 2 weeks spring \u2014 slow hose 10 min at drip line",
           "months": [
             3,
             4,
@@ -7116,7 +7116,7 @@
           ]
         },
         {
-          "task": "Deep water every 2 weeks July-August — check soil 6 inches first",
+          "task": "Deep water every 2 weeks July-August \u2014 check soil 6 inches first",
           "months": [
             7,
             8
@@ -7196,7 +7196,7 @@
       "notes": "Existing. Most drought tolerant.",
       "maintenance": [
         {
-          "task": "Monthly watering spring — slow hose 10 min",
+          "task": "Monthly watering spring \u2014 slow hose 10 min",
           "months": [
             3,
             4,
@@ -7236,7 +7236,7 @@
       "bedId": "b-berry",
       "name": "Woolly Thyme",
       "scientific": "Thymus pseudolanuginosus",
-      "emoji": "🌿",
+      "emoji": "\ud83c\udf3f",
       "status": "alive",
       "category": "Groundcovers",
       "water": "Low once established",
@@ -7270,13 +7270,13 @@
       "emoji": "emoji_p1778178720492",
       "category": "Vines & Climbers",
       "status": "alive",
-      "water": "Moderate — deep water during establishment",
+      "water": "Moderate \u2014 deep water during establishment",
       "sun": "Full sun",
       "notes": "Two trim cycles to maximize bloom. \nMay - cut back to 6 nodes. Get rid of all seed pods \nJan/feb - cut back to 2 or 3. This is where the flowers will come from ",
       "fromCutting": false,
       "maintenance": [
         {
-          "task": "Light tip prune only — do not hard cut",
+          "task": "Cut back summer side shoots to 2-3 buds \u2014 winter half of 5-3 rule",
           "months": [
             1,
             2
@@ -7309,9 +7309,12 @@
           ]
         },
         {
-          "task": "Cut back new side shoots to 5 leaves — do NOT cut main structural canes",
+          "task": "Cut back new side shoots to 5 leaves \u2014 do NOT cut main structural canes",
           "months": [
-            5
+            5,
+            6,
+            7,
+            8
           ]
         }
       ],
@@ -7332,7 +7335,7 @@
       "notes": "Existing.",
       "maintenance": [
         {
-          "task": "Deadwood removal only — no hard cutback",
+          "task": "Deadwood removal only \u2014 no hard cutback",
           "months": [
             1
           ]
@@ -7365,7 +7368,7 @@
       "bedId": "b-berry",
       "name": "Peas",
       "scientific": "Pisum sativum",
-      "emoji": "🫛",
+      "emoji": "\ud83e\udedb",
       "category": "Vegetables",
       "status": "alive",
       "water": "Moderate",
@@ -7382,7 +7385,7 @@
           ]
         },
         {
-          "task": "Water consistently — do not let dry out",
+          "task": "Water consistently \u2014 do not let dry out",
           "months": [
             4,
             5,
@@ -7399,7 +7402,7 @@
       "bedId": "b-berry",
       "name": "Snap Peas",
       "scientific": "Pisum sativum var. macrocarpon",
-      "emoji": "🫛",
+      "emoji": "\ud83e\udedb",
       "category": "Vegetables",
       "status": "alive",
       "water": "Moderate",
@@ -7416,7 +7419,7 @@
           ]
         },
         {
-          "task": "Water consistently — do not let dry out",
+          "task": "Water consistently \u2014 do not let dry out",
           "months": [
             4,
             5,
@@ -7433,7 +7436,7 @@
       "bedId": "b-berry",
       "name": "Green Beans",
       "scientific": "Phaseolus vulgaris",
-      "emoji": "🌱",
+      "emoji": "\ud83c\udf31",
       "status": "alive",
       "category": "Vegetables",
       "water": "Moderate",
@@ -7485,7 +7488,7 @@
           ]
         },
         {
-          "task": "On drip system weekly — check system functioning monthly",
+          "task": "On drip system weekly \u2014 check system functioning monthly",
           "months": [
             4,
             5,
@@ -7568,7 +7571,7 @@
       "bedId": "b-berry",
       "name": "Thornless Boysenberry",
       "scientific": "Rubus ursinus x R. idaeus",
-      "emoji": "🫐",
+      "emoji": "\ud83e\uded0",
       "status": "alive",
       "category": "Berries",
       "water": "Moderate",
@@ -7649,7 +7652,7 @@
       "datePlanted": "2026-05-27",
       "nursery": "bought",
       "fromCutting": false,
-      "notes": "x3. 1-gallon. Full sun — thrives here.",
+      "notes": "x3. 1-gallon. Full sun \u2014 thrives here.",
       "maintenance": [
         {
           "task": "Deadhead regularly",
@@ -7688,7 +7691,7 @@
       "bedId": "b-berry",
       "name": "English Lavender",
       "scientific": "Lavandula angustifolia",
-      "emoji": "💜",
+      "emoji": "\ud83d\udc9c",
       "status": "alive",
       "category": "Herbs",
       "water": "Low once established",
@@ -7699,7 +7702,7 @@
       "notes": "",
       "maintenance": [
         {
-          "task": "Cut back by one third after first flush of bloom",
+          "task": "Cut back by 1/3 after first bloom flush",
           "months": [
             7
           ]
@@ -7719,16 +7722,16 @@
       "bedId": "b-berry",
       "name": "Fan Palm",
       "scientific": "Washingtonia robusta",
-      "emoji": "🌴",
+      "emoji": "\ud83c\udf34",
       "category": "Trees",
       "status": "alive",
-      "water": "Low once established — drought tolerant",
+      "water": "Low once established \u2014 drought tolerant",
       "sun": "Full sun",
       "notes": "",
       "fromCutting": false,
       "maintenance": [
         {
-          "task": "Deep water monthly — slow hose at drip line",
+          "task": "Deep water monthly \u2014 slow hose at drip line",
           "months": [
             6,
             7,
@@ -7766,7 +7769,7 @@
       "fromCutting": false,
       "maintenance": [
         {
-          "task": "Deep water monthly — slow hose at drip line",
+          "task": "Deep water monthly \u2014 slow hose at drip line",
           "months": [
             6,
             7,
@@ -7962,7 +7965,7 @@
       "bedId": "b-back-rose",
       "name": "Apricot Tree",
       "scientific": "Prunus armeniaca",
-      "emoji": "🍑",
+      "emoji": "\ud83c\udf51",
       "status": "alive",
       "water": "Every 2 weeks spring/summer",
       "sun": "Full sun to part sun",
@@ -7972,7 +7975,7 @@
       "notes": "Existing.",
       "maintenance": [
         {
-          "task": "Deep water every 2 weeks spring — slow hose 10 min at drip line",
+          "task": "Deep water every 2 weeks spring \u2014 slow hose 10 min at drip line",
           "months": [
             3,
             4,
@@ -7981,7 +7984,7 @@
           ]
         },
         {
-          "task": "Deep water every 2 weeks July-August — check soil 6 inches first",
+          "task": "Deep water every 2 weeks July-August \u2014 check soil 6 inches first",
           "months": [
             7,
             8
@@ -8022,7 +8025,7 @@
       "notes": "Existing on arbor.",
       "maintenance": [
         {
-          "task": "Apply Super Bloom half strength to MOIST soil — monthly",
+          "task": "Apply Super Bloom half strength to MOIST soil \u2014 monthly",
           "months": [
             4,
             5,
@@ -8033,7 +8036,7 @@
           ]
         },
         {
-          "task": "Cut back by 1/3 after flowering",
+          "task": "Cut back by 1/3 after first bloom flush",
           "months": [
             6,
             7,
@@ -8077,7 +8080,7 @@
       "notes": "Existing. ",
       "maintenance": [
         {
-          "task": "Deadhead every 2 weeks — outward facing bud, 45° cut",
+          "task": "Deadhead every 2 weeks \u2014 outward facing bud, 45\u00b0 cut",
           "months": [
             4,
             5,
@@ -8117,7 +8120,7 @@
       "bedId": "b-back-rose",
       "name": "Rose bush",
       "scientific": "Rosa spp.",
-      "emoji": "🌿",
+      "emoji": "\ud83c\udf3f",
       "category": "Bush Roses",
       "status": "alive",
       "water": "Deep water weekly",
@@ -8133,7 +8136,7 @@
           ]
         },
         {
-          "task": "Deadhead every 2 weeks — outward facing bud, 45° cut",
+          "task": "Deadhead every 2 weeks \u2014 outward facing bud, 45\u00b0 cut",
           "months": [
             4,
             5,
@@ -8151,7 +8154,7 @@
           ]
         },
         {
-          "task": "Monitor for powdery mildew — neem oil if spotted",
+          "task": "Monitor for powdery mildew \u2014 neem oil if spotted",
           "months": [
             6,
             7,
@@ -8166,7 +8169,7 @@
       "bedId": "b-back-rose",
       "name": "Rose bush",
       "scientific": "Rosa spp.",
-      "emoji": "🌿",
+      "emoji": "\ud83c\udf3f",
       "category": "Bush Roses",
       "status": "alive",
       "water": "Deep water weekly",
@@ -8182,7 +8185,7 @@
           ]
         },
         {
-          "task": "Deadhead every 2 weeks — outward facing bud, 45° cut",
+          "task": "Deadhead every 2 weeks \u2014 outward facing bud, 45\u00b0 cut",
           "months": [
             4,
             5,
@@ -8200,7 +8203,7 @@
           ]
         },
         {
-          "task": "Monitor for powdery mildew — neem oil if spotted",
+          "task": "Monitor for powdery mildew \u2014 neem oil if spotted",
           "months": [
             6,
             7,
@@ -8231,7 +8234,7 @@
           ]
         },
         {
-          "task": "Deadhead every 2 weeks — outward facing bud, 45° cut",
+          "task": "Deadhead every 2 weeks \u2014 outward facing bud, 45\u00b0 cut",
           "months": [
             4,
             5,
@@ -8249,7 +8252,7 @@
           ]
         },
         {
-          "task": "Monitor for powdery mildew — neem oil if spotted",
+          "task": "Monitor for powdery mildew \u2014 neem oil if spotted",
           "months": [
             6,
             7,
@@ -8276,7 +8279,7 @@
       "notes": "Existing. Yellow fragrant. Check tag for exact variety.",
       "maintenance": [
         {
-          "task": "Deadhead every 2 weeks — outward facing bud, 45° cut",
+          "task": "Deadhead every 2 weeks \u2014 outward facing bud, 45\u00b0 cut",
           "months": [
             4,
             5,
@@ -8359,7 +8362,7 @@
       "bedId": "b-back-rose",
       "name": "Phormium",
       "scientific": "Phormium tenax",
-      "emoji": "🌾",
+      "emoji": "\ud83c\udf3e",
       "status": "alive",
       "water": "Low-moderate",
       "sun": "Part sun",
@@ -8392,7 +8395,7 @@
       "status": "alive",
       "datePlanted": "2026-05-27",
       "nursery": "bought",
-      "emoji": "🌺",
+      "emoji": "\ud83c\udf3a",
       "category": "Bulbs",
       "notes": "",
       "maintenance": [
@@ -8434,7 +8437,7 @@
       "scientific": "Zamioculcas zamiifolia",
       "emoji": "emoji_ip1",
       "status": "alive",
-      "water": "Every 2-3 weeks — let soil dry completely",
+      "water": "Every 2-3 weeks \u2014 let soil dry completely",
       "sun": "Low to bright indirect",
       "datePlanted": "",
       "nursery": "",
@@ -8442,7 +8445,7 @@
       "notes": "Gray speckled pot.",
       "maintenance": [
         {
-          "task": "Water every 2-3 weeks only — let soil fully dry",
+          "task": "Water every 2-3 weeks only \u2014 let soil fully dry",
           "months": [
             1,
             2,
@@ -8504,7 +8507,7 @@
       "scientific": "Radermachera sinica",
       "emoji": "emoji_ip2",
       "status": "alive",
-      "water": "Moderate — keep evenly moist",
+      "water": "Moderate \u2014 keep evenly moist",
       "sun": "Bright indirect",
       "datePlanted": "",
       "nursery": "",
@@ -8569,7 +8572,7 @@
       "emoji": "emoji_ip3",
       "status": "alive",
       "water": "When top 2 inches dry",
-      "sun": "Bright indirect — no direct sun",
+      "sun": "Bright indirect \u2014 no direct sun",
       "datePlanted": "",
       "nursery": "",
       "fromCutting": false,
@@ -8668,17 +8671,17 @@
       "section": "Plant Stand",
       "name": "Bird's Nest Fern",
       "scientific": "Asplenium nidus",
-      "emoji": "🌿",
+      "emoji": "\ud83c\udf3f",
       "status": "alive",
-      "water": "Keep consistently moist — never dry out",
+      "water": "Keep consistently moist \u2014 never dry out",
       "sun": "Low to medium indirect",
       "datePlanted": "",
       "nursery": "",
       "fromCutting": false,
-      "notes": "Yellow-green pot. Needs more humidity — crispy edges visible.",
+      "notes": "Yellow-green pot. Needs more humidity \u2014 crispy edges visible.",
       "maintenance": [
         {
-          "task": "Keep consistently moist — never let dry out",
+          "task": "Keep consistently moist \u2014 never let dry out",
           "months": [
             1,
             2,
@@ -8852,17 +8855,17 @@
       "section": "Plant Stand",
       "name": "Dracaena",
       "scientific": "Dracaena spp.",
-      "emoji": "🌵",
+      "emoji": "\ud83c\udf35",
       "status": "struggling",
       "water": "Every 1-2 weeks when top inch dry",
-      "sun": "Bright indirect — currently sunburnt",
+      "sun": "Bright indirect \u2014 currently sunburnt",
       "datePlanted": "",
       "nursery": "",
       "fromCutting": false,
-      "notes": "White ribbed pot. Sunburnt — needs to move away from direct light.",
+      "notes": "White ribbed pot. Sunburnt \u2014 needs to move away from direct light.",
       "maintenance": [
         {
-          "task": "Use filtered or rainwater — fluoride sensitive",
+          "task": "Use filtered or rainwater \u2014 fluoride sensitive",
           "months": [
             1,
             2,
@@ -8927,7 +8930,7 @@
       "section": "Plant Stand",
       "name": "Philodendron Sun Red",
       "scientific": "Philodendron 'Sun Red'",
-      "emoji": "🔴",
+      "emoji": "\ud83d\udd34",
       "status": "alive",
       "water": "When top inch dry",
       "sun": "Bright indirect",
@@ -8963,9 +8966,9 @@
       "section": "Plant Stand",
       "name": "Jade",
       "scientific": "Crassula ovata",
-      "emoji": "💚",
+      "emoji": "\ud83d\udc9a",
       "status": "alive",
-      "water": "Every 2-3 weeks — soil fully dry between",
+      "water": "Every 2-3 weeks \u2014 soil fully dry between",
       "sun": "Bright indirect to some direct",
       "datePlanted": "",
       "nursery": "",
@@ -9000,7 +9003,7 @@
           ]
         },
         {
-          "task": "Prune to maintain shape",
+          "task": "Light tip prune only \u2014 do not hard cut",
           "months": [
             2,
             3
@@ -9021,9 +9024,9 @@
       "section": "Plant Stand",
       "name": "Maidenhair Fern (Large)",
       "scientific": "Adiantum raddianum",
-      "emoji": "🌿",
+      "emoji": "\ud83c\udf3f",
       "status": "alive",
-      "water": "Keep consistently moist — never let dry",
+      "water": "Keep consistently moist \u2014 never let dry",
       "sun": "Low to medium indirect",
       "datePlanted": "",
       "nursery": "",
@@ -9031,7 +9034,7 @@
       "notes": "Large white banded pot. Larger trailing specimen.",
       "maintenance": [
         {
-          "task": "Never let soil dry — check daily in summer",
+          "task": "Never let soil dry \u2014 check daily in summer",
           "months": [
             1,
             2,
@@ -9065,7 +9068,7 @@
           ]
         },
         {
-          "task": "If fronds die back — cut to soil, keep moist, will regrow",
+          "task": "If fronds die back \u2014 cut to soil, keep moist, will regrow",
           "months": [
             1,
             2,
@@ -9087,9 +9090,9 @@
       "section": "Plant Stand",
       "name": "Ponytail Palm",
       "scientific": "Beaucarnea recurvata",
-      "emoji": "🌴",
+      "emoji": "\ud83c\udf34",
       "status": "alive",
-      "water": "Every 2-3 weeks — fully dry between",
+      "water": "Every 2-3 weeks \u2014 fully dry between",
       "sun": "Bright indirect to full sun",
       "datePlanted": "",
       "nursery": "",
@@ -9097,7 +9100,7 @@
       "notes": "White smiley face pot.",
       "maintenance": [
         {
-          "task": "Water sparingly — stores water in bulbous trunk",
+          "task": "Water sparingly \u2014 stores water in bulbous trunk",
           "months": [
             1,
             2,
@@ -9143,7 +9146,7 @@
       "section": "Wall Shelves",
       "name": "Lipstick Plant",
       "scientific": "Aeschynanthus radicans",
-      "emoji": "💄",
+      "emoji": "\ud83d\udc84",
       "status": "alive",
       "water": "When top inch dry",
       "sun": "Bright indirect",
@@ -9165,7 +9168,7 @@
           ]
         },
         {
-          "task": "Cool nights in fall trigger blooming — move to cooler spot",
+          "task": "Cool nights in fall trigger blooming \u2014 move to cooler spot",
           "months": [
             9,
             10
@@ -9194,7 +9197,7 @@
       "section": "Wall Shelves",
       "name": "Creeping Fig",
       "scientific": "Ficus pumila",
-      "emoji": "🍃",
+      "emoji": "\ud83c\udf43",
       "status": "alive",
       "water": "Keep evenly moist",
       "sun": "Bright indirect",
@@ -9204,7 +9207,7 @@
       "notes": "Top left wall shelf alongside Lipstick Plant.",
       "maintenance": [
         {
-          "task": "Keep evenly moist — sensitive to drying out",
+          "task": "Keep evenly moist \u2014 sensitive to drying out",
           "months": [
             1,
             2,
@@ -9282,7 +9285,7 @@
           ]
         },
         {
-          "task": "Oxalis may go dormant in summer heat — reduce water if leaves yellow",
+          "task": "Oxalis may go dormant in summer heat \u2014 reduce water if leaves yellow",
           "months": [
             6,
             7,
@@ -9304,9 +9307,9 @@
       "section": "Wall Shelves",
       "name": "Christmas Cactus",
       "scientific": "Schlumbergera bridgesii",
-      "emoji": "🌸",
+      "emoji": "\ud83c\udf38",
       "status": "alive",
-      "water": "When top inch dry — reduce in fall",
+      "water": "When top inch dry \u2014 reduce in fall",
       "sun": "Bright indirect",
       "datePlanted": "",
       "nursery": "",
@@ -9325,7 +9328,7 @@
           ]
         },
         {
-          "task": "Begin drought stress — reduce watering to trigger bloom",
+          "task": "Begin drought stress \u2014 reduce watering to trigger bloom",
           "months": [
             8,
             9
@@ -9338,13 +9341,13 @@
           ]
         },
         {
-          "task": "Move back to bright spot once buds appear — do not move again",
+          "task": "Move back to bright spot once buds appear \u2014 do not move again",
           "months": [
             11
           ]
         },
         {
-          "task": "Enjoy blooms — keep away from drafts",
+          "task": "Enjoy blooms \u2014 keep away from drafts",
           "months": [
             12,
             1
@@ -9365,9 +9368,9 @@
       "section": "Wall Shelves",
       "name": "Maidenhair Fern (Small)",
       "scientific": "Adiantum raddianum",
-      "emoji": "🌿",
+      "emoji": "\ud83c\udf3f",
       "status": "alive",
-      "water": "Keep consistently moist — never dry",
+      "water": "Keep consistently moist \u2014 never dry",
       "sun": "Low to medium indirect",
       "datePlanted": "",
       "nursery": "",
@@ -9375,7 +9378,7 @@
       "notes": "Hanging smiley pot on wall shelf. Smaller specimen.",
       "maintenance": [
         {
-          "task": "Never let soil dry — check daily",
+          "task": "Never let soil dry \u2014 check daily",
           "months": [
             1,
             2,
@@ -9433,7 +9436,7 @@
       "notes": "Middle left wall shelf.",
       "maintenance": [
         {
-          "task": "Rotate weekly for even growth — leans toward light",
+          "task": "Rotate weekly for even growth \u2014 leans toward light",
           "months": [
             1,
             2,
@@ -9489,7 +9492,7 @@
       "section": "Wall Shelves",
       "name": "Frosty Fern",
       "scientific": "Selaginella kraussiana",
-      "emoji": "🪴",
+      "emoji": "\ud83e\udeb4",
       "status": "alive",
       "water": "Keep consistently moist",
       "sun": "Low to medium indirect",
@@ -9499,7 +9502,7 @@
       "notes": "Middle right wall shelf.",
       "maintenance": [
         {
-          "task": "Keep consistently moist — dries out fast",
+          "task": "Keep consistently moist \u2014 dries out fast",
           "months": [
             1,
             2,
@@ -9582,7 +9585,7 @@
           ]
         },
         {
-          "task": "Reduce watering in winter — semi-dormant",
+          "task": "Reduce watering in winter \u2014 semi-dormant",
           "months": [
             11,
             12,
@@ -9591,7 +9594,7 @@
           ]
         },
         {
-          "task": "Wipe large leaves monthly",
+          "task": "Wipe leaves monthly",
           "months": [
             1,
             2,
@@ -9635,10 +9638,10 @@
       "section": "Wall Shelves",
       "name": "Philodendron 'Pink Princess'",
       "scientific": "Philodendron erubescens 'Pink Princess'",
-      "emoji": "🩷",
+      "emoji": "\ud83e\ude77",
       "status": "alive",
       "water": "When top inch dry",
-      "sun": "Bright indirect — more light = more pink",
+      "sun": "Bright indirect \u2014 more light = more pink",
       "datePlanted": "",
       "nursery": "",
       "fromCutting": false,
@@ -9691,7 +9694,7 @@
       "emoji": "emoji_ip22",
       "status": "alive",
       "water": "Keep evenly moist during growing season",
-      "sun": "Bright indirect — no direct sun",
+      "sun": "Bright indirect \u2014 no direct sun",
       "datePlanted": "",
       "nursery": "",
       "fromCutting": false,
@@ -9746,7 +9749,7 @@
       "section": "Hanging",
       "name": "Spider Plant",
       "scientific": "Chlorophytum comosum",
-      "emoji": "🪴",
+      "emoji": "\ud83e\udeb4",
       "status": "alive",
       "water": "When top inch dry",
       "sun": "Bright indirect",
@@ -9773,7 +9776,7 @@
           ]
         },
         {
-          "task": "Propagate spiderettes — pin to soil or place in water",
+          "task": "Propagate spiderettes \u2014 pin to soil or place in water",
           "months": [
             4,
             5,
@@ -9810,17 +9813,17 @@
       "section": "Table",
       "name": "Prayer Plant",
       "scientific": "Maranta leuconeura",
-      "emoji": "🙏",
+      "emoji": "\ud83d\ude4f",
       "status": "struggling",
       "water": "Keep evenly moist",
       "sun": "Low to medium indirect",
       "datePlanted": "",
       "nursery": "",
       "fromCutting": false,
-      "notes": "Black table. Struggling — crispy edges. Needs humidity and filtered water.",
+      "notes": "Black table. Struggling \u2014 crispy edges. Needs humidity and filtered water.",
       "maintenance": [
         {
-          "task": "Keep evenly moist — very sensitive to drying out",
+          "task": "Keep evenly moist \u2014 very sensitive to drying out",
           "months": [
             1,
             2,
@@ -9854,7 +9857,7 @@
           ]
         },
         {
-          "task": "Use filtered water — sensitive to fluoride",
+          "task": "Use filtered water \u2014 sensitive to fluoride",
           "months": [
             1,
             2,
@@ -9885,9 +9888,9 @@
       "section": "Table",
       "name": "Orchid",
       "scientific": "Phalaenopsis spp.",
-      "emoji": "🌸",
+      "emoji": "\ud83c\udf38",
       "status": "alive",
-      "water": "Every 7-10 days — soak then drain fully",
+      "water": "Every 7-10 days \u2014 soak then drain fully",
       "sun": "Bright indirect",
       "datePlanted": "",
       "nursery": "",
@@ -9895,7 +9898,7 @@
       "notes": "Office table. One of two orchids.",
       "maintenance": [
         {
-          "task": "Soak then drain fully — never sit in water",
+          "task": "Soak then drain fully \u2014 never sit in water",
           "months": [
             1,
             2,
@@ -9953,7 +9956,7 @@
       "section": "Living Room",
       "name": "Peace Lily",
       "scientific": "Spathiphyllum spp.",
-      "emoji": "🪴",
+      "emoji": "\ud83e\udeb4",
       "status": "alive",
       "water": "When leaves slightly droop",
       "sun": "Low to medium indirect",
@@ -9963,7 +9966,7 @@
       "notes": "",
       "maintenance": [
         {
-          "task": "Water when leaves just start to droop — reliable indicator",
+          "task": "Water when leaves just start to droop \u2014 reliable indicator",
           "months": [
             1,
             2,
@@ -9980,7 +9983,7 @@
           ]
         },
         {
-          "task": "Wipe large leaves monthly",
+          "task": "Wipe leaves monthly",
           "months": [
             1,
             2,
@@ -10009,7 +10012,7 @@
           ]
         },
         {
-          "task": "Mist in winter — dry air causes droop",
+          "task": "Mist in winter \u2014 dry air causes droop",
           "months": [
             11,
             12,
@@ -10032,7 +10035,7 @@
       "section": "Living Room",
       "name": "Pothos",
       "scientific": "Epipremnum aureum",
-      "emoji": "💚",
+      "emoji": "\ud83d\udc9a",
       "status": "alive",
       "water": "Every 1-2 weeks",
       "sun": "Low to bright indirect",
@@ -10118,17 +10121,17 @@
       "section": "Bedroom",
       "name": "Dracaena",
       "scientific": "Dracaena spp.",
-      "emoji": "🌵",
+      "emoji": "\ud83c\udf35",
       "status": "alive",
       "water": "Every 1-2 weeks",
       "sun": "Bright indirect",
       "datePlanted": "",
       "nursery": "",
       "fromCutting": false,
-      "notes": "Rest of house — separate from sunburnt office one.",
+      "notes": "Rest of house \u2014 separate from sunburnt office one.",
       "maintenance": [
         {
-          "task": "Use filtered water — fluoride sensitive",
+          "task": "Use filtered water \u2014 fluoride sensitive",
           "months": [
             1,
             2,
@@ -10159,9 +10162,9 @@
       "section": "Other",
       "name": "Ponytail Palm",
       "scientific": "Beaucarnea recurvata",
-      "emoji": "🌴",
+      "emoji": "\ud83c\udf34",
       "status": "alive",
-      "water": "Every 2-3 weeks — fully dry between",
+      "water": "Every 2-3 weeks \u2014 fully dry between",
       "sun": "Bright indirect to full sun",
       "datePlanted": "",
       "nursery": "",
@@ -10169,7 +10172,7 @@
       "notes": "Rest of house.",
       "maintenance": [
         {
-          "task": "Water sparingly — stores water in trunk",
+          "task": "Water sparingly \u2014 stores water in trunk",
           "months": [
             1,
             2,
@@ -10206,9 +10209,9 @@
       "section": "Living Room",
       "name": "Orchid",
       "scientific": "Phalaenopsis spp.",
-      "emoji": "🌸",
+      "emoji": "\ud83c\udf38",
       "status": "alive",
-      "water": "Every 7-10 days — soak then drain",
+      "water": "Every 7-10 days \u2014 soak then drain",
       "sun": "Bright indirect",
       "datePlanted": "",
       "nursery": "",
@@ -10216,7 +10219,7 @@
       "notes": "Rest of house orchid.",
       "maintenance": [
         {
-          "task": "Soak then drain — never sit in water",
+          "task": "Soak then drain \u2014 never sit in water",
           "months": [
             1,
             2,
@@ -10267,7 +10270,7 @@
       "section": "Kitchen",
       "name": "Peperomia",
       "scientific": "Peperomia spp.",
-      "emoji": "🌿",
+      "emoji": "\ud83c\udf3f",
       "status": "alive",
       "water": "Every 1-2 weeks",
       "sun": "Bright indirect",
@@ -10277,7 +10280,7 @@
       "notes": "Pink pig pot. Moving to office once Rieger Begonias arrive.",
       "maintenance": [
         {
-          "task": "Water when soil half dry — do not overwater",
+          "task": "Water when soil half dry \u2014 do not overwater",
           "months": [
             1,
             2,
@@ -10320,9 +10323,9 @@
       "section": "Kitchen",
       "name": "Succulent",
       "scientific": "Echeveria spp.",
-      "emoji": "🌵",
+      "emoji": "\ud83c\udf35",
       "status": "alive",
-      "water": "Every 2-3 weeks — fully dry between",
+      "water": "Every 2-3 weeks \u2014 fully dry between",
       "sun": "Bright direct to bright indirect",
       "datePlanted": "",
       "nursery": "",
@@ -10371,9 +10374,9 @@
       "section": "Kitchen",
       "name": "Mini Jade",
       "scientific": "Crassula ovata 'Minima'",
-      "emoji": "💚",
+      "emoji": "\ud83d\udc9a",
       "status": "alive",
-      "water": "Every 2-3 weeks — fully dry between",
+      "water": "Every 2-3 weeks \u2014 fully dry between",
       "sun": "Bright indirect to some direct",
       "datePlanted": "",
       "nursery": "",
@@ -10422,14 +10425,14 @@
       "section": "Bedroom",
       "name": "Fern",
       "scientific": "Polystichum spp.",
-      "emoji": "🌿",
+      "emoji": "\ud83c\udf3f",
       "status": "alive",
-      "water": "Keep consistently moist — never let dry out",
+      "water": "Keep consistently moist \u2014 never let dry out",
       "sun": "Low to medium indirect",
       "notes": "",
       "maintenance": [
         {
-          "task": "Keep consistently moist — never let dry out",
+          "task": "Keep consistently moist \u2014 never let dry out",
           "months": [
             1,
             2,
@@ -10484,9 +10487,9 @@
       "section": "Window Sill",
       "name": "Mini Jade bonsai",
       "scientific": "Crassula ovata",
-      "emoji": "💚",
+      "emoji": "\ud83d\udc9a",
       "status": "alive",
-      "water": "Every 2-3 weeks — soil fully dry between",
+      "water": "Every 2-3 weeks \u2014 soil fully dry between",
       "sun": "Bright indirect to some direct",
       "datePlanted": "",
       "nursery": "",
@@ -10521,7 +10524,7 @@
           ]
         },
         {
-          "task": "Prune to maintain shape",
+          "task": "Light tip prune only \u2014 do not hard cut",
           "months": [
             2,
             3
@@ -10570,14 +10573,14 @@
     },
     {
       "id": "t1",
-      "text": "Train Iceberg climbing rose canes horizontally across Side Arbor — vine eyes + soft ties now while flexible",
+      "text": "Train Iceberg climbing rose canes horizontally across Side Arbor \u2014 vine eyes + soft ties now while flexible",
       "done": true,
       "date": "",
       "category": "Maintenance"
     },
     {
       "id": "t2",
-      "text": "Cut back Distictis buccinatoria (Trumpet Vine on Fountain Wall) hard to framework — create structure as you cut",
+      "text": "Cut back Distictis buccinatoria (Trumpet Vine on Fountain Wall) hard to framework \u2014 create structure as you cut",
       "done": true,
       "date": "",
       "category": "Maintenance"
@@ -10591,28 +10594,28 @@
     },
     {
       "id": "t4",
-      "text": "Cut back existing 6ft Fatsia — take 6-8 cuttings with rooting hormone",
+      "text": "Cut back existing 6ft Fatsia \u2014 take 6-8 cuttings with rooting hormone",
       "done": true,
       "date": "",
       "category": "Maintenance"
     },
     {
       "id": "t5",
-      "text": "Selective deadwood removal on all hydrangeas — dead/crossing stems only",
+      "text": "Selective deadwood removal on all hydrangeas \u2014 dead/crossing stems only",
       "done": true,
       "date": "",
       "category": "Maintenance"
     },
     {
       "id": "t6",
-      "text": "White Stripe bougainvillea — Super Bloom HALF strength to MOIST soil. Monthly.",
+      "text": "White Stripe bougainvillea \u2014 Super Bloom HALF strength to MOIST soil. Monthly.",
       "done": true,
       "date": "",
       "category": "Maintenance"
     },
     {
       "id": "t7",
-      "text": "Diseased rose — Safer spray every 7-14 days. Do NOT feed until healthy.",
+      "text": "Diseased rose \u2014 Safer spray every 7-14 days. Do NOT feed until healthy.",
       "done": true,
       "date": "",
       "category": "Maintenance"
@@ -10640,49 +10643,49 @@
     },
     {
       "id": "t11",
-      "text": "Monitor irrigation — check soil 48hrs after watering. Drop to 2x/week if still moist.",
+      "text": "Monitor irrigation \u2014 check soil 48hrs after watering. Drop to 2x/week if still moist.",
       "done": true,
       "date": "",
       "category": "Irrigation"
     },
     {
       "id": "t12",
-      "text": "Spot plant all new plants with pots on ground first — step back to street, adjust, THEN plant",
+      "text": "Spot plant all new plants with pots on ground first \u2014 step back to street, adjust, THEN plant",
       "done": true,
       "date": "",
       "category": "Maintenance"
     },
     {
       "id": "t13",
-      "text": "Confirm Breath of Heaven variety matches existing — check foliage color at nursery",
+      "text": "Confirm Breath of Heaven variety matches existing \u2014 check foliage color at nursery",
       "done": true,
       "date": "",
       "category": "Maintenance"
     },
     {
       "id": "t14",
-      "text": "Check nursery tag on fern in white smiley cat pot (plant stand) — ID species",
+      "text": "Check nursery tag on fern in white smiley cat pot (plant stand) \u2014 ID species",
       "done": true,
       "date": "",
       "category": "Indoor"
     },
     {
       "id": "t15",
-      "text": "Get remaining rose names from Side Arbor — varieties beyond Iceberg, Angel Face, Burst of Joy",
+      "text": "Get remaining rose names from Side Arbor \u2014 varieties beyond Iceberg, Angel Face, Burst of Joy",
       "done": true,
       "date": "",
       "category": "Maintenance"
     },
     {
       "id": "t16",
-      "text": "ID David Austin rose variety in Back Rose Bed — check tag for exact name",
+      "text": "ID David Austin rose variety in Back Rose Bed \u2014 check tag for exact name",
       "done": true,
       "date": "",
       "category": "Maintenance"
     },
     {
       "id": "t17",
-      "text": "Phormium orphan with trunk (actually a Cordyline) — find a home: BBQ bed, poolside, or large container",
+      "text": "Phormium orphan with trunk (actually a Cordyline) \u2014 find a home: BBQ bed, poolside, or large container",
       "done": false,
       "date": "",
       "category": "Planning"
@@ -10761,7 +10764,7 @@
     }
   ],
   "notes": [],
-  "gardenNote": "—— Water: ——\nApril 30 - deep watered apricot, orange and persimmon\n\nMay 10 - apricot and persimmon got deeeep watering due to water leak. \n\nMay 15 - deep water orange \n\nMay 17 - deep water palm planters \n\nMay 18 - deep water climber rose in side arbor \n\nMay 22 - check water level before deep watering apricot, persimmon and orange \n\nMay 25 - deep water jasmine \n\n——-Treat: ———\nApril 30 -\n- rose on back bed \n- iceberg in bbq \n\nMay 12\n- all roses in back\n- China doll and jade \n- Snail bait front and back\n\nMay 15 - all indoor plants for thrips \n\nMay 18 - china doll and jade \n\nMay 24 - roses with neem oil \n\nMay 27 - wiped leaves of Monsterras \n\n—- Feed —— \nMay 24 - fed all roses except for both Sally Holmes \nFed Palm \nFed lemon tree \n\nMay 25 - fed all camellias post bloom ",
+  "gardenNote": "\u2014\u2014 Water: \u2014\u2014\nApril 30 - deep watered apricot, orange and persimmon\n\nMay 10 - apricot and persimmon got deeeep watering due to water leak. \n\nMay 15 - deep water orange \n\nMay 17 - deep water palm planters \n\nMay 18 - deep water climber rose in side arbor \n\nMay 22 - check water level before deep watering apricot, persimmon and orange \n\nMay 25 - deep water jasmine \n\n\u2014\u2014-Treat: \u2014\u2014\u2014\nApril 30 -\n- rose on back bed \n- iceberg in bbq \n\nMay 12\n- all roses in back\n- China doll and jade \n- Snail bait front and back\n\nMay 15 - all indoor plants for thrips \n\nMay 18 - china doll and jade \n\nMay 24 - roses with neem oil \n\nMay 27 - wiped leaves of Monsterras \n\n\u2014- Feed \u2014\u2014 \nMay 24 - fed all roses except for both Sally Holmes \nFed Palm \nFed lemon tree \n\nMay 25 - fed all camellias post bloom ",
   "propagation": [
     {
       "id": "pr1778970240429",
@@ -10794,13 +10797,13 @@
       "id": "proj1779686393035",
       "title": "2026 power wash, compost and mulch",
       "date": "2026-04-15",
-      "notes": "Power wash: $600 \nSoil, Compost and mulch: $500 \nAreation: $200 (I will pay for seeds and fertilizer)\nGutter Cleaning: $150\nTotal (Cash): $1450 + 100 (tip) = $1550\n\nHad Jesus Medina. Look for someone else next time. \n\nCompost: Fine compost with minerals . Finally used 7 cu yds \nMulch - 6 cu yds redwood small bark\nSoil - 2 cu yds \nCost of all materials: 439.55 + 860.50 +200 (lawn fertilizer and seeds)‎ = 1500\n\nTOTAL: $3050"
+      "notes": "Power wash: $600 \nSoil, Compost and mulch: $500 \nAreation: $200 (I will pay for seeds and fertilizer)\nGutter Cleaning: $150\nTotal (Cash): $1450 + 100 (tip) = $1550\n\nHad Jesus Medina. Look for someone else next time. \n\nCompost: Fine compost with minerals . Finally used 7 cu yds \nMulch - 6 cu yds redwood small bark\nSoil - 2 cu yds \nCost of all materials: 439.55 + 860.50 +200 (lawn fertilizer and seeds)\u200e\u2009=\u20091500\n\nTOTAL: $3050"
     },
     {
       "id": "proj1779685938183",
       "title": "2026 Irrigation project (bring all valves over ground)",
       "date": "2026-05-25",
-      "notes": "Went with Shruti’s guy David. \n\nQuotes below:\nAffordable irrigation: \n$140 per hour \n4-6 hours \nAbout 6 valves \nNo trees \nService valve - 1-2 hours \n\nDouglas irrigation: whacko!!\n$60 per hour. Bradley. Will take about 2 days \nBut he didn’t inspire much confidence \n\nRodrigo: \n$3900 for the project \n\n✅David (Shruti’s guy):\nOption 1: \nMove each remaining valve overground $150 per valve \n\nOption 2:\nMove all valves overground and clean these up so that all over ground boxes is close by. Add an irrigation shut off valve. And swap out Rodrigo valves for better quality ones. $300 per valve and will take about 2 days. $60 per valve to upgrade existing overground valves that Rodrigo installed in 2025\n\nWent with option 2. Total: $2210"
+      "notes": "Went with Shruti\u2019s guy David. \n\nQuotes below:\nAffordable irrigation: \n$140 per hour \n4-6 hours \nAbout 6 valves \nNo trees \nService valve - 1-2 hours \n\nDouglas irrigation: whacko!!\n$60 per hour. Bradley. Will take about 2 days \nBut he didn\u2019t inspire much confidence \n\nRodrigo: \n$3900 for the project \n\n\u2705David (Shruti\u2019s guy):\nOption 1: \nMove each remaining valve overground $150 per valve \n\nOption 2:\nMove all valves overground and clean these up so that all over ground boxes is close by. Add an irrigation shut off valve. And swap out Rodrigo valves for better quality ones. $300 per valve and will take about 2 days. $60 per valve to upgrade existing overground valves that Rodrigo installed in 2025\n\nWent with option 2. Total: $2210"
     },
     {
       "id": "proj1779128725068",
@@ -10812,7 +10815,7 @@
       "id": "proj1779128702798",
       "title": "2026 Projects",
       "date": "2026-05-18",
-      "notes": "April - mulch and compost\n            material (1500) + \n            labor (1550) Jesus Medina\n            Total = $3050\nMay - Tree trimming (trees front and back minus redwoods; pine tree and pomegranate) by Skyview Tree Trimming\n             Total = $2350\nMay - Irrigation valves overground $2210 by David \nMay - Planting overhaul \n           Plants $3772.60 (Capitol and Devil’s)\n           Installation $1400 + $200 tip = $1600 (Carlos)\n           Total: $5372.60"
+      "notes": "April - mulch and compost\n            material (1500) + \n            labor (1550) Jesus Medina\n            Total = $3050\nMay - Tree trimming (trees front and back minus redwoods; pine tree and pomegranate) by Skyview Tree Trimming\n             Total = $2350\nMay - Irrigation valves overground $2210 by David \nMay - Planting overhaul \n           Plants $3772.60 (Capitol and Devil\u2019s)\n           Installation $1400 + $200 tip = $1600 (Carlos)\n           Total: $5372.60"
     }
   ],
   "photoRefs": {
@@ -10931,35 +10934,35 @@
     "5": {
       "pg_Feed liquid fertilizer every 2 weeks": true,
       "pg_Feed monthly spring-summer": true,
-      "ig_Propagate spiderettes — pin to soil or place in water": true,
-      "ig_Soak then drain fully — never sit in water": true,
-      "ig_Water when leaves just start to droop — reliable indicator": true,
+      "ig_Propagate spiderettes \u2014 pin to soil or place in water": true,
+      "ig_Soak then drain fully \u2014 never sit in water": true,
+      "ig_Water when leaves just start to droop \u2014 reliable indicator": true,
       "s_Iceberg_Train Iceberg rose on Side Arbor": true,
       "pg_Keep evenly moist spring": true,
-      "pg_Keep consistently moist — does not like to dry out": true,
-      "ig_Water every 2-3 weeks only — let soil fully dry": true,
+      "pg_Keep consistently moist \u2014 does not like to dry out": true,
+      "ig_Water every 2-3 weeks only \u2014 let soil fully dry": true,
       "ig_Water when top inch dry": true,
       "ig_Water when top 2 inches dry": true,
-      "ig_Keep consistently moist — never let dry out": true,
-      "ig_Use filtered or rainwater — fluoride sensitive": true,
+      "ig_Keep consistently moist \u2014 never let dry out": true,
+      "ig_Use filtered or rainwater \u2014 fluoride sensitive": true,
       "ig_Water only when soil completely dry": true,
-      "ig_Water sparingly — stores water in bulbous trunk": true,
-      "ig_Keep evenly moist — sensitive to drying out": true,
+      "ig_Water sparingly \u2014 stores water in bulbous trunk": true,
+      "ig_Keep evenly moist \u2014 sensitive to drying out": true,
       "ig_String of Pearls: water every 2 weeks, let dry completely": true,
-      "ig_Keep consistently moist — dries out fast": true,
-      "ig_Use filtered water — sensitive to fluoride": true,
-      "ig_Keep evenly moist — very sensitive to drying out": true,
-      "ig_Use filtered water — fluoride sensitive": true,
-      "ig_Water sparingly — stores water in trunk": true,
-      "ig_Soak then drain — never sit in water": true,
-      "ig_Water when soil half dry — do not overwater": true,
+      "ig_Keep consistently moist \u2014 dries out fast": true,
+      "ig_Use filtered water \u2014 sensitive to fluoride": true,
+      "ig_Keep evenly moist \u2014 very sensitive to drying out": true,
+      "ig_Use filtered water \u2014 fluoride sensitive": true,
+      "ig_Water sparingly \u2014 stores water in trunk": true,
+      "ig_Soak then drain \u2014 never sit in water": true,
+      "ig_Water when soil half dry \u2014 do not overwater": true,
       "ig_Wipe leaves monthly to remove dust": true,
       "ig_Pinch tips to encourage bushy growth": true,
       "ig_Wipe leaves monthly": true,
       "ig_Remove damaged/sunburnt leaves": true,
       "ig_Keep away from direct sun": true,
-      "ig_Never let soil dry — check daily in summer": true,
-      "ig_Never let soil dry — check daily": true,
+      "ig_Never let soil dry \u2014 check daily in summer": true,
+      "ig_Never let soil dry \u2014 check daily": true,
       "ig_Wipe large leaves monthly": true,
       "ig_Ensure bright indirect light to maintain pink variegation": true,
       "ig_Remove brown tips with scissors at an angle": true,
@@ -10974,41 +10977,41 @@
       "ig_Feed orchid fertilizer every 2 weeks when growing": true,
       "ig_Feed monthly spring-summer diluted": true,
       "ig_Feed diluted cactus fertilizer spring-summer only": true,
-      "pg_Train on fence — tie new growth as it extends": true,
+      "pg_Train on fence \u2014 tie new growth as it extends": true,
       "pg_Train new growth on arbor structure": true,
       "pg_Remove dead fronds as needed": true,
-      "pg_Deep water every 2 weeks spring — slow hose 10 min at drip line": true,
-      "pg_Monthly watering spring — slow hose 10 min": true,
+      "pg_Deep water every 2 weeks spring \u2014 slow hose 10 min at drip line": true,
+      "pg_Monthly watering spring \u2014 slow hose 10 min": true,
       "pg_Monthly watering spring": true,
-      "pg_Water consistently — beets bolt if stressed": true,
+      "pg_Water consistently \u2014 beets bolt if stressed": true,
       "s_Azalea_Light prune Encore Azaleas after spring bloom": true,
-      "pg_Light trim after flowering — do NOT hard prune": true,
-      "pg_Train on fence wires — tie new growth regularly": true,
+      "pg_Light trim after flowering \u2014 do NOT hard prune": true,
+      "pg_Train on fence wires \u2014 tie new growth regularly": true,
       "pg_Remove dead rosettes": true,
-      "pg_Train on espalier wires — tie new growth": true,
-      "pg_Monitor for slugs and snails — bait if needed": true,
+      "pg_Train on espalier wires \u2014 tie new growth": true,
+      "pg_Monitor for slugs and snails \u2014 bait if needed": true,
       "s_Geranium_Cut back geraniums hard after spring flush": true,
       "pg_Train new growth onto wall immediately as it pushes": true,
-      "pg_Apply Super Bloom half strength to MOIST soil — monthly": true,
-      "pg_Train new growth to desired position — tie regularly": true,
+      "pg_Apply Super Bloom half strength to MOIST soil \u2014 monthly": true,
+      "pg_Train new growth to desired position \u2014 tie regularly": true,
       "pg_Train canes horizontally NOW while flexible": true,
       "pg_Deadhead spent blooms daily during peak bloom": true,
-      "pg_Deadhead every 2 weeks — outward facing bud, 45° cut": true,
+      "pg_Deadhead every 2 weeks \u2014 outward facing bud, 45\u00b0 cut": true,
       "pg_Deadhead spent blooms aggressively": true,
-      "pg_Cut back hard after first flush — feed high phosphorus after": true,
+      "pg_Cut back hard after first flush \u2014 feed high phosphorus after": true,
       "pg_Feed with balanced fertilizer every 2-3 weeks": true,
-      "pg_Water consistently — check soil moisture daily in summer": true,
-      "pg_Check for pests — inspect undersides of leaves": true,
+      "pg_Water consistently \u2014 check soil moisture daily in summer": true,
+      "pg_Check for pests \u2014 inspect undersides of leaves": true,
       "pg_Cut back by half after first bloom flush": true,
-      "pg_On drip system weekly — check system functioning monthly": true,
-      "pg_Train espalier wires — tie new canes in desired direction": true,
+      "pg_On drip system weekly \u2014 check system functioning monthly": true,
+      "pg_Train espalier wires \u2014 tie new canes in desired direction": true,
       "pg_Remove dead outer leaves as needed": true,
-      "ig_Rotate weekly for even growth — leans toward light": true,
+      "ig_Rotate weekly for even growth \u2014 leans toward light": true,
       "ig_Remove offsets (pups) when they appear": true,
       "pg_Pinch tips in spring for bushier plant": true,
-      "pg_Check for scale and aphids — treat with neem oil if found": true,
+      "pg_Check for scale and aphids \u2014 treat with neem oil if found": true,
       "pg_Feed diluted fertilizer after flowering": true,
-      "pg_Mulch roots to keep cool — never cultivate around base": true,
+      "pg_Mulch roots to keep cool \u2014 never cultivate around base": true,
       "pg_Trim back to control spread": true,
       "pg_High phosphorus fertilizer monthly": true,
       "pg_Deadhead spent blooms": true,
@@ -11028,20 +11031,20 @@
       "ig_Mist daily or keep on pebble tray": true,
       "ig_Mist regularly or use pebble tray": true,
       "ig_Mist daily for humidity": true,
-      "pg_Water consistently — do not let dry out": true,
+      "pg_Water consistently \u2014 do not let dry out": true,
       "pg_Water at base, keep consistent moisture": true,
       "pg_Harvest pods regularly when plump and crisp": true,
-      "pg_Cut back new side shoots to 5 leaves — do NOT cut main structural canes": true,
+      "pg_Cut back new side shoots to 5 leaves \u2014 do NOT cut main structural canes": true,
       "pg_Trim to shape as needed": true,
       "pg_Train and tie new canes to structure": true,
       "pg_Light prune after flowering to maintain shape": true,
-      "pg_Deadhead at base — pull stem out, do not cut": true,
+      "pg_Deadhead at base \u2014 pull stem out, do not cut": true,
       "pg_Deadhead spent blooms continuously": true,
       "pg_Light trim after spring flowering": true,
       "pg_Trim back if getting leggy": true,
       "pg_Cut back if spreading too aggressively": true,
-      "pg_Monitor for slugs and snails — apply bait as soon as growth emerges": true,
-      "pg_Trim back if leggy · feed liquid fertilizer every 2 weeks": true,
+      "pg_Monitor for slugs and snails \u2014 apply bait as soon as growth emerges": true,
+      "pg_Trim back if leggy \u00b7 feed liquid fertilizer every 2 weeks": true,
       "pg_Deadhead spent spikes continuously": true,
       "pg_Deadhead to extend bloom season": true,
       "pg_Light prune after spring bloom only": true
