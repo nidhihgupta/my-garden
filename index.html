@@ -2343,6 +2343,21 @@ function renderSchedule(month){
     else if(tl.includes('pest')||tl.includes('mite')||tl.includes('spray')||tl.includes('neem')||tl.includes('slug')||tl.includes('monitor'))tp='Pest';
     allTasks.push({cat:t.cat,title:t.title,desc:t.desc||'',indoor:t.indoor,type:tp,bedId:t.indoor?'indoor':'all',key:'s_'+t.cat+'_'+t.title,isStatic:true,count:0});
   });
+  // Determine which feed categories are already covered by static tasks this month
+  // — plant group tasks for those categories are suppressed to avoid duplication
+  var sfCov={jacks:false,supbloom:false,camellia:false,palm:false,citrus:false,bonemeal:false,indoorFeed:false};
+  (staticSchedule[month]||[]).forEach(function(t){
+    var tl=t.title.toLowerCase();
+    if(!t.indoor&&tl.includes('feed')){
+      if(tl.includes('jack'))sfCov.jacks=true;
+      if(tl.includes('super bloom'))sfCov.supbloom=true;
+      if(tl.includes('camellia'))sfCov.camellia=true;
+      if(tl.includes('palm'))sfCov.palm=true;
+      if(tl.includes('citrus'))sfCov.citrus=true;
+      if(tl.includes('bonemeal'))sfCov.bonemeal=true;
+    }
+    if(t.indoor&&(tl.includes('feed')||tl.includes('fertiliz')))sfCov.indoorFeed=true;
+  });
   // Outdoor plant tasks — group by task text, collect plant names and bedIds
   var outdoorTaskMap={};
   S.plants.forEach(function(plant){
@@ -2351,9 +2366,18 @@ function renderSchedule(month){
     if(!plant.maintenance)return;
     plant.maintenance.forEach(function(mItem){
       if(!mItem.months||mItem.months.indexOf(month)<0)return;
+      var tl=mItem.task.toLowerCase();
+      // Skip if static schedule already covers this feed category
+      if(tl.includes('feed')||tl.includes('fertiliz')){
+        if(sfCov.jacks&&tl.includes('jack'))return;
+        if(sfCov.supbloom&&tl.includes('super bloom'))return;
+        if(sfCov.camellia&&tl.includes('camellia'))return;
+        if(sfCov.palm&&tl.includes('palm'))return;
+        if(sfCov.citrus&&tl.includes('citrus'))return;
+        if(sfCov.bonemeal&&tl.includes('bonemeal'))return;
+      }
       var key=mItem.task;
       if(!outdoorTaskMap[key]){
-        var tl=mItem.task.toLowerCase();
         var tp='Maintenance';
         if(tl.includes('prune')||tl.includes('cutback')||tl.includes('deadhead')||tl.includes('trim'))tp='Pruning';
         else if(tl.includes('feed')||tl.includes('fertiliz'))tp='Feeding';
@@ -2368,7 +2392,6 @@ function renderSchedule(month){
   Object.keys(outdoorTaskMap).forEach(function(key){
     var g=outdoorTaskMap[key];
     var count=g.plants.length;
-    // Use the plant name directly — if multiple, show name + count
     var baseName=g.plants[0];
     var displayCat=count===1?baseName:baseName+' <span style="background:var(--sage-light);color:var(--sage-dark);font-size:10px;font-weight:600;padding:1px 6px;border-radius:10px">'+count+'</span>';
     allTasks.push({cat:displayCat,title:g.task,desc:'',indoor:false,type:g.type,bedIds:g.bedIds,bedId:'outdoor-grouped',key:'pg_'+key,isGrouped:true,count:count,plants:g.plants,rawCat:baseName});
@@ -2381,6 +2404,11 @@ function renderSchedule(month){
     if(!plant.maintenance)return;
     plant.maintenance.forEach(function(mItem){
       if(!mItem.months||mItem.months.indexOf(month)<0)return;
+      var tl=mItem.task.toLowerCase();
+      // Suppress generic indoor feeds if static covers them; keep specialist ones (orchid, cactus, once-only)
+      if(sfCov.indoorFeed&&(tl.includes('feed')||tl.includes('fertiliz'))){
+        if(!tl.includes('orchid')&&!tl.includes('cactus')&&!tl.includes('once in spring'))return;
+      }
       var key=mItem.task;
       if(!indoorTaskMap[key])indoorTaskMap[key]={task:mItem.task,plants:[],sections:[]};
       indoorTaskMap[key].plants.push(plant.name);
