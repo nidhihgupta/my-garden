@@ -2120,12 +2120,17 @@ function getWeekOfMonth(){return dayToWeek(new Date().getDate());}
 function inferDay(task,isIndoor){
   const t=task.toLowerCase();
   if(isIndoor)return(t.includes('feed')||t.includes('fertiliz'))?14:7;
-  if(t.includes('bonemeal'))return 7;
-  if(t.includes('every 2 weeks'))return 14; // biweekly: mid-month occurrence
-  if(t.includes('feed')||t.includes('fertiliz'))return 28;
-  if(t.includes('pest')||t.includes('monitor')||t.includes('mite')||t.includes('check for')||t.includes('slug'))return 0; // ongoing
-  if(t.includes('water')||t.includes('moist'))return 0; // ongoing
-  return 7; // action/pruning tasks default to week 1
+  // Feeding → weeks 2 & 4
+  const isFeed=t.includes('feed')||t.includes('fertiliz')||t.includes('bonemeal')||t.includes('super bloom');
+  if(isFeed&&t.includes('every 2 weeks'))return 14; // biweekly feeding: week 2 (also 4)
+  if(isFeed)return 28; // monthly feeding: week 4
+  // Truly daily/weekly watering → ongoing
+  if((t.includes('daily')||t.includes('every week')||(t.includes('week')&&!t.includes('every 2 weeks')))&&(t.includes('water')||t.includes('irrigat')))return 0;
+  // Pest/monitoring → week 3 (day 21)
+  if(t.includes('pest')||t.includes('monitor')||t.includes('mite')||t.includes('check for')||t.includes('slug')||t.includes('powdery'))return 21;
+  // All other tasks (prune, tidy, water, train, divide, harvest) → week 1 (day 7)
+  // Non-feeding biweekly (e.g. deadhead every 2 weeks) → day 7, also shown in week 3
+  return 7;
 }
 
 function buildWeekTasks(month){
@@ -2143,10 +2148,12 @@ function buildWeekTasks(month){
     const key='s_'+t.cat+'_'+t.title;
     const item={key,task:t.title,desc:t.desc||'',plants:[],isStatic:true,isIndoor:t.indoor||false,day:d};
     staticTaskTitles.add(t.title);
-    if(d===0||(t.title.toLowerCase().includes('pest')||t.title.toLowerCase().includes('monitor')||t.title.toLowerCase().includes('mite')))ongoing.push(item);
+    if(d===0)ongoing.push(item);
     else if(w===currentWeek)thisWeek.push(item);
-    // biweekly static tasks (day 14) also show in week 4
-    else if(t.title.toLowerCase().includes('every 2 weeks')&&(currentWeek===2||currentWeek===4))thisWeek.push(item);
+    // biweekly feeding (day 14) also shows in week 4
+    else if(d===14&&t.title.toLowerCase().includes('every 2 weeks')&&currentWeek===4)thisWeek.push(item);
+    // biweekly non-feeding (day 7) also shows in week 3
+    else if(d===7&&t.title.toLowerCase().includes('every 2 weeks')&&currentWeek===3)thisWeek.push(item);
   });
 
   // Plant tasks — only show if their day falls in the current week
@@ -2198,7 +2205,10 @@ function buildWeekTasks(month){
     // Show if day is 0 (ongoing) or matches current week
     if(d===0){if(ongoing.length<5)ongoing.push(item);}
     else if(w===currentWeek){if(thisWeek.length<12)thisWeek.push(item);}
-    else if(tl.includes('every 2 weeks')&&(currentWeek===2||currentWeek===4)){if(thisWeek.length<12)thisWeek.push(item);}
+    // biweekly feeding (day 14) also shows in week 4
+    else if(d===14&&tl.includes('every 2 weeks')&&currentWeek===4){if(thisWeek.length<12)thisWeek.push(item);}
+    // biweekly non-feeding (day 7) also shows in week 3
+    else if(d===7&&tl.includes('every 2 weeks')&&currentWeek===3){if(thisWeek.length<12)thisWeek.push(item);}
   });
 
   // Sort thisWeek: action/prune first (day 7), then indoor feed (day 14), then outdoor feed (day 28)
@@ -2213,7 +2223,7 @@ function buildWeekTasks(month){
 function _weekLabel(w){
   const ranges=['Days 1–7','Days 8–14','Days 15–21','Days 22–31'];
   const icons=['🌿','🪴','🌿','🌱'];
-  const names=['Week 1','Mid-Month · Indoor Feeding','Week 3','End of Month · Outdoor Feeding'];
+  const names=['Week 1 · Pruning & Tidy','Week 2 · Indoor Feeding','Week 3 · Pest & Water','Week 4 · Outdoor Feeding'];
   return icons[w-1]+' '+names[w-1]+' <span style="font-size:10px;font-weight:400;color:var(--text-light)">'+ranges[w-1]+'</span>';
 }
 
