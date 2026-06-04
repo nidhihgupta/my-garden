@@ -537,11 +537,11 @@ const loropTrim=abeliaTrim;
 const liquidFeed=m('Feed liquid fertilizer every 2 weeks',[5,6,7,8,9]);
 const begFeed=liquidFeed;
 const impFeed=liquidFeed;
-const fruitWaterSp=m('Deep water every 2 weeks spring — slow hose 10 min at drip line',[3,4,5,6]);
+const fruitWaterSp=m('Deep water monthly spring — slow hose at drip line',[3,4,5,6]);
 const fruitWaterSu=m('Deep water every 2 weeks July-August — check soil 6 inches first',[7,8]);
 const fruitWaterFW=m('Monthly watering sufficient fall/winter',[9,10,11,12,1,2]);
 const citrusFeed=m('Feed citrus fertilizer',[2,5,8]);
-const espWaterSu=m('Deep water weekly July-August',[7,8]);
+const espWaterSu=m('Deep water every 2 weeks July-August — check soil 6 inches first',[7,8]);
 const hydPrune=m('Prune ONLY after flowering in August — never fall/winter',[8]);
 const hydFeed=m('Feed azalea fertilizer in spring',[3,4]);
 const dahliaDeadhead=m('Deadhead continuously — every spent bloom = more blooms',[6,7,8,9,10]);
@@ -990,7 +990,7 @@ const staticSchedule={
     {day:28, cat:'Feeding', title:'Feed Super Bloom every 2 weeks — Calibrachoa, Fuchsia & Trailing Fuchsia', desc:'End-of-month dose. Biweekly all season.', indoor:false},
     {day:28, cat:'Feeding', title:'Feed Camellia fertilizer — Encore Azalea & hydrangeas', desc:'Encore Azalea ×2, Mophead/Oakleaf Hydrangea. Spring cycle.',                   indoor:false},
     {day:28, cat:'Feeding', title:'Feed palm fertilizer — both palms',     desc:'Palms in Planters + Palm in planter. Spring application.',                                      indoor:false},
-    {day:28, cat:'Garden',  title:'Start fruit tree watering schedule',    desc:'Orange + Apricot every 2 weeks. Persimmon + Pomegranate monthly. Cherry + Plum every 2 weeks.', indoor:false},
+    {day:28, cat:'Garden',  title:'Start fruit tree watering schedule',    desc:'Monthly deep water: Lemon, Orange, Apricot, Espalier Cherry, Espalier Prune, Persimmon, Pomegranate. Slow hose at drip line.', indoor:false},
   ],
   5:[
     {day:7,  cat:'Pruning', title:'Cut back geraniums hard after spring flush', desc:'Fountain Wall Bed. Cut by half to two thirds. Feed Super Bloom after.',                    indoor:false},
@@ -1005,7 +1005,7 @@ const staticSchedule={
   6:[
     {day:7,  cat:'Pest',    title:'Monitor for powdery mildew on roses',   desc:'Cool nights + warm days = prime conditions. Neem oil spray if spotted.',                        indoor:false},
     {day:7,  cat:'Lawn',    title:'Apply grub killer to lawn',             desc:'Annual June application. Follow product label for timing and rate.',                            indoor:false},
-    {day:7,  cat:'Garden',  title:'Increase fruit tree watering',          desc:'All trees every 2 weeks. Rainier Cherry weekly. Check soil first.',                            indoor:false},
+    {day:7,  cat:'Garden',  title:'Switch fruit trees to summer watering',  desc:'July onward: Lemon, Orange, Apricot, Espalier Cherry, Espalier Prune → every 2 weeks. Persimmon, Pomegranate stay monthly.', indoor:false},
     {day:14, cat:'Feeding', title:'Feed Super Bloom every 2 weeks — Calibrachoa, Fuchsia, Begonia', desc:'Mid-month dose (day ~14). Biweekly through Sep.',                      indoor:false},
     {day:14, cat:'Indoor',  title:'Feed indoor plants',                    desc:'Monthly diluted fertilizer — mid-month.',                                                       indoor:true},
     {day:14, cat:'Indoor',  title:'Check all indoor plants for spider mites', desc:'Hot dry conditions = spider mite season. Check leaf undersides. Neem oil if found.',        indoor:true},
@@ -1016,7 +1016,7 @@ const staticSchedule={
   7:[
     {day:7,  cat:'Pruning', title:'Cut back Salvia Amistad if leggy',      desc:'All beds — cut by 1/3. Reblooms in 3 weeks.',                                                  indoor:false},
     {day:7,  cat:'Pruning', title:'Deadhead dahlias continuously',         desc:'BBQ Bed + Back Rose Bed. Check every 3-4 days.',                                               indoor:false},
-    {day:7,  cat:'Garden',  title:'Peak summer fruit tree watering',       desc:'ALL trees every 2 weeks. Rainier Cherry + Plum weekly. Heat wave = extra water for Cherry.',   indoor:false},
+    {day:7,  cat:'Garden',  title:'Peak summer fruit tree watering',       desc:'Every 2 weeks: Lemon, Orange, Apricot, Espalier Cherry, Espalier Prune. Monthly: Persimmon, Pomegranate. Heat wave: extra water for Espalier Cherry.', indoor:false},
     {day:14, cat:'Feeding', title:'Feed Super Bloom every 2 weeks — Calibrachoa, Fuchsia, Begonia', desc:'Mid-month dose (day ~14). Biweekly through Sep.',                      indoor:false},
     {day:14, cat:'Indoor',  title:'Feed indoor plants',                    desc:'Monthly diluted fertilizer — mid-month.',                                                       indoor:true},
     {day:14, cat:'Indoor',  title:'Prayer Plant: mist daily',              desc:'Hot dry summer air. Daily misting critical.',                                                   indoor:true},
@@ -1041,7 +1041,7 @@ const staticSchedule={
   9:[
     {day:28, cat:'Feeding', title:"Feed Jack's 20-20-20 at half strength — all outdoor beds", desc:'Last outdoor feed of season. Half strength only. Skip if plants look stressed.', indoor:false},
     {day:28, cat:'Feeding', title:'Feed Super Bloom — Bougainvillea, Hibiscus, Calibrachoa, Fuchsia', desc:'Final Super Bloom application before season ends.',                  indoor:false},
-    {day:28, cat:'Garden',  title:'Reduce fruit tree watering',            desc:'Temps dropping. Persimmon + Pomegranate back to monthly.',                                      indoor:false},
+    {day:28, cat:'Garden',  title:'Reduce fruit tree watering',            desc:'All trees back to monthly. Final deep water of season for Lemon, Orange, Apricot, Espalier Cherry, Espalier Prune.',  indoor:false},
     {day:14, cat:'Indoor',  title:'Stop feeding all indoor plants until March', desc:'Growth slowing — final feed this month, resume March.',                                    indoor:true},
   ],
   10:[
@@ -2404,7 +2404,7 @@ function renderSchedule(month){
     var count=g.plants.length;
     var baseName=g.plants[0];
     var displayCat=count===1?baseName:baseName+' <span style="background:var(--sage-light);color:var(--sage-dark);font-size:10px;font-weight:600;padding:1px 6px;border-radius:10px">'+count+'</span>';
-    allTasks.push({cat:displayCat,title:g.task,desc:'',indoor:false,type:g.type,bedIds:g.bedIds,bedId:'outdoor-grouped',key:'pg_'+key,isGrouped:true,count:count,plants:g.plants,rawCat:baseName});
+    allTasks.push({cat:displayCat,title:g.task,desc:count>1?g.plants.join(', '):'',indoor:false,type:g.type,bedIds:g.bedIds,bedId:'outdoor-grouped',key:'pg_'+key,isGrouped:true,count:count,plants:g.plants,rawCat:baseName});
   });
   // Indoor plant tasks — group by task text
   var indoorTaskMap={};
@@ -2434,9 +2434,9 @@ function renderSchedule(month){
     var tp='Maintenance';
     if(tl.includes('prune')||tl.includes('cutback')||tl.includes('cut back')||tl.includes('deadhead')||tl.includes('trim'))tp='Pruning';
     else if(tl.includes('feed')||tl.includes('fertiliz'))tp='Feeding';
-    else if(tl.includes('water')||tl.includes('moist'))tp='Watering';
+    else if(!tl.includes('propagat')&&(tl.includes('water')||tl.includes('moist')))tp='Watering';
     else if(tl.includes('pest')||tl.includes('mite')||tl.includes('spray')||tl.includes('neem'))tp='Pest';
-    allTasks.push({cat:displayCat,title:g.task,desc:'',indoor:true,type:tp,bedId:'indoor',key:'ig_'+key,isGrouped:true,count:count,plants:g.plants});
+    allTasks.push({cat:displayCat,title:g.task,desc:count>1?g.plants.join(', '):'',indoor:true,type:tp,bedId:'indoor',key:'ig_'+key,isGrouped:true,count:count,plants:g.plants});
   });
   // Apply filters
   var typeEl=document.getElementById('sched-filter-type');
