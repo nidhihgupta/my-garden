@@ -2347,7 +2347,7 @@ function renderSchedule(month){
   (staticSchedule[month]||[]).forEach(function(t){
     var tp='Maintenance';
     var tl=(t.title+' '+t.cat).toLowerCase();
-    if(tl.includes('prune')||tl.includes('cutback')||tl.includes('deadhead')||tl.includes('trim'))tp='Pruning';
+    if(tl.includes('prune')||tl.includes('cutback')||tl.includes('cut back')||tl.includes('deadhead')||tl.includes('trim'))tp='Pruning';
     else if(tl.includes('feed')||tl.includes('fertiliz')||tl.includes('citrus'))tp='Feeding';
     else if(tl.includes('water')||tl.includes('irrig'))tp='Watering';
     else if(tl.includes('pest')||tl.includes('mite')||tl.includes('spray')||tl.includes('neem')||tl.includes('slug')||tl.includes('monitor'))tp='Pest';
@@ -2389,7 +2389,7 @@ function renderSchedule(month){
       var key=mItem.task;
       if(!outdoorTaskMap[key]){
         var tp='Maintenance';
-        if(tl.includes('prune')||tl.includes('cutback')||tl.includes('deadhead')||tl.includes('trim'))tp='Pruning';
+        if(tl.includes('prune')||tl.includes('cutback')||tl.includes('cut back')||tl.includes('deadhead')||tl.includes('trim'))tp='Pruning';
         else if(tl.includes('feed')||tl.includes('fertiliz'))tp='Feeding';
         else if(tl.includes('water'))tp='Watering';
         else if(tl.includes('pest')||tl.includes('mite')||tl.includes('spray')||tl.includes('neem')||tl.includes('slug'))tp='Pest';
@@ -2432,7 +2432,7 @@ function renderSchedule(month){
     var displayCat=count===1?baseName:baseName+' <span style="background:rgba(193,100,74,0.15);color:var(--terracotta);font-size:10px;font-weight:600;padding:1px 6px;border-radius:10px">'+count+'</span>';
     var tl=g.task.toLowerCase();
     var tp='Maintenance';
-    if(tl.includes('prune')||tl.includes('cutback')||tl.includes('deadhead')||tl.includes('trim'))tp='Pruning';
+    if(tl.includes('prune')||tl.includes('cutback')||tl.includes('cut back')||tl.includes('deadhead')||tl.includes('trim'))tp='Pruning';
     else if(tl.includes('feed')||tl.includes('fertiliz'))tp='Feeding';
     else if(tl.includes('water')||tl.includes('moist'))tp='Watering';
     else if(tl.includes('pest')||tl.includes('mite')||tl.includes('spray')||tl.includes('neem'))tp='Pest';
