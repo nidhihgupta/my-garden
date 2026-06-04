@@ -7030,16 +7030,16 @@
           ]
         },
         {
-          "task": "Every 2 weeks in peak summer",
+          "task": "Monthly watering July-September \u2014 slow hose at drip line",
           "months": [
             7,
-            8
+            8,
+            9
           ]
         },
         {
-          "task": "Monthly fall/winter",
+          "task": "Monthly watering fall/winter \u2014 if no rain",
           "months": [
-            9,
             10,
             11,
             12,
@@ -7609,16 +7609,16 @@
           ]
         },
         {
-          "task": "Every 2 weeks summer",
+          "task": "Monthly watering July-September \u2014 slow hose at drip line",
           "months": [
             7,
-            8
+            8,
+            9
           ]
         },
         {
-          "task": "Monthly fall/winter",
+          "task": "Monthly watering fall/winter \u2014 if no rain",
           "months": [
-            9,
             10,
             11,
             12,
