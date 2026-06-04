@@ -7030,7 +7030,7 @@
           ]
         },
         {
-          "task": "Monthly watering July-September \u2014 slow hose at drip line",
+          "task": "Monthly watering July-September — slow hose at drip line",
           "months": [
             7,
             8,
@@ -7038,7 +7038,7 @@
           ]
         },
         {
-          "task": "Monthly watering fall/winter \u2014 if no rain",
+          "task": "Monthly watering fall/winter — if no rain",
           "months": [
             10,
             11,
@@ -7609,7 +7609,7 @@
           ]
         },
         {
-          "task": "Monthly watering July-September \u2014 slow hose at drip line",
+          "task": "Monthly watering July-September — slow hose at drip line",
           "months": [
             7,
             8,
@@ -7617,7 +7617,7 @@
           ]
         },
         {
-          "task": "Monthly watering fall/winter \u2014 if no rain",
+          "task": "Monthly watering fall/winter — if no rain",
           "months": [
             10,
             11,
@@ -10847,5 +10847,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-06-04T14:09:00.130Z"
+  "syncedAt": "2026-06-04T15:10:05.808Z"
 }
