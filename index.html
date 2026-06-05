@@ -1005,7 +1005,6 @@ const staticSchedule={
   6:[
     {day:7,  cat:'Pest',    title:'Monitor for powdery mildew on roses',   desc:'Cool nights + warm days = prime conditions. Neem oil spray if spotted.',                        indoor:false},
     {day:7,  cat:'Lawn',    title:'Apply grub killer to lawn',             desc:'Annual June application. Follow product label for timing and rate.',                            indoor:false},
-    {day:7,  cat:'Garden',  title:'Switch fruit trees to summer watering',  desc:'July onward: Lemon, Orange, Apricot, Espalier Cherry, Espalier Prune → every 2 weeks. Persimmon, Pomegranate stay monthly.', indoor:false},
     {day:14, cat:'Feeding', title:'Feed Super Bloom every 2 weeks — Calibrachoa, Fuchsia, Begonia', desc:'Mid-month dose (day ~14). Biweekly through Sep.',                      indoor:false},
     {day:14, cat:'Indoor',  title:'Feed indoor plants',                    desc:'Monthly diluted fertilizer — mid-month.',                                                       indoor:true},
     {day:14, cat:'Indoor',  title:'Check all indoor plants for spider mites', desc:'Hot dry conditions = spider mite season. Check leaf undersides. Neem oil if found.',        indoor:true},
@@ -2393,18 +2392,20 @@ function renderSchedule(month){
         else if(tl.includes('feed')||tl.includes('fertiliz'))tp='Feeding';
         else if(tl.includes('water'))tp='Watering';
         else if(tl.includes('pest')||tl.includes('mite')||tl.includes('spray')||tl.includes('neem')||tl.includes('slug'))tp='Pest';
-        outdoorTaskMap[key]={task:mItem.task,type:tp,plants:[],bedIds:[]};
+        outdoorTaskMap[key]={task:mItem.task,type:tp,plants:[],bedIds:[],cats:[]};
       }
       outdoorTaskMap[key].plants.push(plant.name);
       if(plant.bedId&&outdoorTaskMap[key].bedIds.indexOf(plant.bedId)<0)outdoorTaskMap[key].bedIds.push(plant.bedId);
+      if(plant.category&&outdoorTaskMap[key].cats.indexOf(plant.category)<0)outdoorTaskMap[key].cats.push(plant.category);
     });
   });
   Object.keys(outdoorTaskMap).forEach(function(key){
     var g=outdoorTaskMap[key];
-    var count=g.plants.length;
-    var baseName=g.plants[0];
+    var uniquePlants=[...new Set(g.plants)];
+    var count=uniquePlants.length;
+    var baseName=count===1?uniquePlants[0]:(g.cats.length===1?g.cats[0]:count+' plants');
     var displayCat=count===1?baseName:baseName+' <span style="background:var(--sage-light);color:var(--sage-dark);font-size:10px;font-weight:600;padding:1px 6px;border-radius:10px">'+count+'</span>';
-    allTasks.push({cat:displayCat,title:g.task,desc:count>1?g.plants.join(', '):'',indoor:false,type:g.type,bedIds:g.bedIds,bedId:'outdoor-grouped',key:'pg_'+key,isGrouped:true,count:count,plants:g.plants,rawCat:baseName});
+    allTasks.push({cat:displayCat,title:g.task,desc:count>1?uniquePlants.join(', '):'',indoor:false,type:g.type,bedIds:g.bedIds,bedId:'outdoor-grouped',key:'pg_'+key,isGrouped:true,count:count,plants:uniquePlants,rawCat:baseName});
   });
   // Indoor plant tasks — group by task text
   var indoorTaskMap={};
@@ -2427,8 +2428,9 @@ function renderSchedule(month){
   });
   Object.keys(indoorTaskMap).forEach(function(key){
     var g=indoorTaskMap[key];
-    var count=g.plants.length;
-    var baseName=g.plants[0];
+    var uniquePlants=[...new Set(g.plants)];
+    var count=uniquePlants.length;
+    var baseName=count===1?uniquePlants[0]:count+' indoor plants';
     var displayCat=count===1?baseName:baseName+' <span style="background:rgba(193,100,74,0.15);color:var(--terracotta);font-size:10px;font-weight:600;padding:1px 6px;border-radius:10px">'+count+'</span>';
     var tl=g.task.toLowerCase();
     var tp='Maintenance';
@@ -2436,7 +2438,7 @@ function renderSchedule(month){
     else if(tl.includes('feed')||tl.includes('fertiliz'))tp='Feeding';
     else if(!tl.includes('propagat')&&(tl.includes('water')||tl.includes('moist')))tp='Watering';
     else if(tl.includes('pest')||tl.includes('mite')||tl.includes('spray')||tl.includes('neem'))tp='Pest';
-    allTasks.push({cat:displayCat,title:g.task,desc:count>1?g.plants.join(', '):'',indoor:true,type:tp,bedId:'indoor',key:'ig_'+key,isGrouped:true,count:count,plants:g.plants});
+    allTasks.push({cat:displayCat,title:g.task,desc:count>1?uniquePlants.join(', '):'',indoor:true,type:tp,bedId:'indoor',key:'ig_'+key,isGrouped:true,count:count,plants:uniquePlants});
   });
   // Apply filters
   var typeEl=document.getElementById('sched-filter-type');
