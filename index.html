@@ -2382,7 +2382,7 @@ function renderSchedule(month){
       if(!mItem.months||mItem.months.indexOf(month)<0)return;
       var tl=mItem.task.toLowerCase();
       // Skip if static schedule already covers this feed category
-      if(tl.includes('feed')||tl.includes('fertiliz')){
+      if(tl.includes('feed')||tl.includes('fertiliz')||tl.includes('super bloom')||tl.includes('bonemeal')){
         if(sfCov.jacks&&tl.includes('jack'))return;
         if(sfCov.supbloom&&tl.includes('super bloom'))return;
         if(sfCov.camellia&&tl.includes('camellia'))return;
