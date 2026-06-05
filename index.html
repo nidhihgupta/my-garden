@@ -381,8 +381,10 @@ body{font-family:'DM Sans',sans-serif;background:var(--warm-white);color:var(--t
       <div class="form-group"><label class="form-label">Personal Access Token</label><input class="form-input" id="gh-token" type="password" placeholder="ghp_xxxxxxxxxxxx"><p style="font-size:11px;color:var(--text-light);margin-top:4px">github.com → Settings → Developer settings → Personal access tokens → Tokens (classic) → repo scope</p></div>
       <div id="gh-status" style="font-size:13px;padding:8px 0;color:var(--text-light)"></div>
       <button class="btn-primary" onclick="saveGitHubSettings()">Save & Test Connection</button>
-      <button class="btn-secondary" onclick="forceSyncToGitHub()">⬆️ Force Sync Now</button>
-      <button class="btn-secondary" onclick="restoreFromGitHub()">⬇️ Restore from GitHub</button>
+      <button class="btn-secondary" onclick="forceSyncToGitHub()">⬆️ Push My Data to GitHub</button>
+      <button class="btn-secondary" onclick="restoreFromGitHub()">⬇️ Restore Data from GitHub</button>
+      <button class="btn-secondary" onclick="window.location.href=window.location.pathname+'?v='+Date.now()">🔄 Reload App (get latest updates)</button>
+      <div id="app-version-line" style="text-align:center;font-size:12px;color:var(--text-light);padding:16px 0 4px"></div>
     </div>
     <div style="background:white;border-radius:var(--radius);padding:20px;margin-bottom:16px;box-shadow:var(--shadow)">
       <h3 style="font-family:'Playfair Display',serif;font-size:18px;margin-bottom:8px;color:var(--text-dark)">💾 Local Backup</h3>
@@ -1005,6 +1007,7 @@ function resetToDefaults(){
   location.reload();
 }
 const DATA_VERSION='v9';
+const APP_VERSION='2026-06-05-c';
 // GitHub Sync
 const GH_KEYS={user:'gh_username',repo:'gh_repo',token:'gh_token'};
 function ghGet(k){try{return localStorage.getItem(k)||'';}catch(e){return '';}}
@@ -1016,7 +1019,7 @@ async function ghReadFile(){
   const c=ghCredentials();
   if(!c.user||!c.repo||!c.token)return null;
   try{
-    const r=await fetch(`https://api.github.com/repos/${c.user}/${c.repo}/contents/garden-data.json`,{headers:{'Authorization':'token '+c.token,'Accept':'application/vnd.github.v3+json'}});
+    const r=await fetch(`https://api.github.com/repos/${c.user}/${c.repo}/contents/garden-data.json`,{cache:'no-store',headers:{'Authorization':'token '+c.token,'Accept':'application/vnd.github.v3+json'}});
     if(r.status===404)return null; // file doesn't exist yet — ok
     if(!r.ok){setGHStatus('❌ GitHub read error: '+r.status+' '+r.statusText,'var(--terracotta)');return null;}
     const d=await r.json();
@@ -1028,7 +1031,7 @@ async function ghReadFile(){
       content=JSON.parse(new TextDecoder().decode(bytes));
     } else if(d.download_url){
       // Large file (>1 MB): GitHub omits content field, must fetch via download_url
-      const dr=await fetch(d.download_url);
+      const dr=await fetch(d.download_url,{cache:'no-store'});
       if(!dr.ok){setGHStatus('❌ GitHub read error (download): '+dr.status,'var(--terracotta)');return null;}
       content=await dr.json();
     } else {
@@ -1259,12 +1262,18 @@ async function restoreFromGitHub(){
   setGHStatus('Restoring from GitHub...','var(--text-light)');
   const ok=await loadFromGitHub();
   if(ok){
+    applyTaskMigrations();
     await save();
     updateHomeCounts();
-    setGHStatus('✅ Restored from GitHub successfully','var(--sage-dark)');
-    alert('Data restored from GitHub!');
+    renderScheduleMonths();
+    if(typeof renderMaintenanceHome==='function')renderMaintenanceHome();
+    const n=S.plants.length+S.indoorPlants.length;
+    setGHStatus('✅ Restored '+n+' plants from GitHub','var(--sage-dark)');
+    alert('Data restored from GitHub — '+n+' plants loaded.');
   } else {
-    setGHStatus('❌ Could not read from GitHub — check settings','var(--terracotta)');
+    const el=document.getElementById('gh-status');
+    const msg=el?el.textContent:'Could not read from GitHub';
+    alert('⚠️ '+msg+'\n\nGo to Settings → GitHub Sync → Save & Test Connection to re-validate your token.');
   }
 }
 
@@ -1301,7 +1310,75 @@ function importDataJSON(e){
   r.readAsText(f);e.target.value='';
 }
 
+function applyTaskMigrations(){
+  const taskMigrations={
+    'Prune lightly after flowering only':'Prune lightly after flowering',
+    'Deadhead spent blooms daily':'Deadhead spent blooms daily during peak bloom',
+    'Feed slow release in spring':'Feed slow release fertilizer in spring',
+    'Feed liquid fertilizer every 2 weeks in bloom':'Feed liquid fertilizer every 2 weeks',
+    'Weekly deep water July-August':'Deep water weekly July-August',
+    'Weekly deep water July-August — drought stress causes fruit cracking':'Deep water weekly July-August',
+    'Divide clumps every 3 years':'Divide clumps every 3-4 years',
+    'Deadhead every 2 weeks — outward facing bud, 45° cut':'Deadhead roses every 2 weeks — outward facing bud, 45° cut',
+    'Deadhead regularly — outward facing bud, 45° cut':'Deadhead roses every 2 weeks — outward facing bud, 45° cut',
+    'Deep water monthly spring — slow hose at drip line':'Deep water monthly — slow hose at drip line',
+    'Mist fronds or use pebble tray for humidity':'Mist or use pebble tray — ferns and humidity-lovers need high moisture',
+    'Mist daily or keep on pebble tray':'Mist or use pebble tray — ferns and humidity-lovers need high moisture',
+    'Mist regularly or use pebble tray':'Mist or use pebble tray — ferns and humidity-lovers need high moisture',
+    'Mist daily for humidity':'Mist or use pebble tray — ferns and humidity-lovers need high moisture',
+    'Pinch tips to encourage bushy growth':'Pinch tips regularly to encourage bushy, compact growth',
+    'Pinch tips regularly to prevent legginess':'Pinch tips regularly to encourage bushy, compact growth',
+    'Keep away from direct sun':'',
+    'Ensure bright indirect light to maintain pink variegation':'',
+    'Never let soil dry — check daily in summer':'',
+    'Oxalis may go dormant in summer heat — reduce water if leaves yellow':'',
+    'Remove brown tips with scissors at an angle':'',
+    'Rotate weekly for even growth — leans toward light':'',
+  };
+  const plantNameMigrations={
+    'Tree Rose':'Rose','Flower Carpet Rose':'Rose','Iceberg Rose Climbing':'Rose',
+    'Angel Face Rose Climbing':'Rose','Burst of Joy Rose Bush':'Rose',
+    'Double Knock Out Rose Pink':'Rose','Existing Rose':'Rose',
+    'Sunburst Rose Bush':'Rose','English Rose David Austin':'Rose',
+    'Double Knock Out Rose White Out':'Rose',
+    'Dwarf Lemon Tree':'Citrus Tree',
+    'Plum Espalier':'Espalier','Rainier Cherry Espalier':'Espalier',
+  };
+  [...S.plants,...S.indoorPlants].forEach(function(plant){
+    if(plantNameMigrations[plant.name])plant.name=plantNameMigrations[plant.name];
+    if(!plant.maintenance)return;
+    var isRose=plant.category&&plant.category.toLowerCase().includes('rose');
+    plant.maintenance=plant.maintenance.filter(function(mItem){
+      if(isRose&&mItem.task==='Deadhead regularly')mItem.task='Deadhead roses every 2 weeks — outward facing bud, 45° cut';
+      var migrated=taskMigrations[mItem.task];
+      if(migrated!==undefined)mItem.task=migrated;
+      return mItem.task!=='';
+    });
+  });
+}
+
+async function checkAppVersion(){
+  if(!ghConfigured())return;
+  if(sessionStorage.getItem('av_reloaded'))return;
+  try{
+    const c=ghCredentials();
+    const r=await fetch(`https://raw.githubusercontent.com/${c.user}/${c.repo}/main/app-version.json?t=`+Date.now(),{cache:'no-store'});
+    if(!r.ok)return;
+    const deployed=(await r.json()).version;
+    if(deployed&&deployed!==APP_VERSION){
+      sessionStorage.setItem('av_reloaded','1');
+      location.href=location.pathname+'?v='+Date.now();
+    }
+  }catch(e){}
+}
+function showAppVersion(){
+  const el=document.getElementById('app-version-line');
+  if(el)el.textContent='App version '+APP_VERSION;
+}
+
 async function init(){
+  showAppVersion();
+  await checkAppVersion();
   // GitHub is the source of truth — always try it first, regardless of local version
   await loadImagesFromGitHub();
   const ghLoaded=await loadFromGitHub();
@@ -1333,31 +1410,7 @@ async function init(){
     }
   }
   await DB.set('dataVersion',DATA_VERSION);
-  const taskMigrations={
-    'Prune lightly after flowering only':'Prune lightly after flowering',
-    'Deadhead spent blooms daily':'Deadhead spent blooms daily during peak bloom',
-    'Feed slow release in spring':'Feed slow release fertilizer in spring',
-    'Feed liquid fertilizer every 2 weeks in bloom':'Feed liquid fertilizer every 2 weeks',
-    'Weekly deep water July-August':'Deep water weekly July-August',
-    'Weekly deep water July-August — drought stress causes fruit cracking':'Deep water weekly July-August',
-    'Divide clumps every 3 years':'Divide clumps every 3-4 years',
-  };
-  const plantNameMigrations={
-    'Tree Rose':'Rose','Flower Carpet Rose':'Rose','Iceberg Rose Climbing':'Rose',
-    'Angel Face Rose Climbing':'Rose','Burst of Joy Rose Bush':'Rose',
-    'Double Knock Out Rose Pink':'Rose','Existing Rose':'Rose',
-    'Sunburst Rose Bush':'Rose','English Rose David Austin':'Rose',
-    'Double Knock Out Rose White Out':'Rose',
-    'Dwarf Lemon Tree':'Citrus Tree',
-    'Plum Espalier':'Espalier','Rainier Cherry Espalier':'Espalier',
-  };
-  [...S.plants,...S.indoorPlants].forEach(function(plant){
-    if(plantNameMigrations[plant.name])plant.name=plantNameMigrations[plant.name];
-    if(!plant.maintenance)return;
-    plant.maintenance.forEach(function(mItem){
-      if(taskMigrations[mItem.task])mItem.task=taskMigrations[mItem.task];
-    });
-  });
+  applyTaskMigrations();
   function fixEmoji(s,fallback){
     if(!s)return fallback;
     for(let i=0;i<5;i++){
