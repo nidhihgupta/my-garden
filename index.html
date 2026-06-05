@@ -2245,7 +2245,7 @@ function renderMaintWeek(){
       const isDone=!!done[t.key];
       const uniquePlants=[...new Set(t.plants)];
       const plantCount=uniquePlants.length;
-      const catLabel=t.cats&&t.cats.length===1?t.cats[0]:null;
+      const catLabel=t.cats&&t.cats.length===1?t.cats[0]:(t.cats&&t.cats.length>1?(()=>{const ws=t.cats.map(c=>c.split(' ').pop());return ws.every(w=>w===ws[0])?ws[0]:null;})():null);
       const plantStr=plantCount===0?'':(plantCount===1?uniquePlants[0]:(catLabel?`${catLabel} (${plantCount})`:`${uniquePlants[0]} +${plantCount-1} more`));
       const safeKey=t.key.replace(/\\/g,'\\\\').replace(/'/g,"\\'");
       html+=`<div class="maint-task-row" style="${isDone?'opacity:0.55':''}">
@@ -2408,7 +2408,8 @@ function renderSchedule(month){
     var g=outdoorTaskMap[key];
     var uniquePlants=[...new Set(g.plants)];
     var count=uniquePlants.length;
-    var baseName=count===1?uniquePlants[0]:(g.cats.length===1?g.cats[0]:count+' plants');
+    var sharedWord=g.cats.length>1?(function(){var words=g.cats.map(function(c){return c.split(' ').pop();});return words.every(function(w){return w===words[0];})?words[0]:null;})():null;
+    var baseName=count===1?uniquePlants[0]:(g.cats.length===1?g.cats[0]:(sharedWord||count+' plants'));
     var displayCat=count===1?baseName:baseName+' <span style="background:var(--sage-light);color:var(--sage-dark);font-size:10px;font-weight:600;padding:1px 6px;border-radius:10px">'+count+'</span>';
     allTasks.push({cat:displayCat,title:g.task,desc:count>1?uniquePlants.join(', '):'',indoor:false,type:g.type,bedIds:g.bedIds,bedId:'outdoor-grouped',key:'pg_'+key,isGrouped:true,count:count,plants:uniquePlants,rawCat:baseName});
   });
