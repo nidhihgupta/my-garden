@@ -397,6 +397,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--warm-white);color:var(--t
       <p style="font-size:13px;color:var(--text-light);margin-bottom:16px">Wipes all local data and reloads app defaults. GitHub data is not affected — you can restore from GitHub afterwards. Only use this if something is seriously broken.</p>
       <button class="btn-secondary" style="border-color:var(--terracotta);color:var(--terracotta)" onclick="resetToDefaults()">↺ Reset Local Data</button>
     </div>
+    <div id="app-version-line" style="text-align:center;font-size:12px;color:var(--text-light);padding:16px 0 4px"></div>
   </div>
 </div>
 <nav class="bottom-nav">
@@ -1090,6 +1091,7 @@ function resetToDefaults(){
   location.reload();
 }
 const DATA_VERSION='v9';
+const APP_VERSION='2026-06-05-b'; // bump on every index.html deploy — drives self-update check
 // GitHub Sync
 const GH_KEYS={user:'gh_username',repo:'gh_repo',token:'gh_token'};
 function ghGet(k){try{return localStorage.getItem(k)||'';}catch(e){return '';}}
@@ -1386,7 +1388,29 @@ function importDataJSON(e){
   r.readAsText(f);e.target.value='';
 }
 
+async function checkAppVersion(){
+  // Self-update: if the deployed app version differs from the running one,
+  // force a cache-busting reload ONCE per session so the user always gets the latest code.
+  if(!ghConfigured())return;
+  if(sessionStorage.getItem('av_reloaded'))return; // already self-updated this session — avoid loops
+  try{
+    const c=ghCredentials();
+    const r=await fetch(`https://raw.githubusercontent.com/${c.user}/${c.repo}/main/app-version.json?t=`+Date.now(),{cache:'no-store'});
+    if(!r.ok)return;
+    const deployed=(await r.json()).version;
+    if(deployed&&deployed!==APP_VERSION){
+      sessionStorage.setItem('av_reloaded','1');
+      location.href=location.pathname+'?v='+Date.now();
+    }
+  }catch(e){}
+}
+function showAppVersion(){
+  const el=document.getElementById('app-version-line');
+  if(el)el.textContent='App version '+APP_VERSION;
+}
 async function init(){
+  showAppVersion();
+  await checkAppVersion();
   // GitHub is the source of truth — always try it first, regardless of local version
   await loadImagesFromGitHub();
   const ghLoaded=await loadFromGitHub();
