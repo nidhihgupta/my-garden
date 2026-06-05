@@ -381,8 +381,9 @@ body{font-family:'DM Sans',sans-serif;background:var(--warm-white);color:var(--t
       <div class="form-group"><label class="form-label">Personal Access Token</label><input class="form-input" id="gh-token" type="password" placeholder="ghp_xxxxxxxxxxxx"><p style="font-size:11px;color:var(--text-light);margin-top:4px">github.com → Settings → Developer settings → Personal access tokens → Tokens (classic) → repo scope</p></div>
       <div id="gh-status" style="font-size:13px;padding:8px 0;color:var(--text-light)"></div>
       <button class="btn-primary" onclick="saveGitHubSettings()">Save & Test Connection</button>
-      <button class="btn-secondary" onclick="forceSyncToGitHub()">⬆️ Force Sync Now</button>
-      <button class="btn-secondary" onclick="restoreFromGitHub()">⬇️ Restore from GitHub</button>
+      <button class="btn-secondary" onclick="forceSyncToGitHub()">⬆️ Push My Data to GitHub</button>
+      <button class="btn-secondary" onclick="restoreFromGitHub()">⬇️ Restore Data from GitHub</button>
+      <button class="btn-secondary" onclick="location.reload(true)">🔄 Reload App (get latest updates)</button>
     </div>
     <div style="background:white;border-radius:var(--radius);padding:20px;margin-bottom:16px;box-shadow:var(--shadow)">
       <h3 style="font-family:'Playfair Display',serif;font-size:18px;margin-bottom:8px;color:var(--text-dark)">💾 Local Backup</h3>
