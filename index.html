@@ -383,7 +383,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--warm-white);color:var(--t
       <button class="btn-primary" onclick="saveGitHubSettings()">Save & Test Connection</button>
       <button class="btn-secondary" onclick="forceSyncToGitHub()">⬆️ Push My Data to GitHub</button>
       <button class="btn-secondary" onclick="restoreFromGitHub()">⬇️ Restore Data from GitHub</button>
-      <button class="btn-secondary" onclick="location.reload(true)">🔄 Reload App (get latest updates)</button>
+      <button class="btn-secondary" onclick="window.location.href=window.location.pathname+'?v='+Date.now()">🔄 Reload App (get latest updates)</button>
     </div>
     <div style="background:white;border-radius:var(--radius);padding:20px;margin-bottom:16px;box-shadow:var(--shadow)">
       <h3 style="font-family:'Playfair Display',serif;font-size:18px;margin-bottom:8px;color:var(--text-dark)">💾 Local Backup</h3>
