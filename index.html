@@ -1334,6 +1334,14 @@ function applyTaskMigrations(){
     'Oxalis may go dormant in summer heat — reduce water if leaves yellow':'',
     'Remove brown tips with scissors at an angle':'',
     'Rotate weekly for even growth — leans toward light':'',
+    // Fruit tree watering normalizations — consolidate into standard text so sfCov can suppress when static covers it
+    'Every 2 weeks in peak summer':'Deep water every 2 weeks July-August',
+    'Every 2 weeks summer':'Deep water every 2 weeks July-August',
+    'Deep water every 2 weeks July-August — check soil 6 inches first':'Deep water every 2 weeks July-August',
+    'Water deeply in summer heat':'Deep water every 2 weeks July-August',
+    // Indoor consolidations
+    'Feed diluted fertilizer monthly':'Feed monthly spring-summer',
+    'Wipe large leaves monthly':'Wipe leaves monthly',
   };
   const plantNameMigrations={
     'Tree Rose':'Rose','Flower Carpet Rose':'Rose','Iceberg Rose Climbing':'Rose',
@@ -2118,12 +2126,13 @@ function buildWeekTasks(month){
     const isIndoor=!!S.indoorPlants.find(x=>x.id===p.id);
     (p.maintenance||[]).forEach(m=>{
       if(!(m.months||[]).includes(month))return;
+      if(m.task.toLowerCase().includes('propagat'))return;
       const b=bucket(m.task,p.category,isIndoor);
       const type=taskType(m.task);
-      // Group by task text (consolidated across plants)
       const key=b+'|'+m.task;
-      if(!taskMap[key])taskMap[key]={bucket:b,type,task:m.task,plants:[],isIndoor,key:'wk_'+month+'_'+encodeURIComponent(m.task).slice(0,40)};
-      taskMap[key].plants.push(p.name);
+      if(!taskMap[key])taskMap[key]={bucket:b,type,task:m.task,plants:[],cats:[],isIndoor,key:'wk_'+month+'_'+encodeURIComponent(m.task).slice(0,40)};
+      if(!taskMap[key].plants.includes(p.name))taskMap[key].plants.push(p.name);
+      if(!isIndoor&&p.category&&!taskMap[key].cats.includes(p.category))taskMap[key].cats.push(p.category);
     });
   });
   // Add static schedule tasks
@@ -2181,13 +2190,18 @@ function renderMaintWeek(){
     html+=`<div class="maint-card"><div class="maint-card-title">${g.label}</div>`;
     g.tasks.forEach(t=>{
       const isDone=!!done[t.key];
-      const plantCount=t.plants.length;
-      const plantStr=plantCount===0?'':(plantCount===1?t.plants[0]:`${t.plants[0]} +${plantCount-1} more`);
+      const uniquePlants=[...new Set(t.plants)];
+      const plantCount=uniquePlants.length;
+      // Build category label matching All Tasks style
+      const sharedWord=t.cats&&t.cats.length>1?(()=>{const ws=t.cats.map(c=>c.split(' ').pop());return ws.every(w=>w===ws[0])?ws[0]:null;})():null;
+      const catLabel=t.isStatic?'':(t.isIndoor?(plantCount<=1?'':(chipLabel[t.type]||'Indoor')):(t.cats&&t.cats.length===1?t.cats[0]:(sharedWord||'')));
+      const plantListStr=plantCount>1?uniquePlants.join(' · '):(plantCount===1?uniquePlants[0]:'');
       html+=`<div class="maint-task-row">
         <div class="maint-task-check ${isDone?'done':''}" onclick="setMaintTaskDone('${t.key.replace(/'/g,"\\'")}',${!isDone})">${isDone?'✓':''}</div>
         <div class="maint-task-body">
+          ${catLabel?`<div style="font-size:10px;text-transform:uppercase;letter-spacing:1px;color:${t.isIndoor?'var(--terracotta)':'var(--sage-dark)'};font-weight:500;margin-bottom:2px">${catLabel}${plantCount>1?' ('+plantCount+')':''}</div>`:''}
           <div class="maint-task-name ${isDone?'done':''}">${t.task}<span class="maint-type-chip ${chipClass[t.type]||'chip-tidy'}">${chipLabel[t.type]||'Task'}</span></div>
-          ${plantStr?`<div class="maint-task-sub">${plantStr}</div>`:''}
+          ${plantListStr?`<div class="maint-task-sub" style="font-size:11px;line-height:1.5">${plantListStr}</div>`:''}
           ${t.desc?`<div class="maint-task-sub">${t.desc}</div>`:''}
         </div>
       </div>`;
@@ -2292,7 +2306,19 @@ function renderSchedule(month){
     else if(tl.includes('pest')||tl.includes('mite')||tl.includes('spray')||tl.includes('neem')||tl.includes('slug')||tl.includes('monitor'))tp='Pest';
     allTasks.push({cat:t.cat,title:t.title,desc:t.desc||'',indoor:t.indoor,type:tp,bedId:t.indoor?'indoor':'all',key:'s_'+t.cat+'_'+t.title,isStatic:true,count:0});
   });
-  // Outdoor plant tasks — group by task text, collect plant names and bedIds
+  // Determine which feed/water categories are already covered by static schedule this month
+  var sfCov={jacks:false,supbloom:false,camellia:false,palm:false,citrus:false,bonemeal:false,fruittreewater:false};
+  (staticSchedule[month]||[]).forEach(function(t){
+    var tl=(t.title+' '+(t.desc||'')).toLowerCase();
+    if(tl.includes('jack'))sfCov.jacks=true;
+    if(tl.includes('super bloom'))sfCov.supbloom=true;
+    if(tl.includes('camellia'))sfCov.camellia=true;
+    if(tl.includes('palm'))sfCov.palm=true;
+    if(tl.includes('citrus'))sfCov.citrus=true;
+    if(tl.includes('bonemeal'))sfCov.bonemeal=true;
+    if((tl.includes('fruit tree')||tl.includes('all trees'))&&tl.includes('water'))sfCov.fruittreewater=true;
+  });
+  // Outdoor plant tasks — group by task text, collect plant names, bedIds, and categories
   var outdoorTaskMap={};
   S.plants.forEach(function(plant){
     var st=plant.status||'alive';
@@ -2300,27 +2326,44 @@ function renderSchedule(month){
     if(!plant.maintenance)return;
     plant.maintenance.forEach(function(mItem){
       if(!mItem.months||mItem.months.indexOf(month)<0)return;
+      var tl=mItem.task.toLowerCase();
+      // Skip propagation tasks (they contain 'water' but are not watering)
+      if(tl.includes('propagat'))return;
+      // Suppress feed tasks already covered by static schedule
+      if(tl.includes('feed')||tl.includes('fertiliz')||tl.includes('super bloom')||tl.includes('bonemeal')){
+        if(sfCov.jacks&&tl.includes('jack'))return;
+        if(sfCov.supbloom&&tl.includes('super bloom'))return;
+        if(sfCov.camellia&&tl.includes('camellia'))return;
+        if(sfCov.palm&&tl.includes('palm'))return;
+        if(sfCov.citrus&&tl.includes('citrus'))return;
+        if(sfCov.bonemeal&&tl.includes('bonemeal'))return;
+      }
+      // Suppress fruit tree watering when static comprehensively covers all trees this month
+      if(sfCov.fruittreewater&&(plant.category||'').toLowerCase().includes('fruit')&&(tl.includes('water')||tl.includes('deep water')))return;
       var key=mItem.task;
       if(!outdoorTaskMap[key]){
-        var tl=mItem.task.toLowerCase();
         var tp='Maintenance';
         if(tl.includes('prune')||tl.includes('cutback')||tl.includes('deadhead')||tl.includes('trim'))tp='Pruning';
         else if(tl.includes('feed')||tl.includes('fertiliz'))tp='Feeding';
-        else if(tl.includes('water'))tp='Watering';
-        else if(tl.includes('pest')||tl.includes('mite')||tl.includes('spray')||tl.includes('neem')||tl.includes('slug'))tp='Pest';
-        outdoorTaskMap[key]={task:mItem.task,type:tp,plants:[],bedIds:[]};
+        else if(tl.includes('water')||tl.includes('moist'))tp='Watering';
+        else if(tl.includes('pest')||tl.includes('mite')||tl.includes('spray')||tl.includes('neem')||tl.includes('slug')||tl.includes('monitor'))tp='Pest';
+        outdoorTaskMap[key]={task:mItem.task,type:tp,plants:[],bedIds:[],cats:[]};
       }
       outdoorTaskMap[key].plants.push(plant.name);
       if(plant.bedId&&outdoorTaskMap[key].bedIds.indexOf(plant.bedId)<0)outdoorTaskMap[key].bedIds.push(plant.bedId);
+      if(plant.category&&outdoorTaskMap[key].cats.indexOf(plant.category)<0)outdoorTaskMap[key].cats.push(plant.category);
     });
   });
   Object.keys(outdoorTaskMap).forEach(function(key){
     var g=outdoorTaskMap[key];
-    var count=g.plants.length;
-    // Use the plant name directly — if multiple, show name + count
-    var baseName=g.plants[0];
-    var displayCat=count===1?baseName:baseName+' <span style="background:var(--sage-light);color:var(--sage-dark);font-size:10px;font-weight:600;padding:1px 6px;border-radius:10px">'+count+'</span>';
-    allTasks.push({cat:displayCat,title:g.task,desc:'',indoor:false,type:g.type,bedIds:g.bedIds,bedId:'outdoor-grouped',key:'pg_'+key,isGrouped:true,count:count,plants:g.plants,rawCat:baseName});
+    var uniquePlants=[...new Set(g.plants)];
+    var count=uniquePlants.length;
+    // Use plant category as label; fall back to shared last word across categories, then count
+    var sharedWord=g.cats.length>1?(function(){var ws=g.cats.map(function(c){return c.split(' ').pop();});return ws.every(function(w){return w===ws[0];})?ws[0]:null;})():null;
+    var groupLabel=count===1?uniquePlants[0]:(g.cats.length===1?g.cats[0]:(sharedWord||count+' plants'));
+    var badge='<span style="background:var(--sage-light);color:var(--sage-dark);font-size:10px;font-weight:600;padding:1px 6px;border-radius:10px">'+count+'</span>';
+    var displayCat=count===1?groupLabel:groupLabel+' '+badge;
+    allTasks.push({cat:displayCat,title:g.task,desc:'',indoor:false,type:g.type,bedIds:g.bedIds,bedId:'outdoor-grouped',key:'pg_'+key,isGrouped:true,count:count,plants:uniquePlants,cats:g.cats,groupLabel:groupLabel});
   });
   // Indoor plant tasks — group by task text
   var indoorTaskMap={};
@@ -2338,16 +2381,19 @@ function renderSchedule(month){
   });
   Object.keys(indoorTaskMap).forEach(function(key){
     var g=indoorTaskMap[key];
-    var count=g.plants.length;
-    var baseName=g.plants[0];
-    var displayCat=count===1?baseName:baseName+' <span style="background:rgba(193,100,74,0.15);color:var(--terracotta);font-size:10px;font-weight:600;padding:1px 6px;border-radius:10px">'+count+'</span>';
+    var uniquePlants=[...new Set(g.plants)];
+    var count=uniquePlants.length;
     var tl=g.task.toLowerCase();
     var tp='Maintenance';
     if(tl.includes('prune')||tl.includes('cutback')||tl.includes('deadhead')||tl.includes('trim'))tp='Pruning';
     else if(tl.includes('feed')||tl.includes('fertiliz'))tp='Feeding';
     else if(tl.includes('water')||tl.includes('moist'))tp='Watering';
     else if(tl.includes('pest')||tl.includes('mite')||tl.includes('spray')||tl.includes('neem'))tp='Pest';
-    allTasks.push({cat:displayCat,title:g.task,desc:'',indoor:true,type:tp,bedId:'indoor',key:'ig_'+key,isGrouped:true,count:count,plants:g.plants});
+    // For multiple indoor plants, label by task type (more informative than first plant name)
+    var typeLabel={Pruning:'Pruning',Feeding:'Feeding',Watering:'Watering',Pest:'Pest',Maintenance:'Indoor'}[tp]||'Indoor';
+    var badge='<span style="background:rgba(193,100,74,0.15);color:var(--terracotta);font-size:10px;font-weight:600;padding:1px 6px;border-radius:10px">'+count+'</span>';
+    var displayCat=count===1?uniquePlants[0]:typeLabel+' '+badge;
+    allTasks.push({cat:displayCat,title:g.task,desc:'',indoor:true,type:tp,bedId:'indoor',key:'ig_'+key,isGrouped:true,count:count,plants:uniquePlants,groupLabel:count===1?uniquePlants[0]:typeLabel});
   });
   // Apply filters
   var typeEl=document.getElementById('sched-filter-type');
@@ -2388,11 +2434,15 @@ function renderSchedule(month){
       var border=t.indoor?'var(--terracotta)':'var(--sage)';
       var navPlant=(!t.isStatic&&t.plants&&t.plants.length===1)?t.plants[0]:'';
       var navFn=navPlant?'navToSchedPlant(\''+navPlant.replace(/\\/g,'\\\\').replace(/'/g,"\\'")+'\',' +(t.indoor?'true':'false')+')':'';
+      var plantListStr='';
+      if(t.isGrouped&&t.plants&&t.plants.length>1){
+        plantListStr='<p style="font-size:11px;color:var(--text-light);margin:2px 0 0;line-height:1.5">'+t.plants.join(' · ')+'</p>';
+      }
       out+='<div class="schedule-task '+(isDone?'task-done':'')+'" style="border-left-color:'+border+'"><div style="display:flex;align-items:flex-start">'
         +'<div class="sched-check '+(isDone?'checked':'')+'" onclick="toggleSchedTask('+month+',\''+safeKey+'\')">'+(isDone?'✓':'')+'</div>'
         +'<div style="flex:1;'+(navFn?'cursor:pointer':'')+'"'+(navFn?' onclick="'+navFn+'"':'')+'>'
         +'<div style="display:flex;align-items:center;justify-content:space-between"><div style="font-size:10px;text-transform:uppercase;letter-spacing:1px;color:'+(t.indoor?'var(--terracotta)':'var(--sage-dark)')+';font-weight:500;margin-bottom:3px">'+t.cat+'</div>'+(navFn?'<span style="color:var(--text-light);font-size:14px;margin-top:-2px">›</span>':'')+'</div>'
-        +'<h4>'+t.title+'</h4>'+(t.desc?'<p>'+t.desc+'</p>':'')
+        +'<h4>'+t.title+'</h4>'+(t.desc?'<p>'+t.desc+'</p>':'')+plantListStr
         +'</div></div></div>';
     });
   });
