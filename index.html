@@ -2163,8 +2163,9 @@ function buildWeekTasks(month){
     (p.maintenance||[]).forEach(m=>{
       if(!(m.months||[]).includes(month))return;
       const key='pg_'+m.task;
-      if(!outdoorMap[key])outdoorMap[key]={key,task:m.task,plants:[],isIndoor:false,day:inferDay(m.task,false)};
+      if(!outdoorMap[key])outdoorMap[key]={key,task:m.task,plants:[],cats:[],isIndoor:false,day:inferDay(m.task,false)};
       outdoorMap[key].plants.push(p.name);
+      if(p.category&&!outdoorMap[key].cats.includes(p.category))outdoorMap[key].cats.push(p.category);
     });
   });
   const indoorMap={};
@@ -2187,6 +2188,7 @@ function buildWeekTasks(month){
     if(!t.indoor&&(tl.includes('feed')&&tl.includes('camellia')))hasFeedStatic['camellia']=true;
     if(!t.indoor&&(tl.includes('feed')&&tl.includes('palm')))hasFeedStatic['palm']=true;
     if(!t.indoor&&(tl.includes('feed')&&tl.includes('citrus')))hasFeedStatic['citrus']=true;
+    if(!t.indoor&&tl.includes('bonemeal'))hasFeedStatic['bonemeal']=true;
     if(t.indoor&&(tl.includes('feed')))hasFeedStatic['indoor']=true;
   });
 
@@ -2201,6 +2203,7 @@ function buildWeekTasks(month){
     if(!item.isIndoor&&hasFeedStatic['camellia']&&tl.includes('camellia'))return;
     if(!item.isIndoor&&hasFeedStatic['palm']&&tl.includes('palm'))return;
     if(!item.isIndoor&&hasFeedStatic['citrus']&&tl.includes('citrus'))return;
+    if(!item.isIndoor&&hasFeedStatic['bonemeal']&&tl.includes('bonemeal'))return;
     // Show if day is 0 (ongoing) or matches current week
     if(d===0){if(ongoing.length<5)ongoing.push(item);}
     else if(w===currentWeek){if(thisWeek.length<12)thisWeek.push(item);}
@@ -2240,8 +2243,10 @@ function renderMaintWeek(){
     html+=`<div class="maint-card"><div class="maint-card-title">${g.label}</div>`;
     g.tasks.forEach(t=>{
       const isDone=!!done[t.key];
-      const plantCount=t.plants.length;
-      const plantStr=plantCount===0?'':(plantCount===1?t.plants[0]:`${t.plants[0]} +${plantCount-1} more`);
+      const uniquePlants=[...new Set(t.plants)];
+      const plantCount=uniquePlants.length;
+      const catLabel=t.cats&&t.cats.length===1?t.cats[0]:null;
+      const plantStr=plantCount===0?'':(plantCount===1?uniquePlants[0]:(catLabel?`${catLabel} (${plantCount})`:`${uniquePlants[0]} +${plantCount-1} more`));
       const safeKey=t.key.replace(/\\/g,'\\\\').replace(/'/g,"\\'");
       html+=`<div class="maint-task-row" style="${isDone?'opacity:0.55':''}">
         <div class="maint-task-check ${isDone?'done':''}" style="${isDone?'':'border-color:var(--sage);'}" onclick="toggleWeekTask(${mo},'${safeKey}')">${isDone?'✓':''}</div>
@@ -2348,7 +2353,7 @@ function renderSchedule(month){
     var tl=(t.title+' '+t.cat).toLowerCase();
     if(tl.includes('prune')||tl.includes('cutback')||tl.includes('cut back')||tl.includes('deadhead')||tl.includes('trim'))tp='Pruning';
     else if(tl.includes('feed')||tl.includes('fertiliz')||tl.includes('citrus'))tp='Feeding';
-    else if(tl.includes('water')||tl.includes('irrig'))tp='Watering';
+    else if(!tl.includes('propagat')&&(tl.includes('water')||tl.includes('irrig')))tp='Watering';
     else if(tl.includes('pest')||tl.includes('mite')||tl.includes('spray')||tl.includes('neem')||tl.includes('slug')||tl.includes('monitor'))tp='Pest';
     allTasks.push({cat:t.cat,title:t.title,desc:t.desc||'',indoor:t.indoor,type:tp,bedId:t.indoor?'indoor':'all',key:'s_'+t.cat+'_'+t.title,isStatic:true,count:0});
   });
@@ -2390,7 +2395,7 @@ function renderSchedule(month){
         var tp='Maintenance';
         if(tl.includes('prune')||tl.includes('cutback')||tl.includes('cut back')||tl.includes('deadhead')||tl.includes('trim'))tp='Pruning';
         else if(tl.includes('feed')||tl.includes('fertiliz'))tp='Feeding';
-        else if(tl.includes('water'))tp='Watering';
+        else if(!tl.includes('propagat')&&tl.includes('water'))tp='Watering';
         else if(tl.includes('pest')||tl.includes('mite')||tl.includes('spray')||tl.includes('neem')||tl.includes('slug'))tp='Pest';
         outdoorTaskMap[key]={task:mItem.task,type:tp,plants:[],bedIds:[],cats:[]};
       }
