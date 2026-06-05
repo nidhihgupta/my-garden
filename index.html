@@ -972,7 +972,7 @@ const staticSchedule={
   5:[{cat:'Geranium',title:'Cut back geraniums hard after spring flush',desc:'Fountain Wall Bed. Cut by half to two thirds. Feed Super Bloom after.',indoor:false},{cat:'Azalea',title:'Light prune Encore Azaleas after spring bloom',desc:'Back Bed Right and Left — light tidy only after spring flowering.',indoor:false},{cat:'Iceberg',title:'Train Iceberg rose on Side Arbor',desc:'Tie canes horizontally to arbor structure while still flexible.',indoor:false}],
   6:[{cat:'Pest',title:'Monitor for powdery mildew on roses',desc:'Cool nights + warm days = prime conditions. Neem oil spray if spotted.',indoor:false},{cat:'Feeding',title:'Feed dahlias Super Bloom',desc:'BBQ Bed + Back Rose Bed dahlias. Super Bloom every 3-4 weeks through August.',indoor:false},{cat:'Lawn',title:'Apply grub killer to lawn',desc:'Annual June application. Follow product label for timing and rate.',indoor:false},{cat:'Fruit Trees',title:'Increase fruit tree watering',desc:'All trees every 2 weeks. Rainier Cherry weekly. Check soil first.',indoor:false},{cat:'Indoor',title:'Check all indoor plants for spider mites',desc:'Hot dry conditions = spider mite season. Check leaf undersides. Neem oil if found.',indoor:true}],
   7:[{cat:'Salvia',title:'Cut back Salvia Amistad if leggy',desc:'All beds (BBQ, Main Arbor, Side Arbor, Pepper Side) — cut by 1/3. Reblooms in 3 weeks.',indoor:false},{cat:'Dahlias',title:'Deadhead dahlias continuously',desc:'BBQ Bed + Back Rose Bed. Check every 3-4 days.',indoor:false},{cat:'Fruit Trees',title:'Peak summer fruit tree watering',desc:'ALL trees every 2 weeks. Rainier Cherry + Plum weekly. Heat wave = extra water for Cherry.',indoor:false},{cat:'Bougainvillea',title:'Feed White Stripe bougainvillea',desc:'Super Bloom half strength to MOIST soil only. Monthly.',indoor:false},{cat:'Indoor',title:'Prayer Plant: mist daily',desc:'Hot dry summer air. Daily misting critical.',indoor:true}],
-  8:[{cat:'Hydrangea',title:'Prune hydrangeas AFTER flowering',desc:'Side Arbor mophead + oakleaf — ONLY after flowering complete. Never hard cutback.',indoor:false},{cat:'Bougainvillea',title:'Cut back White Stripe bougainvillea',desc:'After flowering. Cut by 1/3.',indoor:false},{cat:'Fruit Trees',title:'Continue weekly Rainier Cherry + Plum watering',desc:'Most critical month. Water stress = cracking and drop.',indoor:false},{cat:'Berries',title:'Remove old fruited raspberry + blackberry canes',desc:'After harvest — cut old canes to ground.',indoor:false},{cat:'Indoor',title:'Christmas Cactus: begin drought stress',desc:'Reduce watering now. Cool nights + drought triggers Nov/Dec bloom.',indoor:true}],
+  8:[{cat:'Hydrangea',title:'Prune hydrangeas AFTER flowering',desc:'Side Arbor mophead + oakleaf — ONLY after flowering complete. Never hard cutback.',indoor:false},{cat:'Bougainvillea',title:'Cut back + feed White Stripe bougainvillea',desc:'Cut by 1/3 after flowering. Continue monthly Super Bloom half strength to MOIST soil.',indoor:false},{cat:'Fruit Trees',title:'Continue weekly Rainier Cherry + Plum watering',desc:'Most critical month. Water stress = cracking and drop.',indoor:false},{cat:'Berries',title:'Remove old fruited raspberry + blackberry canes',desc:'After harvest — cut old canes to ground.',indoor:false},{cat:'Indoor',title:'Christmas Cactus: begin drought stress',desc:'Reduce watering now. Cool nights + drought triggers Nov/Dec bloom.',indoor:true}],
   9:[{cat:'Feeding',title:'Last fertilizer of season',desc:"Low-nitrogen application to all outdoor beds — Jack's 20-20-20 at 1/2 strength or skip nitrogen-heavy plants.",indoor:false},{cat:'Fruit Trees',title:'Reduce fruit tree watering',desc:'Temps dropping. Persimmon + Pomegranate back to monthly.',indoor:false},{cat:'Indoor',title:'Reduce fertilizer — all indoor plants',desc:'Growth slowing — stop feeding until March.',indoor:true}],
   10:[{cat:'Hydrangea',title:'Move mophead hydrangeas if needed',desc:'October/November ideal. Water in with seaweed solution.',indoor:false},{cat:'Indoor',title:'Christmas Cactus: 12+ hours darkness nightly',desc:'4 weeks triggers buds. Keep in unused room 12hrs per night.',indoor:true},{cat:'Indoor',title:'Orchids: watch for bloom spike',desc:'Cool fall nights trigger new spike. Do not move once spike appears.',indoor:true}],
   11:[{cat:'Geranium',title:'Final geranium cutback',desc:'After last flush. Hard cutback. Last cutback of season.',indoor:false},{cat:'Hosta',title:'Cut back Empress Wu Hosta dead foliage',desc:'As it dies back for winter. Mark location.',indoor:false},{cat:'Indoor',title:'Christmas Cactus buds should be visible',desc:'Move back to bright spot — do not move again once buds set.',indoor:true},{cat:'Irrigation',title:'Reduce all irrigation',desc:'Bay Area rains beginning. Reduce all zone run times.',indoor:false}],
@@ -1007,7 +1007,7 @@ function resetToDefaults(){
   location.reload();
 }
 const DATA_VERSION='v9';
-const APP_VERSION='2026-06-05-c';
+const APP_VERSION='2026-06-05-d';
 // GitHub Sync
 const GH_KEYS={user:'gh_username',repo:'gh_repo',token:'gh_token'};
 function ghGet(k){try{return localStorage.getItem(k)||'';}catch(e){return '';}}
@@ -1342,6 +1342,11 @@ function applyTaskMigrations(){
     // Indoor consolidations
     'Feed diluted fertilizer monthly':'Feed monthly spring-summer',
     'Wipe large leaves monthly':'Wipe leaves monthly',
+    // Bougainvillea — merge near-identical Super Bloom and cutback texts into one each
+    'Feed Super Bloom half strength to moist soil':'Apply Super Bloom half strength to MOIST soil — monthly',
+    'Cut by 1/3 after bloom finishes':'Cut back by 1/3 after flowering',
+    // Hydrangea — merge two phrasings of the same pruning rule
+    'Prune ONLY after flowering in August — never fall/winter':'Prune ONLY after flowering complete',
   };
   const plantNameMigrations={
     'Tree Rose':'Rose','Flower Carpet Rose':'Rose','Iceberg Rose Climbing':'Rose',
@@ -2307,7 +2312,9 @@ function renderSchedule(month){
     allTasks.push({cat:t.cat,title:t.title,desc:t.desc||'',indoor:t.indoor,type:tp,bedId:t.indoor?'indoor':'all',key:'s_'+t.cat+'_'+t.title,isStatic:true,count:0});
   });
   // Determine which feed/water categories are already covered by static schedule this month
-  var sfCov={jacks:false,supbloom:false,camellia:false,palm:false,citrus:false,bonemeal:false,fruittreewater:false};
+  var sfCov={jacks:false,supbloom:false,camellia:false,palm:false,citrus:false,bonemeal:false,
+             fruittreewater:false,geraniumdeadhead:false,geraniumcutback:false,
+             azalea:false,hydrangea:false,bougainvillacutback:false,berrycanes:false};
   (staticSchedule[month]||[]).forEach(function(t){
     var tl=(t.title+' '+(t.desc||'')).toLowerCase();
     if(tl.includes('jack'))sfCov.jacks=true;
@@ -2317,6 +2324,12 @@ function renderSchedule(month){
     if(tl.includes('citrus'))sfCov.citrus=true;
     if(tl.includes('bonemeal'))sfCov.bonemeal=true;
     if((tl.includes('fruit tree')||tl.includes('all trees'))&&tl.includes('water'))sfCov.fruittreewater=true;
+    if(tl.includes('geranium')&&tl.includes('deadhead'))sfCov.geraniumdeadhead=true;
+    if(tl.includes('geranium')&&(tl.includes('cut back')||tl.includes('cutback')))sfCov.geraniumcutback=true;
+    if(tl.includes('azalea')&&(tl.includes('prune')||tl.includes('trim')||tl.includes('cut')))sfCov.azalea=true;
+    if(tl.includes('hydrangea')&&(tl.includes('prune')||tl.includes('cut')))sfCov.hydrangea=true;
+    if(tl.includes('bougainvill')&&(tl.includes('cut')||tl.includes('prune')))sfCov.bougainvillacutback=true;
+    if((tl.includes('raspberry')||tl.includes('blackberry')||tl.includes('cane'))&&tl.includes('remov'))sfCov.berrycanes=true;
   });
   // Outdoor plant tasks — group by task text, collect plant names, bedIds, and categories
   var outdoorTaskMap={};
@@ -2340,6 +2353,14 @@ function renderSchedule(month){
       }
       // Suppress fruit tree watering when static comprehensively covers all trees this month
       if(sfCov.fruittreewater&&(plant.category||'').toLowerCase().includes('fruit')&&(tl.includes('water')||tl.includes('deep water')))return;
+      // Suppress plant-level tasks already covered by a specific static entry this month
+      var pn=(plant.name||'').toLowerCase();var pc=(plant.category||'').toLowerCase();
+      if(sfCov.geraniumdeadhead&&(pn.includes('geranium')||pc.includes('geranium'))&&tl.includes('deadhead'))return;
+      if(sfCov.geraniumcutback&&(pn.includes('geranium')||pc.includes('geranium'))&&(tl.includes('cut back')||tl.includes('cutback')||tl.includes('cut by')))return;
+      if(sfCov.azalea&&(pn.includes('azalea')||pc.includes('azalea'))&&(tl.includes('prune')||tl.includes('trim')||tl.includes('cut')))return;
+      if(sfCov.hydrangea&&(pn.includes('hydrangea')||pc.includes('hydrangea'))&&(tl.includes('prune')||tl.includes('cut')))return;
+      if(sfCov.bougainvillacutback&&(pn.includes('bougainvill')||pc.includes('bougainvill'))&&(tl.includes('cut')||tl.includes('prune')))return;
+      if(sfCov.berrycanes&&(pn.includes('raspberry')||pn.includes('blackberry')||pc.includes('berr'))&&tl.includes('cane'))return;
       var key=mItem.task;
       if(!outdoorTaskMap[key]){
         var tp='Maintenance';
