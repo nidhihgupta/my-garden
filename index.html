@@ -384,6 +384,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--warm-white);color:var(--t
       <button class="btn-secondary" onclick="forceSyncToGitHub()">⬆️ Push My Data to GitHub</button>
       <button class="btn-secondary" onclick="restoreFromGitHub()">⬇️ Restore Data from GitHub</button>
       <button class="btn-secondary" onclick="window.location.href=window.location.pathname+'?v='+Date.now()">🔄 Reload App (get latest updates)</button>
+      <div id="app-version-line" style="text-align:center;font-size:12px;color:var(--text-light);padding:16px 0 4px"></div>
     </div>
     <div style="background:white;border-radius:var(--radius);padding:20px;margin-bottom:16px;box-shadow:var(--shadow)">
       <h3 style="font-family:'Playfair Display',serif;font-size:18px;margin-bottom:8px;color:var(--text-dark)">💾 Local Backup</h3>
@@ -397,7 +398,6 @@ body{font-family:'DM Sans',sans-serif;background:var(--warm-white);color:var(--t
       <p style="font-size:13px;color:var(--text-light);margin-bottom:16px">Wipes all local data and reloads app defaults. GitHub data is not affected — you can restore from GitHub afterwards. Only use this if something is seriously broken.</p>
       <button class="btn-secondary" style="border-color:var(--terracotta);color:var(--terracotta)" onclick="resetToDefaults()">↺ Reset Local Data</button>
     </div>
-    <div id="app-version-line" style="text-align:center;font-size:12px;color:var(--text-light);padding:16px 0 4px"></div>
   </div>
 </div>
 <nav class="bottom-nav">
@@ -539,11 +539,11 @@ const loropTrim=abeliaTrim;
 const liquidFeed=m('Feed liquid fertilizer every 2 weeks',[5,6,7,8,9]);
 const begFeed=liquidFeed;
 const impFeed=liquidFeed;
-const fruitWaterSp=m('Deep water monthly spring — slow hose at drip line',[3,4,5,6]);
+const fruitWaterSp=m('Deep water every 2 weeks spring — slow hose 10 min at drip line',[3,4,5,6]);
 const fruitWaterSu=m('Deep water every 2 weeks July-August — check soil 6 inches first',[7,8]);
 const fruitWaterFW=m('Monthly watering sufficient fall/winter',[9,10,11,12,1,2]);
 const citrusFeed=m('Feed citrus fertilizer',[2,5,8]);
-const espWaterSu=m('Deep water every 2 weeks July-August — check soil 6 inches first',[7,8]);
+const espWaterSu=m('Deep water weekly July-August',[7,8]);
 const hydPrune=m('Prune ONLY after flowering in August — never fall/winter',[8]);
 const hydFeed=m('Feed azalea fertilizer in spring',[3,4]);
 const dahliaDeadhead=m('Deadhead continuously — every spent bloom = more blooms',[6,7,8,9,10]);
@@ -963,104 +963,20 @@ const defaultBeds=[
   {id:'b-back-rose',name:'Back Rose Bed',yard:'back',zone:'Zone 3',sun:'Part sun',notes:'',icon:'🌹',order:10},
 ];
 
-// Static schedule — each entry has a day (1-31) so This Week can filter by current week
-// day ≤7 = week 1 · day 8-14 = week 2 · day 15-21 = week 3 · day 22+ = week 4
+// Static schedule - care only, no planting tasks
 const staticSchedule={
-  1:[
-    {day:7,  cat:'Pruning', title:'Prepare for bougainvillea cutback',    desc:'White Stripe — wait until after it blooms. Late Jan/early Feb.',                                   indoor:false},
-    {day:14, cat:'Pruning', title:'Deadwood removal on hydrangeas only',   desc:'Side Arbor mophead and oakleaf. Dead/crossing stems only — no hard cutback.',                     indoor:false},
-  ],
-  2:[
-    {day:7,  cat:'Pruning', title:'Bougainvillea cutback',                 desc:"White Stripe: cut 1/3 after bloom finishes. Feed Jack's 20-20-20 after.",                         indoor:false},
-    {day:7,  cat:'Pruning', title:'Hard prune Distictis buccinatoria',     desc:'Fountain Wall stone. Cut to framework. Flowers on new wood — no bloom lost.',                    indoor:false},
-    {day:28, cat:'Feeding', title:"Feed Jack's 20-20-20 — after pruning",  desc:"Bougainvillea, Distictis, raspberries & blackberries. Promotes new growth after cutback.",       indoor:false},
-    {day:28, cat:'Feeding', title:'Feed citrus fertilizer — Orange & Lemon',desc:'Feb · May · Aug schedule. Citrus fertilizer only — not Jack\'s.',                              indoor:false},
-  ],
-  3:[
-    {day:7,  cat:'Garden',  title:'Cut back Fatsia + take cuttings',       desc:'Cut to desired height. Take 6-8 stem cuttings with rooting hormone.',                            indoor:false},
-    {day:14, cat:'Indoor',  title:'Resume feeding all indoor plants',      desc:'Monthly diluted fertilizer as days lengthen. Orchids & biweekly plants included.',               indoor:true},
-    {day:14, cat:'Indoor',  title:'Repot root-bound houseplants',          desc:'Check Monstera, Pothos, ZZ Plant for roots escaping drainage.',                                  indoor:true},
-    {day:28, cat:'Feeding', title:"Feed Jack's 20-20-20 — all outdoor beds",desc:"51 plants this month. Exceptions: camellias, hydrangeas, azaleas → Camellia fertilizer below.", indoor:false},
-    {day:28, cat:'Feeding', title:'Feed Camellia fertilizer — camellias, hydrangeas & azaleas', desc:'Camellia ×4, Mophead/Oakleaf/Lacecap Hydrangea ×6+. Do not use Jack\'s on these.', indoor:false},
-  ],
-  4:[
-    {day:7,  cat:'Pruning', title:'Deadhead geraniums aggressively',       desc:'Fountain Wall Bed — remove every spent bloom for continuous flowering.',                         indoor:false},
-    {day:7,  cat:'Garden',  title:'Train Distictis new growth onto wall',  desc:'New shoots pushing — tie to wall immediately to build structure.',                               indoor:false},
-    {day:14, cat:'Feeding', title:'Feed Super Bloom every 2 weeks — Calibrachoa, Fuchsia & Trailing Fuchsia', desc:'Mid-month dose (day ~14). Repeat end of month. Continues biweekly through Oct.', indoor:false},
-    {day:14, cat:'Indoor',  title:'Feed indoor plants',                    desc:'Monthly diluted fertilizer — mid-month.',                                                        indoor:true},
-    {day:28, cat:'Feeding', title:"Feed Jack's 20-20-20 — most outdoor beds", desc:"~21 plants. Exceptions: Calibrachoa/Fuchsia/Trailing Fuchsia → Super Bloom | Palms → palm fertilizer | Encore Azalea/Mophead/Oakleaf Hydrangea → Camellia fertilizer.", indoor:false},
-    {day:28, cat:'Feeding', title:'Feed Super Bloom every 2 weeks — Calibrachoa, Fuchsia & Trailing Fuchsia', desc:'End-of-month dose. Biweekly all season.', indoor:false},
-    {day:28, cat:'Feeding', title:'Feed Camellia fertilizer — Encore Azalea & hydrangeas', desc:'Encore Azalea ×2, Mophead/Oakleaf Hydrangea. Spring cycle.',                   indoor:false},
-    {day:28, cat:'Feeding', title:'Feed palm fertilizer — both palms',     desc:'Palms in Planters + Palm in planter. Spring application.',                                      indoor:false},
-    {day:28, cat:'Garden',  title:'Start fruit tree watering schedule',    desc:'Monthly deep water: Lemon, Orange, Apricot, Espalier Cherry, Espalier Prune, Persimmon, Pomegranate. Slow hose at drip line.', indoor:false},
-  ],
-  5:[
-    {day:7,  cat:'Pruning', title:'Cut back geraniums hard after spring flush', desc:'Fountain Wall Bed. Cut by half to two thirds. Feed Super Bloom after.',                    indoor:false},
-    {day:7,  cat:'Pruning', title:'Light prune Encore Azaleas after spring bloom', desc:'Back Bed Right and Left — light tidy only after spring flowering.',                     indoor:false},
-    {day:7,  cat:'Garden',  title:'Train Iceberg rose on Side Arbor',      desc:'Tie canes horizontally to arbor structure while still flexible.',                               indoor:false},
-    {day:14, cat:'Feeding', title:'Feed Super Bloom every 2 weeks — Calibrachoa, Fuchsia, Begonia', desc:'Mid-month dose (day ~14). Biweekly through Sep.',                      indoor:false},
-    {day:14, cat:'Indoor',  title:'Feed indoor plants',                    desc:'Monthly diluted fertilizer — mid-month.',                                                       indoor:true},
-    {day:28, cat:'Feeding', title:"Feed Jack's 20-20-20 — most outdoor beds", desc:"~32 plants. Exceptions: Calibrachoa/Fuchsia/Begonia/Hibiscus/Geranium/Wisteria → Super Bloom | Citrus → citrus fertilizer.", indoor:false},
-    {day:28, cat:'Feeding', title:'Feed Super Bloom every 2 weeks — Calibrachoa, Fuchsia, Begonia', desc:'End-of-month dose. Also: Hibiscus, Wisteria, Geraniums get first Super Bloom this month.', indoor:false},
-    {day:28, cat:'Feeding', title:'Feed citrus fertilizer — Orange & Lemon', desc:'May application. Feb · May · Aug schedule.',                                                 indoor:false},
-  ],
-  6:[
-    {day:7,  cat:'Pest',    title:'Monitor for powdery mildew on roses',   desc:'Cool nights + warm days = prime conditions. Neem oil spray if spotted.',                        indoor:false},
-    {day:7,  cat:'Lawn',    title:'Apply grub killer to lawn',             desc:'Annual June application. Follow product label for timing and rate.',                            indoor:false},
-    {day:14, cat:'Feeding', title:'Feed Super Bloom every 2 weeks — Calibrachoa, Fuchsia, Begonia', desc:'Mid-month dose (day ~14). Biweekly through Sep.',                      indoor:false},
-    {day:14, cat:'Indoor',  title:'Feed indoor plants',                    desc:'Monthly diluted fertilizer — mid-month.',                                                       indoor:true},
-    {day:14, cat:'Indoor',  title:'Check all indoor plants for spider mites', desc:'Hot dry conditions = spider mite season. Check leaf undersides. Neem oil if found.',        indoor:true},
-    {day:28, cat:'Feeding', title:"Feed Jack's 20-20-20 — roses & perennials", desc:"Roses (all), Canna Lily, plus biweekly Alocasia/Caladium/Impatiens/Okra. Super Bloom plants get separate feed.", indoor:false},
-    {day:28, cat:'Feeding', title:'Feed Super Bloom every 2 weeks — Bougainvillea, Calibrachoa, Fuchsia, Begonia, Dahlia, Hibiscus', desc:'End-of-month dose.',                 indoor:false},
-    {day:28, cat:'Feeding', title:'Feed palm fertilizer — Palm in planter', desc:'Summer application.',                                                                          indoor:false},
-  ],
-  7:[
-    {day:7,  cat:'Pruning', title:'Cut back Salvia Amistad if leggy',      desc:'All beds — cut by 1/3. Reblooms in 3 weeks.',                                                  indoor:false},
-    {day:7,  cat:'Pruning', title:'Deadhead dahlias continuously',         desc:'BBQ Bed + Back Rose Bed. Check every 3-4 days.',                                               indoor:false},
-    {day:7,  cat:'Garden',  title:'Peak summer fruit tree watering',       desc:'Every 2 weeks: Lemon, Orange, Apricot, Espalier Cherry, Espalier Prune. Monthly: Persimmon, Pomegranate. Heat wave: extra water for Espalier Cherry.', indoor:false},
-    {day:14, cat:'Feeding', title:'Feed Super Bloom every 2 weeks — Calibrachoa, Fuchsia, Begonia', desc:'Mid-month dose (day ~14). Biweekly through Sep.',                      indoor:false},
-    {day:14, cat:'Indoor',  title:'Feed indoor plants',                    desc:'Monthly diluted fertilizer — mid-month.',                                                       indoor:true},
-    {day:14, cat:'Indoor',  title:'Prayer Plant: mist daily',              desc:'Hot dry summer air. Daily misting critical.',                                                   indoor:true},
-    {day:28, cat:'Feeding', title:"Feed Jack's 20-20-20 — heavy feeders (biweekly)", desc:"Alocasia ×3, Caladium ×2, Impatiens ×2, Okra, Canna Lily. Only these get Jack's in July.", indoor:false},
-    {day:28, cat:'Feeding', title:'Feed Super Bloom every 2 weeks — Bougainvillea, Calibrachoa, Fuchsia, Begonia, Dahlia, Chrysanthemum, Hibiscus', desc:'End-of-month dose.',  indoor:false},
-    {day:28, cat:'Feeding', title:'Feed Camellia fertilizer — Encore Azalea', desc:'Summer bloom cycle application.',                                                            indoor:false},
-    {day:28, cat:'Feeding', title:'Feed palm fertilizer — Palms in Planters', desc:'Summer application.',                                                                        indoor:false},
-  ],
-  8:[
-    {day:7,  cat:'Pruning', title:'Prune hydrangeas AFTER flowering',      desc:'Side Arbor mophead + oakleaf — only after flowering complete. Never hard cutback.',             indoor:false},
-    {day:7,  cat:'Pruning', title:'Cut back White Stripe bougainvillea',   desc:'After flowering. Cut by 1/3.',                                                                  indoor:false},
-    {day:7,  cat:'Garden',  title:'Remove old fruited raspberry & blackberry canes', desc:'After harvest — cut old canes to ground.',                                            indoor:false},
-    {day:7,  cat:'Garden',  title:'Continue weekly Rainier Cherry & Plum watering', desc:'Most critical month. Water stress = cracking and drop.',                              indoor:false},
-    {day:14, cat:'Feeding', title:'Feed Super Bloom every 2 weeks — Calibrachoa, Fuchsia, Begonia', desc:'Mid-month dose (day ~14). Last consistent biweekly feeds before wind-down.', indoor:false},
-    {day:14, cat:'Indoor',  title:'Feed indoor plants — last month before wind-down', desc:'Stop feeding in September.',                                                         indoor:true},
-    {day:14, cat:'Indoor',  title:'Christmas Cactus: begin drought stress', desc:'Reduce watering now. Cool nights + drought triggers Nov/Dec bloom.',                          indoor:true},
-    {day:28, cat:'Feeding', title:"Feed Jack's 20-20-20 — heavy feeders (biweekly)", desc:"Alocasia ×3, Caladium ×2, Impatiens ×2, Okra, Canna Lily.",                        indoor:false},
-    {day:28, cat:'Feeding', title:'Feed Super Bloom every 2 weeks — Bougainvillea, Calibrachoa, Fuchsia, Begonia, Dahlia, Chrysanthemum, Hibiscus', desc:'End-of-month dose. Wind down after this month.', indoor:false},
-    {day:28, cat:'Feeding', title:'Feed citrus fertilizer — Orange & Lemon', desc:'Aug application. Final citrus feed of season. Feb · May · Aug schedule.',                   indoor:false},
-    {day:28, cat:'Feeding', title:'Feed palm fertilizer — Palm in planter', desc:'Late summer — last palm feed of season.',                                                      indoor:false},
-  ],
-  9:[
-    {day:28, cat:'Feeding', title:"Feed Jack's 20-20-20 at half strength — all outdoor beds", desc:'Last outdoor feed of season. Half strength only. Skip if plants look stressed.', indoor:false},
-    {day:28, cat:'Feeding', title:'Feed Super Bloom — Bougainvillea, Hibiscus, Calibrachoa, Fuchsia', desc:'Final Super Bloom application before season ends.',                  indoor:false},
-    {day:28, cat:'Garden',  title:'Reduce fruit tree watering',            desc:'All trees back to monthly. Final deep water of season for Lemon, Orange, Apricot, Espalier Cherry, Espalier Prune.',  indoor:false},
-    {day:14, cat:'Indoor',  title:'Stop feeding all indoor plants until March', desc:'Growth slowing — final feed this month, resume March.',                                    indoor:true},
-  ],
-  10:[
-    {day:7,  cat:'Garden',  title:'Move mophead hydrangeas if needed',     desc:'October/November ideal. Water in with seaweed solution.',                                       indoor:false},
-    {day:14, cat:'Indoor',  title:'Christmas Cactus: 12+ hours darkness nightly', desc:'4 weeks triggers buds. Keep in unused room 12hrs per night.',                           indoor:true},
-    {day:14, cat:'Indoor',  title:'Orchids: watch for bloom spike',        desc:'Cool fall nights trigger new spike. Do not move once spike appears.',                          indoor:true},
-    {day:28, cat:'Feeding', title:'Feed Camellia fertilizer — Encore Azalea', desc:'October bloom cycle application (3rd of year).',                                            indoor:false},
-  ],
-  11:[
-    {day:7,  cat:'Pruning', title:'Final geranium cutback',                desc:'After last flush. Hard cutback. Last cutback of season.',                                       indoor:false},
-    {day:7,  cat:'Garden',  title:'Cut back Empress Wu Hosta dead foliage', desc:'As it dies back for winter. Mark location.',                                                   indoor:false},
-    {day:7,  cat:'Irrigation',title:'Reduce all irrigation',              desc:'Bay Area rains beginning. Reduce all zone run times.',                                           indoor:false},
-    {day:14, cat:'Indoor',  title:'Christmas Cactus buds should be visible', desc:'Move back to bright spot — do not move again once buds set.',                               indoor:true},
-  ],
-  12:[
-    {day:7,  cat:'Garden',  title:'Enjoy Sarcococca fragrant winter flowers', desc:'Front Bed Left far left corner. Intensely fragrant. No action needed.',                     indoor:false},
-    {day:14, cat:'Indoor',  title:'Christmas Cactus in bloom',             desc:'Keep away from drafts. Do not move. Water when top inch dry.',                                 indoor:true},
-  ],
+  1:[{cat:'Bougainvillea',title:'Prepare for bougainvillea cutback',desc:'Late Jan/early Feb. White Stripe — wait until after it blooms.',indoor:false},{cat:'Hydrangea',title:'Deadwood removal on hydrangeas only',desc:'Side Arbor mophead and oakleaf. Remove dead/crossing stems only — no hard cutback.',indoor:false}],
+  2:[{cat:'Bougainvillea',title:'Bougainvillea cutback',desc:"White Stripe: cut 1/3 after bloom finishes. Feed Jack's 20-20-20 after.",indoor:false},{cat:'Trumpet Vine',title:'Hard prune Distictis buccinatoria',desc:'Cut back to framework on Fountain Wall stone. Flowers on new wood — no bloom lost. Feed after.',indoor:false}],
+  3:[{cat:'Feeding',title:'First fertilizer of season',desc:"Apply Jack's 20-20-20 to all established beds. Camellia fertilizer to camellias, hydrangeas and azaleas.",indoor:false},{cat:'Fatsia',title:'Cut back Fatsia + take cuttings',desc:'Cut to desired height. Take 6-8 stem cuttings with rooting hormone.',indoor:false},{cat:'Hydrangea',title:'Feed hydrangeas',desc:'Azalea fertilizer to all hydrangeas in Side Arbor. Deadwood only — no hard prune.',indoor:false},{cat:'Citrus',title:'Feed citrus',desc:'Orange Tree + Lemon: citrus fertilizer. Feb, May, August schedule.',indoor:false},{cat:'Indoor',title:'Resume feeding all indoor plants',desc:'Monthly liquid fertilizer as days lengthen.',indoor:true},{cat:'Indoor',title:'Repot root-bound houseplants',desc:'Check Monstera, Pothos, ZZ Plant for roots escaping drainage.',indoor:true}],
+  4:[{cat:'Geranium',title:'Deadhead geraniums aggressively',desc:'Fountain Wall Bed — remove every spent bloom for continuous flowering.',indoor:false},{cat:'Trumpet Vine',title:'Train Distictis new growth onto wall',desc:'New shoots pushing — tie to wall immediately to build structure.',indoor:false},{cat:'Fruit Trees',title:'Start fruit tree watering schedule',desc:'Orange + Apricot every 2 weeks. Persimmon + Pomegranate monthly. Cherry + Plum every 2 weeks.',indoor:false}],
+  5:[{cat:'Geranium',title:'Cut back geraniums hard after spring flush',desc:'Fountain Wall Bed. Cut by half to two thirds. Feed Super Bloom after.',indoor:false},{cat:'Azalea',title:'Light prune Encore Azaleas after spring bloom',desc:'Back Bed Right and Left — light tidy only after spring flowering.',indoor:false},{cat:'Iceberg',title:'Train Iceberg rose on Side Arbor',desc:'Tie canes horizontally to arbor structure while still flexible.',indoor:false}],
+  6:[{cat:'Pest',title:'Monitor for powdery mildew on roses',desc:'Cool nights + warm days = prime conditions. Neem oil spray if spotted.',indoor:false},{cat:'Feeding',title:'Feed dahlias Super Bloom',desc:'BBQ Bed + Back Rose Bed dahlias. Super Bloom every 3-4 weeks through August.',indoor:false},{cat:'Lawn',title:'Apply grub killer to lawn',desc:'Annual June application. Follow product label for timing and rate.',indoor:false},{cat:'Fruit Trees',title:'Increase fruit tree watering',desc:'All trees every 2 weeks. Rainier Cherry weekly. Check soil first.',indoor:false},{cat:'Indoor',title:'Check all indoor plants for spider mites',desc:'Hot dry conditions = spider mite season. Check leaf undersides. Neem oil if found.',indoor:true}],
+  7:[{cat:'Salvia',title:'Cut back Salvia Amistad if leggy',desc:'All beds (BBQ, Main Arbor, Side Arbor, Pepper Side) — cut by 1/3. Reblooms in 3 weeks.',indoor:false},{cat:'Dahlias',title:'Deadhead dahlias continuously',desc:'BBQ Bed + Back Rose Bed. Check every 3-4 days.',indoor:false},{cat:'Fruit Trees',title:'Peak summer fruit tree watering',desc:'ALL trees every 2 weeks. Rainier Cherry + Plum weekly. Heat wave = extra water for Cherry.',indoor:false},{cat:'Bougainvillea',title:'Feed White Stripe bougainvillea',desc:'Super Bloom half strength to MOIST soil only. Monthly.',indoor:false},{cat:'Indoor',title:'Prayer Plant: mist daily',desc:'Hot dry summer air. Daily misting critical.',indoor:true}],
+  8:[{cat:'Hydrangea',title:'Prune hydrangeas AFTER flowering',desc:'Side Arbor mophead + oakleaf — ONLY after flowering complete. Never hard cutback.',indoor:false},{cat:'Bougainvillea',title:'Cut back + feed White Stripe bougainvillea',desc:'Cut by 1/3 after flowering. Continue monthly Super Bloom half strength to MOIST soil.',indoor:false},{cat:'Fruit Trees',title:'Continue weekly Rainier Cherry + Plum watering',desc:'Most critical month. Water stress = cracking and drop.',indoor:false},{cat:'Berries',title:'Remove old fruited raspberry + blackberry canes',desc:'After harvest — cut old canes to ground.',indoor:false},{cat:'Indoor',title:'Christmas Cactus: begin drought stress',desc:'Reduce watering now. Cool nights + drought triggers Nov/Dec bloom.',indoor:true}],
+  9:[{cat:'Feeding',title:'Last fertilizer of season',desc:"Low-nitrogen application to all outdoor beds — Jack's 20-20-20 at 1/2 strength or skip nitrogen-heavy plants.",indoor:false},{cat:'Fruit Trees',title:'Reduce fruit tree watering',desc:'Temps dropping. Persimmon + Pomegranate back to monthly.',indoor:false},{cat:'Indoor',title:'Reduce fertilizer — all indoor plants',desc:'Growth slowing — stop feeding until March.',indoor:true}],
+  10:[{cat:'Hydrangea',title:'Move mophead hydrangeas if needed',desc:'October/November ideal. Water in with seaweed solution.',indoor:false},{cat:'Indoor',title:'Christmas Cactus: 12+ hours darkness nightly',desc:'4 weeks triggers buds. Keep in unused room 12hrs per night.',indoor:true},{cat:'Indoor',title:'Orchids: watch for bloom spike',desc:'Cool fall nights trigger new spike. Do not move once spike appears.',indoor:true}],
+  11:[{cat:'Geranium',title:'Final geranium cutback',desc:'After last flush. Hard cutback. Last cutback of season.',indoor:false},{cat:'Hosta',title:'Cut back Empress Wu Hosta dead foliage',desc:'As it dies back for winter. Mark location.',indoor:false},{cat:'Indoor',title:'Christmas Cactus buds should be visible',desc:'Move back to bright spot — do not move again once buds set.',indoor:true},{cat:'Irrigation',title:'Reduce all irrigation',desc:'Bay Area rains beginning. Reduce all zone run times.',indoor:false}],
+  12:[{cat:'Indoor',title:'Christmas Cactus in bloom',desc:'Keep away from drafts. Do not move. Water when top inch dry.',indoor:true},{cat:'Sarcococca',title:'Enjoy Sarcococca fragrant winter flowers',desc:'Front Bed Left far left corner. Intensely fragrant white flowers. No action needed.',indoor:false}],
 };
 
 // Deduplication: build schedule from plants
@@ -1091,7 +1007,7 @@ function resetToDefaults(){
   location.reload();
 }
 const DATA_VERSION='v9';
-const APP_VERSION='2026-06-05-c'; // bump on every index.html deploy — drives self-update check
+const APP_VERSION='2026-06-05-e';
 // GitHub Sync
 const GH_KEYS={user:'gh_username',repo:'gh_repo',token:'gh_token'};
 function ghGet(k){try{return localStorage.getItem(k)||'';}catch(e){return '';}}
@@ -1346,17 +1262,18 @@ async function restoreFromGitHub(){
   setGHStatus('Restoring from GitHub...','var(--text-light)');
   const ok=await loadFromGitHub();
   if(ok){
-    applyTaskMigrations();          // normalize task text in-code
+    applyTaskMigrations();
     await save();
     updateHomeCounts();
-    renderScheduleMonths();         // refresh All Tasks count immediately
+    renderScheduleMonths();
     if(typeof renderMaintenanceHome==='function')renderMaintenanceHome();
     const n=S.plants.length+S.indoorPlants.length;
     setGHStatus('✅ Restored '+n+' plants from GitHub','var(--sage-dark)');
     alert('Data restored from GitHub — '+n+' plants loaded.');
   } else {
-    setGHStatus('❌ Could not read from GitHub — check settings','var(--terracotta)');
-    alert('Could not read from GitHub. Check the status message under the buttons.');
+    const el=document.getElementById('gh-status');
+    const msg=el?el.textContent:'Could not read from GitHub';
+    alert('⚠️ '+msg+'\n\nGo to Settings → GitHub Sync → Save & Test Connection to re-validate your token.');
   }
 }
 
@@ -1393,8 +1310,6 @@ function importDataJSON(e){
   r.readAsText(f);e.target.value='';
 }
 
-// Normalizes/removes maintenance task text in-code so consolidation survives
-// stale cache or old localStorage. Safe to run repeatedly (idempotent).
 function applyTaskMigrations(){
   const taskMigrations={
     'Prune lightly after flowering only':'Prune lightly after flowering',
@@ -1404,7 +1319,6 @@ function applyTaskMigrations(){
     'Weekly deep water July-August':'Deep water weekly July-August',
     'Weekly deep water July-August — drought stress causes fruit cracking':'Deep water weekly July-August',
     'Divide clumps every 3 years':'Divide clumps every 3-4 years',
-    // Consolidation normalizations
     'Deadhead every 2 weeks — outward facing bud, 45° cut':'Deadhead roses every 2 weeks — outward facing bud, 45° cut',
     'Deadhead regularly — outward facing bud, 45° cut':'Deadhead roses every 2 weeks — outward facing bud, 45° cut',
     'Deep water monthly spring — slow hose at drip line':'Deep water monthly — slow hose at drip line',
@@ -1420,6 +1334,19 @@ function applyTaskMigrations(){
     'Oxalis may go dormant in summer heat — reduce water if leaves yellow':'',
     'Remove brown tips with scissors at an angle':'',
     'Rotate weekly for even growth — leans toward light':'',
+    // Fruit tree watering normalizations — consolidate into standard text so sfCov can suppress when static covers it
+    'Every 2 weeks in peak summer':'Deep water every 2 weeks July-August',
+    'Every 2 weeks summer':'Deep water every 2 weeks July-August',
+    'Deep water every 2 weeks July-August — check soil 6 inches first':'Deep water every 2 weeks July-August',
+    'Water deeply in summer heat':'Deep water every 2 weeks July-August',
+    // Indoor consolidations
+    'Feed diluted fertilizer monthly':'Feed monthly spring-summer',
+    'Wipe large leaves monthly':'Wipe leaves monthly',
+    // Bougainvillea — merge near-identical Super Bloom and cutback texts into one each
+    'Feed Super Bloom half strength to moist soil':'Apply Super Bloom half strength to MOIST soil — monthly',
+    'Cut by 1/3 after bloom finishes':'Cut back by 1/3 after flowering',
+    // Hydrangea — merge two phrasings of the same pruning rule
+    'Prune ONLY after flowering in August — never fall/winter':'Prune ONLY after flowering complete',
   };
   const plantNameMigrations={
     'Tree Rose':'Rose','Flower Carpet Rose':'Rose','Iceberg Rose Climbing':'Rose',
@@ -1438,15 +1365,14 @@ function applyTaskMigrations(){
       if(isRose&&mItem.task==='Deadhead regularly')mItem.task='Deadhead roses every 2 weeks — outward facing bud, 45° cut';
       var migrated=taskMigrations[mItem.task];
       if(migrated!==undefined)mItem.task=migrated;
-      return mItem.task!==''; // empty string = remove task
+      return mItem.task!=='';
     });
   });
 }
+
 async function checkAppVersion(){
-  // Self-update: if the deployed app version differs from the running one,
-  // force a cache-busting reload ONCE per session so the user always gets the latest code.
   if(!ghConfigured())return;
-  if(sessionStorage.getItem('av_reloaded'))return; // already self-updated this session — avoid loops
+  if(sessionStorage.getItem('av_reloaded'))return;
   try{
     const c=ghCredentials();
     const r=await fetch(`https://raw.githubusercontent.com/${c.user}/${c.repo}/main/app-version.json?t=`+Date.now(),{cache:'no-store'});
@@ -1462,6 +1388,7 @@ function showAppVersion(){
   const el=document.getElementById('app-version-line');
   if(el)el.textContent='App version '+APP_VERSION;
 }
+
 async function init(){
   showAppVersion();
   await checkAppVersion();
@@ -2136,26 +2063,31 @@ const plantingGuide=[
 ];
 
 // ── MAINTENANCE COMPLETION TRACKING ─────────────────────────────────────────
-// Week tab shares sc{month} localStorage keys with All Tasks — toggling either syncs both
-function toggleWeekTask(month,key){
-  const d=getSchedChecked(month);
-  d[key]=!d[key];
-  try{localStorage.setItem('sc'+month,JSON.stringify(d));}catch(e){}
+function getMaintDone(){
+  const yr=new Date().getFullYear();
+  const mo=new Date().getMonth()+1;
+  try{return JSON.parse(localStorage.getItem('md_'+yr+'_'+mo)||'{}');}catch(e){return {};}
+}
+function setMaintTaskDone(key,done){
+  const yr=new Date().getFullYear();
+  const mo=new Date().getMonth()+1;
+  const d=getMaintDone();
+  if(done)d[key]=true;else delete d[key];
+  try{localStorage.setItem('md_'+yr+'_'+mo,JSON.stringify(d));}catch(e){}
   renderMaintWeek();
-  const tasksPane=document.getElementById('maint-tasks');
-  if(tasksPane&&tasksPane.classList.contains('active'))renderScheduleMonths();
 }
 function getMaintProgress(){
   const mo=new Date().getMonth()+1;
-  const tasks=buildWeekTasks(mo);
-  const done=getSchedChecked(mo);
-  const total=tasks.reduce((n,g)=>n+g.tasks.length,0);
-  const doneCount=tasks.reduce((n,g)=>n+g.tasks.filter(t=>done[t.key]).length,0);
+  const allTasks=buildAllTasks(mo);
+  const checked=getSchedChecked(mo);
+  const total=allTasks.length;
+  const doneCount=allTasks.filter(t=>checked[t.key]).length;
   return{total,done:doneCount};
 }
 
 // ── MAINTENANCE RENDERING ────────────────────────────────────────────────────
 let currentMaintTab='week';
+let currentMaintWeek=0;
 function switchMaintTab(tab,btn){
   currentMaintTab=tab;
   document.querySelectorAll('.maint-sub-btn').forEach(b=>b.classList.remove('active'));
@@ -2168,153 +2100,194 @@ function switchMaintTab(tab,btn){
   else if(tab==='tasks')renderScheduleMonths();
 }
 
-// ── Day / week helpers ───────────────────────────────────────────────────────
-function dayToWeek(d){return d<=7?1:d<=14?2:d<=21?3:4;}
-function getWeekOfMonth(){return dayToWeek(new Date().getDate());}
-function inferDay(task,isIndoor){
-  const t=task.toLowerCase();
-  if(isIndoor)return(t.includes('feed')||t.includes('fertiliz'))?14:7;
-  // Feeding → weeks 2 & 4
-  const isFeed=t.includes('feed')||t.includes('fertiliz')||t.includes('bonemeal')||t.includes('super bloom');
-  if(isFeed&&t.includes('every 2 weeks'))return 14; // biweekly feeding: week 2 (also 4)
-  if(isFeed)return 28; // monthly feeding: week 4
-  // Truly daily/weekly watering → ongoing
-  if((t.includes('daily')||t.includes('every week')||(t.includes('week')&&!t.includes('every 2 weeks')))&&(t.includes('water')||t.includes('irrigat')))return 0;
-  // Pest/monitoring → week 3 (day 21)
-  if(t.includes('pest')||t.includes('monitor')||t.includes('mite')||t.includes('check for')||t.includes('slug')||t.includes('powdery'))return 21;
-  // All other tasks (prune, tidy, water, train, divide, harvest) → week 1 (day 7)
-  // Non-feeding biweekly (e.g. deadhead every 2 weeks) → day 7, also shown in week 3
-  return 7;
+// Returns array of week numbers [1..4] a task belongs to, based on type/text
+function taskWeeks(taskText,isIndoor){
+  const t=taskText.toLowerCase();
+  const biweekly=t.includes('every 2 weeks')||t.includes('biweekly');
+  if(isIndoor){
+    if(t.includes('feed')||t.includes('fertiliz'))return biweekly?[2,4]:[2];
+    if(t.includes('prune')||t.includes('deadhead')||t.includes('trim')||t.includes('cutback')||t.includes('cut back'))return biweekly?[1,3]:[1];
+    if(t.includes('pest')||t.includes('mite')||t.includes('neem')||t.includes('monitor')||t.includes('check for'))return[2];
+    return biweekly?[3,1]:[3];
+  }
+  if(t.includes('prune')||t.includes('deadhead')||t.includes('trim')||t.includes('cutback')||t.includes('cut back')||t.includes('divide')||t.includes('plant')||t.includes('lift'))return biweekly?[1,3]:[1];
+  if(t.includes('feed')||t.includes('fertiliz')||t.includes('bonemeal')||t.includes('super bloom'))return biweekly?[4,2]:[4];
+  if(t.includes('pest')||t.includes('mite')||t.includes('slug')||t.includes('neem')||t.includes('monitor')||t.includes('check for'))return[2];
+  if(t.includes('water')||t.includes('moist')||t.includes('drip')||t.includes('irrig'))return biweekly?[1,3]:[1];
+  return[3]; // tidying / training / vines
 }
 
-function buildWeekTasks(month){
-  // Shows tasks for the CURRENT WEEK only (day-based), plus always-on Ongoing section.
-  // Biweekly tasks ("every 2 weeks") appear in both week 2 and week 4 with the same key.
-  // Keys match All Tasks: s_{cat}_{title}, pg_{task}, ig_{task}
-  const currentWeek=getWeekOfMonth();
-  const thisWeek=[],ongoing=[];
-
-  // Static tasks — use task.day field directly
-  const staticTaskTitles=new Set();
-  (staticSchedule[month]||[]).forEach(t=>{
-    const d=t.day||inferDay(t.title,t.indoor||false);
-    const w=dayToWeek(d);
-    const key='s_'+t.cat+'_'+t.title;
-    const item={key,task:t.title,desc:t.desc||'',plants:[],isStatic:true,isIndoor:t.indoor||false,day:d};
-    staticTaskTitles.add(t.title);
-    if(d===0)ongoing.push(item);
-    else if(w===currentWeek)thisWeek.push(item);
-    // biweekly feeding (day 14) also shows in week 4
-    else if(d===14&&t.title.toLowerCase().includes('every 2 weeks')&&currentWeek===4)thisWeek.push(item);
-    // biweekly non-feeding (day 7) also shows in week 3
-    else if(d===7&&t.title.toLowerCase().includes('every 2 weeks')&&currentWeek===3)thisWeek.push(item);
+// Build full unfiltered allTasks array for a month (shared by All Tasks + This Week)
+function buildAllTasks(month){
+  const allTasks=[];
+  (staticSchedule[month]||[]).forEach(function(t){
+    var tp='Maintenance';
+    var tl=(t.title+' '+t.cat).toLowerCase();
+    if(tl.includes('prune')||tl.includes('cutback')||tl.includes('deadhead')||tl.includes('trim'))tp='Pruning';
+    else if(tl.includes('feed')||tl.includes('fertiliz')||tl.includes('citrus'))tp='Feeding';
+    else if(tl.includes('water')||tl.includes('irrig'))tp='Watering';
+    else if(tl.includes('pest')||tl.includes('mite')||tl.includes('spray')||tl.includes('neem')||tl.includes('slug')||tl.includes('monitor'))tp='Pest';
+    allTasks.push({cat:t.cat,title:t.title,desc:t.desc||'',indoor:t.indoor,type:tp,bedId:t.indoor?'indoor':'all',key:'s_'+t.cat+'_'+t.title,isStatic:true,count:0});
   });
-
-  // Plant tasks — only show if their day falls in the current week
-  // AND only if not already covered by a static task with the same feed action
-  const outdoorMap={};
-  S.plants.forEach(p=>{
-    if(p.status!=='alive'&&p.status!=='struggling')return;
-    (p.maintenance||[]).forEach(m=>{
-      if(!(m.months||[]).includes(month))return;
-      const key='pg_'+m.task;
-      if(!outdoorMap[key])outdoorMap[key]={key,task:m.task,plants:[],cats:[],isIndoor:false,day:inferDay(m.task,false)};
-      outdoorMap[key].plants.push(p.name);
-      if(p.category&&!outdoorMap[key].cats.includes(p.category))outdoorMap[key].cats.push(p.category);
+  var sfCov={jacks:false,supbloom:false,camellia:false,palm:false,citrus:false,bonemeal:false,
+             fruittreewater:false,geraniumdeadhead:false,geraniumcutback:false,
+             azalea:false,hydrangea:false,bougainvillacutback:false,berrycanes:false};
+  (staticSchedule[month]||[]).forEach(function(t){
+    var tl=(t.title+' '+(t.desc||'')).toLowerCase();
+    if(tl.includes('jack'))sfCov.jacks=true;
+    if(tl.includes('super bloom'))sfCov.supbloom=true;
+    if(tl.includes('camellia'))sfCov.camellia=true;
+    if(tl.includes('palm'))sfCov.palm=true;
+    if(tl.includes('citrus'))sfCov.citrus=true;
+    if(tl.includes('bonemeal'))sfCov.bonemeal=true;
+    if((tl.includes('fruit tree')||tl.includes('all trees'))&&tl.includes('water'))sfCov.fruittreewater=true;
+    if(tl.includes('geranium')&&tl.includes('deadhead'))sfCov.geraniumdeadhead=true;
+    if(tl.includes('geranium')&&(tl.includes('cut back')||tl.includes('cutback')))sfCov.geraniumcutback=true;
+    if(tl.includes('azalea')&&(tl.includes('prune')||tl.includes('trim')||tl.includes('cut')))sfCov.azalea=true;
+    if(tl.includes('hydrangea')&&(tl.includes('prune')||tl.includes('cut')))sfCov.hydrangea=true;
+    if(tl.includes('bougainvill')&&(tl.includes('cut')||tl.includes('prune')))sfCov.bougainvillacutback=true;
+    if((tl.includes('raspberry')||tl.includes('blackberry')||tl.includes('cane'))&&tl.includes('remov'))sfCov.berrycanes=true;
+  });
+  var outdoorTaskMap={};
+  S.plants.forEach(function(plant){
+    var st=plant.status||'alive';
+    if(st!=='alive'&&st!=='struggling')return;
+    if(!plant.maintenance)return;
+    plant.maintenance.forEach(function(mItem){
+      if(!mItem.months||mItem.months.indexOf(month)<0)return;
+      var tl=mItem.task.toLowerCase();
+      if(tl.includes('propagat'))return;
+      if(tl.includes('feed')||tl.includes('fertiliz')||tl.includes('super bloom')||tl.includes('bonemeal')){
+        if(sfCov.jacks&&tl.includes('jack'))return;
+        if(sfCov.supbloom&&tl.includes('super bloom'))return;
+        if(sfCov.camellia&&tl.includes('camellia'))return;
+        if(sfCov.palm&&tl.includes('palm'))return;
+        if(sfCov.citrus&&tl.includes('citrus'))return;
+        if(sfCov.bonemeal&&tl.includes('bonemeal'))return;
+      }
+      if(sfCov.fruittreewater&&(plant.category||'').toLowerCase().includes('fruit')&&(tl.includes('water')||tl.includes('deep water')))return;
+      var pn=(plant.name||'').toLowerCase();var pc=(plant.category||'').toLowerCase();
+      if(sfCov.geraniumdeadhead&&(pn.includes('geranium')||pc.includes('geranium'))&&tl.includes('deadhead'))return;
+      if(sfCov.geraniumcutback&&(pn.includes('geranium')||pc.includes('geranium'))&&(tl.includes('cut back')||tl.includes('cutback')||tl.includes('cut by')))return;
+      if(sfCov.azalea&&(pn.includes('azalea')||pc.includes('azalea'))&&(tl.includes('prune')||tl.includes('trim')||tl.includes('cut')))return;
+      if(sfCov.hydrangea&&(pn.includes('hydrangea')||pc.includes('hydrangea'))&&(tl.includes('prune')||tl.includes('cut')))return;
+      if(sfCov.bougainvillacutback&&(pn.includes('bougainvill')||pc.includes('bougainvill'))&&(tl.includes('cut')||tl.includes('prune')))return;
+      if(sfCov.berrycanes&&(pn.includes('raspberry')||pn.includes('blackberry')||pc.includes('berr'))&&tl.includes('cane'))return;
+      var key=mItem.task;
+      if(!outdoorTaskMap[key]){
+        var tp='Maintenance';
+        if(tl.includes('prune')||tl.includes('cutback')||tl.includes('deadhead')||tl.includes('trim'))tp='Pruning';
+        else if(tl.includes('feed')||tl.includes('fertiliz'))tp='Feeding';
+        else if(tl.includes('water')||tl.includes('moist'))tp='Watering';
+        else if(tl.includes('pest')||tl.includes('mite')||tl.includes('spray')||tl.includes('neem')||tl.includes('slug')||tl.includes('monitor'))tp='Pest';
+        outdoorTaskMap[key]={task:mItem.task,type:tp,plants:[],bedIds:[],cats:[]};
+      }
+      outdoorTaskMap[key].plants.push(plant.name);
+      if(plant.bedId&&outdoorTaskMap[key].bedIds.indexOf(plant.bedId)<0)outdoorTaskMap[key].bedIds.push(plant.bedId);
+      if(plant.category&&outdoorTaskMap[key].cats.indexOf(plant.category)<0)outdoorTaskMap[key].cats.push(plant.category);
     });
   });
-  const indoorMap={};
-  S.indoorPlants.forEach(p=>{
-    if(p.status!=='alive'&&p.status!=='struggling')return;
-    (p.maintenance||[]).forEach(m=>{
-      if(!(m.months||[]).includes(month))return;
-      const key='ig_'+m.task;
-      if(!indoorMap[key])indoorMap[key]={key,task:m.task,plants:[],isIndoor:true,day:inferDay(m.task,true)};
-      indoorMap[key].plants.push(p.name);
+  Object.keys(outdoorTaskMap).forEach(function(key){
+    var g=outdoorTaskMap[key];
+    var uniquePlants=[...new Set(g.plants)];
+    var count=uniquePlants.length;
+    var sharedWord=g.cats.length>1?(function(){var ws=g.cats.map(function(c){return c.split(' ').pop();});return ws.every(function(w){return w===ws[0];})?ws[0]:null;})():null;
+    var groupLabel=count===1?uniquePlants[0]:(g.cats.length===1?g.cats[0]:(sharedWord||count+' plants'));
+    var badge='<span style="background:var(--sage-light);color:var(--sage-dark);font-size:10px;font-weight:600;padding:1px 6px;border-radius:10px">'+count+'</span>';
+    var displayCat=count===1?groupLabel:groupLabel+' '+badge;
+    allTasks.push({cat:displayCat,title:g.task,desc:'',indoor:false,type:g.type,bedIds:g.bedIds,bedId:'outdoor-grouped',key:'pg_'+key,isGrouped:true,count:count,plants:uniquePlants,cats:g.cats,groupLabel:groupLabel});
+  });
+  var indoorTaskMap={};
+  S.indoorPlants.forEach(function(plant){
+    var st=plant.status||'alive';
+    if(st!=='alive'&&st!=='struggling')return;
+    if(!plant.maintenance)return;
+    plant.maintenance.forEach(function(mItem){
+      if(!mItem.months||mItem.months.indexOf(month)<0)return;
+      var key=mItem.task;
+      if(!indoorTaskMap[key])indoorTaskMap[key]={task:mItem.task,plants:[],sections:[]};
+      indoorTaskMap[key].plants.push(plant.name);
+      if(plant.section&&indoorTaskMap[key].sections.indexOf(plant.section)<0)indoorTaskMap[key].sections.push(plant.section);
     });
   });
-
-  // Decide which plant tasks to include: skip if static schedule already has a feeding summary
-  const hasFeedStatic={};
-  (staticSchedule[month]||[]).forEach(t=>{
-    const tl=t.title.toLowerCase();
-    if(!t.indoor&&(tl.includes('feed')&&tl.includes('jack')))hasFeedStatic['jacks']=true;
-    if(!t.indoor&&(tl.includes('feed')&&tl.includes('super bloom')))hasFeedStatic['supbloom']=true;
-    if(!t.indoor&&(tl.includes('feed')&&tl.includes('camellia')))hasFeedStatic['camellia']=true;
-    if(!t.indoor&&(tl.includes('feed')&&tl.includes('palm')))hasFeedStatic['palm']=true;
-    if(!t.indoor&&(tl.includes('feed')&&tl.includes('citrus')))hasFeedStatic['citrus']=true;
-    if(!t.indoor&&tl.includes('bonemeal'))hasFeedStatic['bonemeal']=true;
-    if(t.indoor&&(tl.includes('feed')))hasFeedStatic['indoor']=true;
+  Object.keys(indoorTaskMap).forEach(function(key){
+    var g=indoorTaskMap[key];
+    var uniquePlants=[...new Set(g.plants)];
+    var count=uniquePlants.length;
+    var tl=g.task.toLowerCase();
+    var tp='Maintenance';
+    if(tl.includes('prune')||tl.includes('cutback')||tl.includes('deadhead')||tl.includes('trim'))tp='Pruning';
+    else if(tl.includes('feed')||tl.includes('fertiliz'))tp='Feeding';
+    else if(tl.includes('water')||tl.includes('moist'))tp='Watering';
+    else if(tl.includes('pest')||tl.includes('mite')||tl.includes('spray')||tl.includes('neem'))tp='Pest';
+    var typeLabel={Pruning:'Pruning',Feeding:'Feeding',Watering:'Watering',Pest:'Pest',Maintenance:'Indoor'}[tp]||'Indoor';
+    var badge='<span style="background:rgba(193,100,74,0.15);color:var(--terracotta);font-size:10px;font-weight:600;padding:1px 6px;border-radius:10px">'+count+'</span>';
+    var displayCat=count===1?uniquePlants[0]:typeLabel+' '+badge;
+    allTasks.push({cat:displayCat,title:g.task,desc:'',indoor:true,type:tp,bedId:'indoor',key:'ig_'+key,isGrouped:true,count:count,plants:uniquePlants,groupLabel:count===1?uniquePlants[0]:typeLabel});
   });
-
-  [...Object.values(outdoorMap),...Object.values(indoorMap)].sort((a,b)=>b.plants.length-a.plants.length).forEach(item=>{
-    const d=item.day;
-    const w=dayToWeek(d||7);
-    // Skip if static already covers this feed category
-    const tl=item.task.toLowerCase();
-    if(item.isIndoor&&hasFeedStatic['indoor']&&(tl.includes('feed')||tl.includes('fertiliz')))return;
-    if(!item.isIndoor&&hasFeedStatic['jacks']&&tl.includes('jack'))return;
-    if(!item.isIndoor&&hasFeedStatic['supbloom']&&tl.includes('super bloom'))return;
-    if(!item.isIndoor&&hasFeedStatic['camellia']&&tl.includes('camellia'))return;
-    if(!item.isIndoor&&hasFeedStatic['palm']&&tl.includes('palm'))return;
-    if(!item.isIndoor&&hasFeedStatic['citrus']&&tl.includes('citrus'))return;
-    if(!item.isIndoor&&hasFeedStatic['bonemeal']&&tl.includes('bonemeal'))return;
-    // Show if day is 0 (ongoing) or matches current week
-    if(d===0){if(ongoing.length<5)ongoing.push(item);}
-    else if(w===currentWeek){if(thisWeek.length<12)thisWeek.push(item);}
-    // biweekly feeding (day 14) also shows in week 4
-    else if(d===14&&tl.includes('every 2 weeks')&&currentWeek===4){if(thisWeek.length<12)thisWeek.push(item);}
-    // biweekly non-feeding (day 7) also shows in week 3
-    else if(d===7&&tl.includes('every 2 weeks')&&currentWeek===3){if(thisWeek.length<12)thisWeek.push(item);}
-  });
-
-  // Sort thisWeek: action/prune first (day 7), then indoor feed (day 14), then outdoor feed (day 28)
-  thisWeek.sort((a,b)=>(a.day||7)-(b.day||7));
-
-  const groups=[];
-  if(thisWeek.length)groups.push({id:'week',label:_weekLabel(currentWeek),tasks:thisWeek});
-  if(ongoing.length)groups.push({id:'ongoing',label:'👀 Ongoing This Month',tasks:ongoing});
-  return groups;
-}
-
-function _weekLabel(w){
-  const ranges=['Days 1–7','Days 8–14','Days 15–21','Days 22–31'];
-  const icons=['🌿','🪴','🌿','🌱'];
-  const names=['Week 1 · Pruning & Tidy','Week 2 · Indoor Feeding','Week 3 · Pest & Water','Week 4 · Outdoor Feeding'];
-  return icons[w-1]+' '+names[w-1]+' <span style="font-size:10px;font-weight:400;color:var(--text-light)">'+ranges[w-1]+'</span>';
+  return allTasks;
 }
 
 function renderMaintWeek(){
   const mo=new Date().getMonth()+1;
-  const groups=buildWeekTasks(mo);
-  const done=getSchedChecked(mo);
-  const prog=getMaintProgress();
-  let html='';
-  if(prog.total>0){
-    const pct=Math.round(prog.done/prog.total*100);
-    html+=`<div class="maint-card" style="margin-bottom:12px"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px"><span style="font-size:13px;font-weight:500;color:var(--text-dark)">${prog.done} of ${prog.total} tasks done</span><span style="font-size:12px;color:var(--sage-dark);font-weight:600">${pct}%</span></div><div class="progress-bar-wrap"><div class="progress-bar-fill" style="width:${pct}%"></div></div></div>`;
-  }
-  groups.forEach(g=>{
-    html+=`<div class="maint-card"><div class="maint-card-title">${g.label}</div>`;
-    g.tasks.forEach(t=>{
-      const isDone=!!done[t.key];
-      const uniquePlants=[...new Set(t.plants)];
-      const plantCount=uniquePlants.length;
-      const catLabel=t.cats&&t.cats.length===1?t.cats[0]:(t.cats&&t.cats.length>1?(()=>{const ws=t.cats.map(c=>c.split(' ').pop());return ws.every(w=>w===ws[0])?ws[0]:null;})():null);
-      const plantStr=plantCount===0?'':(plantCount===1?uniquePlants[0]:(catLabel?`${catLabel} (${plantCount})`:`${uniquePlants[0]} +${plantCount-1} more`));
-      const safeKey=t.key.replace(/\\/g,'\\\\').replace(/'/g,"\\'");
-      html+=`<div class="maint-task-row" style="${isDone?'opacity:0.55':''}">
-        <div class="maint-task-check ${isDone?'done':''}" style="${isDone?'':'border-color:var(--sage);'}" onclick="toggleWeekTask(${mo},'${safeKey}')">${isDone?'✓':''}</div>
-        <div class="maint-task-body">
-          <div class="maint-task-name ${isDone?'done':''}">${t.task}</div>
-          ${plantStr?`<div class="maint-task-sub">${t.isIndoor?'🪴 ':'🌿 '}${plantStr}</div>`:''}
-          ${t.desc?`<div class="maint-task-sub">${t.desc}</div>`:''}
-        </div>
-      </div>`;
-    });
-    html+='</div>';
+  const autoWeek=Math.min(4,Math.ceil(new Date().getDate()/7));
+  const wk=currentMaintWeek||autoWeek;
+  const weekThemes={1:'Prune & Water',2:'Pest & Indoor Care',3:'Tidy & Train',4:'Feed & Fertilize'};
+  const allTasks=buildAllTasks(mo);
+  const checked=getSchedChecked(mo);
+  // Separate tasks into this week and overdue (incomplete from earlier weeks)
+  const weekTasks=[];
+  const overdueTasks=[];
+  allTasks.forEach(function(t){
+    const weeks=taskWeeks(t.title,t.indoor);
+    if(weeks.includes(wk)){weekTasks.push(t);return;}
+    if(wk>1&&!checked[t.key]){
+      for(var w=1;w<wk;w++){if(weeks.includes(w)){overdueTasks.push(t);return;}}
+    }
   });
-  if(groups.length===0)html='<div class="empty-state"><span>🌿</span><p>No tasks for this month.</p></div>';
+  const doneCount=weekTasks.filter(function(t){return checked[t.key];}).length;
+  const pct=weekTasks.length>0?Math.round(doneCount/weekTasks.length*100):0;
+  // Week picker
+  var html='<div style="display:flex;gap:8px;margin-bottom:16px">';
+  for(var w=1;w<=4;w++){
+    const isActive=w===wk;
+    html+='<div onclick="currentMaintWeek='+w+';renderMaintWeek()" style="flex:1;text-align:center;padding:8px 4px;border-radius:var(--radius-sm);cursor:pointer;font-size:12px;font-weight:'+(isActive?'600':'400')+';background:'+(isActive?'var(--sage-dark)':'white')+';color:'+(isActive?'white':'var(--text-mid)')+';border:1px solid '+(isActive?'var(--sage-dark)':'var(--border)')+';transition:all 0.15s">Week '+w+'</div>';
+  }
+  html+='</div>';
+  html+='<div style="font-family:\'Playfair Display\',serif;font-size:18px;color:var(--text-dark);margin-bottom:16px">'+weekThemes[wk]+'</div>';
+  // Progress for this week
+  if(weekTasks.length>0){
+    html+='<div class="maint-card" style="margin-bottom:12px"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px"><span style="font-size:13px;font-weight:500;color:var(--text-dark)">'+doneCount+' of '+weekTasks.length+' tasks done this week</span><span style="font-size:12px;color:var(--sage-dark);font-weight:600">'+pct+'%</span></div><div class="progress-bar-wrap"><div class="progress-bar-fill" style="width:'+pct+'%"></div></div></div>';
+  }
+  // Shared card renderer (matches All Tasks style exactly)
+  function card(t){
+    const isDone=!!checked[t.key];
+    const safeKey=t.key.replace(/\\/g,'\\\\').replace(/'/g,"\\'");
+    const border=t.indoor?'var(--terracotta)':'var(--sage)';
+    var plantListStr='';
+    if(t.isGrouped&&t.plants&&t.plants.length>1){
+      plantListStr='<p style="font-size:11px;color:var(--text-light);margin:2px 0 0;line-height:1.5">'+t.plants.join(' · ')+'</p>';
+    }
+    return'<div class="schedule-task '+(isDone?'task-done':'')+'" style="border-left-color:'+border+'"><div style="display:flex;align-items:flex-start"><div class="sched-check '+(isDone?'checked':'')+'" onclick="toggleSchedTask('+mo+',\''+safeKey+'\')">'+(isDone?'✓':'')+'</div><div style="flex:1"><div style="font-size:10px;text-transform:uppercase;letter-spacing:1px;color:'+(t.indoor?'var(--terracotta)':'var(--sage-dark)')+';font-weight:500;margin-bottom:3px">'+t.cat+'</div><h4>'+t.title+'</h4>'+(t.desc?'<p>'+t.desc+'</p>':'')+plantListStr+'</div></div></div>';
+  }
+  if(weekTasks.length===0&&overdueTasks.length===0){
+    html+='<div class="empty-state"><span>🌿</span><p>No tasks for this week.</p></div>';
+  } else {
+    const typeGroups={};
+    weekTasks.forEach(function(t){
+      const g=t.type==='Pruning'?'✂️ Pruning':t.type==='Feeding'?'🌱 Feeding':t.type==='Watering'?'💧 Watering':t.type==='Pest'?'🐛 Pest':'🔧 Maintenance';
+      if(!typeGroups[g])typeGroups[g]=[];
+      typeGroups[g].push(t);
+    });
+    Object.keys(typeGroups).forEach(function(g){
+      html+='<div style="font-size:11px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-light);padding:8px 0 4px">'+g+'</div>';
+      typeGroups[g].forEach(function(t){html+=card(t);});
+    });
+    if(overdueTasks.length>0){
+      html+='<div style="font-size:11px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--terracotta);padding:8px 0 4px">⚠️ Carry Over</div>';
+      overdueTasks.forEach(function(t){html+=card(t);});
+    }
+  }
   document.getElementById('maint-week').innerHTML=html;
 }
 
@@ -2326,8 +2299,8 @@ function renderMaintMonth(){
   let html=`<div class="maint-card">
     <div class="maint-card-title">Rhythm</div>
     <div class="rhythm-row"><span class="rhythm-icon">💧</span><div><div class="rhythm-label">Indoor watering</div><div class="rhythm-note">Weekly — check soil by feel, water when top inch is dry</div></div></div>
-    <div class="rhythm-row"><span class="rhythm-icon">🪴</span><div><div class="rhythm-label">Indoor feeding</div><div class="rhythm-note">${b.rhythm.indoor}</div></div><div class="rhythm-badge">~15th</div></div>
-    <div class="rhythm-row"><span class="rhythm-icon">🌿</span><div><div class="rhythm-label">Outdoor feeding</div><div class="rhythm-note">${b.rhythm.outdoor}</div></div><div class="rhythm-badge">~30th</div></div>
+    <div class="rhythm-row"><span class="rhythm-icon">🪴</span><div><div class="rhythm-label">Indoor feeding</div><div class="rhythm-note">${b.rhythm.indoor}</div></div><div class="rhythm-badge">Week 2</div></div>
+    <div class="rhythm-row"><span class="rhythm-icon">🌿</span><div><div class="rhythm-label">Outdoor feeding</div><div class="rhythm-note">${b.rhythm.outdoor}</div></div><div class="rhythm-badge">Week 4</div></div>
     ${exText}
   </div>`;
   html+=`<div class="maint-card"><div class="maint-card-title">What to know this month</div>`;
@@ -2391,7 +2364,7 @@ function selectMonth(m,el){document.querySelectorAll('.month-chip').forEach(c=>c
 function renderCurrentSchedule(){renderSchedule(currentScheduleMonth);}
 function filterSchedTab(tab,btn){currentSchedTab=tab;document.querySelectorAll('#sched-tab-bar .segment-btn').forEach(b=>b.classList.remove('active'));if(btn)btn.classList.add('active');renderSchedule(currentScheduleMonth);}
 function getSchedChecked(month){try{const v=localStorage.getItem('sc'+month);return v?JSON.parse(v):{};}catch(e){return {};}}
-function toggleSchedTask(month,key){const d=getSchedChecked(month);d[key]=!d[key];try{localStorage.setItem('sc'+month,JSON.stringify(d));}catch(e){}syncToGitHub();renderSchedule(month);}
+function toggleSchedTask(month,key){const d=getSchedChecked(month);d[key]=!d[key];try{localStorage.setItem('sc'+month,JSON.stringify(d));}catch(e){}syncToGitHub();if(currentMaintTab==='week')renderMaintWeek();else renderSchedule(month);}
 function renderSchedule(month){
   // Always repopulate bed filter preserving selection
   const bedSel=document.getElementById('sched-filter-bed');
@@ -2400,107 +2373,7 @@ function renderSchedule(month){
     bedSel.innerHTML='<option value="all">All Locations</option><option value="indoor">🪴 Indoor</option>'+S.beds.map(b=>'<option value="'+b.id+'">'+b.name+'</option>').join('');
     for(let i=0;i<bedSel.options.length;i++){if(bedSel.options[i].value===savedVal){bedSel.value=savedVal;break;}}
   }
-  const seen=new Set();
-  const allTasks=[];
-  // Static tasks
-  (staticSchedule[month]||[]).forEach(function(t){
-    var tp='Maintenance';
-    var tl=(t.title+' '+t.cat).toLowerCase();
-    if(tl.includes('prune')||tl.includes('cutback')||tl.includes('cut back')||tl.includes('deadhead')||tl.includes('trim'))tp='Pruning';
-    else if(tl.includes('feed')||tl.includes('fertiliz')||tl.includes('citrus'))tp='Feeding';
-    else if(!tl.includes('propagat')&&(tl.includes('water')||tl.includes('irrig')))tp='Watering';
-    else if(tl.includes('pest')||tl.includes('mite')||tl.includes('spray')||tl.includes('neem')||tl.includes('slug')||tl.includes('monitor'))tp='Pest';
-    allTasks.push({cat:t.cat,title:t.title,desc:t.desc||'',indoor:t.indoor,type:tp,bedId:t.indoor?'indoor':'all',key:'s_'+t.cat+'_'+t.title,isStatic:true,count:0});
-  });
-  // Determine which feed categories are already covered by static tasks this month
-  // — plant group tasks for those categories are suppressed to avoid duplication
-  var sfCov={jacks:false,supbloom:false,camellia:false,palm:false,citrus:false,bonemeal:false,indoorFeed:false};
-  (staticSchedule[month]||[]).forEach(function(t){
-    var tl=t.title.toLowerCase();
-    if(!t.indoor&&tl.includes('feed')){
-      if(tl.includes('jack'))sfCov.jacks=true;
-      if(tl.includes('super bloom'))sfCov.supbloom=true;
-      if(tl.includes('camellia'))sfCov.camellia=true;
-      if(tl.includes('palm'))sfCov.palm=true;
-      if(tl.includes('citrus'))sfCov.citrus=true;
-      if(tl.includes('bonemeal'))sfCov.bonemeal=true;
-    }
-    if(t.indoor&&(tl.includes('feed')||tl.includes('fertiliz')))sfCov.indoorFeed=true;
-  });
-  // Outdoor plant tasks — group by task text, collect plant names and bedIds
-  var outdoorTaskMap={};
-  S.plants.forEach(function(plant){
-    var st=plant.status||'alive';
-    if(st!=='alive'&&st!=='struggling')return;
-    if(!plant.maintenance)return;
-    plant.maintenance.forEach(function(mItem){
-      if(!mItem.months||mItem.months.indexOf(month)<0)return;
-      var tl=mItem.task.toLowerCase();
-      // Skip if static schedule already covers this feed category
-      if(tl.includes('feed')||tl.includes('fertiliz')||tl.includes('super bloom')||tl.includes('bonemeal')){
-        if(sfCov.jacks&&tl.includes('jack'))return;
-        if(sfCov.supbloom&&tl.includes('super bloom'))return;
-        if(sfCov.camellia&&tl.includes('camellia'))return;
-        if(sfCov.palm&&tl.includes('palm'))return;
-        if(sfCov.citrus&&tl.includes('citrus'))return;
-        if(sfCov.bonemeal&&tl.includes('bonemeal'))return;
-      }
-      var key=mItem.task;
-      if(!outdoorTaskMap[key]){
-        var tp='Maintenance';
-        if(tl.includes('prune')||tl.includes('cutback')||tl.includes('cut back')||tl.includes('deadhead')||tl.includes('trim'))tp='Pruning';
-        else if(tl.includes('feed')||tl.includes('fertiliz'))tp='Feeding';
-        else if(!tl.includes('propagat')&&tl.includes('water'))tp='Watering';
-        else if(tl.includes('pest')||tl.includes('mite')||tl.includes('spray')||tl.includes('neem')||tl.includes('slug'))tp='Pest';
-        outdoorTaskMap[key]={task:mItem.task,type:tp,plants:[],bedIds:[],cats:[]};
-      }
-      outdoorTaskMap[key].plants.push(plant.name);
-      if(plant.bedId&&outdoorTaskMap[key].bedIds.indexOf(plant.bedId)<0)outdoorTaskMap[key].bedIds.push(plant.bedId);
-      if(plant.category&&outdoorTaskMap[key].cats.indexOf(plant.category)<0)outdoorTaskMap[key].cats.push(plant.category);
-    });
-  });
-  Object.keys(outdoorTaskMap).forEach(function(key){
-    var g=outdoorTaskMap[key];
-    var uniquePlants=[...new Set(g.plants)];
-    var count=uniquePlants.length;
-    var sharedWord=g.cats.length>1?(function(){var words=g.cats.map(function(c){return c.split(' ').pop();});return words.every(function(w){return w===words[0];})?words[0]:null;})():null;
-    var baseName=count===1?uniquePlants[0]:(g.cats.length===1?g.cats[0]:(sharedWord||count+' plants'));
-    var displayCat=count===1?baseName:baseName+' <span style="background:var(--sage-light);color:var(--sage-dark);font-size:10px;font-weight:600;padding:1px 6px;border-radius:10px">'+count+'</span>';
-    allTasks.push({cat:displayCat,title:g.task,desc:count>1?uniquePlants.join(', '):'',indoor:false,type:g.type,bedIds:g.bedIds,bedId:'outdoor-grouped',key:'pg_'+key,isGrouped:true,count:count,plants:uniquePlants,rawCat:baseName});
-  });
-  // Indoor plant tasks — group by task text
-  var indoorTaskMap={};
-  S.indoorPlants.forEach(function(plant){
-    var st=plant.status||'alive';
-    if(st!=='alive'&&st!=='struggling')return;
-    if(!plant.maintenance)return;
-    plant.maintenance.forEach(function(mItem){
-      if(!mItem.months||mItem.months.indexOf(month)<0)return;
-      var tl=mItem.task.toLowerCase();
-      // Suppress generic indoor feeds if static covers them; keep specialist ones (orchid, cactus, once-only)
-      if(sfCov.indoorFeed&&(tl.includes('feed')||tl.includes('fertiliz'))){
-        if(!tl.includes('orchid')&&!tl.includes('cactus')&&!tl.includes('once in spring'))return;
-      }
-      var key=mItem.task;
-      if(!indoorTaskMap[key])indoorTaskMap[key]={task:mItem.task,plants:[],sections:[]};
-      indoorTaskMap[key].plants.push(plant.name);
-      if(plant.section&&indoorTaskMap[key].sections.indexOf(plant.section)<0)indoorTaskMap[key].sections.push(plant.section);
-    });
-  });
-  Object.keys(indoorTaskMap).forEach(function(key){
-    var g=indoorTaskMap[key];
-    var uniquePlants=[...new Set(g.plants)];
-    var count=uniquePlants.length;
-    var baseName=count===1?uniquePlants[0]:count+' indoor plants';
-    var displayCat=count===1?baseName:baseName+' <span style="background:rgba(193,100,74,0.15);color:var(--terracotta);font-size:10px;font-weight:600;padding:1px 6px;border-radius:10px">'+count+'</span>';
-    var tl=g.task.toLowerCase();
-    var tp='Maintenance';
-    if(tl.includes('prune')||tl.includes('cutback')||tl.includes('cut back')||tl.includes('deadhead')||tl.includes('trim'))tp='Pruning';
-    else if(tl.includes('feed')||tl.includes('fertiliz'))tp='Feeding';
-    else if(!tl.includes('propagat')&&(tl.includes('water')||tl.includes('moist')))tp='Watering';
-    else if(tl.includes('pest')||tl.includes('mite')||tl.includes('spray')||tl.includes('neem'))tp='Pest';
-    allTasks.push({cat:displayCat,title:g.task,desc:count>1?uniquePlants.join(', '):'',indoor:true,type:tp,bedId:'indoor',key:'ig_'+key,isGrouped:true,count:count,plants:uniquePlants});
-  });
+  const allTasks=buildAllTasks(month);
   // Apply filters
   var typeEl=document.getElementById('sched-filter-type');
   var bedEl=document.getElementById('sched-filter-bed');
@@ -2524,32 +2397,15 @@ function renderSchedule(month){
     document.getElementById('schedule-list').innerHTML='<div style="font-size:12px;color:var(--text-light);padding:4px 0 12px">'+doneCount+'/'+filtered.length+' tasks done this month</div><div class="empty-state"><span>'+(currentSchedTab==='done'?'✅':'📅')+'</span><p>'+emptyMsg+'</p></div>';
     return;
   }
-  // Enrich tasks with day number for sorting and display
-  tabTasks.forEach(function(t){
-    if(t.isStatic){
-      // Look up day from staticSchedule
-      var sEntry=(staticSchedule[month]||[]).find(function(e){return e.title===t.title&&e.cat===t.cat;});
-      t.day=sEntry?sEntry.day:inferDay(t.title,t.indoor);
-    } else {
-      t.day=inferDay(t.title,t.indoor);
-    }
-  });
-  // Group by type, sorted by day within each group
-  var typeOrder=['Feeding','Pruning','Pest','Watering','Maintenance'];
+  // Group by type
   var groups={};
   tabTasks.forEach(function(t){
     var g=t.type==='Pruning'?'✂️ Pruning':t.type==='Feeding'?'🌱 Feeding':t.type==='Watering'?'💧 Watering':t.type==='Pest'?'🐛 Pest':'🔧 Maintenance';
     if(!groups[g])groups[g]=[];
     groups[g].push(t);
   });
-  // Sort each group by day
-  Object.values(groups).forEach(function(arr){arr.sort(function(a,b){return(a.day||14)-(b.day||14);});});
   var out='<div style="font-size:12px;color:var(--text-light);padding:4px 0 12px">'+doneCount+'/'+filtered.length+' tasks done this month</div>';
-  // Render in a sensible order: Feeding first (most important to track), then Pruning, etc.
-  var groupOrder=['🌱 Feeding','✂️ Pruning','🐛 Pest','💧 Watering','🔧 Maintenance'];
-  var allGroupKeys=Object.keys(groups);
-  var orderedGroups=groupOrder.filter(function(g){return groups[g];}).concat(allGroupKeys.filter(function(g){return groupOrder.indexOf(g)<0;}));
-  orderedGroups.forEach(function(group){
+  Object.keys(groups).forEach(function(group){
     out+='<div style="font-size:11px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-light);padding:8px 0 4px">'+group+'</div>';
     groups[group].forEach(function(t){
       var isDone=currentSchedTab==='done';
@@ -2557,12 +2413,15 @@ function renderSchedule(month){
       var border=t.indoor?'var(--terracotta)':'var(--sage)';
       var navPlant=(!t.isStatic&&t.plants&&t.plants.length===1)?t.plants[0]:'';
       var navFn=navPlant?'navToSchedPlant(\''+navPlant.replace(/\\/g,'\\\\').replace(/'/g,"\\'")+'\',' +(t.indoor?'true':'false')+')':'';
-      var dayBadge=t.day&&t.day>0?'<span style="font-size:10px;color:var(--text-light);background:var(--sage-light);border-radius:8px;padding:1px 5px;margin-left:6px">~'+t.day+'</span>':'';
+      var plantListStr='';
+      if(t.isGrouped&&t.plants&&t.plants.length>1){
+        plantListStr='<p style="font-size:11px;color:var(--text-light);margin:2px 0 0;line-height:1.5">'+t.plants.join(' · ')+'</p>';
+      }
       out+='<div class="schedule-task '+(isDone?'task-done':'')+'" style="border-left-color:'+border+'"><div style="display:flex;align-items:flex-start">'
         +'<div class="sched-check '+(isDone?'checked':'')+'" onclick="toggleSchedTask('+month+',\''+safeKey+'\')">'+(isDone?'✓':'')+'</div>'
         +'<div style="flex:1;'+(navFn?'cursor:pointer':'')+'"'+(navFn?' onclick="'+navFn+'"':'')+'>'
-        +'<div style="display:flex;align-items:center;justify-content:space-between"><div style="font-size:10px;text-transform:uppercase;letter-spacing:1px;color:'+(t.indoor?'var(--terracotta)':'var(--sage-dark)')+';font-weight:500;margin-bottom:3px">'+t.cat+dayBadge+'</div>'+(navFn?'<span style="color:var(--text-light);font-size:14px;margin-top:-2px">›</span>':'')+'</div>'
-        +'<h4>'+t.title+'</h4>'+(t.desc?'<p>'+t.desc+'</p>':'')
+        +'<div style="display:flex;align-items:center;justify-content:space-between"><div style="font-size:10px;text-transform:uppercase;letter-spacing:1px;color:'+(t.indoor?'var(--terracotta)':'var(--sage-dark)')+';font-weight:500;margin-bottom:3px">'+t.cat+'</div>'+(navFn?'<span style="color:var(--text-light);font-size:14px;margin-top:-2px">›</span>':'')+'</div>'
+        +'<h4>'+t.title+'</h4>'+(t.desc?'<p>'+t.desc+'</p>':'')+plantListStr
         +'</div></div></div>';
     });
   });
