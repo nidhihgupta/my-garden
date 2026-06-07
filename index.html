@@ -968,7 +968,7 @@ const staticSchedule={
   1:[{cat:'Bougainvillea',title:'Prepare for bougainvillea cutback',desc:'Late Jan/early Feb. White Stripe — wait until after it blooms.',indoor:false},{cat:'Hydrangea',title:'Deadwood removal on hydrangeas only',desc:'Side Arbor mophead and oakleaf. Remove dead/crossing stems only — no hard cutback.',indoor:false}],
   2:[{cat:'Bougainvillea',title:'Bougainvillea cutback',desc:"White Stripe: cut 1/3 after bloom finishes. Feed Jack's 20-20-20 after.",indoor:false},{cat:'Trumpet Vine',title:'Hard prune Distictis buccinatoria',desc:'Cut back to framework on Fountain Wall stone. Flowers on new wood — no bloom lost. Feed after.',indoor:false}],
   3:[{cat:'Feeding',title:'First fertilizer of season',desc:"Apply Jack's 20-20-20 to all established beds. Camellia fertilizer to camellias, hydrangeas and azaleas.",indoor:false},{cat:'Fatsia',title:'Cut back Fatsia + take cuttings',desc:'Cut to desired height. Take 6-8 stem cuttings with rooting hormone.',indoor:false},{cat:'Hydrangea',title:'Feed hydrangeas',desc:'Azalea fertilizer to all hydrangeas in Side Arbor. Deadwood only — no hard prune.',indoor:false},{cat:'Citrus',title:'Feed citrus',desc:'Orange Tree + Lemon: citrus fertilizer. Feb, May, August schedule.',indoor:false},{cat:'Indoor',title:'Resume feeding all indoor plants',desc:'Monthly liquid fertilizer as days lengthen.',indoor:true},{cat:'Indoor',title:'Repot root-bound houseplants',desc:'Check Monstera, Pothos, ZZ Plant for roots escaping drainage.',indoor:true}],
-  4:[{cat:'Geranium',title:'Deadhead geraniums aggressively',desc:'Fountain Wall Bed — remove every spent bloom for continuous flowering.',indoor:false},{cat:'Trumpet Vine',title:'Train Distictis new growth onto wall',desc:'New shoots pushing — tie to wall immediately to build structure.',indoor:false},{cat:'Fruit Trees',title:'Start fruit tree watering schedule',desc:'Orange + Apricot every 2 weeks. Persimmon + Pomegranate monthly. Cherry + Plum every 2 weeks.',indoor:false}],
+  4:[{cat:'Geranium',title:'Deadhead geraniums aggressively',desc:'Fountain Wall Bed — remove every spent bloom for continuous flowering.',indoor:false},{cat:'Trumpet Vine',title:'Train Distictis new growth onto wall',desc:'New shoots pushing — tie to wall immediately to build structure.',indoor:false},{cat:'Fruit Trees',title:'Start fruit tree watering schedule',desc:'Apricot, Citrus, Persimmon, Pomegranate: monthly deep water. Espalier cherry + plum: every 2 weeks (restricted roots).',indoor:false}],
   5:[{cat:'Geranium',title:'Cut back geraniums hard after spring flush',desc:'Fountain Wall Bed. Cut by half to two thirds. Feed Super Bloom after.',indoor:false},{cat:'Azalea',title:'Light prune Encore Azaleas after spring bloom',desc:'Back Bed Right and Left — light tidy only after spring flowering.',indoor:false},{cat:'Iceberg',title:'Train Iceberg rose on Side Arbor',desc:'Tie canes horizontally to arbor structure while still flexible.',indoor:false}],
   6:[{cat:'Pest',title:'Monitor for powdery mildew on roses',desc:'Cool nights + warm days = prime conditions. Neem oil spray if spotted.',indoor:false},{cat:'Feeding',title:'Feed dahlias Super Bloom',desc:'BBQ Bed + Back Rose Bed dahlias. Super Bloom every 3-4 weeks through August.',indoor:false},{cat:'Lawn',title:'Apply grub killer to lawn',desc:'Annual June application. Follow product label for timing and rate.',indoor:false},{cat:'Fruit Trees',title:'Increase fruit tree watering',desc:'All trees every 2 weeks. Rainier Cherry weekly. Check soil first.',indoor:false},{cat:'Indoor',title:'Check all indoor plants for spider mites',desc:'Hot dry conditions = spider mite season. Check leaf undersides. Neem oil if found.',indoor:true}],
   7:[{cat:'Salvia',title:'Cut back Salvia Amistad if leggy',desc:'All beds (BBQ, Main Arbor, Side Arbor, Pepper Side) — cut by 1/3. Reblooms in 3 weeks.',indoor:false},{cat:'Dahlias',title:'Deadhead dahlias continuously',desc:'BBQ Bed + Back Rose Bed. Check every 3-4 days.',indoor:false},{cat:'Fruit Trees',title:'Peak summer fruit tree watering',desc:'ALL trees every 2 weeks. Rainier Cherry + Plum weekly. Heat wave = extra water for Cherry.',indoor:false},{cat:'Bougainvillea',title:'Feed White Stripe bougainvillea',desc:'Super Bloom half strength to MOIST soil only. Monthly.',indoor:false},{cat:'Indoor',title:'Prayer Plant: mist daily',desc:'Hot dry summer air. Daily misting critical.',indoor:true}],
@@ -1007,7 +1007,7 @@ function resetToDefaults(){
   location.reload();
 }
 const DATA_VERSION='v9';
-const APP_VERSION='2026-06-05-g';
+const APP_VERSION='2026-06-05-h';
 // GitHub Sync
 const GH_KEYS={user:'gh_username',repo:'gh_repo',token:'gh_token'};
 function ghGet(k){try{return localStorage.getItem(k)||'';}catch(e){return '';}}
@@ -1361,8 +1361,14 @@ function applyTaskMigrations(){
     if(plantNameMigrations[plant.name])plant.name=plantNameMigrations[plant.name];
     if(!plant.maintenance)return;
     var isRose=plant.category&&plant.category.toLowerCase().includes('rose');
+    var isEspalier=plant.name&&plant.name.toLowerCase().includes('espalier');
     plant.maintenance=plant.maintenance.filter(function(mItem){
       if(isRose&&mItem.task==='Deadhead regularly')mItem.task='Deadhead roses every 2 weeks — outward facing bud, 45° cut';
+      // Non-espalier mature fruit trees: monthly watering in spring (Mar-May), every 2 weeks from June
+      if(!isEspalier&&mItem.task==='Deep water every 2 weeks spring — slow hose 10 min at drip line'){
+        mItem.task='Deep water monthly spring — slow hose at drip line';
+        mItem.months=(mItem.months||[]).filter(function(m){return m!==6;});
+      }
       var migrated=taskMigrations[mItem.task];
       if(migrated!==undefined)mItem.task=migrated;
       return mItem.task!=='';
@@ -2101,9 +2107,10 @@ function switchMaintTab(tab,btn){
 }
 
 // Returns array of week numbers [1..4] a task belongs to, based on type/text
-function taskWeeks(taskText,isIndoor){
+function taskWeeks(taskText,isIndoor,desc){
   const t=taskText.toLowerCase();
-  const biweekly=t.includes('every 2 weeks')||t.includes('biweekly');
+  const full=(t+' '+(desc||'')).toLowerCase();
+  const biweekly=full.includes('every 2 weeks')||full.includes('biweekly');
   if(isIndoor){
     if(t.includes('feed')||t.includes('fertiliz'))return biweekly?[2,4]:[2];
     if(t.includes('prune')||t.includes('deadhead')||t.includes('trim')||t.includes('cutback')||t.includes('cut back'))return biweekly?[1,3]:[1];
@@ -2260,7 +2267,7 @@ function renderMaintWeek(){
   const weekTasks=[];
   const overdueTasks=[];
   allTasks.forEach(function(t){
-    const weeks=taskWeeks(t.title,t.indoor);
+    const weeks=taskWeeks(t.title,t.indoor,t.desc);
     if(weeks.includes(wk)){weekTasks.push(t);return;}
     if(wk>1&&!checked[t.key]){
       for(var w=1;w<wk;w++){if(weeks.includes(w)){overdueTasks.push(t);return;}}
