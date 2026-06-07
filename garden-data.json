@@ -7910,7 +7910,7 @@
       "bedId": "b-back-rose",
       "name": "Rose bush",
       "scientific": "Rosa spp.",
-      "emoji": "🌿",
+      "emoji": "emoji_p1778178155450",
       "category": "Bush Roses",
       "status": "alive",
       "water": "Deep water weekly",
@@ -7952,7 +7952,9 @@
           ]
         }
       ],
-      "trouble": []
+      "trouble": [],
+      "datePlanted": "",
+      "howPlanted": ""
     },
     {
       "id": "p1778178167609",
@@ -10740,5 +10742,5 @@
       "pg_Trim back to control spread": true
     }
   },
-  "syncedAt": "2026-06-07T18:48:19.533Z"
+  "syncedAt": "2026-06-07T18:55:12.427Z"
 }
