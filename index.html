@@ -1007,7 +1007,7 @@ function resetToDefaults(){
   location.reload();
 }
 const DATA_VERSION='v9';
-const APP_VERSION='2026-06-05-e';
+const APP_VERSION='2026-06-05-f';
 // GitHub Sync
 const GH_KEYS={user:'gh_username',repo:'gh_repo',token:'gh_token'};
 function ghGet(k){try{return localStorage.getItem(k)||'';}catch(e){return '';}}
@@ -2195,7 +2195,15 @@ function buildAllTasks(month){
     var groupLabel=count===1?uniquePlants[0]:(g.cats.length===1?g.cats[0]:(sharedWord||count+' plants'));
     var badge='<span style="background:var(--sage-light);color:var(--sage-dark);font-size:10px;font-weight:600;padding:1px 6px;border-radius:10px">'+count+'</span>';
     var displayCat=count===1?groupLabel:groupLabel+' '+badge;
-    allTasks.push({cat:displayCat,title:g.task,desc:'',indoor:false,type:g.type,bedIds:g.bedIds,bedId:'outdoor-grouped',key:'pg_'+key,isGrouped:true,count:count,plants:uniquePlants,cats:g.cats,groupLabel:groupLabel});
+    // Detect all-rose groups and replace label + plant list with a unified string
+    var roseLabel=null;
+    if(count>1&&g.cats.length>0&&g.cats.every(function(c){return c.toLowerCase().includes('rose');})){
+      var hasBush=g.cats.some(function(c){return c.toLowerCase().includes('bush');});
+      var hasClimbing=g.cats.some(function(c){return c.toLowerCase().includes('climbing');});
+      roseLabel=(hasBush&&hasClimbing)?'All Bush & Climbing Roses':hasBush?'All Bush Roses':hasClimbing?'All Climbing Roses':'All Roses';
+      groupLabel=roseLabel;displayCat=roseLabel;
+    }
+    allTasks.push({cat:displayCat,title:g.task,desc:'',indoor:false,type:g.type,bedIds:g.bedIds,bedId:'outdoor-grouped',key:'pg_'+key,isGrouped:true,count:count,plants:uniquePlants,cats:g.cats,groupLabel:groupLabel,roseLabel:roseLabel});
   });
   var indoorTaskMap={};
   S.indoorPlants.forEach(function(plant){
@@ -2266,7 +2274,7 @@ function renderMaintWeek(){
     const border=t.indoor?'var(--terracotta)':'var(--sage)';
     var plantListStr='';
     if(t.isGrouped&&t.plants&&t.plants.length>1){
-      plantListStr='<p style="font-size:11px;color:var(--text-light);margin:2px 0 0;line-height:1.5">'+t.plants.join(' · ')+'</p>';
+      plantListStr='<p style="font-size:11px;color:var(--text-light);margin:2px 0 0;line-height:1.5">'+(t.roseLabel||t.plants.join(' · '))+'</p>';
     }
     return'<div class="schedule-task '+(isDone?'task-done':'')+'" style="border-left-color:'+border+'"><div style="display:flex;align-items:flex-start"><div class="sched-check '+(isDone?'checked':'')+'" onclick="toggleSchedTask('+mo+',\''+safeKey+'\')">'+(isDone?'✓':'')+'</div><div style="flex:1"><div style="font-size:10px;text-transform:uppercase;letter-spacing:1px;color:'+(t.indoor?'var(--terracotta)':'var(--sage-dark)')+';font-weight:500;margin-bottom:3px">'+t.cat+'</div><h4>'+t.title+'</h4>'+(t.desc?'<p>'+t.desc+'</p>':'')+plantListStr+'</div></div></div>';
   }
@@ -2415,7 +2423,7 @@ function renderSchedule(month){
       var navFn=navPlant?'navToSchedPlant(\''+navPlant.replace(/\\/g,'\\\\').replace(/'/g,"\\'")+'\',' +(t.indoor?'true':'false')+')':'';
       var plantListStr='';
       if(t.isGrouped&&t.plants&&t.plants.length>1){
-        plantListStr='<p style="font-size:11px;color:var(--text-light);margin:2px 0 0;line-height:1.5">'+t.plants.join(' · ')+'</p>';
+        plantListStr='<p style="font-size:11px;color:var(--text-light);margin:2px 0 0;line-height:1.5">'+(t.roseLabel||t.plants.join(' · '))+'</p>';
       }
       out+='<div class="schedule-task '+(isDone?'task-done':'')+'" style="border-left-color:'+border+'"><div style="display:flex;align-items:flex-start">'
         +'<div class="sched-check '+(isDone?'checked':'')+'" onclick="toggleSchedTask('+month+',\''+safeKey+'\')">'+(isDone?'✓':'')+'</div>'
