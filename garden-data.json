@@ -10735,8 +10735,9 @@
       "pg_Feed monthly spring-summer": true,
       "pg_Palm fertilizer April - Aug": true,
       "pg_Feed every 4-6 weeks for continuous bloom": true,
-      "pg_Mulch around base to retain moisture in summer": true
+      "pg_Mulch around base to retain moisture in summer": true,
+      "pg_Cut back by 1/3 if leggy": true
     }
   },
-  "syncedAt": "2026-06-07T01:25:46.655Z"
+  "syncedAt": "2026-06-07T01:30:58.702Z"
 }
