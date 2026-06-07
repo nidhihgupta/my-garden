@@ -2031,7 +2031,7 @@
           ]
         },
         {
-          "task": "Water deeply in summer heat",
+          "task": "Deep water every 2 weeks July-August",
           "months": [
             7,
             8
@@ -2201,7 +2201,7 @@
           ]
         },
         {
-          "task": "Deep water every 2 weeks July-August — check soil 6 inches first",
+          "task": "Deep water every 2 weeks July-August",
           "months": [
             7,
             8
@@ -3132,7 +3132,7 @@
       "notes": "Existing. Multiple plants.",
       "maintenance": [
         {
-          "task": "Prune ONLY after flowering in August — never fall/winter",
+          "task": "Prune ONLY after flowering complete",
           "months": [
             8
           ]
@@ -3174,7 +3174,7 @@
       "notes": "Existing. Stunning fall foliage.",
       "maintenance": [
         {
-          "task": "Prune ONLY after flowering in August — never fall/winter",
+          "task": "Prune ONLY after flowering complete",
           "months": [
             8
           ]
@@ -3570,7 +3570,7 @@
           ]
         },
         {
-          "task": "Cut by 1/3 after bloom finishes",
+          "task": "Cut back by 1/3 after flowering",
           "months": [
             8
           ]
@@ -3606,7 +3606,7 @@
           ]
         },
         {
-          "task": "Cut by 1/3 after bloom finishes",
+          "task": "Cut back by 1/3 after flowering",
           "months": [
             8
           ]
@@ -4229,7 +4229,7 @@
           ]
         },
         {
-          "task": "Cut by 1/3 after bloom finishes",
+          "task": "Cut back by 1/3 after flowering",
           "months": [
             8
           ]
@@ -4374,7 +4374,7 @@
           ]
         },
         {
-          "task": "Deep water every 2 weeks July-August — check soil 6 inches first",
+          "task": "Deep water every 2 weeks July-August",
           "months": [
             7,
             8
@@ -4437,7 +4437,7 @@
           ]
         },
         {
-          "task": "Deep water every 2 weeks July-August — check soil 6 inches first",
+          "task": "Deep water every 2 weeks July-August",
           "months": [
             7,
             8
@@ -6941,7 +6941,7 @@
           ]
         },
         {
-          "task": "Deep water every 2 weeks July-August — check soil 6 inches first",
+          "task": "Deep water every 2 weeks July-August",
           "months": [
             7,
             8
@@ -7774,7 +7774,7 @@
           ]
         },
         {
-          "task": "Deep water every 2 weeks July-August — check soil 6 inches first",
+          "task": "Deep water every 2 weeks July-August",
           "months": [
             7,
             8
@@ -10737,5 +10737,5 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true
     }
   },
-  "syncedAt": "2026-06-07T00:00:22.483Z"
+  "syncedAt": "2026-06-07T00:11:27.422Z"
 }
