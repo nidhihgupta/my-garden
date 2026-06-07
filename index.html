@@ -1007,7 +1007,7 @@ function resetToDefaults(){
   location.reload();
 }
 const DATA_VERSION='v9';
-const APP_VERSION='2026-06-05-f';
+const APP_VERSION='2026-06-05-g';
 // GitHub Sync
 const GH_KEYS={user:'gh_username',repo:'gh_repo',token:'gh_token'};
 function ghGet(k){try{return localStorage.getItem(k)||'';}catch(e){return '';}}
@@ -2180,26 +2180,39 @@ function buildAllTasks(month){
         else if(tl.includes('feed')||tl.includes('fertiliz'))tp='Feeding';
         else if(tl.includes('water')||tl.includes('moist'))tp='Watering';
         else if(tl.includes('pest')||tl.includes('mite')||tl.includes('spray')||tl.includes('neem')||tl.includes('slug')||tl.includes('monitor'))tp='Pest';
-        outdoorTaskMap[key]={task:mItem.task,type:tp,plants:[],bedIds:[],cats:[]};
+        outdoorTaskMap[key]={task:mItem.task,type:tp,plants:[],bedIds:[],cats:[],catCounts:{}};
       }
       outdoorTaskMap[key].plants.push(plant.name);
       if(plant.bedId&&outdoorTaskMap[key].bedIds.indexOf(plant.bedId)<0)outdoorTaskMap[key].bedIds.push(plant.bedId);
       if(plant.category&&outdoorTaskMap[key].cats.indexOf(plant.category)<0)outdoorTaskMap[key].cats.push(plant.category);
+      if(plant.category)outdoorTaskMap[key].catCounts[plant.category]=(outdoorTaskMap[key].catCounts[plant.category]||0)+1;
     });
   });
   Object.keys(outdoorTaskMap).forEach(function(key){
     var g=outdoorTaskMap[key];
     var uniquePlants=[...new Set(g.plants)];
     var count=uniquePlants.length;
-    var sharedWord=g.cats.length>1?(function(){var ws=g.cats.map(function(c){return c.split(' ').pop();});return ws.every(function(w){return w===ws[0];})?ws[0]:null;})():null;
-    var groupLabel=count===1?uniquePlants[0]:(g.cats.length===1?g.cats[0]:(sharedWord||count+' plants'));
+    // Filter out meaningless 'None' category before computing labels
+    var meaningfulCats=g.cats.filter(function(c){return c&&c!=='None';});
+    var sharedWord=meaningfulCats.length>1?(function(){var ws=meaningfulCats.map(function(c){return c.split(' ').pop();});return ws.every(function(w){return w===ws[0];})?ws[0]:null;})():null;
+    var groupLabel;
+    if(count===1){groupLabel=uniquePlants[0];}
+    else if(meaningfulCats.length===0){groupLabel=count+' plants';}
+    else if(meaningfulCats.length===1){groupLabel=meaningfulCats[0];}
+    else if(sharedWord){groupLabel=sharedWord;}
+    else if(count<=3){groupLabel=uniquePlants.join(' · ');}
+    else{
+      // Use the category with the most plants
+      var domCat=meaningfulCats.reduce(function(best,c){return(g.catCounts[c]||0)>(g.catCounts[best]||0)?c:best;},meaningfulCats[0]);
+      groupLabel=domCat;
+    }
     var badge='<span style="background:var(--sage-light);color:var(--sage-dark);font-size:10px;font-weight:600;padding:1px 6px;border-radius:10px">'+count+'</span>';
     var displayCat=count===1?groupLabel:groupLabel+' '+badge;
     // Detect all-rose groups and replace label + plant list with a unified string
     var roseLabel=null;
-    if(count>1&&g.cats.length>0&&g.cats.every(function(c){return c.toLowerCase().includes('rose');})){
-      var hasBush=g.cats.some(function(c){return c.toLowerCase().includes('bush');});
-      var hasClimbing=g.cats.some(function(c){return c.toLowerCase().includes('climbing');});
+    if(count>1&&meaningfulCats.length>0&&meaningfulCats.every(function(c){return c.toLowerCase().includes('rose');})){
+      var hasBush=meaningfulCats.some(function(c){return c.toLowerCase().includes('bush');});
+      var hasClimbing=meaningfulCats.some(function(c){return c.toLowerCase().includes('climbing');});
       roseLabel=(hasBush&&hasClimbing)?'All Bush & Climbing Roses':hasBush?'All Bush Roses':hasClimbing?'All Climbing Roses':'All Roses';
       groupLabel=roseLabel;displayCat=roseLabel;
     }
