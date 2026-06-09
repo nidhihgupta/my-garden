@@ -10745,8 +10745,9 @@
       "pg_Water only when soil completely dry": true,
       "pg_Deadhead roses every 2 weeks — outward facing bud, 45° cut": true,
       "pg_Deadhead at base — pull stem out, do not cut": true,
-      "ig_Trim regularly to control spread": true
+      "ig_Trim regularly to control spread": true,
+      "ig_Trim brown sections": true
     }
   },
-  "syncedAt": "2026-06-09T18:56:38.972Z"
+  "syncedAt": "2026-06-09T18:56:41.007Z"
 }
