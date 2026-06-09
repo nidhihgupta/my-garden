@@ -10739,8 +10739,9 @@
       "pg_Feed every 4-6 weeks for continuous bloom": true,
       "pg_Mulch around base to retain moisture in summer": true,
       "pg_Cut back by 1/3 if leggy": true,
-      "pg_Trim back to control spread": true
+      "pg_Trim back to control spread": true,
+      "s_Fruit Trees_Increase fruit tree watering": true
     }
   },
-  "syncedAt": "2026-06-09T18:54:55.335Z"
+  "syncedAt": "2026-06-09T18:55:08.028Z"
 }
