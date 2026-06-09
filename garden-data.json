@@ -10743,8 +10743,9 @@
       "s_Fruit Trees_Increase fruit tree watering": true,
       "pg_Water deeply monthly in summer": true,
       "pg_Water only when soil completely dry": true,
-      "pg_Deadhead roses every 2 weeks — outward facing bud, 45° cut": true
+      "pg_Deadhead roses every 2 weeks — outward facing bud, 45° cut": true,
+      "pg_Deadhead at base — pull stem out, do not cut": true
     }
   },
-  "syncedAt": "2026-06-09T18:55:39.168Z"
+  "syncedAt": "2026-06-09T18:56:16.281Z"
 }
