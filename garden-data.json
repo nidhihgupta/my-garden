@@ -10226,6 +10226,13 @@
   ],
   "todos": [
     {
+      "id": "t1781051224939",
+      "text": "Fertilize Sally Holmes and geranium",
+      "done": false,
+      "date": "2026-06-10",
+      "category": "Maintenance"
+    },
+    {
       "id": "t1780184890676",
       "text": "Clean fountain planter",
       "done": false,
@@ -10751,5 +10758,5 @@
       "ig_Trim long vines to encourage fullness": false
     }
   },
-  "syncedAt": "2026-06-10T00:25:44.210Z"
+  "syncedAt": "2026-06-10T00:27:04.941Z"
 }
