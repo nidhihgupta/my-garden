@@ -10764,8 +10764,9 @@
       "ig_Trim regularly to control spread": true,
       "ig_Trim brown sections": true,
       "pg_Deadhead regularly": true,
-      "ig_Trim long vines to encourage fullness": false
+      "ig_Trim long vines to encourage fullness": false,
+      "pg_Deep water monthly — slow hose at drip line": true
     }
   },
-  "syncedAt": "2026-06-10T14:51:07.625Z"
+  "syncedAt": "2026-06-10T16:03:21.414Z"
 }
