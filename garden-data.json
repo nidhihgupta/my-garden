@@ -10767,9 +10767,9 @@
       "ig_Trim long vines to encourage fullness": false,
       "pg_Deep water monthly — slow hose at drip line": true,
       "ig_String of Pearls: water every 2 weeks, let dry completely": true,
-      "s_Pest_Monitor for powdery mildew on roses": false,
+      "s_Pest_Monitor for powdery mildew on roses": true,
       "pg_Feed Jack's 20-20-20 every 2 weeks": true
     }
   },
-  "syncedAt": "2026-06-10T16:05:34.809Z"
+  "syncedAt": "2026-06-10T16:05:46.929Z"
 }
