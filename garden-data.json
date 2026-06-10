@@ -10764,10 +10764,11 @@
       "ig_Trim regularly to control spread": true,
       "ig_Trim brown sections": true,
       "pg_Deadhead regularly": true,
-      "ig_Trim long vines to encourage fullness": true,
+      "ig_Trim long vines to encourage fullness": false,
       "pg_Deep water monthly — slow hose at drip line": true,
-      "ig_String of Pearls: water every 2 weeks, let dry completely": true
+      "ig_String of Pearls: water every 2 weeks, let dry completely": true,
+      "s_Pest_Monitor for powdery mildew on roses": true
     }
   },
-  "syncedAt": "2026-06-10T16:04:09.618Z"
+  "syncedAt": "2026-06-10T16:04:43.223Z"
 }
