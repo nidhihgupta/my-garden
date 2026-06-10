@@ -1007,7 +1007,7 @@ function resetToDefaults(){
   location.reload();
 }
 const DATA_VERSION='v9';
-const APP_VERSION='2026-06-05-h';
+const APP_VERSION='2026-06-05-i';
 // GitHub Sync
 const GH_KEYS={user:'gh_username',repo:'gh_repo',token:'gh_token'};
 function ghGet(k){try{return localStorage.getItem(k)||'';}catch(e){return '';}}
@@ -2138,7 +2138,8 @@ function buildAllTasks(month){
   });
   var sfCov={jacks:false,supbloom:false,camellia:false,palm:false,citrus:false,bonemeal:false,
              fruittreewater:false,geraniumdeadhead:false,geraniumcutback:false,
-             azalea:false,hydrangea:false,bougainvillacutback:false,berrycanes:false};
+             azalea:false,hydrangea:false,bougainvillacutback:false,berrycanes:false,
+             rosemildew:false,dahliadeadhead:false,distictisprune:false,distictistrain:false};
   (staticSchedule[month]||[]).forEach(function(t){
     var tl=(t.title+' '+(t.desc||'')).toLowerCase();
     if(tl.includes('jack'))sfCov.jacks=true;
@@ -2154,6 +2155,10 @@ function buildAllTasks(month){
     if(tl.includes('hydrangea')&&(tl.includes('prune')||tl.includes('cut')))sfCov.hydrangea=true;
     if(tl.includes('bougainvill')&&(tl.includes('cut')||tl.includes('prune')))sfCov.bougainvillacutback=true;
     if((tl.includes('raspberry')||tl.includes('blackberry')||tl.includes('cane'))&&tl.includes('remov'))sfCov.berrycanes=true;
+    if(tl.includes('mildew')&&tl.includes('rose'))sfCov.rosemildew=true;
+    if(tl.includes('dahlia')&&tl.includes('deadhead'))sfCov.dahliadeadhead=true;
+    if(tl.includes('distictis')&&tl.includes('prune'))sfCov.distictisprune=true;
+    if(tl.includes('distictis')&&tl.includes('train'))sfCov.distictistrain=true;
   });
   var outdoorTaskMap={};
   S.plants.forEach(function(plant){
@@ -2180,6 +2185,10 @@ function buildAllTasks(month){
       if(sfCov.hydrangea&&(pn.includes('hydrangea')||pc.includes('hydrangea'))&&(tl.includes('prune')||tl.includes('cut')))return;
       if(sfCov.bougainvillacutback&&(pn.includes('bougainvill')||pc.includes('bougainvill'))&&(tl.includes('cut')||tl.includes('prune')))return;
       if(sfCov.berrycanes&&(pn.includes('raspberry')||pn.includes('blackberry')||pc.includes('berr'))&&tl.includes('cane'))return;
+      if(sfCov.rosemildew&&(pn.includes('rose')||pc.includes('rose'))&&tl.includes('mildew'))return;
+      if(sfCov.dahliadeadhead&&(pn.includes('dahlia')||pc.includes('dahlia'))&&tl.includes('deadhead'))return;
+      if(sfCov.distictisprune&&pn.includes('distictis')&&tl.includes('prune'))return;
+      if(sfCov.distictistrain&&pn.includes('distictis')&&tl.includes('train'))return;
       var key=mItem.task;
       if(!outdoorTaskMap[key]){
         var tp='Maintenance';
