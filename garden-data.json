@@ -10747,8 +10747,9 @@
       "pg_Deadhead at base — pull stem out, do not cut": true,
       "ig_Trim regularly to control spread": true,
       "ig_Trim brown sections": true,
-      "pg_Deadhead regularly": true
+      "pg_Deadhead regularly": true,
+      "ig_Trim long vines to encourage fullness": true
     }
   },
-  "syncedAt": "2026-06-10T00:25:16.012Z"
+  "syncedAt": "2026-06-10T00:25:41.027Z"
 }
