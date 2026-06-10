@@ -10451,6 +10451,14 @@
       "bed": "Back bed ",
       "notes": "",
       "bought": false
+    },
+    {
+      "id": "s1781071663104",
+      "name": "Fertilizer spreader",
+      "qty": "",
+      "bed": "",
+      "notes": "",
+      "bought": false
     }
   ],
   "notes": [],
@@ -10759,5 +10767,5 @@
       "ig_Trim long vines to encourage fullness": false
     }
   },
-  "syncedAt": "2026-06-10T06:07:26.646Z"
+  "syncedAt": "2026-06-10T06:07:43.107Z"
 }
