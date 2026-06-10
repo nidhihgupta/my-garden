@@ -10391,9 +10391,10 @@
     {
       "id": "s1779913318271",
       "name": "Dichondra",
-      "qty": "1",
+      "qty": "2",
       "bed": "Tall planter ",
-      "bought": false
+      "bought": false,
+      "notes": ""
     },
     {
       "id": "s1779942625618",
@@ -10758,5 +10759,5 @@
       "ig_Trim long vines to encourage fullness": false
     }
   },
-  "syncedAt": "2026-06-10T04:22:28.112Z"
+  "syncedAt": "2026-06-10T05:43:52.502Z"
 }
