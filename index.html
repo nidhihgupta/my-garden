@@ -1007,7 +1007,7 @@ function resetToDefaults(){
   location.reload();
 }
 const DATA_VERSION='v9';
-const APP_VERSION='2026-06-05-i';
+const APP_VERSION='2026-06-05-j';
 // GitHub Sync
 const GH_KEYS={user:'gh_username',repo:'gh_repo',token:'gh_token'};
 function ghGet(k){try{return localStorage.getItem(k)||'';}catch(e){return '';}}
@@ -2265,6 +2265,49 @@ function buildAllTasks(month){
   return allTasks;
 }
 
+function mergeIndoorFeeds(tasks,wk){
+  var feedTasks=tasks.filter(function(t){return t.indoor&&t.type==='Feeding'&&!t.isStatic;});
+  if(feedTasks.length<=1)return tasks;
+  var jacksMonthly=[],jacksBiweekly=[],cactusPlants=[],orchidPlants=[],feedKeys=[];
+  feedTasks.forEach(function(t){
+    feedKeys.push(t.key);
+    var tl=t.title.toLowerCase();
+    var isBiweekly=tl.includes('every 2 weeks')||tl.includes('biweekly');
+    var pts=(t.plants&&t.plants.length)?[...new Set(t.plants)]:(t.groupLabel?[t.groupLabel]:[]);
+    if(tl.includes('cactus fertilizer')){
+      pts.forEach(function(p){if(cactusPlants.indexOf(p)<0)cactusPlants.push(p);});
+    }else if(tl.includes('orchid fertilizer')){
+      pts.forEach(function(p){if(orchidPlants.indexOf(p)<0)orchidPlants.push(p);});
+    }else if(isBiweekly){
+      pts.forEach(function(p){if(jacksBiweekly.indexOf(p)<0)jacksBiweekly.push(p);});
+    }else{
+      pts.forEach(function(p){if(jacksMonthly.indexOf(p)<0)jacksMonthly.push(p);});
+    }
+  });
+  var parts=[];
+  if(wk===2){
+    var allJacks=jacksMonthly.concat(jacksBiweekly);
+    if(allJacks.length)parts.push('Jack’s 20-20-20 half strength — '+allJacks.join(' · '));
+    if(cactusPlants.length)parts.push('Cactus fertilizer — '+cactusPlants.join(' · '));
+    if(orchidPlants.length)parts.push('Orchid fertilizer — '+orchidPlants.join(' · '));
+    var bw=jacksBiweekly.concat(orchidPlants);
+    if(bw.length)parts.push('Every 2 weeks — also Week 4: '+bw.join(' · '));
+  }else{
+    if(jacksBiweekly.length)parts.push('Jack’s 20-20-20 — '+jacksBiweekly.join(' · '));
+    if(orchidPlants.length)parts.push('Orchid fertilizer — '+orchidPlants.join(' · '));
+  }
+  var desc=parts.join('<br>');
+  var title=wk===2?'Feed all indoor plants':'Feed biweekly indoor plants';
+  var key=wk===2?'ig_consolidated_w2_feed':'ig_consolidated_w4_feed';
+  var cons={cat:'Indoor Feeding',title:title,desc:desc,indoor:true,type:'Feeding',bedId:'indoor',key:key,isGrouped:false,isConsolidated:true,feedKeys:feedKeys,count:0,plants:[]};
+  var result=[],inserted=false;
+  tasks.forEach(function(t){
+    if(feedTasks.indexOf(t)>=0){if(!inserted){result.push(cons);inserted=true;}}
+    else{result.push(t);}
+  });
+  return result;
+}
+
 function renderMaintWeek(){
   const mo=new Date().getMonth()+1;
   const autoWeek=Math.min(4,Math.ceil(new Date().getDate()/7));
@@ -2273,7 +2316,7 @@ function renderMaintWeek(){
   const allTasks=buildAllTasks(mo);
   const checked=getSchedChecked(mo);
   // Separate tasks into this week and overdue (incomplete from earlier weeks)
-  const weekTasks=[];
+  let weekTasks=[];
   const overdueTasks=[];
   allTasks.forEach(function(t){
     const weeks=taskWeeks(t.title,t.indoor,t.desc);
@@ -2282,7 +2325,11 @@ function renderMaintWeek(){
       for(var w=1;w<wk;w++){if(weeks.includes(w)){overdueTasks.push(t);return;}}
     }
   });
-  const doneCount=weekTasks.filter(function(t){return checked[t.key];}).length;
+  weekTasks=mergeIndoorFeeds(weekTasks,wk);
+  const doneCount=weekTasks.filter(function(t){
+    if(t.isConsolidated)return t.feedKeys.every(function(k){return !!checked[k];});
+    return !!checked[t.key];
+  }).length;
   const pct=weekTasks.length>0?Math.round(doneCount/weekTasks.length*100):0;
   // Week picker
   var html='<div style="display:flex;gap:8px;margin-bottom:16px">';
@@ -2298,14 +2345,21 @@ function renderMaintWeek(){
   }
   // Shared card renderer (matches All Tasks style exactly)
   function card(t){
-    const isDone=!!checked[t.key];
+    var isDone=t.isConsolidated?t.feedKeys.every(function(k){return !!checked[k];}):!!checked[t.key];
     const safeKey=t.key.replace(/\\/g,'\\\\').replace(/'/g,"\\'");
     const border=t.indoor?'var(--terracotta)':'var(--sage)';
     var plantListStr='';
-    if(t.isGrouped&&t.plants&&t.plants.length>1){
+    if(t.isGrouped&&!t.isConsolidated&&t.plants&&t.plants.length>1){
       plantListStr='<p style="font-size:11px;color:var(--text-light);margin:2px 0 0;line-height:1.5">'+(t.roseLabel||t.plants.join(' · '))+'</p>';
     }
-    return'<div class="schedule-task '+(isDone?'task-done':'')+'" style="border-left-color:'+border+'"><div style="display:flex;align-items:flex-start"><div class="sched-check '+(isDone?'checked':'')+'" onclick="toggleSchedTask('+mo+',\''+safeKey+'\')">'+(isDone?'✓':'')+'</div><div style="flex:1"><div style="font-size:10px;text-transform:uppercase;letter-spacing:1px;color:'+(t.indoor?'var(--terracotta)':'var(--sage-dark)')+';font-weight:500;margin-bottom:3px">'+t.cat+'</div><h4>'+t.title+'</h4>'+(t.desc?'<p>'+t.desc+'</p>':'')+plantListStr+'</div></div></div>';
+    var checkClick;
+    if(t.isConsolidated){
+      var keysArr='['+t.feedKeys.map(function(k){return"'"+k.replace(/\\/g,'\\\\').replace(/'/g,"\\'")+"'";}).join(',')+']';
+      checkClick='toggleConsolidatedFeed('+mo+','+keysArr+')';
+    }else{
+      checkClick='toggleSchedTask('+mo+',\''+safeKey+'\')';
+    }
+    return'<div class="schedule-task '+(isDone?'task-done':'')+'" style="border-left-color:'+border+'"><div style="display:flex;align-items:flex-start"><div class="sched-check '+(isDone?'checked':'')+'" onclick="'+checkClick+'">'+(isDone?'✓':'')+'</div><div style="flex:1"><div style="font-size:10px;text-transform:uppercase;letter-spacing:1px;color:'+(t.indoor?'var(--terracotta)':'var(--sage-dark)')+';font-weight:500;margin-bottom:3px">'+t.cat+'</div><h4>'+t.title+'</h4>'+(t.desc?'<p>'+t.desc+'</p>':'')+plantListStr+'</div></div></div>';
   }
   if(weekTasks.length===0&&overdueTasks.length===0){
     html+='<div class="empty-state"><span>🌿</span><p>No tasks for this week.</p></div>';
@@ -2402,6 +2456,7 @@ function renderCurrentSchedule(){renderSchedule(currentScheduleMonth);}
 function filterSchedTab(tab,btn){currentSchedTab=tab;document.querySelectorAll('#sched-tab-bar .segment-btn').forEach(b=>b.classList.remove('active'));if(btn)btn.classList.add('active');renderSchedule(currentScheduleMonth);}
 function getSchedChecked(month){try{const v=localStorage.getItem('sc'+month);return v?JSON.parse(v):{};}catch(e){return {};}}
 function toggleSchedTask(month,key){const d=getSchedChecked(month);d[key]=!d[key];try{localStorage.setItem('sc'+month,JSON.stringify(d));}catch(e){}syncToGitHub();if(currentMaintTab==='week')renderMaintWeek();else renderSchedule(month);}
+function toggleConsolidatedFeed(month,keys){var d=getSchedChecked(month);var allDone=keys.every(function(k){return !!d[k];});keys.forEach(function(k){d[k]=!allDone;});try{localStorage.setItem('sc'+month,JSON.stringify(d));}catch(e){}syncToGitHub();if(currentMaintTab==='week')renderMaintWeek();else renderSchedule(month);}
 function renderSchedule(month){
   // Always repopulate bed filter preserving selection
   const bedSel=document.getElementById('sched-filter-bed');
