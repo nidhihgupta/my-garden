@@ -3502,7 +3502,7 @@
       "scientific": "Rosa spp.",
       "emoji": "🌹",
       "category": "Climbing Roses",
-      "status": "struggling",
+      "status": "dead",
       "water": "Deep water weekly",
       "sun": "Full sun to part sun",
       "notes": "",
@@ -10775,5 +10775,5 @@
       "pg_Feed Jack's 20-20-20 every 2 weeks": true
     }
   },
-  "syncedAt": "2026-06-12T04:02:59.368Z"
+  "syncedAt": "2026-06-12T04:03:39.045Z"
 }
