@@ -3201,7 +3201,7 @@
       "bedId": "b-sa",
       "name": "Rose bush",
       "scientific": "Rosa spp.",
-      "emoji": "🌿",
+      "emoji": "emoji_p1778177850519",
       "category": "Bush Roses",
       "status": "alive",
       "water": "Deep water weekly",
@@ -3243,7 +3243,9 @@
           ]
         }
       ],
-      "trouble": []
+      "trouble": [],
+      "datePlanted": "",
+      "howPlanted": ""
     },
     {
       "id": "sa-angelface",
@@ -10771,5 +10773,5 @@
       "pg_Feed Jack's 20-20-20 every 2 weeks": true
     }
   },
-  "syncedAt": "2026-06-12T03:59:41.332Z"
+  "syncedAt": "2026-06-12T04:02:19.326Z"
 }
