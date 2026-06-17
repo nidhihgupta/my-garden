@@ -8053,9 +8053,9 @@
     {
       "id": "p1778178167609",
       "bedId": "b-back-rose",
-      "name": "Rose bush",
-      "scientific": "Rosa spp.",
-      "emoji": "🌿",
+      "name": "Rose bush - pink ",
+      "scientific": "Rosa Chicago Peace ",
+      "emoji": "emoji_p1778178167609",
       "category": "Bush Roses",
       "status": "alive",
       "water": "Deep water weekly",
@@ -8097,7 +8097,9 @@
           ]
         }
       ],
-      "trouble": []
+      "trouble": [],
+      "datePlanted": "",
+      "howPlanted": ""
     },
     {
       "id": "brs-daustinrose",
@@ -10775,5 +10777,5 @@
       "pg_Feed Jack's 20-20-20 every 2 weeks": true
     }
   },
-  "syncedAt": "2026-06-17T01:10:52.814Z"
+  "syncedAt": "2026-06-17T01:12:07.380Z"
 }
