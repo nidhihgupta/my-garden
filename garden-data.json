@@ -10775,8 +10775,9 @@
       "ig_String of Pearls: water every 2 weeks, let dry completely": true,
       "s_Pest_Monitor for powdery mildew on roses": true,
       "pg_Feed Jack's 20-20-20 every 2 weeks": true,
-      "pg_Cut back by 1/3 after first bloom flush": true
+      "pg_Cut back by 1/3 after first bloom flush": true,
+      "pg_Light trim after flowering": true
     }
   },
-  "syncedAt": "2026-06-19T02:42:37.748Z"
+  "syncedAt": "2026-06-19T02:42:43.925Z"
 }
