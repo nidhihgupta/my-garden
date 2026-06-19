@@ -3360,7 +3360,14 @@
       "notes": "Existing. Train horizontally now while flexible.",
       "maintenance": [
         {
-          "task": "Deadhead roses every 2 weeks — outward facing bud, 45° cut",
+          "task": "Hard prune to outward facing buds",
+          "months": [
+            1,
+            2
+          ]
+        },
+        {
+          "task": "Deadhead every 2 weeks — outward facing bud, 45° cut",
           "months": [
             4,
             5,
@@ -3372,17 +3379,17 @@
           ]
         },
         {
-          "task": "Train canes horizontally NOW while flexible",
+          "task": "Feed rose fertilizer after first bloom flush",
           "months": [
-            4,
             5
           ]
         },
         {
-          "task": "Hard cutback annually in January/February",
+          "task": "Monitor for powdery mildew — neem oil if spotted",
           "months": [
-            1,
-            2
+            6,
+            7,
+            8
           ]
         }
       ],
@@ -3392,7 +3399,7 @@
           "url": "https://www.google.com/search?q=Black%20spot%20plant%20care%20fix"
         }
       ],
-      "category": "Climbing Roses",
+      "category": "Bush Roses",
       "howPlanted": ""
     },
     {
@@ -10780,5 +10787,5 @@
       "pg_Light trim after flowering": true
     }
   },
-  "syncedAt": "2026-06-19T18:55:52.607Z"
+  "syncedAt": "2026-06-19T18:56:04.178Z"
 }
