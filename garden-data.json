@@ -3349,7 +3349,7 @@
       "id": "sa-iceberg",
       "bedId": "b-sa",
       "name": "Rose bush",
-      "scientific": "Rosa Iceberg",
+      "scientific": "Rosa David Austin William Shakespeare 2000",
       "emoji": "emoji_sa-iceberg",
       "status": "alive",
       "water": "Deep water weekly",
@@ -3392,7 +3392,8 @@
           "url": "https://www.google.com/search?q=Black%20spot%20plant%20care%20fix"
         }
       ],
-      "category": "Climbing Roses"
+      "category": "Climbing Roses",
+      "howPlanted": ""
     },
     {
       "id": "p1778177863527",
@@ -10779,5 +10780,5 @@
       "pg_Light trim after flowering": true
     }
   },
-  "syncedAt": "2026-06-19T18:55:03.510Z"
+  "syncedAt": "2026-06-19T18:55:52.607Z"
 }
