@@ -10415,7 +10415,7 @@
       "name": "Yellow lantana for front rose bed",
       "qty": "",
       "bed": "Front rose bed ",
-      "bought": false,
+      "bought": true,
       "notes": ""
     },
     {
@@ -10787,5 +10787,5 @@
       "pg_Light trim after flowering": true
     }
   },
-  "syncedAt": "2026-06-20T18:44:21.516Z"
+  "syncedAt": "2026-06-20T19:04:14.587Z"
 }
