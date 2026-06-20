@@ -10804,8 +10804,8 @@
       "ig_Water when leaves just start to droop — reliable indicator": true,
       "ig_Water when soil half dry — do not overwater": true,
       "pg_Remove dead fronds as needed": true,
-      "pg_Train and tie new canes to structure": true
+      "pg_Train and tie new canes to structure": false
     }
   },
-  "syncedAt": "2026-06-20T22:01:55.536Z"
+  "syncedAt": "2026-06-20T22:02:01.619Z"
 }
