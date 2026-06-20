@@ -10794,8 +10794,9 @@
       "pg_Wipe leaves monthly": true,
       "pg_Harvest pods regularly": true,
       "ig_Wipe leaves monthly": true,
-      "ig_Water only when soil completely dry": true
+      "ig_Water only when soil completely dry": true,
+      "ig_Water when top inch dry": true
     }
   },
-  "syncedAt": "2026-06-20T22:00:15.156Z"
+  "syncedAt": "2026-06-20T22:00:25.090Z"
 }
