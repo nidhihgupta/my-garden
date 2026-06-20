@@ -10256,7 +10256,7 @@
     {
       "id": "t1780184872919",
       "text": "Wash fountain wall",
-      "done": false,
+      "done": true,
       "date": "2026-06-13",
       "category": "Maintenance"
     },
@@ -10787,5 +10787,5 @@
       "pg_Light trim after flowering": true
     }
   },
-  "syncedAt": "2026-06-20T20:03:29.696Z"
+  "syncedAt": "2026-06-20T20:03:32.794Z"
 }
