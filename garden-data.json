@@ -10400,7 +10400,7 @@
       "name": "Creeping Jenny",
       "qty": "2 ",
       "bed": "Tall planter ",
-      "bought": false
+      "bought": true
     },
     {
       "id": "s1779913318271",
@@ -10787,5 +10787,5 @@
       "pg_Light trim after flowering": true
     }
   },
-  "syncedAt": "2026-06-20T16:49:32.707Z"
+  "syncedAt": "2026-06-20T18:41:58.694Z"
 }
