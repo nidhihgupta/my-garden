@@ -10793,8 +10793,9 @@
       "pg_Train new growth onto wall immediately as it pushes": true,
       "pg_Wipe leaves monthly": true,
       "pg_Harvest pods regularly": true,
-      "ig_Wipe leaves monthly": true
+      "ig_Wipe leaves monthly": true,
+      "ig_Water only when soil completely dry": true
     }
   },
-  "syncedAt": "2026-06-20T21:59:33.058Z"
+  "syncedAt": "2026-06-20T22:00:15.156Z"
 }
