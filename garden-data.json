@@ -10472,7 +10472,7 @@
       "qty": "",
       "bed": "",
       "notes": "",
-      "bought": false
+      "bought": true
     }
   ],
   "notes": [],
@@ -10787,5 +10787,5 @@
       "pg_Light trim after flowering": true
     }
   },
-  "syncedAt": "2026-06-20T16:49:26.879Z"
+  "syncedAt": "2026-06-20T16:49:32.707Z"
 }
