@@ -10800,8 +10800,9 @@
       "ig_Use filtered water — fluoride sensitive": true,
       "ig_Water sparingly — stores water in bulbous trunk": true,
       "ig_Propagate spiderettes — pin to soil or place in water": true,
-      "ig_Soak then drain fully — never sit in water": true
+      "ig_Soak then drain fully — never sit in water": true,
+      "ig_Water when leaves just start to droop — reliable indicator": true
     }
   },
-  "syncedAt": "2026-06-20T22:01:10.462Z"
+  "syncedAt": "2026-06-20T22:01:13.978Z"
 }
