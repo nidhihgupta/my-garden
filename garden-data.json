@@ -10802,8 +10802,9 @@
       "ig_Propagate spiderettes — pin to soil or place in water": true,
       "ig_Soak then drain fully — never sit in water": true,
       "ig_Water when leaves just start to droop — reliable indicator": true,
-      "ig_Water when soil half dry — do not overwater": true
+      "ig_Water when soil half dry — do not overwater": true,
+      "pg_Remove dead fronds as needed": true
     }
   },
-  "syncedAt": "2026-06-20T22:01:16.195Z"
+  "syncedAt": "2026-06-20T22:01:46.151Z"
 }
