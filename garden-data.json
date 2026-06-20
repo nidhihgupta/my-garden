@@ -10407,7 +10407,7 @@
       "name": "Dichondra",
       "qty": "2",
       "bed": "Tall planter ",
-      "bought": false,
+      "bought": true,
       "notes": ""
     },
     {
@@ -10456,7 +10456,7 @@
       "qty": "1",
       "bed": "BBQ bed",
       "notes": "This is replacement for the chrysanthemum ",
-      "bought": false
+      "bought": true
     },
     {
       "id": "s1780152162886",
@@ -10787,5 +10787,5 @@
       "pg_Light trim after flowering": true
     }
   },
-  "syncedAt": "2026-06-20T18:41:58.694Z"
+  "syncedAt": "2026-06-20T18:44:21.516Z"
 }
