@@ -10423,7 +10423,7 @@
       "name": "Ground cover for stepping stones",
       "qty": "",
       "bed": "Side stepping stones ",
-      "bought": false,
+      "bought": true,
       "notes": "Ground cover options: green carpet/rupturewort or blue star creeper."
     },
     {
@@ -10787,5 +10787,5 @@
       "pg_Light trim after flowering": true
     }
   },
-  "syncedAt": "2026-06-20T19:04:14.587Z"
+  "syncedAt": "2026-06-20T19:07:50.665Z"
 }
