@@ -10788,8 +10788,9 @@
       "ig_Feed monthly spring-summer": true,
       "ig_Feed every 2 weeks spring-summer": true,
       "ig_Feed cactus fertilizer spring-summer": true,
-      "ig_Feed orchid fertilizer every 2 weeks": true
+      "ig_Feed orchid fertilizer every 2 weeks": true,
+      "pg_Deadhead spent blooms daily during peak bloom": true
     }
   },
-  "syncedAt": "2026-06-20T21:56:08.359Z"
+  "syncedAt": "2026-06-20T21:56:17.315Z"
 }
