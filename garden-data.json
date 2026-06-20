@@ -10795,8 +10795,9 @@
       "pg_Harvest pods regularly": true,
       "ig_Wipe leaves monthly": true,
       "ig_Water only when soil completely dry": true,
-      "ig_Water when top inch dry": true
+      "ig_Water when top inch dry": true,
+      "ig_Mist or use pebble tray — ferns and humidity-lovers need high moisture": true
     }
   },
-  "syncedAt": "2026-06-20T22:00:25.090Z"
+  "syncedAt": "2026-06-20T22:00:43.798Z"
 }
