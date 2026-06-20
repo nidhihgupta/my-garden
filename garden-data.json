@@ -10797,8 +10797,9 @@
       "ig_Water only when soil completely dry": true,
       "ig_Water when top inch dry": true,
       "ig_Mist or use pebble tray — ferns and humidity-lovers need high moisture": true,
-      "ig_Use filtered water — fluoride sensitive": true
+      "ig_Use filtered water — fluoride sensitive": true,
+      "ig_Water sparingly — stores water in bulbous trunk": true
     }
   },
-  "syncedAt": "2026-06-20T22:00:48.032Z"
+  "syncedAt": "2026-06-20T22:01:01.742Z"
 }
