@@ -10249,7 +10249,7 @@
     {
       "id": "t1780184890676",
       "text": "Clean fountain planter",
-      "done": true,
+      "done": false,
       "date": "2026-06-13",
       "category": "Maintenance"
     },
@@ -10787,5 +10787,5 @@
       "pg_Light trim after flowering": true
     }
   },
-  "syncedAt": "2026-06-20T20:03:32.794Z"
+  "syncedAt": "2026-06-20T20:03:39.980Z"
 }
