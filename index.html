@@ -60,6 +60,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--warm-white);color:var(--t
 .yard-card-icon.front{background:#e8f4e8;}
 .yard-card-icon.back{background:#fff3e8;}
 .yard-card-icon.room{background:#f0eaff;}
+.yard-card-icon.lawn{background:#e8f5e2;}
 .yard-card-info{flex:1;}
 .yard-card-info h3{font-size:18px;font-weight:500;margin-bottom:4px;}
 .yard-card-info p{font-size:12px;color:var(--text-light);}
@@ -249,7 +250,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--warm-white);color:var(--t
 <div id="screen-outdoor" class="screen">
   <div style="position:relative"><div class="room-hero" id="outdoor-hero-area"><span class="room-hero-placeholder">🌳</span></div><div style="position:absolute;top:56px;left:20px;cursor:pointer;background:rgba(255,255,255,0.9);border-radius:20px;padding:6px 14px;font-size:13px;font-weight:500" onclick="showScreen('home')">← Home</div><button class="room-hero-edit" onclick="triggerSectionImageUpload('outdoor')">📷</button></div>
   <div class="header" style="padding-top:16px"><h1>🌳 Outdoor</h1><p>Select a yard area</p></div>
-  <div class="yard-cards"><div class="yard-card" id="yard-card-front" onclick="showYard('front')"><div class="yard-card-icon front" id="yard-icon-front">🏡</div><div class="yard-card-info"><h3>Front Yard</h3><p id="front-yard-count">Loading...</p></div><div class="yard-card-arrow">›</div></div><div class="yard-card" id="yard-card-back" onclick="showYard('back')"><div class="yard-card-icon back" id="yard-icon-back">🌿</div><div class="yard-card-info"><h3>Back Yard</h3><p id="back-yard-count">Loading...</p></div><div class="yard-card-arrow">›</div></div></div>
+  <div class="yard-cards"><div class="yard-card" id="yard-card-front" onclick="showYard('front')"><div class="yard-card-icon front" id="yard-icon-front">🏡</div><div class="yard-card-info"><h3>Front Yard</h3><p id="front-yard-count">Loading...</p></div><div class="yard-card-arrow">›</div></div><div class="yard-card" id="yard-card-back" onclick="showYard('back')"><div class="yard-card-icon back" id="yard-icon-back">🌿</div><div class="yard-card-info"><h3>Back Yard</h3><p id="back-yard-count">Loading...</p></div><div class="yard-card-arrow">›</div></div><div class="yard-card" id="yard-card-lawn" onclick="showYard('lawn')"><div class="yard-card-icon lawn" id="yard-icon-lawn">🌱</div><div class="yard-card-info"><h3>Lawn</h3><p id="lawn-yard-count">Loading...</p></div><div class="yard-card-arrow">›</div></div></div>
   <input type="file" id="section-image-input" accept="image/*" style="display:none" onchange="handleSectionImageUpload(event)">
   <button class="fab" onclick="showAddBedModal()">+</button>
 </div>
@@ -1007,7 +1008,7 @@ function resetToDefaults(){
   location.reload();
 }
 const DATA_VERSION='v9';
-const APP_VERSION='2026-06-05-j';
+const APP_VERSION='2026-06-05-k';
 // GitHub Sync
 const GH_KEYS={user:'gh_username',repo:'gh_repo',token:'gh_token'};
 function ghGet(k){try{return localStorage.getItem(k)||'';}catch(e){return '';}}
@@ -1510,17 +1511,18 @@ function updateHomeCounts(){
 function updateYardCounts(){
   document.getElementById('front-yard-count').textContent=`${S.beds.filter(b=>b.yard==='front').length} beds`;
   document.getElementById('back-yard-count').textContent=`${S.beds.filter(b=>b.yard==='back').length} beds`;
-  ['front','back'].forEach(function(yard){
+  document.getElementById('lawn-yard-count').textContent=`${S.beds.filter(b=>b.yard==='lawn').length} area${S.beds.filter(b=>b.yard==='lawn').length!==1?'s':''}`;
+  ['front','back','lawn'].forEach(function(yard){
     const img=DB.getImg('yard_'+yard);
     const el=document.getElementById('yard-icon-'+yard);
-    if(el){el.innerHTML=img?`<img src="${img}" style="width:100%;height:100%;object-fit:cover;border-radius:14px">`:(yard==='front'?'🏡':'🌿');}
+    if(el){el.innerHTML=img?`<img src="${img}" style="width:100%;height:100%;object-fit:cover;border-radius:14px">`:(yard==='front'?'🏡':yard==='lawn'?'🌱':'🌿');}
   });
 }
 function showYard(yard){
   S.currentYard=yard;
   const beds=S.beds.filter(b=>b.yard===yard).sort((a,b)=>(a.order||99)-(b.order||99));
-  document.getElementById('yard-title').textContent=yard==='front'?'🏡 Front Yard':'🌿 Back Yard';
-  document.getElementById('yard-subtitle').textContent=`${beds.length} beds`;
+  document.getElementById('yard-title').textContent=yard==='front'?'🏡 Front Yard':yard==='lawn'?'🌱 Lawn':'🌿 Back Yard';
+  document.getElementById('yard-subtitle').textContent=`${beds.length} ${yard==='lawn'?'area':'bed'}${beds.length!==1?'s':''}`;
   document.getElementById('yard-beds-list').innerHTML=beds.length===0?'<div class="empty-state"><span>🌱</span><p>No beds yet.</p></div>':
     beds.map(bed=>{
       const c=S.plants.filter(p=>p.bedId===bed.id&&p.status!=='dead').length;
@@ -1530,7 +1532,7 @@ function showYard(yard){
   // Load yard hero
   const heroArea=document.getElementById('yard-hero-area');
   const yardImg=DB.getImg('yard_'+yard);
-  if(heroArea){heroArea.innerHTML=yardImg?`<img src="${yardImg}" style="width:100%;height:100%;object-fit:cover">`:`<span class="room-hero-placeholder">${yard==='front'?'🏡':'🌿'}</span>`;}
+  if(heroArea){heroArea.innerHTML=yardImg?`<img src="${yardImg}" style="width:100%;height:100%;object-fit:cover">`:`<span class="room-hero-placeholder">${yard==='front'?'🏡':yard==='lawn'?'🌱':'🌿'}</span>`;}
   showScreen('yard');
 }
 function renderIndoorRooms(){
@@ -2139,7 +2141,7 @@ function buildAllTasks(month){
   var sfCov={jacks:false,supbloom:false,camellia:false,palm:false,citrus:false,bonemeal:false,
              fruittreewater:false,geraniumdeadhead:false,geraniumcutback:false,
              azalea:false,hydrangea:false,bougainvillacutback:false,berrycanes:false,
-             rosemildew:false,dahliadeadhead:false,distictisprune:false,distictistrain:false};
+             rosemildew:false,dahliadeadhead:false,distictisprune:false,distictistrain:false,grubkiller:false};
   (staticSchedule[month]||[]).forEach(function(t){
     var tl=(t.title+' '+(t.desc||'')).toLowerCase();
     if(tl.includes('jack'))sfCov.jacks=true;
@@ -2159,6 +2161,7 @@ function buildAllTasks(month){
     if(tl.includes('dahlia')&&tl.includes('deadhead'))sfCov.dahliadeadhead=true;
     if(tl.includes('distictis')&&tl.includes('prune'))sfCov.distictisprune=true;
     if(tl.includes('distictis')&&tl.includes('train'))sfCov.distictistrain=true;
+    if(tl.includes('grub'))sfCov.grubkiller=true;
   });
   var outdoorTaskMap={};
   S.plants.forEach(function(plant){
@@ -2189,6 +2192,7 @@ function buildAllTasks(month){
       if(sfCov.dahliadeadhead&&(pn.includes('dahlia')||pc.includes('dahlia'))&&tl.includes('deadhead'))return;
       if(sfCov.distictisprune&&pn.includes('distictis')&&tl.includes('prune'))return;
       if(sfCov.distictistrain&&pn.includes('distictis')&&tl.includes('train'))return;
+      if(sfCov.grubkiller&&pc.includes('lawn')&&tl.includes('grub'))return;
       var key=mItem.task;
       if(!outdoorTaskMap[key]){
         var tp='Maintenance';
