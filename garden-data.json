@@ -2143,746 +2143,6 @@
       "howPlanted": ""
     },
     {
-      "id": "p1778183645573",
-      "bedId": "b-ros",
-      "name": "Potato Vine",
-      "scientific": "Solanum laxum",
-      "emoji": "🌿",
-      "category": "Vines & Climbers",
-      "status": "alive",
-      "water": "Moderate — low once established",
-      "sun": "Full sun to part sun",
-      "notes": "",
-      "fromCutting": false,
-      "maintenance": [
-        {
-          "task": "Train and tie new canes to structure",
-          "months": [
-            3,
-            4,
-            5
-          ]
-        },
-        {
-          "task": "Feed Jack's 20-20-20",
-          "months": [
-            5
-          ]
-        },
-        {
-          "task": "Hard cutback by 1/3 to 1/2 in late winter before new growth",
-          "months": [
-            1,
-            2
-          ]
-        }
-      ],
-      "trouble": []
-    },
-    {
-      "id": "ros-lemon",
-      "bedId": "b-ros",
-      "name": "Dwarf Meyer’s Lemon Tree",
-      "scientific": "Citrus limon dwarf",
-      "emoji": "🍋",
-      "status": "alive",
-      "water": "Every 2 weeks",
-      "sun": "Full sun to part sun",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Existing.",
-      "maintenance": [
-        {
-          "task": "Feed citrus fertilizer",
-          "months": [
-            2,
-            5,
-            8
-          ]
-        },
-        {
-          "task": "Deep water monthly — slow hose at drip line",
-          "months": [
-            3,
-            4,
-            5,
-            6
-          ]
-        },
-        {
-          "task": "Deep water every 2 weeks July-August",
-          "months": [
-            7,
-            8
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Yellowing leaves",
-          "url": "https://www.google.com/search?q=Yellowing%20leaves%20plant%20care%20fix"
-        }
-      ],
-      "category": "Fruit Trees"
-    },
-    {
-      "id": "ros-treerose",
-      "bedId": "b-ros",
-      "name": "Tree Rose - Pink (Sexy Rexy)",
-      "scientific": "Rosa standard",
-      "emoji": "emoji_ros-treerose",
-      "status": "alive",
-      "water": "Deep water weekly",
-      "sun": "Part sun",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Existing standard form rose.",
-      "maintenance": [
-        {
-          "task": "Deadhead roses every 2 weeks — outward facing bud, 45° cut",
-          "months": [
-            4,
-            5,
-            6,
-            7,
-            8,
-            9,
-            10
-          ]
-        },
-        {
-          "task": "Hard cutback annually in January/February",
-          "months": [
-            1,
-            2
-          ]
-        },
-        {
-          "task": "Feed Jack's 20-20-20",
-          "months": [
-            5,
-            6
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Black spot",
-          "url": "https://www.google.com/search?q=Black%20spot%20plant%20care%20fix"
-        }
-      ],
-      "category": "Bush Roses",
-      "howPlanted": ""
-    },
-    {
-      "id": "p1778799611982893",
-      "bedId": "b-ros",
-      "name": "Tree Rose - unknown (second)",
-      "scientific": "Rosa standard",
-      "emoji": "🌹",
-      "status": "alive",
-      "water": "Deep water weekly",
-      "sun": "Part sun",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Existing standard form rose.",
-      "maintenance": [
-        {
-          "task": "Deadhead roses every 2 weeks — outward facing bud, 45° cut",
-          "months": [
-            4,
-            5,
-            6,
-            7,
-            8,
-            9,
-            10
-          ]
-        },
-        {
-          "task": "Hard cutback annually in January/February",
-          "months": [
-            1,
-            2
-          ]
-        },
-        {
-          "task": "Feed Jack's 20-20-20",
-          "months": [
-            5,
-            6
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Black spot",
-          "url": "https://www.google.com/search?q=Black%20spot%20plant%20care%20fix"
-        }
-      ],
-      "category": "Bush Roses",
-      "howPlanted": "",
-      "isIndoor": false
-    },
-    {
-      "id": "p1778799623602268",
-      "bedId": "b-ros",
-      "name": "Tree Rose - orange (Strike it Rich)",
-      "scientific": "Rosa standard",
-      "emoji": "emoji_p1778799623602268",
-      "status": "alive",
-      "water": "Deep water weekly",
-      "sun": "Part sun",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Existing standard form rose.",
-      "maintenance": [
-        {
-          "task": "Deadhead roses every 2 weeks — outward facing bud, 45° cut",
-          "months": [
-            4,
-            5,
-            6,
-            7,
-            8,
-            9,
-            10
-          ]
-        },
-        {
-          "task": "Hard cutback annually in January/February",
-          "months": [
-            1,
-            2
-          ]
-        },
-        {
-          "task": "Feed Jack's 20-20-20",
-          "months": [
-            5,
-            6
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Black spot",
-          "url": "https://www.google.com/search?q=Black%20spot%20plant%20care%20fix"
-        }
-      ],
-      "category": "Bush Roses",
-      "howPlanted": "",
-      "isIndoor": false
-    },
-    {
-      "id": "p17787997919964",
-      "bedId": "b-ros",
-      "name": "Tree Rose - lavender",
-      "scientific": "Rosa standard",
-      "emoji": "emoji_p17787997919964",
-      "status": "alive",
-      "water": "Deep water weekly",
-      "sun": "Part sun",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Existing standard form rose.",
-      "maintenance": [
-        {
-          "task": "Deadhead roses every 2 weeks — outward facing bud, 45° cut",
-          "months": [
-            4,
-            5,
-            6,
-            7,
-            8,
-            9,
-            10
-          ]
-        },
-        {
-          "task": "Hard cutback annually in January/February",
-          "months": [
-            1,
-            2
-          ]
-        },
-        {
-          "task": "Feed Jack's 20-20-20",
-          "months": [
-            5,
-            6
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Black spot",
-          "url": "https://www.google.com/search?q=Black%20spot%20plant%20care%20fix"
-        }
-      ],
-      "category": "Bush Roses",
-      "howPlanted": "",
-      "isIndoor": false
-    },
-    {
-      "id": "p177879979683086",
-      "bedId": "b-ros",
-      "name": "Tree Rose (Dick Clark)",
-      "scientific": "Rosa standard",
-      "emoji": "emoji_p177879979683086",
-      "status": "alive",
-      "water": "Deep water weekly",
-      "sun": "Part sun",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Existing standard form rose.",
-      "maintenance": [
-        {
-          "task": "Deadhead roses every 2 weeks — outward facing bud, 45° cut",
-          "months": [
-            4,
-            5,
-            6,
-            7,
-            8,
-            9,
-            10
-          ]
-        },
-        {
-          "task": "Hard cutback annually in January/February",
-          "months": [
-            1,
-            2
-          ]
-        },
-        {
-          "task": "Feed Jack's 20-20-20",
-          "months": [
-            5,
-            6
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Black spot",
-          "url": "https://www.google.com/search?q=Black%20spot%20plant%20care%20fix"
-        }
-      ],
-      "category": "Bush Roses",
-      "howPlanted": "",
-      "isIndoor": false
-    },
-    {
-      "id": "p1778799801113570",
-      "bedId": "b-ros",
-      "name": "Tree Rose  (Scentimental)",
-      "scientific": "Rosa standard",
-      "emoji": "emoji_p1778799801113570",
-      "status": "alive",
-      "water": "Deep water weekly",
-      "sun": "Part sun",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Existing standard form rose.",
-      "maintenance": [
-        {
-          "task": "Deadhead roses every 2 weeks — outward facing bud, 45° cut",
-          "months": [
-            4,
-            5,
-            6,
-            7,
-            8,
-            9,
-            10
-          ]
-        },
-        {
-          "task": "Hard cutback annually in January/February",
-          "months": [
-            1,
-            2
-          ]
-        },
-        {
-          "task": "Feed Jack's 20-20-20",
-          "months": [
-            5,
-            6
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Black spot",
-          "url": "https://www.google.com/search?q=Black%20spot%20plant%20care%20fix"
-        }
-      ],
-      "category": "Bush Roses",
-      "howPlanted": "",
-      "isIndoor": false
-    },
-    {
-      "id": "p1778800032324516",
-      "bedId": "b-ros",
-      "name": "Tree Rose - red",
-      "scientific": "Rosa standard",
-      "emoji": "emoji_p1778800032324516",
-      "status": "alive",
-      "water": "Deep water weekly",
-      "sun": "Part sun",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Existing standard form rose.",
-      "maintenance": [
-        {
-          "task": "Deadhead roses every 2 weeks — outward facing bud, 45° cut",
-          "months": [
-            4,
-            5,
-            6,
-            7,
-            8,
-            9,
-            10
-          ]
-        },
-        {
-          "task": "Hard cutback annually in January/February",
-          "months": [
-            1,
-            2
-          ]
-        },
-        {
-          "task": "Feed Jack's 20-20-20",
-          "months": [
-            5,
-            6
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Black spot",
-          "url": "https://www.google.com/search?q=Black%20spot%20plant%20care%20fix"
-        }
-      ],
-      "category": "Bush Roses",
-      "howPlanted": "",
-      "isIndoor": false
-    },
-    {
-      "id": "p1778800074164216",
-      "bedId": "b-ros",
-      "name": "Tree Rose - peach (Just Joey)",
-      "scientific": "Rosa standard",
-      "emoji": "emoji_p1778800074164216",
-      "status": "alive",
-      "water": "Deep water weekly",
-      "sun": "Part sun",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Existing standard form rose.",
-      "maintenance": [
-        {
-          "task": "Deadhead roses every 2 weeks — outward facing bud, 45° cut",
-          "months": [
-            4,
-            5,
-            6,
-            7,
-            8,
-            9,
-            10
-          ]
-        },
-        {
-          "task": "Hard cutback annually in January/February",
-          "months": [
-            1,
-            2
-          ]
-        },
-        {
-          "task": "Feed Jack's 20-20-20",
-          "months": [
-            5,
-            6
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Black spot",
-          "url": "https://www.google.com/search?q=Black%20spot%20plant%20care%20fix"
-        }
-      ],
-      "category": "Bush Roses",
-      "howPlanted": "",
-      "isIndoor": false
-    },
-    {
-      "id": "ros-flowercarpet",
-      "bedId": "b-ros",
-      "name": "Carpet Rose",
-      "scientific": "Rosa Flower Carpet",
-      "emoji": "🌹",
-      "status": "alive",
-      "water": "Moderate",
-      "sun": "Part sun",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Existing ground cover rose.",
-      "maintenance": [
-        {
-          "task": "Deadhead roses every 2 weeks — outward facing bud, 45° cut",
-          "months": [
-            4,
-            5,
-            6,
-            7,
-            8,
-            9,
-            10
-          ]
-        },
-        {
-          "task": "Light trim to tidy in February",
-          "months": [
-            2
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Black spot",
-          "url": "https://www.google.com/search?q=Black%20spot%20plant%20care%20fix"
-        }
-      ],
-      "category": "Bush Roses",
-      "howPlanted": ""
-    },
-    {
-      "id": "ros-lantana",
-      "bedId": "b-ros",
-      "name": "Yellow Lantana",
-      "scientific": "Lantana camara",
-      "emoji": "🌼",
-      "status": "alive",
-      "category": "Perennials",
-      "water": "Low once established",
-      "sun": "Full sun",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Yellow flower clusters. Long blooming season.",
-      "maintenance": [
-        {
-          "task": "Hard cutback annually in January/February",
-          "months": [
-            2
-          ]
-        },
-        {
-          "task": "Deadhead spent blooms daily during peak bloom",
-          "months": [
-            5,
-            6,
-            7,
-            8,
-            9
-          ]
-        }
-      ],
-      "trouble": []
-    },
-    {
-      "id": "ros-lavender",
-      "bedId": "b-ros",
-      "name": "English Lavender",
-      "scientific": "Lavandula angustifolia",
-      "emoji": "💜",
-      "status": "alive",
-      "category": "Herbs",
-      "water": "Low once established",
-      "sun": "Full sun",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "",
-      "maintenance": [
-        {
-          "task": "Cut back by 1/3 after first bloom flush",
-          "months": [
-            7
-          ]
-        },
-        {
-          "task": "Feed Jack's 20-20-20",
-          "months": [
-            3
-          ]
-        }
-      ],
-      "trouble": []
-    },
-    {
-      "id": "p1778514288212",
-      "bedId": "b-ros",
-      "name": "Caroline Cherry",
-      "scientific": "Prunus Caroliniana",
-      "emoji": "🌳",
-      "category": "Trees",
-      "status": "alive",
-      "water": "",
-      "sun": "",
-      "notes": "",
-      "fromCutting": false,
-      "maintenance": [
-        {
-          "task": "Deep water monthly — slow hose at drip line",
-          "months": [
-            6,
-            7,
-            8,
-            9
-          ]
-        },
-        {
-          "task": "Feed Jack's 20-20-20",
-          "months": [
-            3
-          ]
-        },
-        {
-          "task": "Remove dead/crossing branches",
-          "months": [
-            1,
-            2
-          ]
-        }
-      ],
-      "trouble": [],
-      "datePlanted": "",
-      "howPlanted": ""
-    },
-    {
-      "id": "p177977020573752",
-      "bedId": "b-ros",
-      "name": "Camphor Tree",
-      "scientific": "Cinnamomum camphora",
-      "emoji": "🌳",
-      "status": "alive",
-      "water": "Low once established",
-      "sun": "Part shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Existing large tree.",
-      "maintenance": [
-        {
-          "task": "No pruning needed",
-          "months": [
-            1
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Root invasion",
-          "url": "https://www.google.com/search?q=Root%20invasion%20plant%20care%20fix"
-        }
-      ],
-      "category": "Trees",
-      "isIndoor": false
-    },
-    {
-      "id": "ros-peruvian",
-      "bedId": "b-ros",
-      "name": "Peruvian Lily",
-      "scientific": "Alstroemeria spp.",
-      "emoji": "🌸",
-      "status": "alive",
-      "water": "Moderate",
-      "sun": "Part sun",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Existing. Long-lasting cut flowers.",
-      "maintenance": [
-        {
-          "task": "Deadhead at base — pull stem out, do not cut",
-          "months": [
-            4,
-            5,
-            6,
-            7,
-            8,
-            9
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Not flowering",
-          "url": "https://www.google.com/search?q=Not%20flowering%20plant%20care%20fix"
-        }
-      ],
-      "category": "Bulbs"
-    },
-    {
-      "id": "ros-daylily",
-      "bedId": "b-ros",
-      "name": "Day Lilies",
-      "scientific": "Hemerocallis",
-      "emoji": "🌸",
-      "status": "alive",
-      "category": "Perennials",
-      "water": "Moderate",
-      "sun": "Full sun to part shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "",
-      "maintenance": [
-        {
-          "task": "Deadhead spent blooms daily during peak bloom",
-          "months": [
-            6,
-            7,
-            8
-          ]
-        },
-        {
-          "task": "Divide clumps every 3-4 years",
-          "months": [
-            9
-          ]
-        },
-        {
-          "task": "Feed Jack's 20-20-20",
-          "months": [
-            3,
-            4
-          ]
-        }
-      ],
-      "trouble": []
-    },
-    {
       "id": "sa-bougainvillea",
       "bedId": "b-sa",
       "name": "Bougainvillea",
@@ -8082,71 +7342,6 @@
       ]
     },
     {
-      "id": "ros-purple-lantana",
-      "bedId": "b-ros",
-      "name": "Purple Creeping Lantana",
-      "scientific": "Lantana montevidensis",
-      "category": "Perennials",
-      "status": "alive",
-      "datePlanted": "2026-06-20",
-      "sun": "Full sun",
-      "water": "Low to moderate",
-      "notes": "Ground cover lantana. Drought tolerant once established.",
-      "nursery": "",
-      "emoji": "🌸",
-      "fromCutting": false,
-      "trouble": [
-        {
-          "issue": "Lace bugs",
-          "url": "https://www.google.com/search?q=Lace%20bugs%20plant%20care%20fix"
-        }
-      ],
-      "maintenance": [
-        {
-          "task": "Deadhead to encourage continuous bloom",
-          "months": [
-            5,
-            6,
-            7,
-            8,
-            9,
-            10
-          ]
-        },
-        {
-          "task": "Prune hard to shape in early spring",
-          "months": [
-            3
-          ]
-        },
-        {
-          "task": "Light feed after spring pruning",
-          "months": [
-            3,
-            4
-          ]
-        },
-        {
-          "task": "Water regularly to establish — first summer",
-          "months": [
-            6,
-            7,
-            8,
-            9
-          ]
-        },
-        {
-          "task": "Monitor for lace bugs — neem oil if spotted",
-          "months": [
-            6,
-            7,
-            8,
-            9
-          ]
-        }
-      ]
-    },
-    {
       "id": "lawn-grass",
       "bedId": "b-lawn",
       "name": "Lawn",
@@ -8793,6 +7988,811 @@
       ],
       "trouble": [],
       "howPlanted": ""
+    },
+    {
+      "id": "p1778183645573",
+      "bedId": "b-ros",
+      "name": "Potato Vine",
+      "scientific": "Solanum laxum",
+      "emoji": "🌿",
+      "category": "Vines & Climbers",
+      "status": "alive",
+      "water": "Moderate — low once established",
+      "sun": "Full sun to part sun",
+      "notes": "",
+      "fromCutting": false,
+      "maintenance": [
+        {
+          "task": "Train and tie new canes to structure",
+          "months": [
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "task": "Feed Jack's 20-20-20",
+          "months": [
+            5
+          ]
+        },
+        {
+          "task": "Hard cutback by 1/3 to 1/2 in late winter before new growth",
+          "months": [
+            1,
+            2
+          ]
+        }
+      ],
+      "trouble": []
+    },
+    {
+      "id": "ros-lemon",
+      "bedId": "b-ros",
+      "name": "Dwarf Meyer’s Lemon Tree",
+      "scientific": "Citrus limon dwarf",
+      "emoji": "🍋",
+      "status": "alive",
+      "water": "Every 2 weeks",
+      "sun": "Full sun to part sun",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Existing.",
+      "maintenance": [
+        {
+          "task": "Feed citrus fertilizer",
+          "months": [
+            2,
+            5,
+            8
+          ]
+        },
+        {
+          "task": "Deep water monthly — slow hose at drip line",
+          "months": [
+            3,
+            4,
+            5,
+            6
+          ]
+        },
+        {
+          "task": "Deep water every 2 weeks July-August",
+          "months": [
+            7,
+            8
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Yellowing leaves",
+          "url": "https://www.google.com/search?q=Yellowing%20leaves%20plant%20care%20fix"
+        }
+      ],
+      "category": "Fruit Trees"
+    },
+    {
+      "id": "ros-treerose",
+      "bedId": "b-ros",
+      "name": "Tree Rose - Pink (Sexy Rexy)",
+      "scientific": "Rosa standard",
+      "emoji": "emoji_ros-treerose",
+      "status": "alive",
+      "water": "Deep water weekly",
+      "sun": "Part sun",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Existing standard form rose.",
+      "maintenance": [
+        {
+          "task": "Deadhead roses every 2 weeks — outward facing bud, 45° cut",
+          "months": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "task": "Hard cutback annually in January/February",
+          "months": [
+            1,
+            2
+          ]
+        },
+        {
+          "task": "Feed Jack's 20-20-20",
+          "months": [
+            5,
+            6
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Black spot",
+          "url": "https://www.google.com/search?q=Black%20spot%20plant%20care%20fix"
+        }
+      ],
+      "category": "Bush Roses",
+      "howPlanted": ""
+    },
+    {
+      "id": "p1778799611982893",
+      "bedId": "b-ros",
+      "name": "Tree Rose - unknown (second)",
+      "scientific": "Rosa standard",
+      "emoji": "🌹",
+      "status": "alive",
+      "water": "Deep water weekly",
+      "sun": "Part sun",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Existing standard form rose.",
+      "maintenance": [
+        {
+          "task": "Deadhead roses every 2 weeks — outward facing bud, 45° cut",
+          "months": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "task": "Hard cutback annually in January/February",
+          "months": [
+            1,
+            2
+          ]
+        },
+        {
+          "task": "Feed Jack's 20-20-20",
+          "months": [
+            5,
+            6
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Black spot",
+          "url": "https://www.google.com/search?q=Black%20spot%20plant%20care%20fix"
+        }
+      ],
+      "category": "Bush Roses",
+      "howPlanted": "",
+      "isIndoor": false
+    },
+    {
+      "id": "p1778799623602268",
+      "bedId": "b-ros",
+      "name": "Tree Rose - orange (Strike it Rich)",
+      "scientific": "Rosa standard",
+      "emoji": "emoji_p1778799623602268",
+      "status": "alive",
+      "water": "Deep water weekly",
+      "sun": "Part sun",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Existing standard form rose.",
+      "maintenance": [
+        {
+          "task": "Deadhead roses every 2 weeks — outward facing bud, 45° cut",
+          "months": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "task": "Hard cutback annually in January/February",
+          "months": [
+            1,
+            2
+          ]
+        },
+        {
+          "task": "Feed Jack's 20-20-20",
+          "months": [
+            5,
+            6
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Black spot",
+          "url": "https://www.google.com/search?q=Black%20spot%20plant%20care%20fix"
+        }
+      ],
+      "category": "Bush Roses",
+      "howPlanted": "",
+      "isIndoor": false
+    },
+    {
+      "id": "p17787997919964",
+      "bedId": "b-ros",
+      "name": "Tree Rose - lavender",
+      "scientific": "Rosa standard",
+      "emoji": "emoji_p17787997919964",
+      "status": "alive",
+      "water": "Deep water weekly",
+      "sun": "Part sun",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Existing standard form rose.",
+      "maintenance": [
+        {
+          "task": "Deadhead roses every 2 weeks — outward facing bud, 45° cut",
+          "months": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "task": "Hard cutback annually in January/February",
+          "months": [
+            1,
+            2
+          ]
+        },
+        {
+          "task": "Feed Jack's 20-20-20",
+          "months": [
+            5,
+            6
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Black spot",
+          "url": "https://www.google.com/search?q=Black%20spot%20plant%20care%20fix"
+        }
+      ],
+      "category": "Bush Roses",
+      "howPlanted": "",
+      "isIndoor": false
+    },
+    {
+      "id": "p177879979683086",
+      "bedId": "b-ros",
+      "name": "Tree Rose (Dick Clark)",
+      "scientific": "Rosa standard",
+      "emoji": "emoji_p177879979683086",
+      "status": "alive",
+      "water": "Deep water weekly",
+      "sun": "Part sun",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Existing standard form rose.",
+      "maintenance": [
+        {
+          "task": "Deadhead roses every 2 weeks — outward facing bud, 45° cut",
+          "months": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "task": "Hard cutback annually in January/February",
+          "months": [
+            1,
+            2
+          ]
+        },
+        {
+          "task": "Feed Jack's 20-20-20",
+          "months": [
+            5,
+            6
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Black spot",
+          "url": "https://www.google.com/search?q=Black%20spot%20plant%20care%20fix"
+        }
+      ],
+      "category": "Bush Roses",
+      "howPlanted": "",
+      "isIndoor": false
+    },
+    {
+      "id": "p1778799801113570",
+      "bedId": "b-ros",
+      "name": "Tree Rose  (Scentimental)",
+      "scientific": "Rosa standard",
+      "emoji": "emoji_p1778799801113570",
+      "status": "alive",
+      "water": "Deep water weekly",
+      "sun": "Part sun",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Existing standard form rose.",
+      "maintenance": [
+        {
+          "task": "Deadhead roses every 2 weeks — outward facing bud, 45° cut",
+          "months": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "task": "Hard cutback annually in January/February",
+          "months": [
+            1,
+            2
+          ]
+        },
+        {
+          "task": "Feed Jack's 20-20-20",
+          "months": [
+            5,
+            6
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Black spot",
+          "url": "https://www.google.com/search?q=Black%20spot%20plant%20care%20fix"
+        }
+      ],
+      "category": "Bush Roses",
+      "howPlanted": "",
+      "isIndoor": false
+    },
+    {
+      "id": "p1778800032324516",
+      "bedId": "b-ros",
+      "name": "Tree Rose - red",
+      "scientific": "Rosa standard",
+      "emoji": "emoji_p1778800032324516",
+      "status": "alive",
+      "water": "Deep water weekly",
+      "sun": "Part sun",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Existing standard form rose.",
+      "maintenance": [
+        {
+          "task": "Deadhead roses every 2 weeks — outward facing bud, 45° cut",
+          "months": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "task": "Hard cutback annually in January/February",
+          "months": [
+            1,
+            2
+          ]
+        },
+        {
+          "task": "Feed Jack's 20-20-20",
+          "months": [
+            5,
+            6
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Black spot",
+          "url": "https://www.google.com/search?q=Black%20spot%20plant%20care%20fix"
+        }
+      ],
+      "category": "Bush Roses",
+      "howPlanted": "",
+      "isIndoor": false
+    },
+    {
+      "id": "p1778800074164216",
+      "bedId": "b-ros",
+      "name": "Tree Rose - peach (Just Joey)",
+      "scientific": "Rosa standard",
+      "emoji": "emoji_p1778800074164216",
+      "status": "alive",
+      "water": "Deep water weekly",
+      "sun": "Part sun",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Existing standard form rose.",
+      "maintenance": [
+        {
+          "task": "Deadhead roses every 2 weeks — outward facing bud, 45° cut",
+          "months": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "task": "Hard cutback annually in January/February",
+          "months": [
+            1,
+            2
+          ]
+        },
+        {
+          "task": "Feed Jack's 20-20-20",
+          "months": [
+            5,
+            6
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Black spot",
+          "url": "https://www.google.com/search?q=Black%20spot%20plant%20care%20fix"
+        }
+      ],
+      "category": "Bush Roses",
+      "howPlanted": "",
+      "isIndoor": false
+    },
+    {
+      "id": "ros-flowercarpet",
+      "bedId": "b-ros",
+      "name": "Carpet Rose",
+      "scientific": "Rosa Flower Carpet",
+      "emoji": "🌹",
+      "status": "alive",
+      "water": "Moderate",
+      "sun": "Part sun",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Existing ground cover rose.",
+      "maintenance": [
+        {
+          "task": "Deadhead roses every 2 weeks — outward facing bud, 45° cut",
+          "months": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "task": "Light trim to tidy in February",
+          "months": [
+            2
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Black spot",
+          "url": "https://www.google.com/search?q=Black%20spot%20plant%20care%20fix"
+        }
+      ],
+      "category": "Bush Roses",
+      "howPlanted": ""
+    },
+    {
+      "id": "ros-lantana",
+      "bedId": "b-ros",
+      "name": "Yellow Lantana",
+      "scientific": "Lantana camara",
+      "emoji": "🌼",
+      "status": "alive",
+      "category": "Perennials",
+      "water": "Low once established",
+      "sun": "Full sun",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Yellow flower clusters. Long blooming season.",
+      "maintenance": [
+        {
+          "task": "Hard cutback annually in January/February",
+          "months": [
+            2
+          ]
+        },
+        {
+          "task": "Deadhead spent blooms daily during peak bloom",
+          "months": [
+            5,
+            6,
+            7,
+            8,
+            9
+          ]
+        }
+      ],
+      "trouble": []
+    },
+    {
+      "id": "ros-lavender",
+      "bedId": "b-ros",
+      "name": "English Lavender",
+      "scientific": "Lavandula angustifolia",
+      "emoji": "💜",
+      "status": "alive",
+      "category": "Herbs",
+      "water": "Low once established",
+      "sun": "Full sun",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "",
+      "maintenance": [
+        {
+          "task": "Cut back by 1/3 after first bloom flush",
+          "months": [
+            7
+          ]
+        },
+        {
+          "task": "Feed Jack's 20-20-20",
+          "months": [
+            3
+          ]
+        }
+      ],
+      "trouble": []
+    },
+    {
+      "id": "p1778514288212",
+      "bedId": "b-ros",
+      "name": "Caroline Cherry",
+      "scientific": "Prunus Caroliniana",
+      "emoji": "🌳",
+      "category": "Trees",
+      "status": "alive",
+      "water": "",
+      "sun": "",
+      "notes": "",
+      "fromCutting": false,
+      "maintenance": [
+        {
+          "task": "Deep water monthly — slow hose at drip line",
+          "months": [
+            6,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "task": "Feed Jack's 20-20-20",
+          "months": [
+            3
+          ]
+        },
+        {
+          "task": "Remove dead/crossing branches",
+          "months": [
+            1,
+            2
+          ]
+        }
+      ],
+      "trouble": [],
+      "datePlanted": "",
+      "howPlanted": ""
+    },
+    {
+      "id": "ros-purple-lantana",
+      "bedId": "b-ros",
+      "name": "Purple Creeping Lantana",
+      "scientific": "Lantana montevidensis",
+      "category": "Perennials",
+      "status": "alive",
+      "datePlanted": "2026-06-20",
+      "sun": "Full sun",
+      "water": "Low to moderate",
+      "notes": "Ground cover lantana. Drought tolerant once established.",
+      "nursery": "",
+      "emoji": "🌸",
+      "fromCutting": false,
+      "trouble": [
+        {
+          "issue": "Lace bugs",
+          "url": "https://www.google.com/search?q=Lace%20bugs%20plant%20care%20fix"
+        }
+      ],
+      "maintenance": [
+        {
+          "task": "Deadhead to encourage continuous bloom",
+          "months": [
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "task": "Prune hard to shape in early spring",
+          "months": [
+            3
+          ]
+        },
+        {
+          "task": "Light feed after spring pruning",
+          "months": [
+            3,
+            4
+          ]
+        },
+        {
+          "task": "Water regularly to establish — first summer",
+          "months": [
+            6,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "task": "Monitor for lace bugs — neem oil if spotted",
+          "months": [
+            6,
+            7,
+            8,
+            9
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p177977020573752",
+      "bedId": "b-ros",
+      "name": "Camphor Tree",
+      "scientific": "Cinnamomum camphora",
+      "emoji": "🌳",
+      "status": "alive",
+      "water": "Low once established",
+      "sun": "Part shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Existing large tree.",
+      "maintenance": [
+        {
+          "task": "No pruning needed",
+          "months": [
+            1
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Root invasion",
+          "url": "https://www.google.com/search?q=Root%20invasion%20plant%20care%20fix"
+        }
+      ],
+      "category": "Trees",
+      "isIndoor": false
+    },
+    {
+      "id": "ros-peruvian",
+      "bedId": "b-ros",
+      "name": "Peruvian Lily",
+      "scientific": "Alstroemeria spp.",
+      "emoji": "🌸",
+      "status": "alive",
+      "water": "Moderate",
+      "sun": "Part sun",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Existing. Long-lasting cut flowers.",
+      "maintenance": [
+        {
+          "task": "Deadhead at base — pull stem out, do not cut",
+          "months": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Not flowering",
+          "url": "https://www.google.com/search?q=Not%20flowering%20plant%20care%20fix"
+        }
+      ],
+      "category": "Bulbs"
+    },
+    {
+      "id": "ros-daylily",
+      "bedId": "b-ros",
+      "name": "Day Lilies",
+      "scientific": "Hemerocallis",
+      "emoji": "🌸",
+      "status": "alive",
+      "category": "Perennials",
+      "water": "Moderate",
+      "sun": "Full sun to part shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "",
+      "maintenance": [
+        {
+          "task": "Deadhead spent blooms daily during peak bloom",
+          "months": [
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "task": "Divide clumps every 3-4 years",
+          "months": [
+            9
+          ]
+        },
+        {
+          "task": "Feed Jack's 20-20-20",
+          "months": [
+            3,
+            4
+          ]
+        }
+      ],
+      "trouble": []
     }
   ],
   "indoorPlants": [
@@ -11373,5 +11373,5 @@
       "pg_Prune heavily after flowering in spring to maintain shape": true
     }
   },
-  "syncedAt": "2026-06-21T23:17:45.053Z"
+  "syncedAt": "2026-06-21T23:18:21.796Z"
 }
