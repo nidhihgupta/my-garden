@@ -7668,6 +7668,54 @@
       "howPlanted": ""
     },
     {
+      "id": "ps-tickseed",
+      "bedId": "b-berry",
+      "name": "Tickseed",
+      "scientific": "Coreopsis verticillata",
+      "category": "Perennials",
+      "status": "alive",
+      "datePlanted": "2026-06-20",
+      "sun": "Full sun",
+      "water": "Low to moderate",
+      "notes": "Yellow variety. Next to Shasta Daisy.",
+      "nursery": "",
+      "emoji": "🌼",
+      "fromCutting": false,
+      "trouble": [],
+      "maintenance": [
+        {
+          "task": "Deadhead spent blooms to extend flowering",
+          "months": [
+            5,
+            6,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "task": "Cut back hard after main flowering flush",
+          "months": [
+            9,
+            10
+          ]
+        },
+        {
+          "task": "Divide clumps every 2-3 years in spring",
+          "months": [
+            3
+          ]
+        },
+        {
+          "task": "Light feed in spring",
+          "months": [
+            3,
+            4
+          ]
+        }
+      ]
+    },
+    {
       "id": "p1779820722407605",
       "bedId": "b-berry",
       "name": "Day Lilies",
@@ -7804,54 +7852,6 @@
       ],
       "category": "Perennials",
       "isIndoor": false
-    },
-    {
-      "id": "ps-tickseed",
-      "bedId": "b-berry",
-      "name": "Tickseed",
-      "scientific": "Coreopsis verticillata",
-      "category": "Perennials",
-      "status": "alive",
-      "datePlanted": "2026-06-20",
-      "sun": "Full sun",
-      "water": "Low to moderate",
-      "notes": "Yellow variety. Next to Shasta Daisy.",
-      "nursery": "",
-      "emoji": "🌼",
-      "fromCutting": false,
-      "trouble": [],
-      "maintenance": [
-        {
-          "task": "Deadhead spent blooms to extend flowering",
-          "months": [
-            5,
-            6,
-            7,
-            8,
-            9
-          ]
-        },
-        {
-          "task": "Cut back hard after main flowering flush",
-          "months": [
-            9,
-            10
-          ]
-        },
-        {
-          "task": "Divide clumps every 2-3 years in spring",
-          "months": [
-            3
-          ]
-        },
-        {
-          "task": "Light feed in spring",
-          "months": [
-            3,
-            4
-          ]
-        }
-      ]
     },
     {
       "id": "ps-orange",
@@ -11373,5 +11373,5 @@
       "pg_Prune heavily after flowering in spring to maintain shape": true
     }
   },
-  "syncedAt": "2026-06-21T23:20:02.649Z"
+  "syncedAt": "2026-06-21T23:20:07.317Z"
 }
