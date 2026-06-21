@@ -6285,7 +6285,7 @@
       "trouble": [],
       "maintenance": [
         {
-          "task": "Deadhead spent blooms to extend flowering",
+          "task": "Deadhead spent blooms",
           "months": [
             5,
             6,
@@ -6295,7 +6295,7 @@
           ]
         },
         {
-          "task": "Cut back hard after main flowering flush",
+          "task": "Cut back hard after flowering",
           "months": [
             9,
             10
@@ -6308,7 +6308,7 @@
           ]
         },
         {
-          "task": "Light feed in spring",
+          "task": "Feed in spring",
           "months": [
             3,
             4
@@ -6404,14 +6404,14 @@
           ]
         },
         {
-          "task": "Hard cutback — shorten laterals to 2-3 buds, remove dead wood entirely",
+          "task": "Hard cutback annually in January/February",
           "months": [
             1,
             2
           ]
         },
         {
-          "task": "Feed Jack's 20-20-20 after bloom flush",
+          "task": "Feed Jack's 20-20-20",
           "months": [
             5,
             6
@@ -7733,7 +7733,7 @@
       "trouble": [],
       "maintenance": [
         {
-          "task": "Deadhead spent blooms to extend flowering",
+          "task": "Deadhead spent blooms",
           "months": [
             5,
             6,
@@ -7743,7 +7743,7 @@
           ]
         },
         {
-          "task": "Cut back hard after main flowering flush",
+          "task": "Cut back hard after flowering",
           "months": [
             9,
             10
@@ -7756,7 +7756,7 @@
           ]
         },
         {
-          "task": "Light feed in spring",
+          "task": "Feed in spring",
           "months": [
             3,
             4
@@ -8048,7 +8048,7 @@
       "trouble": [],
       "maintenance": [
         {
-          "task": "Water to establish — first summer",
+          "task": "Water regularly to establish — first summer",
           "months": [
             6,
             7,
@@ -8604,7 +8604,7 @@
           ]
         },
         {
-          "task": "Remove dead rosettes and spent flower stalks",
+          "task": "Remove dead rosettes",
           "months": [
             3,
             4,
@@ -8697,7 +8697,7 @@
           ]
         },
         {
-          "task": "Remove dead rosettes and spent flower stalks",
+          "task": "Remove dead rosettes",
           "months": [
             3,
             4,
