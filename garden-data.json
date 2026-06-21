@@ -10786,9 +10786,9 @@
       "pg_Cut back by 1/3 after first bloom flush": true,
       "pg_Light trim after flowering": true,
       "ig_Feed monthly spring-summer": true,
-      "ig_Feed every 2 weeks spring-summer": true,
+      "ig_Feed every 2 weeks spring-summer": false,
       "ig_Feed cactus fertilizer spring-summer": true,
-      "ig_Feed orchid fertilizer every 2 weeks": true,
+      "ig_Feed orchid fertilizer every 2 weeks": false,
       "pg_Deadhead spent blooms daily during peak bloom": true,
       "pg_Train new growth onto wall immediately as it pushes": true,
       "pg_Wipe leaves monthly": true,
@@ -10812,5 +10812,5 @@
       "pg_Prune heavily after flowering in spring to maintain shape": true
     }
   },
-  "syncedAt": "2026-06-21T15:36:48.614Z"
+  "syncedAt": "2026-06-21T15:38:32.550Z"
 }
