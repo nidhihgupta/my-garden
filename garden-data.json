@@ -8133,6 +8133,40 @@
       "isIndoor": false
     },
     {
+      "id": "ps-myoporum",
+      "bedId": "b-berry",
+      "name": "Myoporum",
+      "scientific": "Myoporum parvifolium",
+      "category": "Groundcovers",
+      "status": "alive",
+      "datePlanted": "2026-06-20",
+      "sun": "Full sun",
+      "water": "Low to moderate",
+      "notes": "Ground cover. Next to woolly thyme.",
+      "nursery": "",
+      "emoji": "🌿",
+      "fromCutting": false,
+      "trouble": [],
+      "maintenance": [
+        {
+          "task": "Water regularly to establish — first summer",
+          "months": [
+            6,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "task": "Trim if spreading beyond bounds",
+          "months": [
+            3,
+            4
+          ]
+        }
+      ]
+    },
+    {
       "id": "p1778614808924",
       "bedId": "b-berry",
       "name": "Peas",
@@ -8247,40 +8281,6 @@
       ],
       "category": "Berries",
       "howPlanted": ""
-    },
-    {
-      "id": "ps-myoporum",
-      "bedId": "b-berry",
-      "name": "Myoporum",
-      "scientific": "Myoporum parvifolium",
-      "category": "Groundcovers",
-      "status": "alive",
-      "datePlanted": "2026-06-20",
-      "sun": "Full sun",
-      "water": "Low to moderate",
-      "notes": "Ground cover. Next to woolly thyme.",
-      "nursery": "",
-      "emoji": "🌿",
-      "fromCutting": false,
-      "trouble": [],
-      "maintenance": [
-        {
-          "task": "Water regularly to establish — first summer",
-          "months": [
-            6,
-            7,
-            8,
-            9
-          ]
-        },
-        {
-          "task": "Trim if spreading beyond bounds",
-          "months": [
-            3,
-            4
-          ]
-        }
-      ]
     },
     {
       "id": "ps-dymondia",
@@ -11373,5 +11373,5 @@
       "pg_Prune heavily after flowering in spring to maintain shape": true
     }
   },
-  "syncedAt": "2026-06-21T23:20:58.811Z"
+  "syncedAt": "2026-06-21T23:21:03.897Z"
 }
