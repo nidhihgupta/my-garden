@@ -11411,8 +11411,9 @@
       "ig_Remove damaged/sunburnt leaves": true,
       "pg_Cut back by half after first bloom flush": true,
       "pg_Cut back new side shoots to 5 leaves — do NOT cut main structural canes": true,
-      "pg_Prune heavily after flowering in spring to maintain shape": true
+      "pg_Prune heavily after flowering in spring to maintain shape": true,
+      "pg_Pinch tips regularly to encourage bushy, compact growth": true
     }
   },
-  "syncedAt": "2026-06-21T23:24:53.574Z"
+  "syncedAt": "2026-06-21T23:27:47.539Z"
 }
