@@ -8793,6 +8793,47 @@
       ],
       "category": "Fruit Trees",
       "howPlanted": ""
+    },
+    {
+      "id": "p1782084160246486",
+      "bedId": "b-stump",
+      "name": "Aeonium Zwartkop",
+      "scientific": "Aeonium arboreum Zwartkop",
+      "emoji": "emoji_st-aeonium",
+      "status": "alive",
+      "water": "Low — drought tolerant",
+      "sun": "Full sun",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Dark rosettes against pool blue.",
+      "maintenance": [
+        {
+          "task": "Water deeply monthly in summer",
+          "months": [
+            6,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "task": "Remove dead rosettes",
+          "months": [
+            3,
+            4,
+            5
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Etiolation",
+          "url": "https://www.google.com/search?q=Etiolation%20plant%20care%20fix"
+        }
+      ],
+      "category": "Succulents & Cacti",
+      "isIndoor": false
     }
   ],
   "indoorPlants": [
@@ -11373,5 +11414,5 @@
       "pg_Prune heavily after flowering in spring to maintain shape": true
     }
   },
-  "syncedAt": "2026-06-21T23:21:35.326Z"
+  "syncedAt": "2026-06-21T23:22:43.769Z"
 }
