@@ -8562,6 +8562,58 @@
       ]
     },
     {
+      "id": "ps-aeonium-salad",
+      "bedId": "b-berry",
+      "name": "Aeonium Salad Bowl",
+      "scientific": "Aeonium 'Salad Bowl'",
+      "category": "Succulents & Cacti",
+      "status": "alive",
+      "datePlanted": "2026-06-21",
+      "sun": "Full sun to part shade",
+      "water": "Low",
+      "notes": "Winter grower — goes dormant in summer heat. Growth resumes in fall.",
+      "nursery": "",
+      "emoji": "🌿",
+      "fromCutting": false,
+      "trouble": [],
+      "maintenance": [
+        {
+          "task": "Water every 10-14 days — newly planted, establishing; reduce once settled",
+          "months": [
+            6,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "task": "Water regularly — active winter growing season",
+          "months": [
+            10,
+            11,
+            12,
+            1,
+            2
+          ]
+        },
+        {
+          "task": "Feed diluted Jack's 20-20-20 or Miracle-Gro half strength — fall growing season begins",
+          "months": [
+            10,
+            11
+          ]
+        },
+        {
+          "task": "Remove dead rosettes and spent flower stalks",
+          "months": [
+            3,
+            4,
+            5
+          ]
+        }
+      ]
+    },
+    {
       "id": "ps-aeonium-blushing",
       "bedId": "b-berry",
       "name": "Aeonium Blushing Beauty",
@@ -8690,58 +8742,6 @@
       "trouble": [],
       "datePlanted": "",
       "howPlanted": ""
-    },
-    {
-      "id": "ps-aeonium-salad",
-      "bedId": "b-berry",
-      "name": "Aeonium Salad Bowl",
-      "scientific": "Aeonium 'Salad Bowl'",
-      "category": "Succulents & Cacti",
-      "status": "alive",
-      "datePlanted": "2026-06-21",
-      "sun": "Full sun to part shade",
-      "water": "Low",
-      "notes": "Winter grower — goes dormant in summer heat. Growth resumes in fall.",
-      "nursery": "",
-      "emoji": "🌿",
-      "fromCutting": false,
-      "trouble": [],
-      "maintenance": [
-        {
-          "task": "Water every 10-14 days — newly planted, establishing; reduce once settled",
-          "months": [
-            6,
-            7,
-            8,
-            9
-          ]
-        },
-        {
-          "task": "Water regularly — active winter growing season",
-          "months": [
-            10,
-            11,
-            12,
-            1,
-            2
-          ]
-        },
-        {
-          "task": "Feed diluted Jack's 20-20-20 or Miracle-Gro half strength — fall growing season begins",
-          "months": [
-            10,
-            11
-          ]
-        },
-        {
-          "task": "Remove dead rosettes and spent flower stalks",
-          "months": [
-            3,
-            4,
-            5
-          ]
-        }
-      ]
     },
     {
       "id": "ps-pomegranate",
@@ -11373,5 +11373,5 @@
       "pg_Prune heavily after flowering in spring to maintain shape": true
     }
   },
-  "syncedAt": "2026-06-21T23:21:31.309Z"
+  "syncedAt": "2026-06-21T23:21:35.326Z"
 }
