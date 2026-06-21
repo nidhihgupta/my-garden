@@ -8562,6 +8562,47 @@
       ]
     },
     {
+      "id": "p1782084259097546",
+      "bedId": "b-berry",
+      "name": "Aeonium Zwartkop",
+      "scientific": "Aeonium arboreum Zwartkop",
+      "emoji": "emoji_st-aeonium",
+      "status": "alive",
+      "water": "Low — drought tolerant",
+      "sun": "Full sun",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Dark rosettes against pool blue.",
+      "maintenance": [
+        {
+          "task": "Water deeply monthly in summer",
+          "months": [
+            6,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "task": "Remove dead rosettes",
+          "months": [
+            3,
+            4,
+            5
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Etiolation",
+          "url": "https://www.google.com/search?q=Etiolation%20plant%20care%20fix"
+        }
+      ],
+      "category": "Succulents & Cacti",
+      "isIndoor": false
+    },
+    {
       "id": "ps-aeonium-salad",
       "bedId": "b-berry",
       "name": "Aeonium Salad Bowl",
@@ -8742,47 +8783,6 @@
       "trouble": [],
       "datePlanted": "",
       "howPlanted": ""
-    },
-    {
-      "id": "p1782084259097546",
-      "bedId": "b-berry",
-      "name": "Aeonium Zwartkop",
-      "scientific": "Aeonium arboreum Zwartkop",
-      "emoji": "emoji_st-aeonium",
-      "status": "alive",
-      "water": "Low — drought tolerant",
-      "sun": "Full sun",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Dark rosettes against pool blue.",
-      "maintenance": [
-        {
-          "task": "Water deeply monthly in summer",
-          "months": [
-            6,
-            7,
-            8,
-            9
-          ]
-        },
-        {
-          "task": "Remove dead rosettes",
-          "months": [
-            3,
-            4,
-            5
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Etiolation",
-          "url": "https://www.google.com/search?q=Etiolation%20plant%20care%20fix"
-        }
-      ],
-      "category": "Succulents & Cacti",
-      "isIndoor": false
     },
     {
       "id": "ps-pomegranate",
@@ -11414,5 +11414,5 @@
       "pg_Prune heavily after flowering in spring to maintain shape": true
     }
   },
-  "syncedAt": "2026-06-21T23:24:41.708Z"
+  "syncedAt": "2026-06-21T23:24:44.293Z"
 }
