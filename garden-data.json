@@ -8436,32 +8436,6 @@
       "trouble": []
     },
     {
-      "id": "porch-dichondra",
-      "bedId": "b-porch",
-      "name": "Dichondra",
-      "scientific": "Dichondra argentea",
-      "emoji": "🌿",
-      "status": "alive",
-      "category": "Groundcovers",
-      "water": "Moderate",
-      "sun": "Part shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Trailing silver foliage, great for spilling over pots.",
-      "maintenance": [
-        {
-          "task": "Trim to shape as needed",
-          "months": [
-            4,
-            5,
-            9
-          ]
-        }
-      ],
-      "trouble": []
-    },
-    {
       "id": "p1780250003797996",
       "bedId": "b-porch",
       "name": "Creeping Jenny",
@@ -11399,5 +11373,5 @@
       "pg_Prune heavily after flowering in spring to maintain shape": true
     }
   },
-  "syncedAt": "2026-06-21T23:17:32.489Z"
+  "syncedAt": "2026-06-21T23:17:45.053Z"
 }
