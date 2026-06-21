@@ -7622,6 +7622,44 @@
       "trouble": []
     },
     {
+      "id": "berry-fig",
+      "bedId": "b-berry",
+      "name": "Dwarf Fig — Little Miss Figgy",
+      "scientific": "Ficus carica Little Miss Figgy",
+      "emoji": "🌿",
+      "status": "alive",
+      "category": "Fruit Trees",
+      "water": "Moderate",
+      "sun": "Full sun",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Compact dwarf fig, stays under 4ft. Produces full-size figs twice a year.",
+      "maintenance": [
+        {
+          "task": "Feed Jack's 20-20-20",
+          "months": [
+            3
+          ]
+        },
+        {
+          "task": "Light prune to shape in winter",
+          "months": [
+            1,
+            2
+          ]
+        },
+        {
+          "task": "Deep water weekly July-August",
+          "months": [
+            7,
+            8
+          ]
+        }
+      ],
+      "trouble": []
+    },
+    {
       "id": "p1779820722407605",
       "bedId": "b-berry",
       "name": "Day Lilies",
@@ -7677,44 +7715,6 @@
       "category": "Perennials",
       "howPlanted": "",
       "isIndoor": false
-    },
-    {
-      "id": "berry-fig",
-      "bedId": "b-berry",
-      "name": "Dwarf Fig — Little Miss Figgy",
-      "scientific": "Ficus carica Little Miss Figgy",
-      "emoji": "🌿",
-      "status": "alive",
-      "category": "Fruit Trees",
-      "water": "Moderate",
-      "sun": "Full sun",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Compact dwarf fig, stays under 4ft. Produces full-size figs twice a year.",
-      "maintenance": [
-        {
-          "task": "Feed Jack's 20-20-20",
-          "months": [
-            3
-          ]
-        },
-        {
-          "task": "Light prune to shape in winter",
-          "months": [
-            1,
-            2
-          ]
-        },
-        {
-          "task": "Deep water weekly July-August",
-          "months": [
-            7,
-            8
-          ]
-        }
-      ],
-      "trouble": []
     },
     {
       "id": "ps-tickseed",
@@ -11373,5 +11373,5 @@
       "pg_Prune heavily after flowering in spring to maintain shape": true
     }
   },
-  "syncedAt": "2026-06-21T23:20:26.221Z"
+  "syncedAt": "2026-06-21T23:20:33.071Z"
 }
