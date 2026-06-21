@@ -7622,6 +7622,63 @@
       "trouble": []
     },
     {
+      "id": "p1779820722407605",
+      "bedId": "b-berry",
+      "name": "Day Lilies",
+      "scientific": "Hemerocallis",
+      "emoji": "emoji_fl-daylily",
+      "status": "alive",
+      "water": "Moderate",
+      "sun": "Full sun to part shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Established in bed. Orange/yellow summer blooms.",
+      "maintenance": [
+        {
+          "task": "Deadhead regularly",
+          "months": [
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "task": "Divide clumps every 3-4 years",
+          "months": [
+            9,
+            10
+          ]
+        },
+        {
+          "task": "Cut back dead foliage in late fall",
+          "months": [
+            11
+          ]
+        },
+        {
+          "task": "Feed Jack's 20-20-20",
+          "months": [
+            3,
+            4
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Rust",
+          "url": "https://www.google.com/search?q=Daylily+rust+fix"
+        },
+        {
+          "issue": "Aphids",
+          "url": "https://www.google.com/search?q=Daylily+aphids+fix"
+        }
+      ],
+      "category": "Perennials",
+      "howPlanted": "",
+      "isIndoor": false
+    },
+    {
       "id": "sa-shasta",
       "bedId": "b-berry",
       "name": "Shasta Daisy",
@@ -7714,63 +7771,6 @@
           ]
         }
       ]
-    },
-    {
-      "id": "p1779820722407605",
-      "bedId": "b-berry",
-      "name": "Day Lilies",
-      "scientific": "Hemerocallis",
-      "emoji": "emoji_fl-daylily",
-      "status": "alive",
-      "water": "Moderate",
-      "sun": "Full sun to part shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Established in bed. Orange/yellow summer blooms.",
-      "maintenance": [
-        {
-          "task": "Deadhead regularly",
-          "months": [
-            6,
-            7,
-            8
-          ]
-        },
-        {
-          "task": "Divide clumps every 3-4 years",
-          "months": [
-            9,
-            10
-          ]
-        },
-        {
-          "task": "Cut back dead foliage in late fall",
-          "months": [
-            11
-          ]
-        },
-        {
-          "task": "Feed Jack's 20-20-20",
-          "months": [
-            3,
-            4
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Rust",
-          "url": "https://www.google.com/search?q=Daylily+rust+fix"
-        },
-        {
-          "issue": "Aphids",
-          "url": "https://www.google.com/search?q=Daylily+aphids+fix"
-        }
-      ],
-      "category": "Perennials",
-      "howPlanted": "",
-      "isIndoor": false
     },
     {
       "id": "berry-fig",
@@ -11373,5 +11373,5 @@
       "pg_Prune heavily after flowering in spring to maintain shape": true
     }
   },
-  "syncedAt": "2026-06-21T23:20:07.317Z"
+  "syncedAt": "2026-06-21T23:20:14.901Z"
 }
