@@ -10808,8 +10808,9 @@
       "ig_Remove offsets (pups) when they appear": true,
       "ig_Remove damaged/sunburnt leaves": true,
       "pg_Cut back by half after first bloom flush": true,
-      "pg_Cut back new side shoots to 5 leaves — do NOT cut main structural canes": true
+      "pg_Cut back new side shoots to 5 leaves — do NOT cut main structural canes": true,
+      "pg_Prune heavily after flowering in spring to maintain shape": true
     }
   },
-  "syncedAt": "2026-06-21T00:59:46.768Z"
+  "syncedAt": "2026-06-21T00:59:58.229Z"
 }
