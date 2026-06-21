@@ -8675,6 +8675,51 @@
       ]
     },
     {
+      "id": "porch-sweet-potato",
+      "bedId": "b-porch",
+      "name": "Purple Sweet Potato Vine",
+      "scientific": "Ipomoea batatas",
+      "category": "Annuals",
+      "status": "alive",
+      "datePlanted": "2026-06-20",
+      "sun": "Full sun",
+      "water": "Moderate",
+      "notes": "Ornamental trailing vine. Treat as annual — replant next spring.",
+      "nursery": "",
+      "emoji": "🍠",
+      "fromCutting": false,
+      "trouble": [],
+      "maintenance": [
+        {
+          "task": "Pinch tips regularly to encourage bushy, compact growth",
+          "months": [
+            5,
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "task": "Water regularly — especially in heat",
+          "months": [
+            6,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "task": "Light liquid feed monthly spring-summer",
+          "months": [
+            5,
+            6,
+            7,
+            8
+          ]
+        }
+      ]
+    },
+    {
       "id": "porch-fuchsia",
       "bedId": "b-porch",
       "name": "Trailing Fuchsia",
@@ -8774,51 +8819,6 @@
       ],
       "trouble": [],
       "howPlanted": ""
-    },
-    {
-      "id": "porch-sweet-potato",
-      "bedId": "b-porch",
-      "name": "Purple Sweet Potato Vine",
-      "scientific": "Ipomoea batatas",
-      "category": "Annuals",
-      "status": "alive",
-      "datePlanted": "2026-06-20",
-      "sun": "Full sun",
-      "water": "Moderate",
-      "notes": "Ornamental trailing vine. Treat as annual — replant next spring.",
-      "nursery": "",
-      "emoji": "🍠",
-      "fromCutting": false,
-      "trouble": [],
-      "maintenance": [
-        {
-          "task": "Pinch tips regularly to encourage bushy, compact growth",
-          "months": [
-            5,
-            6,
-            7,
-            8
-          ]
-        },
-        {
-          "task": "Water regularly — especially in heat",
-          "months": [
-            6,
-            7,
-            8,
-            9
-          ]
-        },
-        {
-          "task": "Light liquid feed monthly spring-summer",
-          "months": [
-            5,
-            6,
-            7,
-            8
-          ]
-        }
-      ]
     }
   ],
   "indoorPlants": [
@@ -11399,5 +11399,5 @@
       "pg_Prune heavily after flowering in spring to maintain shape": true
     }
   },
-  "syncedAt": "2026-06-21T23:17:20.162Z"
+  "syncedAt": "2026-06-21T23:17:22.129Z"
 }
