@@ -5236,330 +5236,6 @@
       "howPlanted": ""
     },
     {
-      "id": "porch-ginger",
-      "bedId": "b-porch",
-      "name": "Ginger Plant",
-      "scientific": "Zingiber officinale",
-      "emoji": "🌿",
-      "status": "alive",
-      "category": "Tropicals",
-      "water": "Moderate",
-      "sun": "Part shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "",
-      "maintenance": [
-        {
-          "task": "Feed Jack's 20-20-20",
-          "months": [
-            3
-          ]
-        },
-        {
-          "task": "Cut back old stems in winter",
-          "months": [
-            12
-          ]
-        }
-      ],
-      "trouble": []
-    },
-    {
-      "id": "porch-dichondra",
-      "bedId": "b-porch",
-      "name": "Dichondra",
-      "scientific": "Dichondra argentea",
-      "emoji": "🌿",
-      "status": "alive",
-      "category": "Groundcovers",
-      "water": "Moderate",
-      "sun": "Part shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Trailing silver foliage, great for spilling over pots.",
-      "maintenance": [
-        {
-          "task": "Trim to shape as needed",
-          "months": [
-            4,
-            5,
-            9
-          ]
-        }
-      ],
-      "trouble": []
-    },
-    {
-      "id": "p1780250003797996",
-      "bedId": "b-porch",
-      "name": "Creeping Jenny",
-      "scientific": "Lysimachia nummularia",
-      "emoji": "emoji_mp-jenny",
-      "status": "alive",
-      "water": "Low to moderate",
-      "sun": "Part shade to full shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Existing groundcover. Spreads readily — trim to keep in bounds.",
-      "maintenance": [
-        {
-          "task": "Trim back to control spread",
-          "months": [
-            4,
-            5,
-            6,
-            7,
-            8,
-            9
-          ]
-        },
-        {
-          "task": "Divide if overcrowded",
-          "months": [
-            3
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Root rot in waterlogged soil",
-          "url": "https://www.google.com/search?q=Root%20rot%20in%20waterlogged%20soil%20plant%20care%20fix"
-        }
-      ],
-      "category": "Groundcovers",
-      "howPlanted": "",
-      "isIndoor": false
-    },
-    {
-      "id": "porch-cordyline",
-      "bedId": "b-porch",
-      "name": "Cordyline",
-      "scientific": "Cordyline australis",
-      "emoji": "🌿",
-      "status": "alive",
-      "category": "Tropicals",
-      "water": "Low once established",
-      "sun": "Full sun to part shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Architectural focal point.",
-      "maintenance": [
-        {
-          "task": "Remove dead lower leaves",
-          "months": [
-            3,
-            9
-          ]
-        }
-      ],
-      "trouble": [],
-      "howPlanted": ""
-    },
-    {
-      "id": "porch-begonia",
-      "bedId": "b-porch",
-      "name": "Tuberous Begonia",
-      "scientific": "Begonia x tuberhybrida",
-      "emoji": "🌸",
-      "status": "alive",
-      "category": "Annuals",
-      "water": "Moderate",
-      "sun": "Part shade",
-      "datePlanted": "2026-05-27",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Summer bloomer. Yellow ones with abutilon and red with fuschia ",
-      "maintenance": [
-        {
-          "task": "Feed Super Bloom every 2 weeks",
-          "months": [
-            5,
-            6,
-            7,
-            8
-          ]
-        },
-        {
-          "task": "Deadhead spent blooms daily during peak bloom",
-          "months": [
-            6,
-            7,
-            8
-          ]
-        }
-      ],
-      "trouble": [],
-      "howPlanted": ""
-    },
-    {
-      "id": "porch-foxtail-fern",
-      "bedId": "b-porch",
-      "name": "Foxtail Fern",
-      "scientific": "Asparagus densiflorus",
-      "emoji": "🌿",
-      "status": "alive",
-      "category": "Ferns",
-      "water": "Moderate",
-      "sun": "Part shade",
-      "datePlanted": "2026-05-27",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Feathery arching stems. Not a true fern.",
-      "maintenance": [
-        {
-          "task": "Feed Jack's 20-20-20",
-          "months": [
-            3
-          ]
-        },
-        {
-          "task": "Cut back dead stems",
-          "months": [
-            2
-          ]
-        }
-      ],
-      "trouble": [],
-      "howPlanted": "bought"
-    },
-    {
-      "id": "p1779772206300480",
-      "bedId": "b-porch",
-      "name": "Coleus",
-      "scientific": "Plectranthus scutellarioides",
-      "emoji": "emoji_br-coleus",
-      "status": "alive",
-      "water": "Moderate",
-      "sun": "Part shade",
-      "datePlanted": "2026-05-24",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Red with fuschia and green with yellow edge with abutilon ",
-      "maintenance": [
-        {
-          "task": "Replace or cut back if getting leggy",
-          "months": [
-            7,
-            8
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Leggy growth",
-          "url": "https://www.google.com/search?q=Leggy%20growth%20plant%20care%20fix"
-        }
-      ],
-      "category": "Annuals",
-      "isIndoor": false,
-      "howPlanted": "bought"
-    },
-    {
-      "id": "porch-fuchsia",
-      "bedId": "b-porch",
-      "name": "Trailing Fuchsia",
-      "scientific": "Fuchsia hybrida",
-      "emoji": "🌸",
-      "status": "alive",
-      "category": "Annuals",
-      "water": "Moderate to high",
-      "sun": "Part shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Hanging basket plant. Hummingbird magnet.",
-      "maintenance": [
-        {
-          "task": "Feed Super Bloom every 2 weeks",
-          "months": [
-            4,
-            5,
-            6,
-            7,
-            8,
-            9
-          ]
-        },
-        {
-          "task": "Deadhead spent blooms daily during peak bloom",
-          "months": [
-            5,
-            6,
-            7,
-            8,
-            9
-          ]
-        },
-        {
-          "task": "Hard cutback annually in January/February",
-          "months": [
-            2
-          ]
-        }
-      ],
-      "trouble": []
-    },
-    {
-      "id": "porch-abutilon",
-      "bedId": "b-porch",
-      "name": "Tiger Eye Abutilon",
-      "scientific": "Abutilon pictum",
-      "emoji": "🌿",
-      "status": "alive",
-      "category": "Shrubs",
-      "water": "Moderate",
-      "sun": "Part shade to full sun",
-      "datePlanted": "2026-05-27",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Variegated foliage with orange bell flowers.",
-      "maintenance": [
-        {
-          "task": "Feed Jack's 20-20-20",
-          "months": [
-            3
-          ]
-        },
-        {
-          "task": "Prune lightly after flowering",
-          "months": [
-            10
-          ]
-        }
-      ],
-      "trouble": [],
-      "howPlanted": "bought"
-    },
-    {
-      "id": "porch-oxalis",
-      "bedId": "b-porch",
-      "name": "Golden Oxalis",
-      "scientific": "Oxalis chrysantha",
-      "emoji": "🌿",
-      "status": "alive",
-      "category": "Bulbs",
-      "water": "Moderate",
-      "sun": "Part shade",
-      "datePlanted": "2026-05-27",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Bright golden-yellow flowers, clover-like foliage.",
-      "maintenance": [
-        {
-          "task": "Divide clumps every 3-4 years",
-          "months": [
-            9
-          ]
-        }
-      ],
-      "trouble": [],
-      "howPlanted": ""
-    },
-    {
       "id": "p1778194878756922",
       "bedId": "b-br",
       "name": "Camellia",
@@ -8406,97 +8082,6 @@
       ]
     },
     {
-      "id": "porch-dichondra-ef",
-      "bedId": "b-porch",
-      "name": "Dichondra Emerald Falls",
-      "scientific": "Dichondra argentea 'Emerald Falls'",
-      "category": "Annuals",
-      "status": "alive",
-      "datePlanted": "2026-06-20",
-      "sun": "Full sun to part shade",
-      "water": "Moderate",
-      "notes": "Trailing spiller for porch planter.",
-      "nursery": "",
-      "emoji": "🌿",
-      "fromCutting": false,
-      "trouble": [],
-      "maintenance": [
-        {
-          "task": "Keep evenly moist — check daily in summer heat",
-          "months": [
-            6,
-            7,
-            8,
-            9
-          ]
-        },
-        {
-          "task": "Light liquid feed monthly spring-summer",
-          "months": [
-            5,
-            6,
-            7,
-            8
-          ]
-        },
-        {
-          "task": "Trim to keep within planter",
-          "months": [
-            5,
-            6,
-            7,
-            8,
-            9
-          ]
-        }
-      ]
-    },
-    {
-      "id": "porch-sweet-potato",
-      "bedId": "b-porch",
-      "name": "Purple Sweet Potato Vine",
-      "scientific": "Ipomoea batatas",
-      "category": "Annuals",
-      "status": "alive",
-      "datePlanted": "2026-06-20",
-      "sun": "Full sun",
-      "water": "Moderate",
-      "notes": "Ornamental trailing vine. Treat as annual — replant next spring.",
-      "nursery": "",
-      "emoji": "🍠",
-      "fromCutting": false,
-      "trouble": [],
-      "maintenance": [
-        {
-          "task": "Pinch tips regularly to encourage bushy, compact growth",
-          "months": [
-            5,
-            6,
-            7,
-            8
-          ]
-        },
-        {
-          "task": "Water regularly — especially in heat",
-          "months": [
-            6,
-            7,
-            8,
-            9
-          ]
-        },
-        {
-          "task": "Light liquid feed monthly spring-summer",
-          "months": [
-            5,
-            6,
-            7,
-            8
-          ]
-        }
-      ]
-    },
-    {
       "id": "ros-purple-lantana",
       "bedId": "b-ros",
       "name": "Purple Creeping Lantana",
@@ -8816,6 +8401,421 @@
             3,
             4,
             5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "porch-ginger",
+      "bedId": "b-porch",
+      "name": "Ginger Plant",
+      "scientific": "Zingiber officinale",
+      "emoji": "🌿",
+      "status": "alive",
+      "category": "Tropicals",
+      "water": "Moderate",
+      "sun": "Part shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "",
+      "maintenance": [
+        {
+          "task": "Feed Jack's 20-20-20",
+          "months": [
+            3
+          ]
+        },
+        {
+          "task": "Cut back old stems in winter",
+          "months": [
+            12
+          ]
+        }
+      ],
+      "trouble": []
+    },
+    {
+      "id": "porch-dichondra",
+      "bedId": "b-porch",
+      "name": "Dichondra",
+      "scientific": "Dichondra argentea",
+      "emoji": "🌿",
+      "status": "alive",
+      "category": "Groundcovers",
+      "water": "Moderate",
+      "sun": "Part shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Trailing silver foliage, great for spilling over pots.",
+      "maintenance": [
+        {
+          "task": "Trim to shape as needed",
+          "months": [
+            4,
+            5,
+            9
+          ]
+        }
+      ],
+      "trouble": []
+    },
+    {
+      "id": "p1780250003797996",
+      "bedId": "b-porch",
+      "name": "Creeping Jenny",
+      "scientific": "Lysimachia nummularia",
+      "emoji": "emoji_mp-jenny",
+      "status": "alive",
+      "water": "Low to moderate",
+      "sun": "Part shade to full shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Existing groundcover. Spreads readily — trim to keep in bounds.",
+      "maintenance": [
+        {
+          "task": "Trim back to control spread",
+          "months": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "task": "Divide if overcrowded",
+          "months": [
+            3
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Root rot in waterlogged soil",
+          "url": "https://www.google.com/search?q=Root%20rot%20in%20waterlogged%20soil%20plant%20care%20fix"
+        }
+      ],
+      "category": "Groundcovers",
+      "howPlanted": "",
+      "isIndoor": false
+    },
+    {
+      "id": "porch-cordyline",
+      "bedId": "b-porch",
+      "name": "Cordyline",
+      "scientific": "Cordyline australis",
+      "emoji": "🌿",
+      "status": "alive",
+      "category": "Tropicals",
+      "water": "Low once established",
+      "sun": "Full sun to part shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Architectural focal point.",
+      "maintenance": [
+        {
+          "task": "Remove dead lower leaves",
+          "months": [
+            3,
+            9
+          ]
+        }
+      ],
+      "trouble": [],
+      "howPlanted": ""
+    },
+    {
+      "id": "porch-begonia",
+      "bedId": "b-porch",
+      "name": "Tuberous Begonia",
+      "scientific": "Begonia x tuberhybrida",
+      "emoji": "🌸",
+      "status": "alive",
+      "category": "Annuals",
+      "water": "Moderate",
+      "sun": "Part shade",
+      "datePlanted": "2026-05-27",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Summer bloomer. Yellow ones with abutilon and red with fuschia ",
+      "maintenance": [
+        {
+          "task": "Feed Super Bloom every 2 weeks",
+          "months": [
+            5,
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "task": "Deadhead spent blooms daily during peak bloom",
+          "months": [
+            6,
+            7,
+            8
+          ]
+        }
+      ],
+      "trouble": [],
+      "howPlanted": ""
+    },
+    {
+      "id": "porch-foxtail-fern",
+      "bedId": "b-porch",
+      "name": "Foxtail Fern",
+      "scientific": "Asparagus densiflorus",
+      "emoji": "🌿",
+      "status": "alive",
+      "category": "Ferns",
+      "water": "Moderate",
+      "sun": "Part shade",
+      "datePlanted": "2026-05-27",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Feathery arching stems. Not a true fern.",
+      "maintenance": [
+        {
+          "task": "Feed Jack's 20-20-20",
+          "months": [
+            3
+          ]
+        },
+        {
+          "task": "Cut back dead stems",
+          "months": [
+            2
+          ]
+        }
+      ],
+      "trouble": [],
+      "howPlanted": "bought"
+    },
+    {
+      "id": "p1779772206300480",
+      "bedId": "b-porch",
+      "name": "Coleus",
+      "scientific": "Plectranthus scutellarioides",
+      "emoji": "emoji_br-coleus",
+      "status": "alive",
+      "water": "Moderate",
+      "sun": "Part shade",
+      "datePlanted": "2026-05-24",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Red with fuschia and green with yellow edge with abutilon ",
+      "maintenance": [
+        {
+          "task": "Replace or cut back if getting leggy",
+          "months": [
+            7,
+            8
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Leggy growth",
+          "url": "https://www.google.com/search?q=Leggy%20growth%20plant%20care%20fix"
+        }
+      ],
+      "category": "Annuals",
+      "isIndoor": false,
+      "howPlanted": "bought"
+    },
+    {
+      "id": "porch-dichondra-ef",
+      "bedId": "b-porch",
+      "name": "Dichondra Emerald Falls",
+      "scientific": "Dichondra argentea 'Emerald Falls'",
+      "category": "Annuals",
+      "status": "alive",
+      "datePlanted": "2026-06-20",
+      "sun": "Full sun to part shade",
+      "water": "Moderate",
+      "notes": "Trailing spiller for porch planter.",
+      "nursery": "",
+      "emoji": "🌿",
+      "fromCutting": false,
+      "trouble": [],
+      "maintenance": [
+        {
+          "task": "Keep evenly moist — check daily in summer heat",
+          "months": [
+            6,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "task": "Light liquid feed monthly spring-summer",
+          "months": [
+            5,
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "task": "Trim to keep within planter",
+          "months": [
+            5,
+            6,
+            7,
+            8,
+            9
+          ]
+        }
+      ]
+    },
+    {
+      "id": "porch-fuchsia",
+      "bedId": "b-porch",
+      "name": "Trailing Fuchsia",
+      "scientific": "Fuchsia hybrida",
+      "emoji": "🌸",
+      "status": "alive",
+      "category": "Annuals",
+      "water": "Moderate to high",
+      "sun": "Part shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Hanging basket plant. Hummingbird magnet.",
+      "maintenance": [
+        {
+          "task": "Feed Super Bloom every 2 weeks",
+          "months": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "task": "Deadhead spent blooms daily during peak bloom",
+          "months": [
+            5,
+            6,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "task": "Hard cutback annually in January/February",
+          "months": [
+            2
+          ]
+        }
+      ],
+      "trouble": []
+    },
+    {
+      "id": "porch-abutilon",
+      "bedId": "b-porch",
+      "name": "Tiger Eye Abutilon",
+      "scientific": "Abutilon pictum",
+      "emoji": "🌿",
+      "status": "alive",
+      "category": "Shrubs",
+      "water": "Moderate",
+      "sun": "Part shade to full sun",
+      "datePlanted": "2026-05-27",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Variegated foliage with orange bell flowers.",
+      "maintenance": [
+        {
+          "task": "Feed Jack's 20-20-20",
+          "months": [
+            3
+          ]
+        },
+        {
+          "task": "Prune lightly after flowering",
+          "months": [
+            10
+          ]
+        }
+      ],
+      "trouble": [],
+      "howPlanted": "bought"
+    },
+    {
+      "id": "porch-oxalis",
+      "bedId": "b-porch",
+      "name": "Golden Oxalis",
+      "scientific": "Oxalis chrysantha",
+      "emoji": "🌿",
+      "status": "alive",
+      "category": "Bulbs",
+      "water": "Moderate",
+      "sun": "Part shade",
+      "datePlanted": "2026-05-27",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Bright golden-yellow flowers, clover-like foliage.",
+      "maintenance": [
+        {
+          "task": "Divide clumps every 3-4 years",
+          "months": [
+            9
+          ]
+        }
+      ],
+      "trouble": [],
+      "howPlanted": ""
+    },
+    {
+      "id": "porch-sweet-potato",
+      "bedId": "b-porch",
+      "name": "Purple Sweet Potato Vine",
+      "scientific": "Ipomoea batatas",
+      "category": "Annuals",
+      "status": "alive",
+      "datePlanted": "2026-06-20",
+      "sun": "Full sun",
+      "water": "Moderate",
+      "notes": "Ornamental trailing vine. Treat as annual — replant next spring.",
+      "nursery": "",
+      "emoji": "🍠",
+      "fromCutting": false,
+      "trouble": [],
+      "maintenance": [
+        {
+          "task": "Pinch tips regularly to encourage bushy, compact growth",
+          "months": [
+            5,
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "task": "Water regularly — especially in heat",
+          "months": [
+            6,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "task": "Light liquid feed monthly spring-summer",
+          "months": [
+            5,
+            6,
+            7,
+            8
           ]
         }
       ]
@@ -11399,5 +11399,5 @@
       "pg_Prune heavily after flowering in spring to maintain shape": true
     }
   },
-  "syncedAt": "2026-06-21T23:16:38.130Z"
+  "syncedAt": "2026-06-21T23:17:20.162Z"
 }
