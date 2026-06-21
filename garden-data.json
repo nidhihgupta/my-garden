@@ -10805,8 +10805,9 @@
       "ig_Water when soil half dry — do not overwater": true,
       "pg_Remove dead fronds as needed": true,
       "pg_Train and tie new canes to structure": false,
-      "ig_Remove offsets (pups) when they appear": true
+      "ig_Remove offsets (pups) when they appear": true,
+      "ig_Remove damaged/sunburnt leaves": true
     }
   },
-  "syncedAt": "2026-06-21T00:56:41.699Z"
+  "syncedAt": "2026-06-21T00:56:48.193Z"
 }
