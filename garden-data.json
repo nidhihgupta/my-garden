@@ -185,6 +185,26 @@
       "notes": "",
       "icon": "🌹",
       "order": 10
+    },
+    {
+      "id": "b-porch",
+      "name": "Front Porch Planter",
+      "yard": "front",
+      "zone": "Zone 1",
+      "sun": "Part shade",
+      "notes": "Container planter at front porch entrance.",
+      "icon": "🪴",
+      "order": 7
+    },
+    {
+      "id": "b-lawn",
+      "name": "Lawn",
+      "yard": "lawn",
+      "zone": "Zone 1",
+      "sun": "Full sun",
+      "notes": "Front and back lawn areas.",
+      "icon": "🌱",
+      "order": 1
     }
   ],
   "plants": [
@@ -3148,13 +3168,13 @@
       "name": "Chrysanthemum",
       "scientific": "Chrysanthemum spp.",
       "emoji": "emoji_bbq-chrysanthemum",
-      "status": "alive",
+      "status": "dead",
       "water": "Regular",
       "sun": "Full sun",
       "datePlanted": "",
       "nursery": "",
       "fromCutting": false,
-      "notes": "Existing. Move to front edge of bed.",
+      "notes": "Replaced with Tickseed (yellow) June 2026.",
       "maintenance": [
         {
           "task": "Pinch tips in spring for bushier plant",
@@ -6650,6 +6670,544 @@
         }
       ],
       "category": "Perennials"
+    },
+    {
+      "id": "bbq-tickseed",
+      "bedId": "b-bbq",
+      "name": "Tickseed",
+      "scientific": "Coreopsis verticillata",
+      "category": "Perennials",
+      "status": "alive",
+      "datePlanted": "2026-06-20",
+      "sun": "Full sun",
+      "water": "Low to moderate",
+      "notes": "Yellow variety. Replaced purple chrysanthemum.",
+      "nursery": "",
+      "emoji": "🌼",
+      "fromCutting": false,
+      "trouble": [],
+      "maintenance": [
+        {
+          "task": "Deadhead spent blooms to extend flowering",
+          "months": [
+            5,
+            6,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "task": "Cut back hard after main flowering flush",
+          "months": [
+            9,
+            10
+          ]
+        },
+        {
+          "task": "Divide clumps every 2-3 years in spring",
+          "months": [
+            3
+          ]
+        },
+        {
+          "task": "Light feed in spring",
+          "months": [
+            3,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bbq-myoporum",
+      "bedId": "b-bbq",
+      "name": "Myoporum",
+      "scientific": "Myoporum parvifolium",
+      "category": "Groundcovers",
+      "status": "alive",
+      "datePlanted": "2026-06-20",
+      "sun": "Full sun",
+      "water": "Low to moderate",
+      "notes": "Ground cover. Next to woolly thyme.",
+      "nursery": "",
+      "emoji": "🌿",
+      "fromCutting": false,
+      "trouble": [],
+      "maintenance": [
+        {
+          "task": "Water regularly to establish — first summer",
+          "months": [
+            6,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "task": "Trim if spreading beyond bounds",
+          "months": [
+            3,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bbq-dymondia",
+      "bedId": "b-bbq",
+      "name": "Dymondia",
+      "scientific": "Dymondia margaretae",
+      "category": "Groundcovers",
+      "status": "alive",
+      "datePlanted": "2026-06-20",
+      "sun": "Full sun",
+      "water": "Low",
+      "notes": "Silver carpet ground cover. Next to woolly thyme.",
+      "nursery": "",
+      "emoji": "🌿",
+      "fromCutting": false,
+      "trouble": [],
+      "maintenance": [
+        {
+          "task": "Water to establish — first summer",
+          "months": [
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "task": "Trim to shape if needed",
+          "months": [
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bbq-woolly-thyme",
+      "bedId": "b-bbq",
+      "name": "Woolly Thyme",
+      "scientific": "Thymus pseudolanuginosus",
+      "category": "Groundcovers",
+      "status": "alive",
+      "datePlanted": "",
+      "sun": "Full sun",
+      "water": "Low",
+      "notes": "Existing ground cover.",
+      "nursery": "",
+      "emoji": "🌿",
+      "fromCutting": false,
+      "trouble": [],
+      "maintenance": [
+        {
+          "task": "Trim lightly after flowering",
+          "months": [
+            6,
+            7
+          ]
+        },
+        {
+          "task": "Light tidy in spring",
+          "months": [
+            3,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ps-shasta-daisy",
+      "bedId": "b-berry",
+      "name": "Shasta Daisy",
+      "scientific": "Leucanthemum x superbum",
+      "category": "Perennials",
+      "status": "alive",
+      "datePlanted": "",
+      "sun": "Full sun",
+      "water": "Moderate",
+      "notes": "Existing plant.",
+      "nursery": "",
+      "emoji": "🌼",
+      "fromCutting": false,
+      "trouble": [],
+      "maintenance": [
+        {
+          "task": "Deadhead spent blooms",
+          "months": [
+            5,
+            6,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "task": "Cut back hard after flowering",
+          "months": [
+            8,
+            9
+          ]
+        },
+        {
+          "task": "Divide every 3 years in spring",
+          "months": [
+            3
+          ]
+        },
+        {
+          "task": "Feed in spring",
+          "months": [
+            3,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ps-tickseed",
+      "bedId": "b-berry",
+      "name": "Tickseed",
+      "scientific": "Coreopsis verticillata",
+      "category": "Perennials",
+      "status": "alive",
+      "datePlanted": "2026-06-20",
+      "sun": "Full sun",
+      "water": "Low to moderate",
+      "notes": "Yellow variety. Next to Shasta Daisy.",
+      "nursery": "",
+      "emoji": "🌼",
+      "fromCutting": false,
+      "trouble": [],
+      "maintenance": [
+        {
+          "task": "Deadhead spent blooms to extend flowering",
+          "months": [
+            5,
+            6,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "task": "Cut back hard after main flowering flush",
+          "months": [
+            9,
+            10
+          ]
+        },
+        {
+          "task": "Divide clumps every 2-3 years in spring",
+          "months": [
+            3
+          ]
+        },
+        {
+          "task": "Light feed in spring",
+          "months": [
+            3,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "porch-ginger",
+      "bedId": "b-porch",
+      "name": "Ginger",
+      "scientific": "Hedychium spp.",
+      "category": "Tropical Foliage",
+      "status": "alive",
+      "datePlanted": "",
+      "sun": "Part shade",
+      "water": "Moderate to high",
+      "notes": "Existing ornamental ginger.",
+      "nursery": "",
+      "emoji": "🌿",
+      "fromCutting": false,
+      "trouble": [],
+      "maintenance": [
+        {
+          "task": "Water regularly through spring-summer",
+          "months": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "task": "Feed monthly spring-summer",
+          "months": [
+            4,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "task": "Cut back old flowering stems after bloom",
+          "months": [
+            11,
+            12
+          ]
+        },
+        {
+          "task": "Mulch base for winter protection",
+          "months": [
+            11
+          ]
+        }
+      ]
+    },
+    {
+      "id": "porch-dichondra",
+      "bedId": "b-porch",
+      "name": "Dichondra Emerald Falls",
+      "scientific": "Dichondra argentea 'Emerald Falls'",
+      "category": "Annuals",
+      "status": "alive",
+      "datePlanted": "2026-06-20",
+      "sun": "Full sun to part shade",
+      "water": "Moderate",
+      "notes": "Trailing spiller for porch planter.",
+      "nursery": "",
+      "emoji": "🌿",
+      "fromCutting": false,
+      "trouble": [],
+      "maintenance": [
+        {
+          "task": "Keep evenly moist — check daily in summer heat",
+          "months": [
+            6,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "task": "Light liquid feed monthly spring-summer",
+          "months": [
+            5,
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "task": "Trim to keep within planter",
+          "months": [
+            5,
+            6,
+            7,
+            8,
+            9
+          ]
+        }
+      ]
+    },
+    {
+      "id": "porch-jenny",
+      "bedId": "b-porch",
+      "name": "Creeping Jenny",
+      "scientific": "Lysimachia nummularia",
+      "category": "Perennials",
+      "status": "alive",
+      "datePlanted": "2026-06-20",
+      "sun": "Part shade to full sun",
+      "water": "Moderate to high",
+      "notes": "Trailing ground cover for porch planter.",
+      "nursery": "",
+      "emoji": "🌿",
+      "fromCutting": false,
+      "trouble": [],
+      "maintenance": [
+        {
+          "task": "Keep soil moist — check regularly in summer",
+          "months": [
+            5,
+            6,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "task": "Trim to keep in planter bounds",
+          "months": [
+            5,
+            6,
+            7,
+            8
+          ]
+        }
+      ]
+    },
+    {
+      "id": "porch-sweet-potato",
+      "bedId": "b-porch",
+      "name": "Purple Sweet Potato Vine",
+      "scientific": "Ipomoea batatas",
+      "category": "Annuals",
+      "status": "alive",
+      "datePlanted": "2026-06-20",
+      "sun": "Full sun",
+      "water": "Moderate",
+      "notes": "Ornamental trailing vine. Treat as annual — replant next spring.",
+      "nursery": "",
+      "emoji": "🍠",
+      "fromCutting": false,
+      "trouble": [],
+      "maintenance": [
+        {
+          "task": "Pinch tips to encourage bushy growth",
+          "months": [
+            5,
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "task": "Water regularly — especially in heat",
+          "months": [
+            6,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "task": "Light liquid feed monthly spring-summer",
+          "months": [
+            5,
+            6,
+            7,
+            8
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ros-lantana",
+      "bedId": "b-ros",
+      "name": "Purple Creeping Lantana",
+      "scientific": "Lantana montevidensis",
+      "category": "Perennials",
+      "status": "alive",
+      "datePlanted": "2026-06-20",
+      "sun": "Full sun",
+      "water": "Low to moderate",
+      "notes": "Ground cover lantana. Drought tolerant once established.",
+      "nursery": "",
+      "emoji": "🌸",
+      "fromCutting": false,
+      "trouble": [
+        {
+          "issue": "Lace bugs",
+          "url": "https://www.google.com/search?q=Lace%20bugs%20plant%20care%20fix"
+        }
+      ],
+      "maintenance": [
+        {
+          "task": "Deadhead to encourage continuous bloom",
+          "months": [
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "task": "Prune hard to shape in early spring",
+          "months": [
+            3
+          ]
+        },
+        {
+          "task": "Light feed after spring pruning",
+          "months": [
+            3,
+            4
+          ]
+        },
+        {
+          "task": "Water regularly to establish — first summer",
+          "months": [
+            6,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "task": "Monitor for lace bugs — neem oil if spotted",
+          "months": [
+            6,
+            7,
+            8,
+            9
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lawn-grass",
+      "bedId": "b-lawn",
+      "name": "Lawn",
+      "scientific": "Festuca arundinacea",
+      "category": "Lawn",
+      "status": "alive",
+      "datePlanted": "",
+      "sun": "Full sun",
+      "water": "Moderate",
+      "notes": "Tall fescue mix. Front and back lawn areas.",
+      "nursery": "",
+      "emoji": "🌱",
+      "fromCutting": false,
+      "trouble": [],
+      "maintenance": [
+        {
+          "task": "Fertilize lawn — spring feed",
+          "months": [
+            3,
+            4
+          ]
+        },
+        {
+          "task": "Apply grub killer",
+          "months": [
+            6
+          ]
+        },
+        {
+          "task": "Fertilize lawn — fall feed",
+          "months": [
+            9,
+            10
+          ]
+        },
+        {
+          "task": "Aerate lawn",
+          "months": [
+            9,
+            10
+          ]
+        },
+        {
+          "task": "Overseed thin patches",
+          "months": [
+            10,
+            11
+          ]
+        }
+      ]
     }
   ],
   "indoorPlants": [
