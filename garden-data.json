@@ -8587,46 +8587,6 @@
       "trouble": []
     },
     {
-      "id": "p1778514288212",
-      "bedId": "b-ros",
-      "name": "Caroline Cherry",
-      "scientific": "Prunus Caroliniana",
-      "emoji": "🌳",
-      "category": "Trees",
-      "status": "alive",
-      "water": "",
-      "sun": "",
-      "notes": "",
-      "fromCutting": false,
-      "maintenance": [
-        {
-          "task": "Deep water monthly — slow hose at drip line",
-          "months": [
-            6,
-            7,
-            8,
-            9
-          ]
-        },
-        {
-          "task": "Feed Jack's 20-20-20",
-          "months": [
-            3
-          ]
-        },
-        {
-          "task": "Remove dead/crossing branches",
-          "months": [
-            1,
-            2
-          ]
-        }
-      ],
-      "trouble": [],
-      "datePlanted": "",
-      "howPlanted": ""
-    },
-    {
       "id": "ros-purple-lantana",
       "bedId": "b-ros",
       "name": "Purple Creeping Lantana",
@@ -8690,6 +8650,46 @@
           ]
         }
       ]
+    },
+    {
+      "id": "p1778514288212",
+      "bedId": "b-ros",
+      "name": "Caroline Cherry",
+      "scientific": "Prunus Caroliniana",
+      "emoji": "🌳",
+      "category": "Trees",
+      "status": "alive",
+      "water": "",
+      "sun": "",
+      "notes": "",
+      "fromCutting": false,
+      "maintenance": [
+        {
+          "task": "Deep water monthly — slow hose at drip line",
+          "months": [
+            6,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "task": "Feed Jack's 20-20-20",
+          "months": [
+            3
+          ]
+        },
+        {
+          "task": "Remove dead/crossing branches",
+          "months": [
+            1,
+            2
+          ]
+        }
+      ],
+      "trouble": [],
+      "datePlanted": "",
+      "howPlanted": ""
     },
     {
       "id": "p177977020573752",
@@ -11373,5 +11373,5 @@
       "pg_Prune heavily after flowering in spring to maintain shape": true
     }
   },
-  "syncedAt": "2026-06-21T23:18:24.455Z"
+  "syncedAt": "2026-06-21T23:18:26.995Z"
 }
