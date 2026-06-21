@@ -5684,917 +5684,6 @@
       "trouble": []
     },
     {
-      "id": "sa-shasta",
-      "bedId": "b-berry",
-      "name": "Shasta Daisy",
-      "scientific": "Leucanthemum x superbum",
-      "emoji": "🌼",
-      "status": "alive",
-      "category": "Perennials",
-      "water": "Moderate",
-      "sun": "Full sun",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Classic white daisy with yellow center. Long summer bloom.",
-      "maintenance": [
-        {
-          "task": "Deadhead spent blooms daily during peak bloom",
-          "months": [
-            6,
-            7,
-            8
-          ]
-        },
-        {
-          "task": "Divide clumps every 3-4 years",
-          "months": [
-            9
-          ]
-        },
-        {
-          "task": "Cut back to ground in late fall",
-          "months": [
-            11
-          ]
-        },
-        {
-          "task": "Feed Jack's 20-20-20",
-          "months": [
-            3,
-            4
-          ]
-        }
-      ],
-      "trouble": [],
-      "howPlanted": ""
-    },
-    {
-      "id": "p1779820722407605",
-      "bedId": "b-berry",
-      "name": "Day Lilies",
-      "scientific": "Hemerocallis",
-      "emoji": "emoji_fl-daylily",
-      "status": "alive",
-      "water": "Moderate",
-      "sun": "Full sun to part shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Established in bed. Orange/yellow summer blooms.",
-      "maintenance": [
-        {
-          "task": "Deadhead regularly",
-          "months": [
-            6,
-            7,
-            8
-          ]
-        },
-        {
-          "task": "Divide clumps every 3-4 years",
-          "months": [
-            9,
-            10
-          ]
-        },
-        {
-          "task": "Cut back dead foliage in late fall",
-          "months": [
-            11
-          ]
-        },
-        {
-          "task": "Feed Jack's 20-20-20",
-          "months": [
-            3,
-            4
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Rust",
-          "url": "https://www.google.com/search?q=Daylily+rust+fix"
-        },
-        {
-          "issue": "Aphids",
-          "url": "https://www.google.com/search?q=Daylily+aphids+fix"
-        }
-      ],
-      "category": "Perennials",
-      "howPlanted": "",
-      "isIndoor": false
-    },
-    {
-      "id": "berry-fig",
-      "bedId": "b-berry",
-      "name": "Dwarf Fig — Little Miss Figgy",
-      "scientific": "Ficus carica Little Miss Figgy",
-      "emoji": "🌿",
-      "status": "alive",
-      "category": "Fruit Trees",
-      "water": "Moderate",
-      "sun": "Full sun",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Compact dwarf fig, stays under 4ft. Produces full-size figs twice a year.",
-      "maintenance": [
-        {
-          "task": "Feed Jack's 20-20-20",
-          "months": [
-            3
-          ]
-        },
-        {
-          "task": "Light prune to shape in winter",
-          "months": [
-            1,
-            2
-          ]
-        },
-        {
-          "task": "Deep water weekly July-August",
-          "months": [
-            7,
-            8
-          ]
-        }
-      ],
-      "trouble": []
-    },
-    {
-      "id": "p1778195347203525",
-      "bedId": "b-berry",
-      "name": "Geranium",
-      "scientific": "Pelargonium spp.",
-      "emoji": "emoji_p1778195347203525",
-      "status": "alive",
-      "water": "Moderate",
-      "sun": "Part shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Red + pink. Propagating from stem cuttings.",
-      "maintenance": [
-        {
-          "task": "Deadhead regularly",
-          "months": [
-            4,
-            5,
-            6,
-            7,
-            8,
-            9,
-            10
-          ]
-        },
-        {
-          "task": "Cut back by 1/3 after first bloom flush",
-          "months": [
-            5,
-            6
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Leggy growth",
-          "url": "https://www.google.com/search?q=Leggy%20growth%20plant%20care%20fix"
-        }
-      ],
-      "category": "Perennials",
-      "isIndoor": false
-    },
-    {
-      "id": "ps-orange",
-      "bedId": "b-berry",
-      "name": "Orange Tree",
-      "scientific": "Citrus sinensis",
-      "emoji": "🍊",
-      "status": "alive",
-      "water": "Every 2 weeks spring/summer",
-      "sun": "Full sun",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Existing.",
-      "maintenance": [
-        {
-          "task": "Feed citrus fertilizer",
-          "months": [
-            2,
-            5,
-            8
-          ]
-        },
-        {
-          "task": "Deep water monthly — slow hose at drip line",
-          "months": [
-            3,
-            4,
-            5,
-            6
-          ]
-        },
-        {
-          "task": "Deep water every 2 weeks July-August",
-          "months": [
-            7,
-            8
-          ]
-        },
-        {
-          "task": "Monthly watering sufficient fall/winter",
-          "months": [
-            9,
-            10,
-            11,
-            12,
-            1,
-            2
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Yellowing leaves (nutrient deficiency)",
-          "url": "https://www.google.com/search?q=Yellowing%20leaves%20(nutrient%20deficiency)%20plant%20care%20fix"
-        }
-      ],
-      "category": "Fruit Trees",
-      "howPlanted": ""
-    },
-    {
-      "id": "p1778195377685437",
-      "bedId": "b-berry",
-      "name": "Fatsia japonica",
-      "scientific": "Fatsia japonica",
-      "emoji": "emoji_p1778195377685437",
-      "status": "alive",
-      "water": "Moderate",
-      "sun": "Part shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "2-gallon. Behind planter area.",
-      "maintenance": [
-        {
-          "task": "Cut back in spring before growth pushes",
-          "months": [
-            2,
-            3
-          ]
-        },
-        {
-          "task": "Take cuttings for propagation",
-          "months": [
-            3
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Leaf drop",
-          "url": "https://www.google.com/search?q=Leaf%20drop%20plant%20care%20fix"
-        }
-      ],
-      "category": "Tropical Foliage",
-      "isIndoor": false,
-      "howPlanted": ""
-    },
-    {
-      "id": "ps-persimmon",
-      "bedId": "b-berry",
-      "name": "Persimmon",
-      "scientific": "Diospyros kaki",
-      "emoji": "emoji_ps-persimmon",
-      "status": "alive",
-      "water": "Monthly spring / every 2 weeks July-August",
-      "sun": "Full sun",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Existing. Most drought tolerant.",
-      "maintenance": [
-        {
-          "task": "Deep water monthly — slow hose at drip line",
-          "months": [
-            3,
-            4,
-            5,
-            6
-          ]
-        },
-        {
-          "task": "Monthly watering July-September — slow hose at drip line",
-          "months": [
-            7,
-            8,
-            9
-          ]
-        },
-        {
-          "task": "Monthly watering fall/winter — if no rain",
-          "months": [
-            10,
-            11,
-            12,
-            1,
-            2
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Fruit drop",
-          "url": "https://www.google.com/search?q=Fruit%20drop%20plant%20care%20fix"
-        }
-      ],
-      "category": "Fruit Trees"
-    },
-    {
-      "id": "berry-thyme",
-      "bedId": "b-berry",
-      "name": "Woolly Thyme",
-      "scientific": "Thymus pseudolanuginosus",
-      "emoji": "🌿",
-      "status": "alive",
-      "category": "Groundcovers",
-      "water": "Low once established",
-      "sun": "Full sun",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Low creeping groundcover with soft woolly leaves. Tolerates light foot traffic.",
-      "maintenance": [
-        {
-          "task": "Trim lightly after flowering",
-          "months": [
-            7,
-            8
-          ]
-        },
-        {
-          "task": "Divide if overcrowded",
-          "months": [
-            4
-          ]
-        }
-      ],
-      "trouble": []
-    },
-    {
-      "id": "p1778178720492",
-      "bedId": "b-berry",
-      "name": "Wisteria",
-      "scientific": "Wisteria sinensis",
-      "emoji": "emoji_p1778178720492",
-      "category": "Vines & Climbers",
-      "status": "alive",
-      "water": "Moderate — deep water during establishment",
-      "sun": "Full sun",
-      "notes": "Two trim cycles to maximize bloom. \nMay - cut back to 6 nodes. Get rid of all seed pods \nJan/feb - cut back to 2 or 3. This is where the flowers will come from ",
-      "fromCutting": false,
-      "maintenance": [
-        {
-          "task": "Cut back summer side shoots to 2-3 buds — winter half of 5-3 rule",
-          "months": [
-            1,
-            2
-          ]
-        },
-        {
-          "task": "Deadhead regularly",
-          "months": [
-            4,
-            5,
-            6,
-            7,
-            8,
-            9,
-            10
-          ]
-        },
-        {
-          "task": "Train and tie new canes to structure",
-          "months": [
-            3,
-            4,
-            5
-          ]
-        },
-        {
-          "task": "Feed Super Bloom",
-          "months": [
-            5
-          ]
-        },
-        {
-          "task": "Cut back new side shoots to 5 leaves — do NOT cut main structural canes",
-          "months": [
-            5,
-            6,
-            7,
-            8
-          ]
-        }
-      ],
-      "trouble": []
-    },
-    {
-      "id": "p1778194904648727",
-      "bedId": "b-berry",
-      "name": "Camellia",
-      "scientific": "Camellia japonica",
-      "emoji": "emoji_p1778194904648727",
-      "status": "alive",
-      "water": "Regular",
-      "sun": "Part to full shade",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Existing.",
-      "maintenance": [
-        {
-          "task": "Deadwood removal only — no hard cutback",
-          "months": [
-            1
-          ]
-        },
-        {
-          "task": "Feed Camellia fertilizer",
-          "months": [
-            3
-          ]
-        },
-        {
-          "task": "Prune ONLY after flowering complete",
-          "months": [
-            8,
-            9
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Bud drop",
-          "url": "https://www.google.com/search?q=Bud%20drop%20plant%20care%20fix"
-        }
-      ],
-      "category": "Camellias",
-      "isIndoor": false
-    },
-    {
-      "id": "p1778614808924",
-      "bedId": "b-berry",
-      "name": "Peas",
-      "scientific": "Pisum sativum",
-      "emoji": "🫛",
-      "category": "Vegetables",
-      "status": "alive",
-      "water": "Moderate",
-      "sun": "Full sun to part shade",
-      "notes": "Planted seeds May 12",
-      "fromCutting": false,
-      "maintenance": [
-        {
-          "task": "Harvest pods regularly",
-          "months": [
-            6,
-            7,
-            8
-          ]
-        }
-      ],
-      "trouble": [],
-      "datePlanted": "2026-05-12",
-      "howPlanted": "seed"
-    },
-    {
-      "id": "p1778614834266",
-      "bedId": "b-berry",
-      "name": "Snap Peas",
-      "scientific": "Pisum sativum var. macrocarpon",
-      "emoji": "🫛",
-      "category": "Vegetables",
-      "status": "alive",
-      "water": "Moderate",
-      "sun": "Full sun to part shade",
-      "notes": "Planted seeds May 12",
-      "fromCutting": false,
-      "maintenance": [
-        {
-          "task": "Harvest pods regularly",
-          "months": [
-            6,
-            7,
-            8
-          ]
-        }
-      ],
-      "trouble": [],
-      "datePlanted": "2026-05-12",
-      "howPlanted": "seed"
-    },
-    {
-      "id": "berry-greenbeans",
-      "bedId": "b-berry",
-      "name": "Green Beans",
-      "scientific": "Phaseolus vulgaris",
-      "emoji": "🌱",
-      "status": "alive",
-      "category": "Vegetables",
-      "water": "Moderate",
-      "sun": "Full sun",
-      "datePlanted": "2026-05-12",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Planted from seed May 12",
-      "maintenance": [
-        {
-          "task": "Harvest pods regularly",
-          "months": [
-            7,
-            8,
-            9
-          ]
-        }
-      ],
-      "trouble": []
-    },
-    {
-      "id": "ps-raspberry",
-      "bedId": "b-berry",
-      "name": "Raspberry",
-      "scientific": "Rubus idaeus ",
-      "emoji": "emoji_ps-raspberry",
-      "status": "alive",
-      "water": "Weekly on drip",
-      "sun": "Full sun",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Existing x1 + new x1. On drip system.",
-      "maintenance": [
-        {
-          "task": "Feed Jack's 20-20-20",
-          "months": [
-            2,
-            3
-          ]
-        },
-        {
-          "task": "Remove old fruited canes after harvest",
-          "months": [
-            8,
-            9
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Poor fruiting",
-          "url": "https://www.google.com/search?q=Poor%20fruiting%20plant%20care%20fix"
-        }
-      ],
-      "category": "Berries",
-      "howPlanted": ""
-    },
-    {
-      "id": "ps-blackberry",
-      "bedId": "b-berry",
-      "name": "Blackberry Triple Crown",
-      "scientific": "Rubus spp. Triple Crown",
-      "emoji": "emoji_ps-blackberry",
-      "status": "alive",
-      "water": "Regular during fruiting",
-      "sun": "Full sun",
-      "datePlanted": "2026-05-27",
-      "nursery": "bought",
-      "fromCutting": false,
-      "notes": "x2. 1-gallon. Thornless. Espalier on wall.",
-      "maintenance": [
-        {
-          "task": "Feed Jack's 20-20-20",
-          "months": [
-            2,
-            3
-          ]
-        },
-        {
-          "task": "Train and tie new canes to structure",
-          "months": [
-            4,
-            5,
-            6
-          ]
-        },
-        {
-          "task": "Tip prune in summer to encourage lateral growth",
-          "months": [
-            7
-          ]
-        },
-        {
-          "task": "Remove old fruited canes after harvest",
-          "months": [
-            8,
-            9
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Poor fruiting",
-          "url": "https://www.google.com/search?q=Poor%20fruiting%20plant%20care%20fix"
-        }
-      ],
-      "category": "Berries",
-      "howPlanted": ""
-    },
-    {
-      "id": "berry-boysenberry",
-      "bedId": "b-berry",
-      "name": "Thornless Boysenberry",
-      "scientific": "Rubus ursinus x R. idaeus",
-      "emoji": "🫐",
-      "status": "alive",
-      "category": "Berries",
-      "water": "Moderate",
-      "sun": "Full sun",
-      "datePlanted": "2026-05-27",
-      "nursery": "bought",
-      "fromCutting": false,
-      "notes": "Thornless variety. Large, sweet berries mid-summer.",
-      "maintenance": [
-        {
-          "task": "Cut floricanes to ground after fruiting",
-          "months": [
-            8,
-            9
-          ]
-        },
-        {
-          "task": "Train and tie new canes to structure",
-          "months": [
-            3,
-            4
-          ]
-        },
-        {
-          "task": "Feed Jack's 20-20-20",
-          "months": [
-            3
-          ]
-        }
-      ],
-      "trouble": []
-    },
-    {
-      "id": "p1778869421207",
-      "bedId": "b-berry",
-      "name": "Okra",
-      "scientific": "Abelmoschus esculentus",
-      "emoji": "emoji_p1778869421207",
-      "category": "Vegetables",
-      "status": "alive",
-      "water": "Moderate, drought tolerant once established",
-      "sun": "Full sun",
-      "datePlanted": "2026-05-15",
-      "howPlanted": "seed",
-      "fromCutting": false,
-      "nursery": "",
-      "notes": "Planted May 15",
-      "maintenance": [
-        {
-          "task": "Harvest pods regularly",
-          "months": [
-            7,
-            8,
-            9
-          ]
-        },
-        {
-          "task": "Feed Jack's 20-20-20 every 2 weeks",
-          "months": [
-            6,
-            7,
-            8,
-            9
-          ]
-        }
-      ],
-      "trouble": []
-    },
-    {
-      "id": "ps-salvia",
-      "bedId": "b-berry",
-      "name": "Salvia Amistad",
-      "scientific": "Salvia Amistad",
-      "emoji": "emoji_ps-salvia",
-      "status": "alive",
-      "water": "Low-moderate",
-      "sun": "Full sun",
-      "datePlanted": "2026-05-27",
-      "nursery": "bought",
-      "fromCutting": false,
-      "notes": "x3. 1-gallon. Full sun — thrives here.",
-      "maintenance": [
-        {
-          "task": "Deadhead regularly",
-          "months": [
-            5,
-            6,
-            7,
-            8,
-            9,
-            10
-          ]
-        },
-        {
-          "task": "Cut back by 1/3 if leggy",
-          "months": [
-            7
-          ]
-        },
-        {
-          "task": "Hard cutback annually in January/February",
-          "months": [
-            2
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Leggy growth",
-          "url": "https://www.google.com/search?q=Leggy%20growth%20plant%20care%20fix"
-        }
-      ],
-      "category": "Salvias"
-    },
-    {
-      "id": "p1780252656543568",
-      "bedId": "b-berry",
-      "name": "English Lavender",
-      "scientific": "Lavandula angustifolia",
-      "emoji": "💜",
-      "status": "alive",
-      "category": "Herbs",
-      "water": "Low once established",
-      "sun": "Full sun",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "",
-      "maintenance": [
-        {
-          "task": "Cut back by 1/3 after first bloom flush",
-          "months": [
-            7
-          ]
-        },
-        {
-          "task": "Feed Jack's 20-20-20",
-          "months": [
-            3
-          ]
-        }
-      ],
-      "trouble": [],
-      "isIndoor": false
-    },
-    {
-      "id": "p1778178590870",
-      "bedId": "b-berry",
-      "name": "Fan Palm",
-      "scientific": "Washingtonia robusta",
-      "emoji": "🌴",
-      "category": "Trees",
-      "status": "alive",
-      "water": "Low once established — drought tolerant",
-      "sun": "Full sun",
-      "notes": "",
-      "fromCutting": false,
-      "maintenance": [
-        {
-          "task": "Deep water monthly — slow hose at drip line",
-          "months": [
-            6,
-            7,
-            8,
-            9
-          ]
-        },
-        {
-          "task": "Feed Jack's 20-20-20",
-          "months": [
-            3
-          ]
-        },
-        {
-          "task": "Remove dead/crossing branches",
-          "months": [
-            1,
-            2
-          ]
-        }
-      ],
-      "trouble": []
-    },
-    {
-      "id": "p1778117734357",
-      "bedId": "b-berry",
-      "name": "Pittosporum in corner ",
-      "scientific": "Pittosporum tobira",
-      "emoji": "emoji_p1778117734357",
-      "category": "Trees",
-      "status": "alive",
-      "water": "Low once established",
-      "sun": "Full sun to part shade",
-      "notes": "",
-      "fromCutting": false,
-      "maintenance": [
-        {
-          "task": "Deep water monthly — slow hose at drip line",
-          "months": [
-            6,
-            7,
-            8,
-            9
-          ]
-        },
-        {
-          "task": "Feed Jack's 20-20-20",
-          "months": [
-            3
-          ]
-        },
-        {
-          "task": "Remove dead/crossing branches",
-          "months": [
-            1,
-            2
-          ]
-        }
-      ],
-      "trouble": [],
-      "datePlanted": "",
-      "howPlanted": ""
-    },
-    {
-      "id": "ps-pomegranate",
-      "bedId": "b-berry",
-      "name": "Pomegranate",
-      "scientific": "Punica granatum",
-      "emoji": "emoji_ps-pomegranate",
-      "status": "dead",
-      "water": "Monthly spring / every 2 weeks July-August",
-      "sun": "Full sun",
-      "datePlanted": "",
-      "nursery": "",
-      "fromCutting": false,
-      "notes": "Existing. Consistent water improves fruit quality.",
-      "maintenance": [
-        {
-          "task": "Deep water monthly — slow hose at drip line",
-          "months": [
-            3,
-            4,
-            5,
-            6
-          ]
-        },
-        {
-          "task": "Monthly watering July-September — slow hose at drip line",
-          "months": [
-            7,
-            8,
-            9
-          ]
-        },
-        {
-          "task": "Monthly watering fall/winter — if no rain",
-          "months": [
-            10,
-            11,
-            12,
-            1,
-            2
-          ]
-        }
-      ],
-      "trouble": [
-        {
-          "issue": "Fruit splitting (inconsistent watering)",
-          "url": "https://www.google.com/search?q=Fruit%20splitting%20(inconsistent%20watering)%20plant%20care%20fix"
-        }
-      ],
-      "category": "Fruit Trees",
-      "howPlanted": ""
-    },
-    {
       "id": "p1780252724631128",
       "bedId": "b-br",
       "name": "Day Lilies",
@@ -7228,120 +6317,6 @@
       ]
     },
     {
-      "id": "ps-tickseed",
-      "bedId": "b-berry",
-      "name": "Tickseed",
-      "scientific": "Coreopsis verticillata",
-      "category": "Perennials",
-      "status": "alive",
-      "datePlanted": "2026-06-20",
-      "sun": "Full sun",
-      "water": "Low to moderate",
-      "notes": "Yellow variety. Next to Shasta Daisy.",
-      "nursery": "",
-      "emoji": "🌼",
-      "fromCutting": false,
-      "trouble": [],
-      "maintenance": [
-        {
-          "task": "Deadhead spent blooms to extend flowering",
-          "months": [
-            5,
-            6,
-            7,
-            8,
-            9
-          ]
-        },
-        {
-          "task": "Cut back hard after main flowering flush",
-          "months": [
-            9,
-            10
-          ]
-        },
-        {
-          "task": "Divide clumps every 2-3 years in spring",
-          "months": [
-            3
-          ]
-        },
-        {
-          "task": "Light feed in spring",
-          "months": [
-            3,
-            4
-          ]
-        }
-      ]
-    },
-    {
-      "id": "ps-myoporum",
-      "bedId": "b-berry",
-      "name": "Myoporum",
-      "scientific": "Myoporum parvifolium",
-      "category": "Groundcovers",
-      "status": "alive",
-      "datePlanted": "2026-06-20",
-      "sun": "Full sun",
-      "water": "Low to moderate",
-      "notes": "Ground cover. Next to woolly thyme.",
-      "nursery": "",
-      "emoji": "🌿",
-      "fromCutting": false,
-      "trouble": [],
-      "maintenance": [
-        {
-          "task": "Water regularly to establish — first summer",
-          "months": [
-            6,
-            7,
-            8,
-            9
-          ]
-        },
-        {
-          "task": "Trim if spreading beyond bounds",
-          "months": [
-            3,
-            4
-          ]
-        }
-      ]
-    },
-    {
-      "id": "ps-dymondia",
-      "bedId": "b-berry",
-      "name": "Dymondia",
-      "scientific": "Dymondia margaretae",
-      "category": "Groundcovers",
-      "status": "alive",
-      "datePlanted": "2026-06-20",
-      "sun": "Full sun",
-      "water": "Low",
-      "notes": "Silver carpet ground cover. Next to woolly thyme.",
-      "nursery": "",
-      "emoji": "🌿",
-      "fromCutting": false,
-      "trouble": [],
-      "maintenance": [
-        {
-          "task": "Water to establish — first summer",
-          "months": [
-            6,
-            7,
-            8
-          ]
-        },
-        {
-          "task": "Trim to shape if needed",
-          "months": [
-            3
-          ]
-        }
-      ]
-    },
-    {
       "id": "lawn-grass",
       "bedId": "b-lawn",
       "name": "Lawn",
@@ -7448,154 +6423,6 @@
             3,
             4,
             9
-          ]
-        }
-      ]
-    },
-    {
-      "id": "ps-pencil-cactus",
-      "bedId": "b-berry",
-      "name": "Pencil Cactus Sticks on Fire",
-      "scientific": "Euphorbia tirucalli 'Sticks on Fire'",
-      "category": "Succulents & Cacti",
-      "status": "alive",
-      "datePlanted": "2026-06-21",
-      "sun": "Full sun",
-      "water": "Very low",
-      "notes": "Toxic milky latex sap — always wear gloves when handling or pruning.",
-      "nursery": "",
-      "emoji": "🔴",
-      "fromCutting": false,
-      "trouble": [],
-      "maintenance": [
-        {
-          "task": "Water weekly — newly planted, establishing (wear gloves — sap is caustic)",
-          "months": [
-            6,
-            7
-          ]
-        },
-        {
-          "task": "Water monthly once established — drought tolerant",
-          "months": [
-            8,
-            9
-          ]
-        },
-        {
-          "task": "Light feed Jack's 20-20-20 at quarter strength",
-          "months": [
-            4
-          ]
-        },
-        {
-          "task": "Prune to shape if needed — thick gloves only, latex sap is toxic",
-          "months": [
-            3
-          ]
-        }
-      ]
-    },
-    {
-      "id": "ps-aeonium-blushing",
-      "bedId": "b-berry",
-      "name": "Aeonium Blushing Beauty",
-      "scientific": "Aeonium 'Blushing Beauty'",
-      "category": "Succulents & Cacti",
-      "status": "alive",
-      "datePlanted": "2026-06-21",
-      "sun": "Full sun to part shade",
-      "water": "Low",
-      "notes": "Winter grower — goes dormant in summer heat. Growth resumes in fall.",
-      "nursery": "",
-      "emoji": "🌸",
-      "fromCutting": false,
-      "trouble": [],
-      "maintenance": [
-        {
-          "task": "Water every 10-14 days — newly planted, establishing; reduce once settled",
-          "months": [
-            6,
-            7,
-            8,
-            9
-          ]
-        },
-        {
-          "task": "Water regularly — active winter growing season",
-          "months": [
-            10,
-            11,
-            12,
-            1,
-            2
-          ]
-        },
-        {
-          "task": "Feed diluted Jack's 20-20-20 or Miracle-Gro half strength — fall growing season begins",
-          "months": [
-            10,
-            11
-          ]
-        },
-        {
-          "task": "Remove dead rosettes and spent flower stalks",
-          "months": [
-            3,
-            4,
-            5
-          ]
-        }
-      ]
-    },
-    {
-      "id": "ps-aeonium-salad",
-      "bedId": "b-berry",
-      "name": "Aeonium Salad Bowl",
-      "scientific": "Aeonium 'Salad Bowl'",
-      "category": "Succulents & Cacti",
-      "status": "alive",
-      "datePlanted": "2026-06-21",
-      "sun": "Full sun to part shade",
-      "water": "Low",
-      "notes": "Winter grower — goes dormant in summer heat. Growth resumes in fall.",
-      "nursery": "",
-      "emoji": "🌿",
-      "fromCutting": false,
-      "trouble": [],
-      "maintenance": [
-        {
-          "task": "Water every 10-14 days — newly planted, establishing; reduce once settled",
-          "months": [
-            6,
-            7,
-            8,
-            9
-          ]
-        },
-        {
-          "task": "Water regularly — active winter growing season",
-          "months": [
-            10,
-            11,
-            12,
-            1,
-            2
-          ]
-        },
-        {
-          "task": "Feed diluted Jack's 20-20-20 or Miracle-Gro half strength — fall growing season begins",
-          "months": [
-            10,
-            11
-          ]
-        },
-        {
-          "task": "Remove dead rosettes and spent flower stalks",
-          "months": [
-            3,
-            4,
-            5
           ]
         }
       ]
@@ -8793,6 +7620,1179 @@
         }
       ],
       "trouble": []
+    },
+    {
+      "id": "sa-shasta",
+      "bedId": "b-berry",
+      "name": "Shasta Daisy",
+      "scientific": "Leucanthemum x superbum",
+      "emoji": "🌼",
+      "status": "alive",
+      "category": "Perennials",
+      "water": "Moderate",
+      "sun": "Full sun",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Classic white daisy with yellow center. Long summer bloom.",
+      "maintenance": [
+        {
+          "task": "Deadhead spent blooms daily during peak bloom",
+          "months": [
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "task": "Divide clumps every 3-4 years",
+          "months": [
+            9
+          ]
+        },
+        {
+          "task": "Cut back to ground in late fall",
+          "months": [
+            11
+          ]
+        },
+        {
+          "task": "Feed Jack's 20-20-20",
+          "months": [
+            3,
+            4
+          ]
+        }
+      ],
+      "trouble": [],
+      "howPlanted": ""
+    },
+    {
+      "id": "p1779820722407605",
+      "bedId": "b-berry",
+      "name": "Day Lilies",
+      "scientific": "Hemerocallis",
+      "emoji": "emoji_fl-daylily",
+      "status": "alive",
+      "water": "Moderate",
+      "sun": "Full sun to part shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Established in bed. Orange/yellow summer blooms.",
+      "maintenance": [
+        {
+          "task": "Deadhead regularly",
+          "months": [
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "task": "Divide clumps every 3-4 years",
+          "months": [
+            9,
+            10
+          ]
+        },
+        {
+          "task": "Cut back dead foliage in late fall",
+          "months": [
+            11
+          ]
+        },
+        {
+          "task": "Feed Jack's 20-20-20",
+          "months": [
+            3,
+            4
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Rust",
+          "url": "https://www.google.com/search?q=Daylily+rust+fix"
+        },
+        {
+          "issue": "Aphids",
+          "url": "https://www.google.com/search?q=Daylily+aphids+fix"
+        }
+      ],
+      "category": "Perennials",
+      "howPlanted": "",
+      "isIndoor": false
+    },
+    {
+      "id": "berry-fig",
+      "bedId": "b-berry",
+      "name": "Dwarf Fig — Little Miss Figgy",
+      "scientific": "Ficus carica Little Miss Figgy",
+      "emoji": "🌿",
+      "status": "alive",
+      "category": "Fruit Trees",
+      "water": "Moderate",
+      "sun": "Full sun",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Compact dwarf fig, stays under 4ft. Produces full-size figs twice a year.",
+      "maintenance": [
+        {
+          "task": "Feed Jack's 20-20-20",
+          "months": [
+            3
+          ]
+        },
+        {
+          "task": "Light prune to shape in winter",
+          "months": [
+            1,
+            2
+          ]
+        },
+        {
+          "task": "Deep water weekly July-August",
+          "months": [
+            7,
+            8
+          ]
+        }
+      ],
+      "trouble": []
+    },
+    {
+      "id": "p1778195347203525",
+      "bedId": "b-berry",
+      "name": "Geranium",
+      "scientific": "Pelargonium spp.",
+      "emoji": "emoji_p1778195347203525",
+      "status": "alive",
+      "water": "Moderate",
+      "sun": "Part shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Red + pink. Propagating from stem cuttings.",
+      "maintenance": [
+        {
+          "task": "Deadhead regularly",
+          "months": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "task": "Cut back by 1/3 after first bloom flush",
+          "months": [
+            5,
+            6
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Leggy growth",
+          "url": "https://www.google.com/search?q=Leggy%20growth%20plant%20care%20fix"
+        }
+      ],
+      "category": "Perennials",
+      "isIndoor": false
+    },
+    {
+      "id": "ps-orange",
+      "bedId": "b-berry",
+      "name": "Orange Tree",
+      "scientific": "Citrus sinensis",
+      "emoji": "🍊",
+      "status": "alive",
+      "water": "Every 2 weeks spring/summer",
+      "sun": "Full sun",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Existing.",
+      "maintenance": [
+        {
+          "task": "Feed citrus fertilizer",
+          "months": [
+            2,
+            5,
+            8
+          ]
+        },
+        {
+          "task": "Deep water monthly — slow hose at drip line",
+          "months": [
+            3,
+            4,
+            5,
+            6
+          ]
+        },
+        {
+          "task": "Deep water every 2 weeks July-August",
+          "months": [
+            7,
+            8
+          ]
+        },
+        {
+          "task": "Monthly watering sufficient fall/winter",
+          "months": [
+            9,
+            10,
+            11,
+            12,
+            1,
+            2
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Yellowing leaves (nutrient deficiency)",
+          "url": "https://www.google.com/search?q=Yellowing%20leaves%20(nutrient%20deficiency)%20plant%20care%20fix"
+        }
+      ],
+      "category": "Fruit Trees",
+      "howPlanted": ""
+    },
+    {
+      "id": "p1778195377685437",
+      "bedId": "b-berry",
+      "name": "Fatsia japonica",
+      "scientific": "Fatsia japonica",
+      "emoji": "emoji_p1778195377685437",
+      "status": "alive",
+      "water": "Moderate",
+      "sun": "Part shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "2-gallon. Behind planter area.",
+      "maintenance": [
+        {
+          "task": "Cut back in spring before growth pushes",
+          "months": [
+            2,
+            3
+          ]
+        },
+        {
+          "task": "Take cuttings for propagation",
+          "months": [
+            3
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Leaf drop",
+          "url": "https://www.google.com/search?q=Leaf%20drop%20plant%20care%20fix"
+        }
+      ],
+      "category": "Tropical Foliage",
+      "isIndoor": false,
+      "howPlanted": ""
+    },
+    {
+      "id": "ps-persimmon",
+      "bedId": "b-berry",
+      "name": "Persimmon",
+      "scientific": "Diospyros kaki",
+      "emoji": "emoji_ps-persimmon",
+      "status": "alive",
+      "water": "Monthly spring / every 2 weeks July-August",
+      "sun": "Full sun",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Existing. Most drought tolerant.",
+      "maintenance": [
+        {
+          "task": "Deep water monthly — slow hose at drip line",
+          "months": [
+            3,
+            4,
+            5,
+            6
+          ]
+        },
+        {
+          "task": "Monthly watering July-September — slow hose at drip line",
+          "months": [
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "task": "Monthly watering fall/winter — if no rain",
+          "months": [
+            10,
+            11,
+            12,
+            1,
+            2
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Fruit drop",
+          "url": "https://www.google.com/search?q=Fruit%20drop%20plant%20care%20fix"
+        }
+      ],
+      "category": "Fruit Trees"
+    },
+    {
+      "id": "berry-thyme",
+      "bedId": "b-berry",
+      "name": "Woolly Thyme",
+      "scientific": "Thymus pseudolanuginosus",
+      "emoji": "🌿",
+      "status": "alive",
+      "category": "Groundcovers",
+      "water": "Low once established",
+      "sun": "Full sun",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Low creeping groundcover with soft woolly leaves. Tolerates light foot traffic.",
+      "maintenance": [
+        {
+          "task": "Trim lightly after flowering",
+          "months": [
+            7,
+            8
+          ]
+        },
+        {
+          "task": "Divide if overcrowded",
+          "months": [
+            4
+          ]
+        }
+      ],
+      "trouble": []
+    },
+    {
+      "id": "p1778178720492",
+      "bedId": "b-berry",
+      "name": "Wisteria",
+      "scientific": "Wisteria sinensis",
+      "emoji": "emoji_p1778178720492",
+      "category": "Vines & Climbers",
+      "status": "alive",
+      "water": "Moderate — deep water during establishment",
+      "sun": "Full sun",
+      "notes": "Two trim cycles to maximize bloom. \nMay - cut back to 6 nodes. Get rid of all seed pods \nJan/feb - cut back to 2 or 3. This is where the flowers will come from ",
+      "fromCutting": false,
+      "maintenance": [
+        {
+          "task": "Cut back summer side shoots to 2-3 buds — winter half of 5-3 rule",
+          "months": [
+            1,
+            2
+          ]
+        },
+        {
+          "task": "Deadhead regularly",
+          "months": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "task": "Train and tie new canes to structure",
+          "months": [
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "task": "Feed Super Bloom",
+          "months": [
+            5
+          ]
+        },
+        {
+          "task": "Cut back new side shoots to 5 leaves — do NOT cut main structural canes",
+          "months": [
+            5,
+            6,
+            7,
+            8
+          ]
+        }
+      ],
+      "trouble": []
+    },
+    {
+      "id": "p1778194904648727",
+      "bedId": "b-berry",
+      "name": "Camellia",
+      "scientific": "Camellia japonica",
+      "emoji": "emoji_p1778194904648727",
+      "status": "alive",
+      "water": "Regular",
+      "sun": "Part to full shade",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Existing.",
+      "maintenance": [
+        {
+          "task": "Deadwood removal only — no hard cutback",
+          "months": [
+            1
+          ]
+        },
+        {
+          "task": "Feed Camellia fertilizer",
+          "months": [
+            3
+          ]
+        },
+        {
+          "task": "Prune ONLY after flowering complete",
+          "months": [
+            8,
+            9
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Bud drop",
+          "url": "https://www.google.com/search?q=Bud%20drop%20plant%20care%20fix"
+        }
+      ],
+      "category": "Camellias",
+      "isIndoor": false
+    },
+    {
+      "id": "p1778614808924",
+      "bedId": "b-berry",
+      "name": "Peas",
+      "scientific": "Pisum sativum",
+      "emoji": "🫛",
+      "category": "Vegetables",
+      "status": "alive",
+      "water": "Moderate",
+      "sun": "Full sun to part shade",
+      "notes": "Planted seeds May 12",
+      "fromCutting": false,
+      "maintenance": [
+        {
+          "task": "Harvest pods regularly",
+          "months": [
+            6,
+            7,
+            8
+          ]
+        }
+      ],
+      "trouble": [],
+      "datePlanted": "2026-05-12",
+      "howPlanted": "seed"
+    },
+    {
+      "id": "p1778614834266",
+      "bedId": "b-berry",
+      "name": "Snap Peas",
+      "scientific": "Pisum sativum var. macrocarpon",
+      "emoji": "🫛",
+      "category": "Vegetables",
+      "status": "alive",
+      "water": "Moderate",
+      "sun": "Full sun to part shade",
+      "notes": "Planted seeds May 12",
+      "fromCutting": false,
+      "maintenance": [
+        {
+          "task": "Harvest pods regularly",
+          "months": [
+            6,
+            7,
+            8
+          ]
+        }
+      ],
+      "trouble": [],
+      "datePlanted": "2026-05-12",
+      "howPlanted": "seed"
+    },
+    {
+      "id": "berry-greenbeans",
+      "bedId": "b-berry",
+      "name": "Green Beans",
+      "scientific": "Phaseolus vulgaris",
+      "emoji": "🌱",
+      "status": "alive",
+      "category": "Vegetables",
+      "water": "Moderate",
+      "sun": "Full sun",
+      "datePlanted": "2026-05-12",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Planted from seed May 12",
+      "maintenance": [
+        {
+          "task": "Harvest pods regularly",
+          "months": [
+            7,
+            8,
+            9
+          ]
+        }
+      ],
+      "trouble": []
+    },
+    {
+      "id": "ps-raspberry",
+      "bedId": "b-berry",
+      "name": "Raspberry",
+      "scientific": "Rubus idaeus ",
+      "emoji": "emoji_ps-raspberry",
+      "status": "alive",
+      "water": "Weekly on drip",
+      "sun": "Full sun",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Existing x1 + new x1. On drip system.",
+      "maintenance": [
+        {
+          "task": "Feed Jack's 20-20-20",
+          "months": [
+            2,
+            3
+          ]
+        },
+        {
+          "task": "Remove old fruited canes after harvest",
+          "months": [
+            8,
+            9
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Poor fruiting",
+          "url": "https://www.google.com/search?q=Poor%20fruiting%20plant%20care%20fix"
+        }
+      ],
+      "category": "Berries",
+      "howPlanted": ""
+    },
+    {
+      "id": "ps-blackberry",
+      "bedId": "b-berry",
+      "name": "Blackberry Triple Crown",
+      "scientific": "Rubus spp. Triple Crown",
+      "emoji": "emoji_ps-blackberry",
+      "status": "alive",
+      "water": "Regular during fruiting",
+      "sun": "Full sun",
+      "datePlanted": "2026-05-27",
+      "nursery": "bought",
+      "fromCutting": false,
+      "notes": "x2. 1-gallon. Thornless. Espalier on wall.",
+      "maintenance": [
+        {
+          "task": "Feed Jack's 20-20-20",
+          "months": [
+            2,
+            3
+          ]
+        },
+        {
+          "task": "Train and tie new canes to structure",
+          "months": [
+            4,
+            5,
+            6
+          ]
+        },
+        {
+          "task": "Tip prune in summer to encourage lateral growth",
+          "months": [
+            7
+          ]
+        },
+        {
+          "task": "Remove old fruited canes after harvest",
+          "months": [
+            8,
+            9
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Poor fruiting",
+          "url": "https://www.google.com/search?q=Poor%20fruiting%20plant%20care%20fix"
+        }
+      ],
+      "category": "Berries",
+      "howPlanted": ""
+    },
+    {
+      "id": "berry-boysenberry",
+      "bedId": "b-berry",
+      "name": "Thornless Boysenberry",
+      "scientific": "Rubus ursinus x R. idaeus",
+      "emoji": "🫐",
+      "status": "alive",
+      "category": "Berries",
+      "water": "Moderate",
+      "sun": "Full sun",
+      "datePlanted": "2026-05-27",
+      "nursery": "bought",
+      "fromCutting": false,
+      "notes": "Thornless variety. Large, sweet berries mid-summer.",
+      "maintenance": [
+        {
+          "task": "Cut floricanes to ground after fruiting",
+          "months": [
+            8,
+            9
+          ]
+        },
+        {
+          "task": "Train and tie new canes to structure",
+          "months": [
+            3,
+            4
+          ]
+        },
+        {
+          "task": "Feed Jack's 20-20-20",
+          "months": [
+            3
+          ]
+        }
+      ],
+      "trouble": []
+    },
+    {
+      "id": "p1778869421207",
+      "bedId": "b-berry",
+      "name": "Okra",
+      "scientific": "Abelmoschus esculentus",
+      "emoji": "emoji_p1778869421207",
+      "category": "Vegetables",
+      "status": "alive",
+      "water": "Moderate, drought tolerant once established",
+      "sun": "Full sun",
+      "datePlanted": "2026-05-15",
+      "howPlanted": "seed",
+      "fromCutting": false,
+      "nursery": "",
+      "notes": "Planted May 15",
+      "maintenance": [
+        {
+          "task": "Harvest pods regularly",
+          "months": [
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "task": "Feed Jack's 20-20-20 every 2 weeks",
+          "months": [
+            6,
+            7,
+            8,
+            9
+          ]
+        }
+      ],
+      "trouble": []
+    },
+    {
+      "id": "ps-salvia",
+      "bedId": "b-berry",
+      "name": "Salvia Amistad",
+      "scientific": "Salvia Amistad",
+      "emoji": "emoji_ps-salvia",
+      "status": "alive",
+      "water": "Low-moderate",
+      "sun": "Full sun",
+      "datePlanted": "2026-05-27",
+      "nursery": "bought",
+      "fromCutting": false,
+      "notes": "x3. 1-gallon. Full sun — thrives here.",
+      "maintenance": [
+        {
+          "task": "Deadhead regularly",
+          "months": [
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "task": "Cut back by 1/3 if leggy",
+          "months": [
+            7
+          ]
+        },
+        {
+          "task": "Hard cutback annually in January/February",
+          "months": [
+            2
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Leggy growth",
+          "url": "https://www.google.com/search?q=Leggy%20growth%20plant%20care%20fix"
+        }
+      ],
+      "category": "Salvias"
+    },
+    {
+      "id": "p1780252656543568",
+      "bedId": "b-berry",
+      "name": "English Lavender",
+      "scientific": "Lavandula angustifolia",
+      "emoji": "💜",
+      "status": "alive",
+      "category": "Herbs",
+      "water": "Low once established",
+      "sun": "Full sun",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "",
+      "maintenance": [
+        {
+          "task": "Cut back by 1/3 after first bloom flush",
+          "months": [
+            7
+          ]
+        },
+        {
+          "task": "Feed Jack's 20-20-20",
+          "months": [
+            3
+          ]
+        }
+      ],
+      "trouble": [],
+      "isIndoor": false
+    },
+    {
+      "id": "p1778178590870",
+      "bedId": "b-berry",
+      "name": "Fan Palm",
+      "scientific": "Washingtonia robusta",
+      "emoji": "🌴",
+      "category": "Trees",
+      "status": "alive",
+      "water": "Low once established — drought tolerant",
+      "sun": "Full sun",
+      "notes": "",
+      "fromCutting": false,
+      "maintenance": [
+        {
+          "task": "Deep water monthly — slow hose at drip line",
+          "months": [
+            6,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "task": "Feed Jack's 20-20-20",
+          "months": [
+            3
+          ]
+        },
+        {
+          "task": "Remove dead/crossing branches",
+          "months": [
+            1,
+            2
+          ]
+        }
+      ],
+      "trouble": []
+    },
+    {
+      "id": "p1778117734357",
+      "bedId": "b-berry",
+      "name": "Pittosporum in corner ",
+      "scientific": "Pittosporum tobira",
+      "emoji": "emoji_p1778117734357",
+      "category": "Trees",
+      "status": "alive",
+      "water": "Low once established",
+      "sun": "Full sun to part shade",
+      "notes": "",
+      "fromCutting": false,
+      "maintenance": [
+        {
+          "task": "Deep water monthly — slow hose at drip line",
+          "months": [
+            6,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "task": "Feed Jack's 20-20-20",
+          "months": [
+            3
+          ]
+        },
+        {
+          "task": "Remove dead/crossing branches",
+          "months": [
+            1,
+            2
+          ]
+        }
+      ],
+      "trouble": [],
+      "datePlanted": "",
+      "howPlanted": ""
+    },
+    {
+      "id": "ps-tickseed",
+      "bedId": "b-berry",
+      "name": "Tickseed",
+      "scientific": "Coreopsis verticillata",
+      "category": "Perennials",
+      "status": "alive",
+      "datePlanted": "2026-06-20",
+      "sun": "Full sun",
+      "water": "Low to moderate",
+      "notes": "Yellow variety. Next to Shasta Daisy.",
+      "nursery": "",
+      "emoji": "🌼",
+      "fromCutting": false,
+      "trouble": [],
+      "maintenance": [
+        {
+          "task": "Deadhead spent blooms to extend flowering",
+          "months": [
+            5,
+            6,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "task": "Cut back hard after main flowering flush",
+          "months": [
+            9,
+            10
+          ]
+        },
+        {
+          "task": "Divide clumps every 2-3 years in spring",
+          "months": [
+            3
+          ]
+        },
+        {
+          "task": "Light feed in spring",
+          "months": [
+            3,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ps-myoporum",
+      "bedId": "b-berry",
+      "name": "Myoporum",
+      "scientific": "Myoporum parvifolium",
+      "category": "Groundcovers",
+      "status": "alive",
+      "datePlanted": "2026-06-20",
+      "sun": "Full sun",
+      "water": "Low to moderate",
+      "notes": "Ground cover. Next to woolly thyme.",
+      "nursery": "",
+      "emoji": "🌿",
+      "fromCutting": false,
+      "trouble": [],
+      "maintenance": [
+        {
+          "task": "Water regularly to establish — first summer",
+          "months": [
+            6,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "task": "Trim if spreading beyond bounds",
+          "months": [
+            3,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ps-dymondia",
+      "bedId": "b-berry",
+      "name": "Dymondia",
+      "scientific": "Dymondia margaretae",
+      "category": "Groundcovers",
+      "status": "alive",
+      "datePlanted": "2026-06-20",
+      "sun": "Full sun",
+      "water": "Low",
+      "notes": "Silver carpet ground cover. Next to woolly thyme.",
+      "nursery": "",
+      "emoji": "🌿",
+      "fromCutting": false,
+      "trouble": [],
+      "maintenance": [
+        {
+          "task": "Water to establish — first summer",
+          "months": [
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "task": "Trim to shape if needed",
+          "months": [
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ps-pencil-cactus",
+      "bedId": "b-berry",
+      "name": "Pencil Cactus Sticks on Fire",
+      "scientific": "Euphorbia tirucalli 'Sticks on Fire'",
+      "category": "Succulents & Cacti",
+      "status": "alive",
+      "datePlanted": "2026-06-21",
+      "sun": "Full sun",
+      "water": "Very low",
+      "notes": "Toxic milky latex sap — always wear gloves when handling or pruning.",
+      "nursery": "",
+      "emoji": "🔴",
+      "fromCutting": false,
+      "trouble": [],
+      "maintenance": [
+        {
+          "task": "Water weekly — newly planted, establishing (wear gloves — sap is caustic)",
+          "months": [
+            6,
+            7
+          ]
+        },
+        {
+          "task": "Water monthly once established — drought tolerant",
+          "months": [
+            8,
+            9
+          ]
+        },
+        {
+          "task": "Light feed Jack's 20-20-20 at quarter strength",
+          "months": [
+            4
+          ]
+        },
+        {
+          "task": "Prune to shape if needed — thick gloves only, latex sap is toxic",
+          "months": [
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ps-aeonium-blushing",
+      "bedId": "b-berry",
+      "name": "Aeonium Blushing Beauty",
+      "scientific": "Aeonium 'Blushing Beauty'",
+      "category": "Succulents & Cacti",
+      "status": "alive",
+      "datePlanted": "2026-06-21",
+      "sun": "Full sun to part shade",
+      "water": "Low",
+      "notes": "Winter grower — goes dormant in summer heat. Growth resumes in fall.",
+      "nursery": "",
+      "emoji": "🌸",
+      "fromCutting": false,
+      "trouble": [],
+      "maintenance": [
+        {
+          "task": "Water every 10-14 days — newly planted, establishing; reduce once settled",
+          "months": [
+            6,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "task": "Water regularly — active winter growing season",
+          "months": [
+            10,
+            11,
+            12,
+            1,
+            2
+          ]
+        },
+        {
+          "task": "Feed diluted Jack's 20-20-20 or Miracle-Gro half strength — fall growing season begins",
+          "months": [
+            10,
+            11
+          ]
+        },
+        {
+          "task": "Remove dead rosettes and spent flower stalks",
+          "months": [
+            3,
+            4,
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ps-aeonium-salad",
+      "bedId": "b-berry",
+      "name": "Aeonium Salad Bowl",
+      "scientific": "Aeonium 'Salad Bowl'",
+      "category": "Succulents & Cacti",
+      "status": "alive",
+      "datePlanted": "2026-06-21",
+      "sun": "Full sun to part shade",
+      "water": "Low",
+      "notes": "Winter grower — goes dormant in summer heat. Growth resumes in fall.",
+      "nursery": "",
+      "emoji": "🌿",
+      "fromCutting": false,
+      "trouble": [],
+      "maintenance": [
+        {
+          "task": "Water every 10-14 days — newly planted, establishing; reduce once settled",
+          "months": [
+            6,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "task": "Water regularly — active winter growing season",
+          "months": [
+            10,
+            11,
+            12,
+            1,
+            2
+          ]
+        },
+        {
+          "task": "Feed diluted Jack's 20-20-20 or Miracle-Gro half strength — fall growing season begins",
+          "months": [
+            10,
+            11
+          ]
+        },
+        {
+          "task": "Remove dead rosettes and spent flower stalks",
+          "months": [
+            3,
+            4,
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ps-pomegranate",
+      "bedId": "b-berry",
+      "name": "Pomegranate",
+      "scientific": "Punica granatum",
+      "emoji": "emoji_ps-pomegranate",
+      "status": "dead",
+      "water": "Monthly spring / every 2 weeks July-August",
+      "sun": "Full sun",
+      "datePlanted": "",
+      "nursery": "",
+      "fromCutting": false,
+      "notes": "Existing. Consistent water improves fruit quality.",
+      "maintenance": [
+        {
+          "task": "Deep water monthly — slow hose at drip line",
+          "months": [
+            3,
+            4,
+            5,
+            6
+          ]
+        },
+        {
+          "task": "Monthly watering July-September — slow hose at drip line",
+          "months": [
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "task": "Monthly watering fall/winter — if no rain",
+          "months": [
+            10,
+            11,
+            12,
+            1,
+            2
+          ]
+        }
+      ],
+      "trouble": [
+        {
+          "issue": "Fruit splitting (inconsistent watering)",
+          "url": "https://www.google.com/search?q=Fruit%20splitting%20(inconsistent%20watering)%20plant%20care%20fix"
+        }
+      ],
+      "category": "Fruit Trees",
+      "howPlanted": ""
     }
   ],
   "indoorPlants": [
@@ -11373,5 +11373,5 @@
       "pg_Prune heavily after flowering in spring to maintain shape": true
     }
   },
-  "syncedAt": "2026-06-21T23:18:31.432Z"
+  "syncedAt": "2026-06-21T23:19:44.515Z"
 }
