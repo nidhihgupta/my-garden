@@ -8455,6 +8455,38 @@
       "category": "Salvias"
     },
     {
+      "id": "ps-dymondia",
+      "bedId": "b-berry",
+      "name": "Dymondia",
+      "scientific": "Dymondia margaretae",
+      "category": "Groundcovers",
+      "status": "alive",
+      "datePlanted": "2026-06-20",
+      "sun": "Full sun",
+      "water": "Low",
+      "notes": "Silver carpet ground cover. Next to woolly thyme.",
+      "nursery": "",
+      "emoji": "🌿",
+      "fromCutting": false,
+      "trouble": [],
+      "maintenance": [
+        {
+          "task": "Water to establish — first summer",
+          "months": [
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "task": "Trim to shape if needed",
+          "months": [
+            3
+          ]
+        }
+      ]
+    },
+    {
       "id": "p1780252656543568",
       "bedId": "b-berry",
       "name": "English Lavender",
@@ -8562,38 +8594,6 @@
       "trouble": [],
       "datePlanted": "",
       "howPlanted": ""
-    },
-    {
-      "id": "ps-dymondia",
-      "bedId": "b-berry",
-      "name": "Dymondia",
-      "scientific": "Dymondia margaretae",
-      "category": "Groundcovers",
-      "status": "alive",
-      "datePlanted": "2026-06-20",
-      "sun": "Full sun",
-      "water": "Low",
-      "notes": "Silver carpet ground cover. Next to woolly thyme.",
-      "nursery": "",
-      "emoji": "🌿",
-      "fromCutting": false,
-      "trouble": [],
-      "maintenance": [
-        {
-          "task": "Water to establish — first summer",
-          "months": [
-            6,
-            7,
-            8
-          ]
-        },
-        {
-          "task": "Trim to shape if needed",
-          "months": [
-            3
-          ]
-        }
-      ]
     },
     {
       "id": "ps-pencil-cactus",
@@ -11373,5 +11373,5 @@
       "pg_Prune heavily after flowering in spring to maintain shape": true
     }
   },
-  "syncedAt": "2026-06-21T23:20:45.914Z"
+  "syncedAt": "2026-06-21T23:20:51.643Z"
 }
