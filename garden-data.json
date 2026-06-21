@@ -8504,6 +8504,52 @@
       "isIndoor": false
     },
     {
+      "id": "porch-dichondra-ef",
+      "bedId": "b-porch",
+      "name": "Dichondra Emerald Falls",
+      "scientific": "Dichondra argentea 'Emerald Falls'",
+      "category": "Annuals",
+      "status": "alive",
+      "datePlanted": "2026-06-20",
+      "sun": "Full sun to part shade",
+      "water": "Moderate",
+      "notes": "Trailing spiller for porch planter.",
+      "nursery": "",
+      "emoji": "🌿",
+      "fromCutting": false,
+      "trouble": [],
+      "maintenance": [
+        {
+          "task": "Keep evenly moist — check daily in summer heat",
+          "months": [
+            6,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "task": "Light liquid feed monthly spring-summer",
+          "months": [
+            5,
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "task": "Trim to keep within planter",
+          "months": [
+            5,
+            6,
+            7,
+            8,
+            9
+          ]
+        }
+      ]
+    },
+    {
       "id": "porch-cordyline",
       "bedId": "b-porch",
       "name": "Cordyline",
@@ -8564,52 +8610,6 @@
       ],
       "trouble": [],
       "howPlanted": ""
-    },
-    {
-      "id": "porch-dichondra-ef",
-      "bedId": "b-porch",
-      "name": "Dichondra Emerald Falls",
-      "scientific": "Dichondra argentea 'Emerald Falls'",
-      "category": "Annuals",
-      "status": "alive",
-      "datePlanted": "2026-06-20",
-      "sun": "Full sun to part shade",
-      "water": "Moderate",
-      "notes": "Trailing spiller for porch planter.",
-      "nursery": "",
-      "emoji": "🌿",
-      "fromCutting": false,
-      "trouble": [],
-      "maintenance": [
-        {
-          "task": "Keep evenly moist — check daily in summer heat",
-          "months": [
-            6,
-            7,
-            8,
-            9
-          ]
-        },
-        {
-          "task": "Light liquid feed monthly spring-summer",
-          "months": [
-            5,
-            6,
-            7,
-            8
-          ]
-        },
-        {
-          "task": "Trim to keep within planter",
-          "months": [
-            5,
-            6,
-            7,
-            8,
-            9
-          ]
-        }
-      ]
     },
     {
       "id": "porch-sweet-potato",
@@ -11399,5 +11399,5 @@
       "pg_Prune heavily after flowering in spring to maintain shape": true
     }
   },
-  "syncedAt": "2026-06-21T23:17:27.855Z"
+  "syncedAt": "2026-06-21T23:17:30.706Z"
 }
