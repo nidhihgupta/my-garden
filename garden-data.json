@@ -8032,6 +8032,38 @@
       "trouble": []
     },
     {
+      "id": "ps-dymondia",
+      "bedId": "b-berry",
+      "name": "Dymondia",
+      "scientific": "Dymondia margaretae",
+      "category": "Groundcovers",
+      "status": "alive",
+      "datePlanted": "2026-06-20",
+      "sun": "Full sun",
+      "water": "Low",
+      "notes": "Silver carpet ground cover. Next to woolly thyme.",
+      "nursery": "",
+      "emoji": "🌿",
+      "fromCutting": false,
+      "trouble": [],
+      "maintenance": [
+        {
+          "task": "Water to establish — first summer",
+          "months": [
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "task": "Trim to shape if needed",
+          "months": [
+            3
+          ]
+        }
+      ]
+    },
+    {
       "id": "p1778178720492",
       "bedId": "b-berry",
       "name": "Wisteria",
@@ -8162,38 +8194,6 @@
           "months": [
             3,
             4
-          ]
-        }
-      ]
-    },
-    {
-      "id": "ps-dymondia",
-      "bedId": "b-berry",
-      "name": "Dymondia",
-      "scientific": "Dymondia margaretae",
-      "category": "Groundcovers",
-      "status": "alive",
-      "datePlanted": "2026-06-20",
-      "sun": "Full sun",
-      "water": "Low",
-      "notes": "Silver carpet ground cover. Next to woolly thyme.",
-      "nursery": "",
-      "emoji": "🌿",
-      "fromCutting": false,
-      "trouble": [],
-      "maintenance": [
-        {
-          "task": "Water to establish — first summer",
-          "months": [
-            6,
-            7,
-            8
-          ]
-        },
-        {
-          "task": "Trim to shape if needed",
-          "months": [
-            3
           ]
         }
       ]
@@ -11373,5 +11373,5 @@
       "pg_Prune heavily after flowering in spring to maintain shape": true
     }
   },
-  "syncedAt": "2026-06-21T23:21:07.432Z"
+  "syncedAt": "2026-06-21T23:21:11.765Z"
 }
