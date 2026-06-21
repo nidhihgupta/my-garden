@@ -11413,8 +11413,9 @@
       "pg_Cut back new side shoots to 5 leaves — do NOT cut main structural canes": true,
       "pg_Prune heavily after flowering in spring to maintain shape": true,
       "pg_Pinch tips regularly to encourage bushy, compact growth": true,
-      "pg_Keep evenly moist — check daily in summer heat": true
+      "pg_Keep evenly moist — check daily in summer heat": true,
+      "pg_Trim to keep within planter": true
     }
   },
-  "syncedAt": "2026-06-21T23:28:23.582Z"
+  "syncedAt": "2026-06-21T23:28:27.045Z"
 }
