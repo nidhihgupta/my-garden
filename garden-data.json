@@ -8612,6 +8612,213 @@
           ]
         }
       ]
+    },
+    {
+      "id": "sa-teasing-georgia",
+      "bedId": "b-sa",
+      "name": "Teasing Georgia",
+      "scientific": "Rosa 'Teasing Georgia'",
+      "category": "Climbing Roses",
+      "status": "alive",
+      "datePlanted": "2026-06-21",
+      "sun": "Full sun",
+      "water": "Moderate to high",
+      "notes": "David Austin climbing rose. Worked bone meal into planting hole for root establishment.",
+      "nursery": "",
+      "emoji": "🌹",
+      "fromCutting": false,
+      "trouble": [],
+      "maintenance": [
+        {
+          "task": "Water deeply every 2-3 days — newly planted, first summer establishment",
+          "months": [
+            6,
+            7
+          ]
+        },
+        {
+          "task": "Deadhead roses every 2 weeks — outward facing bud, 45° cut",
+          "months": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "task": "Hard cutback — shorten laterals to 2-3 buds, remove dead wood entirely",
+          "months": [
+            1,
+            2
+          ]
+        },
+        {
+          "task": "Feed Jack's 20-20-20 after bloom flush",
+          "months": [
+            5,
+            6
+          ]
+        },
+        {
+          "task": "Train and tie new canes to arbor support while flexible",
+          "months": [
+            3,
+            4,
+            9
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ps-pencil-cactus",
+      "bedId": "b-berry",
+      "name": "Pencil Cactus Sticks on Fire",
+      "scientific": "Euphorbia tirucalli 'Sticks on Fire'",
+      "category": "Succulents & Cacti",
+      "status": "alive",
+      "datePlanted": "2026-06-21",
+      "sun": "Full sun",
+      "water": "Very low",
+      "notes": "Toxic milky latex sap — always wear gloves when handling or pruning.",
+      "nursery": "",
+      "emoji": "🔴",
+      "fromCutting": false,
+      "trouble": [],
+      "maintenance": [
+        {
+          "task": "Water weekly — newly planted, establishing (wear gloves — sap is caustic)",
+          "months": [
+            6,
+            7
+          ]
+        },
+        {
+          "task": "Water monthly once established — drought tolerant",
+          "months": [
+            8,
+            9
+          ]
+        },
+        {
+          "task": "Light feed Jack's 20-20-20 at quarter strength",
+          "months": [
+            4
+          ]
+        },
+        {
+          "task": "Prune to shape if needed — thick gloves only, latex sap is toxic",
+          "months": [
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ps-aeonium-blushing",
+      "bedId": "b-berry",
+      "name": "Aeonium Blushing Beauty",
+      "scientific": "Aeonium 'Blushing Beauty'",
+      "category": "Succulents & Cacti",
+      "status": "alive",
+      "datePlanted": "2026-06-21",
+      "sun": "Full sun to part shade",
+      "water": "Low",
+      "notes": "Winter grower — goes dormant in summer heat. Growth resumes in fall.",
+      "nursery": "",
+      "emoji": "🌸",
+      "fromCutting": false,
+      "trouble": [],
+      "maintenance": [
+        {
+          "task": "Water every 10-14 days — newly planted, establishing; reduce once settled",
+          "months": [
+            6,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "task": "Water regularly — active winter growing season",
+          "months": [
+            10,
+            11,
+            12,
+            1,
+            2
+          ]
+        },
+        {
+          "task": "Feed diluted Jack's 20-20-20 or Miracle-Gro half strength — fall growing season begins",
+          "months": [
+            10,
+            11
+          ]
+        },
+        {
+          "task": "Remove dead rosettes and spent flower stalks",
+          "months": [
+            3,
+            4,
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ps-aeonium-salad",
+      "bedId": "b-berry",
+      "name": "Aeonium Salad Bowl",
+      "scientific": "Aeonium 'Salad Bowl'",
+      "category": "Succulents & Cacti",
+      "status": "alive",
+      "datePlanted": "2026-06-21",
+      "sun": "Full sun to part shade",
+      "water": "Low",
+      "notes": "Winter grower — goes dormant in summer heat. Growth resumes in fall.",
+      "nursery": "",
+      "emoji": "🌿",
+      "fromCutting": false,
+      "trouble": [],
+      "maintenance": [
+        {
+          "task": "Water every 10-14 days — newly planted, establishing; reduce once settled",
+          "months": [
+            6,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "task": "Water regularly — active winter growing season",
+          "months": [
+            10,
+            11,
+            12,
+            1,
+            2
+          ]
+        },
+        {
+          "task": "Feed diluted Jack's 20-20-20 or Miracle-Gro half strength — fall growing season begins",
+          "months": [
+            10,
+            11
+          ]
+        },
+        {
+          "task": "Remove dead rosettes and spent flower stalks",
+          "months": [
+            3,
+            4,
+            5
+          ]
+        }
+      ]
     }
   ],
   "indoorPlants": [
