@@ -10806,8 +10806,9 @@
       "pg_Remove dead fronds as needed": true,
       "pg_Train and tie new canes to structure": false,
       "ig_Remove offsets (pups) when they appear": true,
-      "ig_Remove damaged/sunburnt leaves": true
+      "ig_Remove damaged/sunburnt leaves": true,
+      "pg_Cut back by half after first bloom flush": true
     }
   },
-  "syncedAt": "2026-06-21T00:56:48.193Z"
+  "syncedAt": "2026-06-21T00:59:01.122Z"
 }
