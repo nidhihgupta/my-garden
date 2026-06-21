@@ -8518,6 +8518,50 @@
       "isIndoor": false
     },
     {
+      "id": "ps-pencil-cactus",
+      "bedId": "b-berry",
+      "name": "Pencil Cactus Sticks on Fire",
+      "scientific": "Euphorbia tirucalli 'Sticks on Fire'",
+      "category": "Succulents & Cacti",
+      "status": "alive",
+      "datePlanted": "2026-06-21",
+      "sun": "Full sun",
+      "water": "Very low",
+      "notes": "Toxic milky latex sap — always wear gloves when handling or pruning.",
+      "nursery": "",
+      "emoji": "🔴",
+      "fromCutting": false,
+      "trouble": [],
+      "maintenance": [
+        {
+          "task": "Water weekly — newly planted, establishing (wear gloves — sap is caustic)",
+          "months": [
+            6,
+            7
+          ]
+        },
+        {
+          "task": "Water monthly once established — drought tolerant",
+          "months": [
+            8,
+            9
+          ]
+        },
+        {
+          "task": "Light feed Jack's 20-20-20 at quarter strength",
+          "months": [
+            4
+          ]
+        },
+        {
+          "task": "Prune to shape if needed — thick gloves only, latex sap is toxic",
+          "months": [
+            3
+          ]
+        }
+      ]
+    },
+    {
       "id": "p1778178590870",
       "bedId": "b-berry",
       "name": "Fan Palm",
@@ -8594,50 +8638,6 @@
       "trouble": [],
       "datePlanted": "",
       "howPlanted": ""
-    },
-    {
-      "id": "ps-pencil-cactus",
-      "bedId": "b-berry",
-      "name": "Pencil Cactus Sticks on Fire",
-      "scientific": "Euphorbia tirucalli 'Sticks on Fire'",
-      "category": "Succulents & Cacti",
-      "status": "alive",
-      "datePlanted": "2026-06-21",
-      "sun": "Full sun",
-      "water": "Very low",
-      "notes": "Toxic milky latex sap — always wear gloves when handling or pruning.",
-      "nursery": "",
-      "emoji": "🔴",
-      "fromCutting": false,
-      "trouble": [],
-      "maintenance": [
-        {
-          "task": "Water weekly — newly planted, establishing (wear gloves — sap is caustic)",
-          "months": [
-            6,
-            7
-          ]
-        },
-        {
-          "task": "Water monthly once established — drought tolerant",
-          "months": [
-            8,
-            9
-          ]
-        },
-        {
-          "task": "Light feed Jack's 20-20-20 at quarter strength",
-          "months": [
-            4
-          ]
-        },
-        {
-          "task": "Prune to shape if needed — thick gloves only, latex sap is toxic",
-          "months": [
-            3
-          ]
-        }
-      ]
     },
     {
       "id": "ps-aeonium-blushing",
@@ -11373,5 +11373,5 @@
       "pg_Prune heavily after flowering in spring to maintain shape": true
     }
   },
-  "syncedAt": "2026-06-21T23:21:15.482Z"
+  "syncedAt": "2026-06-21T23:21:29.208Z"
 }
