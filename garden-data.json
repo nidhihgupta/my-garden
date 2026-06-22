@@ -498,22 +498,36 @@
       "notes": "Mixed succulents in stump planter.",
       "maintenance": [
         {
-          "task": "Water only when soil completely dry",
-          "months": [
-            4,
-            5,
-            6,
-            7,
-            8,
-            9,
-            10
-          ]
-        },
-        {
           "task": "Remove dead leaves from base",
           "months": [
             3,
             9
+          ]
+        },
+        {
+          "task": "Water every 10-14 days \u2014 newly planted, establishing; reduce once settled",
+          "months": [
+            6,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "task": "Water regularly \u2014 active winter growing season",
+          "months": [
+            10,
+            11,
+            12,
+            1,
+            2
+          ]
+        },
+        {
+          "task": "Feed diluted Jack's 20-20-20 or Miracle-Gro half strength \u2014 fall growing season begins",
+          "months": [
+            10,
+            11
           ]
         }
       ],
@@ -2618,7 +2632,7 @@
     {
       "id": "sa-iceberg",
       "bedId": "b-sa",
-      "name": "Rose bush",
+      "name": "William Shakespeare 2000",
       "scientific": "Rosa David Austin William Shakespeare 2000",
       "emoji": "emoji_sa-iceberg",
       "status": "alive",
@@ -2630,7 +2644,7 @@
       "notes": "Existing. Train horizontally now while flexible.",
       "maintenance": [
         {
-          "task": "Hard prune to outward facing buds",
+          "task": "Cut back lateral shoots to 2-3 buds in Jan/Feb \u2014 do not cut main canes",
           "months": [
             1,
             2
@@ -6147,7 +6161,7 @@
     {
       "id": "brs-daustinrose",
       "bedId": "b-back-rose",
-      "name": "Rose bush",
+      "name": "Golden Celebration",
       "scientific": "Rosa David Austin Golden Celebration",
       "emoji": "emoji_brs-daustinrose",
       "status": "alive",
@@ -6171,7 +6185,7 @@
           ]
         },
         {
-          "task": "Hard cutback annually in January/February",
+          "task": "Cut back lateral shoots to 2-3 buds in Jan/Feb \u2014 do not cut main canes",
           "months": [
             1,
             2
@@ -6404,7 +6418,7 @@
           ]
         },
         {
-          "task": "Hard cutback annually in January/February",
+          "task": "Cut back lateral shoots to 2-3 buds in Jan/Feb \u2014 do not cut main canes",
           "months": [
             1,
             2
@@ -6531,16 +6545,6 @@
             6,
             7,
             8
-          ]
-        },
-        {
-          "task": "Trim to keep within planter",
-          "months": [
-            5,
-            6,
-            7,
-            8,
-            9
           ]
         }
       ]
@@ -11401,5 +11405,5 @@
       "pg_Water regularly \u2014 especially in heat": true
     }
   },
-  "syncedAt": "2026-06-21T23:55:57.005Z"
+  "syncedAt": "2026-06-22T00:25:40.387Z"
 }
