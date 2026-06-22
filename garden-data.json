@@ -11028,7 +11028,7 @@
       "name": "Palm",
       "qty": "1",
       "bed": "",
-      "bought": false,
+      "bought": true,
       "notes": ""
     },
     {
@@ -11405,5 +11405,5 @@
       "pg_Water regularly — especially in heat": true
     }
   },
-  "syncedAt": "2026-06-22T03:31:08.370Z"
+  "syncedAt": "2026-06-22T03:31:13.889Z"
 }
