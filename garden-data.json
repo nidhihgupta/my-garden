@@ -11037,7 +11037,7 @@
       "qty": "",
       "bed": "Side arbor",
       "notes": "Buy next year: Madame Alfred Carriere or Perfume Breeze or New Dawn",
-      "bought": false
+      "bought": true
     },
     {
       "id": "s1780151444172",
@@ -11405,5 +11405,5 @@
       "pg_Water regularly — especially in heat": true
     }
   },
-  "syncedAt": "2026-06-22T03:31:55.055Z"
+  "syncedAt": "2026-06-22T03:33:49.196Z"
 }
