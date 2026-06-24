@@ -7724,7 +7724,7 @@
       "id": "ps-tickseed",
       "bedId": "b-berry",
       "name": "Tickseed",
-      "scientific": "Coreopsis verticillata",
+      "scientific": "Coreopsis solanna “golden crown”",
       "category": "Perennials",
       "status": "alive",
       "datePlanted": "2026-06-20",
@@ -7766,7 +7766,8 @@
             4
           ]
         }
-      ]
+      ],
+      "howPlanted": ""
     },
     {
       "id": "sa-shasta",
@@ -11405,5 +11406,5 @@
       "pg_Water regularly — especially in heat": true
     }
   },
-  "syncedAt": "2026-06-24T02:49:18.162Z"
+  "syncedAt": "2026-06-24T02:50:07.407Z"
 }
