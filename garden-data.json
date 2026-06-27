@@ -11409,8 +11409,9 @@
       "pg_Water regularly — check daily in summer heat": true,
       "pg_Water weekly — newly planted, establishing (wear gloves — sap is caustic)": true,
       "s_Indoor_Check all indoor plants for spider mites": true,
-      "pg_Monitor for lace bugs — neem oil if spotted": true
+      "pg_Monitor for lace bugs — neem oil if spotted": true,
+      "ig_Keep consistently moist — never let dry out": true
     }
   },
-  "syncedAt": "2026-06-27T19:35:03.053Z"
+  "syncedAt": "2026-06-27T19:35:11.750Z"
 }
