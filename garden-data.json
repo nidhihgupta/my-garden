@@ -11407,8 +11407,9 @@
       "pg_Water every 10-14 days — newly planted, establishing; reduce once settled": true,
       "pg_Water deeply every 2-3 days — newly planted, first summer establishment": true,
       "pg_Water regularly — check daily in summer heat": true,
-      "pg_Water weekly — newly planted, establishing (wear gloves — sap is caustic)": true
+      "pg_Water weekly — newly planted, establishing (wear gloves — sap is caustic)": true,
+      "s_Indoor_Check all indoor plants for spider mites": true
     }
   },
-  "syncedAt": "2026-06-27T01:29:53.878Z"
+  "syncedAt": "2026-06-27T02:27:14.175Z"
 }
