@@ -6957,9 +6957,9 @@
     {
       "id": "p1778799611982893",
       "bedId": "b-ros",
-      "name": "Tree Rose - unknown (second)",
+      "name": "Tree Rose - (Sexy Rexy?)",
       "scientific": "Rosa standard",
-      "emoji": "🌹",
+      "emoji": "emoji_p1778799611982893",
       "status": "alive",
       "water": "Deep water weekly",
       "sun": "Part sun",
@@ -11410,5 +11410,5 @@
       "pg_Water weekly — newly planted, establishing (wear gloves — sap is caustic)": true
     }
   },
-  "syncedAt": "2026-06-27T01:28:53.901Z"
+  "syncedAt": "2026-06-27T01:29:53.878Z"
 }
