@@ -11408,8 +11408,9 @@
       "pg_Water deeply every 2-3 days — newly planted, first summer establishment": true,
       "pg_Water regularly — check daily in summer heat": true,
       "pg_Water weekly — newly planted, establishing (wear gloves — sap is caustic)": true,
-      "s_Indoor_Check all indoor plants for spider mites": true
+      "s_Indoor_Check all indoor plants for spider mites": true,
+      "pg_Monitor for lace bugs — neem oil if spotted": true
     }
   },
-  "syncedAt": "2026-06-27T02:27:14.175Z"
+  "syncedAt": "2026-06-27T02:27:35.744Z"
 }
