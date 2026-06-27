@@ -11406,8 +11406,9 @@
       "pg_Water regularly — especially in heat": true,
       "pg_Water every 10-14 days — newly planted, establishing; reduce once settled": true,
       "pg_Water deeply every 2-3 days — newly planted, first summer establishment": true,
-      "pg_Water regularly — check daily in summer heat": true
+      "pg_Water regularly — check daily in summer heat": true,
+      "pg_Water weekly — newly planted, establishing (wear gloves — sap is caustic)": true
     }
   },
-  "syncedAt": "2026-06-27T01:12:59.943Z"
+  "syncedAt": "2026-06-27T01:13:22.444Z"
 }
