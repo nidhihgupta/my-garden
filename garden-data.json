@@ -11414,8 +11414,9 @@
       "ig_Keep consistently moist — never let dry out": true,
       "s_Feeding_Feed dahlias Super Bloom": true,
       "pg_Feed Jack's 20-20-20": true,
-      "pg_Feed palm fertilizer": true
+      "pg_Feed palm fertilizer": true,
+      "pg_Light liquid feed monthly spring-summer": true
     }
   },
-  "syncedAt": "2026-06-29T00:02:46.709Z"
+  "syncedAt": "2026-06-29T00:02:48.576Z"
 }
