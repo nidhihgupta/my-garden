@@ -10860,7 +10860,7 @@
     {
       "id": "t1778942607819",
       "text": "In late June / early July - light sprinkle of fertilizer for hydrangeas (Epsoma Holly tone)",
-      "done": false,
+      "done": true,
       "date": "2026-06-27",
       "category": "Maintenance"
     },
@@ -11420,5 +11420,5 @@
       "ig_Cut flower spikes when they appear": true
     }
   },
-  "syncedAt": "2026-06-29T00:03:39.478Z"
+  "syncedAt": "2026-06-29T00:03:46.679Z"
 }
