@@ -11416,8 +11416,9 @@
       "pg_Feed Jack's 20-20-20": true,
       "pg_Feed palm fertilizer": true,
       "pg_Light liquid feed monthly spring-summer": true,
-      "ig_Pinch tips regularly to encourage bushy, compact growth": true
+      "ig_Pinch tips regularly to encourage bushy, compact growth": true,
+      "ig_Cut flower spikes when they appear": true
     }
   },
-  "syncedAt": "2026-06-29T00:03:00.643Z"
+  "syncedAt": "2026-06-29T00:03:03.028Z"
 }
