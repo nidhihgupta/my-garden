@@ -4816,8 +4816,7 @@
           "task": "Feed Camellia fertilizer",
           "months": [
             4,
-            7,
-            10
+            7
           ]
         },
         {
@@ -5401,8 +5400,7 @@
           "task": "Feed Camellia fertilizer",
           "months": [
             4,
-            7,
-            10
+            7
           ]
         },
         {
@@ -6957,9 +6955,9 @@
     {
       "id": "p1778799611982893",
       "bedId": "b-ros",
-      "name": "Tree Rose - unknown (second)",
+      "name": "Tree Rose - (Sexy Rexy?)",
       "scientific": "Rosa standard",
-      "emoji": "\ud83c\udf39",
+      "emoji": "emoji_p1778799611982893",
       "status": "alive",
       "water": "Deep water weekly",
       "sun": "Part sun",
@@ -7724,7 +7722,7 @@
       "id": "ps-tickseed",
       "bedId": "b-berry",
       "name": "Tickseed",
-      "scientific": "Coreopsis verticillata",
+      "scientific": "Coreopsis solanna \u201cgolden crown\u201d",
       "category": "Perennials",
       "status": "alive",
       "datePlanted": "2026-06-20",
@@ -7766,7 +7764,8 @@
             4
           ]
         }
-      ]
+      ],
+      "howPlanted": ""
     },
     {
       "id": "sa-shasta",
@@ -10831,7 +10830,7 @@
     {
       "id": "t1781051224939",
       "text": "Fertilize Sally Holmes and geranium",
-      "done": false,
+      "done": true,
       "date": "2026-06-10",
       "category": "Maintenance"
     },
@@ -10859,7 +10858,7 @@
     {
       "id": "t1778942607819",
       "text": "In late June / early July - light sprinkle of fertilizer for hydrangeas (Epsoma Holly tone)",
-      "done": false,
+      "done": true,
       "date": "2026-06-27",
       "category": "Maintenance"
     },
@@ -10978,7 +10977,7 @@
     {
       "id": "t17",
       "text": "Phormium orphan with trunk (actually a Cordyline) \u2014 find a home: BBQ bed, poolside, or large container",
-      "done": false,
+      "done": true,
       "date": "",
       "category": "Planning"
     }
@@ -11028,7 +11027,7 @@
       "name": "Palm",
       "qty": "1",
       "bed": "",
-      "bought": false,
+      "bought": true,
       "notes": ""
     },
     {
@@ -11037,7 +11036,7 @@
       "qty": "",
       "bed": "Side arbor",
       "notes": "Buy next year: Madame Alfred Carriere or Perfume Breeze or New Dawn",
-      "bought": false
+      "bought": true
     },
     {
       "id": "s1780151444172",
@@ -11229,7 +11228,8 @@
     "emoji_mp-bridal": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_mp-bridal.txt",
     "emoji_ip18": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_ip18.txt",
     "emoji_mp-jenny": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_mp-jenny.txt",
-    "emoji_ch-jenny": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_ch-jenny.txt"
+    "emoji_ch-jenny": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_ch-jenny.txt",
+    "bed_b-stump": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/bed_b-stump.txt"
   },
   "schedChecked": {
     "5": {
@@ -11375,9 +11375,9 @@
       "pg_Cut back by 1/3 after first bloom flush": true,
       "pg_Light trim after flowering": true,
       "ig_Feed monthly spring-summer": true,
-      "ig_Feed every 2 weeks spring-summer": false,
+      "ig_Feed every 2 weeks spring-summer": true,
       "ig_Feed cactus fertilizer spring-summer": true,
-      "ig_Feed orchid fertilizer every 2 weeks": false,
+      "ig_Feed orchid fertilizer every 2 weeks": true,
       "pg_Deadhead spent blooms daily during peak bloom": true,
       "pg_Train new growth onto wall immediately as it pushes": true,
       "pg_Wipe leaves monthly": true,
@@ -11393,7 +11393,7 @@
       "ig_Water when leaves just start to droop \u2014 reliable indicator": true,
       "ig_Water when soil half dry \u2014 do not overwater": true,
       "pg_Remove dead fronds as needed": true,
-      "pg_Train and tie new canes to structure": false,
+      "pg_Train and tie new canes to structure": true,
       "ig_Remove offsets (pups) when they appear": true,
       "ig_Remove damaged/sunburnt leaves": true,
       "pg_Cut back by half after first bloom flush": true,
@@ -11402,8 +11402,21 @@
       "pg_Pinch tips regularly to encourage bushy, compact growth": true,
       "pg_Keep evenly moist \u2014 check daily in summer heat": true,
       "pg_Trim to keep within planter": true,
-      "pg_Water regularly \u2014 especially in heat": true
+      "pg_Water regularly \u2014 especially in heat": true,
+      "pg_Water every 10-14 days \u2014 newly planted, establishing; reduce once settled": true,
+      "pg_Water deeply every 2-3 days \u2014 newly planted, first summer establishment": true,
+      "pg_Water regularly \u2014 check daily in summer heat": true,
+      "pg_Water weekly \u2014 newly planted, establishing (wear gloves \u2014 sap is caustic)": true,
+      "s_Indoor_Check all indoor plants for spider mites": true,
+      "pg_Monitor for lace bugs \u2014 neem oil if spotted": true,
+      "ig_Keep consistently moist \u2014 never let dry out": true,
+      "s_Feeding_Feed dahlias Super Bloom": true,
+      "pg_Feed Jack's 20-20-20": true,
+      "pg_Feed palm fertilizer": true,
+      "pg_Light liquid feed monthly spring-summer": true,
+      "ig_Pinch tips regularly to encourage bushy, compact growth": true,
+      "ig_Cut flower spikes when they appear": true
     }
   },
-  "syncedAt": "2026-06-22T00:25:40.387Z"
+  "syncedAt": "2026-06-29T00:03:50.912Z"
 }
