@@ -11415,8 +11415,9 @@
       "s_Feeding_Feed dahlias Super Bloom": true,
       "pg_Feed Jack's 20-20-20": true,
       "pg_Feed palm fertilizer": true,
-      "pg_Light liquid feed monthly spring-summer": true
+      "pg_Light liquid feed monthly spring-summer": true,
+      "ig_Pinch tips regularly to encourage bushy, compact growth": true
     }
   },
-  "syncedAt": "2026-06-29T00:02:53.447Z"
+  "syncedAt": "2026-06-29T00:03:00.643Z"
 }
