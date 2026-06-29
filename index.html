@@ -968,7 +968,7 @@ const defaultBeds=[
 const staticSchedule={
   1:[{cat:'Bougainvillea',title:'Prepare for bougainvillea cutback',desc:'Late Jan/early Feb. White Stripe — wait until after it blooms.',indoor:false},{cat:'Hydrangea',title:'Deadwood removal on hydrangeas only',desc:'Side Arbor mophead and oakleaf. Remove dead/crossing stems only — no hard cutback.',indoor:false}],
   2:[{cat:'Bougainvillea',title:'Bougainvillea cutback',desc:"White Stripe: cut 1/3 after bloom finishes. Feed Jack's 20-20-20 after.",indoor:false},{cat:'Trumpet Vine',title:'Hard prune Distictis buccinatoria',desc:'Cut back to framework on Fountain Wall stone. Flowers on new wood — no bloom lost. Feed after.',indoor:false}],
-  3:[{cat:'Feeding',title:'First fertilizer of season',desc:"Apply Jack's 20-20-20 to all established beds. Camellia fertilizer to camellias, hydrangeas and azaleas.",indoor:false},{cat:'Fatsia',title:'Cut back Fatsia + take cuttings',desc:'Cut to desired height. Take 6-8 stem cuttings with rooting hormone.',indoor:false},{cat:'Hydrangea',title:'Feed hydrangeas',desc:'Azalea fertilizer to all hydrangeas in Side Arbor. Deadwood only — no hard prune.',indoor:false},{cat:'Citrus',title:'Feed citrus',desc:'Orange Tree + Lemon: citrus fertilizer. Feb, May, August schedule.',indoor:false},{cat:'Indoor',title:'Resume feeding all indoor plants',desc:'Monthly liquid fertilizer as days lengthen.',indoor:true},{cat:'Indoor',title:'Repot root-bound houseplants',desc:'Check Monstera, Pothos, ZZ Plant for roots escaping drainage.',indoor:true}],
+  3:[{cat:'Feeding',title:'First fertilizer of season',desc:"Apply Jack's 20-20-20 to all established beds. Camellia fertilizer to camellias and hydrangeas.",indoor:false},{cat:'Fatsia',title:'Cut back Fatsia + take cuttings',desc:'Cut to desired height. Take 6-8 stem cuttings with rooting hormone.',indoor:false},{cat:'Hydrangea',title:'Feed hydrangeas',desc:'Azalea fertilizer to all hydrangeas in Side Arbor. Deadwood only — no hard prune.',indoor:false},{cat:'Citrus',title:'Feed citrus',desc:'Orange Tree + Lemon: citrus fertilizer. Feb, May, August schedule.',indoor:false},{cat:'Indoor',title:'Resume feeding all indoor plants',desc:'Monthly liquid fertilizer as days lengthen.',indoor:true},{cat:'Indoor',title:'Repot root-bound houseplants',desc:'Check Monstera, Pothos, ZZ Plant for roots escaping drainage.',indoor:true}],
   4:[{cat:'Geranium',title:'Deadhead geraniums aggressively',desc:'Fountain Wall Bed — remove every spent bloom for continuous flowering.',indoor:false},{cat:'Trumpet Vine',title:'Train Distictis new growth onto wall',desc:'New shoots pushing — tie to wall immediately to build structure.',indoor:false},{cat:'Fruit Trees',title:'Start fruit tree watering schedule',desc:'Apricot, Citrus, Persimmon, Pomegranate: monthly deep water. Espalier cherry + plum: every 2 weeks (restricted roots).',indoor:false}],
   5:[{cat:'Geranium',title:'Cut back geraniums hard after spring flush',desc:'Fountain Wall Bed. Cut by half to two thirds. Feed Super Bloom after.',indoor:false},{cat:'Azalea',title:'Light prune Encore Azaleas after spring bloom',desc:'Back Bed Right and Left — light tidy only after spring flowering.',indoor:false},{cat:'Iceberg',title:'Train Iceberg rose on Side Arbor',desc:'Tie canes horizontally to arbor structure while still flexible.',indoor:false}],
   6:[{cat:'Pest',title:'Monitor for powdery mildew on roses',desc:'Cool nights + warm days = prime conditions. Neem oil spray if spotted.',indoor:false},{cat:'Feeding',title:'Feed dahlias Super Bloom',desc:'BBQ Bed + Back Rose Bed dahlias. Super Bloom every 3-4 weeks through August.',indoor:false},{cat:'Lawn',title:'Apply grub killer to lawn',desc:'Annual June application. Follow product label for timing and rate.',indoor:false},{cat:'Fruit Trees',title:'Increase fruit tree watering',desc:'All trees every 2 weeks. Rainier Cherry weekly. Check soil first.',indoor:false},{cat:'Indoor',title:'Check all indoor plants for spider mites',desc:'Hot dry conditions = spider mite season. Check leaf undersides. Neem oil if found.',indoor:true}],
@@ -1008,7 +1008,7 @@ function resetToDefaults(){
   location.reload();
 }
 const DATA_VERSION='v9';
-const APP_VERSION='2026-06-05-k';
+const APP_VERSION='2026-06-05-l';
 // GitHub Sync
 const GH_KEYS={user:'gh_username',repo:'gh_repo',token:'gh_token'};
 function ghGet(k){try{return localStorage.getItem(k)||'';}catch(e){return '';}}
@@ -1961,7 +1961,7 @@ const monthBriefings={
     {icon:"🌿",text:"Hellebores + Daphne at peak — remove old leaves around hellebores to show off the blooms."},
   ],rhythm:{indoor:"Resume light feeding late Feb as days lengthen",outdoor:"No general feeding yet — targeted only (berries, roses post-prune)",exceptions:["Still too early for most outdoor beds"]}},
   3:{greeting:"March — the garden wakes up",season:"Early spring · first feed of the year",insights:[
-    {icon:"🌱",text:"First fertilizer of season: Jack's 20-20-20 to all established beds. Camellia fertilizer to camellias, all hydrangeas, and azaleas."},
+    {icon:"🌱",text:"First fertilizer of season: Jack's 20-20-20 to all established beds. Camellia fertilizer to camellias and all hydrangeas."},
     {icon:"🍋",text:"Citrus first feed of year (Feb–Mar window). Feed again in May and August."},
     {icon:"🪴",text:"Hosta emerging — mark location, don't disturb soil, bait slugs immediately around new growth."},
     {icon:"✂️",text:"Fatsia: cut back to desired height and take 6–8 stem cuttings with rooting hormone."},
@@ -2006,7 +2006,7 @@ const monthBriefings={
   9:{greeting:"September — season starts to wind down",season:"Early fall · last fertilizer",insights:[
     {icon:"🌱",text:"Last fertilizer of season: Jack's 20-20-20 at half strength to all outdoor beds. Camellia fertilizer to acid-lovers."},
     {icon:"🌸",text:"Japanese Anemone in bloom — one of the best plants in the garden this month. No action needed."},
-    {icon:"🌺",text:"Encore Azalea third bloom cycle — feed Camellia fertilizer after bloom."},
+    {icon:"🌺",text:"Encore Azalea third bloom cycle — enjoy the fall flush. No feeding now — azaleas stop after Aug 1."},
     {icon:"🌿",text:"Day lilies: good month to divide overcrowded clumps if needed."},
     {icon:"🍊",text:"Reduce fruit tree watering as temperatures drop. Persimmon developing nicely."},
   ],rhythm:{indoor:"Last mid-month feeding of season — stop until March",outdoor:"End-of-month: last feed",exceptions:["After this month — no more outdoor feeding until March"]}},
