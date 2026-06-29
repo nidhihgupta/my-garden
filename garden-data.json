@@ -11230,7 +11230,8 @@
     "emoji_mp-bridal": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_mp-bridal.txt",
     "emoji_ip18": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_ip18.txt",
     "emoji_mp-jenny": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_mp-jenny.txt",
-    "emoji_ch-jenny": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_ch-jenny.txt"
+    "emoji_ch-jenny": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_ch-jenny.txt",
+    "bed_b-stump": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/bed_b-stump.txt"
   },
   "schedChecked": {
     "5": {
@@ -11413,5 +11414,5 @@
       "ig_Keep consistently moist — never let dry out": true
     }
   },
-  "syncedAt": "2026-06-29T00:00:59.899Z"
+  "syncedAt": "2026-06-29T00:02:13.222Z"
 }
