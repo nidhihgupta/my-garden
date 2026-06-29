@@ -11071,7 +11071,7 @@
       "plant": "Fatsia Japonica",
       "dateCut": "2026-05-16",
       "datePlanted": "",
-      "notes": "",
+      "notes": "Checked end of June. Check again end of July ",
       "status": "pending"
     },
     {
@@ -11087,7 +11087,7 @@
       "plant": "Sweet Potato Vine (Ipomoea batatas)",
       "dateCut": "2026-05-04",
       "datePlanted": "",
-      "status": "success",
+      "status": "failed",
       "notes": "Sprouting in water in Coca-Cola glass on kitchen windowsill."
     }
   ],
@@ -11418,5 +11418,5 @@
       "ig_Cut flower spikes when they appear": true
     }
   },
-  "syncedAt": "2026-06-29T01:37:31.153Z"
+  "syncedAt": "2026-06-29T01:38:01.217Z"
 }
