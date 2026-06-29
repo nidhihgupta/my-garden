@@ -11411,8 +11411,9 @@
       "pg_Water weekly — newly planted, establishing (wear gloves — sap is caustic)": true,
       "s_Indoor_Check all indoor plants for spider mites": true,
       "pg_Monitor for lace bugs — neem oil if spotted": true,
-      "ig_Keep consistently moist — never let dry out": true
+      "ig_Keep consistently moist — never let dry out": true,
+      "s_Feeding_Feed dahlias Super Bloom": true
     }
   },
-  "syncedAt": "2026-06-29T00:02:13.222Z"
+  "syncedAt": "2026-06-29T00:02:36.887Z"
 }
