@@ -11080,7 +11080,7 @@
       "dateCut": "2026-05-16",
       "datePlanted": "2026-05-16",
       "notes": "",
-      "status": "pending"
+      "status": "success"
     },
     {
       "id": "pr1",
@@ -11418,5 +11418,5 @@
       "ig_Cut flower spikes when they appear": true
     }
   },
-  "syncedAt": "2026-06-29T01:36:55.661Z"
+  "syncedAt": "2026-06-29T01:37:03.184Z"
 }
