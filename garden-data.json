@@ -11087,7 +11087,7 @@
       "plant": "Sweet Potato Vine (Ipomoea batatas)",
       "dateCut": "2026-05-04",
       "datePlanted": "",
-      "status": "pending",
+      "status": "success",
       "notes": "Sprouting in water in Coca-Cola glass on kitchen windowsill."
     }
   ],
@@ -11418,5 +11418,5 @@
       "ig_Cut flower spikes when they appear": true
     }
   },
-  "syncedAt": "2026-06-29T01:37:17.136Z"
+  "syncedAt": "2026-06-29T01:37:31.153Z"
 }
