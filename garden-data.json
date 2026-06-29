@@ -11230,7 +11230,8 @@
     "emoji_mp-jenny": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_mp-jenny.txt",
     "emoji_ch-jenny": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/emoji_ch-jenny.txt",
     "bed_b-stump": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/bed_b-stump.txt",
-    "bed_b-fw": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/bed_b-fw.txt"
+    "bed_b-fw": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/bed_b-fw.txt",
+    "bed_b-bbq": "https://raw.githubusercontent.com/nidhihgupta/my-garden/main/garden-photos/bed_b-bbq.txt"
   },
   "schedChecked": {
     "5": {
@@ -11419,5 +11420,5 @@
       "ig_Cut flower spikes when they appear": true
     }
   },
-  "syncedAt": "2026-06-29T01:40:42.077Z"
+  "syncedAt": "2026-06-29T01:41:15.871Z"
 }
