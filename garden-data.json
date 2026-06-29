@@ -10979,7 +10979,7 @@
     {
       "id": "t17",
       "text": "Phormium orphan with trunk (actually a Cordyline) — find a home: BBQ bed, poolside, or large container",
-      "done": false,
+      "done": true,
       "date": "",
       "category": "Planning"
     }
@@ -11420,5 +11420,5 @@
       "ig_Cut flower spikes when they appear": true
     }
   },
-  "syncedAt": "2026-06-29T00:03:46.679Z"
+  "syncedAt": "2026-06-29T00:03:50.912Z"
 }
