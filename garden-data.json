@@ -10832,7 +10832,7 @@
     {
       "id": "t1781051224939",
       "text": "Fertilize Sally Holmes and geranium",
-      "done": false,
+      "done": true,
       "date": "2026-06-10",
       "category": "Maintenance"
     },
@@ -11420,5 +11420,5 @@
       "ig_Cut flower spikes when they appear": true
     }
   },
-  "syncedAt": "2026-06-29T00:03:03.028Z"
+  "syncedAt": "2026-06-29T00:03:39.478Z"
 }
