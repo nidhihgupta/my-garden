@@ -11427,8 +11427,9 @@
       "ig_Cut flower spikes when they appear": true
     },
     "7": {
-      "s_Salvia_Cut back Salvia Amistad if leggy": true
+      "s_Salvia_Cut back Salvia Amistad if leggy": true,
+      "pg_Cut back by 1/3 if leggy": true
     }
   },
-  "syncedAt": "2026-07-03T19:12:06.346Z"
+  "syncedAt": "2026-07-03T19:12:08.294Z"
 }
