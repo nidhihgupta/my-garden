@@ -10828,6 +10828,13 @@
   ],
   "todos": [
     {
+      "id": "t1783091843192",
+      "text": "Snail and slug bait - Hosta and salvia",
+      "done": false,
+      "date": "2026-07-03",
+      "category": "Maintenance"
+    },
+    {
       "id": "t1781051224939",
       "text": "Fertilize Sally Holmes and geranium",
       "done": true,
@@ -11420,5 +11427,5 @@
       "ig_Cut flower spikes when they appear": true
     }
   },
-  "syncedAt": "2026-07-03T15:12:54.028Z"
+  "syncedAt": "2026-07-03T15:17:23.195Z"
 }
