@@ -11431,8 +11431,9 @@
       "pg_Cut back by 1/3 if leggy": true,
       "pg_Cut back by 1/3 if leggy — reblooms in 3 weeks": true,
       "pg_Cut back after first flush of bloom to encourage rebloom": true,
-      "pg_Replace or cut back if getting leggy": true
+      "pg_Replace or cut back if getting leggy": true,
+      "s_Dahlias_Deadhead dahlias continuously": true
     }
   },
-  "syncedAt": "2026-07-03T19:12:20.955Z"
+  "syncedAt": "2026-07-03T19:12:27.077Z"
 }
