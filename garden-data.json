@@ -11437,8 +11437,9 @@
       "pg_Tip prune in summer to encourage lateral growth": true,
       "s_Fruit Trees_Peak summer fruit tree watering": true,
       "pg_Water deeply monthly in summer": true,
-      "pg_Deep water every 2 weeks July-August": true
+      "pg_Deep water every 2 weeks July-August": true,
+      "pg_Water only when soil completely dry": true
     }
   },
-  "syncedAt": "2026-07-03T19:13:13.222Z"
+  "syncedAt": "2026-07-03T19:13:20.072Z"
 }
