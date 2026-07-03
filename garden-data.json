@@ -11425,7 +11425,10 @@
       "pg_Light liquid feed monthly spring-summer": true,
       "ig_Pinch tips regularly to encourage bushy, compact growth": true,
       "ig_Cut flower spikes when they appear": true
+    },
+    "7": {
+      "s_Salvia_Cut back Salvia Amistad if leggy": true
     }
   },
-  "syncedAt": "2026-07-03T19:10:15.588Z"
+  "syncedAt": "2026-07-03T19:12:06.346Z"
 }
