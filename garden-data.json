@@ -11441,8 +11441,9 @@
       "pg_Water only when soil completely dry": true,
       "pg_Deadhead regularly": true,
       "pg_Deadhead spent blooms daily during peak bloom": true,
-      "pg_Water every 10-14 days — newly planted, establishing; reduce once settled": true
+      "pg_Water every 10-14 days — newly planted, establishing; reduce once settled": true,
+      "pg_Deep water monthly — slow hose at drip line": true
     }
   },
-  "syncedAt": "2026-07-03T21:01:23.701Z"
+  "syncedAt": "2026-07-03T21:01:34.865Z"
 }
