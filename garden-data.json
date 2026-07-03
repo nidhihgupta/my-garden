@@ -11433,8 +11433,9 @@
       "pg_Cut back after first flush of bloom to encourage rebloom": true,
       "pg_Replace or cut back if getting leggy": true,
       "s_Dahlias_Deadhead dahlias continuously": true,
-      "pg_Deadhead roses every 2 weeks — outward facing bud, 45° cut": true
+      "pg_Deadhead roses every 2 weeks — outward facing bud, 45° cut": true,
+      "pg_Tip prune in summer to encourage lateral growth": true
     }
   },
-  "syncedAt": "2026-07-03T19:12:30.115Z"
+  "syncedAt": "2026-07-03T19:12:51.552Z"
 }
