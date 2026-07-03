@@ -11443,8 +11443,9 @@
       "pg_Deadhead spent blooms daily during peak bloom": true,
       "pg_Water every 10-14 days — newly planted, establishing; reduce once settled": true,
       "pg_Deep water monthly — slow hose at drip line": true,
-      "pg_Water regularly — check daily in summer heat": false
+      "pg_Water regularly — check daily in summer heat": false,
+      "pg_Water weekly — newly planted, establishing (wear gloves — sap is caustic)": true
     }
   },
-  "syncedAt": "2026-07-03T21:01:52.934Z"
+  "syncedAt": "2026-07-03T21:01:57.955Z"
 }
