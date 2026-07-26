@@ -11424,7 +11424,8 @@
       "pg_Feed palm fertilizer": true,
       "pg_Light liquid feed monthly spring-summer": true,
       "ig_Pinch tips regularly to encourage bushy, compact growth": true,
-      "ig_Cut flower spikes when they appear": true
+      "ig_Cut flower spikes when they appear": true,
+      "pg_Monitor for slugs and snails": true
     },
     "7": {
       "s_Salvia_Cut back Salvia Amistad if leggy": true,
@@ -11452,8 +11453,9 @@
       "pg_Light liquid feed monthly spring-summer": true,
       "pg_Light trim after flowering": true,
       "pg_Trim back to control spread": true,
-      "pg_Trim lightly after flowering": true
+      "pg_Trim lightly after flowering": true,
+      "pg_Deadhead at base — pull stem out, do not cut": true
     }
   },
-  "syncedAt": "2026-07-26T22:31:06.925Z"
+  "syncedAt": "2026-07-26T22:31:16.780Z"
 }
