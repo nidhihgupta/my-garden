@@ -11445,8 +11445,9 @@
       "pg_Deep water monthly — slow hose at drip line": true,
       "pg_Water regularly — check daily in summer heat": false,
       "pg_Water weekly — newly planted, establishing (wear gloves — sap is caustic)": true,
-      "ig_String of Pearls: water every 2 weeks, let dry completely": true
+      "ig_String of Pearls: water every 2 weeks, let dry completely": true,
+      "s_Bougainvillea_Feed White Stripe bougainvillea": true
     }
   },
-  "syncedAt": "2026-07-26T22:29:28.072Z"
+  "syncedAt": "2026-07-26T22:29:39.815Z"
 }
