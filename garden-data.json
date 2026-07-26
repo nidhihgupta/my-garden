@@ -11457,8 +11457,9 @@
       "pg_Deadhead at base — pull stem out, do not cut": true,
       "pg_Remove dead fronds as needed": true,
       "pg_Pinch tips regularly to encourage bushy, compact growth": true,
-      "pg_Monitor for slugs and snails": true
+      "pg_Monitor for slugs and snails": true,
+      "pg_Monitor for lace bugs — neem oil if spotted": true
     }
   },
-  "syncedAt": "2026-07-26T22:32:36.010Z"
+  "syncedAt": "2026-07-26T22:32:50.171Z"
 }
