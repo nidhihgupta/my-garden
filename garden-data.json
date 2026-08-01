@@ -11474,8 +11474,9 @@
       "s_Fruit Trees_Continue weekly Rainier Cherry + Plum watering": true,
       "s_Berries_Remove old fruited raspberry + blackberry canes": true,
       "pg_Train new growth onto wall immediately as it pushes": true,
-      "pg_Wipe leaves monthly": true
+      "pg_Wipe leaves monthly": true,
+      "pg_Cut back by 1/3 if leggy": true
     }
   },
-  "syncedAt": "2026-08-01T18:58:53.941Z"
+  "syncedAt": "2026-08-01T18:58:56.309Z"
 }
