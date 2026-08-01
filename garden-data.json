@@ -11472,8 +11472,9 @@
       "pg_Trim lightly after flowering": true,
       "s_Bougainvillea_Cut back + feed White Stripe bougainvillea": true,
       "s_Fruit Trees_Continue weekly Rainier Cherry + Plum watering": true,
-      "s_Berries_Remove old fruited raspberry + blackberry canes": true
+      "s_Berries_Remove old fruited raspberry + blackberry canes": true,
+      "pg_Train new growth onto wall immediately as it pushes": true
     }
   },
-  "syncedAt": "2026-08-01T18:58:18.731Z"
+  "syncedAt": "2026-08-01T18:58:41.965Z"
 }
