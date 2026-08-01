@@ -11465,8 +11465,9 @@
     "8": {
       "pg_Deadhead roses every 2 weeks — outward facing bud, 45° cut": true,
       "pg_Deadhead regularly": true,
-      "pg_Prune ONLY after flowering complete": true
+      "pg_Prune ONLY after flowering complete": true,
+      "pg_Trim back to control spread": true
     }
   },
-  "syncedAt": "2026-08-01T18:56:33.846Z"
+  "syncedAt": "2026-08-01T18:56:47.479Z"
 }
