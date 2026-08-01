@@ -11510,8 +11510,10 @@
       "pg_Deep water weekly July-August": true,
       "pg_Monthly watering July-September — slow hose at drip line": true,
       "pg_Water monthly once established — drought tolerant": true,
-      "ig_Water only when soil completely dry": true
+      "ig_Water only when soil completely dry": true,
+      "ig_Water when top inch dry": true,
+      "ig_Keep consistently moist — never let dry out": true
     }
   },
-  "syncedAt": "2026-08-01T19:03:59.754Z"
+  "syncedAt": "2026-08-01T19:04:02.874Z"
 }
