@@ -2233,7 +2233,7 @@
           ]
         },
         {
-          "task": "Prune ONLY after flowering complete",
+          "task": "Deadhead spent blooms lightly as they fade — never hard cutback (blooms on old wood)",
           "months": [
             8,
             9
@@ -2416,9 +2416,10 @@
       "notes": "Existing. Multiple plants.",
       "maintenance": [
         {
-          "task": "Prune ONLY after flowering complete",
+          "task": "Deadhead spent blooms lightly as they fade — never hard cutback (blooms on old wood)",
           "months": [
-            8
+            8,
+            9
           ]
         },
         {
@@ -2458,9 +2459,10 @@
       "notes": "Existing. Stunning fall foliage.",
       "maintenance": [
         {
-          "task": "Prune ONLY after flowering complete",
+          "task": "Deadhead spent blooms lightly as they fade — never hard cutback (blooms on old wood)",
           "months": [
-            8
+            8,
+            9
           ]
         },
         {
@@ -4578,7 +4580,7 @@
           ]
         },
         {
-          "task": "Prune ONLY after flowering complete",
+          "task": "Deadhead spent blooms lightly as they fade — never hard cutback (blooms on old wood)",
           "months": [
             8,
             9
@@ -4615,7 +4617,7 @@
           ]
         },
         {
-          "task": "Prune ONLY after flowering complete",
+          "task": "Deadhead spent blooms lightly as they fade — never hard cutback (blooms on old wood)",
           "months": [
             8,
             9
@@ -4815,8 +4817,7 @@
         {
           "task": "Feed Camellia fertilizer",
           "months": [
-            4,
-            7
+            4
           ]
         },
         {
@@ -5234,7 +5235,7 @@
           ]
         },
         {
-          "task": "Prune ONLY after flowering complete",
+          "task": "Deadhead spent blooms lightly as they fade — never hard cutback (blooms on old wood)",
           "months": [
             8,
             9
@@ -5271,7 +5272,7 @@
           ]
         },
         {
-          "task": "Prune ONLY after flowering complete",
+          "task": "Deadhead spent blooms lightly as they fade — never hard cutback (blooms on old wood)",
           "months": [
             8,
             9
@@ -5399,8 +5400,7 @@
         {
           "task": "Feed Camellia fertilizer",
           "months": [
-            4,
-            7
+            4
           ]
         },
         {
