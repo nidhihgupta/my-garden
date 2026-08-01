@@ -11496,8 +11496,9 @@
       "pg_Deep water every 2 weeks July-August": true,
       "pg_Monitor for powdery mildew — neem oil if spotted": true,
       "pg_Water only when soil completely dry": true,
-      "pg_Deep water monthly — slow hose at drip line": true
+      "pg_Deep water monthly — slow hose at drip line": true,
+      "pg_Extra water during any heat wave 3+ days over 90°F": true
     }
   },
-  "syncedAt": "2026-08-01T19:03:10.167Z"
+  "syncedAt": "2026-08-01T19:03:14.902Z"
 }
