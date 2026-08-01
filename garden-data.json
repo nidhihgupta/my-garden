@@ -11486,8 +11486,8 @@
       "pg_Harvest pods regularly": false,
       "ig_Wipe leaves monthly": false,
       "ig_Pinch tips regularly to encourage bushy, compact growth": false,
-      "ig_Cut flower spikes when they appear": true,
-      "ig_Remove damaged/sunburnt leaves": true,
+      "ig_Cut flower spikes when they appear": false,
+      "ig_Remove damaged/sunburnt leaves": false,
       "ig_Remove offsets (pups) when they appear": true,
       "pg_Water deeply monthly in summer": false,
       "pg_Water every 10-14 days — newly planted, establishing; reduce once settled": false,
@@ -11514,10 +11514,10 @@
       "ig_Water when top inch dry": false,
       "ig_Keep consistently moist — never let dry out": false,
       "ig_Mist or use pebble tray — ferns and humidity-lovers need high moisture": false,
-      "ig_Use filtered water — fluoride sensitive": true,
+      "ig_Use filtered water — fluoride sensitive": false,
       "ig_Water sparingly — stores water in bulbous trunk": true,
       "ig_String of Pearls: water every 2 weeks, let dry completely": true
     }
   },
-  "syncedAt": "2026-08-01T19:04:53.464Z"
+  "syncedAt": "2026-08-01T19:04:54.998Z"
 }
