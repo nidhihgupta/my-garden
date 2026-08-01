@@ -11458,8 +11458,9 @@
       "pg_Remove dead fronds as needed": true,
       "pg_Pinch tips regularly to encourage bushy, compact growth": true,
       "pg_Monitor for slugs and snails": true,
-      "pg_Monitor for lace bugs — neem oil if spotted": true
+      "pg_Monitor for lace bugs — neem oil if spotted": true,
+      "s_Indoor_Prayer Plant: mist daily": true
     }
   },
-  "syncedAt": "2026-08-01T18:55:39.763Z"
+  "syncedAt": "2026-08-01T18:56:04.239Z"
 }
