@@ -11485,7 +11485,7 @@
       "pg_Cut back new side shoots to 5 leaves — do NOT cut main structural canes": false,
       "pg_Harvest pods regularly": false,
       "ig_Wipe leaves monthly": false,
-      "ig_Pinch tips regularly to encourage bushy, compact growth": true,
+      "ig_Pinch tips regularly to encourage bushy, compact growth": false,
       "ig_Cut flower spikes when they appear": true,
       "ig_Remove damaged/sunburnt leaves": true,
       "ig_Remove offsets (pups) when they appear": true,
@@ -11502,7 +11502,7 @@
       "pg_Feed palm fertilizer": false,
       "pg_Water regularly — check daily in summer heat": false,
       "pg_Light liquid feed monthly spring-summer": false,
-      "ig_Feed monthly spring-summer": true,
+      "ig_Feed monthly spring-summer": false,
       "ig_Feed every 2 weeks spring-summer": true,
       "ig_Feed cactus fertilizer spring-summer": true,
       "ig_Feed orchid fertilizer every 2 weeks": true,
@@ -11511,7 +11511,7 @@
       "pg_Monthly watering July-September — slow hose at drip line": false,
       "pg_Water monthly once established — drought tolerant": false,
       "ig_Water only when soil completely dry": false,
-      "ig_Water when top inch dry": true,
+      "ig_Water when top inch dry": false,
       "ig_Keep consistently moist — never let dry out": true,
       "ig_Mist or use pebble tray — ferns and humidity-lovers need high moisture": true,
       "ig_Use filtered water — fluoride sensitive": true,
@@ -11519,5 +11519,5 @@
       "ig_String of Pearls: water every 2 weeks, let dry completely": true
     }
   },
-  "syncedAt": "2026-08-01T19:04:50.082Z"
+  "syncedAt": "2026-08-01T19:04:51.901Z"
 }
