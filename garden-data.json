@@ -11512,8 +11512,10 @@
       "pg_Water monthly once established — drought tolerant": true,
       "ig_Water only when soil completely dry": true,
       "ig_Water when top inch dry": true,
-      "ig_Keep consistently moist — never let dry out": true
+      "ig_Keep consistently moist — never let dry out": true,
+      "ig_Mist or use pebble tray — ferns and humidity-lovers need high moisture": true,
+      "ig_Use filtered water — fluoride sensitive": true
     }
   },
-  "syncedAt": "2026-08-01T19:04:02.874Z"
+  "syncedAt": "2026-08-01T19:04:05.474Z"
 }
