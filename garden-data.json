@@ -11471,8 +11471,9 @@
       "pg_Deadhead at base — pull stem out, do not cut": true,
       "pg_Trim lightly after flowering": true,
       "s_Bougainvillea_Cut back + feed White Stripe bougainvillea": true,
-      "s_Fruit Trees_Continue weekly Rainier Cherry + Plum watering": true
+      "s_Fruit Trees_Continue weekly Rainier Cherry + Plum watering": true,
+      "s_Berries_Remove old fruited raspberry + blackberry canes": true
     }
   },
-  "syncedAt": "2026-08-01T18:57:30.017Z"
+  "syncedAt": "2026-08-01T18:58:18.731Z"
 }
