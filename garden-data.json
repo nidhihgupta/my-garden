@@ -11491,8 +11491,9 @@
       "ig_Remove offsets (pups) when they appear": true,
       "pg_Water deeply monthly in summer": true,
       "pg_Water every 10-14 days — newly planted, establishing; reduce once settled": true,
-      "pg_Feed Jack's 20-20-20": true
+      "pg_Feed Jack's 20-20-20": true,
+      "pg_Monitor for slugs and snails": true
     }
   },
-  "syncedAt": "2026-08-01T19:02:57.114Z"
+  "syncedAt": "2026-08-01T19:02:59.050Z"
 }
