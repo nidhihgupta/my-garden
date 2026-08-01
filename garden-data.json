@@ -11471,7 +11471,7 @@
       "pg_Deadhead at base — pull stem out, do not cut": true,
       "pg_Trim lightly after flowering": true,
       "s_Bougainvillea_Cut back + feed White Stripe bougainvillea": false,
-      "s_Fruit Trees_Continue weekly Rainier Cherry + Plum watering": true,
+      "s_Fruit Trees_Continue weekly Rainier Cherry + Plum watering": false,
       "s_Berries_Remove old fruited raspberry + blackberry canes": true,
       "pg_Train new growth onto wall immediately as it pushes": true,
       "pg_Wipe leaves monthly": true,
@@ -11519,5 +11519,5 @@
       "ig_String of Pearls: water every 2 weeks, let dry completely": true
     }
   },
-  "syncedAt": "2026-08-01T19:04:22.322Z"
+  "syncedAt": "2026-08-01T19:04:23.657Z"
 }
