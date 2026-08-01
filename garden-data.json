@@ -11469,8 +11469,9 @@
       "pg_Trim back to control spread": true,
       "pg_Deadhead spent blooms daily during peak bloom": true,
       "pg_Deadhead at base — pull stem out, do not cut": true,
-      "pg_Trim lightly after flowering": true
+      "pg_Trim lightly after flowering": true,
+      "s_Bougainvillea_Cut back + feed White Stripe bougainvillea": true
     }
   },
-  "syncedAt": "2026-08-01T18:57:01.097Z"
+  "syncedAt": "2026-08-01T18:57:16.550Z"
 }
