@@ -11481,8 +11481,9 @@
       "pg_Cut back hard after flowering": true,
       "pg_Cut back by 1/3 if leggy — reblooms in 3 weeks": true,
       "pg_Cut back after flowering to prevent self-seeding": true,
-      "pg_Pinch tips regularly to encourage bushy, compact growth": true
+      "pg_Pinch tips regularly to encourage bushy, compact growth": true,
+      "pg_Cut back new side shoots to 5 leaves — do NOT cut main structural canes": true
     }
   },
-  "syncedAt": "2026-08-01T18:59:27.496Z"
+  "syncedAt": "2026-08-01T18:59:38.332Z"
 }
