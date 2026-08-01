@@ -11496,7 +11496,7 @@
       "pg_Deep water every 2 weeks July-August": false,
       "pg_Monitor for powdery mildew — neem oil if spotted": false,
       "pg_Water only when soil completely dry": false,
-      "pg_Deep water monthly — slow hose at drip line": false,
+      "pg_Deep water monthly — slow hose at drip line": true,
       "pg_Extra water during any heat wave 3+ days over 90°F": false,
       "pg_Feed Jack's 20-20-20 every 2 weeks": false,
       "pg_Feed palm fertilizer": false,
@@ -11519,5 +11519,5 @@
       "ig_String of Pearls: water every 2 weeks, let dry completely": false
     }
   },
-  "syncedAt": "2026-08-01T21:54:17.065Z"
+  "syncedAt": "2026-08-01T21:55:24.048Z"
 }
