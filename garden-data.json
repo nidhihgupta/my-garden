@@ -11504,8 +11504,9 @@
       "pg_Light liquid feed monthly spring-summer": true,
       "ig_Feed monthly spring-summer": true,
       "ig_Feed every 2 weeks spring-summer": true,
-      "ig_Feed cactus fertilizer spring-summer": true
+      "ig_Feed cactus fertilizer spring-summer": true,
+      "ig_Feed orchid fertilizer every 2 weeks": true
     }
   },
-  "syncedAt": "2026-08-01T19:03:40.991Z"
+  "syncedAt": "2026-08-01T19:03:42.406Z"
 }
