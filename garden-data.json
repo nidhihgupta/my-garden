@@ -11503,7 +11503,7 @@
       "pg_Water regularly — check daily in summer heat": false,
       "pg_Light liquid feed monthly spring-summer": false,
       "ig_Feed monthly spring-summer": false,
-      "ig_Feed every 2 weeks spring-summer": true,
+      "ig_Feed every 2 weeks spring-summer": false,
       "ig_Feed cactus fertilizer spring-summer": true,
       "ig_Feed orchid fertilizer every 2 weeks": true,
       "pg_Monitor for lace bugs — neem oil if spotted": false,
@@ -11512,12 +11512,12 @@
       "pg_Water monthly once established — drought tolerant": false,
       "ig_Water only when soil completely dry": false,
       "ig_Water when top inch dry": false,
-      "ig_Keep consistently moist — never let dry out": true,
-      "ig_Mist or use pebble tray — ferns and humidity-lovers need high moisture": true,
+      "ig_Keep consistently moist — never let dry out": false,
+      "ig_Mist or use pebble tray — ferns and humidity-lovers need high moisture": false,
       "ig_Use filtered water — fluoride sensitive": true,
       "ig_Water sparingly — stores water in bulbous trunk": true,
       "ig_String of Pearls: water every 2 weeks, let dry completely": true
     }
   },
-  "syncedAt": "2026-08-01T19:04:51.901Z"
+  "syncedAt": "2026-08-01T19:04:53.464Z"
 }
