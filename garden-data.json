@@ -11483,7 +11483,7 @@
       "pg_Cut back after flowering to prevent self-seeding": false,
       "pg_Pinch tips regularly to encourage bushy, compact growth": false,
       "pg_Cut back new side shoots to 5 leaves — do NOT cut main structural canes": false,
-      "pg_Harvest pods regularly": true,
+      "pg_Harvest pods regularly": false,
       "ig_Wipe leaves monthly": true,
       "ig_Pinch tips regularly to encourage bushy, compact growth": true,
       "ig_Cut flower spikes when they appear": true,
@@ -11509,7 +11509,7 @@
       "pg_Monitor for lace bugs — neem oil if spotted": false,
       "pg_Deep water weekly July-August": false,
       "pg_Monthly watering July-September — slow hose at drip line": false,
-      "pg_Water monthly once established — drought tolerant": true,
+      "pg_Water monthly once established — drought tolerant": false,
       "ig_Water only when soil completely dry": true,
       "ig_Water when top inch dry": true,
       "ig_Keep consistently moist — never let dry out": true,
@@ -11519,5 +11519,5 @@
       "ig_String of Pearls: water every 2 weeks, let dry completely": true
     }
   },
-  "syncedAt": "2026-08-01T19:04:42.675Z"
+  "syncedAt": "2026-08-01T19:04:48.763Z"
 }
