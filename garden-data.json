@@ -11488,8 +11488,9 @@
       "ig_Pinch tips regularly to encourage bushy, compact growth": true,
       "ig_Cut flower spikes when they appear": true,
       "ig_Remove damaged/sunburnt leaves": true,
-      "ig_Remove offsets (pups) when they appear": true
+      "ig_Remove offsets (pups) when they appear": true,
+      "pg_Water deeply monthly in summer": true
     }
   },
-  "syncedAt": "2026-08-01T18:59:58.050Z"
+  "syncedAt": "2026-08-01T19:00:06.587Z"
 }
