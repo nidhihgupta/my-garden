@@ -11499,8 +11499,9 @@
       "pg_Deep water monthly — slow hose at drip line": true,
       "pg_Extra water during any heat wave 3+ days over 90°F": true,
       "pg_Feed Jack's 20-20-20 every 2 weeks": true,
-      "pg_Feed palm fertilizer": true
+      "pg_Feed palm fertilizer": true,
+      "pg_Water regularly — check daily in summer heat": true
     }
   },
-  "syncedAt": "2026-08-01T19:03:21.187Z"
+  "syncedAt": "2026-08-01T19:03:27.371Z"
 }
