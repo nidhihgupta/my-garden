@@ -11477,7 +11477,7 @@
       "pg_Wipe leaves monthly": false,
       "pg_Cut back by 1/3 if leggy": false,
       "pg_Train and tie new canes to structure": false,
-      "pg_Remove dead fronds as needed": true,
+      "pg_Remove dead fronds as needed": false,
       "pg_Cut back hard after flowering": true,
       "pg_Cut back by 1/3 if leggy — reblooms in 3 weeks": true,
       "pg_Cut back after flowering to prevent self-seeding": true,
@@ -11494,7 +11494,7 @@
       "pg_Feed Jack's 20-20-20": false,
       "pg_Monitor for slugs and snails": false,
       "pg_Deep water every 2 weeks July-August": false,
-      "pg_Monitor for powdery mildew — neem oil if spotted": true,
+      "pg_Monitor for powdery mildew — neem oil if spotted": false,
       "pg_Water only when soil completely dry": true,
       "pg_Deep water monthly — slow hose at drip line": true,
       "pg_Extra water during any heat wave 3+ days over 90°F": true,
@@ -11519,5 +11519,5 @@
       "ig_String of Pearls: water every 2 weeks, let dry completely": true
     }
   },
-  "syncedAt": "2026-08-01T19:04:31.958Z"
+  "syncedAt": "2026-08-01T19:04:33.055Z"
 }
