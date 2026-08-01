@@ -11478,8 +11478,9 @@
       "pg_Cut back by 1/3 if leggy": true,
       "pg_Train and tie new canes to structure": true,
       "pg_Remove dead fronds as needed": true,
-      "pg_Cut back hard after flowering": true
+      "pg_Cut back hard after flowering": true,
+      "pg_Cut back by 1/3 if leggy — reblooms in 3 weeks": true
     }
   },
-  "syncedAt": "2026-08-01T18:59:12.128Z"
+  "syncedAt": "2026-08-01T18:59:18.197Z"
 }
