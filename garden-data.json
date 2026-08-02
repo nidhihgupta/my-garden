@@ -11470,7 +11470,7 @@
       "pg_Deadhead spent blooms daily during peak bloom": true,
       "pg_Deadhead at base — pull stem out, do not cut": true,
       "pg_Trim lightly after flowering": true,
-      "s_Bougainvillea_Cut back + feed White Stripe bougainvillea": false,
+      "s_Bougainvillea_Cut back + feed White Stripe bougainvillea": true,
       "s_Fruit Trees_Continue weekly Rainier Cherry + Plum watering": false,
       "s_Berries_Remove old fruited raspberry + blackberry canes": false,
       "pg_Train new growth onto wall immediately as it pushes": false,
@@ -11520,5 +11520,5 @@
       "pg_Deadhead spent blooms lightly as they fade — never hard cutback (blooms on old wood)": true
     }
   },
-  "syncedAt": "2026-08-02T17:16:49.406Z"
+  "syncedAt": "2026-08-02T17:16:57.514Z"
 }
