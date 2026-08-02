@@ -11489,7 +11489,7 @@
       "ig_Cut flower spikes when they appear": false,
       "ig_Remove damaged/sunburnt leaves": false,
       "ig_Remove offsets (pups) when they appear": false,
-      "pg_Water deeply monthly in summer": false,
+      "pg_Water deeply monthly in summer": true,
       "pg_Water every 10-14 days — newly planted, establishing; reduce once settled": false,
       "pg_Feed Jack's 20-20-20": false,
       "pg_Monitor for slugs and snails": false,
@@ -11520,5 +11520,5 @@
       "pg_Deadhead spent blooms lightly as they fade — never hard cutback (blooms on old wood)": true
     }
   },
-  "syncedAt": "2026-08-02T17:16:57.514Z"
+  "syncedAt": "2026-08-02T17:17:07.528Z"
 }
