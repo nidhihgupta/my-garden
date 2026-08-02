@@ -11463,7 +11463,7 @@
       "pg_Train new growth onto wall immediately as it pushes": true
     },
     "8": {
-      "pg_Deadhead roses every 2 weeks — outward facing bud, 45° cut": false,
+      "pg_Deadhead roses every 2 weeks — outward facing bud, 45° cut": true,
       "pg_Deadhead regularly": true,
       "pg_Prune ONLY after flowering complete": false,
       "pg_Trim back to control spread": true,
@@ -11520,5 +11520,5 @@
       "pg_Deadhead spent blooms lightly as they fade — never hard cutback (blooms on old wood)": true
     }
   },
-  "syncedAt": "2026-08-02T17:16:37.758Z"
+  "syncedAt": "2026-08-02T17:16:39.958Z"
 }
