@@ -11517,8 +11517,9 @@
       "ig_Use filtered water — fluoride sensitive": false,
       "ig_Water sparingly — stores water in bulbous trunk": false,
       "ig_String of Pearls: water every 2 weeks, let dry completely": false,
-      "pg_Deadhead spent blooms lightly as they fade — never hard cutback (blooms on old wood)": true
+      "pg_Deadhead spent blooms lightly as they fade — never hard cutback (blooms on old wood)": true,
+      "s_Hydrangea_Deadhead hydrangeas — never cut back hard": true
     }
   },
-  "syncedAt": "2026-08-08T20:02:07.166Z"
+  "syncedAt": "2026-08-08T20:05:25.498Z"
 }
