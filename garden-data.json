@@ -11492,7 +11492,7 @@
       "pg_Water deeply monthly in summer": true,
       "pg_Water every 10-14 days — newly planted, establishing; reduce once settled": false,
       "pg_Feed Jack's 20-20-20": false,
-      "pg_Monitor for slugs and snails": false,
+      "pg_Monitor for slugs and snails": true,
       "pg_Deep water every 2 weeks July-August": false,
       "pg_Monitor for powdery mildew — neem oil if spotted": false,
       "pg_Water only when soil completely dry": false,
@@ -11521,5 +11521,5 @@
       "s_Hydrangea_Deadhead hydrangeas — never cut back hard": true
     }
   },
-  "syncedAt": "2026-08-08T21:42:55.069Z"
+  "syncedAt": "2026-08-08T21:43:05.595Z"
 }
