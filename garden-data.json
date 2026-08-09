@@ -11478,7 +11478,7 @@
       "pg_Cut back by 1/3 if leggy": false,
       "pg_Train and tie new canes to structure": false,
       "pg_Remove dead fronds as needed": false,
-      "pg_Cut back hard after flowering": false,
+      "pg_Cut back hard after flowering": true,
       "pg_Cut back by 1/3 if leggy — reblooms in 3 weeks": true,
       "pg_Cut back after flowering to prevent self-seeding": false,
       "pg_Pinch tips regularly to encourage bushy, compact growth": false,
@@ -11521,5 +11521,5 @@
       "s_Hydrangea_Deadhead hydrangeas — never cut back hard": true
     }
   },
-  "syncedAt": "2026-08-09T02:38:37.459Z"
+  "syncedAt": "2026-08-09T02:38:39.792Z"
 }
