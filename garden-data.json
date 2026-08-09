@@ -11500,7 +11500,7 @@
       "pg_Extra water during any heat wave 3+ days over 90°F": true,
       "pg_Feed Jack's 20-20-20 every 2 weeks": false,
       "pg_Feed palm fertilizer": false,
-      "pg_Water regularly — check daily in summer heat": false,
+      "pg_Water regularly — check daily in summer heat": true,
       "pg_Light liquid feed monthly spring-summer": false,
       "ig_Feed monthly spring-summer": false,
       "ig_Feed every 2 weeks spring-summer": false,
@@ -11521,5 +11521,5 @@
       "s_Hydrangea_Deadhead hydrangeas — never cut back hard": true
     }
   },
-  "syncedAt": "2026-08-09T02:37:57.791Z"
+  "syncedAt": "2026-08-09T02:38:05.660Z"
 }
