@@ -11508,7 +11508,7 @@
       "ig_Feed orchid fertilizer every 2 weeks": false,
       "pg_Monitor for lace bugs — neem oil if spotted": false,
       "pg_Deep water weekly July-August": true,
-      "pg_Monthly watering July-September — slow hose at drip line": false,
+      "pg_Monthly watering July-September — slow hose at drip line": true,
       "pg_Water monthly once established — drought tolerant": false,
       "ig_Water only when soil completely dry": false,
       "ig_Water when top inch dry": false,
@@ -11521,5 +11521,5 @@
       "s_Hydrangea_Deadhead hydrangeas — never cut back hard": true
     }
   },
-  "syncedAt": "2026-08-09T02:38:09.678Z"
+  "syncedAt": "2026-08-09T02:38:11.833Z"
 }
