@@ -11471,7 +11471,7 @@
       "pg_Deadhead at base — pull stem out, do not cut": true,
       "pg_Trim lightly after flowering": true,
       "s_Bougainvillea_Cut back + feed White Stripe bougainvillea": true,
-      "s_Fruit Trees_Continue weekly Rainier Cherry + Plum watering": false,
+      "s_Fruit Trees_Continue weekly Rainier Cherry + Plum watering": true,
       "s_Berries_Remove old fruited raspberry + blackberry canes": false,
       "pg_Train new growth onto wall immediately as it pushes": false,
       "pg_Wipe leaves monthly": false,
@@ -11521,5 +11521,5 @@
       "s_Hydrangea_Deadhead hydrangeas — never cut back hard": true
     }
   },
-  "syncedAt": "2026-08-09T02:36:59.111Z"
+  "syncedAt": "2026-08-09T02:37:25.051Z"
 }
