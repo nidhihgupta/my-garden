@@ -11507,7 +11507,7 @@
       "ig_Feed cactus fertilizer spring-summer": false,
       "ig_Feed orchid fertilizer every 2 weeks": false,
       "pg_Monitor for lace bugs — neem oil if spotted": false,
-      "pg_Deep water weekly July-August": false,
+      "pg_Deep water weekly July-August": true,
       "pg_Monthly watering July-September — slow hose at drip line": false,
       "pg_Water monthly once established — drought tolerant": false,
       "ig_Water only when soil completely dry": false,
@@ -11521,5 +11521,5 @@
       "s_Hydrangea_Deadhead hydrangeas — never cut back hard": true
     }
   },
-  "syncedAt": "2026-08-09T02:38:05.660Z"
+  "syncedAt": "2026-08-09T02:38:09.678Z"
 }
