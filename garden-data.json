@@ -11504,7 +11504,7 @@
       "pg_Light liquid feed monthly spring-summer": false,
       "ig_Feed monthly spring-summer": true,
       "ig_Feed every 2 weeks spring-summer": true,
-      "ig_Feed cactus fertilizer spring-summer": false,
+      "ig_Feed cactus fertilizer spring-summer": true,
       "ig_Feed orchid fertilizer every 2 weeks": false,
       "pg_Monitor for lace bugs — neem oil if spotted": false,
       "pg_Deep water weekly July-August": true,
@@ -11522,5 +11522,5 @@
       "pg_Replace or cut back if getting leggy": true
     }
   },
-  "syncedAt": "2026-08-15T16:28:00.433Z"
+  "syncedAt": "2026-08-15T16:28:05.202Z"
 }
